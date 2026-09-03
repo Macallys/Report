@@ -149,7 +149,6 @@
     1. [2.4. Big Picture EventStorming](informe.md#s-2-4)
     1. [2.5. Ubiquitous Language](informe.md#s-2-5)
 1. [Capítulo III: Requirements Specification](informe.md#s-cap-iii)
-    1. [3.0. Product Epics](informe.md#s-3-0)
     1. [3.1. User Stories](informe.md#s-3-1)
     1. [3.2. Impact Mapping](informe.md#s-3-2)
     1. [3.3. Product Backlog](informe.md#s-3-3)
