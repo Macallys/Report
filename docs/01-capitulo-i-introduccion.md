@@ -15,7 +15,7 @@
 
 Nuestra plataforma, permite a las empresas monitorear centralizadamente la concentración de CO2, los niveles de contaminación sonora y la presencia de personal en zonas críticas. Con una aplicación móvil, los supervisores de seguridad pueden controlar remotamente los dispositivos, recibir alertas y actuar al instante. Por otro lado, los encargados de planta acceden a una plataforma web intuitiva para configurar los umbrales del sistema, revisar el historial de datos y gestionar las actualizaciones. 
 
-Macallys radica en su capacidad de respuesta: ante un exceso de CO2, el sistema acciona automáticamente un ventilador de extracción para purificar el ambiente; si detecta operarios expuestos a concentraciones peligrosas de gas o ruido, dispara una bocina preventiva y puede accionar mamparas móviles de aislamiento acústico. 
+Macallys radica en su capacidad de respuesta: ante un exceso de CO2, el sistema acciona automáticamente un ventilador de extracción para purificar el ambiente; si detecta operarios expuestos a concentraciones peligrosas de gas o ruido, dispara una bocina preventiva y puede accionar mamparas de aislamiento. 
 
 Creemos firmemente que la digitalización y automatización de la seguridad industrial es el paso definitivo para garantizar la integridad de los trabajadores, reducir el ausentismo por problemas de salud y mejorar la sostenibilidad de las operaciones de manufactura e industria pesada.
 
@@ -115,6 +115,14 @@ Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetr
 <a id="s-1-2-2-1"></a>
 #### 1.2.2.1. Lean UX Problem Statements
 
+El estado actual de la seguridad ambiental en plantas industriales está enfocado principalmente en revisiones manuales periódicas, reportes estáticos y sistemas de alerta aislados que no interactúan de forma directa con los mecanismos de la planta.
+
+Nuestro producto abordará esta brecha mediante un sistema IoT industrial que interconecta la monitorización de CO2 y ruido con mitigadores automáticos y aplicaciones de control remoto, permitiendo reaccionar en el acto y mantener a salvo al personal en zonas críticas.
+
+Nuestro enfoque inicial estará dirigido a supervisores de seguridad en campo y encargados de gestión de planta.
+
+Sabremos que hemos tenido éxito cuando observemos una reducción drástica en el tiempo de exposición a niveles peligrosos de ruido y CO2, y una disminución en los incidentes de salud reportados, medido a través de los reportes históricos que generará el sistema.
+
 <a id="s-1-2-2-2"></a>
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -128,23 +136,23 @@ Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetr
   <tbody>
     <tr>
       <td align="left">Business Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Creemos que las industrias necesitan reducir sus tasas de ausentismo por salud y evitar sanciones regulatorias mediante la automatización de la seguridad.<br>• Estas necesidades se resuelven con un sistema IoT que no requiera reestructurar toda la planta, sino integrar sensores y actuadores manejables desde la web o móvil.<br>• Nuestros primeros clientes serán fábricas y plantas de procesamiento medianas y grandes.<br>• Valor esperado: Respuesta automática instantánea sin intervención humana.<br>• Beneficios adicionales: Monitoreo remoto 24/7, registro histórico para auditorías.<br>• Mayor riesgo: La conectividad y latencia de red dentro de zonas industriales con alta interferencia.<br>• Mitigación: Protocolos de comunicación ligeros y procesamiento Edge básico.</td>
     </tr>
     <tr>
       <td align="left">Business Outcome Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Reducir en un 90% el tiempo de respuesta ante la acumulación de gases.<br>• Disminuir un 40% las alertas críticas mensuales gracias a la ventilación preventiva.<br>• Lograr que los supervisores usen la app móvil diariamente como su herramienta principal.</td>
     </tr>
     <tr>
       <td align="left">User Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Usuarios: Supervisores de Seguridad y Encargados de planta.<br>• Contexto de uso: En el día a día de la operación industrial, el sistema funciona alertando anomalías. El encargado define umbrales en web y el supervisor monitorea recorriendo la planta.<br>• Problema a resolver: Falta de control remoto e incapacidad de accionar ventilación de manera inmediata.<br>• Características importantes: Alertas push inmediatas, gráficos de histórico de ruido, control de mitigadores y sensores.</td>
     </tr>
     <tr>
       <td align="left">User Outcome and Benefit Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Ambientes de trabajo saludables sin depender de la revisión manual periódica.<br>• Eliminación del estrés operativo del supervisor al tener una herramienta centralizada.<br>• Auditorías simplificadas al contar con reportes de calidad del aire descargables.</td>
     </tr>
     <tr>
       <td align="left">Feature Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Sensores interconectados que activan extractores.<br>• bocinas que retiran a la gente cuando no llevan protección auditiva.<br>• App Móvil de monitoreo remoto que da libertad de movimiento al supervisor de seguridad.<br>• Web que facilita al encargado de planta la parametrización de las zonas críticas.</td>
     </tr>
   </tbody>
 </table>
@@ -159,6 +167,14 @@ Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetr
 
 <a id="s-1-3"></a>
 ## 1.3. Segmentos objetivo
+
+#### **Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**
+
+Profesionales encargados de la seguridad industrial en campo, que están en constante movimiento a lo largo de las distintas zonas críticas de la planta. Su herramienta principal es la pp Móvil, a través de la cual realizan el monitoreo en tiempo real de las métricas ambientales y el control del sistema. Se enfrentan a ruidos fuertes, espacios amplios y necesitan información de manera rápida a través de alertas push y notificaciones de emergencia. 
+
+#### **Segmento Objetivo 2: Encargado de Planta (App Web)**
+
+Personal de la gerencia técnica y operativa, responsables del rendimiento general y del cumplimiento normativo de la planta industrial. Trabaja mediante la **App Web**, desde una oficina o sala de control. Este segmento se encarga de la configuración del sistema, definiendo los topes máximos de CO2 o decibeles por cada zona de la fábrica. Además, analiza históricos, instala actualizaciones del software de los sensores y emite reportes ambientales semanales o mensuales para sustentar auditorías frente a los inspectores laborales.
 
 ---
 
