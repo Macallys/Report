@@ -23,7 +23,7 @@ Creemos firmemente que la digitalización y automatización de la seguridad indu
 Nuestra misión es revolucionar la seguridad ocupacional en las plantas industriales mediante un sistema IoT inteligente que monitoree y mitigue automáticamente los riesgos ambientales.
 
 **Visión:**
-Aspiramos a convertirnos en el estándar líder en la automatización de la seguridad y salud en el trabajo en Latinoamérica, impulsando ecosistemas IoT que salven vidas y mejoren el bienestar laboral.
+Aspiramos a convertirnos en el estándar líder en la automatización de la seguridad y salud en el trabajo, impulsando ecosistemas IoT que salven vidas y mejoren el bienestar laboral.
 
 
 <a id="s-1-1-2"></a>
@@ -104,7 +104,7 @@ Se implementa para automatizar la respuesta de seguridad, protegiendo la salud d
 Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetros y detectores de presencia conectados a la plataforma Macallys. El sistema acciona como mitigación en milisegundos si se rompe el limite permitido. A la par, el Encargado de Planta configura las métricas desde la App Web, y el Supervisor de Seguridad visualiza el estado en tiempo real desde su App Móvil.
 
 **How much(Cuánto)**
-- **Impacto económico:** Las multas impuestas por la SUNAFIL (Superintendencia Nacional de Fiscalización Laboral) por incumplimiento de normativas de salud en el trabajo pueden superar los miles de soles, sin contar las indemnizaciones médicas por pérdida auditiva irreversible.
+- **Impacto económico:** Las multas impuestas por la SUNAFIL por incumplimiento de normativas de salud en el trabajo pueden superar los miles de soles.
 - **Tiempos de inactividad:** Las evacuaciones de emergencia por acumulación de gases paralizan las líneas de producción, costando a la empresa miles de dólares por cada hora de inactividad.
 <a id="s-1-2-2"></a>
 
@@ -160,10 +160,23 @@ Sabremos que hemos tenido éxito cuando observemos una reducción drástica en e
 <a id="s-1-2-2-3"></a>
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+- #### 1. Automatización de respuesta preventiva
+  - **Hipótesis:**  
+    **Creemos que lograremos** una reducción del 90 % en el tiempo de exposición a niveles peligrosos de CO2, protegiendo la salud de los trabajadores.<br>**Si** el sistema IoT <br>**Obtiene** la capacidad de detectar peligros y accionar automáticamente un ventilador de extracción<br>**Con** un actuador inteligente configurado en la plataforma.
+
+- #### 2. Monitoreo remoto ágil
+  - **Hipótesis:**  
+  **Creemos que lograremos** reducir el tiempo de respuesta ante crisis sonoras o ambientales en campo a menos de 1 minuto.<br>**Si** los supervisores de seguridad<br>**Obtienen** alertas inmediatas y la capacidad de accionar bocinas a distancia<br>**Con** una aplicación móvil de monitoreo y control.
+
+- #### 3. Cumplimiento y parametrización normativa
+  - **Hipótesis:**  
+  **Creemos que lograremos** aumentar la eficiencia de la gerencia técnica en un 30 %.<br>**Si** los encargados de planta<br>**Obtienen** un panel central para establecer límites específicos de dB y CO2, así como descargar reportes históricos<br>**Con** una aplicación web orientada a la configuración del sistema.
+
 <a id="s-1-2-2-4"></a>
 #### 1.2.2.4. Lean UX Canvas
 
 ![Lean UX Canvas](../assets/01-capitulo-i/lean-ux/lean-ux-canvas.png)
+
 
 <a id="s-1-3"></a>
 ## 1.3. Segmentos objetivo
