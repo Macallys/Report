@@ -108,8 +108,8 @@ HEADER = """**Navegación:** [Índice](./00-student-outcome.md#s-tabla-contenido
     </tr>
     <tr>
       <td align="left">E4</td>
-      <td align="left">Acceso y Seguridad Física en Zonas Críticas</td>
-      <td align="left">Como operario de planta quiero que el sistema controle mi ingreso a zonas críticas mediante credencial RFID para evitar exposición a condiciones ambientales peligrosas.</td>
+      <td align="left">Evaluación de Exposición por Presencia</td>
+      <td align="left">Como supervisor de seguridad quiero que el sistema cruce la presencia detectada por sensores con las condiciones ambientales de CO₂ y ruido para identificar exposición de personal en zonas críticas y priorizar alertas desde la aplicación móvil.</td>
     </tr>
     <tr>
       <td align="left">E5</td>
@@ -191,7 +191,7 @@ def row(s):
 
 
 def main():
-    assert len(STORIES) == 42, f"Expected 42 stories, got {len(STORIES)}"
+    assert len(STORIES) == 37, f"Expected 37 stories, got {len(STORIES)}"
     content = HEADER + "".join(row(s) for s in STORIES) + FOOTER
     OUT.write_text(content, encoding="utf-8")
     print(f"Wrote {OUT} ({len(content.splitlines())} lines, {len(STORIES)} stories)")

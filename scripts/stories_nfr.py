@@ -102,7 +102,7 @@ STORIES_NFR = [
                 "Saturación de almacenamiento local por contingencia prolongada",
                 "Dado que la conexión a internet de la planta permanece interrumpida durante un periodo prolongado<br/>Y el volumen de mediciones y eventos generados supera la capacidad de retención configurada en SQLite",
                 "Cuando el IoT Gateway alcanza el límite de almacenamiento local disponible",
-                "el sistema conserva prioritariamente los registros de alertas, acciones automáticas y accesos RFID recientes<br/>Y el sistema registra un evento de contingencia de almacenamiento local con la fecha y el nivel de saturación alcanzado",
+                "el sistema conserva prioritariamente los registros de alertas, acciones automáticas y mediciones recientes<br/>Y el sistema registra un evento de contingencia de almacenamiento local con la fecha y el nivel de saturación alcanzado",
             ),
             (
                 "Rechazo de resincronización por telemetría corrupta o incompleta",
