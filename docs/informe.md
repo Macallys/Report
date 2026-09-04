@@ -148,7 +148,6 @@
     1. [3.1. User Stories y Technical Stories](#s-3-1)
     1. [3.2. Impact Mapping](#s-3-2)
     1. [3.3. Product Backlog](#s-3-3)
-    1. [3.4. Matriz de trazabilidad HU–TS–Componente](#s-3-4)
 1. [Capítulo IV: Solution Software Design](#s-cap-iv)
     1. [4.1. Strategic-Level Domain-Driven Design](#s-4-1)
         1. [4.1.1. Design-Level EventStorming](#s-4-1-1)
@@ -1110,520 +1109,454 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 <table>
   <thead>
     <tr>
-      <th align="left">ID</th>
-      <th align="left">User Story / Technical Story</th>
-      <th align="left">Points</th>
-      <th align="left">Sprint</th>
-      <th align="left">Priority</th>
+      <th align="left">#</th>
+      <th align="left">User Story ID</th>
+      <th align="left">Título</th>
+      <th align="left">Descripción</th>
+      <th align="left">Story Points</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td align="left">1</td>
       <td align="left">HU01</td>
       <td align="left">Consulta de información del sistema SafePlant</td>
-      <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
+      <td align="left">Como visitante quiero conocer el propósito y funcionamiento del sistema SafePlant para comprender cómo contribuye a la seguridad y al control ambiental de una planta industrial.</td>
+      <td align="left">2</td>
     </tr>
     <tr>
+      <td align="left">2</td>
       <td align="left">HU02</td>
       <td align="left">Consulta de beneficios y ventajas de SafePlant</td>
-      <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
+      <td align="left">Como visitante quiero conocer los beneficios y ventajas competitivas de SafePlant para evaluar el valor que la solución aporta a la seguridad operativa de una planta industrial.</td>
+      <td align="left">1</td>
     </tr>
     <tr>
+      <td align="left">3</td>
       <td align="left">HU03</td>
       <td align="left">Consulta del equipo desarrollador</td>
-      <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
+      <td align="left">Como visitante quiero conocer al equipo desarrollador de SafePlant para obtener información sobre la organización responsable de la solución.</td>
+      <td align="left">1</td>
     </tr>
     <tr>
+      <td align="left">4</td>
       <td align="left">HU04</td>
       <td align="left">Envío de formulario de contacto</td>
+      <td align="left">Como visitante quiero enviar una solicitud de contacto a través del sitio web para comunicarme con el equipo de SafePlant y obtener información adicional sobre la solución.</td>
       <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">5</td>
       <td align="left">HU05</td>
       <td align="left">Consulta de arquitectura técnica del sistema</td>
-      <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
+      <td align="left">Como visitante quiero conocer la arquitectura técnica de SafePlant para comprender cómo se integran los dispositivos embebidos, el IoT Gateway, la nube, la aplicación móvil de operación y la aplicación web de configuración.</td>
+      <td align="left">2</td>
     </tr>
     <tr>
+      <td align="left">6</td>
       <td align="left">HU06</td>
       <td align="left">Navegación hacia la aplicación móvil de operación</td>
-      <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
+      <td align="left">Como visitante quiero acceder a la aplicación móvil de monitoreo y control operativo desde el sitio informativo para iniciar sesión como supervisor de seguridad.</td>
+      <td align="left">2</td>
     </tr>
     <tr>
+      <td align="left">7</td>
       <td align="left">HU07</td>
       <td align="left">Inicio de sesión de supervisor de seguridad en la aplicación móvil</td>
+      <td align="left">Como supervisor de seguridad quiero iniciar sesión en la aplicación móvil para acceder de forma remota a las funciones de monitoreo y control operativo de la planta.</td>
       <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">8</td>
       <td align="left">HU08</td>
       <td align="left">Inicio de sesión de encargado de planta en la aplicación web</td>
+      <td align="left">Como encargado de planta quiero iniciar sesión en la aplicación web para acceder a las funciones de configuración del sistema, administración de usuarios y actualizaciones.</td>
       <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">9</td>
       <td align="left">HU09</td>
       <td align="left">Navegación hacia la aplicación web de configuración</td>
-      <td align="left">3</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Should</td>
+      <td align="left">Como visitante quiero acceder a la aplicación web de configuración desde el sitio informativo para iniciar sesión como encargado de planta.</td>
+      <td align="left">2</td>
     </tr>
     <tr>
+      <td align="left">10</td>
       <td align="left">HU10</td>
       <td align="left">Cierre de sesión de usuario autenticado</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como usuario autenticado del sistema quiero finalizar mi sesión activa en la aplicación móvil o en la aplicación web para proteger el acceso a las funciones del sistema ante el uso no autorizado de mi cuenta.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">11</td>
       <td align="left">HU11</td>
       <td align="left">Creación de cuenta de usuario por encargado de planta</td>
+      <td align="left">Como encargado de planta quiero crear cuentas de usuario para supervisores de seguridad y encargados de planta en la aplicación web para habilitar el acceso controlado a la operación móvil y a la configuración web.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">12</td>
       <td align="left">HU12</td>
       <td align="left">Asignación de roles y permisos de usuario</td>
+      <td align="left">Como encargado de planta quiero asignar y modificar roles y permisos de los usuarios del sistema en la aplicación web para controlar el acceso a la operación móvil y a la configuración web.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">13</td>
       <td align="left">HU13</td>
       <td align="left">Recuperación de credenciales de acceso</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como usuario registrado del sistema quiero recuperar el acceso a mi cuenta cuando olvide mis credenciales para restablecer mi acceso a la aplicación móvil o a la aplicación web según mi rol.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">14</td>
       <td align="left">HU14</td>
       <td align="left">Dashboard consolidado de la planta</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero visualizar el estado consolidado de todas las zonas críticas de la planta en la aplicación móvil para obtener una visión general del estado ambiental y de seguridad en tiempo real de forma remota.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">15</td>
       <td align="left">HU15</td>
       <td align="left">Monitoreo de CO₂ en tiempo real por zona</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero monitorear en tiempo real la concentración de CO₂ en ppm de una zona crítica desde la aplicación móvil para identificar oportunamente acumulaciones peligrosas del gas en el ambiente industrial.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">16</td>
       <td align="left">HU16</td>
       <td align="left">Monitoreo de ruido en tiempo real por zona</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero monitorear en tiempo real el nivel de ruido en dB de una zona crítica desde la aplicación móvil para identificar oportunamente condiciones de exposición sonora peligrosa para los operarios.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">17</td>
       <td align="left">HU17</td>
       <td align="left">Monitoreo de presencia de personal por zona</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero monitorear la presencia de personal en una zona crítica desde la aplicación móvil para determinar si existen operarios expuestos a condiciones ambientales de riesgo.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">18</td>
       <td align="left">HU18</td>
       <td align="left">Visualización de alertas activas</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero visualizar las alertas ambientales y de seguridad activas en la planta desde la aplicación móvil para atender oportunamente las condiciones de riesgo detectadas por el sistema.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">19</td>
       <td align="left">HU19</td>
       <td align="left">Mapa digitalizado de riesgos por zona</td>
+      <td align="left">Como supervisor de seguridad quiero visualizar un mapa digitalizado de la planta con el estado de riesgo de cada zona crítica en la aplicación móvil para identificar geográficamente las áreas que requieren atención inmediata.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
     </tr>
     <tr>
+      <td align="left">20</td>
       <td align="left">HU20</td>
       <td align="left">Gestión de zonas críticas</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como encargado de planta quiero registrar y administrar las zonas críticas de la planta en la aplicación web para asociar dispositivos IoT, umbrales ambientales y reglas de acceso a cada área monitoreada.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">21</td>
       <td align="left">HU21</td>
       <td align="left">Configuración de umbrales ambientales por zona</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como encargado de planta quiero configurar los límites permitidos de CO₂ en ppm y ruido en dB para cada zona crítica en la aplicación web para determinar cuándo una condición ambiental representa un riesgo para los operarios.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">22</td>
       <td align="left">HU22</td>
       <td align="left">Registro de dispositivos IoT por zona</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como encargado de planta quiero registrar sensores y actuadores en una zona crítica desde la aplicación web para habilitar el monitoreo ambiental y las respuestas automáticas en esa área de la planta.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">23</td>
       <td align="left">HU23</td>
       <td align="left">Consulta de historial de mediciones y eventos ambientales</td>
+      <td align="left">Como supervisor de seguridad quiero consultar el historial de mediciones, alertas y acciones automáticas de una zona crítica en la aplicación móvil para analizar incidentes y verificar el comportamiento del sistema ante condiciones de riesgo.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">24</td>
       <td align="left">HU24</td>
       <td align="left">Cruce de presencia de personal con niveles de CO₂</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero que el sistema evalúe simultáneamente la presencia de personal y los niveles de CO₂ en una zona crítica y me presente la alerta resultante en la aplicación móvil para determinar si existen operarios expuestos a concentraciones peligrosas del gas.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">25</td>
       <td align="left">HU25</td>
       <td align="left">Clasificación de severidad de exposición por zona</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero visualizar en la aplicación móvil la severidad de exposición de cada zona crítica según presencia y excedencia ambiental para priorizar la atención operativa remota.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">26</td>
       <td align="left">HU26</td>
       <td align="left">Historial de exposiciones de personal por zona</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero consultar en la aplicación móvil el historial de exposiciones detectadas por zona para analizar patrones de riesgo y la efectividad de las respuestas automáticas.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">27</td>
       <td align="left">HU27</td>
       <td align="left">Detección de exceso de CO₂</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero que el sistema detecte cuando la concentración de CO₂ supera el límite permitido en una zona crítica para activar oportunamente las medidas automáticas de purificación y prevención.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">28</td>
       <td align="left">HU28</td>
       <td align="left">Detección de ruido excesivo</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero que el sistema detecte cuando el nivel sonoro supera el límite permitido en una zona crítica para prevenir la exposición de los operarios a niveles de ruido peligrosos.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">29</td>
       <td align="left">HU29</td>
       <td align="left">Activación automática del extractor de aire por CO₂</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 2</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero que el sistema active automáticamente el extractor de aire mediante el relé de control cuando se detecte un exceso de CO₂ para reducir la concentración del gas y recuperar condiciones ambientales seguras.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">30</td>
       <td align="left">HU30</td>
       <td align="left">Activación de sirena preventiva por exposición a condición peligrosa</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 2</td>
-      <td align="left">Must</td>
+      <td align="left">Como supervisor de seguridad quiero que el sistema active la sirena preventiva cuando un operario se encuentre expuesto a una condición peligrosa de CO₂ o ruido excesivo para advertir inmediatamente sobre el riesgo existente y permitir la evacuación de la zona.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">31</td>
       <td align="left">HU31</td>
       <td align="left">Despliegue de mamparas acústicas por exposición sonora</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como supervisor de seguridad quiero que el sistema despliegue mamparas móviles de aislamiento acústico mediante servomotores cuando se detecte ruido excesivo con personal presente para reducir la exposición sonora de los operarios en la zona afectada.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">32</td>
       <td align="left">HU32</td>
       <td align="left">Anulación manual remota de actuador en emergencia</td>
+      <td align="left">Como supervisor de seguridad quiero anular manualmente el estado de un actuador de forma remota desde la aplicación móvil durante una emergencia para asumir el control directo de extractores, sirenas o mamparas cuando la respuesta automática no sea adecuada para la situación.</td>
       <td align="left">8</td>
-      <td align="left">Sprint 2</td>
-      <td align="left">Must</td>
     </tr>
     <tr>
+      <td align="left">33</td>
       <td align="left">HU33</td>
       <td align="left">Registro de acciones automáticas ejecutadas</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como supervisor de seguridad quiero consultar las acciones automáticas ejecutadas por el sistema desde la aplicación móvil para verificar que los mecanismos de prevención respondieron ante las condiciones peligrosas detectadas.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">34</td>
       <td align="left">HU34</td>
       <td align="left">Notificación física de alarma al operario expuesto</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como operario de planta quiero recibir una alarma física audible cuando me encuentre expuesto a una condición peligrosa de CO₂ o ruido excesivo para conocer la situación de riesgo y retirarme de la zona afectada.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">35</td>
       <td align="left">HU35</td>
       <td align="left">Actualización de parámetros de configuración del sistema</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como encargado de planta quiero aplicar actualizaciones de parámetros de configuración del sistema desde la aplicación web para mantener zonas, umbrales, dispositivos y reglas alineados con la operación de la planta.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">36</td>
       <td align="left">HU36</td>
       <td align="left">Compatibilidad de la aplicación móvil y de la aplicación web</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como supervisor de seguridad quiero usar la aplicación móvil en dispositivos Android e iOS actuales para operar de forma remota, y como encargado de planta quiero usar la aplicación web en navegadores modernos para configurar y actualizar el sistema.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">37</td>
       <td align="left">TS01</td>
       <td align="left">API Endpoint para la ingesta de telemetría</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como Developer quiero exponer un endpoint REST de ingesta de telemetría en formato JSON para persistir mediciones de CO₂, ruido y presencia enviadas por el IoT Gateway hacia la nube.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">38</td>
       <td align="left">TS02</td>
       <td align="left">Autenticación segura y canal TLS de dispositivos y sesiones</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como Developer quiero autenticar dispositivos ESP32 y el IoT Gateway mediante JWT o API Key y exigir TLS en la comunicación hacia la API, además de tokens de usuario vigentes, para restringir el acceso y preservar confidencialidad e integridad.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">39</td>
       <td align="left">TS03</td>
       <td align="left">Persistencia local de contingencia en SQLite del Gateway</td>
+      <td align="left">Como Developer quiero persistir mediciones y eventos en SQLite del IoT Gateway cuando se detecta pérdida de conexión a internet para conservar trazabilidad operativa durante la contingencia offline.</td>
       <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
     </tr>
     <tr>
+      <td align="left">40</td>
       <td align="left">TS04</td>
       <td align="left">Sincronización asíncrona de datos locales hacia la nube</td>
+      <td align="left">Como Developer quiero sincronizar automáticamente los registros encolados en SQLite hacia la base de datos cloud cuando se restablece internet para restablecer la consistencia del historial operativo.</td>
       <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
     </tr>
     <tr>
+      <td align="left">41</td>
       <td align="left">TS05</td>
       <td align="left">Servicio de distribución de actualizaciones remotas OTA</td>
+      <td align="left">Como Developer quiero distribuir actualizaciones de firmware OTA a los ESP32 desde la nube de forma autenticada para aplicar parches de seguridad y correcciones de sensores sin intervención física.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 2</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">42</td>
       <td align="left">TS06</td>
       <td align="left">Recepción de telemetría ESP32 en el IoT Gateway</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero exponer un endpoint local en el IoT Gateway para recibir telemetría autenticada desde ESP32 y normalizarla antes de enviarla a la nube o a SQLite.</td>
+      <td align="left">8</td>
     </tr>
     <tr>
+      <td align="left">43</td>
       <td align="left">TS07</td>
       <td align="left">Motor de evaluación de exposición por presencia y umbrales</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como Developer quiero evaluar en el Gateway la combinación de presencia PIR con umbrales de CO₂ y ruido para generar alertas de exposición y decidir la activación de actuadores.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">44</td>
       <td align="left">TS08</td>
       <td align="left">Emisión de comandos de actuadores hacia ESP32</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como Developer quiero enviar comandos de control desde el IoT Gateway hacia el ESP32 para operar extractor, buzzer y servomotores de mamparas de forma confiable.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">45</td>
       <td align="left">TS09</td>
       <td align="left">API Endpoint de consulta de telemetría por zona</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero exponer un endpoint REST de consulta de telemetría reciente por zona para alimentar el monitoreo operativo de la aplicación móvil.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">46</td>
       <td align="left">TS10</td>
       <td align="left">API Endpoint de anulación remota de actuadores</td>
+      <td align="left">Como Developer quiero exponer un endpoint REST para anulación manual remota de actuadores por parte del supervisor autenticado para permitir control operativo de emergencia desde la aplicación móvil.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 2</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">47</td>
       <td align="left">TS11</td>
       <td align="left">Validación de esquema JSON de telemetría</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero validar el esquema JSON de telemetría en Gateway y API para rechazar payloads corruptos o incompletos antes de la persistencia.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">48</td>
       <td align="left">TS12</td>
       <td align="left">Idempotencia en la ingesta de telemetría</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como Developer quiero soportar claves de idempotencia en la ingesta de telemetría para evitar duplicados ante reintentos de red del Gateway.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">49</td>
       <td align="left">TS13</td>
       <td align="left">Limitación de tasa en endpoints de ingesta</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como Developer quiero aplicar rate limiting en los endpoints de ingesta para proteger la API ante ráfagas excesivas o abuso de dispositivos.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">50</td>
       <td align="left">TS14</td>
       <td align="left">Health checks de API y Gateway</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 2</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero exponer health checks de la API en la nube y del IoT Gateway para detectar degradaciones de dependencias y orientar reintentos de sincronización.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">51</td>
       <td align="left">TS15</td>
       <td align="left">Cola de reintentos con backoff exponencial</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero implementar una cola de reintentos con backoff exponencial en el Gateway para reenviar telemetría y eventos ante fallos transitorios de red o de la API.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">52</td>
       <td align="left">TS16</td>
       <td align="left">Circuit breaker hacia la API en la nube</td>
+      <td align="left">Como Developer quiero implementar un circuit breaker en el Gateway hacia la API en la nube para evitar saturar la red y degradar el procesamiento local durante una falla prolongada.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 2</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">53</td>
       <td align="left">TS17</td>
       <td align="left">Sincronización de umbrales y configuración hacia el Gateway</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero sincronizar umbrales y parámetros de zona desde la API cloud hacia el IoT Gateway para que el motor local de reglas opere con la configuración vigente.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">54</td>
       <td align="left">TS18</td>
       <td align="left">Auditoría de peticiones a la API</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero registrar auditoría de peticiones autenticadas a la API para trazabilidad de seguridad e investigación de incidentes.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">55</td>
       <td align="left">TS19</td>
       <td align="left">Heartbeat y detección de desconexión de ESP32</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero procesar heartbeats periódicos de los ESP32 en el Gateway para detectar desconexiones de hardware y marcar dispositivos como no disponibles.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">56</td>
       <td align="left">TS20</td>
       <td align="left">Persistencia de alertas y acciones de actuadores en la nube</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero persistir alertas y acciones de actuadores en la base de datos relacional cloud para habilitar historial operativo consultable por la aplicación móvil.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">57</td>
       <td align="left">TS21</td>
       <td align="left">API Endpoint de autenticación de usuarios de app móvil y web</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero exponer un endpoint de autenticación de usuarios que emita JWT de supervisor o encargado para proteger los recursos de operación y configuración.</td>
+      <td align="left">2</td>
     </tr>
     <tr>
+      <td align="left">58</td>
       <td align="left">TS22</td>
       <td align="left">Ingesta por lote de telemetría</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como Developer quiero soportar ingesta por lote de telemetría desde el Gateway para optimizar el envío de múltiples mediciones acumuladas tras una contingencia offline.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">59</td>
       <td align="left">TS23</td>
       <td align="left">API CRUD de zonas y umbrales ambientales</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero exponer endpoints REST de creación, lectura, actualización y baja lógica de zonas y umbrales para que la aplicación web de configuración persista el modelo operativo.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">60</td>
       <td align="left">TS24</td>
       <td align="left">Stream de alertas en tiempo casi real hacia clientes móviles</td>
-      <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
+      <td align="left">Como Developer quiero publicar alertas activas mediante un canal de eventos autenticado para que la aplicación móvil reciba actualizaciones de riesgo sin depender solo de polling.</td>
+      <td align="left">3</td>
     </tr>
     <tr>
+      <td align="left">61</td>
       <td align="left">TS25</td>
       <td align="left">Inventario y registro de dispositivos ESP32 en la nube</td>
+      <td align="left">Como Developer quiero registrar y consultar el inventario de dispositivos ESP32 y Gateways en la API para autorizar telemetría, heartbeats y despliegues OTA únicamente a hardware conocido.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 3</td>
-      <td align="left">Should</td>
     </tr>
     <tr>
+      <td align="left">62</td>
       <td align="left">TS26</td>
       <td align="left">SLA de tiempo de respuesta local en comandos de actuadores</td>
-      <td align="left">8</td>
-      <td align="left">Sprint 1</td>
-      <td align="left">Must</td>
+      <td align="left">Como Developer quiero instrumentar y garantizar que el pipeline local Gateway-ESP32 aplique comandos de extractor, sirena y mamparas con p95 inferior a 2 segundos desde la medición válida que originó la alerta para reducir la exposición del personal.</td>
+      <td align="left">5</td>
     </tr>
     <tr>
+      <td align="left">63</td>
       <td align="left">TS27</td>
       <td align="left">Objetivo de disponibilidad y degradación controlada de API y canales</td>
+      <td align="left">Como Developer quiero instrumentar disponibilidad mensual objetivo de 99.9% de la API cloud y degradación controlada de apps móvil/web para sostener operación y configuración con evidencia medible.</td>
       <td align="left">5</td>
-      <td align="left">Sprint 2</td>
-      <td align="left">Should</td>
-    </tr>
-  </tbody>
-</table>
-
-
-<a id="s-3-4"></a>
-## 3.4. Matriz de trazabilidad HU–TS–Componente
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">HU / Capacidad</th>
-      <th align="left">TS relacionadas</th>
-      <th align="left">Componente</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">HU07/HU08</td>
-      <td align="left">TS21</td>
-      <td align="left">API Auth</td>
-    </tr>
-    <tr>
-      <td align="left">HU14–HU19</td>
-      <td align="left">TS01, TS09, TS24</td>
-      <td align="left">API + App móvil</td>
-    </tr>
-    <tr>
-      <td align="left">HU20–HU22</td>
-      <td align="left">TS23, TS17</td>
-      <td align="left">API + App web + Gateway</td>
-    </tr>
-    <tr>
-      <td align="left">HU24–HU26</td>
-      <td align="left">TS07</td>
-      <td align="left">Gateway reglas</td>
-    </tr>
-    <tr>
-      <td align="left">HU27–HU34</td>
-      <td align="left">TS08, TS10, TS20, TS26</td>
-      <td align="left">Gateway + ESP32 + API</td>
-    </tr>
-    <tr>
-      <td align="left">HU35</td>
-      <td align="left">TS05, TS17, TS23</td>
-      <td align="left">API + App web + Gateway + ESP32</td>
-    </tr>
-    <tr>
-      <td align="left">HU36</td>
-      <td align="left">TS27</td>
-      <td align="left">App móvil + App web + API</td>
-    </tr>
-    <tr>
-      <td align="left">Contingencia offline</td>
-      <td align="left">TS03, TS04</td>
-      <td align="left">Gateway SQLite + API</td>
-    </tr>
-    <tr>
-      <td align="left">Seguridad transporte</td>
-      <td align="left">TS02</td>
-      <td align="left">API TLS + tokens</td>
-    </tr>
-    <tr>
-      <td align="left">Disponibilidad</td>
-      <td align="left">TS27, TS14</td>
-      <td align="left">API + Gateway</td>
     </tr>
   </tbody>
 </table>

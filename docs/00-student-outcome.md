@@ -152,7 +152,6 @@
     1. [3.1. User Stories y Technical Stories](informe.md#s-3-1)
     1. [3.2. Impact Mapping](informe.md#s-3-2)
     1. [3.3. Product Backlog](informe.md#s-3-3)
-    1. [3.4. Matriz de trazabilidad HU–TS–Componente](informe.md#s-3-4)
 1. [Capítulo IV: Solution Software Design](informe.md#s-cap-iv)
     1. [4.1. Strategic-Level Domain-Driven Design](informe.md#s-4-1)
         1. [4.1.1. Design-Level EventStorming](informe.md#s-4-1-1)
