@@ -20,7 +20,7 @@ def S(hu, epic, title, desc, scenarios):
 STORIES_NFR = [
     S(
         "HU38",
-        "E6",
+        "EP06",
         "Tiempo de respuesta crítica en activación de actuadores",
         "Como supervisor de seguridad quiero que el sistema active extractores, sirenas y mamparas acústicas dentro de un tiempo máximo de respuesta definido para reducir la exposición del personal a condiciones ambientales peligrosas en la planta industrial.",
         [
@@ -64,7 +64,7 @@ STORIES_NFR = [
     ),
     S(
         "HU39",
-        "E6",
+        "EP06",
         "Persistencia local y resincronización de telemetría en contingencia offline",
         "Como supervisor de seguridad quiero que el IoT Gateway conserve mediciones y eventos del sistema durante una interrupción de conectividad a internet para mantener trazabilidad operativa y continuidad del monitoreo en la planta.",
         [
@@ -114,7 +114,7 @@ STORIES_NFR = [
     ),
     S(
         "HU40",
-        "E6",
+        "EP06",
         "Protección de telemetría y sesiones de supervisión",
         "Como administrador de TI quiero que la telemetría transmitida hacia la nube y las sesiones de los supervisores estén protegidas contra acceso no autorizado para preservar la confidencialidad e integridad de la información operativa del sistema.",
         [
@@ -158,7 +158,7 @@ STORIES_NFR = [
     ),
     S(
         "HU41",
-        "E6",
+        "EP06",
         "Disponibilidad operativa de la plataforma de supervisión",
         "Como supervisor de seguridad quiero que la plataforma de supervisión mantenga una disponibilidad operativa definida para acceder de forma continua al monitoreo de CO₂, ruido, presencia y alertas activas en la planta industrial.",
         [
@@ -190,7 +190,7 @@ STORIES_NFR = [
     ),
     S(
         "HU42",
-        "E6",
+        "EP06",
         "Compatibilidad multiplataforma de la experiencia de supervisión",
         "Como supervisor de seguridad quiero acceder a la plataforma de supervisión desde navegadores web modernos y dispositivos móviles actuales para consultar telemetría y alertas desde distintos entornos operativos de la planta.",
         [
