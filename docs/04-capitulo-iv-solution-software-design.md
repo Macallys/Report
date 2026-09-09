@@ -131,6 +131,17 @@ Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canv
 <a id="s-4-1-2"></a>
 ### 4.1.2. Context Mapping
 
+Las relaciones estructurales entre los cuatro bounded contexts se mapearon con los patrones de **ddd-crew**, tal como se muestra en el diagrama a continuación.
+
+| Upstream | Downstream | Patrones |
+|----------|------------|----------|
+| Identity & Access | Plant Monitoring | OHS + Conformist (sesión/canal) |
+| Identity & Access | Safety & Actuation | OHS + Conformist |
+| Plant Monitoring | Safety & Actuation | Customer/Supplier + Conformist al *evento* de lectura |
+| Plant Monitoring | Device & Edge Management | OHS de ingest + ACL en Edge |
+| Safety & Actuation | Device & Edge Management | ACL (copia de alerta; el riesgo no cambia de dueño) |
+
+
 ![Context Map](../assets/04-capitulo-iv/ddd/context-map.png)
 
 <a id="s-4-1-3"></a>

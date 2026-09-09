@@ -1747,26 +1747,37 @@ Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colabora
 <a id="s-4-1-1-3"></a>
 #### 4.1.1.3 Bounded Context Canvases
 
-Cada contexto candidato se documentó con un **Bounded Context Canvas v5** (ddd-crew), en orden de importancia: primero el core de monitoreo de planta, luego las reglas de seguridad ocupacional, el supporting de dispositivos edge y, por último, identity como subdominio genérico. El canvas fija propósito, clasificación estratégica, lenguaje, decisiones de negocio y la comunicación de entrada y salida; no sustituye el context map.
+Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canvas fija propósito, clasificación estratégica, lenguaje, decisiones de negocio y la comunicación de entrada y salida.
 
-**Plant Monitoring (core).** Áreas, umbrales y telemetría; no evalúa exposición.
+**Plant Monitoring (core).** Áreas, umbrales y telemetría.
 
 ![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.png)
 
-**Safety & Actuation.** Exposición, alertas y actuación automática u override; dueño del riesgo.
+**Safety & Actuation.** Exposición, alertas y actuación automática u override.
 
 ![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.png)
 
-**Device & Edge Management (supporting).** Credenciales de dispositivo, ingest, cola y sync. El Edge hace de gateway; MQTT permanece sistema externo.
+**Device & Edge Management (supporting).** Credenciales de dispositivo, ingest, cola y sincronización.
 
 ![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.png)
 
-**Identity & Access (generic).** Cuentas, sesión por canal y OHS hacia los demás contextos; no mide ni actúa.
+**Identity & Access (generic).** Cuentas, sesión por canal y OHS hacia los demás contextos.
 
 ![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.png)
 
 <a id="s-4-1-2"></a>
 ### 4.1.2. Context Mapping
+
+Las relaciones estructurales entre los cuatro bounded contexts se mapearon con los patrones de **ddd-crew**, tal como se muestra en el diagrama a continuación.
+
+| Upstream | Downstream | Patrones |
+|----------|------------|----------|
+| Identity & Access | Plant Monitoring | OHS + Conformist (sesión/canal) |
+| Identity & Access | Safety & Actuation | OHS + Conformist |
+| Plant Monitoring | Safety & Actuation | Customer/Supplier + Conformist al *evento* de lectura |
+| Plant Monitoring | Device & Edge Management | OHS de ingest + ACL en Edge |
+| Safety & Actuation | Device & Edge Management | ACL (copia de alerta; el riesgo no cambia de dueño) |
+
 
 ![Context Map](../assets/04-capitulo-iv/ddd/context-map.png)
 
