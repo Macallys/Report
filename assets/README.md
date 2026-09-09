@@ -15,7 +15,7 @@ assets/
 │   └── eventstorming/        ← Big Picture EventStorming
 ├── 03-capitulo-iii/          ← Impact Map y artefactos de especificación
 ├── 04-capitulo-iv/
-│   ├── ddd/                  ← EventStorming diseño, Context Map, BC Canvas
+│   ├── ddd/                  ← ES diseño (es-01 … es-05), Context Map, BC Canvas
 │   ├── architecture/         ← C4 / Deployment
 │   └── bounded-contexts/     ← Diagramas por BC (4.2.X)
 ├── 05-capitulo-v/

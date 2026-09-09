@@ -116,12 +116,6 @@
 
 <!-- TOC:start -->
 
-1. [Carátula](#s-caratula)
-    1. [Relación de integrantes](#s-relacion-integrantes)
-1. [Registro de Versiones del Informe](#s-registro-versiones)
-1. [Project Report Collaboration Insights](#s-collaboration-insights)
-1. [Contenido](#s-contenido)
-    1. [Tabla de contenidos](#s-tabla-contenidos)
 1. [Student Outcome](#s-student-outcome)
 1. [Capítulo I: Introducción](#s-cap-i)
     1. [1.1. Startup Profile](#s-1-1)
@@ -135,6 +129,8 @@
             1. [1.2.2.3. Lean UX Hypothesis Statements](#s-1-2-2-3)
             1. [1.2.2.4. Lean UX Canvas](#s-1-2-2-4)
     1. [1.3. Segmentos objetivo](#s-1-3)
+            1. [**Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**](#s-segmento-objetivo-1-supervisor-de-seguridad-app-movil)
+            1. [**Segmento Objetivo 2: Encargado de Planta (App Web)**](#s-segmento-objetivo-2-encargado-de-planta-app-web)
 1. [Capítulo II: Requirements Elicitation & Analysis](#s-cap-ii)
     1. [2.1. Competidores](#s-2-1)
         1. [2.1.1. Análisis competitivo](#s-2-1-1)
@@ -274,6 +270,21 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 <a id="s-1-1-1"></a>
 ### 1.1.1. Descripción de la Startup
 
+**Macallys** nace con el propósito de transformar y automatizar la gestión de la seguridad ambiental en el sector industrial, ofreciendo una solución tecnológica integral para plantas que buscan proteger la salud de sus operarios y optimizar el cumplimiento de normativas. Nuestra propuesta se centra en proporcionar prevención automatizada, visibilidad en tiempo real y entornos de trabajo seguros.
+
+Nuestra plataforma, permite a las empresas monitorear centralizadamente la concentración de CO2, los niveles de contaminación sonora y la presencia de personal en zonas críticas. Con una aplicación móvil, los supervisores de seguridad pueden controlar remotamente los dispositivos, recibir alertas y actuar al instante. Por otro lado, los encargados de planta acceden a una plataforma web intuitiva para configurar los umbrales del sistema, revisar el historial de datos y gestionar las actualizaciones. 
+
+Macallys radica en su capacidad de respuesta: ante un exceso de CO2, el sistema acciona automáticamente un ventilador de extracción para purificar el ambiente; si detecta operarios expuestos a concentraciones peligrosas de gas o ruido, dispara una bocina preventiva y puede accionar mamparas móviles de aislamiento acústico.
+
+Creemos firmemente que la digitalización y automatización de la seguridad industrial es el paso definitivo para garantizar la integridad de los trabajadores, reducir el ausentismo por problemas de salud y mejorar la sostenibilidad de las operaciones de manufactura e industria pesada.
+
+**Misión:**
+Nuestra misión es revolucionar la seguridad ocupacional en las plantas industriales mediante un sistema IoT inteligente que monitoree y mitigue automáticamente los riesgos ambientales.
+
+**Visión:**
+Aspiramos a convertirnos en el estándar líder en la automatización de la seguridad y salud en el trabajo en Latinoamérica, impulsando ecosistemas IoT que salven vidas y mejoren el bienestar laboral.
+
+
 <a id="s-1-1-2"></a>
 ### 1.1.2. Perfiles de integrantes del equipo
 
@@ -325,11 +336,50 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 <a id="s-1-2-1"></a>
 ### 1.2.1 Antecedentes y problemática
 
+**Antecedentes**
+
+El sector industrial enfrenta retos constantes relacionados a la salud ocupacional y el cumplimiento de las normativas ambientales. Según la Organización Internacional del Trabajo, cada año se producen millones de casos de enfermedades profesionales en el mundo derivadas de la exposición prolongada a agentes químicos y físicos en el lugar de trabajo. La acumulación de CO2 en espacios confinados y la alta contaminación sonora por maquinaria pesada figuran entre los principales causantes de bajas médicas y problemas respiratorios. 
+
+Las soluciones actuales implementadas en muchas plantas son insuficientes: dependen de mediciones manuales esporádicas o de sistemas antiguos que solo emiten alertas visuales en paneles fijos, pero no toman acciones correctivas de manera automática. Esto deja a los trabajadores expuestos al riesgo hasta que un operador humano se da cuenta y enciende un extractor o evacúa el área.
+
+**Problematica**
+
+**What (Qué)**
+Las industrias enfrentan un alto riesgo de enfermedades ocupacionales y multas debido a la exposición prolongada de su personal a niveles tóxicos de CO2 y contaminación sonora excesiva.
+
+**When (Cuándo)**
+Los problemas de contaminación y ruido se evidencian principalmente durante los picos de producción, donde la maquinaria opera a máxima capacidad y se genera mayor combustión o ruido. El personal técnico está más ocupado y puede omitir las revisiones manuales de calidad ambiental.
+
+**Where (Dónde)**
+Los incidentes ocurren en las zonas críticas dentro de las plantas: cuartos de máquinas, zonas de ensamblaje cerrado, áreas de calderas y pasillos confinados donde la ventilación natural es nula y el eco del ruido se amplifica.
+
+**Who (Quién)**
+Los involucrados principales son los Operarios de planta, quienes sufren directamente las consecuencias en su salud, y los Supervisores de Seguridad, que deben monitorear estas variables pero carecen de herramientas remotas. 
+
+**Why (Porqué)**
+Se implementa para automatizar la respuesta de seguridad, protegiendo la salud del personal y evitando indemnizaciones o accidentes de planta. Este sistema funciona al reaccionar en segundos sin depender del error o la demora humana, centralizando la información en aplicaciones dedicadas.
+
+**How (Cómo)**
+Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetros y detectores de presencia conectados a la plataforma Macallys. El sistema acciona como mitigación en milisegundos si se rompe el limite permitido. A la par, el Encargado de Planta configura las métricas desde la App Web, y el Supervisor de Seguridad visualiza el estado en tiempo real desde su App Móvil.
+
+**How much(Cuánto)**
+- **Impacto económico:** Las multas impuestas por la SUNAFIL (Superintendencia Nacional de Fiscalización Laboral) por incumplimiento de normativas de salud en el trabajo pueden superar los miles de soles, sin contar las indemnizaciones médicas por pérdida auditiva irreversible.
+- **Tiempos de inactividad:** Las evacuaciones de emergencia por acumulación de gases paralizan las líneas de producción, costando a la empresa miles de dólares por cada hora de inactividad.
+<a id="s-1-2-2"></a>
+
 <a id="s-1-2-2"></a>
 ### 1.2.2 Lean UX Process
 
 <a id="s-1-2-2-1"></a>
 #### 1.2.2.1. Lean UX Problem Statements
+
+El estado actual de la seguridad ambiental en plantas industriales está enfocado principalmente en revisiones manuales periódicas, reportes estáticos y sistemas de alerta aislados que no interactúan de forma directa con los mecanismos de la planta.
+
+Nuestro producto abordará esta brecha mediante un sistema IoT industrial que interconecta la monitorización de CO2 y ruido con mitigadores automáticos y aplicaciones de control remoto, permitiendo reaccionar en el acto y mantener a salvo al personal en zonas críticas.
+
+Nuestro enfoque inicial estará dirigido a supervisores de seguridad en campo y encargados de gestión de planta.
+
+Sabremos que hemos tenido éxito cuando observemos una reducción drástica en el tiempo de exposición a niveles peligrosos de ruido y CO2, y una disminución en los incidentes de salud reportados, medido a través de los reportes históricos que generará el sistema.
 
 <a id="s-1-2-2-2"></a>
 #### 1.2.2.2. Lean UX Assumptions
@@ -344,23 +394,23 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <tbody>
     <tr>
       <td align="left">Business Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Creemos que las industrias necesitan reducir sus tasas de ausentismo por salud y evitar sanciones regulatorias mediante la automatización de la seguridad.<br>• Estas necesidades se resuelven con un sistema IoT que no requiera reestructurar toda la planta, sino integrar sensores y actuadores manejables desde la web o móvil.<br>• Nuestros primeros clientes serán fábricas y plantas de procesamiento medianas y grandes.<br>• Valor esperado: Respuesta automática instantánea sin intervención humana.<br>• Beneficios adicionales: Monitoreo remoto 24/7, registro histórico para auditorías.<br>• Mayor riesgo: La conectividad y latencia de red dentro de zonas industriales con alta interferencia.<br>• Mitigación: Protocolos de comunicación ligeros y procesamiento Edge básico.</td>
     </tr>
     <tr>
       <td align="left">Business Outcome Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Reducir en un 90% el tiempo de respuesta ante la acumulación de gases.<br>• Disminuir un 40% las alertas críticas mensuales gracias a la ventilación preventiva.<br>• Lograr que los supervisores usen la app móvil diariamente como su herramienta principal.</td>
     </tr>
     <tr>
       <td align="left">User Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Usuarios: Supervisores de Seguridad y Encargados de planta.<br>• Contexto de uso: En el día a día de la operación industrial, el sistema funciona alertando anomalías. El encargado define umbrales en web y el supervisor monitorea recorriendo la planta.<br>• Problema a resolver: Falta de control remoto e incapacidad de accionar ventilación de manera inmediata.<br>• Características importantes: Alertas push inmediatas, gráficos de histórico de ruido, control de mitigadores y sensores.</td>
     </tr>
     <tr>
       <td align="left">User Outcome and Benefit Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Ambientes de trabajo saludables sin depender de la revisión manual periódica.<br>• Eliminación del estrés operativo del supervisor al tener una herramienta centralizada.<br>• Auditorías simplificadas al contar con reportes de calidad del aire descargables.</td>
     </tr>
     <tr>
       <td align="left">Feature Assumptions</td>
-      <td align="left"></td>
+      <td align="left">• Sensores interconectados que activan extractores.<br>• bocinas que retiran a la gente cuando no llevan protección auditiva.<br>• App Móvil de monitoreo remoto que da libertad de movimiento al supervisor de seguridad.<br>• Web que facilita al encargado de planta la parametrización de las zonas críticas.</td>
     </tr>
   </tbody>
 </table>
@@ -368,13 +418,36 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 <a id="s-1-2-2-3"></a>
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+- #### 1. Automatización de respuesta preventiva
+  - **Hipótesis:**  
+    **Creemos que lograremos** una reducción del 90 % en el tiempo de exposición a niveles peligrosos de CO2, protegiendo la salud de los trabajadores.<br>**Si** el sistema IoT <br>**Obtiene** la capacidad de detectar peligros y accionar automáticamente un ventilador de extracción<br>**Con** un actuador inteligente configurado en la plataforma.
+
+- #### 2. Monitoreo remoto ágil
+  - **Hipótesis:**  
+  **Creemos que lograremos** reducir el tiempo de respuesta ante crisis sonoras o ambientales en campo a menos de 1 minuto.<br>**Si** los supervisores de seguridad<br>**Obtienen** alertas inmediatas y la capacidad de accionar bocinas a distancia<br>**Con** una aplicación móvil de monitoreo y control.
+
+- #### 3. Cumplimiento y parametrización normativa
+  - **Hipótesis:**  
+  **Creemos que lograremos** aumentar la eficiencia de la gerencia técnica en un 30 %.<br>**Si** los encargados de planta<br>**Obtienen** un panel central para establecer límites específicos de dB y CO2, así como descargar reportes históricos<br>**Con** una aplicación web orientada a la configuración del sistema.
+
 <a id="s-1-2-2-4"></a>
 #### 1.2.2.4. Lean UX Canvas
 
 ![Lean UX Canvas](../assets/01-capitulo-i/lean-ux/lean-ux-canvas.png)
 
+
 <a id="s-1-3"></a>
 ## 1.3. Segmentos objetivo
+
+<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil"></a>
+#### **Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**
+
+Profesionales encargados de la seguridad industrial en campo, que están en constante movimiento a lo largo de las distintas zonas críticas de la planta. Su herramienta principal es la pp Móvil, a través de la cual realizan el monitoreo en tiempo real de las métricas ambientales y el control del sistema. Se enfrentan a ruidos fuertes, espacios amplios y necesitan información de manera rápida a través de alertas push y notificaciones de emergencia. 
+
+<a id="s-segmento-objetivo-2-encargado-de-planta-app-web"></a>
+#### **Segmento Objetivo 2: Encargado de Planta (App Web)**
+
+Personal de la gerencia técnica y operativa, responsables del rendimiento general y del cumplimiento normativo de la planta industrial. Trabaja mediante la **App Web**, desde una oficina o sala de control. Este segmento se encarga de la configuración del sistema, definiendo los topes máximos de CO2 o decibeles por cada zona de la fábrica. Además, analiza históricos, instala actualizaciones del software de los sensores y emite reportes ambientales semanales o mensuales para sustentar auditorías frente a los inspectores laborales.
 
 ---
 
@@ -392,15 +465,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 **¿Por qué llevar a cabo este análisis?**
 
 
-
 <table>
   <thead>
     <tr>
       <th align="left">Dimensión</th>
-      <th align="center">Su startup<br/>(Nombre / Logo)</th>
-      <th align="center">Competidor 1<br/>(Nombre / Logo)</th>
-      <th align="center">Competidor 2<br/>(Nombre / Logo)</th>
-      <th align="center">Competidor 3<br/>(Nombre / Logo)</th>
+      <th align="center">Macallys</th>
+      <th align="center">Honeywell Forge</th>
+      <th align="center">Sistemas SCADA</th>
+      <th align="center">Medidores Manuales</th>
     </tr>
   </thead>
   <tbody>
@@ -409,58 +481,58 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     </tr>
     <tr>
       <td align="left">Overview</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Ecosistema IoT optimizado que cruza registros de sensores con tablas de umbrales para ejecutar acciones inmediatas.</td>
+      <td align="left">Plataforma corporativa masiva para la gestión integral de edificios, energía y operaciones globales.</td>
+      <td align="left">Sistemas de control y adquisición de datos centralizados, diseñados para la automatización a nivel de maquinaria pesada.</td>
+      <td align="left">Equipos físicos aislados operados manualmente.</td>
     </tr>
     <tr>
       <td align="left">Ventaja competitiva<br/>¿Qué valor ofrece a los clientes?</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Procesamiento relacional que dispara mitigadores automáticamente, sin depender de la interacción del usuario.</td>
+      <td align="left">Ecosistema completo y altamente robusto con capacidad de integración para corporaciones multinacionales.</td>
+      <td align="left">Alta capacidad de control directo y fiabilidad sobre procesos complejos.</td>
+      <td align="left">Bajo costo inicial por equipo y operación independiente que no requiere infraestructura de red ni bases de datos.</td>
     </tr>
     <tr>
       <td align="left" colspan="5"><strong>Perfil de Marketing</strong></td>
     </tr>
     <tr>
       <td align="left">Mercado objetivo</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Plantas industriales. Usuarios: Supervisores de seguridad y encargados de planta.</td>
+      <td align="left">Grandes corporaciones y multinacionales sobre transformación digital.</td>
+      <td align="left">Plantas de industria pesada, gestionadas por ingenieros de automatización.</td>
+      <td align="left">Pequeñas industrias y prevencionistas de riesgos independientes.</td>
     </tr>
     <tr>
       <td align="left">Estrategias de marketing</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Solución enfocada en salud ocupacional, destacando la velocidad de respuesta de los dispositivos IOT.</td>
+      <td align="left">Ventas B2B corporativas, ofreciendo transformación digital integral y eficiencia energética a nivel macro.</td>
+      <td align="left">Provisión a través de integradores de sistemas y venta por proyectos de ingeniería a medida.</td>
+      <td align="left">Venta directa a través de catálogos y distribuidores de Equipos de Protección Personal.</td>
     </tr>
     <tr>
       <td align="left" colspan="5"><strong>Perfil de Producto</strong></td>
     </tr>
     <tr>
       <td align="left">Productos &amp; Servicios</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Nodos IoT, actuadores y API REST para gestionar alertas, registros de sensores y mitigadores.</td>
+      <td align="left">Software empresarial pesado, integración de sistemas de control industrial.</td>
+      <td align="left">Controladores, servidores locales con bases de datos propietarias y paneles HMI.</td>
+      <td align="left">Dispositivos de hardware de medición ambiental sin capacidades de conexión a red.</td>
     </tr>
     <tr>
       <td align="left">Precios &amp; Costos</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Costo de entrada bajo/medio.</td>
+      <td align="left">Costos de implementación y licencias corporativas muy altos.</td>
+      <td align="left">Muy alto. Requiere instalación de red cableada estructurada y programación por equipo.</td>
+      <td align="left">Costo unitario muy bajo, pero alto costo operativo oculto por ineficiencia humana.</td>
     </tr>
     <tr>
       <td align="left">Canales de distribución<br/>(Web y/o Móvil)</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Plataforma Web y App Móvil.</td>
+      <td align="left">Aplicaciones de escritorio y plataformas Web corporativas.</td>
+      <td align="left">Interfaces locales en terminales de escritorio y paneles fijos.</td>
+      <td align="left">Distribuidores físicos de hardware. Sin canales digitales de interacción.</td>
     </tr>
   </tbody>
 </table>
@@ -471,44 +543,43 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <thead>
     <tr>
       <th align="left">SWOT</th>
-      <th align="left">Su startup</th>
-      <th align="left">Competidor 1</th>
-      <th align="left">Competidor 2</th>
-      <th align="left">Competidor 3</th>
+      <th align="left">Macallys</th>
+      <th align="left">Honeywell Forge</th>
+      <th align="left">Sistemas SCADA</th>
+      <th align="left">Medidores Manuales</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td align="left"><strong>Fortalezas</strong></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Alta velocidad para disparar acciones en milisegundos. Arquitectura backend modular y ligera.</td>
+      <td align="left">Ecosistema corporativo extremadamente robusto. Capacidad analítica profunda con gran volumen de datos.</td>
+      <td align="left">Control directo a nivel de hardware con latencia casi nula. Localmente sin dependencia de internet.</td>
+      <td align="left">Costo de adquisición casi nulo. No requiere configuración de bases de datos ni infraestructura de red.</td>
     </tr>
     <tr>
       <td align="left"><strong>Debilidades</strong></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Dependencia de la conectividad en planta. Marca nueva en el sector.</td>
+      <td align="left">Costos de licencia altos. Despliegue muy lento al requerir la construcción de almacenes de datos complejos.</td>
+      <td align="left">Requiere reprogramación rígida por cada nuevo equipo integrado.</td>
+      <td align="left">Dependencia total del humano, generando demora en la respuesta.</td>
     </tr>
     <tr>
       <td align="left"><strong>Oportunidades</strong></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Preferencia por soluciones SaaS de integración rápida.</td>
+      <td align="left">Absorber corporaciones multinacionales que buscan unificar sus operaciones globales.</td>
+      <td align="left">Integración con maquinaria pesada antigua que aún requiere protocolos cableados.</td>
+      <td align="left">Talleres o microempresas sin presupuesto que solo buscan cumplir el requisito mínimo de tener un equipo físico.</td>
     </tr>
     <tr>
       <td align="left"><strong>Amenazas</strong></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Interferencia electromagnética que cause pérdida de paquetes de datos.</td>
+      <td align="left">Startups ágiles con APIs más modernas y económicas.</td>
+      <td align="left">Migración de la industria hacia arquitecturas de microservicios e IoT en la nube, dejando obsoletos los sistemas cerrados.</td>
+      <td align="left">Nuevas normativas que prohíban los registros manuales en papel para validaciones de salud ocupacional.</td>
     </tr>
   </tbody>
 </table>
-
 <a id="s-2-1-2"></a>
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
@@ -517,40 +588,6 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 <a id="s-2-2-1"></a>
 ### 2.2.1. Diseño de entrevistas
-
-
-**Preguntas Generales**
-
-* Nombre
-* Edad
-* Distrito de residencia
-* Ocupación o cargo actual
-* Dispositivos tecnológicos de preferencia
-
-**Supervisor de Seguridad**
-
-* ¿Qué tiene que pasar al final de tu jornada para que sientas que cumpliste tu meta respecto a la prevención de riesgos ambientales?
-* ¿Cuáles son los mayores problemas o frustraciones que enfrentas hoy en día al intentar detectar riesgos como niveles peligrosos de CO₂ o ruido excesivo en la planta?
-* Cuéntame de la última vez que hubo una condición de riesgo en tu entorno de trabajo, ¿cómo te enteraste y cuáles fueron los pasos exactos que seguiste para resolverlo?
-* Si utilizaras una aplicación móvil para monitorear las zonas críticas de la planta, ¿qué información necesitarías ver inmediatamente al abrirla para tomar decisiones rápidas?
-* ¿En qué escenarios de emergencia consideras que la automatización de la planta no es suficiente y necesitarías tomar el control manual remoto de los actuadores (extractores, sirenas o mamparas) desde tu celular?
-* ¿Cómo verificas actualmente que las medidas de seguridad o de evacuación realmente funcionaron después de que ocurre un incidente en la planta?
-* ¿Qué tan útil te resultaría tener un mapa digitalizado en tu celular con los estados de riesgo de cada zona en tiempo real, y por qué?
-* Si pudieras cambiar una sola cosa del proceso actual con el que evalúas si hay personal expuesto a condiciones de riesgo, ¿qué sería?
-* ¿Cómo te gustaría recibir las notificaciones o alertas en tu dispositivo móvil para asegurar que las atiendas de inmediato sin que se pierdan en el día a día?
-
-**Encargado de Planta**
-
-* ¿Cuál es el impacto a largo plazo que buscas lograr en la operatividad de la planta al implementar nuevos sistemas de monitoreo y automatización?
-* ¿Qué tareas administrativas, de configuración de equipos o de gestión de personal te generan mayor frustración o te quitan más tiempo en el día a día?
-* ¿Cuáles son los mayores desafíos al registrar físicamente nuevos sensores IoT o actuadores en las zonas críticas de la planta?
-* Al definir los límites ambientales permitidos (umbrales de CO₂ y ruido) para los operarios, ¿qué dificultades o variables problemáticas encuentras habitualmente?
-* Al gestionar y configurar el sistema desde una aplicación web en tu computadora, ¿qué nivel de detalle o funciones consideras indispensables para sentir que tienes el control total de la plataforma?
-* ¿Qué criterios utilizas actualmente para decidir qué roles, permisos o accesos le otorgas a los supervisores de seguridad que operan bajo tu gestión?
-* ¿Cómo manejas actualmente las actualizaciones de normativas de seguridad industrial y cómo las aplicas a los parámetros de los sistemas de la planta?
-* Cuéntame de alguna vez en la que hubo problemas de conectividad o fallas en el hardware de monitoreo, ¿cómo te impactó a nivel de gestión de la planta?
-* ¿Qué tan importante es para ti tener un registro histórico o auditoría de los eventos ambientales y de las acciones de los supervisores, y para qué lo usarías?
-* Si pudieras automatizar por completo una tarea de configuración o administración de la planta que hoy haces de forma manual, ¿cuál elegirías?
 
 <a id="s-2-2-2"></a>
 ### 2.2.2. Registro de entrevistas
@@ -1611,10 +1648,74 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 <a id="s-4-1-1"></a>
 ### 4.1.1. Design-Level EventStorming
 
-![Design-Level EventStorming](../assets/04-capitulo-iv/ddd/design-level-eventstorming.png)
+A partir del Big Picture EventStorming del Capítulo II y de las épicas EP02–EP07, el equipo realizó una sesión de **Design-Level EventStorming** para refinar el modelo hacia la implementación. Se avanzó por capas sobre el mismo tablero (eventos y timelines; pain points y pivotales; comandos, políticas, read models y sistemas externos; aggregates; bounded contexts). El resultado son cuatro contextos: Identity & Access, Plant Monitoring, Safety & Actuation y Device & Edge Management. El objetivo fue validar flujos críticos —autenticación por rol, registro de telemetría, evaluación de exposición con actuación automática y ciclo de vida de dispositivos edge— antes de definir message flows y el context map.
+
+**Captura 1 — Unstructured exploration y timelines** (eventos de dominio en orden de ocurrencia).
+
+![Design-Level EventStorming — events and timelines](../assets/04-capitulo-iv/ddd/es-01-events-timelines.png)
+
+**Captura 2 — Pain points y pivotal points** (hotspots y cambios de estado).
+
+![Design-Level EventStorming — pain points and pivotals](../assets/04-capitulo-iv/ddd/es-02-pains-pivotals.png)
+
+**Captura 3 — Commands, policies, read models y sistemas externos.**
+
+![Design-Level EventStorming — commands, policies, reads, externals](../assets/04-capitulo-iv/ddd/es-03-commands-policies-reads-externals.png)
+
+**Captura 4 — Aggregates** (límites de consistencia).
+
+![Design-Level EventStorming — aggregates](../assets/04-capitulo-iv/ddd/es-04-aggregates.png)
+
+**Captura 5 — Bounded contexts** (agrupación de aggregates y contratos entre contextos).
+
+![Design-Level EventStorming — bounded contexts](../assets/04-capitulo-iv/ddd/es-05-bounded-contexts.png)
 
 <a id="s-4-1-1-1"></a>
 #### 4.1.1.1 Candidate Context Discovery
+
+Los contextos candidatos se identificaron aplicando la heurística de **un Bounded Context por lenguaje ubicuo y dueño de datos**, tomando como entrada las user stories abordadas Capítulo III y el lenguaje del dominio SafePlant.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Bounded Context</th>
+      <th align="left">Tipo (DDD)</th>
+      <th align="left">Propósito</th>
+      <th align="left">Épica(s)</th>
+      <th align="left">Fuera de alcance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><strong>Identity & Access</strong></td>
+      <td align="left">Generic Subdomain</td>
+      <td align="left">Autenticación, roles, recuperación de credenciales y autorización por canal (app móvil supervisor, app web encargado de planta).</td>
+      <td align="left">EP02; usuarios y roles de EP03</td>
+      <td align="left">Telemetría, reglas de seguridad ni gestión de dispositivos. Vive en el monolito Cloud; el Edge no administra usuarios, solo autentica dispositivos mediante tokens o API keys.</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Plant Monitoring</strong></td>
+      <td align="left">Core Domain</td>
+      <td align="left">Definición topológica de la planta (áreas, umbrales) y registro histórico de telemetría: CO₂, ruido y presencia.</td>
+      <td align="left">EP03</td>
+      <td align="left">Evaluación de exposición, disparo de actuadores, inventario hardware ni despliegues OTA.</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Safety & Actuation</strong></td>
+      <td align="left">Dominio de reglas de seguridad</td>
+      <td align="left">Cruce presencia × condiciones ambientales (exposición), motor de reglas de riesgo, activación de extractores, sirenas y mamparas acústicas, y anulación remota de actuadores.</td>
+      <td align="left">EP04, EP05</td>
+      <td align="left">Configuración de áreas/umbrales (Plant Monitoring), identidad de usuarios ni ciclo de vida de firmware en edge.</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Device & Edge Management</strong></td>
+      <td align="left">Supporting Subdomain</td>
+      <td align="left">Inventario y salud de hardware edge (ESP32, Raspberry Pi), despliegues OTA, sincronización offline y conectividad segura hacia Cloud.</td>
+      <td align="left">EP07</td>
+      <td align="left">Reglas de negocio de seguridad ocupacional ni semántica de telemetría/umbrales de planta.</td>
+    </tr>
+  </tbody>
+</table>
 
 <a id="s-4-1-1-2"></a>
 #### 4.1.1.2 Domain Message Flows Modeling

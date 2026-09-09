@@ -133,6 +133,8 @@
             1. [1.2.2.3. Lean UX Hypothesis Statements](informe.md#s-1-2-2-3)
             1. [1.2.2.4. Lean UX Canvas](informe.md#s-1-2-2-4)
     1. [1.3. Segmentos objetivo](informe.md#s-1-3)
+            1. [**Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**](informe.md#s-segmento-objetivo-1-supervisor-de-seguridad-app-movil)
+            1. [**Segmento Objetivo 2: Encargado de Planta (App Web)**](informe.md#s-segmento-objetivo-2-encargado-de-planta-app-web)
 1. [Capítulo II: Requirements Elicitation & Analysis](informe.md#s-cap-ii)
     1. [2.1. Competidores](informe.md#s-2-1)
         1. [2.1.1. Análisis competitivo](informe.md#s-2-1-1)
