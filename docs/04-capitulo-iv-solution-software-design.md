@@ -110,7 +110,23 @@ Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colabora
 <a id="s-4-1-1-3"></a>
 #### 4.1.1.3 Bounded Context Canvases
 
-![Bounded Context Canvas](../assets/04-capitulo-iv/ddd/bounded-context-canvas.png)
+Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canvas fija propósito, clasificación estratégica, lenguaje, decisiones de negocio y la comunicación de entrada y salida.
+
+**Plant Monitoring (core).** Áreas, umbrales y telemetría.
+
+![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.png)
+
+**Safety & Actuation.** Exposición, alertas y actuación automática u override.
+
+![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.png)
+
+**Device & Edge Management (supporting).** Credenciales de dispositivo, ingest, cola y sincronización.
+
+![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.png)
+
+**Identity & Access (generic).** Cuentas, sesión por canal y OHS hacia los demás contextos.
+
+![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.png)
 
 <a id="s-4-1-2"></a>
 ### 4.1.2. Context Mapping

@@ -1747,7 +1747,23 @@ Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colabora
 <a id="s-4-1-1-3"></a>
 #### 4.1.1.3 Bounded Context Canvases
 
-![Bounded Context Canvas](../assets/04-capitulo-iv/ddd/bounded-context-canvas.png)
+Cada contexto candidato se documentó con un **Bounded Context Canvas v5** (ddd-crew), en orden de importancia: primero el core de monitoreo de planta, luego las reglas de seguridad ocupacional, el supporting de dispositivos edge y, por último, identity como subdominio genérico. El canvas fija propósito, clasificación estratégica, lenguaje, decisiones de negocio y la comunicación de entrada y salida; no sustituye el context map.
+
+**Plant Monitoring (core).** Áreas, umbrales y telemetría; no evalúa exposición.
+
+![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.png)
+
+**Safety & Actuation.** Exposición, alertas y actuación automática u override; dueño del riesgo.
+
+![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.png)
+
+**Device & Edge Management (supporting).** Credenciales de dispositivo, ingest, cola y sync. El Edge hace de gateway; MQTT permanece sistema externo.
+
+![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.png)
+
+**Identity & Access (generic).** Cuentas, sesión por canal y OHS hacia los demás contextos; no mide ni actúa.
+
+![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.png)
 
 <a id="s-4-1-2"></a>
 ### 4.1.2. Context Mapping
