@@ -178,28 +178,203 @@
 <a id="s-2-2-2"></a>
 ### 2.2.2. Registro de entrevistas
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">ID</th>
-      <th align="left">Fecha</th>
-      <th align="left">Entrevistado</th>
-      <th align="left">Segmento objetivo</th>
-      <th align="left">Evidencia (enlace / captura)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">E-01</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
+
+Las entrevistas fueron grabadas en video previo consentimiento de los participantes y se organizaron por segmento objetivo. Cada registro incluye los datos generales del entrevistado, la captura del video, el enlace de acceso, el timing dentro de la grabación consolidada, la duración y un resumen descriptivo de las respuestas obtenidas.
+
+> Nota para el equipo: las celdas marcadas entre corchetes deben completarse con los datos reales de cada entrevista. Las capturas se colocan en assets/chapter-2/ respetando los nombres de archivo indicados en cada etiqueta de imagen.
+
+#### Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
+
+##### Entrevista 1
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto, ej: Supervisor SSOMA]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
+      <b>Área de trabajo:</b> [Planta de producción, campo, etc.]<br>
+      <b>Tipo de establecimiento:</b> [Ej: Fábrica metalmecánica]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción detallada de cómo realiza actualmente el monitoreo de seguridad en la planta. Explicar qué herramientas manuales o antiguas utiliza, cuánto tiempo le toma y cuáles son sus mayores frustraciones al no tener control remoto. Mencionar incidentes pasados relacionados con CO2 o ruido.]
+      <br><br>
+      [Detallar sus expectativas sobre una aplicación móvil para monitoreo en tiempo real: qué métricas necesita ver primero, cómo espera recibir las alertas de peligro y qué tan dispuesto está a adoptar una nueva tecnología en su rutina diaria.]
+    </td>
+  </tr>
 </table>
 
-<a id="s-2-2-3"></a>
+##### Entrevista 2
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-supervisor-2.png" alt="Entrevista 2 - Supervisor de Seguridad" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
+    </td>
+  </tr>
+</table>
+
+##### Entrevista 3
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-supervisor-3.png" alt="Entrevista 3 - Supervisor de Seguridad" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
+    </td>
+  </tr>
+</table>
+
+#### Segmento objetivo 2: Encargado de Planta (App Web)
+
+##### Entrevista 1
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Ej: Gerente de Operaciones / Jefe de Planta]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
+      <b>Área de trabajo:</b> [Oficina técnica / Control de operaciones]<br>
+      <b>Tipo de establecimiento:</b> [Ej: Planta procesadora de alimentos]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Describir cómo gestiona actualmente el cumplimiento de las normativas de salud ocupacional frente a entidades reguladoras. Mencionar los costos o multas que enfrenta la planta si hay accidentes por ruido o gases, y cómo lleva el registro histórico (probablemente en Excel o papel).]
+      <br><br>
+      [Explicar su postura frente a la implementación de un panel web centralizado que le permita configurar topes de decibeles o partes por millón de CO2, y cómo la descarga de reportes automatizados impactaría su productividad y las auditorías.]
+    </td>
+  </tr>
+</table>
+
+##### Entrevista 2
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-encargado-2.png" alt="Entrevista 2 - Encargado de Planta" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+    </td>
+  </tr>
+</table>
+
+##### Entrevista 3
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-encargado-3.png" alt="Entrevista 3 - Encargado de Planta" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+    </td>
+  </tr>
+</table>
+
 ### 2.2.3. Análisis de entrevistas
 
 <a id="s-2-3"></a>
