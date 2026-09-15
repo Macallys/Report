@@ -13,7 +13,16 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
             plantManagerWebClient = container "Plant Manager Web Client" "Sign-in, account management, and plant analytics." "Angular" "Browser"
             landingWebsite = container "SafePlant Landing Website" "Public marketing site." "TBD" "StaticContent"
 
-            webBackend = container "Web Monolithic Backend" "Single cloud process. Four internal modules: Identity & Access, Plant Monitoring, Safety & Actuation, Device & Edge Management." "TBD" "Backend"
+            webBackend = container "Web Monolithic Backend" "Single cloud process. Four internal modules: Identity & Access, Plant Monitoring, Safety & Actuation, Device & Edge Management." "TBD" "Backend" {
+                identityInterface = component "Identity Interface Layer" "UserAccountController, SessionController, CredentialRecoveryController. HTTP endpoints for sign-in, account/role management, and credential recovery." "TBD" "IdentityComponent"
+                identityApplication = component "Identity Application Layer" "Command/query handlers: CreateUserAccount, AssignUserRole, SignIn, CloseSession, RequestCredentialRecovery, ResetCredentials, GetUserAccountsDirectory." "TBD" "IdentityComponent"
+                identityDomain = component "Identity Domain Layer" "Aggregates UserAccount, Session, CredentialRecovery. Enforces unique email, channel/role rules (mobile supervisor vs. web plant manager)." "TBD" "IdentityComponent"
+                identityInfrastructure = component "Identity Infrastructure Layer" "Repository implementations for UserAccount, Session, CredentialRecovery, and the EmailServiceAdapter." "TBD" "IdentityComponent"
+
+                identityInterface -> identityApplication "Delegates commands and queries"
+                identityApplication -> identityDomain "Invokes aggregates and enforces invariants"
+                identityApplication -> identityInfrastructure "Persists via repositories"
+            }
 
             cloudDatabase = container "Cloud Database" "Backing store for the monolithic backend." "TBD" "Database"
             messageBroker = container "MQTT Broker" "Internal pub/sub between field firmware and the Edge Application. Product TBD." "TBD" "MessageBroker"
@@ -30,6 +39,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
 
             webBackend -> cloudDatabase "Reads from and writes to"
             webBackend -> emailService "Sends recovery emails"
+
+            supervisorMobileApp -> identityInterface "Sign-in, close session"
+            plantManagerWebClient -> identityInterface "Sign-in, accounts, role assignment, credential recovery"
+            identityInfrastructure -> cloudDatabase "Reads from and writes to"
+            identityInfrastructure -> emailService "Sends recovery emails"
 
             deviceEmbeddedApp -> fieldHardware "Reads sensors and drives actuators"
             deviceEmbeddedApp -> messageBroker "Publishes readings"
@@ -54,6 +68,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
         container safePlant "ContainerView" {
             include *
             autoLayout lr 350 200
+        }
+
+        component webBackend "IdentityAccessComponents" {
+            include supervisorMobileApp plantManagerWebClient identityInterface identityApplication identityDomain identityInfrastructure cloudDatabase emailService
+            autoLayout lr 300 150
         }
 
         styles {
@@ -109,6 +128,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
                 background darkgray
             }
             element "Hardware" {
+            }
+            element "IdentityComponent" {
+                shape Hexagon
+                background #eaf7f5
+                stroke darkcyan
             }
         }
     }

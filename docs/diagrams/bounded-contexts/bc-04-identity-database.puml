@@ -1,0 +1,39 @@
+@startuml bc-04-identity-database
+' Bounded Context Database Design Diagram — Identity & Access (§ 4.2.4.6.2)
+' Modelo relacional lógico; motor de base de datos TBD (DEC-005).
+
+entity "user_accounts" as user_accounts {
+  * id : UUID <<PK>>
+  --
+  * email : VARCHAR <<UNIQUE>>
+  * password_hash : VARCHAR
+  * role : VARCHAR
+  * enabled : BOOLEAN
+  * created_at : TIMESTAMP
+}
+
+entity "sessions" as sessions {
+  * id : UUID <<PK>>
+  --
+  * account_id : UUID <<FK>>
+  * channel : VARCHAR
+  * token_hash : VARCHAR <<UNIQUE>>
+  * issued_at : TIMESTAMP
+  * expires_at : TIMESTAMP
+  closed_at : TIMESTAMP
+}
+
+entity "credential_recoveries" as credential_recoveries {
+  * id : UUID <<PK>>
+  --
+  * account_id : UUID <<FK>>
+  * token_hash : VARCHAR <<UNIQUE>>
+  * requested_at : TIMESTAMP
+  * expires_at : TIMESTAMP
+  used_at : TIMESTAMP
+}
+
+user_accounts ||--o{ sessions : "1 account has many sessions"
+user_accounts ||--o{ credential_recoveries : "1 account has many recovery requests"
+
+@enduml
