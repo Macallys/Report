@@ -22,6 +22,15 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
                 identityInterface -> identityApplication "Delegates commands and queries"
                 identityApplication -> identityDomain "Invokes aggregates and enforces invariants"
                 identityApplication -> identityInfrastructure "Persists via repositories"
+
+                plantMonitoringInterface = component "Plant Monitoring Interface Layer" "PlantSetupController, PlantMetricsController, TelemetryIngestConsumer. HTTP for plant setup and history; in-process ingest from Edge." "TBD" "PlantMonitoringComponent"
+                plantMonitoringApplication = component "Plant Monitoring Application Layer" "Command/query handlers: ManageIndustrialArea, ConfigureEnvironmentalThresholds, AssociateDeviceToArea, IngestTelemetry, GetAreaSetupSheet, GetPlantMetricsHistory." "TBD" "PlantMonitoringComponent"
+                plantMonitoringDomain = component "Plant Monitoring Domain Layer" "Aggregates IndustrialArea, AreaThresholds, AreaDeviceAssignment, AreaTelemetry. Separate CO₂, noise, and presence facts; no exposure evaluation." "TBD" "PlantMonitoringComponent"
+                plantMonitoringInfrastructure = component "Plant Monitoring Infrastructure Layer" "Repository implementations for the four aggregates and an in-process domain-event publisher." "TBD" "PlantMonitoringComponent"
+
+                plantMonitoringInterface -> plantMonitoringApplication "Delegates commands and queries"
+                plantMonitoringApplication -> plantMonitoringDomain "Invokes aggregates and enforces invariants"
+                plantMonitoringApplication -> plantMonitoringInfrastructure "Persists via repositories"
             }
 
             cloudDatabase = container "Cloud Database" "Backing store for the monolithic backend." "TBD" "Database"
@@ -44,6 +53,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
             plantManagerWebClient -> identityInterface "Sign-in, accounts, role assignment, credential recovery"
             identityInfrastructure -> cloudDatabase "Reads from and writes to"
             identityInfrastructure -> emailService "Sends recovery emails"
+
+            supervisorMobileApp -> plantMonitoringInterface "Plant setup (areas, thresholds, device assignment)"
+            plantManagerWebClient -> plantMonitoringInterface "Plant metrics history"
+            edgeApplication -> plantMonitoringInterface "Ingests telemetry"
+            plantMonitoringInfrastructure -> cloudDatabase "Reads from and writes to"
 
             deviceEmbeddedApp -> fieldHardware "Reads sensors and drives actuators"
             deviceEmbeddedApp -> messageBroker "Publishes readings"
@@ -72,6 +86,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
 
         component webBackend "IdentityAccessComponents" {
             include supervisorMobileApp plantManagerWebClient identityInterface identityApplication identityDomain identityInfrastructure cloudDatabase emailService
+            autoLayout lr 300 150
+        }
+
+        component webBackend "PlantMonitoringComponents" {
+            include supervisorMobileApp plantManagerWebClient edgeApplication plantMonitoringInterface plantMonitoringApplication plantMonitoringDomain plantMonitoringInfrastructure cloudDatabase
             autoLayout lr 300 150
         }
 
@@ -130,6 +149,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
             element "Hardware" {
             }
             element "IdentityComponent" {
+                shape Hexagon
+                background #eaf7f5
+                stroke darkcyan
+            }
+            element "PlantMonitoringComponent" {
                 shape Hexagon
                 background #eaf7f5
                 stroke darkcyan

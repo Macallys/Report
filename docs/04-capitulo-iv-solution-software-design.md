@@ -213,7 +213,7 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
     <tr>
       <td align="left">4.2.1</td>
       <td align="left">Plant Monitoring</td>
-      <td align="left">pendiente</td>
+      <td align="left"><a href="bounded-contexts/bc-01-plant-monitoring.md">bc-01-plant-monitoring.md</a></td>
     </tr>
     <tr>
       <td align="left">4.2.2</td>

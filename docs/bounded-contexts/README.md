@@ -12,9 +12,9 @@ Copiar [`../templates/bounded-context.md`](../templates/bounded-context.md) como
   </thead>
   <tbody>
     <tr>
-      <td align="left">—</td>
+      <td align="left">bc-01-plant-monitoring.md</td>
       <td align="left">Plant Monitoring (4.2.1)</td>
-      <td align="left">Pendiente</td>
+      <td align="left">Hecho</td>
     </tr>
     <tr>
       <td align="left">—</td>
