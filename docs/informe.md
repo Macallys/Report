@@ -138,6 +138,14 @@
     1. [2.2. Entrevistas](#s-2-2)
         1. [2.2.1. Diseño de entrevistas](#s-2-2-1)
         1. [2.2.2. Registro de entrevistas](#s-2-2-2)
+            1. [Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad)
+                1. [Entrevista 1](#s-entrevista-1)
+                1. [Entrevista 2](#s-entrevista-2)
+                1. [Entrevista 3](#s-entrevista-3)
+            1. [Segmento objetivo 2: Encargado de Planta (App Web)](#s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta)
+                1. [Entrevista 1](#s-entrevista-1-entrevista-1)
+                1. [Entrevista 2](#s-entrevista-2-entrevista-2)
+                1. [Entrevista 3](#s-entrevista-3-entrevista-3)
         1. [2.2.3. Análisis de entrevistas](#s-2-2-3)
     1. [2.3. Needfinding](#s-2-3)
         1. [2.3.1. User Personas](#s-2-3-1)
@@ -636,25 +644,209 @@ Personal de la gerencia técnica y operativa, responsables del rendimiento gener
 <a id="s-2-2-2"></a>
 ### 2.2.2. Registro de entrevistas
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">ID</th>
-      <th align="left">Fecha</th>
-      <th align="left">Entrevistado</th>
-      <th align="left">Segmento objetivo</th>
-      <th align="left">Evidencia (enlace / captura)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">E-01</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
+
+Las entrevistas fueron grabadas en video previo consentimiento de los participantes y se organizaron por segmento objetivo. Cada registro incluye los datos generales del entrevistado, la captura del video, el enlace de acceso, el timing dentro de la grabación consolidada, la duración y un resumen descriptivo de las respuestas obtenidas.
+
+> Nota para el equipo: las celdas marcadas entre corchetes deben completarse con los datos reales de cada entrevista. Las capturas se colocan en assets/chapter-2/ respetando los nombres de archivo indicados en cada etiqueta de imagen.
+
+<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad"></a>
+#### Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
+
+<a id="s-entrevista-1"></a>
+##### Entrevista 1
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto, ej: Supervisor SSOMA]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
+      <b>Área de trabajo:</b> [Planta de producción, campo, etc.]<br>
+      <b>Tipo de establecimiento:</b> [Ej: Fábrica metalmecánica]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción detallada de cómo realiza actualmente el monitoreo de seguridad en la planta. Explicar qué herramientas manuales o antiguas utiliza, cuánto tiempo le toma y cuáles son sus mayores frustraciones al no tener control remoto. Mencionar incidentes pasados relacionados con CO2 o ruido.]
+      <br><br>
+      [Detallar sus expectativas sobre una aplicación móvil para monitoreo en tiempo real: qué métricas necesita ver primero, cómo espera recibir las alertas de peligro y qué tan dispuesto está a adoptar una nueva tecnología en su rutina diaria.]
+    </td>
+  </tr>
+</table>
+
+<a id="s-entrevista-2"></a>
+##### Entrevista 2
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-supervisor-2.png" alt="Entrevista 2 - Supervisor de Seguridad" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
+    </td>
+  </tr>
+</table>
+
+<a id="s-entrevista-3"></a>
+##### Entrevista 3
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-supervisor-3.png" alt="Entrevista 3 - Supervisor de Seguridad" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
+    </td>
+  </tr>
+</table>
+
+<a id="s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta"></a>
+#### Segmento objetivo 2: Encargado de Planta (App Web)
+
+<a id="s-entrevista-1-entrevista-1"></a>
+##### Entrevista 1
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Ej: Gerente de Operaciones / Jefe de Planta]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
+      <b>Área de trabajo:</b> [Oficina técnica / Control de operaciones]<br>
+      <b>Tipo de establecimiento:</b> [Ej: Planta procesadora de alimentos]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Describir cómo gestiona actualmente el cumplimiento de las normativas de salud ocupacional frente a entidades reguladoras. Mencionar los costos o multas que enfrenta la planta si hay accidentes por ruido o gases, y cómo lleva el registro histórico (probablemente en Excel o papel).]
+      <br><br>
+      [Explicar su postura frente a la implementación de un panel web centralizado que le permita configurar topes de decibeles o partes por millón de CO2, y cómo la descarga de reportes automatizados impactaría su productividad y las auditorías.]
+    </td>
+  </tr>
+</table>
+
+<a id="s-entrevista-2-entrevista-2"></a>
+##### Entrevista 2
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-encargado-2.png" alt="Entrevista 2 - Encargado de Planta" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+    </td>
+  </tr>
+</table>
+
+<a id="s-entrevista-3-entrevista-3"></a>
+##### Entrevista 3
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+    </td>
+    <td align="center">
+      <img src="assets/chapter-2/entrevista-encargado-3.png" alt="Entrevista 3 - Encargado de Planta" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <br><br>
+      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+    </td>
+  </tr>
 </table>
 
 <a id="s-2-2-3"></a>
@@ -3791,14 +3983,14 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
 
 ---
 
-Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain** (DEC-001): quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (eso vive en Safety & Actuation). Vive en el monolito cloud (`Web Monolithic Backend`). MQTT no es colaborador directo: la ingesta llega vía Device & Edge Management (`C-19`). Setup de planta exige sesión de supervisor en canal **móvil** (OHS de Identity & Access).
+Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain**: quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (Safety & Actuation). Vive en el monolito cloud. La ingesta llega vía Device & Edge Management. Setup de planta exige sesión de supervisor en canal **móvil** (OHS de Identity & Access).
 
 Ubiquitous language: *Industrial area* · *Environmental thresholds* · *Area device assignment* · *Carbon dioxide reading* · *Noise reading* · *Presence (detected / cleared)* · *Telemetry ingested* · *Sensor associated to area* · *Actuator associated to area* · *Plant metrics history*.
 
 <a id="s-4-2-1-1"></a>
 #### 4.2.1.1. Domain Layer
 
-El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`, `AreaDeviceAssignment`, `AreaTelemetry`— con value objects, las entidades de lectura **separadas** (CO₂, ruido, presencia) y las interfaces de repositorio. No hay Domain Service de exposición: `PO-01`, `PO-02` y `PO-12` reaccionan en Safety a los eventos salientes de este contexto.
+El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`, `AreaDeviceAssignment`, `AreaTelemetry`— con value objects, las entidades de lectura separadas (CO₂, ruido, presencia) y las interfaces de repositorio.
 
 <table>
   <thead>
@@ -3815,7 +4007,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`IndustrialArea`</td>
       <td align="left">Aggregate Root</td>
-      <td align="left">Ficha de un área industrial: nombre único y ubicación (`C-10`, `C-13`).</td>
+      <td align="left">Ficha de un área industrial: nombre único y ubicación.</td>
       <td align="left">`id`, `name`, `location`</td>
       <td align="left">`register()`, `update()`, `updateSystemConfiguration()`</td>
       <td align="left">1—0..1 `AreaThresholds`; 1—0..* `AreaDeviceAssignment`; 1—1 `AreaTelemetry`</td>
@@ -3823,7 +4015,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`AreaThresholds`</td>
       <td align="left">Aggregate Root</td>
-      <td align="left">Límites de CO₂ y ruido de **esa** área (`C-11`). Sin umbrales, Safety no clasifica (`E-38` nace allí).</td>
+      <td align="left">Límites de CO₂ y ruido de esa área. Sin umbrales, Safety no clasifica.</td>
       <td align="left">`id`, `areaId`, `co2Limit`, `noiseLimit`</td>
       <td align="left">`configure()`, `update()`</td>
       <td align="left">pertenece a 1 `IndustrialArea`</td>
@@ -3831,7 +4023,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`AreaDeviceAssignment`</td>
       <td align="left">Aggregate Root</td>
-      <td align="left">Asociación de un sensor o actuador a un área (`C-12`). Un `deviceId` no se duplica (`E-22`).</td>
+      <td align="left">Asociación de un sensor o actuador a un área. Un `deviceId` no se duplica.</td>
       <td align="left">`id`, `areaId`, `deviceId`, `kind`</td>
       <td align="left">`associate()`</td>
       <td align="left">pertenece a 1 `IndustrialArea`</td>
@@ -3839,7 +4031,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`AreaTelemetry`</td>
       <td align="left">Aggregate Root</td>
-      <td align="left">Invariante de ingest y registro histórico por área (`C-15`–`C-19`). Acepta, rechaza o reconoce duplicado (`E-29`, `E-30`, `E-64`).</td>
+      <td align="left">Invariante de ingest y registro histórico por área. Acepta, rechaza o reconoce duplicado.</td>
       <td align="left">`id`, `areaId`</td>
       <td align="left">`recordCarbonDioxide()`, `recordNoise()`, `recordPresence()`, `acceptIngest()`, `rejectIngest()`, `acknowledgeDuplicate()`, `markSensorUnavailable()`</td>
       <td align="left">pertenece a 1 `IndustrialArea`; contiene 0..* lecturas de cada tipo</td>
@@ -3847,7 +4039,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`CarbonDioxideReading`</td>
       <td align="left">Entity</td>
-      <td align="left">Hecho de CO₂ (`E-23`); no se fusiona con ruido ni presencia. Lectura inválida se descarta (`E-28`).</td>
+      <td align="left">Hecho de CO₂; no se fusiona con ruido ni presencia. Lectura inválida se descarta.</td>
       <td align="left">`id`, `deviceId`, `ppm`, `recordedAt`</td>
       <td align="left">—</td>
       <td align="left">contenido en `AreaTelemetry`</td>
@@ -3855,7 +4047,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`NoiseReading`</td>
       <td align="left">Entity</td>
-      <td align="left">Hecho de ruido (`E-24`).</td>
+      <td align="left">Hecho de ruido.</td>
       <td align="left">`id`, `deviceId`, `db`, `recordedAt`</td>
       <td align="left">—</td>
       <td align="left">contenido en `AreaTelemetry`</td>
@@ -3863,7 +4055,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`PresenceChange`</td>
       <td align="left">Entity</td>
-      <td align="left">Presencia detectada o despejada (`E-25` / `E-26`).</td>
+      <td align="left">Presencia detectada o despejada.</td>
       <td align="left">`id`, `deviceId`, `state`, `recordedAt`</td>
       <td align="left">—</td>
       <td align="left">contenido en `AreaTelemetry`</td>
@@ -3919,7 +4111,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`Co2Ppm`</td>
       <td align="left">Value Object</td>
-      <td align="left">Concentración de CO₂; `isValid()` rechaza fuera de rango (`E-28`).</td>
+      <td align="left">Concentración de CO₂; `isValid()` rechaza fuera de rango.</td>
       <td align="left">`value`</td>
       <td align="left">`isValid()`</td>
       <td align="left">usado por `CarbonDioxideReading`</td>
@@ -3986,7 +4178,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
 <a id="s-4-2-1-2"></a>
 #### 4.2.1.2. Interface Layer
 
-Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager web). Un Consumer in-process recibe `Ingest telemetry` desde Device & Edge. Plant Monitoring **no** consume MQTT: el broker queda detrás de Device & Edge.
+Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager web). Un Consumer in-process recibe `Ingest telemetry` desde Device & Edge.
 
 <table>
   <thead>
@@ -4016,7 +4208,7 @@ Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager
     <tr>
       <td align="left">`TelemetryIngestConsumer`</td>
       <td align="left">Consumer</td>
-      <td align="left">Recibe `Ingest telemetry` (`C-19`) desde Device & Edge (mismo proceso).</td>
+      <td align="left">Recibe `Ingest telemetry` desde Device & Edge (mismo proceso).</td>
       <td align="left">`ingestTelemetry()`</td>
       <td align="left">Device & Edge Management; Application Layer</td>
     </tr>
@@ -4025,8 +4217,6 @@ Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager
 
 <a id="s-4-2-1-3"></a>
 #### 4.2.1.3. Application Layer
-
-Un handler por comando que toca este contexto (`C-10`–`C-13`, `C-15`–`C-19`) más las queries `RM-02` y `RM-05`. `C-15`–`C-17` se invocan in-process desde `IngestTelemetryHandler`, que orquesta sin fusionar lecturas. `C-18` es un handler de tiempo (sensor silencioso), análogo a los TTL de Identity. `RM-03` AreaOperationalStatus **no** se proyecta aquí: queda en Safety & Actuation.
 
 <table>
   <thead>
@@ -4042,77 +4232,77 @@ Un handler por comando que toca este contexto (`C-10`–`C-13`, `C-15`–`C-19`)
     <tr>
       <td align="left">`ManageIndustrialAreaHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Manage industrial area (`C-10`)</td>
-      <td align="left">Registra o actualiza un área; rechaza nombre duplicado (`E-16`).</td>
+      <td align="left">Manage industrial area</td>
+      <td align="left">Registra o actualiza un área; rechaza nombre duplicado.</td>
       <td align="left">`IIndustrialAreaRepository`</td>
     </tr>
     <tr>
       <td align="left">`ConfigureEnvironmentalThresholdsHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Configure environmental thresholds (`C-11`)</td>
-      <td align="left">Crea o actualiza umbrales de un área; rechaza valores fuera de rango (`E-19`).</td>
+      <td align="left">Configure environmental thresholds</td>
+      <td align="left">Crea o actualiza umbrales de un área; rechaza valores fuera de rango.</td>
       <td align="left">`IAreaThresholdsRepository`, `IIndustrialAreaRepository`</td>
     </tr>
     <tr>
       <td align="left">`AssociateDeviceToAreaHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Associate device to area (`C-12`)</td>
-      <td align="left">Asocia sensor o actuador; rechaza `deviceId` duplicado (`E-22`).</td>
+      <td align="left">Associate device to area</td>
+      <td align="left">Asocia sensor o actuador; rechaza `deviceId` duplicado.</td>
       <td align="left">`IAreaDeviceAssignmentRepository`, `IIndustrialAreaRepository`</td>
     </tr>
     <tr>
       <td align="left">`UpdateSystemConfigurationHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Update system configuration (`C-13`)</td>
+      <td align="left">Update system configuration</td>
       <td align="left">Actualiza la ficha de configuración de planta del área.</td>
       <td align="left">`IIndustrialAreaRepository`</td>
     </tr>
     <tr>
       <td align="left">`RecordCarbonDioxideReadingHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Record carbon dioxide reading (`C-15`)</td>
-      <td align="left">Registra el hecho de CO₂ o lo descarta si es inválido (`E-28`).</td>
+      <td align="left">Record carbon dioxide reading</td>
+      <td align="left">Registra el hecho de CO₂ o lo descarta si es inválido.</td>
       <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
     </tr>
     <tr>
       <td align="left">`RecordNoiseReadingHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Record noise reading (`C-16`)</td>
+      <td align="left">Record noise reading</td>
       <td align="left">Registra el hecho de ruido.</td>
       <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
     </tr>
     <tr>
       <td align="left">`RecordPresenceHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Record presence (`C-17`)</td>
+      <td align="left">Record presence</td>
       <td align="left">Registra presencia detectada o despejada.</td>
       <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
     </tr>
     <tr>
       <td align="left">`MarkSensorUnavailableHandler`</td>
       <td align="left">Event Handler (scheduled)</td>
-      <td align="left">Mark sensor unavailable (`C-18`)</td>
+      <td align="left">Mark sensor unavailable</td>
       <td align="left">Marca un sensor sin transmisión en el intervalo.</td>
       <td align="left">`IAreaTelemetryRepository`</td>
     </tr>
     <tr>
       <td align="left">`IngestTelemetryHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Ingest telemetry (`C-19`)</td>
+      <td align="left">Ingest telemetry</td>
       <td align="left">Acepta, rechaza o reconoce duplicado el lote de Edge; invoca los tres `Record*` **sin** unificar lecturas.</td>
       <td align="left">`RecordCarbonDioxideReadingHandler`, `RecordNoiseReadingHandler`, `RecordPresenceHandler`, `IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
     </tr>
     <tr>
       <td align="left">`GetAreaSetupSheetHandler`</td>
       <td align="left">Query Handler</td>
-      <td align="left">Get AreaSetupSheet (`RM-02`)</td>
+      <td align="left">Get AreaSetupSheet</td>
       <td align="left">Devuelve área, umbrales y dispositivos ya asociados.</td>
       <td align="left">`IIndustrialAreaRepository`, `IAreaThresholdsRepository`, `IAreaDeviceAssignmentRepository`</td>
     </tr>
     <tr>
       <td align="left">`GetPlantMetricsHistoryHandler`</td>
       <td align="left">Query Handler</td>
-      <td align="left">Get PlantMetricsHistory (`RM-05`)</td>
+      <td align="left">Get PlantMetricsHistory</td>
       <td align="left">Historial de lecturas para el dashboard web; no dispara actuadores.</td>
       <td align="left">`IAreaTelemetryRepository`</td>
     </tr>
@@ -4168,7 +4358,7 @@ Implementaciones de los cuatro repositorios y un publicador in-process. Motor de
       <td align="left">Adapter</td>
       <td align="left">`IDomainEventPublisher`</td>
       <td align="left">In-process (Safety & Actuation; Device & Edge)</td>
-      <td align="left">Publica `E-23`/`E-24`/`E-25`/`E-26` hacia Safety y `E-30` hacia Device & Edge. Sin MQTT.</td>
+      <td align="left">Publica hacia Safety y Device & Edge. Sin MQTT.</td>
     </tr>
   </tbody>
 </table>
@@ -4176,7 +4366,7 @@ Implementaciones de los cuatro repositorios y un publicador in-process. Motor de
 <a id="s-4-2-1-5"></a>
 #### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-Plant Monitoring vive dentro del único container `Web Monolithic Backend` (DEC-005). Sus cuatro capas se modelan como `component` hexagonales en la vista `PlantMonitoringComponents` de [`docs/diagrams/c4.dsl`](../diagrams/c4.dsl): el Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`. Los eventos hacia Safety & Actuation son in-process y **no** se dibujan como components de Safety en esta vista.
+El Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`.
 
 ![Component Level Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-component.png)
 
@@ -4186,14 +4376,14 @@ Plant Monitoring vive dentro del único container `Web Monolithic Backend` (DEC-
 <a id="s-4-2-1-6-1"></a>
 ##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
 
-Fuente: [`docs/diagrams/bounded-contexts/bc-01-plant-monitoring-domain.puml`](../diagrams/bounded-contexts/bc-01-plant-monitoring-domain.puml). Incluye los cuatro aggregates, las tres entidades de lectura (sin unificar), value objects, el puerto `IDomainEventPublisher` y las interfaces de repositorio, con scope, multiplicidad y dirección de cada relación.
+Incluye los cuatro aggregates, las tres entidades de lectura (sin unificar), value objects, el puerto `IDomainEventPublisher` y las interfaces de repositorio, con scope, multiplicidad y dirección de cada relación.
 
 ![Domain Layer Class Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-domain-class.png)
 
 <a id="s-4-2-1-6-2"></a>
 ##### 4.2.1.6.2. Bounded Context Database Design Diagram
 
-Fuente: [`docs/diagrams/bounded-contexts/bc-01-plant-monitoring-database.puml`](../diagrams/bounded-contexts/bc-01-plant-monitoring-database.puml). Modelo relacional lógico (motor `TBD`): `industrial_areas`, `area_thresholds` (FK UNIQUE hacia área), `area_device_assignments` (`device_id` UNIQUE), y **tres** tablas de hechos —`carbon_dioxide_readings`, `noise_readings`, `presence_events`— cada una con FK al área.
+Modelo relacional lógico: `industrial_areas`, `area_thresholds` (FK UNIQUE hacia área), `area_device_assignments` (`device_id` UNIQUE), y **tres** tablas de hechos —`carbon_dioxide_readings`, `noise_readings`, `presence_events`— cada una con FK al área.
 
 ![Database Design Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-database.png)
 
