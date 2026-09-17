@@ -317,7 +317,7 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
   </thead>
   <tbody>
     <tr>
-      <td align="center">![Angelo Héctor Solano Armas](../assets/01-capitulo-i/equipo/angelo.jpg)</td>
+      <td align="center"><img src="../assets/01-capitulo-i/equipo/angelo.jpg" alt="Angelo Héctor Solano Armas" width="140"></td>
       <td align="left">Solano Armas, Angelo Héctor</td>
       <td align="left">U20231B775</td>
       <td align="left">Ingeniería de Software</td>
