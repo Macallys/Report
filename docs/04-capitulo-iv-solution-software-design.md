@@ -133,13 +133,42 @@ Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canv
 
 Las relaciones estructurales entre los cuatro bounded contexts se mapearon con los patrones de **ddd-crew**, tal como se muestra en el diagrama a continuación.
 
-| Upstream | Downstream | Patrones |
-|----------|------------|----------|
-| Identity & Access | Plant Monitoring | OHS + Conformist (sesión/canal) |
-| Identity & Access | Safety & Actuation | OHS + Conformist |
-| Plant Monitoring | Safety & Actuation | Customer/Supplier + Conformist al *evento* de lectura |
-| Plant Monitoring | Device & Edge Management | OHS de ingest + ACL en Edge |
-| Safety & Actuation | Device & Edge Management | ACL (copia de alerta; el riesgo no cambia de dueño) |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Upstream</th>
+      <th align="left">Downstream</th>
+      <th align="left">Patrones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Identity & Access</td>
+      <td align="left">Plant Monitoring</td>
+      <td align="left">OHS + Conformist (sesión/canal)</td>
+    </tr>
+    <tr>
+      <td align="left">Identity & Access</td>
+      <td align="left">Safety & Actuation</td>
+      <td align="left">OHS + Conformist</td>
+    </tr>
+    <tr>
+      <td align="left">Plant Monitoring</td>
+      <td align="left">Safety & Actuation</td>
+      <td align="left">Customer/Supplier + Conformist al *evento* de lectura</td>
+    </tr>
+    <tr>
+      <td align="left">Plant Monitoring</td>
+      <td align="left">Device & Edge Management</td>
+      <td align="left">OHS de ingest + ACL en Edge</td>
+    </tr>
+    <tr>
+      <td align="left">Safety & Actuation</td>
+      <td align="left">Device & Edge Management</td>
+      <td align="left">ACL (copia de alerta; el riesgo no cambia de dueño)</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ![Context Map](../assets/04-capitulo-iv/ddd/context-map.png)
@@ -183,8 +212,23 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
   <tbody>
     <tr>
       <td align="left">4.2.1</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Plant Monitoring</td>
+      <td align="left"><a href="bounded-contexts/bc-01-plant-monitoring.md">bc-01-plant-monitoring.md</a></td>
+    </tr>
+    <tr>
+      <td align="left">4.2.2</td>
+      <td align="left">Safety & Actuation</td>
+      <td align="left">pendiente</td>
+    </tr>
+    <tr>
+      <td align="left">4.2.3</td>
+      <td align="left">Device & Edge Management</td>
+      <td align="left">pendiente</td>
+    </tr>
+    <tr>
+      <td align="left">4.2.4</td>
+      <td align="left">Identity & Access</td>
+      <td align="left"><a href="bounded-contexts/bc-04-identity-access.md">bc-04-identity-access.md</a></td>
     </tr>
   </tbody>
 </table>

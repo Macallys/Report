@@ -10,14 +10,79 @@
 <a id="s-4-2-x-1"></a>
 ## 4.2.X.1. Domain Layer
 
+Entities, Value Objects, Aggregates, Factories, Domain Services e interfaces de Repository que representan el core y las reglas de negocio del bounded context.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Propósito</th>
+      <th align="left">Atributos</th>
+      <th align="left">Métodos</th>
+      <th align="left">Relaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
 <a id="s-4-2-x-2"></a>
 ## 4.2.X.2. Interface Layer
+
+Controllers y Consumers que exponen el bounded context hacia clientes (apps, otros BCs) o lo conectan a mensajería entrante.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Propósito</th>
+      <th align="left">Métodos / Endpoints</th>
+      <th align="left">Colabora con</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 
 <a id="s-4-2-x-3"></a>
 ## 4.2.X.3. Application Layer
 
+Command Handlers y Event Handlers que orquestan las capabilities del bounded context.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Comando / Evento</th>
+      <th align="left">Propósito</th>
+      <th align="left">Colabora con</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
 <a id="s-4-2-x-4"></a>
 ## 4.2.X.4. Infrastructure Layer
+
+Implementaciones de las interfaces de Repository y MessageBroker definidas en el Domain Layer, y adaptadores hacia servicios externos (databases, messaging, email).
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Interfaz que implementa</th>
+      <th align="left">Servicio externo</th>
+      <th align="left">Propósito</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 
 <a id="s-4-2-x-5"></a>
 ## 4.2.X.5. Bounded Context Software Architecture Component Level Diagrams

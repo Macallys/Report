@@ -163,15 +163,24 @@
             1. [4.1.3.2. Software Architecture Container Level Diagrams](#s-4-1-3-2-software-architecture-container-level-diagrams)
             1. [4.1.3.3. Software Architecture Deployment Diagrams](#s-4-1-3-3)
     1. [4.2. Tactical-Level Domain-Driven Design](#s-4-2)
-        1. [4.2.X. Bounded Context: \<Bounded Context Name\>](#s-4-2-x)
-            1. [4.2.X.1. Domain Layer](#s-4-2-x-1)
-            1. [4.2.X.2. Interface Layer](#s-4-2-x-2)
-            1. [4.2.X.3. Application Layer](#s-4-2-x-3)
-            1. [4.2.X.4. Infrastructure Layer](#s-4-2-x-4)
-            1. [4.2.X.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-x-5)
-            1. [4.2.X.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-x-6)
-                1. [4.2.X.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-x-6-1)
-                1. [4.2.X.6.2. Bounded Context Database Design Diagram](#s-4-2-x-6-2)
+        1. [4.2.1. Bounded Context: Plant Monitoring](#s-4-2-1)
+            1. [4.2.1.1. Domain Layer](#s-4-2-1-1)
+            1. [4.2.1.2. Interface Layer](#s-4-2-1-2)
+            1. [4.2.1.3. Application Layer](#s-4-2-1-3)
+            1. [4.2.1.4. Infrastructure Layer](#s-4-2-1-4)
+            1. [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-1-5)
+            1. [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-1-6)
+                1. [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-1-6-1)
+                1. [4.2.1.6.2. Bounded Context Database Design Diagram](#s-4-2-1-6-2)
+        1. [4.2.4. Bounded Context: Identity & Access](#s-4-2-4)
+            1. [4.2.4.1. Domain Layer](#s-4-2-4-1)
+            1. [4.2.4.2. Interface Layer](#s-4-2-4-2)
+            1. [4.2.4.3. Application Layer](#s-4-2-4-3)
+            1. [4.2.4.4. Infrastructure Layer](#s-4-2-4-4)
+            1. [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-4-5)
+            1. [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-4-6)
+                1. [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-4-6-1)
+                1. [4.2.4.6.2. Bounded Context Database Design Diagram](#s-4-2-4-6-2)
 1. [Capítulo V: Solution UI/UX Design](#s-cap-v)
     1. [5.1. Style Guidelines](#s-5-1)
         1. [5.1.1. General Style Guidelines](#s-5-1-1)
@@ -3673,13 +3682,42 @@ Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canv
 
 Las relaciones estructurales entre los cuatro bounded contexts se mapearon con los patrones de **ddd-crew**, tal como se muestra en el diagrama a continuación.
 
-| Upstream | Downstream | Patrones |
-|----------|------------|----------|
-| Identity & Access | Plant Monitoring | OHS + Conformist (sesión/canal) |
-| Identity & Access | Safety & Actuation | OHS + Conformist |
-| Plant Monitoring | Safety & Actuation | Customer/Supplier + Conformist al *evento* de lectura |
-| Plant Monitoring | Device & Edge Management | OHS de ingest + ACL en Edge |
-| Safety & Actuation | Device & Edge Management | ACL (copia de alerta; el riesgo no cambia de dueño) |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Upstream</th>
+      <th align="left">Downstream</th>
+      <th align="left">Patrones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Identity & Access</td>
+      <td align="left">Plant Monitoring</td>
+      <td align="left">OHS + Conformist (sesión/canal)</td>
+    </tr>
+    <tr>
+      <td align="left">Identity & Access</td>
+      <td align="left">Safety & Actuation</td>
+      <td align="left">OHS + Conformist</td>
+    </tr>
+    <tr>
+      <td align="left">Plant Monitoring</td>
+      <td align="left">Safety & Actuation</td>
+      <td align="left">Customer/Supplier + Conformist al *evento* de lectura</td>
+    </tr>
+    <tr>
+      <td align="left">Plant Monitoring</td>
+      <td align="left">Device & Edge Management</td>
+      <td align="left">OHS de ingest + ACL en Edge</td>
+    </tr>
+    <tr>
+      <td align="left">Safety & Actuation</td>
+      <td align="left">Device & Edge Management</td>
+      <td align="left">ACL (copia de alerta; el riesgo no cambia de dueño)</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ![Context Map](../assets/04-capitulo-iv/ddd/context-map.png)
@@ -3723,52 +3761,776 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
   <tbody>
     <tr>
       <td align="left">4.2.1</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Plant Monitoring</td>
+      <td align="left"><a href="bounded-contexts/bc-01-plant-monitoring.md">bc-01-plant-monitoring.md</a></td>
+    </tr>
+    <tr>
+      <td align="left">4.2.2</td>
+      <td align="left">Safety & Actuation</td>
+      <td align="left">pendiente</td>
+    </tr>
+    <tr>
+      <td align="left">4.2.3</td>
+      <td align="left">Device & Edge Management</td>
+      <td align="left">pendiente</td>
+    </tr>
+    <tr>
+      <td align="left">4.2.4</td>
+      <td align="left">Identity & Access</td>
+      <td align="left"><a href="bounded-contexts/bc-04-identity-access.md">bc-04-identity-access.md</a></td>
     </tr>
   </tbody>
 </table>
 
 ---
 
-<a id="s-4-2-x"></a>
-### 4.2.X. Bounded Context: \<Bounded Context Name\>
-
-> Plantilla. Copiar a `../bounded-contexts/bc-0N-<nombre>.md` y registrar en el Capítulo IV § 4.2.
+<a id="s-4-2-1"></a>
+### 4.2.1. Bounded Context: Plant Monitoring
 
 **Navegación:** [Capítulo IV](../04-capitulo-iv-solution-software-design.md) · [Índice](../00-student-outcome.md#s-tabla-contenidos)
 
 ---
 
-<a id="s-4-2-x-1"></a>
-#### 4.2.X.1. Domain Layer
+Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain** (DEC-001): quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (eso vive en Safety & Actuation). Vive en el monolito cloud (`Web Monolithic Backend`). MQTT no es colaborador directo: la ingesta llega vía Device & Edge Management (`C-19`). Setup de planta exige sesión de supervisor en canal **móvil** (OHS de Identity & Access).
 
-<a id="s-4-2-x-2"></a>
-#### 4.2.X.2. Interface Layer
+Ubiquitous language: *Industrial area* · *Environmental thresholds* · *Area device assignment* · *Carbon dioxide reading* · *Noise reading* · *Presence (detected / cleared)* · *Telemetry ingested* · *Sensor associated to area* · *Actuator associated to area* · *Plant metrics history*.
 
-<a id="s-4-2-x-3"></a>
-#### 4.2.X.3. Application Layer
+<a id="s-4-2-1-1"></a>
+#### 4.2.1.1. Domain Layer
 
-<a id="s-4-2-x-4"></a>
-#### 4.2.X.4. Infrastructure Layer
+El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`, `AreaDeviceAssignment`, `AreaTelemetry`— con value objects, las entidades de lectura **separadas** (CO₂, ruido, presencia) y las interfaces de repositorio. No hay Domain Service de exposición: `PO-01`, `PO-02` y `PO-12` reaccionan en Safety a los eventos salientes de este contexto.
 
-<a id="s-4-2-x-5"></a>
-#### 4.2.X.5. Bounded Context Software Architecture Component Level Diagrams
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Propósito</th>
+      <th align="left">Atributos</th>
+      <th align="left">Métodos</th>
+      <th align="left">Relaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`IndustrialArea`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Ficha de un área industrial: nombre único y ubicación (`C-10`, `C-13`).</td>
+      <td align="left">`id`, `name`, `location`</td>
+      <td align="left">`register()`, `update()`, `updateSystemConfiguration()`</td>
+      <td align="left">1—0..1 `AreaThresholds`; 1—0..* `AreaDeviceAssignment`; 1—1 `AreaTelemetry`</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaThresholds`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Límites de CO₂ y ruido de **esa** área (`C-11`). Sin umbrales, Safety no clasifica (`E-38` nace allí).</td>
+      <td align="left">`id`, `areaId`, `co2Limit`, `noiseLimit`</td>
+      <td align="left">`configure()`, `update()`</td>
+      <td align="left">pertenece a 1 `IndustrialArea`</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaDeviceAssignment`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Asociación de un sensor o actuador a un área (`C-12`). Un `deviceId` no se duplica (`E-22`).</td>
+      <td align="left">`id`, `areaId`, `deviceId`, `kind`</td>
+      <td align="left">`associate()`</td>
+      <td align="left">pertenece a 1 `IndustrialArea`</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaTelemetry`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Invariante de ingest y registro histórico por área (`C-15`–`C-19`). Acepta, rechaza o reconoce duplicado (`E-29`, `E-30`, `E-64`).</td>
+      <td align="left">`id`, `areaId`</td>
+      <td align="left">`recordCarbonDioxide()`, `recordNoise()`, `recordPresence()`, `acceptIngest()`, `rejectIngest()`, `acknowledgeDuplicate()`, `markSensorUnavailable()`</td>
+      <td align="left">pertenece a 1 `IndustrialArea`; contiene 0..* lecturas de cada tipo</td>
+    </tr>
+    <tr>
+      <td align="left">`CarbonDioxideReading`</td>
+      <td align="left">Entity</td>
+      <td align="left">Hecho de CO₂ (`E-23`); no se fusiona con ruido ni presencia. Lectura inválida se descarta (`E-28`).</td>
+      <td align="left">`id`, `deviceId`, `ppm`, `recordedAt`</td>
+      <td align="left">—</td>
+      <td align="left">contenido en `AreaTelemetry`</td>
+    </tr>
+    <tr>
+      <td align="left">`NoiseReading`</td>
+      <td align="left">Entity</td>
+      <td align="left">Hecho de ruido (`E-24`).</td>
+      <td align="left">`id`, `deviceId`, `db`, `recordedAt`</td>
+      <td align="left">—</td>
+      <td align="left">contenido en `AreaTelemetry`</td>
+    </tr>
+    <tr>
+      <td align="left">`PresenceChange`</td>
+      <td align="left">Entity</td>
+      <td align="left">Presencia detectada o despejada (`E-25` / `E-26`).</td>
+      <td align="left">`id`, `deviceId`, `state`, `recordedAt`</td>
+      <td align="left">—</td>
+      <td align="left">contenido en `AreaTelemetry`</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaName`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Nombre del área, único en la planta.</td>
+      <td align="left">`value`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `IndustrialArea`</td>
+    </tr>
+    <tr>
+      <td align="left">`Location`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Ficha de ubicación del área.</td>
+      <td align="left">`value`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `IndustrialArea`</td>
+    </tr>
+    <tr>
+      <td align="left">`Co2Limit`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Umbral de CO₂ del área.</td>
+      <td align="left">`ppm`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `AreaThresholds`</td>
+    </tr>
+    <tr>
+      <td align="left">`NoiseLimit`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Umbral de ruido del área.</td>
+      <td align="left">`db`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `AreaThresholds`</td>
+    </tr>
+    <tr>
+      <td align="left">`DeviceId`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Identificador de dispositivo; no se duplica en asociaciones.</td>
+      <td align="left">`value`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `AreaDeviceAssignment` y las lecturas</td>
+    </tr>
+    <tr>
+      <td align="left">`DeviceKind`</td>
+      <td align="left">Value Object (Enum)</td>
+      <td align="left">`Sensor` o `Actuator`.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `AreaDeviceAssignment`</td>
+    </tr>
+    <tr>
+      <td align="left">`Co2Ppm`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Concentración de CO₂; `isValid()` rechaza fuera de rango (`E-28`).</td>
+      <td align="left">`value`</td>
+      <td align="left">`isValid()`</td>
+      <td align="left">usado por `CarbonDioxideReading`</td>
+    </tr>
+    <tr>
+      <td align="left">`NoiseDb`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Nivel de ruido en dB.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `NoiseReading`</td>
+    </tr>
+    <tr>
+      <td align="left">`PresenceState`</td>
+      <td align="left">Value Object (Enum)</td>
+      <td align="left">`Detected` o `Cleared`.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `PresenceChange`</td>
+    </tr>
+    <tr>
+      <td align="left">`IDomainEventPublisher`</td>
+      <td align="left">Port (interface)</td>
+      <td align="left">Publica eventos de dominio in-process (lecturas y presencia hacia Safety; ingest rechazado hacia Device & Edge). No habla con MQTT.</td>
+      <td align="left">—</td>
+      <td align="left">`publish()`</td>
+      <td align="left">implementado en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`IIndustrialAreaRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `IndustrialArea`.</td>
+      <td align="left">—</td>
+      <td align="left">`findById()`, `findByName()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`IAreaThresholdsRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `AreaThresholds`.</td>
+      <td align="left">—</td>
+      <td align="left">`findByAreaId()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`IAreaDeviceAssignmentRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `AreaDeviceAssignment`.</td>
+      <td align="left">—</td>
+      <td align="left">`findByDeviceId()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`IAreaTelemetryRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `AreaTelemetry` y sus lecturas.</td>
+      <td align="left">—</td>
+      <td align="left">`findLatestByAreaId()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+  </tbody>
+</table>
 
-![Component Level Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-x-component.png)
+<a id="s-4-2-1-2"></a>
+#### 4.2.1.2. Interface Layer
 
-<a id="s-4-2-x-6"></a>
-#### 4.2.X.6. Bounded Context Software Architecture Code Level Diagrams
+Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager web). Un Consumer in-process recibe `Ingest telemetry` desde Device & Edge. Plant Monitoring **no** consume MQTT: el broker queda detrás de Device & Edge.
 
-<a id="s-4-2-x-6-1"></a>
-##### 4.2.X.6.1. Bounded Context Domain Layer Class Diagrams
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Propósito</th>
+      <th align="left">Métodos / Endpoints</th>
+      <th align="left">Colabora con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`PlantSetupController`</td>
+      <td align="left">Controller</td>
+      <td align="left">Configuración de planta: área, umbrales, asociación de dispositivos y ficha de setup. Exige `sessionToken` de supervisor móvil (OHS).</td>
+      <td align="left">`manageIndustrialArea()`, `configureEnvironmentalThresholds()`, `associateDeviceToArea()`, `updateSystemConfiguration()`, `getAreaSetupSheet()`</td>
+      <td align="left">Supervisor Mobile App; Application Layer</td>
+    </tr>
+    <tr>
+      <td align="left">`PlantMetricsController`</td>
+      <td align="left">Controller</td>
+      <td align="left">Historial de métricas de planta, solo lectura, canal web.</td>
+      <td align="left">`getPlantMetricsHistory()`</td>
+      <td align="left">Plant Manager Web Client; Application Layer</td>
+    </tr>
+    <tr>
+      <td align="left">`TelemetryIngestConsumer`</td>
+      <td align="left">Consumer</td>
+      <td align="left">Recibe `Ingest telemetry` (`C-19`) desde Device & Edge (mismo proceso).</td>
+      <td align="left">`ingestTelemetry()`</td>
+      <td align="left">Device & Edge Management; Application Layer</td>
+    </tr>
+  </tbody>
+</table>
 
-![Domain Layer Class Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-x-domain-class.png)
+<a id="s-4-2-1-3"></a>
+#### 4.2.1.3. Application Layer
 
-<a id="s-4-2-x-6-2"></a>
-##### 4.2.X.6.2. Bounded Context Database Design Diagram
+Un handler por comando que toca este contexto (`C-10`–`C-13`, `C-15`–`C-19`) más las queries `RM-02` y `RM-05`. `C-15`–`C-17` se invocan in-process desde `IngestTelemetryHandler`, que orquesta sin fusionar lecturas. `C-18` es un handler de tiempo (sensor silencioso), análogo a los TTL de Identity. `RM-03` AreaOperationalStatus **no** se proyecta aquí: queda en Safety & Actuation.
 
-![Database Design Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-x-database.png)
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Comando / Evento</th>
+      <th align="left">Propósito</th>
+      <th align="left">Colabora con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`ManageIndustrialAreaHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Manage industrial area (`C-10`)</td>
+      <td align="left">Registra o actualiza un área; rechaza nombre duplicado (`E-16`).</td>
+      <td align="left">`IIndustrialAreaRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`ConfigureEnvironmentalThresholdsHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Configure environmental thresholds (`C-11`)</td>
+      <td align="left">Crea o actualiza umbrales de un área; rechaza valores fuera de rango (`E-19`).</td>
+      <td align="left">`IAreaThresholdsRepository`, `IIndustrialAreaRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`AssociateDeviceToAreaHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Associate device to area (`C-12`)</td>
+      <td align="left">Asocia sensor o actuador; rechaza `deviceId` duplicado (`E-22`).</td>
+      <td align="left">`IAreaDeviceAssignmentRepository`, `IIndustrialAreaRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`UpdateSystemConfigurationHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Update system configuration (`C-13`)</td>
+      <td align="left">Actualiza la ficha de configuración de planta del área.</td>
+      <td align="left">`IIndustrialAreaRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`RecordCarbonDioxideReadingHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Record carbon dioxide reading (`C-15`)</td>
+      <td align="left">Registra el hecho de CO₂ o lo descarta si es inválido (`E-28`).</td>
+      <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
+    </tr>
+    <tr>
+      <td align="left">`RecordNoiseReadingHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Record noise reading (`C-16`)</td>
+      <td align="left">Registra el hecho de ruido.</td>
+      <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
+    </tr>
+    <tr>
+      <td align="left">`RecordPresenceHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Record presence (`C-17`)</td>
+      <td align="left">Registra presencia detectada o despejada.</td>
+      <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
+    </tr>
+    <tr>
+      <td align="left">`MarkSensorUnavailableHandler`</td>
+      <td align="left">Event Handler (scheduled)</td>
+      <td align="left">Mark sensor unavailable (`C-18`)</td>
+      <td align="left">Marca un sensor sin transmisión en el intervalo.</td>
+      <td align="left">`IAreaTelemetryRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`IngestTelemetryHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Ingest telemetry (`C-19`)</td>
+      <td align="left">Acepta, rechaza o reconoce duplicado el lote de Edge; invoca los tres `Record*` **sin** unificar lecturas.</td>
+      <td align="left">`RecordCarbonDioxideReadingHandler`, `RecordNoiseReadingHandler`, `RecordPresenceHandler`, `IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
+    </tr>
+    <tr>
+      <td align="left">`GetAreaSetupSheetHandler`</td>
+      <td align="left">Query Handler</td>
+      <td align="left">Get AreaSetupSheet (`RM-02`)</td>
+      <td align="left">Devuelve área, umbrales y dispositivos ya asociados.</td>
+      <td align="left">`IIndustrialAreaRepository`, `IAreaThresholdsRepository`, `IAreaDeviceAssignmentRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`GetPlantMetricsHistoryHandler`</td>
+      <td align="left">Query Handler</td>
+      <td align="left">Get PlantMetricsHistory (`RM-05`)</td>
+      <td align="left">Historial de lecturas para el dashboard web; no dispara actuadores.</td>
+      <td align="left">`IAreaTelemetryRepository`</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-1-4"></a>
+#### 4.2.1.4. Infrastructure Layer
+
+Implementaciones de los cuatro repositorios y un publicador in-process. Motor de base de datos `TBD`. No hay adaptador MQTT: Device & Edge es quien consume el broker.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Interfaz que implementa</th>
+      <th align="left">Servicio externo</th>
+      <th align="left">Propósito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`IndustrialAreaRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`IIndustrialAreaRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia relacional de áreas.</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaThresholdsRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`IAreaThresholdsRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia relacional de umbrales.</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaDeviceAssignmentRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`IAreaDeviceAssignmentRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia relacional de asociaciones dispositivo–área.</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaTelemetryRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`IAreaTelemetryRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia de lecturas en **tres** tablas distintas.</td>
+    </tr>
+    <tr>
+      <td align="left">`InProcessEventPublisher`</td>
+      <td align="left">Adapter</td>
+      <td align="left">`IDomainEventPublisher`</td>
+      <td align="left">In-process (Safety & Actuation; Device & Edge)</td>
+      <td align="left">Publica `E-23`/`E-24`/`E-25`/`E-26` hacia Safety y `E-30` hacia Device & Edge. Sin MQTT.</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-1-5"></a>
+#### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+Plant Monitoring vive dentro del único container `Web Monolithic Backend` (DEC-005). Sus cuatro capas se modelan como `component` hexagonales en la vista `PlantMonitoringComponents` de [`docs/diagrams/c4.dsl`](../diagrams/c4.dsl): el Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`. Los eventos hacia Safety & Actuation son in-process y **no** se dibujan como components de Safety en esta vista.
+
+![Component Level Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-component.png)
+
+<a id="s-4-2-1-6"></a>
+#### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+<a id="s-4-2-1-6-1"></a>
+##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+Fuente: [`docs/diagrams/bounded-contexts/bc-01-plant-monitoring-domain.puml`](../diagrams/bounded-contexts/bc-01-plant-monitoring-domain.puml). Incluye los cuatro aggregates, las tres entidades de lectura (sin unificar), value objects, el puerto `IDomainEventPublisher` y las interfaces de repositorio, con scope, multiplicidad y dirección de cada relación.
+
+![Domain Layer Class Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-domain-class.png)
+
+<a id="s-4-2-1-6-2"></a>
+##### 4.2.1.6.2. Bounded Context Database Design Diagram
+
+Fuente: [`docs/diagrams/bounded-contexts/bc-01-plant-monitoring-database.puml`](../diagrams/bounded-contexts/bc-01-plant-monitoring-database.puml). Modelo relacional lógico (motor `TBD`): `industrial_areas`, `area_thresholds` (FK UNIQUE hacia área), `area_device_assignments` (`device_id` UNIQUE), y **tres** tablas de hechos —`carbon_dioxide_readings`, `noise_readings`, `presence_events`— cada una con FK al área.
+
+![Database Design Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-database.png)
+
+---
+
+<a id="s-4-2-4"></a>
+### 4.2.4. Bounded Context: Identity & Access
+
+**Navegación:** [Capítulo IV](../04-capitulo-iv-solution-software-design.md) · [Índice](../00-student-outcome.md#s-tabla-contenidos)
+
+---
+
+Identity & Access resuelve quién entra a SafePlant, con qué rol y por qué canal —app móvil del supervisor o cliente web del encargado de planta—, y la recuperación de credenciales. Es un **Generic Subdomain**: no mide la planta ni evalúa exposición, solo concede o niega la sesión que Plant Monitoring y Safety & Actuation exigen vía Open Host Service. Vive enteramente en el monolito cloud; el Edge no administra usuarios, solo autentica dispositivos (Device & Edge Management).
+
+Ubiquitous language: *User account* · *User role* · *Session* · *Sign in* · *Session granted* · *Protected action denied* · *Credential recovery* · *Channel (mobile / web)* · *Supervisor* · *Plant manager*.
+
+<a id="s-4-2-4-1"></a>
+#### 4.2.4.1. Domain Layer
+
+El core del contexto son tres aggregates —`UserAccount`, `Session`, `CredentialRecovery`— con sus value objects, un domain service de autorización y las interfaces de repositorio que persisten cada aggregate.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Propósito</th>
+      <th align="left">Atributos</th>
+      <th align="left">Métodos</th>
+      <th align="left">Relaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`UserAccount`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Cuenta de un supervisor o encargado de planta, con su rol. Un correo = una cuenta (`E-07`).</td>
+      <td align="left">`id`, `email`, `passwordHash`, `role`, `enabled`</td>
+      <td align="left">`create()`, `assignRole()`, `disable()`, `verifyPassword()`</td>
+      <td align="left">1—0..* `Session` (owns); 1—0..* `CredentialRecovery` (requests)</td>
+    </tr>
+    <tr>
+      <td align="left">`Session`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Sesión activa en un canal (móvil o web) con token vigente (`C-06`–`C-09`).</td>
+      <td align="left">`id`, `accountId`, `channel`, `token`, `issuedAt`, `expiresAt`, `closedAt`</td>
+      <td align="left">`grant()`, `close()`, `isValid()`</td>
+      <td align="left">pertenece a 1 `UserAccount`</td>
+    </tr>
+    <tr>
+      <td align="left">`CredentialRecovery`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Proceso de recuperación de credenciales con vencimiento (TTL) (`C-03`–`C-05`).</td>
+      <td align="left">`id`, `accountId`, `token`, `requestedAt`, `expiresAt`, `usedAt`</td>
+      <td align="left">`request()`, `reset()`, `isExpired()`</td>
+      <td align="left">pertenece a 1 `UserAccount`</td>
+    </tr>
+    <tr>
+      <td align="left">`Email`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Dirección de correo validada, única por cuenta.</td>
+      <td align="left">`value`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `UserAccount`</td>
+    </tr>
+    <tr>
+      <td align="left">`UserRole`</td>
+      <td align="left">Value Object (Enum)</td>
+      <td align="left">Rol de canal: `Supervisor` o `PlantManager`.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `UserAccount`</td>
+    </tr>
+    <tr>
+      <td align="left">`Channel`</td>
+      <td align="left">Value Object (Enum)</td>
+      <td align="left">Canal de acceso: `Mobile` o `Web`.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `Session`</td>
+    </tr>
+    <tr>
+      <td align="left">`SessionToken`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Token opaco de sesión.</td>
+      <td align="left">`value`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `Session`</td>
+    </tr>
+    <tr>
+      <td align="left">`RecoveryToken`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Token opaco de recuperación.</td>
+      <td align="left">`value`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `CredentialRecovery`</td>
+    </tr>
+    <tr>
+      <td align="left">`AccessPolicy`</td>
+      <td align="left">Domain Service</td>
+      <td align="left">Evalúa si una acción protegida es permitida según rol y canal de la sesión (`C-08`). Setup de planta y override exigen supervisor **móvil**; web deniega.</td>
+      <td align="left">—</td>
+      <td align="left">`isActionAllowed()`</td>
+      <td align="left">evalúa `Session`, `UserRole`</td>
+    </tr>
+    <tr>
+      <td align="left">`IEmailSender`</td>
+      <td align="left">Port (interface)</td>
+      <td align="left">Puerto de salida hacia el servicio de recuperación de credenciales por correo.</td>
+      <td align="left">—</td>
+      <td align="left">`send()`</td>
+      <td align="left">implementado en Infrastructure (`XS-01`)</td>
+    </tr>
+    <tr>
+      <td align="left">`IUserAccountRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `UserAccount`.</td>
+      <td align="left">—</td>
+      <td align="left">`findById()`, `findByEmail()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`ISessionRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `Session`.</td>
+      <td align="left">—</td>
+      <td align="left">`findByToken()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`ICredentialRecoveryRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `CredentialRecovery`.</td>
+      <td align="left">—</td>
+      <td align="left">`findByToken()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-4-2"></a>
+#### 4.2.4.2. Interface Layer
+
+Tres controllers HTTP exponen el contexto hacia el Supervisor Mobile App y el Plant Manager Web Client. Identity & Access no consume MQTT: no hay Consumer, la autenticación de dispositivos vive en Device & Edge Management (`C-14`).
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Propósito</th>
+      <th align="left">Métodos / Endpoints</th>
+      <th align="left">Colabora con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`UserAccountController`</td>
+      <td align="left">Controller</td>
+      <td align="left">Alta de cuentas, asignación de rol y directorio de usuarios.</td>
+      <td align="left">`createUserAccount()`, `assignUserRole()`, `getUserAccountsDirectory()`</td>
+      <td align="left">Plant Manager Web Client; Application Layer</td>
+    </tr>
+    <tr>
+      <td align="left">`SessionController`</td>
+      <td align="left">Controller</td>
+      <td align="left">Sign-in único (canal como parámetro) y cierre de sesión.</td>
+      <td align="left">`signIn()`, `closeSession()`</td>
+      <td align="left">Supervisor Mobile App; Plant Manager Web Client; Application Layer</td>
+    </tr>
+    <tr>
+      <td align="left">`CredentialRecoveryController`</td>
+      <td align="left">Controller</td>
+      <td align="left">Solicitud y reseteo de credenciales.</td>
+      <td align="left">`requestCredentialRecovery()`, `resetCredentials()`</td>
+      <td align="left">Plant Manager Web Client; Application Layer</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-4-3"></a>
+#### 4.2.4.3. Application Layer
+
+Un handler por comando del contexto (`C-01`–`C-09`) más el query de directorio (`RM-01`). `C-05` y `C-09` (expiración de TTL) son handlers disparados por tiempo, no por un controller.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Comando / Evento</th>
+      <th align="left">Propósito</th>
+      <th align="left">Colabora con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`CreateUserAccountHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Create user account (`C-01`)</td>
+      <td align="left">Crea la cuenta validando correo único.</td>
+      <td align="left">`IUserAccountRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`AssignUserRoleHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Assign user role (`C-02`)</td>
+      <td align="left">Asigna o cambia el rol de una cuenta existente.</td>
+      <td align="left">`IUserAccountRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`RequestCredentialRecoveryHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Request credential recovery (`C-03`)</td>
+      <td align="left">Inicia la recuperación y notifica por correo.</td>
+      <td align="left">`IUserAccountRepository`, `ICredentialRecoveryRepository`, `IEmailSender`</td>
+    </tr>
+    <tr>
+      <td align="left">`ResetCredentialsHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Reset credentials (`C-04`)</td>
+      <td align="left">Aplica el nuevo password si el token es válido.</td>
+      <td align="left">`ICredentialRecoveryRepository`, `IUserAccountRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`ExpireCredentialRecoveryHandler`</td>
+      <td align="left">Event Handler (scheduled)</td>
+      <td align="left">Expire credential recovery (`C-05`)</td>
+      <td align="left">Marca vencidos los procesos fuera de TTL.</td>
+      <td align="left">`ICredentialRecoveryRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`SignInHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Sign in (`C-06`)</td>
+      <td align="left">Valida credenciales y concede sesión según canal.</td>
+      <td align="left">`IUserAccountRepository`, `ISessionRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`CloseSessionHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Close session (`C-07`)</td>
+      <td align="left">Cierra la sesión activa.</td>
+      <td align="left">`ISessionRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`DenyProtectedActionHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Attempt protected action (`C-08`)</td>
+      <td align="left">Evalúa `AccessPolicy` y deniega si el rol/canal no corresponde.</td>
+      <td align="left">`AccessPolicy`</td>
+    </tr>
+    <tr>
+      <td align="left">`ExpireAccessTokenHandler`</td>
+      <td align="left">Event Handler (scheduled)</td>
+      <td align="left">Expire access token (`C-09`)</td>
+      <td align="left">Cierra sesiones cuyo token venció.</td>
+      <td align="left">`ISessionRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`GetUserAccountsDirectoryHandler`</td>
+      <td align="left">Query Handler</td>
+      <td align="left">Get UserAccountsDirectory (`RM-01`)</td>
+      <td align="left">Lista cuentas y roles para el Plant Manager.</td>
+      <td align="left">`IUserAccountRepository`</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-4-4"></a>
+#### 4.2.4.4. Infrastructure Layer
+
+Implementaciones de los tres repositorios y el adaptador de correo. Motor de base de datos y proveedor de email quedan `TBD` (no se asume Auth0/Cognito ni marca de email — DEC-005).
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Interfaz que implementa</th>
+      <th align="left">Servicio externo</th>
+      <th align="left">Propósito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`UserAccountRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`IUserAccountRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia relacional de cuentas.</td>
+    </tr>
+    <tr>
+      <td align="left">`SessionRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`ISessionRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia relacional de sesiones.</td>
+    </tr>
+    <tr>
+      <td align="left">`CredentialRecoveryRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`ICredentialRecoveryRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia relacional de procesos de recuperación.</td>
+    </tr>
+    <tr>
+      <td align="left">`EmailServiceAdapter`</td>
+      <td align="left">Adapter</td>
+      <td align="left">`IEmailSender`</td>
+      <td align="left">Email Service (`XS-01`, proveedor TBD)</td>
+      <td align="left">Envía el correo de recuperación de credenciales.</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-4-5"></a>
+#### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+Identity & Access vive dentro del único container `Web Monolithic Backend`. Interface recibe las llamadas de las apps, Application orquesta comandos y queries, Domain concentra los aggregates y `AccessPolicy`, e Infrastructure implementa los repositorios y habla con `Cloud Database` y `Email Service`.
+
+![Component Level Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-04-component.png)
+
+<a id="s-4-2-4-6"></a>
+#### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+<a id="s-4-2-4-6-1"></a>
+##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+![Domain Layer Class Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-04-domain-class.png)
+
+<a id="s-4-2-4-6-2"></a>
+##### 4.2.4.6.2. Bounded Context Database Design Diagram
+
+Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`, con `email` y los hashes de token como `UNIQUE`, y llaves foráneas de `sessions`/`credential_recoveries` hacia `user_accounts`.
+
+![Database Design Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-04-database.png)
 
 ---
 
