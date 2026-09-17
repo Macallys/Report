@@ -41,11 +41,11 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
   </thead>
   <tbody>
     <tr>
-      <td align="center">![Integrante 1](../assets/01-capitulo-i/equipo/integrante-1.png)</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="center">![Angelo Héctor Solano Armas](../assets/01-capitulo-i/equipo/angelo.jpg)</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">U20231B775</td>
       <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left">Interés marcado por el curso y por las tecnologías emergentes, en especial las aplicadas a IoT. Actitud colaborativa, comunicación clara y disposición constante para aprender. Enfoque positivo ante los retos del proyecto y compromiso con el trabajo en equipo.</td>
     </tr>
     <tr>
       <td align="center">![Integrante 2](../assets/01-capitulo-i/equipo/integrante-2.png)</td>

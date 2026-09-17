@@ -49,8 +49,8 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">U20231B775</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
     </tr>
     <tr>
       <td align="left"></td>
