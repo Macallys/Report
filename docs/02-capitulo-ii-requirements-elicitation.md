@@ -183,8 +183,10 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 
 > Nota para el equipo: las celdas marcadas entre corchetes deben completarse con los datos reales de cada entrevista. Las capturas se colocan en assets/chapter-2/ respetando los nombres de archivo indicados en cada etiqueta de imagen.
 
+<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad"></a>
 #### Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
 
+<a id="s-entrevista-1"></a>
 ##### Entrevista 1
 
 <table border="1">
@@ -218,6 +220,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
+<a id="s-entrevista-2"></a>
 ##### Entrevista 2
 
 <table border="1">
@@ -249,6 +252,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
+<a id="s-entrevista-3"></a>
 ##### Entrevista 3
 
 <table border="1">
@@ -280,8 +284,10 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
+<a id="s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta"></a>
 #### Segmento objetivo 2: Encargado de Planta (App Web)
 
+<a id="s-entrevista-1-entrevista-1"></a>
 ##### Entrevista 1
 
 <table border="1">
@@ -315,6 +321,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
+<a id="s-entrevista-2-entrevista-2"></a>
 ##### Entrevista 2
 
 <table border="1">
@@ -345,6 +352,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
+<a id="s-entrevista-3-entrevista-3"></a>
 ##### Entrevista 3
 
 <table border="1">
@@ -375,6 +383,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
+<a id="s-2-2-3"></a>
 ### 2.2.3. Análisis de entrevistas
 
 <a id="s-2-3"></a>
