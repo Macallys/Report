@@ -48,22 +48,43 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left">Interés marcado por el curso y por las tecnologías emergentes, en especial las aplicadas a IoT. Actitud colaborativa, comunicación clara y disposición constante para aprender. Enfoque positivo ante los retos del proyecto y compromiso con el trabajo en equipo.</td>
     </tr>
     <tr>
-      <td align="center">![Integrante 2](../assets/01-capitulo-i/equipo/integrante-2.png)</td>
+      <td align="center">![Gordillo Ramos, Santiago Alonso](../assets/01-capitulo-i/equipo/integrante-2.png)</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">U202215160</td>
+      <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center">![Solis Chang, Santiago Valentino](../assets/01-capitulo-i/equipo/integrante-3.png)</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
     </tr>
     <tr>
-      <td align="center">![Integrante 3](../assets/01-capitulo-i/equipo/integrante-3.png)</td>
-      <td align="left"></td>
+      <td align="center">![Huaman Cuba, Johan Giovani](../assets/01-capitulo-i/equipo/integrante-4.png)</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
     </tr>
     <tr>
-      <td align="center">![Integrante 4](../assets/01-capitulo-i/equipo/integrante-4.png)</td>
+      <td align="center"></td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
       <td align="left"></td>
+      <td align="left">Ingeniería de Software</td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"></td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left"></td>
+      <td align="left">Ingeniería de Software</td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"></td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>

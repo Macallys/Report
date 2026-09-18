@@ -19,17 +19,17 @@
 
 **Nombre del curso:** Desarrollo de Soluciones IoT
 
-**NRC:** [NRC]
+**NRC:** 8729
 
-**Nombre del profesor:** [Apellidos y Nombres]
+**Nombre del profesor:** León Baca, Marco Antonio
 
 ---
 
 **Informe de Trabajo Final**
 
-**Nombre del startup:** [Nombre del startup]
+**Nombre del startup:** Macallys
 
-**Nombre del producto:** [Nombre del producto]
+**Nombre del producto:** SafeGuard
 
 </div>
 
@@ -49,23 +49,35 @@
       <td align="left">Solano Armas, Angelo Héctor</td>
     </tr>
     <tr>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">U202215160</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
     </tr>
     <tr>
       <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
     </tr>
     <tr>
       <td align="left"></td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+    </tr>
+    <tr>
       <td align="left"></td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
     </tr>
   </tbody>
 </table>
 
 <div align="center">
 
-**Mes y año:** [Mes, Año]
+**Mes y año:** Septiembre, 2026
 
 </div>
 
@@ -85,10 +97,220 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">1.0</td>
+      <td align="left">1.1</td>
       <td align="left">2026-08-31</td>
-      <td align="left"></td>
-      <td align="left">Inicialización del esqueleto del informe según enunciado del Trabajo Final.</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Inicialización del esqueleto del informe según el enunciado del Trabajo Final.</td>
+    </tr>
+    <tr>
+      <td align="left">1.2</td>
+      <td align="left">2026-09-01</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Creación del Startup Profile de Macallys.</td>
+    </tr>
+    <tr>
+      <td align="left">1.3</td>
+      <td align="left">2026-09-02</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Redacción de la descripción de la startup.</td>
+    </tr>
+    <tr>
+      <td align="left">1.4</td>
+      <td align="left">2026-09-03</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Elaboración del Solution Profile.</td>
+    </tr>
+    <tr>
+      <td align="left">1.5</td>
+      <td align="left">2026-09-04</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Definición de Lean UX Problem Statements.</td>
+    </tr>
+    <tr>
+      <td align="left">1.6</td>
+      <td align="left">2026-09-05</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Definición de Lean UX Assumptions.</td>
+    </tr>
+    <tr>
+      <td align="left">1.7</td>
+      <td align="left">2026-09-06</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Redacción de Lean UX Hypothesis Statements y Lean UX Canvas.</td>
+    </tr>
+    <tr>
+      <td align="left">1.8</td>
+      <td align="left">2026-09-07</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Definición de los segmentos objetivo.</td>
+    </tr>
+    <tr>
+      <td align="left">1.9</td>
+      <td align="left">2026-09-08</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Diseño de entrevistas.</td>
+    </tr>
+    <tr>
+      <td align="left">1.10</td>
+      <td align="left">2026-09-09</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Registro de entrevistas.</td>
+    </tr>
+    <tr>
+      <td align="left">1.11</td>
+      <td align="left">2026-09-10</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Participación en entrevistas.</td>
+    </tr>
+    <tr>
+      <td align="left">1.12</td>
+      <td align="left">2026-09-11</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Participación en entrevistas.</td>
+    </tr>
+    <tr>
+      <td align="left">1.13</td>
+      <td align="left">2026-09-12</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Participación en entrevistas.</td>
+    </tr>
+    <tr>
+      <td align="left">1.14</td>
+      <td align="left">2026-09-13</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Análisis competitivo.</td>
+    </tr>
+    <tr>
+      <td align="left">1.15</td>
+      <td align="left">2026-09-14</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Definición de estrategias y tácticas frente a competidores.</td>
+    </tr>
+    <tr>
+      <td align="left">1.16</td>
+      <td align="left">2026-09-15</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Elaboración de Needfinding.</td>
+    </tr>
+    <tr>
+      <td align="left">1.17</td>
+      <td align="left">2026-09-16</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Construcción de User Task Matrix.</td>
+    </tr>
+    <tr>
+      <td align="left">1.18</td>
+      <td align="left">2026-09-17</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Aporte a Big Picture EventStorming.</td>
+    </tr>
+    <tr>
+      <td align="left">1.19</td>
+      <td align="left">2026-09-18</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Aporte a Big Picture EventStorming.</td>
+    </tr>
+    <tr>
+      <td align="left">1.20</td>
+      <td align="left">2026-09-19</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Aporte a Big Picture EventStorming.</td>
+    </tr>
+    <tr>
+      <td align="left">1.21</td>
+      <td align="left">2026-09-20</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Aporte a Big Picture EventStorming.</td>
+    </tr>
+    <tr>
+      <td align="left">1.22</td>
+      <td align="left">2026-09-21</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Aporte a Big Picture EventStorming.</td>
+    </tr>
+    <tr>
+      <td align="left">1.23</td>
+      <td align="left">2026-09-22</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Aporte a Big Picture EventStorming.</td>
+    </tr>
+    <tr>
+      <td align="left">1.24</td>
+      <td align="left">2026-09-23</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Elaboración de User Stories.</td>
+    </tr>
+    <tr>
+      <td align="left">1.25</td>
+      <td align="left">2026-09-24</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Elaboración de User Stories.</td>
+    </tr>
+    <tr>
+      <td align="left">1.26</td>
+      <td align="left">2026-09-25</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Actualización del Product Backlog.</td>
+    </tr>
+    <tr>
+      <td align="left">1.27</td>
+      <td align="left">2026-09-26</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Elaboración de Impact Mapping.</td>
+    </tr>
+    <tr>
+      <td align="left">1.28</td>
+      <td align="left">2026-09-27</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Modelado de Domain Message Flows.</td>
+    </tr>
+    <tr>
+      <td align="left">1.29</td>
+      <td align="left">2026-09-28</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Modelado de Domain Message Flows.</td>
+    </tr>
+    <tr>
+      <td align="left">1.30</td>
+      <td align="left">2026-09-29</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Modelado de Domain Message Flows.</td>
+    </tr>
+    <tr>
+      <td align="left">1.31</td>
+      <td align="left">2026-09-30</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Candidate Context Discovery.</td>
+    </tr>
+    <tr>
+      <td align="left">1.32</td>
+      <td align="left">2026-10-01</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Design-Level EventStorming.</td>
+    </tr>
+    <tr>
+      <td align="left">1.33</td>
+      <td align="left">2026-10-02</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Definición de Software Architecture.</td>
+    </tr>
+    <tr>
+      <td align="left">1.34</td>
+      <td align="left">2026-10-03</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Elaboración del Software Architecture System Landscape Diagram.</td>
+    </tr>
+    <tr>
+      <td align="left">1.35</td>
+      <td align="left">2026-10-04</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Tactical-Level Domain-Driven Design.</td>
+    </tr>
+    <tr>
+      <td align="left">1.36</td>
+      <td align="left">2026-10-05</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Elaboración de Software Architecture Context Level Diagrams.</td>
     </tr>
   </tbody>
 </table>
@@ -98,9 +320,9 @@
 <a id="s-collaboration-insights"></a>
 # Project Report Collaboration Insights
 
-**URL del repositorio (Project Report):** [URL de la organización / repositorio GitHub]
+**URL del repositorio (Project Report):** https://github.com/Macallys/Report.git
 
-**Entrega AV1 / TB1 / AV2 / TB2**
+**Entrega:** AV1
 
 ![Analíticos de colaboración — captura](../assets/00-front-matter/github-collaboration-insights-1.png)
 
@@ -324,22 +546,43 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left">Interés marcado por el curso y por las tecnologías emergentes, en especial las aplicadas a IoT. Actitud colaborativa, comunicación clara y disposición constante para aprender. Enfoque positivo ante los retos del proyecto y compromiso con el trabajo en equipo.</td>
     </tr>
     <tr>
-      <td align="center">![Integrante 2](../assets/01-capitulo-i/equipo/integrante-2.png)</td>
+      <td align="center">![Gordillo Ramos, Santiago Alonso](../assets/01-capitulo-i/equipo/integrante-2.png)</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">U202215160</td>
+      <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center">![Solis Chang, Santiago Valentino](../assets/01-capitulo-i/equipo/integrante-3.png)</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
     </tr>
     <tr>
-      <td align="center">![Integrante 3](../assets/01-capitulo-i/equipo/integrante-3.png)</td>
-      <td align="left"></td>
+      <td align="center">![Huaman Cuba, Johan Giovani](../assets/01-capitulo-i/equipo/integrante-4.png)</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
     </tr>
     <tr>
-      <td align="center">![Integrante 4](../assets/01-capitulo-i/equipo/integrante-4.png)</td>
+      <td align="center"></td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
       <td align="left"></td>
+      <td align="left">Ingeniería de Software</td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"></td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left"></td>
+      <td align="left">Ingeniería de Software</td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"></td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
