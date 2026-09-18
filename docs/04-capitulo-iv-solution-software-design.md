@@ -223,7 +223,7 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
     <tr>
       <td align="left">4.2.3</td>
       <td align="left">Device & Edge Management</td>
-      <td align="left">pendiente</td>
+      <td align="left"><a href="bounded-contexts/bc-03-device-edge-management.md">bc-03-device-edge-management.md</a></td>
     </tr>
     <tr>
       <td align="left">4.2.4</td>

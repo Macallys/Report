@@ -1,0 +1,40 @@
+@startuml bc-03-device-edge-database
+' Bounded Context Database Design Diagram — Device & Edge Management (§ 4.2.3.6.2)
+' Dos esquemas: Cloud Database (credenciales) y Edge Database (cola + copias).
+' Motores TBD. Sin copiar ExposureState. Lecturas con tipo de hecho separado.
+
+package "Cloud Database" {
+  entity "device_credentials" as device_credentials {
+    * id : UUID <<PK>>
+    --
+    * device_id : UUID <<UNIQUE>>
+    * secret_hash : VARCHAR
+    * issued_at : TIMESTAMP
+    expires_at : TIMESTAMP
+    revoked_at : TIMESTAMP
+  }
+}
+
+package "Edge Database" {
+  entity "telemetry_queue" as telemetry_queue {
+    * id : UUID <<PK>>
+    --
+    * device_id : UUID
+    * reading_kind : VARCHAR
+    * measured_at : TIMESTAMP
+    * payload : VARCHAR
+    * idempotency_key : VARCHAR <<UNIQUE>>
+    * queued_at : TIMESTAMP
+    synced_at : TIMESTAMP
+  }
+
+  entity "offline_alert_copies" as offline_alert_copies {
+    * id : UUID <<PK>>
+    --
+    * area_id : UUID
+    * alert_id : UUID
+    * stored_at : TIMESTAMP
+  }
+}
+
+@enduml

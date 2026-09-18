@@ -22,9 +22,9 @@ Copiar [`../templates/bounded-context.md`](../templates/bounded-context.md) como
       <td align="left">Hecho</td>
     </tr>
     <tr>
-      <td align="left">—</td>
+      <td align="left">bc-03-device-edge-management.md</td>
       <td align="left">Device & Edge Management (4.2.3)</td>
-      <td align="left">Pendiente</td>
+      <td align="left">Hecho</td>
     </tr>
     <tr>
       <td align="left">bc-04-identity-access.md</td>
