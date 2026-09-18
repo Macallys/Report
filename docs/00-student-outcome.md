@@ -49,8 +49,8 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left">U20231B775</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
     </tr>
     <tr>
       <td align="left"></td>
@@ -142,6 +142,14 @@
     1. [2.2. Entrevistas](informe.md#s-2-2)
         1. [2.2.1. Diseño de entrevistas](informe.md#s-2-2-1)
         1. [2.2.2. Registro de entrevistas](informe.md#s-2-2-2)
+            1. [Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](informe.md#s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad)
+                1. [Entrevista 1](informe.md#s-entrevista-1)
+                1. [Entrevista 2](informe.md#s-entrevista-2)
+                1. [Entrevista 3](informe.md#s-entrevista-3)
+            1. [Segmento objetivo 2: Encargado de Planta (App Web)](informe.md#s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta)
+                1. [Entrevista 1](informe.md#s-entrevista-1-entrevista-1)
+                1. [Entrevista 2](informe.md#s-entrevista-2-entrevista-2)
+                1. [Entrevista 3](informe.md#s-entrevista-3-entrevista-3)
         1. [2.2.3. Análisis de entrevistas](informe.md#s-2-2-3)
     1. [2.3. Needfinding](informe.md#s-2-3)
         1. [2.3.1. User Personas](informe.md#s-2-3-1)
@@ -150,8 +158,8 @@
         1. [2.3.4. Empathy Mapping](informe.md#s-2-3-4)
     1. [2.4. Big Picture EventStorming](informe.md#s-2-4)
     1. [2.5. Ubiquitous Language](informe.md#s-2-5)
-1. [Capítulo III: Requirements Specification](informe.md#s-cap-iii)
-    1. [3.1. User Stories y Technical Stories](informe.md#s-3-1)
+1. [Chapter III: Requirements Specification](informe.md#s-chapter-iii-requirements-specification)
+    1. [3.1. User Stories and Technical Stories](informe.md#s-3-1)
     1. [3.2. Impact Mapping](informe.md#s-3-2)
     1. [3.3. Product Backlog](informe.md#s-3-3)
 1. [Capítulo IV: Solution Software Design](informe.md#s-cap-iv)
