@@ -5,7 +5,7 @@
 
 ---
 
-Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain**: quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (Safety & Actuation). Vive en el monolito cloud. La ingesta llega vía Device & Edge Management. Setup de planta exige sesión de supervisor en canal **móvil** (OHS de Identity & Access).
+Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain**: quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (Safety & Actuation). En `Edge Application` solo hay una **proyección** para el loop local de Safety.
 
 Ubiquitous language: *Industrial area* · *Environmental thresholds* · *Area device assignment* · *Carbon dioxide reading* · *Noise reading* · *Presence (detected / cleared)* · *Telemetry ingested* · *Sensor associated to area* · *Actuator associated to area* · *Plant metrics history*.
 
@@ -388,7 +388,7 @@ Implementaciones de los cuatro repositorios y un publicador in-process. Motor de
 <a id="s-4-2-1-5"></a>
 ## 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-El Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`.
+El Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. En el servidor de planta, una **proyección** cachea umbrales y últimas lecturas para Safety. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`.
 
 ![Component Level Diagram](../../assets/04-capitulo-iv/bounded-contexts/bc-01-component.png)
 

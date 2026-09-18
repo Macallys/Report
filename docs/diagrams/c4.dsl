@@ -13,7 +13,7 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
             plantManagerWebClient = container "Plant Manager Web Client" "Sign-in, account management, and plant analytics." "Angular" "Browser"
             landingWebsite = container "SafePlant Landing Website" "Public marketing site." "TBD" "StaticContent"
 
-            webBackend = container "Web Monolithic Backend" "Single cloud process. Four internal modules: Identity & Access, Plant Monitoring, Safety & Actuation, Device & Edge Management." "TBD" "Backend" {
+            webBackend = container "Web Monolithic Backend" "Single cloud process. Four internal modules: Identity & Access, Plant Monitoring, Safety & Actuation, Device & Edge Management. Cloud Safety is audit, status, and override when WAN is up." "TBD" "Backend" {
                 identityInterface = component "Identity Interface Layer" "UserAccountController, SessionController, CredentialRecoveryController. HTTP endpoints for sign-in, account/role management, and credential recovery." "TBD" "IdentityComponent"
                 identityApplication = component "Identity Application Layer" "Command/query handlers: CreateUserAccount, AssignUserRole, SignIn, CloseSession, RequestCredentialRecovery, ResetCredentials, GetUserAccountsDirectory." "TBD" "IdentityComponent"
                 identityDomain = component "Identity Domain Layer" "Aggregates UserAccount, Session, CredentialRecovery. Enforces unique email, channel/role rules (mobile supervisor vs. web plant manager)." "TBD" "IdentityComponent"
@@ -32,10 +32,10 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
                 plantMonitoringApplication -> plantMonitoringDomain "Invokes aggregates and enforces invariants"
                 plantMonitoringApplication -> plantMonitoringInfrastructure "Persists via repositories"
 
-                safetyInterface = component "Safety & Actuation Interface Layer" "AreaSafetyController, PlantTelemetryEventConsumer. HTTP for operational status, alerts, and override; in-process telemetry events from Plant Monitoring." "TBD" "SafetyActuationComponent"
-                safetyApplication = component "Safety & Actuation Application Layer" "Command/query handlers: detect excess, evaluate exposure, classify, raise/withdraw alert, activate/normalize/override actuator, AreaOperationalStatus, ActiveAlerts." "TBD" "SafetyActuationComponent"
-                safetyDomain = component "Safety & Actuation Domain Layer" "Aggregates ExposureState and AreaActuators. In-process business rules for exposure, alerts, and actuation. Commands by area and actuator type; no Device entity." "TBD" "SafetyActuationComponent"
-                safetyInfrastructure = component "Safety & Actuation Infrastructure Layer" "Repositories, FirmwareActuatorAdapter toward embedded firmware, OfflineAlertCopyAdapter toward Edge." "TBD" "SafetyActuationComponent"
+                safetyInterface = component "Safety & Actuation Interface Layer" "AreaSafetyController. HTTP for operational status, alerts, and override; receives exposure/alert sync from the Edge runtime." "TBD" "SafetyActuationComponent"
+                safetyApplication = component "Safety & Actuation Application Layer" "Command/query handlers: AreaOperationalStatus, ActiveAlerts, override actuator (forwarded to Edge when WAN is up). Audit of synced exposure." "TBD" "SafetyActuationComponent"
+                safetyDomain = component "Safety & Actuation Domain Layer" "Aggregates ExposureState and AreaActuators (cloud copy). Same language as the Edge runtime; cloud is not the live control loop." "TBD" "SafetyActuationComponent"
+                safetyInfrastructure = component "Safety & Actuation Infrastructure Layer" "Repositories on Cloud Database; override forwarding toward Edge Safety; no FirmwareActuatorAdapter here." "TBD" "SafetyActuationComponent"
 
                 safetyInterface -> safetyApplication "Delegates commands and queries"
                 safetyApplication -> safetyDomain "Invokes aggregates and enforces invariants"
@@ -53,7 +53,7 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
 
             cloudDatabase = container "Cloud Database" "Backing store for the monolithic backend." "TBD" "Database"
             messageBroker = container "MQTT Broker" "Internal pub/sub between field firmware and the Edge Application. Product TBD." "TBD" "MessageBroker"
-            edgeApplication = container "Edge Application" "Plant-server software: MQTT ingest, cloud sync, and offline queue." "TBD" "Edge" {
+            edgeApplication = container "Edge Application" "Plant-server software: Device & Edge runtime (MQTT ingest, queue, sync), Plant Monitoring projection, and Safety & Actuation live loop." "TBD" "Edge" {
                 edgeRuntimeInterface = component "Device & Edge Interface Layer (runtime)" "DeviceAuthenticationController, MqttTelemetryConsumer, OfflineAlertConsumer. No IoT Gateway collaborator." "TBD" "DeviceEdgeComponent"
                 edgeRuntimeApplication = component "Device & Edge Application Layer (runtime)" "Handlers: authenticate device, ingest telemetry, queue locally, sync, store offline alert copy." "TBD" "DeviceEdgeComponent"
                 edgeRuntimeDomain = component "Device & Edge Domain Layer (runtime)" "Aggregate EdgeNode. Local queue, sync idempotency, offline alert copies. Does not evaluate exposure." "TBD" "DeviceEdgeComponent"
@@ -62,8 +62,19 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
                 edgeRuntimeInterface -> edgeRuntimeApplication "Delegates commands"
                 edgeRuntimeApplication -> edgeRuntimeDomain "Invokes aggregates and enforces invariants"
                 edgeRuntimeApplication -> edgeRuntimeInfrastructure "Persists via repositories"
+
+                plantMonitoringProjection = component "Plant Monitoring Projection" "Cached thresholds and last CO₂, noise, and presence facts for the local Safety loop. Not a plant-setup API; system of record stays in the cloud." "TBD" "PlantMonitoringComponent"
+
+                safetyEdgeInterface = component "Safety & Actuation Interface Layer (runtime)" "PlantTelemetryEventConsumer from the local projection; override forwarded from cloud Safety when WAN is up." "TBD" "SafetyActuationComponent"
+                safetyEdgeApplication = component "Safety & Actuation Application Layer (runtime)" "Handlers: detect excess, evaluate exposure, classify, raise/withdraw alert, activate/normalize actuator (live loop)." "TBD" "SafetyActuationComponent"
+                safetyEdgeDomain = component "Safety & Actuation Domain Layer (runtime)" "Aggregates ExposureState and AreaActuators. In-process PO-03–PO-08. Commands by area and actuator type; no Device entity." "TBD" "SafetyActuationComponent"
+                safetyEdgeInfrastructure = component "Safety & Actuation Infrastructure Layer (runtime)" "Repositories on Edge Database, FirmwareActuatorAdapter, OfflineAlertCopyAdapter toward EdgeNode, sync of exposure/alerts toward cloud." "TBD" "SafetyActuationComponent"
+
+                safetyEdgeInterface -> safetyEdgeApplication "Delegates commands"
+                safetyEdgeApplication -> safetyEdgeDomain "Invokes aggregates and enforces invariants"
+                safetyEdgeApplication -> safetyEdgeInfrastructure "Persists via repositories"
             }
-            edgeDatabase = container "Edge Database" "Local queue and offline alert copies." "TBD" "Database"
+            edgeDatabase = container "Edge Database" "Local queue, offline alert copies, and live exposure/actuator state." "TBD" "Database"
             deviceEmbeddedApp = container "Device Embedded Application" "Firmware on the field hardware: sensors, actuators, MQTT publish." "TBD" "IoT"
 
             supervisor -> supervisorMobileApp "Uses"
@@ -92,19 +103,25 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
             edgeRuntimeInfrastructure -> deviceEdgeInterface "Syncs device credentials"
             deviceEmbeddedApp -> edgeRuntimeInterface "Authenticate device"
             edgeRuntimeInterface -> messageBroker "Consumes readings"
+            edgeRuntimeInfrastructure -> plantMonitoringProjection "Feeds last readings for the local loop"
+            plantMonitoringProjection -> safetyEdgeInterface "Publishes last readings and threshold context"
+            plantMonitoringInfrastructure -> plantMonitoringProjection "Caches thresholds when WAN is up"
 
             supervisorMobileApp -> safetyInterface "Operational status, active alerts, actuator override"
             safetyInfrastructure -> cloudDatabase "Reads from and writes to"
-            safetyInfrastructure -> deviceEmbeddedApp "Activate / normalize actuator"
-            safetyInfrastructure -> edgeApplication "Stores offline alert copies"
-            safetyInfrastructure -> edgeRuntimeInterface "Stores offline alert copies"
+            safetyInfrastructure -> safetyEdgeInterface "Forwards override when WAN is up"
+            safetyEdgeInfrastructure -> edgeDatabase "Reads from and writes to"
+            safetyEdgeInfrastructure -> deviceEmbeddedApp "Activate / normalize actuator"
+            safetyEdgeInfrastructure -> edgeRuntimeInterface "Stores offline alert copies"
+            safetyEdgeInfrastructure -> safetyInterface "Syncs exposure and alerts when WAN is up"
 
             deviceEmbeddedApp -> fieldHardware "Reads sensors and drives actuators"
             deviceEmbeddedApp -> messageBroker "Publishes readings"
             edgeApplication -> messageBroker "Consumes readings"
-            edgeApplication -> webBackend "Ingests telemetry and syncs credentials"
+            edgeApplication -> webBackend "Ingests telemetry and syncs credentials, alerts, and exposure"
             edgeApplication -> edgeDatabase "Reads from and writes to"
-            webBackend -> edgeApplication "Stores offline alert copies"
+            edgeApplication -> deviceEmbeddedApp "Activate / normalize actuator"
+            webBackend -> edgeApplication "Syncs device credentials and forwards actuator override"
         }
     }
 
@@ -135,7 +152,12 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
         }
 
         component webBackend "SafetyActuationComponents" {
-            include supervisorMobileApp safetyInterface safetyApplication safetyDomain safetyInfrastructure cloudDatabase deviceEmbeddedApp fieldHardware edgeApplication
+            include supervisorMobileApp safetyInterface safetyApplication safetyDomain safetyInfrastructure cloudDatabase safetyEdgeInterface
+            autoLayout lr 300 150
+        }
+
+        component edgeApplication "SafetyActuationEdgeComponents" {
+            include plantMonitoringProjection safetyEdgeInterface safetyEdgeApplication safetyEdgeDomain safetyEdgeInfrastructure edgeDatabase deviceEmbeddedApp fieldHardware edgeRuntimeInterface
             autoLayout lr 300 150
         }
 
@@ -145,7 +167,7 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
         }
 
         component edgeApplication "DeviceEdgeRuntimeComponents" {
-            include deviceEmbeddedApp messageBroker edgeRuntimeInterface edgeRuntimeApplication edgeRuntimeDomain edgeRuntimeInfrastructure edgeDatabase plantMonitoringInterface
+            include deviceEmbeddedApp messageBroker edgeRuntimeInterface edgeRuntimeApplication edgeRuntimeDomain edgeRuntimeInfrastructure edgeDatabase plantMonitoringInterface plantMonitoringProjection safetyEdgeInterface
             autoLayout lr 300 150
         }
 

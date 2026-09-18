@@ -15,7 +15,7 @@ assets/
 │   └── eventstorming/        ← Big Picture EventStorming
 ├── 03-capitulo-iii/          ← Impact Map y artefactos de especificación
 ├── 04-capitulo-iv/
-│   ├── ddd/                  ← ES (es-01 … es-05), DMF (dmf-01 … dmf-05), BCC v5 (bcc-01 … bcc-04), Context Map
+│   ├── ddd/                  ← ES (es-01 … es-05), DMF (dmf-00-notation + dmf-01 … dmf-05), BCC v5 (bcc-01 … bcc-04), Context Map
 │   ├── architecture/         ← C4 / Deployment
 │   └── bounded-contexts/     ← Diagramas por BC (4.2.X)
 ├── 05-capitulo-v/

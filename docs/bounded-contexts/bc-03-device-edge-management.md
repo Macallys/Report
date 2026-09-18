@@ -7,7 +7,7 @@
 
 Device & Edge Management autentica dispositivos de campo, consume las lecturas publicadas al broker MQTT y las entrega a Plant Monitoring, y mantiene continuidad si la nube no alcanza: cola local, reintento al recuperar el enlace y copia de alerta. Es un contexto **supporting**: no interpreta umbrales ni exposición.
 
-El mismo contexto está **repartido** en dos containers. En el **Web Monolithic Backend** vive el registro maestro de `DeviceCredential`: emitir, revocar y validar contra la fuente de verdad. En la **Edge Application** vive `EdgeNode`: autenticar el firmware, consumir MQTT sin unificar CO₂, ruido y presencia, ingest hacia Plant Monitoring, cola y sync, y la copia de alerta que Safety & Actuation deja cuando la nube no alcanza.
+El mismo contexto está **repartido** en dos containers. En el **Web Monolithic Backend** vive el registro maestro de `DeviceCredential`: emitir, revocar y validar contra la fuente de verdad. En la **Edge Application** vive `EdgeNode`: autenticar el firmware, consumir MQTT sin unificar CO₂, ruido y presencia, ingest hacia Plant Monitoring, cola y sync, y la copia de alerta que el Safety **runtime (hermano en el mismo container)** deja para sincronizar.
 
 Ubiquitous language: *Device credential* · *Device authenticated* · *Edge node* · *Telemetry queued locally* · *Local telemetry sync* · *Offline alert stored* · *Duplicate telemetry acknowledged* · *Ingest telemetry*.
 
@@ -146,7 +146,7 @@ Dos aggregate roots en el mismo bounded context y en distintos procesos: `Device
 <a id="s-4-2-3-2"></a>
 ## 4.2.3.2. Interface Layer
 
-En la nube, un controller interno emite y revoca credenciales de dispositivo (no cuentas de usuario). En el Edge, el firmware se autentica, un consumer MQTT recibe tres hechos sin unificarlos y un consumer recibe la copia de alerta desde Safety & Actuation. No hay un «IoT Gateway» como colaborador.
+En la nube, un controller interno emite y revoca credenciales de dispositivo (no cuentas de usuario). En el Edge, el firmware se autentica, un consumer MQTT recibe tres hechos sin unificarlos y un consumer recibe `Store offline alert` desde el Safety runtime **local**. No hay un «IoT Gateway» como colaborador.
 
 <table>
   <thead>
@@ -183,7 +183,7 @@ En la nube, un controller interno emite y revoca credenciales de dispositivo (no
     <tr>
       <td align="left">`OfflineAlertConsumer`</td>
       <td align="left">Consumer (edge)</td>
-      <td align="left">Recibe la copia de alerta desde Safety & Actuation (in-process/HTTP hacia Edge).</td>
+      <td align="left">Recibe `Store offline alert` desde el Safety runtime **local** (in-process). No es un POST desde el monolito.</td>
       <td align="left">`onStoreOfflineAlert()`</td>
       <td align="left">Safety & Actuation; Application Layer (edge)</td>
     </tr>
@@ -324,7 +324,7 @@ Repositorio de credenciales sobre Cloud Database; cola y copias sobre Edge Datab
 
 En la nube, Interface expone emisión y revocación; Application invoca `DeviceCredential`; Infrastructure persiste en `Cloud Database` y atiende el sync desde el Edge.
 
-En runtime, el firmware se autentica en Interface; el broker MQTT entrega lecturas; Application orquesta ingest, cola y copia de alerta; Infrastructure escribe en `Edge Database`, ingiere en Plant Monitoring (Interface del monolito) y sincroniza credenciales.
+En runtime, el firmware se autentica en Interface; el broker MQTT entrega lecturas; Application orquesta ingest, cola y copia de alerta. Infrastructure escribe en `Edge Database`, ingiere en Plant Monitoring (Interface del monolito) y sincroniza credenciales.
 
 ![Component Level Diagram — cloud](../../assets/04-capitulo-iv/bounded-contexts/bc-03-component-cloud.png)
 

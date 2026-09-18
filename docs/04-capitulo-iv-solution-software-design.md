@@ -68,7 +68,7 @@ Los contextos candidatos se identificaron aplicando la heurística de **un Bound
     <tr>
       <td align="left"><strong>Safety & Actuation</strong></td>
       <td align="left">Dominio de reglas de seguridad</td>
-      <td align="left">Cruce presencia × condiciones ambientales (exposición), motor de reglas de riesgo, activación de extractores, sirenas y mamparas acústicas, y anulación remota de actuadores.</td>
+      <td align="left">Cruce presencia × condiciones ambientales (exposición), motor de reglas de riesgo, activación de extractores, sirenas y mamparas acústicas, y anulación remota de actuadores. El loop automático corre en el servidor de planta; la nube supervisa, audita y acepta override cuando hay WAN.</td>
       <td align="left">EP04, EP05</td>
       <td align="left">Configuración de áreas/umbrales (Plant Monitoring), identidad de usuarios ni ciclo de vida de firmware en edge.</td>
     </tr>
@@ -85,25 +85,29 @@ Los contextos candidatos se identificaron aplicando la heurística de **un Bound
 <a id="s-4-1-1-2"></a>
 #### 4.1.1.2 Domain Message Flows Modeling
 
-Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colaboran para resolver casos de uso de SafePlant mediante **Domain Message Flow Modelling**: actores, sistemas externos y bounded contexts intercambian mensajes numerados (comando, evento o consulta) con campos de negocio. MQTT es un sistema externo; el Edge no es un quinto contexto ni un “IoT Gateway”.
+Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colaboran para resolver casos de uso de SafePlant mediante **Domain Message Flow Modelling** ([ddd-crew](https://github.com/ddd-crew/domain-message-flow-modelling)). Cada diagrama es un escenario de 5 a 9 mensajes numerados (comando, evento o consulta) en formato combinado: nombre, orden y payload. MQTT y el hardware de campo son sistemas; el Edge no es un quinto contexto ni un “IoT Gateway”.
 
-**Historia 1 — Plant setup.** El supervisor, con sesión móvil en Identity & Access, define áreas, umbrales y asociación de dispositivos en Plant Monitoring.
+**Notación.** Persona = Supervisor o Plant manager; nube = bounded context; engranaje = broker MQTT y hardware Device; recuadro = comando, evento o consulta (la consulta lleva request y response en el mismo recuadro); flecha discontinua = emisor hacia receptor.
+
+![Domain message flow — notation](../assets/04-capitulo-iv/ddd/dmf-00-notation.png)
+
+**Scenario 1 — Plant setup.** El supervisor, con sesión móvil en Identity & Access, define áreas, umbrales y asociación de dispositivos en Plant Monitoring.
 
 ![Domain message flow — plant setup](../assets/04-capitulo-iv/ddd/dmf-01-plant-setup.png)
 
-**Historia 2 — Telemetry ingest.** El dispositivo se autentica, publica lecturas de CO₂, ruido y presencia (sin unificarlas) en el broker MQTT; Device & Edge las ingiere en Plant Monitoring. La evaluación de riesgo queda fuera de este flujo.
+**Scenario 2 — Telemetry ingest.** El dispositivo se autentica, publica lecturas de CO₂, ruido y presencia (sin unificarlas) en el broker MQTT; Device & Edge las ingiere en Plant Monitoring. La evaluación de riesgo queda fuera de este flujo.
 
 ![Domain message flow — telemetry ingest](../assets/04-capitulo-iv/ddd/dmf-02-telemetry-ingest.png)
 
-**Historia 3 — Exposure and actuation.** Plant Monitoring notifica lecturas y presencia a Safety & Actuation, que detecta excesos, clasifica exposición, alerta y activa extractores, sirenas o mamparas; al volver a rango, normaliza. La actuación física la ejecuta el dispositivo, no Device & Edge Management.
+**Scenario 3 — Exposure and actuation.** Plant Monitoring notifica lecturas y presencia a Safety & Actuation, que detecta excesos, clasifica exposición, alerta y activa extractores, sirenas o mamparas; cuando las lecturas vuelven a rango, normaliza. Quien emite `Activate`/`Normalize` es Safety **en el servidor de planta**; la actuación física la ejecuta el dispositivo, no Device & Edge Management.
 
 ![Domain message flow — exposure and actuation](../assets/04-capitulo-iv/ddd/dmf-03-exposure-actuation.png)
 
-**Historia 4 — Offline and sync.** Si el ingest falla, Device & Edge encola telemetría y sincroniza al recuperar conectividad. Si hay alerta ambiental y cloud no alcanza, Device & Edge guarda una copia local; Safety & Actuation sigue siendo dueño del riesgo.
+**Scenario 4 — Offline and sync.** Dos caminos alternativos: si el ingest falla, Device & Edge encola telemetría y reintenta al recuperar la conectividad; si hay alerta ambiental y cloud no alcanza, Safety **ya corre en Edge** y deja la alerta en Device & Edge para sincronizar después. Los actuadores no esperan internet. Safety & Actuation sigue siendo dueño del riesgo.
 
 ![Domain message flow — offline and sync](../assets/04-capitulo-iv/ddd/dmf-04-offline-sync.png)
 
-**Historia 5 — Supervisor override.** El supervisor, autenticado en canal móvil, consulta el estado operativo y las alertas activas y anula un actuador en Safety & Actuation. Identity no evalúa exposición; un intento desde el canal web se deniega.
+**Scenario 5 — Supervisor override.** El supervisor, autenticado en canal móvil, consulta el estado operativo y las alertas activas y anula un actuador en Safety & Actuation. Identity no evalúa exposición; un intento desde el canal web se deniega.
 
 ![Domain message flow — supervisor override](../assets/04-capitulo-iv/ddd/dmf-05-supervisor-override.png)
 
@@ -165,7 +169,7 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
     <tr>
       <td align="left">Safety & Actuation</td>
       <td align="left">Device & Edge Management</td>
-      <td align="left">ACL (copia de alerta; el riesgo no cambia de dueño)</td>
+      <td align="left">ACL persistencia/sync de alerta; el riesgo no cambia de dueño</td>
     </tr>
   </tbody>
 </table>

@@ -7,7 +7,7 @@
 
 Safety & Actuation protege al personal cruzando presencia con CO₂ y ruido: clasifica exposición, alerta y manda extractores, sirenas y mamparas, o las anula. Es el **segundo core** (cumplimiento de seguridad ocupacional). Quien opera SafePlant confía en que el riesgo se evalúa aquí.
 
-Recibe en el mismo proceso los eventos de lectura, presencia y retorno a umbral que publica Plant Monitoring. La actuación física va al **firmware** del dispositivo de campo, no a Device & Edge Management: el relé y el ESP32 son el actor de hardware. Device & Edge solo guarda una **copia** de alerta si la nube no alcanza; el dueño del riesgo no cambia. La anulación manual es un comando del supervisor en la aplicación **móvil**, no una regla automática; Identity deniega el mismo intento desde la aplicación web del encargado.
+El mismo bounded context tiene **dos runtimes** (DEC-007). En `Edge Application` corre el loop vivo: `PO-03`–`PO-08`, `Activate actuator` / `Normalize actuator` hacia el **firmware**. En el `Web Monolithic Backend` quedan estado, alertas y override del supervisor **cuando hay WAN**, más la copia de auditoría tras el sync. Device & Edge **no** evalúa riesgo. La anulación manual es un comando del supervisor en la aplicación **móvil**, no una regla automática; Identity deniega el mismo intento desde la aplicación web del encargado. Sin acceso a cloud, el loop automático sigue.
 
 No hay entidad `Device` ni `deviceId` en este contexto: el comando identifica el área y el tipo de actuador. Varias sirenas del mismo tipo en un área se tratan como *la sirena del área*; no se direcciona una instancia suelta.
 
@@ -16,7 +16,7 @@ Ubiquitous language: *Personnel exposure* · *Exposure severity* · *Area risk* 
 <a id="s-4-2-2-1"></a>
 ## 4.2.2.1. Domain Layer
 
-Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— y las reglas de negocio como domain services en el mismo proceso. No hay un aggregate por cada tipo de actuador: `AreaActuators` lleva el tipo en el comando. Los umbrales no se copian; llegan en los eventos de Plant Monitoring. La severidad es `None`, `Medium` o `High`. Los fallos de relé se registran; no se reintenta aquí.
+Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— y las reglas de negocio como domain services en el mismo proceso (en planta: el runtime Edge). No hay un aggregate por cada tipo de actuador: `AreaActuators` lleva el tipo en el comando. Los umbrales no se copian como dueño; llegan en los eventos de Plant Monitoring (en planta, vía la **proyección**). La severidad es `None`, `Medium` o `High`. Los fallos de relé se registran; no se reintenta aquí.
 
 <table>
   <thead>
@@ -161,7 +161,7 @@ Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— 
     <tr>
       <td align="left">`IOfflineAlertPort`</td>
       <td align="left">Port (interface)</td>
-      <td align="left">Copia de alerta en Edge si la nube no está alcanzable. El riesgo no cambia de dueño.</td>
+      <td align="left">Persistencia/sync de alerta vía `EdgeNode` si la nube no está alcanzable. El riesgo no cambia de dueño; `ExposureState` no vive dentro de `EdgeNode`.</td>
       <td align="left">—</td>
       <td align="left">`storeCopy()`</td>
       <td align="left">implementado en Infrastructure</td>
@@ -188,7 +188,7 @@ Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— 
 <a id="s-4-2-2-2"></a>
 ## 4.2.2.2. Interface Layer
 
-Un controller HTTP para el supervisor móvil (estado operativo, alertas y anulación) y un consumer en el mismo proceso para los eventos de Plant Monitoring. 
+Un controller HTTP en **cloud** para el supervisor móvil (estado operativo, alertas y anulación) y un consumer en el runtime **Edge** para los eventos de la proyección de Plant Monitoring. 
 
 <table>
   <thead>
@@ -211,7 +211,7 @@ Un controller HTTP para el supervisor móvil (estado operativo, alertas y anulac
     <tr>
       <td align="left">`PlantTelemetryEventConsumer`</td>
       <td align="left">Consumer</td>
-      <td align="left">Recibe lecturas, presencia y “conditions within thresholds” desde Plant Monitoring (mismo proceso).</td>
+      <td align="left">Recibe lecturas, presencia y “conditions within thresholds” desde Plant Monitoring (proyección en Edge; in-process en planta).</td>
       <td align="left">`onCarbonDioxideReadingRecorded()`, `onNoiseReadingRecorded()`, `onPresenceChanged()`, `onConditionsWithinThresholds()`</td>
       <td align="left">Plant Monitoring; Application Layer</td>
     </tr>
@@ -294,7 +294,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
       <td align="left">`RaiseEnvironmentalAlertHandler`</td>
       <td align="left">Command Handler</td>
       <td align="left">Raise environmental alert</td>
-      <td align="left">Levanta la alerta; si la nube no alcanza, deja copia en Edge.</td>
+      <td align="left">Levanta la alerta; si la nube no alcanza, persiste vía `EdgeNode` para sync (`PO-09`).</td>
       <td align="left">`IExposureStateRepository`, `IOfflineAlertPort`</td>
     </tr>
     <tr>
@@ -315,7 +315,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
       <td align="left">`ActivateActuatorHandler`</td>
       <td align="left">Command Handler</td>
       <td align="left">Activate actuator</td>
-      <td align="left">Enciende extractor, sirena o mampara del área vía firmware.</td>
+      <td align="left">Enciende extractor, sirena o mampara del área vía firmware (**runtime Edge**).</td>
       <td align="left">`IAreaActuatorsRepository`, `IActuatorCommandPort`</td>
     </tr>
     <tr>
@@ -336,7 +336,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
       <td align="left">`OverrideActuatorHandler`</td>
       <td align="left">Command Handler</td>
       <td align="left">Override actuator</td>
-      <td align="left">Control manual sin esperar sensores. Solo supervisor en la aplicación móvil; Identity ya denegó el canal web.</td>
+      <td align="left">Control manual sin esperar sensores. Solo supervisor en la aplicación móvil; Identity ya denegó el canal web. Cloud reenvía el comando al Safety de Edge si hay WAN.</td>
       <td align="left">`IAreaActuatorsRepository`, `IActuatorCommandPort`</td>
     </tr>
     <tr>
@@ -359,7 +359,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
 <a id="s-4-2-2-4"></a>
 ## 4.2.2.4. Infrastructure Layer
 
-Repositorios sobre Cloud Database (motor `TBD`), adapter de actuación hacia firmware y adapter de copia offline hacia Edge. No hay adaptador MQTT ni inventario de `deviceId`.
+Repositorios en **Edge Database** (loop vivo) y **Cloud Database** (auditoría/sync; motor `TBD`). `FirmwareActuatorAdapter` solo en el runtime Edge. `OfflineAlertCopyAdapter` persiste en `EdgeNode` y sincroniza cuando vuelve el enlace.
 
 <table>
   <thead>
@@ -376,14 +376,14 @@ Repositorios sobre Cloud Database (motor `TBD`), adapter de actuación hacia fir
       <td align="left">`ExposureStateRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IExposureStateRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Edge Database (loop vivo) y Cloud Database (sync/auditoría; motor TBD)</td>
       <td align="left">Persistencia de exposición y alertas.</td>
     </tr>
     <tr>
       <td align="left">`AreaActuatorsRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaActuatorsRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Edge Database (loop vivo) y Cloud Database (sync/auditoría; motor TBD)</td>
       <td align="left">Persistencia de estados lógicos por `(area, tipo)`.</td>
     </tr>
     <tr>
@@ -391,14 +391,14 @@ Repositorios sobre Cloud Database (motor `TBD`), adapter de actuación hacia fir
       <td align="left">Adapter</td>
       <td align="left">`IActuatorCommandPort`</td>
       <td align="left">Device Embedded Application</td>
-      <td align="left">Entrega `activate` / `normalize` con `areaId` + `actuatorType` al firmware, que mueve el relé.</td>
+      <td align="left">Entrega `activate` / `normalize` con `areaId` + `actuatorType` al firmware **desde el runtime Edge**, que mueve el relé.</td>
     </tr>
     <tr>
       <td align="left">`OfflineAlertCopyAdapter`</td>
       <td align="left">Adapter</td>
       <td align="left">`IOfflineAlertPort`</td>
-      <td align="left">Edge Application</td>
-      <td align="left">Copia la alerta en Edge si la nube no está alcanzable. Safety sigue dueña del riesgo.</td>
+      <td align="left">`EdgeNode`</td>
+      <td align="left">Persiste la alerta para sync si la nube no alcanza. Safety sigue dueña del riesgo; no es un volcado desde el monolito.</td>
     </tr>
   </tbody>
 </table>
@@ -406,9 +406,11 @@ Repositorios sobre Cloud Database (motor `TBD`), adapter de actuación hacia fir
 <a id="s-4-2-2-5"></a>
 ## 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-Safety & Actuation vive dentro del único container `Web Monolithic Backend`. Sus cuatro capas se modelan como componentes hexagonales: la aplicación móvil del supervisor llama a Interface para estado, alertas y anulación; Interface delega en Application; Application invoca Domain; Infrastructure persiste en `Cloud Database`, manda la actuación al firmware de campo (que conduce extractores, sirenas y mamparas) y deja copias offline en `Edge Application` si la nube no alcanza. Plant Monitoring e Identity no se dibujan en este diagrama: colaboran en el mismo proceso.
+Safety & Actuation se reparte en dos containers. En **cloud** (`Web Monolithic Backend`) las cuatro capas atienden estado, alertas y anulación del supervisor móvil; Infrastructure persiste la copia de auditoría en `Cloud Database` y reenvía el override al runtime Edge si hay WAN. En **planta** (`Edge Application`) las mismas cuatro capas corren el loop `: Interface consume la proyección de Plant Monitoring; Infrastructure escribe el estado vivo en `Edge Database`, manda `activate`/`normalize` al firmware y deja `PO-09` en `EdgeNode`.
 
-![Component Level Diagram](../../assets/04-capitulo-iv/bounded-contexts/bc-02-component.png)
+![Component Level Diagram — cloud](../../assets/04-capitulo-iv/bounded-contexts/bc-02-component.png)
+
+![Component Level Diagram — edge](../../assets/04-capitulo-iv/bounded-contexts/bc-02-component-edge.png)
 
 <a id="s-4-2-2-6"></a>
 ## 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
@@ -421,6 +423,6 @@ Safety & Actuation vive dentro del único container `Web Monolithic Backend`. Su
 <a id="s-4-2-2-6-2"></a>
 ### 4.2.2.6.2. Bounded Context Database Design Diagram
 
-Modelo relacional lógico: `exposure_states` (`area_id` UNIQUE), `environmental_alerts`, `area_actuator_states` (clave lógica `area_id` + `actuator_type`, **sin** `device_id`) y `automatic_actuator_actions`.
+Modelo relacional lógico, **los mismos** hechos en dos almacenes: Edge Database (loop vivo) y Cloud Database (sync/auditoría). Tablas: `exposure_states` (`area_id` UNIQUE), `environmental_alerts`, `area_actuator_states` (clave lógica `area_id` + `actuator_type`, **sin** `device_id`) y `automatic_actuator_actions`.
 
 ![Database Design Diagram](../../assets/04-capitulo-iv/bounded-contexts/bc-02-database.png)
