@@ -172,6 +172,15 @@
             1. [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-1-6)
                 1. [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-1-6-1)
                 1. [4.2.1.6.2. Bounded Context Database Design Diagram](#s-4-2-1-6-2)
+        1. [4.2.2. Bounded Context: Safety & Actuation](#s-4-2-2)
+            1. [4.2.2.1. Domain Layer](#s-4-2-2-1)
+            1. [4.2.2.2. Interface Layer](#s-4-2-2-2)
+            1. [4.2.2.3. Application Layer](#s-4-2-2-3)
+            1. [4.2.2.4. Infrastructure Layer](#s-4-2-2-4)
+            1. [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-2-5)
+            1. [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-2-6)
+                1. [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-2-6-1)
+                1. [4.2.2.6.2. Bounded Context Database Design Diagram](#s-4-2-2-6-2)
         1. [4.2.4. Bounded Context: Identity & Access](#s-4-2-4)
             1. [4.2.4.1. Domain Layer](#s-4-2-4-1)
             1. [4.2.4.2. Interface Layer](#s-4-2-4-2)
@@ -2029,7 +2038,7 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
     <tr>
       <td align="left">4.2.2</td>
       <td align="left">Safety & Actuation</td>
-      <td align="left">pendiente</td>
+      <td align="left"><a href="bounded-contexts/bc-02-safety-actuation.md">bc-02-safety-actuation.md</a></td>
     </tr>
     <tr>
       <td align="left">4.2.3</td>
@@ -2053,14 +2062,14 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
 
 ---
 
-Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain** (DEC-001): quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (eso vive en Safety & Actuation). Vive en el monolito cloud (`Web Monolithic Backend`). MQTT no es colaborador directo: la ingesta llega vía Device & Edge Management (`C-19`). Setup de planta exige sesión de supervisor en canal **móvil** (OHS de Identity & Access).
+Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain**: quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (Safety & Actuation). Vive en el monolito cloud. La ingesta llega vía Device & Edge Management. Setup de planta exige sesión de supervisor en canal **móvil** (OHS de Identity & Access).
 
 Ubiquitous language: *Industrial area* · *Environmental thresholds* · *Area device assignment* · *Carbon dioxide reading* · *Noise reading* · *Presence (detected / cleared)* · *Telemetry ingested* · *Sensor associated to area* · *Actuator associated to area* · *Plant metrics history*.
 
 <a id="s-4-2-1-1"></a>
 #### 4.2.1.1. Domain Layer
 
-El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`, `AreaDeviceAssignment`, `AreaTelemetry`— con value objects, las entidades de lectura **separadas** (CO₂, ruido, presencia) y las interfaces de repositorio. No hay Domain Service de exposición: `PO-01`, `PO-02` y `PO-12` reaccionan en Safety a los eventos salientes de este contexto.
+El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`, `AreaDeviceAssignment`, `AreaTelemetry`— con value objects, las entidades de lectura separadas (CO₂, ruido, presencia) y las interfaces de repositorio.
 
 <table>
   <thead>
@@ -2077,7 +2086,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`IndustrialArea`</td>
       <td align="left">Aggregate Root</td>
-      <td align="left">Ficha de un área industrial: nombre único y ubicación (`C-10`, `C-13`).</td>
+      <td align="left">Ficha de un área industrial: nombre único y ubicación.</td>
       <td align="left">`id`, `name`, `location`</td>
       <td align="left">`register()`, `update()`, `updateSystemConfiguration()`</td>
       <td align="left">1—0..1 `AreaThresholds`; 1—0..* `AreaDeviceAssignment`; 1—1 `AreaTelemetry`</td>
@@ -2085,7 +2094,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`AreaThresholds`</td>
       <td align="left">Aggregate Root</td>
-      <td align="left">Límites de CO₂ y ruido de **esa** área (`C-11`). Sin umbrales, Safety no clasifica (`E-38` nace allí).</td>
+      <td align="left">Límites de CO₂ y ruido de esa área. Sin umbrales, Safety no clasifica.</td>
       <td align="left">`id`, `areaId`, `co2Limit`, `noiseLimit`</td>
       <td align="left">`configure()`, `update()`</td>
       <td align="left">pertenece a 1 `IndustrialArea`</td>
@@ -2093,7 +2102,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`AreaDeviceAssignment`</td>
       <td align="left">Aggregate Root</td>
-      <td align="left">Asociación de un sensor o actuador a un área (`C-12`). Un `deviceId` no se duplica (`E-22`).</td>
+      <td align="left">Asociación de un sensor o actuador a un área. Un `deviceId` no se duplica.</td>
       <td align="left">`id`, `areaId`, `deviceId`, `kind`</td>
       <td align="left">`associate()`</td>
       <td align="left">pertenece a 1 `IndustrialArea`</td>
@@ -2101,7 +2110,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`AreaTelemetry`</td>
       <td align="left">Aggregate Root</td>
-      <td align="left">Invariante de ingest y registro histórico por área (`C-15`–`C-19`). Acepta, rechaza o reconoce duplicado (`E-29`, `E-30`, `E-64`).</td>
+      <td align="left">Invariante de ingest y registro histórico por área. Acepta, rechaza o reconoce duplicado.</td>
       <td align="left">`id`, `areaId`</td>
       <td align="left">`recordCarbonDioxide()`, `recordNoise()`, `recordPresence()`, `acceptIngest()`, `rejectIngest()`, `acknowledgeDuplicate()`, `markSensorUnavailable()`</td>
       <td align="left">pertenece a 1 `IndustrialArea`; contiene 0..* lecturas de cada tipo</td>
@@ -2109,7 +2118,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`CarbonDioxideReading`</td>
       <td align="left">Entity</td>
-      <td align="left">Hecho de CO₂ (`E-23`); no se fusiona con ruido ni presencia. Lectura inválida se descarta (`E-28`).</td>
+      <td align="left">Hecho de CO₂; no se fusiona con ruido ni presencia. Lectura inválida se descarta.</td>
       <td align="left">`id`, `deviceId`, `ppm`, `recordedAt`</td>
       <td align="left">—</td>
       <td align="left">contenido en `AreaTelemetry`</td>
@@ -2117,7 +2126,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`NoiseReading`</td>
       <td align="left">Entity</td>
-      <td align="left">Hecho de ruido (`E-24`).</td>
+      <td align="left">Hecho de ruido.</td>
       <td align="left">`id`, `deviceId`, `db`, `recordedAt`</td>
       <td align="left">—</td>
       <td align="left">contenido en `AreaTelemetry`</td>
@@ -2125,7 +2134,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`PresenceChange`</td>
       <td align="left">Entity</td>
-      <td align="left">Presencia detectada o despejada (`E-25` / `E-26`).</td>
+      <td align="left">Presencia detectada o despejada.</td>
       <td align="left">`id`, `deviceId`, `state`, `recordedAt`</td>
       <td align="left">—</td>
       <td align="left">contenido en `AreaTelemetry`</td>
@@ -2181,7 +2190,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
     <tr>
       <td align="left">`Co2Ppm`</td>
       <td align="left">Value Object</td>
-      <td align="left">Concentración de CO₂; `isValid()` rechaza fuera de rango (`E-28`).</td>
+      <td align="left">Concentración de CO₂; `isValid()` rechaza fuera de rango.</td>
       <td align="left">`value`</td>
       <td align="left">`isValid()`</td>
       <td align="left">usado por `CarbonDioxideReading`</td>
@@ -2248,7 +2257,7 @@ El core del contexto son cuatro aggregates —`IndustrialArea`, `AreaThresholds`
 <a id="s-4-2-1-2"></a>
 #### 4.2.1.2. Interface Layer
 
-Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager web). Un Consumer in-process recibe `Ingest telemetry` desde Device & Edge. Plant Monitoring **no** consume MQTT: el broker queda detrás de Device & Edge.
+Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager web). Un Consumer in-process recibe `Ingest telemetry` desde Device & Edge.
 
 <table>
   <thead>
@@ -2278,7 +2287,7 @@ Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager
     <tr>
       <td align="left">`TelemetryIngestConsumer`</td>
       <td align="left">Consumer</td>
-      <td align="left">Recibe `Ingest telemetry` (`C-19`) desde Device & Edge (mismo proceso).</td>
+      <td align="left">Recibe `Ingest telemetry` desde Device & Edge (mismo proceso).</td>
       <td align="left">`ingestTelemetry()`</td>
       <td align="left">Device & Edge Management; Application Layer</td>
     </tr>
@@ -2287,8 +2296,6 @@ Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager
 
 <a id="s-4-2-1-3"></a>
 #### 4.2.1.3. Application Layer
-
-Un handler por comando que toca este contexto (`C-10`–`C-13`, `C-15`–`C-19`) más las queries `RM-02` y `RM-05`. `C-15`–`C-17` se invocan in-process desde `IngestTelemetryHandler`, que orquesta sin fusionar lecturas. `C-18` es un handler de tiempo (sensor silencioso), análogo a los TTL de Identity. `RM-03` AreaOperationalStatus **no** se proyecta aquí: queda en Safety & Actuation.
 
 <table>
   <thead>
@@ -2304,77 +2311,77 @@ Un handler por comando que toca este contexto (`C-10`–`C-13`, `C-15`–`C-19`)
     <tr>
       <td align="left">`ManageIndustrialAreaHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Manage industrial area (`C-10`)</td>
-      <td align="left">Registra o actualiza un área; rechaza nombre duplicado (`E-16`).</td>
+      <td align="left">Manage industrial area</td>
+      <td align="left">Registra o actualiza un área; rechaza nombre duplicado.</td>
       <td align="left">`IIndustrialAreaRepository`</td>
     </tr>
     <tr>
       <td align="left">`ConfigureEnvironmentalThresholdsHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Configure environmental thresholds (`C-11`)</td>
-      <td align="left">Crea o actualiza umbrales de un área; rechaza valores fuera de rango (`E-19`).</td>
+      <td align="left">Configure environmental thresholds</td>
+      <td align="left">Crea o actualiza umbrales de un área; rechaza valores fuera de rango.</td>
       <td align="left">`IAreaThresholdsRepository`, `IIndustrialAreaRepository`</td>
     </tr>
     <tr>
       <td align="left">`AssociateDeviceToAreaHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Associate device to area (`C-12`)</td>
-      <td align="left">Asocia sensor o actuador; rechaza `deviceId` duplicado (`E-22`).</td>
+      <td align="left">Associate device to area</td>
+      <td align="left">Asocia sensor o actuador; rechaza `deviceId` duplicado.</td>
       <td align="left">`IAreaDeviceAssignmentRepository`, `IIndustrialAreaRepository`</td>
     </tr>
     <tr>
       <td align="left">`UpdateSystemConfigurationHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Update system configuration (`C-13`)</td>
+      <td align="left">Update system configuration</td>
       <td align="left">Actualiza la ficha de configuración de planta del área.</td>
       <td align="left">`IIndustrialAreaRepository`</td>
     </tr>
     <tr>
       <td align="left">`RecordCarbonDioxideReadingHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Record carbon dioxide reading (`C-15`)</td>
-      <td align="left">Registra el hecho de CO₂ o lo descarta si es inválido (`E-28`).</td>
+      <td align="left">Record carbon dioxide reading</td>
+      <td align="left">Registra el hecho de CO₂ o lo descarta si es inválido.</td>
       <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
     </tr>
     <tr>
       <td align="left">`RecordNoiseReadingHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Record noise reading (`C-16`)</td>
+      <td align="left">Record noise reading</td>
       <td align="left">Registra el hecho de ruido.</td>
       <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
     </tr>
     <tr>
       <td align="left">`RecordPresenceHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Record presence (`C-17`)</td>
+      <td align="left">Record presence</td>
       <td align="left">Registra presencia detectada o despejada.</td>
       <td align="left">`IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
     </tr>
     <tr>
       <td align="left">`MarkSensorUnavailableHandler`</td>
       <td align="left">Event Handler (scheduled)</td>
-      <td align="left">Mark sensor unavailable (`C-18`)</td>
+      <td align="left">Mark sensor unavailable</td>
       <td align="left">Marca un sensor sin transmisión en el intervalo.</td>
       <td align="left">`IAreaTelemetryRepository`</td>
     </tr>
     <tr>
       <td align="left">`IngestTelemetryHandler`</td>
       <td align="left">Command Handler</td>
-      <td align="left">Ingest telemetry (`C-19`)</td>
+      <td align="left">Ingest telemetry</td>
       <td align="left">Acepta, rechaza o reconoce duplicado el lote de Edge; invoca los tres `Record*` **sin** unificar lecturas.</td>
       <td align="left">`RecordCarbonDioxideReadingHandler`, `RecordNoiseReadingHandler`, `RecordPresenceHandler`, `IAreaTelemetryRepository`, `IDomainEventPublisher`</td>
     </tr>
     <tr>
       <td align="left">`GetAreaSetupSheetHandler`</td>
       <td align="left">Query Handler</td>
-      <td align="left">Get AreaSetupSheet (`RM-02`)</td>
+      <td align="left">Get AreaSetupSheet</td>
       <td align="left">Devuelve área, umbrales y dispositivos ya asociados.</td>
       <td align="left">`IIndustrialAreaRepository`, `IAreaThresholdsRepository`, `IAreaDeviceAssignmentRepository`</td>
     </tr>
     <tr>
       <td align="left">`GetPlantMetricsHistoryHandler`</td>
       <td align="left">Query Handler</td>
-      <td align="left">Get PlantMetricsHistory (`RM-05`)</td>
+      <td align="left">Get PlantMetricsHistory</td>
       <td align="left">Historial de lecturas para el dashboard web; no dispara actuadores.</td>
       <td align="left">`IAreaTelemetryRepository`</td>
     </tr>
@@ -2430,7 +2437,7 @@ Implementaciones de los cuatro repositorios y un publicador in-process. Motor de
       <td align="left">Adapter</td>
       <td align="left">`IDomainEventPublisher`</td>
       <td align="left">In-process (Safety & Actuation; Device & Edge)</td>
-      <td align="left">Publica `E-23`/`E-24`/`E-25`/`E-26` hacia Safety y `E-30` hacia Device & Edge. Sin MQTT.</td>
+      <td align="left">Publica hacia Safety y Device & Edge. Sin MQTT.</td>
     </tr>
   </tbody>
 </table>
@@ -2438,7 +2445,7 @@ Implementaciones de los cuatro repositorios y un publicador in-process. Motor de
 <a id="s-4-2-1-5"></a>
 #### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-Plant Monitoring vive dentro del único container `Web Monolithic Backend` (DEC-005). Sus cuatro capas se modelan como `component` hexagonales en la vista `PlantMonitoringComponents` de [`docs/diagrams/c4.dsl`](../diagrams/c4.dsl): el Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`. Los eventos hacia Safety & Actuation son in-process y **no** se dibujan como components de Safety en esta vista.
+El Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`.
 
 ![Component Level Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-component.png)
 
@@ -2448,16 +2455,447 @@ Plant Monitoring vive dentro del único container `Web Monolithic Backend` (DEC-
 <a id="s-4-2-1-6-1"></a>
 ##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
 
-Fuente: [`docs/diagrams/bounded-contexts/bc-01-plant-monitoring-domain.puml`](../diagrams/bounded-contexts/bc-01-plant-monitoring-domain.puml). Incluye los cuatro aggregates, las tres entidades de lectura (sin unificar), value objects, el puerto `IDomainEventPublisher` y las interfaces de repositorio, con scope, multiplicidad y dirección de cada relación.
+Incluye los cuatro aggregates, las tres entidades de lectura (sin unificar), value objects, el puerto `IDomainEventPublisher` y las interfaces de repositorio, con scope, multiplicidad y dirección de cada relación.
 
 ![Domain Layer Class Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-domain-class.png)
 
 <a id="s-4-2-1-6-2"></a>
 ##### 4.2.1.6.2. Bounded Context Database Design Diagram
 
-Fuente: [`docs/diagrams/bounded-contexts/bc-01-plant-monitoring-database.puml`](../diagrams/bounded-contexts/bc-01-plant-monitoring-database.puml). Modelo relacional lógico (motor `TBD`): `industrial_areas`, `area_thresholds` (FK UNIQUE hacia área), `area_device_assignments` (`device_id` UNIQUE), y **tres** tablas de hechos —`carbon_dioxide_readings`, `noise_readings`, `presence_events`— cada una con FK al área.
+Modelo relacional lógico: `industrial_areas`, `area_thresholds` (FK UNIQUE hacia área), `area_device_assignments` (`device_id` UNIQUE), y **tres** tablas de hechos —`carbon_dioxide_readings`, `noise_readings`, `presence_events`— cada una con FK al área.
 
 ![Database Design Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-database.png)
+
+---
+
+<a id="s-4-2-2"></a>
+### 4.2.2. Bounded Context: Safety & Actuation
+
+**Navegación:** [Capítulo IV](../04-capitulo-iv-solution-software-design.md) · [Índice](../00-student-outcome.md#s-tabla-contenidos)
+
+---
+
+Safety & Actuation protege al personal cruzando presencia con CO₂ y ruido: clasifica exposición, alerta y manda extractores, sirenas y mamparas, o las anula. Es el **segundo core** (cumplimiento de seguridad ocupacional); Plant Monitoring sigue siendo el Core Domain del lenguaje de planta. Quien opera SafePlant confía en que el riesgo se evalúa aquí, no en el inventario de hardware ni en la ficha del área.
+
+Vive en el monolito cloud. Recibe en el mismo proceso los eventos de lectura, presencia y retorno a umbral que publica Plant Monitoring. La actuación física va al **firmware** del dispositivo de campo, no a Device & Edge Management: el relé y el ESP32 son el actor de hardware. Device & Edge solo guarda una **copia** de alerta si la nube no alcanza; el dueño del riesgo no cambia. La anulación manual es un comando del supervisor en la aplicación **móvil**, no una regla automática; Identity deniega el mismo intento desde la aplicación web del encargado.
+
+No hay entidad `Device` ni `deviceId` en este contexto: el comando identifica el área y el tipo de actuador. Varias sirenas del mismo tipo en un área se tratan como *la sirena del área*; no se direcciona una instancia suelta.
+
+Ubiquitous language: *Personnel exposure* · *Exposure severity* · *Area risk* · *Environmental alert* · *Excessive carbon dioxide* · *Excessive noise* · *Air extractor* · *Preventive siren* · *Acoustic barrier* · *Manual override* · *Automatic actuator action*.
+
+<a id="s-4-2-2-1"></a>
+#### 4.2.2.1. Domain Layer
+
+Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— y las reglas de negocio como domain services en el mismo proceso. No hay un aggregate por cada tipo de actuador: `AreaActuators` lleva el tipo en el comando. Los umbrales no se copian; llegan en los eventos de Plant Monitoring. La severidad es `None`, `Medium` o `High`. Los fallos de relé se registran; no se reintenta aquí.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Propósito</th>
+      <th align="left">Atributos</th>
+      <th align="left">Métodos</th>
+      <th align="left">Relaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`ExposureState`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Cruce de presencia con ambiente, severidad y alerta **por área**.</td>
+      <td align="left">`id`, `areaId`, `personnelPresent`, `severity`, `risk`, `alertActive`</td>
+      <td align="left">`detectExcess()`, `evaluateExposure()`, `classifySeverity()`, `highlightRisk()`, `raiseAlert()`, `withdrawAlert()`, `resolve()`, `skipClassification()`</td>
+      <td align="left">1—0..* `EnvironmentalAlert`</td>
+    </tr>
+    <tr>
+      <td align="left">`EnvironmentalAlert`</td>
+      <td align="left">Entity</td>
+      <td align="left">Alerta ambiental levantada o retirada.</td>
+      <td align="left">`id`, `areaId`, `raisedAt`, `withdrawnAt`</td>
+      <td align="left">—</td>
+      <td align="left">contenido en `ExposureState`</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaActuators`</td>
+      <td align="left">Aggregate Root</td>
+      <td align="left">Estado lógico de extractor, sirena y mampara del área, incluida la anulación manual. Sin `deviceId`.</td>
+      <td align="left">`id`, `areaId`</td>
+      <td align="left">`activate()`, `normalize()`, `override()`, `recordAutomaticAction()`</td>
+      <td align="left">contiene 1..3 `ActuatorState`; 0..* `AutomaticActuatorAction`</td>
+    </tr>
+    <tr>
+      <td align="left">`ActuatorState`</td>
+      <td align="left">Entity</td>
+      <td align="left">Relé lógico `(área, tipo)`: on/off/deployed y modo auto/overridden.</td>
+      <td align="left">`type`, `runState`, `mode`, `lastChangedAt`</td>
+      <td align="left">—</td>
+      <td align="left">contenido en `AreaActuators`</td>
+    </tr>
+    <tr>
+      <td align="left">`AutomaticActuatorAction`</td>
+      <td align="left">Entity</td>
+      <td align="left">Auditoría de actuación automática o fallo de relé.</td>
+      <td align="left">`id`, `type`, `succeeded`, `recordedAt`</td>
+      <td align="left">—</td>
+      <td align="left">contenido en `AreaActuators`</td>
+    </tr>
+    <tr>
+      <td align="left">`ExposureSeverity`</td>
+      <td align="left">Value Object (Enum)</td>
+      <td align="left">`None`, `Medium`, `High`. Sin yellow.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `ExposureState`</td>
+    </tr>
+    <tr>
+      <td align="left">`ActuatorType`</td>
+      <td align="left">Value Object (Enum)</td>
+      <td align="left">`Extractor`, `Siren`, `Barrier`.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `ActuatorState` y los puertos</td>
+    </tr>
+    <tr>
+      <td align="left">`ActuatorMode`</td>
+      <td align="left">Value Object (Enum)</td>
+      <td align="left">`Auto` o `Overridden`.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `ActuatorState`</td>
+    </tr>
+    <tr>
+      <td align="left">`ActuatorRunState`</td>
+      <td align="left">Value Object (Enum)</td>
+      <td align="left">`Off`, `On`, `Deployed`, `Retracted`, `Failed`.</td>
+      <td align="left">`value`</td>
+      <td align="left">—</td>
+      <td align="left">usado por `ActuatorState`</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaRisk`</td>
+      <td align="left">Value Object</td>
+      <td align="left">Área destacada en el dashboard cuando la severidad no es nula.</td>
+      <td align="left">`highlighted`</td>
+      <td align="left">`equals()`</td>
+      <td align="left">usado por `ExposureState`</td>
+    </tr>
+    <tr>
+      <td align="left">`ExcessDetectionPolicy`</td>
+      <td align="left">Domain Service</td>
+      <td align="left">Cuando se registra una lectura, detecta exceso de CO₂ o de ruido.</td>
+      <td align="left">—</td>
+      <td align="left">`onReadingRecorded()`</td>
+      <td align="left">comanda `ExposureState`</td>
+    </tr>
+    <tr>
+      <td align="left">`ExposureEvaluationPolicy`</td>
+      <td align="left">Domain Service</td>
+      <td align="left">Cuando cambia una lectura o la presencia, evalúa la exposición del personal. No espera al evento de exceso: lee las mediciones directamente.</td>
+      <td align="left">—</td>
+      <td align="left">`onReadingOrPresenceChanged()`</td>
+      <td align="left">comanda `ExposureState`</td>
+    </tr>
+    <tr>
+      <td align="left">`SeverityClassificationPolicy`</td>
+      <td align="left">Domain Service</td>
+      <td align="left">Clasifica la severidad; si no es nula, destaca el riesgo del área y levanta la alerta ambiental.</td>
+      <td align="left">—</td>
+      <td align="left">`onExposureEvaluated()`</td>
+      <td align="left">comanda `ExposureState`</td>
+    </tr>
+    <tr>
+      <td align="left">`ActuationPolicy`</td>
+      <td align="left">Domain Service</td>
+      <td align="left">Extractor si hay CO₂ excesivo, con o sin personal. Sirena solo si hay exposición de personal a CO₂. Mampara y sirena si hay ruido excesivo y presencia.</td>
+      <td align="left">—</td>
+      <td align="left">`onExcessOrExposure()`</td>
+      <td align="left">comanda `AreaActuators`</td>
+    </tr>
+    <tr>
+      <td align="left">`NormalizePolicy`</td>
+      <td align="left">Domain Service</td>
+      <td align="left">Un solo normalize cuando las condiciones vuelven al rango: actuadores, retiro de alerta y resolución de la exposición.</td>
+      <td align="left">—</td>
+      <td align="left">`onConditionsWithinThresholds()`</td>
+      <td align="left">comanda ambos aggregates</td>
+    </tr>
+    <tr>
+      <td align="left">`IActuatorCommandPort`</td>
+      <td align="left">Port (interface)</td>
+      <td align="left">Activate / Normalize hacia firmware: `areaId` + `actuatorType`, sin `deviceId`.</td>
+      <td align="left">—</td>
+      <td align="left">`activate()`, `normalize()`</td>
+      <td align="left">implementado en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`IOfflineAlertPort`</td>
+      <td align="left">Port (interface)</td>
+      <td align="left">Copia de alerta en Edge si la nube no está alcanzable. El riesgo no cambia de dueño.</td>
+      <td align="left">—</td>
+      <td align="left">`storeCopy()`</td>
+      <td align="left">implementado en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`IExposureStateRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `ExposureState`.</td>
+      <td align="left">—</td>
+      <td align="left">`findByAreaId()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+    <tr>
+      <td align="left">`IAreaActuatorsRepository`</td>
+      <td align="left">Repository (interface)</td>
+      <td align="left">Persistencia de `AreaActuators`.</td>
+      <td align="left">—</td>
+      <td align="left">`findByAreaId()`, `save()`</td>
+      <td align="left">implementada en Infrastructure</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-2-2"></a>
+#### 4.2.2.2. Interface Layer
+
+Un controller HTTP para el supervisor móvil (estado operativo, alertas y anulación) y un consumer en el mismo proceso para los eventos de Plant Monitoring. Safety **no** consume MQTT y **no** expone la anulación manual al cliente web del encargado.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Propósito</th>
+      <th align="left">Métodos / Endpoints</th>
+      <th align="left">Colabora con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`AreaSafetyController`</td>
+      <td align="left">Controller</td>
+      <td align="left">Estado operativo del área, alertas activas y anulación de actuador. Exige sesión de supervisor en la aplicación móvil.</td>
+      <td align="left">`getAreaOperationalStatus()`, `getActiveAlerts()`, `overrideActuator()`</td>
+      <td align="left">Supervisor Mobile App; Application Layer</td>
+    </tr>
+    <tr>
+      <td align="left">`PlantTelemetryEventConsumer`</td>
+      <td align="left">Consumer</td>
+      <td align="left">Recibe lecturas, presencia y “conditions within thresholds” desde Plant Monitoring (mismo proceso).</td>
+      <td align="left">`onCarbonDioxideReadingRecorded()`, `onNoiseReadingRecorded()`, `onPresenceChanged()`, `onConditionsWithinThresholds()`</td>
+      <td align="left">Plant Monitoring; Application Layer</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-2-3"></a>
+#### 4.2.2.3. Application Layer
+
+Los event handlers de entrada disparan las reglas de negocio; hay un command handler por cada flujo de exposición y actuación, y dos consultas que **no** se fusionan: estado operativo del área y listado de alertas activas. La anulación manual no pasa por una policy: es un comando del supervisor. El estado operativo se proyecta aquí a partir de lecturas ya consumidas; este contexto no es dueño de los umbrales.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Comando / Evento</th>
+      <th align="left">Propósito</th>
+      <th align="left">Colabora con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`OnCarbonDioxideReadingRecordedHandler`</td>
+      <td align="left">Event Handler</td>
+      <td align="left">Carbon dioxide reading recorded</td>
+      <td align="left">Dispara la detección de exceso y la evaluación de exposición.</td>
+      <td align="left">`ExcessDetectionPolicy`, `ExposureEvaluationPolicy`</td>
+    </tr>
+    <tr>
+      <td align="left">`OnNoiseReadingRecordedHandler`</td>
+      <td align="left">Event Handler</td>
+      <td align="left">Noise reading recorded</td>
+      <td align="left">Dispara la detección de exceso y la evaluación de exposición.</td>
+      <td align="left">`ExcessDetectionPolicy`, `ExposureEvaluationPolicy`</td>
+    </tr>
+    <tr>
+      <td align="left">`OnPresenceChangedHandler`</td>
+      <td align="left">Event Handler</td>
+      <td align="left">Presence changed</td>
+      <td align="left">Dispara la evaluación de exposición.</td>
+      <td align="left">`ExposureEvaluationPolicy`</td>
+    </tr>
+    <tr>
+      <td align="left">`OnConditionsWithinThresholdsHandler`</td>
+      <td align="left">Event Handler</td>
+      <td align="left">Conditions within thresholds</td>
+      <td align="left">Dispara el normalize único (actuadores, alerta y exposición).</td>
+      <td align="left">`NormalizePolicy`</td>
+    </tr>
+    <tr>
+      <td align="left">`DetectEnvironmentalExcessHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Detect environmental excess</td>
+      <td align="left">Registra exceso de CO₂ o de ruido.</td>
+      <td align="left">`IExposureStateRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`EvaluatePersonnelExposureHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Evaluate personnel exposure</td>
+      <td align="left">Identifica exposición con personal, exceso sin personal, o estado seguro.</td>
+      <td align="left">`IExposureStateRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`ClassifyExposureSeverityHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Classify exposure severity</td>
+      <td align="left">Asigna severidad, o la omite si el área no tiene umbrales.</td>
+      <td align="left">`IExposureStateRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`HighlightAreaRiskHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Highlight area risk</td>
+      <td align="left">Marca el área como en riesgo en el dashboard móvil.</td>
+      <td align="left">`IExposureStateRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`RaiseEnvironmentalAlertHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Raise environmental alert</td>
+      <td align="left">Levanta la alerta; si la nube no alcanza, deja copia en Edge.</td>
+      <td align="left">`IExposureStateRepository`, `IOfflineAlertPort`</td>
+    </tr>
+    <tr>
+      <td align="left">`WithdrawEnvironmentalAlertHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Withdraw environmental alert</td>
+      <td align="left">Retira la alerta al normalizar.</td>
+      <td align="left">`IExposureStateRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`ResolveExposureHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Resolve exposure</td>
+      <td align="left">Cierra el estado de exposición al normalizar.</td>
+      <td align="left">`IExposureStateRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`ActivateActuatorHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Activate actuator</td>
+      <td align="left">Enciende extractor, sirena o mampara del área vía firmware.</td>
+      <td align="left">`IAreaActuatorsRepository`, `IActuatorCommandPort`</td>
+    </tr>
+    <tr>
+      <td align="left">`NormalizeActuatorHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Normalize actuator</td>
+      <td align="left">Apaga / retrae el tipo indicado.</td>
+      <td align="left">`IAreaActuatorsRepository`, `IActuatorCommandPort`</td>
+    </tr>
+    <tr>
+      <td align="left">`RecordAutomaticActuatorActionHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Record automatic actuator action</td>
+      <td align="left">Auditoría de éxito o fallo de relé; **sin reintento**.</td>
+      <td align="left">`IAreaActuatorsRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`OverrideActuatorHandler`</td>
+      <td align="left">Command Handler</td>
+      <td align="left">Override actuator</td>
+      <td align="left">Control manual sin esperar sensores. Solo supervisor en la aplicación móvil; Identity ya denegó el canal web.</td>
+      <td align="left">`IAreaActuatorsRepository`, `IActuatorCommandPort`</td>
+    </tr>
+    <tr>
+      <td align="left">`GetAreaOperationalStatusHandler`</td>
+      <td align="left">Query Handler</td>
+      <td align="left">Get AreaOperationalStatus</td>
+      <td align="left">Dashboard móvil: mediciones ya vistas y severidad. No se fusiona con el listado de alertas.</td>
+      <td align="left">`IExposureStateRepository`</td>
+    </tr>
+    <tr>
+      <td align="left">`GetActiveAlertsHandler`</td>
+      <td align="left">Query Handler</td>
+      <td align="left">Get ActiveAlerts</td>
+      <td align="left">Lista de alertas ambientales aún no retiradas.</td>
+      <td align="left">`IExposureStateRepository`</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-2-4"></a>
+#### 4.2.2.4. Infrastructure Layer
+
+Repositorios sobre Cloud Database (motor `TBD`), adapter de actuación hacia firmware y adapter de copia offline hacia Edge. No hay adaptador MQTT ni inventario de `deviceId`.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Clase</th>
+      <th align="left">Tipo</th>
+      <th align="left">Interfaz que implementa</th>
+      <th align="left">Servicio externo</th>
+      <th align="left">Propósito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">`ExposureStateRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`IExposureStateRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia de exposición y alertas.</td>
+    </tr>
+    <tr>
+      <td align="left">`AreaActuatorsRepository`</td>
+      <td align="left">Repository (implementación)</td>
+      <td align="left">`IAreaActuatorsRepository`</td>
+      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Persistencia de estados lógicos por `(area, tipo)`.</td>
+    </tr>
+    <tr>
+      <td align="left">`FirmwareActuatorAdapter`</td>
+      <td align="left">Adapter</td>
+      <td align="left">`IActuatorCommandPort`</td>
+      <td align="left">Device Embedded Application</td>
+      <td align="left">Entrega `activate` / `normalize` con `areaId` + `actuatorType` al firmware, que mueve el relé.</td>
+    </tr>
+    <tr>
+      <td align="left">`OfflineAlertCopyAdapter`</td>
+      <td align="left">Adapter</td>
+      <td align="left">`IOfflineAlertPort`</td>
+      <td align="left">Edge Application</td>
+      <td align="left">Copia la alerta en Edge si la nube no está alcanzable. Safety sigue dueña del riesgo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="s-4-2-2-5"></a>
+#### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+Safety & Actuation vive dentro del único container `Web Monolithic Backend`. Sus cuatro capas se modelan como componentes hexagonales: la aplicación móvil del supervisor llama a Interface para estado, alertas y anulación; Interface delega en Application; Application invoca Domain; Infrastructure persiste en `Cloud Database`, manda la actuación al firmware de campo (que conduce extractores, sirenas y mamparas) y deja copias offline en `Edge Application` si la nube no alcanza. Plant Monitoring e Identity no se dibujan en este diagrama: colaboran en el mismo proceso.
+
+![Component Level Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-02-component.png)
+
+<a id="s-4-2-2-6"></a>
+#### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+<a id="s-4-2-2-6-1"></a>
+##### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+Fuente: [`docs/diagrams/bounded-contexts/bc-02-safety-actuation-domain.puml`](../diagrams/bounded-contexts/bc-02-safety-actuation-domain.puml). Incluye `ExposureState`, `AreaActuators`, entidades, policies, puertos `IActuatorCommandPort` / `IOfflineAlertPort` y repositorios, con scope, multiplicidad y dirección. No aparece `Device`.
+
+![Domain Layer Class Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-02-domain-class.png)
+
+<a id="s-4-2-2-6-2"></a>
+##### 4.2.2.6.2. Bounded Context Database Design Diagram
+
+Fuente: [`docs/diagrams/bounded-contexts/bc-02-safety-actuation-database.puml`](../diagrams/bounded-contexts/bc-02-safety-actuation-database.puml). Modelo relacional lógico (motor `TBD`): `exposure_states` (`area_id` UNIQUE), `environmental_alerts`, `area_actuator_states` (clave lógica `area_id` + `actuator_type`, **sin** `device_id`) y `automatic_actuator_actions`.
+
+![Database Design Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-02-database.png)
 
 ---
 

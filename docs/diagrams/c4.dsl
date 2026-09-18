@@ -31,6 +31,15 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
                 plantMonitoringInterface -> plantMonitoringApplication "Delegates commands and queries"
                 plantMonitoringApplication -> plantMonitoringDomain "Invokes aggregates and enforces invariants"
                 plantMonitoringApplication -> plantMonitoringInfrastructure "Persists via repositories"
+
+                safetyInterface = component "Safety & Actuation Interface Layer" "AreaSafetyController, PlantTelemetryEventConsumer. HTTP for operational status, alerts, and override; in-process telemetry events from Plant Monitoring." "TBD" "SafetyActuationComponent"
+                safetyApplication = component "Safety & Actuation Application Layer" "Command/query handlers: detect excess, evaluate exposure, classify, raise/withdraw alert, activate/normalize/override actuator, AreaOperationalStatus, ActiveAlerts." "TBD" "SafetyActuationComponent"
+                safetyDomain = component "Safety & Actuation Domain Layer" "Aggregates ExposureState and AreaActuators. In-process business rules for exposure, alerts, and actuation. Commands by area and actuator type; no Device entity." "TBD" "SafetyActuationComponent"
+                safetyInfrastructure = component "Safety & Actuation Infrastructure Layer" "Repositories, FirmwareActuatorAdapter toward embedded firmware, OfflineAlertCopyAdapter toward Edge." "TBD" "SafetyActuationComponent"
+
+                safetyInterface -> safetyApplication "Delegates commands and queries"
+                safetyApplication -> safetyDomain "Invokes aggregates and enforces invariants"
+                safetyApplication -> safetyInfrastructure "Persists via repositories"
             }
 
             cloudDatabase = container "Cloud Database" "Backing store for the monolithic backend." "TBD" "Database"
@@ -58,6 +67,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
             plantManagerWebClient -> plantMonitoringInterface "Plant metrics history"
             edgeApplication -> plantMonitoringInterface "Ingests telemetry"
             plantMonitoringInfrastructure -> cloudDatabase "Reads from and writes to"
+
+            supervisorMobileApp -> safetyInterface "Operational status, active alerts, actuator override"
+            safetyInfrastructure -> cloudDatabase "Reads from and writes to"
+            safetyInfrastructure -> deviceEmbeddedApp "Activate / normalize actuator"
+            safetyInfrastructure -> edgeApplication "Stores offline alert copies"
 
             deviceEmbeddedApp -> fieldHardware "Reads sensors and drives actuators"
             deviceEmbeddedApp -> messageBroker "Publishes readings"
@@ -91,6 +105,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
 
         component webBackend "PlantMonitoringComponents" {
             include supervisorMobileApp plantManagerWebClient edgeApplication plantMonitoringInterface plantMonitoringApplication plantMonitoringDomain plantMonitoringInfrastructure cloudDatabase
+            autoLayout lr 300 150
+        }
+
+        component webBackend "SafetyActuationComponents" {
+            include supervisorMobileApp safetyInterface safetyApplication safetyDomain safetyInfrastructure cloudDatabase deviceEmbeddedApp fieldHardware edgeApplication
             autoLayout lr 300 150
         }
 
@@ -154,6 +173,11 @@ workspace "SafePlant" "IoT platform for occupational safety monitoring in indust
                 stroke darkcyan
             }
             element "PlantMonitoringComponent" {
+                shape Hexagon
+                background #eaf7f5
+                stroke darkcyan
+            }
+            element "SafetyActuationComponent" {
                 shape Hexagon
                 background #eaf7f5
                 stroke darkcyan

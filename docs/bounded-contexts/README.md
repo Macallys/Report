@@ -17,9 +17,9 @@ Copiar [`../templates/bounded-context.md`](../templates/bounded-context.md) como
       <td align="left">Hecho</td>
     </tr>
     <tr>
-      <td align="left">—</td>
+      <td align="left">bc-02-safety-actuation.md</td>
       <td align="left">Safety & Actuation (4.2.2)</td>
-      <td align="left">Pendiente</td>
+      <td align="left">Hecho</td>
     </tr>
     <tr>
       <td align="left">—</td>

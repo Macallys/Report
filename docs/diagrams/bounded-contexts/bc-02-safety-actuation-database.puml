@@ -1,0 +1,46 @@
+@startuml bc-02-safety-actuation-database
+' Bounded Context Database Design Diagram — Safety & Actuation (§ 4.2.2.6.2)
+' Modelo relacional lógico; motor TBD. Sin device_id: (area_id, actuator_type) es el relé lógico.
+
+entity "exposure_states" as exposure_states {
+  * id : UUID <<PK>>
+  --
+  * area_id : UUID <<UNIQUE>>
+  * personnel_present : BOOLEAN
+  * severity : VARCHAR
+  * risk_highlighted : BOOLEAN
+  * alert_active : BOOLEAN
+  * updated_at : TIMESTAMP
+}
+
+entity "environmental_alerts" as environmental_alerts {
+  * id : UUID <<PK>>
+  --
+  * exposure_state_id : UUID <<FK>>
+  * area_id : UUID
+  * raised_at : TIMESTAMP
+  withdrawn_at : TIMESTAMP
+}
+
+entity "area_actuator_states" as area_actuator_states {
+  * id : UUID <<PK>>
+  --
+  * area_id : UUID
+  * actuator_type : VARCHAR
+  * run_state : VARCHAR
+  * mode : VARCHAR
+  * last_changed_at : TIMESTAMP
+}
+
+entity "automatic_actuator_actions" as automatic_actuator_actions {
+  * id : UUID <<PK>>
+  --
+  * area_id : UUID
+  * actuator_type : VARCHAR
+  * succeeded : BOOLEAN
+  * recorded_at : TIMESTAMP
+}
+
+exposure_states ||--o{ environmental_alerts : "1 state has many alerts"
+
+@enduml

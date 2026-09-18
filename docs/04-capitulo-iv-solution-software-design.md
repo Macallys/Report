@@ -218,7 +218,7 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
     <tr>
       <td align="left">4.2.2</td>
       <td align="left">Safety & Actuation</td>
-      <td align="left">pendiente</td>
+      <td align="left"><a href="bounded-contexts/bc-02-safety-actuation.md">bc-02-safety-actuation.md</a></td>
     </tr>
     <tr>
       <td align="left">4.2.3</td>
