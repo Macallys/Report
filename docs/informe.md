@@ -971,30 +971,30 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto, ej: Supervisor SSOMA]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Planta de producción, campo, etc.]<br>
-      <b>Tipo de establecimiento:</b> [Ej: Fábrica metalmecánica]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Diego Ruiz del Solar<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Callao <br>
+      <b>Ocupación:</b> Supervisor de seguridad industrial<br>
+      <b>Experiencia laboral:</b> 3 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta de ensamblaje y producción<br>
+      <b>Tipo de establecimiento:</b> Planta <br>
+      <b>Nivel tecnológico:</b> Básico <br>
+      <b>Timing:</b> 00:00:00 - 00:06:16]<br>
+      <b>Duración:</b> 06:16<br>
+      <b>Entrevistador:</b> Santiago Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
+      <img src="assets/chapter-2/entrevista-supervisor-1.jpeg" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">[Ver entrevista en Microsoft Stream]</a>
       <br><br>
-      <b>Resumen:</b> [Descripción detallada de cómo realiza actualmente el monitoreo de seguridad en la planta. Explicar qué herramientas manuales o antiguas utiliza, cuánto tiempo le toma y cuáles son sus mayores frustraciones al no tener control remoto. Mencionar incidentes pasados relacionados con CO2 o ruido.]
+      <b>Resumen:</b> El trabajo de Diego consiste de rondas de manera presencial y mediciones manuales tradicionales, lo que genera margen de error en la detección de gases y ruidos. Ante situaciones de peligro, la respuesta es lenta y se pierde tiempo crítico en traslados para accionar algún tablero físico.
       <br><br>
-      [Detallar sus expectativas sobre una aplicación móvil para monitoreo en tiempo real: qué métricas necesita ver primero, cómo espera recibir las alertas de peligro y qué tan dispuesto está a adoptar una nueva tecnología en su rutina diaria.]
+      Le parece una grata idea contar con una aplicación móvil, destacando la opción del mapa de calor en tiempo real, alertas vibratorias persistentes y la opción de control remoto de mitigadores para actuar ante incidentes impredecibles que requieren intervención del personal antes de que la automatización se ejecute.
     </td>
   </tr>
 </table>
@@ -1024,7 +1024,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="">[Ver entrevista en Microsoft Stream]</a>
       <br><br>
       <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
     </td>
@@ -1102,34 +1102,34 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 
 <a id="s-2-2-2-2-2"></a>
 ##### 2.2.2.2.2. Entrevista 2
-
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Carlos Mendoza<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Ate<br>
+      <b>Ocupación:</b> Encargado de Planta<br>
+      <b>Experiencia laboral:</b> 4 años en gestión industrial<br>
+      <b>Área de trabajo:</b>Gerencia de Operaciones y Mantenimiento<br>
+      <b>Tipo de establecimiento:</b>Planta de Manufactura<br>
+      <b>Nivel tecnológico:</b>Intermedio / Avanzado<br>
+      <b>Timing:</b> 00:00:00 - 00:07:55]<br>
+      <b>Duración:</b> [07:55]<br>
+      <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-2.png" alt="Entrevista 2 - Encargado de Planta" width="85%">
+      <img src="assets/chapter-2/entrevista-encargado-2.jpeg" alt="Entrevista 2 - Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <b>Enlace:</b> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQCDpfLyPE3JSbAYwBJjdvnCAegV0RnbcJdQn_prFi3eCJU?e=B84siT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">[URL del video en Microsoft Stream]</a>
       <br><br>
-      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+      <b>Resumen:</b> El problema principal que comenta es la enorme pérdida de tiempo tratando de organizar datos ambientales que se encuentran dispersos para poder generar reportes. Sufre de frustraciones y estrés por la dificultad de tener que actualizar máquina por máquina y la falta de permisos. Sus expectativas sobre una plataforma web se centran en tener un dashboard donde pueda controlar de manera general la información de los sensores IoT con las mitigaciones automáticas, permitiendo exportar reportas de manera sencilla y configurar los límites legales de forma centralizada.
     </td>
   </tr>
 </table>
+
 
 <a id="s-2-2-2-2-3"></a>
 ##### 2.2.2.2.3. Entrevista 3
