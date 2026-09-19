@@ -209,7 +209,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">[Ver entrevista en Microsoft Stream]</a>
       <br><br>
       <b>Resumen:</b> El trabajo de Diego consiste de rondas de manera presencial y mediciones manuales tradicionales, lo que genera margen de error en la detección de gases y ruidos. Ante situaciones de peligro, la respuesta es lenta y se pierde tiempo crítico en traslados para accionar algún tablero físico.
       <br><br>
