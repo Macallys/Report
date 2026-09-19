@@ -29,7 +29,7 @@
 
 **Nombre del startup:** Macallys
 
-**Nombre del producto:** SafeGuard
+**Nombre del producto:** SafePlant
 
 </div>
 
@@ -490,13 +490,13 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <tbody>
     <tr>
       <td align="left">Trabaja en equipo para proporcionar liderazgo en forma conjunta</td>
-      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Participó activamente en las entrevistas con encargados de planta y supervisores, aportando evidencia de campo para decidir el alcance de SafeGuard. Lideró de forma compartida la elaboración de User Stories, la actualización del Product Backlog y el modelado de Domain Message Flows, además de contribuir al Big Picture EventStorming. Con ello, alineó requisitos, dominio y entregables del informe.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Asumió el arranque del Startup Profile, la descripción de Macallys, el Solution Profile y la metodología Lean UX (problem statements, assumptions, hypothesis y canvas). Registró entrevistas y aportó al Big Picture EventStorming, dando al equipo una visión de producto compartida desde el Capítulo I.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Participó en entrevistas y en el EventStorming, y luego lideró el descubrimiento táctico: Domain Message Flows, Candidate Context Discovery y Design-Level EventStorming. Su trabajo conectó el lenguaje del dominio con los bounded contexts del Capítulo IV.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Lideró el análisis competitivo, las estrategias frente a competidores, el needfinding y la User Task Matrix. Aportó al EventStorming para que las decisiones de diferenciación se sostuvieran en evidencias de usuario y de mercado.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Participó en el EventStorming y asumió el liderazgo de la arquitectura de software: System Landscape, Tactical-Level DDD y diagramas de contexto C4. Aseguró coherencia entre el dominio descubierto y la estructura técnica de SafeGuard.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Diseñó el guion de entrevistas, participó en su ejecución y colaboró en User Stories, Impact Mapping, Domain Message Flows y EventStorming. Aportó liderazgo en la trazabilidad de necesidades de supervisor y encargado hacia el backlog.</td>
-      <td align="left">Los integrantes demostraron liderazgo compartido en AV1: cada uno condujo una franja del informe —producto, elicitación, dominio o arquitectura— y retroalimentó al resto. El compromiso y la comunicación constante permitieron cerrar la entrega con una visión única de SafeGuard.</td>
+      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Participó activamente en las entrevistas con encargados de planta y supervisores, aportando evidencia de campo para decidir el alcance de SafePlant. Lideró de forma compartida la elaboración de User Stories, la actualización del Product Backlog y el modelado de Domain Message Flows, además de contribuir al Big Picture EventStorming. Con ello, alineó requisitos, dominio y entregables del informe.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Asumió el arranque del Startup Profile, la descripción de Macallys, el Solution Profile y la metodología Lean UX (problem statements, assumptions, hypothesis y canvas). Registró entrevistas y aportó al Big Picture EventStorming, dando al equipo una visión de producto compartida desde el Capítulo I.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Participó en entrevistas y en el EventStorming, y luego lideró el descubrimiento táctico: Domain Message Flows, Candidate Context Discovery y Design-Level EventStorming. Su trabajo conectó el lenguaje del dominio con los bounded contexts del Capítulo IV.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Lideró el análisis competitivo, las estrategias frente a competidores, el needfinding y la User Task Matrix. Aportó al EventStorming para que las decisiones de diferenciación se sostuvieran en evidencias de usuario y de mercado.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Participó en el EventStorming y asumió el liderazgo de la arquitectura de software: System Landscape, Tactical-Level DDD y diagramas de contexto C4. Aseguró coherencia entre el dominio descubierto y la estructura técnica de SafePlant.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Diseñó el guion de entrevistas, participó en su ejecución y colaboró en User Stories, Impact Mapping, Domain Message Flows y EventStorming. Aportó liderazgo en la trazabilidad de necesidades de supervisor y encargado hacia el backlog.</td>
+      <td align="left">Los integrantes demostraron liderazgo compartido en AV1: cada uno condujo una franja del informe —producto, elicitación, dominio o arquitectura— y retroalimentó al resto. El compromiso y la comunicación constante permitieron cerrar la entrega con una visión única de SafePlant.</td>
     </tr>
     <tr>
       <td align="left">Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</td>
       <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Coordinó la integración de capítulos en el informe, la evidencia de entrevistas y la consistencia del backlog con las historias. Facilitó que el equipo trabajara sobre un mismo repositorio y un mismo lenguaje ubicuo.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Planificó y completó los entregables iniciales del perfil de startup y Lean UX, dejando plantillas y segmentos claros para que el resto del equipo continuara el needfinding y las entrevistas.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Organizó el paso del EventStorming de Big Picture al nivel de diseño, cumpliendo los objetivos de delimitar agregados y bounded contexts con el equipo.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Estableció metas de análisis (competidores, needfinding y task matrix) y las cerró con artefactos reutilizables para personas, journeys y el tablero de EventStorming.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Planificó los entregables de arquitectura de AV1 y los documentó en el Capítulo IV, alineando landscape, contexto y DDD táctico con lo acordado en Miro.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Definió el diseño de entrevistas y el Impact Map, planificando preguntas y resultados que el equipo usó para priorizar historias y flujos de dominio.</td>
-      <td align="left">En AV1 el equipo construyó un entorno colaborativo: metas por capítulo, tablero compartido en Miro y un informe versionado. Cada integrante planificó su frente y cumplió los objetivos de elicitación, especificación y diseño inicial de SafeGuard.</td>
+      <td align="left">En AV1 el equipo construyó un entorno colaborativo: metas por capítulo, tablero compartido en Miro y un informe versionado. Cada integrante planificó su frente y cumplió los objetivos de elicitación, especificación y diseño inicial de SafePlant.</td>
     </tr>
   </tbody>
 </table>
@@ -971,30 +971,30 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> Diego Ruiz del Solar<br>
-      <b>Edad:</b> 28 años<br>
-      <b>Distrito:</b> Callao <br>
-      <b>Ocupación:</b> Supervisor de seguridad industrial<br>
-      <b>Experiencia laboral:</b> 3 años en el sector industrial<br>
-      <b>Área de trabajo:</b> Planta de ensamblaje y producción<br>
-      <b>Tipo de establecimiento:</b> Planta <br>
-      <b>Nivel tecnológico:</b> Básico <br>
-      <b>Timing:</b> 00:00:00 - 00:06:16]<br>
-      <b>Duración:</b> 06:16<br>
-      <b>Entrevistador:</b> Santiago Gordillo Ramos
+      <b>Nombres y apellidos:</b> Anyeli Vilcapaza<br>
+      <b>Edad:</b> 26 años<br>
+      <b>Distrito:</b> Surco<br>
+      <b>Ocupación:</b> Supervisora de Seguridad y Salud Ocupacional (SSOMA) de Planta<br>
+      <b>Experiencia laboral:</b> 4 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta de producción (zonas de soldadura y procesos industriales)<br>
+      <b>Tipo de establecimiento:</b> Fábrica metalmecánica<br>
+      <b>Nivel tecnológico:</b> Básico / Intermedio<br>
+      <b>Timing:</b> 00:00:00 - 00:07:20<br>
+      <b>Duración:</b> 07:20<br>
+      <b>Entrevistador:</b> Santiago Armando Baldeon
     </td>
     <td align="center">
-      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-1.jpeg" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQDgMkxRgpj_SZWQGkOVH52TAWt6KcdsMqmX7T0vqytQdNY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SBHV8R">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> El trabajo de Diego consiste de rondas de manera presencial y mediciones manuales tradicionales, lo que genera margen de error en la detección de gases y ruidos. Ante situaciones de peligro, la respuesta es lenta y se pierde tiempo crítico en traslados para accionar algún tablero físico.
+      <b>Resumen:</b> La supervisora describe un proceso de monitoreo reactivo y manual: la planta cuenta con medidores fijos y puntuales de CO₂ y ruido que dejan "zonas ciegas" sin cobertura, y cuando se detecta una condición peligrosa, ella se entera por radio o porque alguien acude físicamente a avisarle, nunca mediante una alerta automática. Relata un incidente donde un extractor de la zona de soldadura falló y un operario llegó a marearse antes de que se activara cualquier respuesta; desde el aviso hasta resolver el problema (evacuar, buscar un medidor portátil en la oficina de mantenimiento, confirmar el nivel de CO₂ y activar el extractor de respaldo) pasaron unos 25 minutos, cuando con una alerta automática se habrían ganado al menos 15 minutos de anticipación. Tampoco existe forma de cruzar datos entre zonas, y la verificación post-incidente de que las medidas funcionaron es completamente manual: pasar lista, revisar medidores portátiles y redactar un reporte escrito, sin ningún registro automático auditable.
       <br><br>
-      Le parece una grata idea contar con una aplicación móvil, destacando la opción del mapa de calor en tiempo real, alertas vibratorias persistentes y la opción de control remoto de mitigadores para actuar ante incidentes impredecibles que requieren intervención del personal antes de que la automatización se ejecute.
+      Sobre una futura aplicación móvil, espera ver de inmediato un resumen tipo semáforo (verde/amarillo/rojo) por zona, y al detectar una alerta roja necesita saber qué zona es, qué parámetro falló (CO₂, ruido o ambos), desde cuándo comenzó a subir y cuántas personas hay registradas trabajando ahí. Quiere un mapa digitalizado en tiempo real para ubicar el foco del problema sin depender de llamadas, y control manual remoto de extractores, sirenas o mamparas desde el celular para casos de fallo de sensores o escenarios no contemplados por la automatización. Exige que las alertas críticas tengan sonido y vibración distintivos, que no puedan silenciarse por accidente y que aparezcan con el teléfono bloqueado, diferenciándolas claramente de las alertas informativas. Se muestra receptiva a adoptar la tecnología, motivada por pasar de un enfoque de "cero incidentes" a uno de "cero sorpresas".
     </td>
   </tr>
 </table>
@@ -1024,7 +1024,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="">[Ver entrevista en Microsoft Stream]</a>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
       <br><br>
       <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
     </td>
@@ -1037,28 +1037,30 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Diego Ruiz del Solar<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Callao<br>
+      <b>Ocupación:</b> Supervisor de seguridad industrial<br>
+      <b>Experiencia laboral:</b> 3 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta de ensamblaje y producción<br>
+      <b>Tipo de establecimiento:</b> Planta de ensamblaje y producción<br>
+      <b>Nivel tecnológico:</b> Básico<br>
+      <b>Timing:</b> 00:00:00 - 00:06:16<br>
+      <b>Duración:</b> 06:16<br>
+      <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-3.png" alt="Entrevista 3 - Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-3.jpeg" alt="Entrevista 3 - Diego Ruiz del Solar, Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
+      <b>Resumen:</b> El trabajo de Diego consiste de rondas de manera presencial y mediciones manuales tradicionales, lo que genera margen de error en la detección de gases y ruidos. Ante situaciones de peligro, la respuesta es lenta y se pierde tiempo crítico en traslados para accionar algún tablero físico.
+      <br><br>
+      Le parece una grata idea contar con una aplicación móvil, destacando la opción del mapa de calor en tiempo real, alertas vibratorias persistentes y la opción de control remoto de mitigadores para actuar ante incidentes impredecibles que requieren intervención del personal antes de que la automatización se ejecute.
     </td>
   </tr>
 </table>
@@ -1072,36 +1074,37 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Ej: Gerente de Operaciones / Jefe de Planta]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
-      <b>Área de trabajo:</b> [Oficina técnica / Control de operaciones]<br>
-      <b>Tipo de establecimiento:</b> [Ej: Planta procesadora de alimentos]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Fabrizio Buselleu<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Lurín<br>
+      <b>Ocupación:</b> Gerente de Operaciones / Jefe de Planta, Metalúrgica del Pacífico S.A. (MEPSA)<br>
+      <b>Experiencia laboral:</b> 3 en gestión industrial<br>
+      <b>Área de trabajo:</b> Oficina técnica / Control de operaciones<br>
+      <b>Tipo de establecimiento:</b> Fundición y procesamiento de metales no ferrosos (cobre y zinc), con línea secundaria de tratamiento térmico y soldadura industrial para piezas estructurales destinadas a minería — Parque Industrial de Lurín<br>
+      <b>Nivel tecnológico:</b> Intermedio<br>
+      <b>Timing:</b> 00:00 - 9:59 <br>
+      <b>Duración:</b> 9:59 <br>
+      <b>Entrevistador:</b> Santiago Armando Baldeon
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQAhj6V5o_7xTq1Y6UaKEpQMAQP3gcRDCNbpvQjGy2mHFiM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9b1b0f">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Describir cómo gestiona actualmente el cumplimiento de las normativas de salud ocupacional frente a entidades reguladoras. Mencionar los costos o multas que enfrenta la planta si hay accidentes por ruido o gases, y cómo lleva el registro histórico (probablemente en Excel o papel).]
+      <b>Resumen:</b> Fabrizio enfoca su gestión no solo en el cumplimiento normativo para evitar multas, sino en reducir los tiempos muertos por paradas de seguridad, que hoy le cuestan entre 40 minutos y 2 horas de producción cada vez que se dispara una alarma y hay que evacuar o detener una línea. Su meta a cinco años es reducir en 50% los incidentes ambientales y tener cero observaciones en auditorías de SUNAFIL por exposición a gases o ruido. Actualmente, el proceso de dar de alta un sensor nuevo es completamente manual (Excel, coordinación con mantenimiento, configuración manual de zona/umbral/destinatario de alerta), lo que ha generado sensores "huérfanos" que dejan de reportar sin que nadie lo note. A esto se suman desafíos físicos propios de una planta de fundición: degradación de señal WiFi por las estructuras metálicas del horno, sensores que se desalinean por vibración de maquinaria pesada, y puntos de medición de CO₂ cercanos a fuentes de calor que no todos los sensores comerciales soportan. Las actualizaciones normativas también se gestionan de forma manual, sensor por sensor, lo cual es lento y riesgoso si se omite alguno. Relata además un incidente donde tres sensores de la Zona B estuvieron caídos casi 6 horas sin que nadie lo detectara hasta el cambio de turno, dejando a la planta "operando a ciegas" en CO₂ durante ese periodo — al reportarlo a gerencia, no pudo responder con certeza si algo había ocurrido durante ese lapso.
       <br><br>
-      [Explicar su postura frente a la implementación de un panel web centralizado que le permita configurar topes de decibeles o partes por millón de CO2, y cómo la descarga de reportes automatizados impactaría su productividad y las auditorías.]
+      Frente a un panel web centralizado, se muestra muy receptivo: quiere visualizar todos los sensores en un mapa de planta (no en tablas), con colores según estado, poder configurar umbrales de decibeles y ppm de CO₂ sin depender de soporte técnico —aunque restringiría este permiso solo a sí mismo y al jefe de SSOMA corporativo, dado el riesgo de que un supervisor baje un umbral indebidamente—, y contar con notificaciones configurables por severidad y rol para no saturarse de alertas irrelevantes. Considera fundamental un registro histórico y de auditoría con al menos 12 meses de retención, tanto para responder a requerimientos de SUNAFIL como para reconstruir incidentes o denuncias y detectar patrones anómalos en el proceso. Anticipa que la exportación de reportes en PDF y la automatización de estos registros impactarían positivamente su productividad y facilitarían considerablemente las auditorías externas, reduciendo el trabajo manual y el riesgo de errores humanos que hoy enfrenta.
     </td>
   </tr>
 </table>
 
 <a id="s-2-2-2-2-2"></a>
 ##### 2.2.2.2.2. Entrevista 2
+
 <table border="1">
   <tr>
     <td width="40%">
@@ -1110,26 +1113,25 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Distrito:</b> Ate<br>
       <b>Ocupación:</b> Encargado de Planta<br>
       <b>Experiencia laboral:</b> 4 años en gestión industrial<br>
-      <b>Área de trabajo:</b>Gerencia de Operaciones y Mantenimiento<br>
-      <b>Tipo de establecimiento:</b>Planta de Manufactura<br>
-      <b>Nivel tecnológico:</b>Intermedio / Avanzado<br>
-      <b>Timing:</b> 00:00:00 - 00:07:55]<br>
-      <b>Duración:</b> [07:55]<br>
+      <b>Área de trabajo:</b> Gerencia de Operaciones y Mantenimiento<br>
+      <b>Tipo de establecimiento:</b> Planta de Manufactura<br>
+      <b>Nivel tecnológico:</b> Intermedio / Avanzado<br>
+      <b>Timing:</b> 00:00:00 - 00:07:55<br>
+      <b>Duración:</b> 07:55<br>
       <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-2.jpeg" alt="Entrevista 2 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-2.jpeg" alt="Entrevista 2 - Carlos Mendoza, Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Enlace:</b> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQCDpfLyPE3JSbAYwBJjdvnCAegV0RnbcJdQn_prFi3eCJU?e=B84siT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">[URL del video en Microsoft Stream]</a>
+      <b>Enlace:</b> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQCDpfLyPE3JSbAYwBJjdvnCAegV0RnbcJdQn_prFi3eCJU?e=B84siT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> El problema principal que comenta es la enorme pérdida de tiempo tratando de organizar datos ambientales que se encuentran dispersos para poder generar reportes. Sufre de frustraciones y estrés por la dificultad de tener que actualizar máquina por máquina y la falta de permisos. Sus expectativas sobre una plataforma web se centran en tener un dashboard donde pueda controlar de manera general la información de los sensores IoT con las mitigaciones automáticas, permitiendo exportar reportas de manera sencilla y configurar los límites legales de forma centralizada.
+      <b>Resumen:</b> El problema principal que comenta es la enorme pérdida de tiempo tratando de organizar datos ambientales que se encuentran dispersos para poder generar reportes. Sufre de frustraciones y estrés por la dificultad de tener que actualizar máquina por máquina y la falta de permisos. Sus expectativas sobre una plataforma web se centran en tener un dashboard donde pueda controlar de manera general la información de los sensores IoT con las mitigaciones automáticas, permitiendo exportar reportes de manera sencilla y configurar los límites legales de forma centralizada.
     </td>
   </tr>
 </table>
-
 
 <a id="s-2-2-2-2-3"></a>
 ##### 2.2.2.2.3. Entrevista 3
@@ -1228,9 +1230,11 @@ Segmento Objetivo: Encargado de Planta:
 <a id="s-2-4"></a>
 ## 2.4. Big Picture EventStorming
 
-A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafeGuard. Se trabajó sobre un mismo [tablero digital en Miro](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821), avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafePlant. Se trabajó sobre un mismo [tablero digital en Miro](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821), avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
 
-**Tablero Miro:** [Big Picture EventStorming — SafeGuard](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821)
+**Tablero Miro:** [Big Picture EventStorming — SafePlant](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821)
+
+![Big Picture EventStorming — vista general](../assets/02-capitulo-ii/eventstorming/big-picture-eventstorming.png)
 
 **Paso 1 — Unstructured Exploration**
 
