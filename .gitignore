@@ -1,2 +1,4 @@
 .cursor
 **/__pycache__/
+.chrome-pdf-profile/
+docs/_informe-export.html

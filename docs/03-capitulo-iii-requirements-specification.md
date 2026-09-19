@@ -2,8 +2,8 @@
 
 ---
 
-<a id="s-chapter-iii-requirements-specification"></a>
-# Chapter III: Requirements Specification
+<a id="s-cap-iii"></a>
+# Capítulo III: Requirements Specification
 
 
 <table>

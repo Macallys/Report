@@ -76,7 +76,7 @@ Finalmente se encerraron los bloques del tablero como los cuatro bounded context
 EventStorming completo: [ver en Miro](https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ)
 
 <a id="s-4-1-1-1"></a>
-#### 4.1.1.1 Candidate Context Discovery
+#### 4.1.1.1. Candidate Context Discovery
 
 Los contextos candidatos se identificaron aplicando la heurística de **un Bounded Context por lenguaje ubicuo y dueño de datos**, tomando como entrada las user stories abordadas en el Capítulo III y el lenguaje del dominio SafePlant.
 
@@ -123,7 +123,7 @@ Los contextos candidatos se identificaron aplicando la heurística de **un Bound
 </table>
 
 <a id="s-4-1-1-2"></a>
-#### 4.1.1.2 Domain Message Flows Modeling
+#### 4.1.1.2. Domain Message Flows Modeling
 
 Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colaboran para resolver casos de uso de SafePlant mediante **Domain Message Flow Modelling** ([ddd-crew](https://github.com/ddd-crew/domain-message-flow-modelling)). Cada diagrama es un escenario de 5 a 9 mensajes numerados (comando, evento o consulta) en formato combinado: nombre, orden y payload. MQTT y el hardware de campo son sistemas; el Edge no es un quinto contexto ni un “IoT Gateway”.
 
@@ -152,7 +152,7 @@ Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colabora
 ![Domain message flow — supervisor override](../assets/04-capitulo-iv/ddd/dmf-05-supervisor-override.png)
 
 <a id="s-4-1-1-3"></a>
-#### 4.1.1.3 Bounded Context Canvases
+#### 4.1.1.3. Bounded Context Canvases
 
 Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canvas fija propósito, clasificación estratégica, lenguaje, decisiones de negocio y la comunicación de entrada y salida.
 
@@ -287,15 +287,15 @@ El mismo conjunto de personas y sistemas externos, ahora con SafePlant al centro
 
 ![Context Level Diagram](../assets/04-capitulo-iv/architecture/c4-context.png)
 
-<a id="s-4-1-3-2-software-architecture-container-level-diagrams"></a>
-#### 4.1.3.2. Software Architecture Container Level Diagrams
+<a id="s-4-1-3-3"></a>
+#### 4.1.3.3. Software Architecture Container Level Diagrams
 
 Nueve containers. El **Web Monolithic Backend** (ASP.NET Core + PostgreSQL) es una sola caja: los cuatro bounded contexts viven dentro, no como servicios. En planta, **Edge Application** (ASP.NET Core + SQLite) hospeda el runtime de Device & Edge, una proyección de Plant Monitoring y el loop vivo de Safety & Actuation; **Eclipse Mosquitto** queda entre el firmware y ese Edge. El firmware publica lecturas y ejecuta relés; la landing es Angular.
 
 ![Container Level Diagram](../assets/04-capitulo-iv/architecture/c4-container.png)
 
-<a id="s-4-1-3-3"></a>
-#### 4.1.3.3. Software Architecture Deployment Diagrams
+<a id="s-4-1-3-4"></a>
+#### 4.1.3.4. Software Architecture Deployment Diagrams
 
 Cloud en **Azure**: Static Web Apps sirve la landing y el cliente Angular; App Service hospeda el monolito ASP.NET Core; Azure Database for PostgreSQL es el sistema de registro. En la **planta**, un servidor on-prem corre Edge Application, SQLite y Eclipse Mosquitto (sin IoT Hub): ahí vive el loop de Safety. El firmware Arduino/ESP32 está en el dispositivo de campo. La app Flutter corre en el teléfono del supervisor; el correo de recuperación sigue en SMTP externo. Identity es propia (no Azure AD). El override desde la nube hacia Edge exige WAN.
 
