@@ -11,27 +11,67 @@
 <a id="s-4-1-1"></a>
 ### 4.1.1. Design-Level EventStorming
 
-A partir del Big Picture EventStorming del Capítulo II y de las épicas EP02–EP07, el equipo realizó una sesión de **Design-Level EventStorming** para refinar el modelo hacia la implementación. Se avanzó por capas sobre el mismo tablero. El resultado son cuatro contextos: Identity & Access, Plant Monitoring, Safety & Actuation y Device & Edge Management. El objetivo fue validar flujos críticos —autenticación por rol, registro de telemetría, evaluación de exposición con actuación automática y ciclo de vida de dispositivos edge— antes de definir message flows y el context map.
+A partir del Big Picture EventStorming del Capítulo II y de las épicas EP02–EP07, el equipo realizó una sesión de **Design-Level EventStorming** para refinar el modelo hacia la implementación. Se trabajó sobre el mismo tablero, avanzando por las diez capas de Brandolini: eventos, orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, bounded contexts. El resultado son cuatro contextos: Identity & Access, Plant Monitoring, Safety & Actuation y Device & Edge Management (DEC-001). El objetivo fue validar flujos críticos —autenticación por rol, registro de telemetría, evaluación de exposición con actuación automática y ciclo de vida de dispositivos edge— antes de definir message flows y el context map.
 
-**Captura 1 — Unstructured exploration y timelines** (eventos de dominio en orden de ocurrencia).
+**Paso 1 — Unstructured Exploration**
 
-![Design-Level EventStorming — events and timelines](../assets/04-capitulo-iv/ddd/es-01-events-timelines.png)
+Se volcaron en notas amarillas todos los hechos de dominio relevantes sin imponer aún un orden estricto: autenticación de supervisor y encargado de planta, configuración de áreas e umbrales, lecturas de CO₂, ruido y presencia, evaluación de exposición y actuación de extractores, sirenas y mamparas acústicas.
 
-**Captura 2 — Pain points y pivotal points**
+![Design-Level EventStorming — Paso 1: Unstructured Exploration](../assets/04-capitulo-iv/ddd/es-01-unstructured-exploration.jpg)
 
-![Design-Level EventStorming — pain points and pivotals](../assets/04-capitulo-iv/ddd/es-02-pains-pivotals.png)
+**Paso 2 — Timelines**
 
-**Captura 3 — Commands, policies, read models y sistemas externos.**
+Los eventos se reordenaron en líneas temporales por flujo de negocio, dejando visible la secuencia desde el acceso de usuarios hasta la resolución de una exposición, pasando por configuración de planta e ingesta de telemetría.
 
-![Design-Level EventStorming — commands, policies, reads, externals](../assets/04-capitulo-iv/ddd/es-03-commands-policies-reads-externals.png)
+![Design-Level EventStorming — Paso 2: Timelines](../assets/04-capitulo-iv/ddd/es-02-timelines.jpg)
 
-**Captura 4 — Aggregates** 
+**Paso 3 — Pain Points**
 
-![Design-Level EventStorming — aggregates](../assets/04-capitulo-iv/ddd/es-04-aggregates.png)
+Se marcaron hotspots sobre dudas e incertidumbre: tokens por canal (móvil vs web), umbrales mal configurados, sensores offline o con mala señal, cola local cuando falla el enlace y qué ocurre si no se activan extractores o sirenas.
 
-**Captura 5 — Bounded contexts**
+![Design-Level EventStorming — Paso 3: Pain Points](../assets/04-capitulo-iv/ddd/es-03-pain-points.jpg)
 
-![Design-Level EventStorming — bounded contexts](../assets/04-capitulo-iv/ddd/es-05-bounded-contexts.png)
+**Paso 4 — Pivotal Points**
+
+Se identificaron los puntos pivote del dominio: cambios de estado que concentran decisión o riesgo (exceso detectado, exposición clasificada, actuador activado, override del supervisor o exposición resuelta) y que conectan un flujo con el siguiente.
+
+![Design-Level EventStorming — Paso 4: Pivotal Points](../assets/04-capitulo-iv/ddd/es-04-pivotal-points.jpg)
+
+**Paso 5 — Commands**
+
+Sobre cada evento se añadieron los comandos que lo provocan: iniciar sesión, configurar umbrales, asociar dispositivos, registrar lecturas, evaluar exposición y activar o anular mitigadores.
+
+![Design-Level EventStorming — Paso 5: Commands](../assets/04-capitulo-iv/ddd/es-05-commands.jpg)
+
+**Paso 6 — Policies**
+
+Se documentaron las políticas de reacción automática: si se detecta exceso de CO₂ o ruido con presencia, entonces generar alerta y disparar extractores, sirenas o mamparas según la severidad y la configuración de la zona. El loop automático corre en el servidor de planta.
+
+![Design-Level EventStorming — Paso 6: Policies](../assets/04-capitulo-iv/ddd/es-06-policies.jpg)
+
+**Paso 7 — Read Models**
+
+Se identificaron las vistas que necesitan supervisor y encargado para decidir: mapa de zonas con riesgo, histórico de lecturas, estado de actuadores, umbrales vigentes y resumen de alertas abiertas o resueltas.
+
+![Design-Level EventStorming — Paso 7: Read Models](../assets/04-capitulo-iv/ddd/es-07-read-models.jpg)
+
+**Paso 8 — External Systems**
+
+Se explicitaron dependencias externas al núcleo del dominio: hardware de campo (sensores y actuadores), broker MQTT (XS-03) y servicio de correo. El Edge no es un quinto contexto ni un “IoT Gateway”; Identity permanece first-party.
+
+![Design-Level EventStorming — Paso 8: External Systems](../assets/04-capitulo-iv/ddd/es-08-external-systems.jpg)
+
+**Paso 9 — Aggregates**
+
+Los comandos y eventos se agruparon en agregados candidatos (UserAccount y Session, IndustrialArea y umbrales, AreaTelemetry, ExposureState y AreaActuators, DeviceCredential), delimitando qué invariantes deben mantenerse juntos en cada contexto.
+
+![Design-Level EventStorming — Paso 9: Aggregates](../assets/04-capitulo-iv/ddd/es-09-aggregates.jpg)
+
+**Paso 10 — Bounded Contexts**
+
+Finalmente se encerraron los bloques del tablero como los cuatro bounded contexts cerrados (DEC-001): Identity & Access, Plant Monitoring, Safety & Actuation y Device & Edge Management.
+
+![Design-Level EventStorming — Paso 10: Bounded Contexts](../assets/04-capitulo-iv/ddd/es-10-bounded-contexts.jpg)
 
 EventStorming completo: [ver en Miro](https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ)
 
