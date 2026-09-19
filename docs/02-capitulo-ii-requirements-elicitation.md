@@ -438,11 +438,10 @@ Segmento Objetivo: Encargado de Planta:
 <a id="s-2-4"></a>
 ## 2.4. Big Picture EventStorming
 
-Segmento Objetivo: Supervisor de Seguridad:
+Segmento Objetivo: Supervisor de Seguridad
+Segmento Objetivo: Encargado de Planta
+Link del Miro: https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=559407990613
 
-
-
-Segmento Objetivo: Encargado de Planta:
 ![Big Picture EventStorming](../assets/02-capitulo-ii/eventstorming/big-picture-eventstorming.png)
 
 <a id="s-2-5"></a>
