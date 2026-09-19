@@ -236,7 +236,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Entrevistador:</b>   Johan Giovani Huamán Cuba
     </td>
     <td align="center">
-      <img src="assets/02-capitulo-ii/entrevistas/entrevista-supervisor-2.png" alt="Entrevista 2 - Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-2.png" alt="Entrevista 2 - Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
