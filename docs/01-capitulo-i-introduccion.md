@@ -57,10 +57,12 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left"><strong>Nombre:</strong> Santiago Alonso Gordillo Ramos</td>
     </tr>
     <tr>
-      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+      <td align="left"><strong>Código:</strong> U202215160</td>
     </tr>
     <tr>
-      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+      <td align="left"><strong>Descripción:</strong><br>me encuentro estudiando ingeniería de software, cuento con conocimiento de frontend, me interesa javascript, cuento con base sólida con html y css, trabajo bien en equipo, trato de organizarme de manera eficaz para poder terminar el trabajo correctamente. A futuro busco especializarme en ciberseguridad ya que es una rubro que me interesa mucho.
+
+</td>
     </tr>
   </tbody>
 </table>
