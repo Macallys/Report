@@ -52,7 +52,7 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
   <tbody>
     <tr>
       <td rowspan="3" align="center" width="25%">
-        <img src="../assets/01-capitulo-i/equipo/integrante-2.png" alt="Santiago Alonso Gordillo Ramos">
+        <img src="../assets/01-capitulo-i/equipo/integrante-2.jpg" alt="Santiago Alonso Gordillo Ramos">
       </td>
       <td align="left"><strong>Nombre:</strong> Santiago Alonso Gordillo Ramos</td>
     </tr>
