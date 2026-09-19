@@ -177,7 +177,8 @@ Los cuatro canvases se leen en conjunto: el límite de un contexto no se define 
 
 **Dependencias upstream:** Identity & Access (OHS + Conformist: sesión y canal en el payload). **Downstream:** Safety & Actuation (Customer/Supplier, conformista al *evento* de lectura) y Device & Edge Management (OHS de ingest + ACL en el Edge).
 
-![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/bounded-contexts/bcc-01-plant-monitoring.png)
+![Bounded Context Canvas — Plant Monitoring (Boceto)](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.jpg)
+![Bounded Context Canvas — Plant Monitoring (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-01-plant-monitoring.png)
 
 **BC-02: Safety & Actuation — Exposición, alertas y mitigación**  
 **Clasificación:** Core Domain · Business model: *compliance* · Evolución: *custom built*
@@ -198,7 +199,8 @@ Los cuatro canvases se leen en conjunto: el límite de un contexto no se define 
 
 **Dependencias upstream:** Plant Monitoring (evento de lectura y presencia) e Identity & Access (OHS: sesión móvil para estado, alertas y override). **Downstream:** Device & Edge Management (ACL para persistir y sincronizar la alerta) y el hardware de campo, que ejecuta la actuación física.
 
-![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/bounded-contexts/bcc-02-safety-actuation.png)
+![Bounded Context Canvas — Safety & Actuation (Boceto)](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.jpg)
+![Bounded Context Canvas — Safety & Actuation (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-02-safety-actuation.png)
 
 **BC-03: Device & Edge Management — Dispositivos, ingest y contingencia**  
 **Clasificación:** Supporting Subdomain · Business model: *cost reduction* · Evolución: *custom built*
@@ -219,7 +221,8 @@ Los cuatro canvases se leen en conjunto: el límite de un contexto no se define 
 
 **Dependencias upstream:** hardware de campo y broker MQTT (`XS-03`, externo), Plant Monitoring como dueño del contrato de ingest y Safety & Actuation para la copia de alerta. **Downstream:** Plant Monitoring, que recibe la telemetría normalizada.
 
-![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/bounded-contexts/bcc-03-device-edge-management.png)
+![Bounded Context Canvas — Device & Edge Management (Boceto)](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.jpg)
+![Bounded Context Canvas — Device & Edge Management (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-03-device-edge-management.png)
 
 **BC-04: Identity & Access — Identidad, sesión y canal**  
 **Clasificación:** Generic Subdomain · Business model: *compliance* · Evolución: *custom built*
@@ -240,11 +243,109 @@ Los cuatro canvases se leen en conjunto: el límite de un contexto no se define 
 
 **Dependencias upstream:** servicio de correo SMTP (`XS-01`, externo). **Downstream:** Plant Monitoring, Safety & Actuation y —solo para usuarios, no para dispositivos— el resto de la plataforma, bajo OHS + Conformist.
 
-![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/bounded-contexts/bcc-04-identity-access.png)
+![Bounded Context Canvas — Identity & Access (Boceto)](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.jpg)
+![Bounded Context Canvas — Identity & Access (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-04-identity-access.png)
+
+Las **preguntas abiertas** de los canvases quedan registradas de forma deliberada y se resuelven en 4.2: si `RM-03 AreaOperationalStatus` se proyecta en Plant Monitoring o se compone consultando Safety, si el fallo de relé se reintenta o solo se registra en tablero, si se adopta un proveedor de identidad externo más adelante, y el producto concreto del broker MQTT. Ninguna de ellas altera los límites ya fijados.
+
+<a id="s-4-1-2"></a>#### 4.1.1.3. Bounded Context Canvases
+
+Cada contexto candidato se documentó con un **Bounded Context Canvas** ([ddd-crew](https://github.com/ddd-crew/bounded-context-canvas), plantilla *Annegret Junker / codecentric AG*, versión BCC v5 · DEC-001). El canvas obliga a declarar, por contexto, seis cosas: propósito y lo que explícitamente **no** hace, clasificación estratégica (dominio, modelo de negocio y evolución), roles de dominio, comunicación de entrada y de salida con su tipo de mensaje, lenguaje ubicuo con las decisiones de negocio que lo sostienen, y finalmente supuestos, métricas de verificación y preguntas abiertas.
+
+Los cuatro canvases se leen en conjunto: el límite de un contexto no se define por lo que contiene, sino por lo que se niega a decidir. Esa frontera es la que evita que la lógica de seguridad ocupacional se filtre al inventario de dispositivos o al módulo de sesiones.
+
+**BC-01: Plant Monitoring — Definición de planta y telemetría**  
+**Clasificación:** Core Domain · Business model: *engagement* · Evolución: *custom built*
+
+**Descripción:** Da a la planta una definición estable de áreas industriales, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el dueño del dato de estado de la planta: quien abre SafePlant ve aquí cómo está cada área. No decide exposición ni dispara actuadores. Sus roles de dominio son *Specification* y *Analysis*.
+
+**Reglas de negocio clave:** CO₂, ruido y presencia son hechos distintos y no se unifican en una sola lectura. Los umbrales pertenecen al área, pero en ellos Safety no clasifica exposición. Un `deviceId` no se duplica en la asociación a un área. Las políticas de riesgo `PO-01`, `PO-02` y `PO-12` viven en Safety & Actuation, no aquí. El supervisor configura la planta solo por canal móvil.
+
+**Lenguaje ubicuo:** Industrial area, Environmental thresholds, Area device assignment, Carbon dioxide reading, Noise reading, Presence (detected / cleared), Telemetry ingested, Sensor associated to area, Actuator associated to area, Plant metrics history.
+
+**Capacidades:** Registro y gestión de áreas industriales, configuración de umbrales por área, asociación de sensores y actuadores, registro histórico de lecturas y presencia, ingesta de telemetría e historial de métricas de planta.
+
+**Capas:** Core (área, umbrales y hecho de telemetría), Soporte (asociación de dispositivos, proyecciones de lectura), Infraestructura (repositorios, `InProcessEventPublisher`, PostgreSQL en nube · stack provisional DEC-008).
+
+**Mensajes entrantes:** `ManageIndustrialAreaCommand`, `ConfigureThresholdsCommand`, `AssociateDeviceCommand`, `RecordCarbonDioxideReadingCommand`, `RecordNoiseReadingCommand`, `RecordPresenceCommand`, `IngestTelemetryCommand`; consultas `GetAreaSetupSheetQuery` y `GetPlantMetricsHistoryQuery`.
+
+**Mensajes salientes:** `CarbonDioxideReadingRecordedEvent`, `NoiseReadingRecordedEvent`, `PresenceChangedEvent`, `ConditionsWithinThresholdsEvent`, `IngestTelemetryRejectedEvent`.
+
+**Dependencias upstream:** Identity & Access (OHS + Conformist: sesión y canal en el payload). **Downstream:** Safety & Actuation (Customer/Supplier, conformista al *evento* de lectura) y Device & Edge Management (OHS de ingest + ACL en el Edge).
+
+![Bounded Context Canvas — Plant Monitoring (Boceto)](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.jpg)
+![Bounded Context Canvas — Plant Monitoring (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-01-plant-monitoring.png)
+
+**BC-02: Safety & Actuation — Exposición, alertas y mitigación**  
+**Clasificación:** Core Domain · Business model: *compliance* · Evolución: *custom built*
+
+**Descripción:** Es el dueño del riesgo. Cruza la presencia de personal con las condiciones de CO₂ y ruido para clasificar exposición, levantar alertas ambientales y mandar extractores, sirenas y mamparas acústicas, o anularlas. Por `DEC-007` el loop automático corre en el servidor de planta (Edge); la nube supervisa, audita y acepta el override cuando hay enlace. Sus roles de dominio son *Enforcer* y *Execution*.
+
+**Reglas de negocio clave:** `PO-01` detecta el exceso y `PO-02` evalúa la exposición sin encadenarse una a otra. `PO-12` normaliza una sola vez cuando las condiciones vuelven a rango. El override es el comando `C-33` y solo se acepta desde el canal móvil del supervisor. No existe severidad *yellow*: la clasificación no admite un estado intermedio. La copia de alerta en el Edge es para sincronizar, sin transferir el agregado ni la propiedad del riesgo. Los actuadores no esperan internet.
+
+**Lenguaje ubicuo:** Personnel exposure, Exposure severity, Area risk, Environmental alert, Excessive carbon dioxide, Excessive noise, Air extractor, Preventive siren, Acoustic barrier, Manual override, Automatic actuator action.
+
+**Capacidades:** Detección de exceso ambiental, evaluación y clasificación de exposición de personal, alerta ambiental y su retiro, activación automática y normalización de actuadores, override remoto del supervisor, registro de acciones automáticas y consulta de estado operativo y alertas activas.
+
+**Capas:** Core (motor de exposición y reglas de actuación), Soporte (registro de acciones y proyección de alertas), Infraestructura (cliente de actuadores hacia el dispositivo, SQLite en planta, PostgreSQL en nube para auditoría · DEC-008).
+
+**Mensajes entrantes:** eventos de Plant Monitoring (`CarbonDioxideReadingRecorded`, `NoiseReadingRecorded`, `PresenceChanged`, `ConditionsWithinThresholds`); comandos `DetectEnvironmentalExcessCommand`, `EvaluatePersonnelExposureCommand`, `ClassifyExposureSeverityCommand`, `RaiseEnvironmentalAlertCommand`, `OverrideActuatorCommand` (`C-33`); consultas `GetAreaOperationalStatusQuery` y `GetActiveAlertsQuery`; de Identity, `ProtectedActionDenied`.
+
+**Mensajes salientes:** `EnvironmentalAlertRaisedEvent`, `AreaRiskHighlightedEvent`, `AutomaticActuatorActionRecordedEvent`, `ExposureResolvedEvent`; hacia el dispositivo `ActivateActuator` y `NormalizeActuator`; hacia Device & Edge, `StoreOfflineAlert` (`PO-09`).
+
+**Dependencias upstream:** Plant Monitoring (evento de lectura y presencia) e Identity & Access (OHS: sesión móvil para estado, alertas y override). **Downstream:** Device & Edge Management (ACL para persistir y sincronizar la alerta) y el hardware de campo, que ejecuta la actuación física.
+
+![Bounded Context Canvas — Safety & Actuation (Boceto)](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.jpg)
+![Bounded Context Canvas — Safety & Actuation (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-02-safety-actuation.png)
+
+**BC-03: Device & Edge Management — Dispositivos, ingest y contingencia**  
+**Clasificación:** Supporting Subdomain · Business model: *cost reduction* · Evolución: *custom built*
+
+**Descripción:** Autentica los dispositivos de campo, mueve la telemetría hacia la nube y sostiene la operación cuando se pierde el enlace, mediante cola local, sincronización posterior y copia de alerta. El Edge hace de puente (`DEC-002`): no es un quinto bounded context ni un “IoT Gateway” como sistema aparte. Su rol de dominio es *Gateway* hacia la nube. No interpreta umbrales ni evalúa exposición.
+
+**Reglas de negocio clave:** `PO-10` envía a cola local todo ingest fallido. `PO-11` dispara la sincronización y el reintento `C-19` al restaurarse la conectividad. `PO-09` guarda copia de la alerta para sincronizar, sin que Safety deje de ser dueña del riesgo. La credencial de dispositivo no es una cuenta de usuario: los dispositivos no se autentican en Identity & Access. Las lecturas no se fusionan al publicarse en MQTT. Tras un corte, la sincronización no debe crear un segundo hecho para la misma lectura.
+
+**Lenguaje ubicuo:** Device credential, Device authenticated, Edge node, Telemetry queued locally, Local telemetry sync, Offline alert stored, Duplicate telemetry acknowledged, Ingest telemetry.
+
+**Capacidades:** Emisión, autenticación y revocación de credenciales de dispositivo, recepción de lecturas vía MQTT, ingest hacia Plant Monitoring, encolado local ante fallo, sincronización al recuperar el enlace y persistencia de alerta offline.
+
+**Capas:** Core (credenciales de dispositivo y nodo edge), Soporte (cola local, sincronización e idempotencia), Infraestructura (broker Eclipse Mosquitto como sistema externo `XS-03`, SQLite en planta, cliente HTTP hacia la nube · DEC-008).
+
+**Mensajes entrantes:** `IssueDeviceCredentialCommand`, `AuthenticateDeviceCommand`, `AuthenticateDeviceCredentialCommand`, `RevokeDeviceCredentialCommand`, `IngestTelemetryCommand`, `QueueLocallyCommand`, `SyncLocalTelemetryCommand`, `StoreOfflineAlertCommand`; del broker, `ReadingsDelivered`; de Plant Monitoring, el rechazo o timeout de ingesta.
+
+**Mensajes salientes:** `DeviceAuthenticatedEvent`, `TelemetryQueuedLocallyEvent`, `LocalTelemetrySyncEvent`, `DuplicateTelemetryAcknowledgedEvent`; hacia Plant Monitoring, el reintento de `IngestTelemetry` (`PO-11`).
+
+**Dependencias upstream:** hardware de campo y broker MQTT (`XS-03`, externo), Plant Monitoring como dueño del contrato de ingest y Safety & Actuation para la copia de alerta. **Downstream:** Plant Monitoring, que recibe la telemetría normalizada.
+
+![Bounded Context Canvas — Device & Edge Management (Boceto)](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.jpg)
+![Bounded Context Canvas — Device & Edge Management (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-03-device-edge-management.png)
+
+**BC-04: Identity & Access — Identidad, sesión y canal**  
+**Clasificación:** Generic Subdomain · Business model: *compliance* · Evolución: *custom built*
+
+**Descripción:** Responde quién entra a SafePlant, con qué rol y por qué canal —app móvil para el Supervisor de Seguridad, app web para el Encargado de Planta— y permite recuperar credenciales. Actúa como Open Host Service upstream de los otros tres contextos: solo concede o niega la sesión, y ese resultado viaja en el payload. Su rol de dominio es *Enforcer* de sesión, rol y canal. No mide la planta ni evalúa exposición.
+
+**Reglas de negocio clave:** Existe un solo `Sign in` (`C-06`) y el canal es un parámetro, no un caso de uso distinto. El setup de planta y el override exigen supervisor en canal móvil, por lo que un intento desde la web se deniega (`C-08` / `E-05`). Un correo equivale a una cuenta: el duplicado rechaza el alta (`E-07`). El rol determina los permisos dentro de cada bounded context. La recuperación de credenciales y el token de acceso vencen por TTL (`C-05`, `C-09`). Identity es propia, sin proveedor de identidad externo.
+
+**Lenguaje ubicuo:** User account, User role, Session, Sign in, Session granted, Protected action denied, Credential recovery, Channel (mobile / web), Supervisor, Plant manager.
+
+**Capacidades:** Alta de cuentas, asignación de roles y permisos, inicio de sesión por canal, cierre de sesión, recuperación y restablecimiento de credenciales, expiración de tokens y consulta del directorio de usuarios.
+
+**Capas:** Core (autenticación y autorización por rol y canal), Soporte (recuperación de credenciales y notificación por correo), Infraestructura (repositorios, adaptador SMTP, token JWT o API key, PostgreSQL · DEC-008).
+
+**Mensajes entrantes:** `CreateUserAccountCommand` (`C-01`), `AssignUserRoleCommand` (`C-02`), `RequestCredentialRecoveryCommand` (`C-03`), `ResetCredentialsCommand` (`C-04`), `ExpireCredentialRecoveryCommand` (`C-05`), `SignInCommand` (`C-06`), `CloseSessionCommand` (`C-07`), `AttemptProtectedActionCommand` (`C-08`), `ExpireAccessTokenCommand` (`C-09`); consulta `GetUserAccountsDirectoryQuery` (`RM-01`).
+
+**Mensajes salientes:** `SessionGrantedEvent`, `ProtectedActionDeniedEvent`, `CredentialRecoveryRequestedEvent` hacia el servicio de correo (`XS-01`).
+
+**Dependencias upstream:** servicio de correo SMTP (`XS-01`, externo). **Downstream:** Plant Monitoring, Safety & Actuation y —solo para usuarios, no para dispositivos— el resto de la plataforma, bajo OHS + Conformist.
+
+![Bounded Context Canvas — Identity & Access (Boceto)](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.jpg)
+![Bounded Context Canvas — Identity & Access (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-04-identity-access.png)
 
 Las **preguntas abiertas** de los canvases quedan registradas de forma deliberada y se resuelven en 4.2: si `RM-03 AreaOperationalStatus` se proyecta en Plant Monitoring o se compone consultando Safety, si el fallo de relé se reintenta o solo se registra en tablero, si se adopta un proveedor de identidad externo más adelante, y el producto concreto del broker MQTT. Ninguna de ellas altera los límites ya fijados.
 
 <a id="s-4-1-2"></a>
+
 ### 4.1.2. Context Mapping
 
 Las relaciones estructurales entre los cuatro bounded contexts se mapearon con los patrones de **ddd-crew**, tal como se muestra en el diagrama a continuación.
