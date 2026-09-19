@@ -569,17 +569,6 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td rowspan="3" align="center" width="25%">
-        <img src="../assets/01-capitulo-i/equipo/integrante-1.png" alt="Santiago Armando Baldeon Vivar">
-      </td>
-      <td align="left"><strong>Nombre:</strong> Santiago Armando Baldeon Vivar</td>
-    </tr>
-    <tr>
-      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
-    </tr>
-    <tr>
-      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
-=======
       <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software, con conocimiento de frontend. Le interesa JavaScript y cuenta con base sólida en HTML y CSS. Trabaja bien en equipo y se organiza para entregar el trabajo a tiempo. A futuro busca especializarse en ciberseguridad.</td>
     </tr>
   </tbody>
@@ -656,38 +645,6 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 <table>
   <tbody>
     <tr>
-<<<<<<< HEAD
-      <td rowspan="3" align="center" width="25%">
-        <img src="../assets/01-capitulo-i/equipo/integrante-5.png" alt="Ariana Mia Sanchez Gonzales">
-      </td>
-      <td align="left"><strong>Nombre:</strong> Ariana Mia Sanchez Gonzales</td>
-    </tr>
-    <tr>
-      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
-    </tr>
-    <tr>
-      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
-
-<table>
-  <tbody>
-    <tr>
-      <td rowspan="3" align="center" width="25%">
-        <img src="../assets/01-capitulo-i/equipo/integrante-6.png" alt="Angelo Hector Solano Armas">
-      </td>
-      <td align="left"><strong>Nombre:</strong> Angelo Hector Solano Armas</td>
-    </tr>
-    <tr>
-      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
-    </tr>
-    <tr>
-      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
->>>>>>> origin/feature/chapter-01
-=======
       <td rowspan="4" align="center" width="25%">
         <img src="../assets/01-capitulo-i/equipo/integrante-5.png" alt="Gabriel Sanchez Gonzales" width="140">
       </td>
@@ -701,7 +658,6 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
     </tr>
     <tr>
       <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con interés en requisitos, entrevistas y trazabilidad del producto. Participa con iniciativa, escucha a los usuarios y convierte sus necesidades en historias e impacto medible. Colabora con el equipo para que el análisis, el backlog y el dominio hablen el mismo lenguaje.</td>
->>>>>>> df44cc3e2d0129f7e0f1a6b0fcb14a41154773a0
     </tr>
   </tbody>
 </table>
@@ -1005,8 +961,6 @@ Personal de la gerencia técnica y operativa, responsables del rendimiento gener
 
 
 Las entrevistas fueron grabadas en video previo consentimiento de los participantes y se organizaron por segmento objetivo. Cada registro incluye los datos generales del entrevistado, la captura del video, el enlace de acceso, el timing dentro de la grabación consolidada, la duración y un resumen descriptivo de las respuestas obtenidas.
-
-> Nota para el equipo: las celdas marcadas entre corchetes deben completarse con los datos reales de cada entrevista. Las capturas se colocan en assets/chapter-2/ respetando los nombres de archivo indicados en cada etiqueta de imagen.
 
 <a id="s-2-2-2-1"></a>
 #### 2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
