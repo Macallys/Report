@@ -30,15 +30,6 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 ### 1.1.2. Perfiles de integrantes del equipo
 
 <table>
-  <thead>
-    <tr>
-      <th align="center">Foto</th>
-      <th align="left">Apellidos y Nombres</th>
-      <th align="left">Código</th>
-      <th align="left">Carrera</th>
-      <th align="left">Conocimientos técnicos y habilidades</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td align="center"><img src="../assets/01-capitulo-i/equipo/angelo.jpg" alt="Angelo Héctor Solano Armas" width="140"></td>
@@ -48,25 +39,155 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left">Interés marcado por el curso y por las tecnologías emergentes, en especial las aplicadas a IoT. Actitud colaborativa, comunicación clara y disposición constante para aprender. Enfoque positivo ante los retos del proyecto y compromiso con el trabajo en equipo.</td>
     </tr>
     <tr>
-      <td align="center">![Integrante 2](../assets/01-capitulo-i/equipo/integrante-2.png)</td>
+      <td align="center">![Gordillo Ramos, Santiago Alonso](../assets/01-capitulo-i/equipo/integrante-2.png)</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">U202215160</td>
+      <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center">![Solis Chang, Santiago Valentino](../assets/01-capitulo-i/equipo/integrante-3.png)</td>
+      <td align="left">Solis Chang, Santiago Valentino</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
     </tr>
     <tr>
-      <td align="center">![Integrante 3](../assets/01-capitulo-i/equipo/integrante-3.png)</td>
-      <td align="left"></td>
+      <td align="center">![Huaman Cuba, Johan Giovani](../assets/01-capitulo-i/equipo/integrante-4.png)</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
     </tr>
     <tr>
-      <td align="center">![Integrante 4](../assets/01-capitulo-i/equipo/integrante-4.png)</td>
-      <td align="left"></td>
+      <td align="center"></td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
       <td align="left"></td>
       <td align="left">Ingeniería de Software</td>
       <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"></td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left"></td>
+      <td align="left">Ingeniería de Software</td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"></td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left"></td>
+      <td align="left">Ingeniería de Software</td>
+      <td align="left"></td>
+=======
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-1.png" alt="Santiago Armando Baldeon Vivar">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Santiago Armando Baldeon Vivar</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-2.jpg" alt="Santiago Alonso Gordillo Ramos">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Santiago Alonso Gordillo Ramos</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> U202215160</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>me encuentro estudiando ingeniería de software, cuento con conocimiento de frontend, me interesa javascript, cuento con base sólida con html y css, trabajo bien en equipo, trato de organizarme de manera eficaz para poder terminar el trabajo correctamente. A futuro busco especializarme en ciberseguridad ya que es una rubro que me interesa mucho.
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-3.png" alt="Johan Giovani Huamán Cuba">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Johan Giovani Huamán Cuba</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> u202417448</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>Soy Johan, soy un estudiante de Ingeniería de Software. Pero más que eso soy alguien que le encanta acumular conocimientos de diferentes campos, pues soy alguien curioso. Me gusta la tecnología, pero me gusta más lo que podamos hacer con ella. Miro al pasado con cautela y, gracias a esta habilidad, desvarío con la fantasía de construir el mejor futuro.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-4.png" alt="Sergio Sebastián Iglesias Pérez">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Sergio Sebastián Iglesias Pérez</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-5.png" alt="Ariana Mia Sanchez Gonzales">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Ariana Mia Sanchez Gonzales</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-6.png" alt="Angelo Hector Solano Armas">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Angelo Hector Solano Armas</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+>>>>>>> origin/feature/chapter-01
     </tr>
   </tbody>
 </table>

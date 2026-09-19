@@ -447,12 +447,67 @@ Segmento Objetivo: Encargado de Planta:
 <a id="s-2-4"></a>
 ## 2.4. Big Picture EventStorming
 
-Segmento Objetivo: Supervisor de Seguridad:
+A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafeGuard. Se trabajó sobre un mismo tablero digital, avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
 
+**Paso 1 — Unstructured Exploration**
 
+Se volcaron en notas amarillas todos los hechos de dominio relevantes sin imponer aún un orden estricto: autenticación de supervisor y encargado, configuración de áreas e umbrales, lecturas de CO₂/ruido, alertas ambientales y actuación de extractores, sirenas y barreras acústicas.
 
-Segmento Objetivo: Encargado de Planta:
-![Big Picture EventStorming](../assets/02-capitulo-ii/eventstorming/big-picture-eventstorming.png)
+![Big Picture EventStorming — Paso 1: Unstructured Exploration](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%201_%20Unstructured%20Exploration.jpg)
+
+**Paso 2 — Timelines**
+
+Los eventos se reordenaron en líneas temporales por flujo de negocio, dejando visible la secuencia desde el acceso de usuarios hasta la resolución de una exposición, pasando por configuración de planta e ingesta de telemetría.
+
+![Big Picture EventStorming — Paso 2: Timelines](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%202_%20Timelines.jpg)
+
+**Paso 3 — Pain Points**
+
+Se marcaron hotspots (rombos rosados) sobre dudas e incertidumbre: tokens por aplicación, fallos de umbrales, sensores offline o con mala señal, y qué ocurre si falla la activación de extractores o sirenas.
+
+![Big Picture EventStorming — Paso 3: Pain Points](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%203_%20Pain%20Points.jpg)
+
+**Paso 4 — Pivotal Points**
+
+Se identificaron los puntos pivote del dominio: cambios de estado que concentran decisión o riesgo (por ejemplo, exceso detectado, alerta generada, actuador activado o exposición resuelta) y que conectan un flujo con el siguiente.
+
+![Big Picture EventStorming — Paso 4: Pivotal Points](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%204_%20Pivotal%20Points.jpg)
+
+**Paso 5 — Commands**
+
+Sobre cada evento se añadieron los comandos (notas azules/verdes) que lo provocan: iniciar sesión, configurar umbrales, asociar sensores, registrar lecturas, evaluar riesgo y activar o anular mitigadores.
+
+![Big Picture EventStorming — Paso 5: Commands](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%205_%20Commands.jpg)
+
+**Paso 6 — Policies**
+
+Se documentaron las políticas de reacción automática: si se detecta exceso de CO₂ o ruido, entonces generar alerta y disparar extractores, sirenas o barreras según la severidad y la configuración de la zona.
+
+![Big Picture EventStorming — Paso 6: Policies](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%206_%20Policies.jpg)
+
+**Paso 7 — Read Models**
+
+Se identificaron las vistas que necesitan supervisor y encargado para decidir: mapa de zonas con riesgo, histórico de lecturas, estado de actuadores, umbrales vigentes y resumen de alertas abiertas o resueltas.
+
+![Big Picture EventStorming — Paso 7: Read Models](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%207_%20Read%20Models.jpg)
+
+**Paso 8 — External Systems**
+
+Se explicitaron dependencias externas al núcleo del dominio: dispositivos edge/sensores, brokers o colas de telemetría, notificaciones push y, cuando aplique, servicios de identidad o almacenamiento fuera del tablero principal.
+
+![Big Picture EventStorming — Paso 8: External Systems](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%208_%20External%20Systems.jpg)
+
+**Paso 9 — Aggregates**
+
+Los comandos y eventos se agruparon en agregados candidatos (cuenta/sesión, área industrial, dispositivo, telemetría, alerta/exposición, actuador), delimitando qué invariantes deben mantenerse juntos.
+
+![Big Picture EventStorming — Paso 9: Aggregates](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%209_%20Aggregates.jpg)
+
+**Paso 10 — Bounded Contexts**
+
+Finalmente se encerraron los bloques del tablero como candidatos a bounded contexts: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation, base del diseño estratégico del Capítulo IV.
+
+![Big Picture EventStorming — Paso 10: Bounded Contexts](../assets/02-capitulo-ii/eventstorming/Storming%20-%20Step%2010_%20Bounded%20Contexts.jpg)
 
 <a id="s-2-5"></a>
 ## 2.5. Ubiquitous Language
