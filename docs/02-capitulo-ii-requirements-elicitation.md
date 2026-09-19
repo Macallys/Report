@@ -297,13 +297,13 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Edad:</b> 28 años<br>
       <b>Distrito:</b> Lurín<br>
       <b>Ocupación:</b> Gerente de Operaciones / Jefe de Planta, Metalúrgica del Pacífico S.A. (MEPSA)<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
+      <b>Experiencia laboral:</b> 3 en gestión industrial<br>
       <b>Área de trabajo:</b> Oficina técnica / Control de operaciones<br>
       <b>Tipo de establecimiento:</b> Fundición y procesamiento de metales no ferrosos (cobre y zinc), con línea secundaria de tratamiento térmico y soldadura industrial para piezas estructurales destinadas a minería — Parque Industrial de Lurín<br>
       <b>Nivel tecnológico:</b> Intermedio<br>
       <b>Timing:</b> 00:00 - 9:59 <br>
       <b>Duración:</b> 9:59 <br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Entrevistador:</b> Santiago Armando Baldeon
     </td>
     <td align="center">
       <img src="assets/chapter-2/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
