@@ -58,10 +58,6 @@
     </tr>
     <tr>
       <td align="left"></td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
-    </tr>
-    <tr>
-      <td align="left"></td>
       <td align="left">Huaman Cuba, Johan Giovani</td>
     </tr>
     <tr>
@@ -109,43 +105,43 @@
     <tr>
       <td align="left">1.2</td>
       <td align="left">2026-09-01</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Creación del Startup Profile de Macallys.</td>
     </tr>
     <tr>
       <td align="left">1.3</td>
       <td align="left">2026-09-02</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Redacción de la descripción de la startup.</td>
     </tr>
     <tr>
       <td align="left">1.4</td>
       <td align="left">2026-09-03</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Elaboración del Solution Profile.</td>
     </tr>
     <tr>
       <td align="left">1.5</td>
       <td align="left">2026-09-04</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Definición de Lean UX Problem Statements.</td>
     </tr>
     <tr>
       <td align="left">1.6</td>
       <td align="left">2026-09-05</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Definición de Lean UX Assumptions.</td>
     </tr>
     <tr>
       <td align="left">1.7</td>
       <td align="left">2026-09-06</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Redacción de Lean UX Hypothesis Statements y Lean UX Canvas.</td>
     </tr>
     <tr>
       <td align="left">1.8</td>
       <td align="left">2026-09-07</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Definición de los segmentos objetivo.</td>
     </tr>
     <tr>
@@ -157,7 +153,7 @@
     <tr>
       <td align="left">1.10</td>
       <td align="left">2026-09-09</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Registro de entrevistas.</td>
     </tr>
     <tr>
@@ -205,7 +201,7 @@
     <tr>
       <td align="left">1.18</td>
       <td align="left">2026-09-17</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Aporte a Big Picture EventStorming.</td>
     </tr>
     <tr>
