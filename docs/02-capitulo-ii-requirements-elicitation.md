@@ -181,47 +181,45 @@
 
 Las entrevistas fueron grabadas en video previo consentimiento de los participantes y se organizaron por segmento objetivo. Cada registro incluye los datos generales del entrevistado, la captura del video, el enlace de acceso, el timing dentro de la grabación consolidada, la duración y un resumen descriptivo de las respuestas obtenidas.
 
-> Nota para el equipo: las celdas marcadas entre corchetes deben completarse con los datos reales de cada entrevista. Las capturas se colocan en assets/chapter-2/ respetando los nombres de archivo indicados en cada etiqueta de imagen.
+<a id="s-2-2-2-1"></a>
+#### 2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
 
-<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad"></a>
-#### Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
-
-<a id="s-entrevista-1"></a>
-##### Entrevista 1
+<a id="s-2-2-2-1-1"></a>
+##### 2.2.2.1.1. Entrevista 1
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto, ej: Supervisor SSOMA]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Planta de producción, campo, etc.]<br>
-      <b>Tipo de establecimiento:</b> [Ej: Fábrica metalmecánica]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Anyeli Vilcapaza<br>
+      <b>Edad:</b> 26 años<br>
+      <b>Distrito:</b> Surco<br>
+      <b>Ocupación:</b> Supervisora de Seguridad y Salud Ocupacional (SSOMA) de Planta<br>
+      <b>Experiencia laboral:</b> 4 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta de producción (zonas de soldadura y procesos industriales)<br>
+      <b>Tipo de establecimiento:</b> Fábrica metalmecánica<br>
+      <b>Nivel tecnológico:</b> Básico / Intermedio<br>
+      <b>Timing:</b> 00:00:00 - 00:07:20<br>
+      <b>Duración:</b> 07:20<br>
+      <b>Entrevistador:</b> Santiago Armando Baldeon
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQDgMkxRgpj_SZWQGkOVH52TAWt6KcdsMqmX7T0vqytQdNY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SBHV8R">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción detallada de cómo realiza actualmente el monitoreo de seguridad en la planta. Explicar qué herramientas manuales o antiguas utiliza, cuánto tiempo le toma y cuáles son sus mayores frustraciones al no tener control remoto. Mencionar incidentes pasados relacionados con CO2 o ruido.]
+      <b>Resumen:</b> La supervisora describe un proceso de monitoreo reactivo y manual: la planta cuenta con medidores fijos y puntuales de CO₂ y ruido que dejan "zonas ciegas" sin cobertura, y cuando se detecta una condición peligrosa, ella se entera por radio o porque alguien acude físicamente a avisarle, nunca mediante una alerta automática. Relata un incidente donde un extractor de la zona de soldadura falló y un operario llegó a marearse antes de que se activara cualquier respuesta; desde el aviso hasta resolver el problema (evacuar, buscar un medidor portátil en la oficina de mantenimiento, confirmar el nivel de CO₂ y activar el extractor de respaldo) pasaron unos 25 minutos, cuando con una alerta automática se habrían ganado al menos 15 minutos de anticipación. Tampoco existe forma de cruzar datos entre zonas, y la verificación post-incidente de que las medidas funcionaron es completamente manual: pasar lista, revisar medidores portátiles y redactar un reporte escrito, sin ningún registro automático auditable.
       <br><br>
-      [Detallar sus expectativas sobre una aplicación móvil para monitoreo en tiempo real: qué métricas necesita ver primero, cómo espera recibir las alertas de peligro y qué tan dispuesto está a adoptar una nueva tecnología en su rutina diaria.]
+      Sobre una futura aplicación móvil, espera ver de inmediato un resumen tipo semáforo (verde/amarillo/rojo) por zona, y al detectar una alerta roja necesita saber qué zona es, qué parámetro falló (CO₂, ruido o ambos), desde cuándo comenzó a subir y cuántas personas hay registradas trabajando ahí. Quiere un mapa digitalizado en tiempo real para ubicar el foco del problema sin depender de llamadas, y control manual remoto de extractores, sirenas o mamparas desde el celular para casos de fallo de sensores o escenarios no contemplados por la automatización. Exige que las alertas críticas tengan sonido y vibración distintivos, que no puedan silenciarse por accidente y que aparezcan con el teléfono bloqueado, diferenciándolas claramente de las alertas informativas. Se muestra receptiva a adoptar la tecnología, motivada por pasar de un enfoque de "cero incidentes" a uno de "cero sorpresas".
     </td>
   </tr>
 </table>
 
-<a id="s-entrevista-2"></a>
-##### Entrevista 2
+<a id="s-2-2-2-1-2"></a>
+##### 2.2.2.1.2. Entrevista 2
 
 <table border="1">
   <tr>
@@ -252,139 +250,219 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
-<a id="s-entrevista-3"></a>
-##### Entrevista 3
+<a id="s-2-2-2-1-3"></a>
+##### 2.2.2.1.3. Entrevista 3
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Diego Ruiz del Solar<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Callao<br>
+      <b>Ocupación:</b> Supervisor de seguridad industrial<br>
+      <b>Experiencia laboral:</b> 3 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta de ensamblaje y producción<br>
+      <b>Tipo de establecimiento:</b> Planta de ensamblaje y producción<br>
+      <b>Nivel tecnológico:</b> Básico<br>
+      <b>Timing:</b> 00:00:00 - 00:06:16<br>
+      <b>Duración:</b> 06:16<br>
+      <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-3.png" alt="Entrevista 3 - Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-3.jpeg" alt="Entrevista 3 - Diego Ruiz del Solar, Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
+      <b>Resumen:</b> El trabajo de Diego consiste de rondas de manera presencial y mediciones manuales tradicionales, lo que genera margen de error en la detección de gases y ruidos. Ante situaciones de peligro, la respuesta es lenta y se pierde tiempo crítico en traslados para accionar algún tablero físico.
+      <br><br>
+      Le parece una grata idea contar con una aplicación móvil, destacando la opción del mapa de calor en tiempo real, alertas vibratorias persistentes y la opción de control remoto de mitigadores para actuar ante incidentes impredecibles que requieren intervención del personal antes de que la automatización se ejecute.
     </td>
   </tr>
 </table>
 
-<a id="s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta"></a>
-#### Segmento objetivo 2: Encargado de Planta (App Web)
+<a id="s-2-2-2-2"></a>
+#### 2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)
 
-<a id="s-entrevista-1-entrevista-1"></a>
-##### Entrevista 1
+<a id="s-2-2-2-2-1"></a>
+##### 2.2.2.2.1. Entrevista 1
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Ej: Gerente de Operaciones / Jefe de Planta]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
-      <b>Área de trabajo:</b> [Oficina técnica / Control de operaciones]<br>
-      <b>Tipo de establecimiento:</b> [Ej: Planta procesadora de alimentos]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Fabrizio Buselleu<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Lurín<br>
+      <b>Ocupación:</b> Gerente de Operaciones / Jefe de Planta, Metalúrgica del Pacífico S.A. (MEPSA)<br>
+      <b>Experiencia laboral:</b> 3 en gestión industrial<br>
+      <b>Área de trabajo:</b> Oficina técnica / Control de operaciones<br>
+      <b>Tipo de establecimiento:</b> Fundición y procesamiento de metales no ferrosos (cobre y zinc), con línea secundaria de tratamiento térmico y soldadura industrial para piezas estructurales destinadas a minería — Parque Industrial de Lurín<br>
+      <b>Nivel tecnológico:</b> Intermedio<br>
+      <b>Timing:</b> 00:00 - 9:59 <br>
+      <b>Duración:</b> 9:59 <br>
+      <b>Entrevistador:</b> Santiago Armando Baldeon
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQAhj6V5o_7xTq1Y6UaKEpQMAQP3gcRDCNbpvQjGy2mHFiM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9b1b0f">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Describir cómo gestiona actualmente el cumplimiento de las normativas de salud ocupacional frente a entidades reguladoras. Mencionar los costos o multas que enfrenta la planta si hay accidentes por ruido o gases, y cómo lleva el registro histórico (probablemente en Excel o papel).]
+      <b>Resumen:</b> Fabrizio enfoca su gestión no solo en el cumplimiento normativo para evitar multas, sino en reducir los tiempos muertos por paradas de seguridad, que hoy le cuestan entre 40 minutos y 2 horas de producción cada vez que se dispara una alarma y hay que evacuar o detener una línea. Su meta a cinco años es reducir en 50% los incidentes ambientales y tener cero observaciones en auditorías de SUNAFIL por exposición a gases o ruido. Actualmente, el proceso de dar de alta un sensor nuevo es completamente manual (Excel, coordinación con mantenimiento, configuración manual de zona/umbral/destinatario de alerta), lo que ha generado sensores "huérfanos" que dejan de reportar sin que nadie lo note. A esto se suman desafíos físicos propios de una planta de fundición: degradación de señal WiFi por las estructuras metálicas del horno, sensores que se desalinean por vibración de maquinaria pesada, y puntos de medición de CO₂ cercanos a fuentes de calor que no todos los sensores comerciales soportan. Las actualizaciones normativas también se gestionan de forma manual, sensor por sensor, lo cual es lento y riesgoso si se omite alguno. Relata además un incidente donde tres sensores de la Zona B estuvieron caídos casi 6 horas sin que nadie lo detectara hasta el cambio de turno, dejando a la planta "operando a ciegas" en CO₂ durante ese periodo — al reportarlo a gerencia, no pudo responder con certeza si algo había ocurrido durante ese lapso.
       <br><br>
-      [Explicar su postura frente a la implementación de un panel web centralizado que le permita configurar topes de decibeles o partes por millón de CO2, y cómo la descarga de reportes automatizados impactaría su productividad y las auditorías.]
+      Frente a un panel web centralizado, se muestra muy receptivo: quiere visualizar todos los sensores en un mapa de planta (no en tablas), con colores según estado, poder configurar umbrales de decibeles y ppm de CO₂ sin depender de soporte técnico —aunque restringiría este permiso solo a sí mismo y al jefe de SSOMA corporativo, dado el riesgo de que un supervisor baje un umbral indebidamente—, y contar con notificaciones configurables por severidad y rol para no saturarse de alertas irrelevantes. Considera fundamental un registro histórico y de auditoría con al menos 12 meses de retención, tanto para responder a requerimientos de SUNAFIL como para reconstruir incidentes o denuncias y detectar patrones anómalos en el proceso. Anticipa que la exportación de reportes en PDF y la automatización de estos registros impactarían positivamente su productividad y facilitarían considerablemente las auditorías externas, reduciendo el trabajo manual y el riesgo de errores humanos que hoy enfrenta.
     </td>
   </tr>
 </table>
 
-<a id="s-entrevista-2-entrevista-2"></a>
-##### Entrevista 2
+<a id="s-2-2-2-2-2"></a>
+##### 2.2.2.2.2. Entrevista 2
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Carlos Mendoza<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Ate<br>
+      <b>Ocupación:</b> Encargado de Planta<br>
+      <b>Experiencia laboral:</b> 4 años en gestión industrial<br>
+      <b>Área de trabajo:</b> Gerencia de Operaciones y Mantenimiento<br>
+      <b>Tipo de establecimiento:</b> Planta de Manufactura<br>
+      <b>Nivel tecnológico:</b> Intermedio / Avanzado<br>
+      <b>Timing:</b> 00:00:00 - 00:07:55<br>
+      <b>Duración:</b> 07:55<br>
+      <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-2.png" alt="Entrevista 2 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-2.jpeg" alt="Entrevista 2 - Carlos Mendoza, Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <b>Enlace:</b> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQCDpfLyPE3JSbAYwBJjdvnCAegV0RnbcJdQn_prFi3eCJU?e=B84siT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+      <b>Resumen:</b> El problema principal que comenta es la enorme pérdida de tiempo tratando de organizar datos ambientales que se encuentran dispersos para poder generar reportes. Sufre de frustraciones y estrés por la dificultad de tener que actualizar máquina por máquina y la falta de permisos. Sus expectativas sobre una plataforma web se centran en tener un dashboard donde pueda controlar de manera general la información de los sensores IoT con las mitigaciones automáticas, permitiendo exportar reportes de manera sencilla y configurar los límites legales de forma centralizada.
     </td>
   </tr>
 </table>
 
-<a id="s-entrevista-3-entrevista-3"></a>
-##### Entrevista 3
+<a id="s-2-2-2-2-3"></a>
+##### 2.2.2.2.3. Entrevista 3
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Nathaly Solano Armas<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Ate<br>
+      <b>Ocupación:</b> Encargada de planta<br>
+      <b>Experiencia laboral:</b> 6 años en gestión industrial<br>
+      <b>Área de trabajo:</b> Monitoreo y control de planta<br>
+      <b>Tipo de establecimiento:</b> Planta metalmecánica de tamaño medio<br>
+      <b>Nivel tecnológico:</b> Intermedio<br>
+      <b>Timing:</b> 00:00:00 - 00:11:06<br>
+      <b>Duración:</b> 11:06<br>
+      <b>Entrevistador:</b> Angelo Héctor Solano Armas
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-3.png" alt="Entrevista 3 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-3.jpg" alt="Entrevista 3 - Nathaly Solano Armas, Encargada de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <b>Enlace:</b> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC3qQs5We4vS6zsu7M-w2DgATcBFhIcHwh6Y3EL3vL9im8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=frhwHe">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+      <b>Resumen:</b> Para Nathaly, la planta debe dejar de reaccionar cuando ya hay personal expuesto: el monitoreo continuo y la automatización deben bajar el tiempo de respuesta ante CO₂ y ruido, reducir alertas críticas con ventilación preventiva y dejar evidencia para auditorías, en lugar de depender de recorridos manuales. Lo que más le quita tiempo es armar reportes a mano, alinear umbrales entre turnos, dar altas y bajas de acceso y coordinar sensores caídos; configurar equipos en papel o Excel no escala entre áreas como soldadura, compresores y calderas.
+      <br><br>
+      Registrar sensores o actuadores falla si no se asocian al área correcta y al tipo de dispositivo (CO₂, ruido, PIR, extractor, sirena o mampara); identificadores duplicados, firmware distinto y zonas sin señal desarman el inventario. Los umbrales no son únicos: varían por espacio, tipo de ruido y presencia de personal; un tope mal calibrado no dispara o satura de falsas alertas. En la web exige dashboard por área, historial de mediciones, alertas y acciones, usuarios y roles, y trazabilidad de quién cambió la configuración; el control de actuadores lo deja al supervisor en el celular. Solo otorga rol de supervisor a quien opera seguridad en campo. Las normas llegan por correo o PDF, se traducen a Excel y se copian tarde a cada zona, por lo que quiere actualizar parámetros con versión y fecha. Una caída de internet o de un ESP32 le quita visibilidad y evidencia ante SST: el sistema debe marcar el dispositivo como no disponible y aguantar offline en el gateway. El historial es crítico para auditorías, overrides y patrones por área. Automatizaría la aplicación de umbrales por norma y el armado del reporte de eventos.
     </td>
   </tr>
 </table>
 
 <a id="s-2-2-3"></a>
 ### 2.2.3. Análisis de entrevistas
+
+| Entrevistado | Segmento | Tipo de planta | Nivel tecnológico | Duración |
+|---|---|---|---|---|
+| Anyeli Vilcapaza | Supervisora SSOMA | Fábrica metalmecánica (soldadura y procesos) | Básico / Intermedio | 07:20 |
+| Diego Ruiz del Solar | Supervisor de seguridad industrial | Planta de ensamblaje y producción | Básico | 06:16 |
+| Fabrizio Buselleu | Gerente de operaciones / jefe de planta | Fundición y metales no ferrosos (MEPSA) | Intermedio | 09:59 |
+| Carlos Mendoza | Encargado de planta | Planta de manufactura | Intermedio / Avanzado | 07:55 |
+| Nathaly Solano Armas | Encargada de planta | Planta metalmecánica de tamaño medio | Intermedio | 11:06 |
+
+La muestra cubre metalmecánica, fundición y ensamblaje, con madurez tecnológica de básica a intermedia-avanzada. Eso evita un sesgo de una sola planta “ideal” y permite distinguir lo que es común al rol de lo que es propio del contexto físico (interferencia metálica, calor, vibración).
+
+<a id="s-2-2-3-1"></a>
+#### 2.2.3.1. Hallazgos del segmento Supervisor de Seguridad
+
+En campo el monitoreo actual es **reactivo y presencial**. Anyeli se entera de un riesgo por radio o porque alguien llega a avisarle; no existe alerta automática ni cruce de datos entre áreas. Diego recorre la planta con mediciones manuales, con margen de error en gases y ruido, y pierde tiempo crítico al desplazarse hasta un tablero físico para accionar un mitigador. El incidente relatado por Anyeli cuantifica el costo de ese modelo: un extractor de soldadura falló, un operario se mareó y el ciclo aviso–evacuar–medir con portátil–activar respaldo tomó unos **25 minutos**; ella estima que una alerta automática habría adelantado al menos **15 minutos**.
+
+La verificación post-incidente también es manual (pasar lista, revisar medidores, redactar un reporte) y no deja rastro auditable. Ambos supervisores coinciden en la forma de la solución móvil:
+
+- Un **mapa o semáforo en tiempo real** (verde / amarillo / rojo o mapa de calor) para ubicar el foco sin llamadas.
+- En alerta roja: **área, parámetro (CO₂, ruido o ambos), desde cuándo sube y si hay personal** en el lugar.
+- **Override remoto** de extractores, sirenas o mamparas cuando el sensor falla o el escenario no está cubierto por la automatización.
+- Alertas críticas con **sonido y vibración persistentes**, visibles con el teléfono bloqueado y distintas de las informativas.
+
+Anyeli formula el cambio de mentalidad que el producto debe sostener: pasar de “cero incidentes” a **“cero sorpresas”**. Diego refuerza que la automatización no reemplaza al supervisor: necesita intervenir *antes* de que la regla automática se ejecute cuando el evento es impredecible.
+
+<a id="s-2-2-3-2"></a>
+#### 2.2.3.2. Hallazgos del segmento Encargado de Planta
+
+El encargado no recorre la planta: **gobierna, parametriza y rinde cuentas**. Los tres entrevistados describen un backoffice fragmentado en Excel, papel, correo y coordinación con mantenimiento.
+
+Fabrizio mide el problema en dinero y tiempo de línea: cada alarma que obliga a evacuar o parar le cuesta entre **40 minutos y 2 horas** de producción. Su meta a cinco años es bajar 50 % los incidentes ambientales y llegar a **cero observaciones SUNAFIL** por gases o ruido. El alta de un sensor es manual (zona, umbral, destinatario) y ha producido **sensores huérfanos**; en un caso, tres sensores de la Zona B estuvieron caídos **casi seis horas** sin que nadie lo notara hasta el cambio de turno, y no pudo responder a gerencia si algo ocurrió en ese lapso. Añade restricciones físicas de fundición: Wi-Fi degradada por estructuras metálicas, desalineación por vibración y puntos de CO₂ cerca de calor.
+
+Carlos resume el mismo dolor en productividad gerencial: datos ambientales dispersos, estrés por actualizar **máquina por máquina** y falta de permisos. Espera un dashboard que unifique sensores y mitigaciones, exporte reportes y centralice límites legales.
+
+Nathaly cierra el ciclo operativo. Quiere dejar de reaccionar cuando el personal ya está expuesto: monitoreo continuo, ventilación preventiva y evidencia para auditorías. Le quitan tiempo armar reportes a mano, alinear umbrales entre turnos, dar altas y bajas de acceso y coordinar dispositivos caídos. El inventario se rompe si el sensor o actuador no se asocia al **área correcta y al tipo** (CO₂, ruido, PIR, extractor, sirena, mampara). Los umbrales **no son únicos**: varían por espacio, tipo de ruido y presencia de personal; un tope mal calibrado no dispara o satura de falsas alertas. Las normas llegan por correo o PDF, se copian tarde a cada área y quiere versionar parámetros con fecha. Una caída de internet o de un ESP32 le quita visibilidad ante SST: el sistema debe marcar el dispositivo como no disponible y **aguantar offline en el gateway**.
+
+Los tres encargados piden la misma superficie web: dashboard (mapa o por área, no solo tablas), configuración de umbrales sin soporte técnico, exportación de reportes (PDF) e **historial / auditoría** (Fabrizio pide al menos 12 meses). En permisos hay consenso de control: Fabrizio restringiría umbrales a él y al jefe SSOMA corporativo; Nathaly solo otorga rol de supervisor a quien opera seguridad en campo y deja el control de actuadores al celular del supervisor.
+
+<a id="s-2-2-3-3"></a>
+#### 2.2.3.3. Patrones transversales y divergencias de rol
+
+| Tema | Evidencia | Implicación para SafePlant |
+|---|---|---|
+| Visibilidad en tiempo real por área | Zonas ciegas (Anyeli); rondas manuales (Diego); sensores caídos 6 h (Fabrizio); ESP32 offline (Nathaly) | Telemetría continua de CO₂, ruido y presencia; estado “no disponible” del dispositivo; semáforo / mapa en móvil y dashboard en web |
+| Tiempo de respuesta | 25 min de ciclo en soldadura (Anyeli); traslado a tablero (Diego); paradas de 40 min–2 h (Fabrizio) | Detección + actuación automática de extractores, sirenas y mamparas; override remoto desde el móvil |
+| Configuración manual que no escala | Excel y alta sensor a sensor (Fabrizio, Carlos, Nathaly); normas por correo/PDF (Nathaly) | App web para umbrales por área, inventario de dispositivos y versión / fecha de la norma |
+| Umbrales y falsos positivos | Umbrales distintos por área y presencia (Nathaly); riesgo de bajar un tope (Fabrizio) | Umbrales por área, no globales; permiso de configuración solo en el encargado; correlación con PIR |
+| Auditoría y reportes | Reporte escrito post-incidente (Anyeli); 12 meses y SUNAFIL (Fabrizio); datos dispersos (Carlos); overrides y patrones (Nathaly) | Historial de mediciones, alertas, acciones y cambios de configuración; exportación PDF |
+| Canal según el rol | Móvil para decidir y actuar (Anyeli, Diego); web para gobernar (Fabrizio, Carlos, Nathaly) | Separación estricta: supervisor opera y hace override en móvil; encargado parametriza, usuarios y reportes en web |
+| Resiliencia de planta | Wi-Fi metálica y calor (Fabrizio); offline de gateway (Nathaly) | Procesamiento en el edge, persistencia local y sincronización al recuperar enlace |
+
+La divergencia más útil para el diseño no es de “gusto de interfaz”, sino de **responsabilidad**. El supervisor necesita decidir en segundos con el teléfono en la mano; el encargado necesita que nadie más rebaje un umbral y que un auditor pueda reconstruir qué pasó. SafePlant debe impedir que esas dos intenciones se mezclen en el mismo canal.
+
+<a id="s-2-2-3-4"></a>
+#### 2.2.3.4. Contrastación con las hipótesis Lean UX
+
+Las entrevistas **confirman y precisan** las tres hipótesis del Capítulo I:
+
+1. **Automatización preventiva.** El incidente del extractor y la demanda de Nathaly de ventilar antes de que haya personal expuesto sostienen la hipótesis de detectar CO₂/ruido y accionar extractores sin esperar un recorrido. Se añade una condición de diseño: la automatización debe convivir con override manual, no sustituirlo.
+2. **Monitoreo remoto ágil.** Anyeli y Diego validan alertas inmediatas y control de mitigadores desde el móvil. El umbral “menos de 1 minuto” es creíble frente a los 25 minutos actuales, siempre que la alerta crítica no se pueda silenciar por accidente.
+3. **Parametrización y cumplimiento.** Fabrizio, Carlos y Nathaly validan el panel web de umbrales, dashboard e histórico. La hipótesis de +30 % de eficiencia gerencial se ancla en dos tareas que hoy son manuales y que los tres automatizarían: aplicar la norma a todas las áreas y armar el reporte de eventos.
+
+Quedan supuestos abiertos, no refutados: la magnitud exacta del 90 % de reducción de exposición y del 40 % menos de alertas críticas exige medición en piloto; la interferencia industrial (metal, calor, vibración) es un riesgo de infraestructura, no de discurso de usuario.
+
+<a id="s-2-2-3-5"></a>
+#### 2.2.3.5. Insights que alimentan el needfinding y el EventStorming
+
+Del análisis se retienen cinco decisiones de dominio que luego aparecen en personas, journeys y en el Big Picture EventStorming:
+
+1. La unidad de control no es “la planta” ni un mapa cartográfico: es el **área industrial** (soldadura, compresores, calderas, fundición) con umbral, dispositivos y personal propios.
+2. Un valor ambiental sin **presencia** no tiene la misma urgencia que un valor con personal expuesto; por eso el PIR entra al lenguaje del supervisor.
+3. El evento de negocio no termina en “se superó el umbral”: termina cuando se **actuó**, se verificó y quedó **evidencia**.
+4. Un dispositivo que deja de reportar es tan grave como un exceso no detectado: debe existir el hecho “sensor no disponible”.
+5. Identidad y permisos son parte del problema de seguridad ocupacional: mal rol o umbral editable por cualquiera convierte la plataforma en un riesgo.
+
+Estos insights cierran el ciclo de elicitación: las entrevistas no solo describen frustraciones, sino que delimitan agregados y contextos (sesión y acceso, configuración de planta, ingesta de telemetría, detección y actuación) que se desarrollan en 2.3 y 2.4.
 
 <a id="s-2-3"></a>
 ## 2.3. Needfinding
@@ -447,7 +525,11 @@ Segmento Objetivo: Encargado de Planta:
 <a id="s-2-4"></a>
 ## 2.4. Big Picture EventStorming
 
-A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafeGuard. Se trabajó sobre un mismo tablero digital, avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafePlant. Se trabajó sobre un mismo [tablero digital en Miro](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821), avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+
+**Tablero Miro:** [Big Picture EventStorming — SafePlant](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821)
+
+![Big Picture EventStorming — vista general](../assets/02-capitulo-ii/eventstorming/big-picture-eventstorming.png)
 
 **Paso 1 — Unstructured Exploration**
 

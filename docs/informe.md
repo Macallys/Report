@@ -1,83 +1,76 @@
 <a id="s-caratula"></a>
-# Carátula
-
 <div align="center">
 
 ![Logo de la Universidad](../assets/00-front-matter/upc-logo.png)
 
 **Universidad Peruana de Ciencias Aplicadas**
 
-**Facultad de Ingeniería**
-
 **Carrera de Ingeniería de Software**
 
-**Ciclo académico:** 2026-20
+**1ASI0572**
 
----
+**Desarrollo de Soluciones IoT**
 
-**Código del curso:** 1ASI0572
+**NRC**
 
-**Nombre del curso:** Desarrollo de Soluciones IoT
+8729
 
-**NRC:** 8729
+**Informe del Trabajo Final**
 
-**Nombre del profesor:** León Baca, Marco Antonio
+**Docente**
 
----
+León Baca, Marco Antonio
 
-**Informe de Trabajo Final**
+**Equipo**
 
-**Nombre del startup:** Macallys
+Macallys
 
-**Nombre del producto:** SafeGuard
+**Proyecto**
 
-</div>
+SafePlant
 
 <a id="s-relacion-integrantes"></a>
-## Relación de integrantes
 
-<table>
+**Integrantes**
+
+<table align="center">
   <thead>
     <tr>
-      <th align="left">Código</th>
-      <th align="left">Apellidos y Nombres</th>
+      <th align="center">Código</th>
+      <th align="center">Apellidos y Nombres</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="left">U20231B775</td>
-      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="center">U20231B775</td>
+      <td align="center">Solano Armas, Angelo Héctor</td>
     </tr>
     <tr>
-      <td align="left">U202215160</td>
-      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="center">U202215160</td>
+      <td align="center">Gordillo Ramos, Santiago Alonso</td>
     </tr>
     <tr>
-      <td align="left"></td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="center">U202417448</td>
+      <td align="center">Huaman Cuba, Johan Giovani</td>
     </tr>
     <tr>
-      <td align="left"></td>
-      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="center">U202319881</td>
+      <td align="center">Baldeon Vivar, Santiago Armando</td>
     </tr>
     <tr>
-      <td align="left"></td>
-      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="center">U202316118</td>
+      <td align="center">Iglesias Pérez, Sergio Sebastián</td>
     </tr>
     <tr>
-      <td align="left"></td>
-      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
-    </tr>
-    <tr>
-      <td align="left"></td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="center">U202310609</td>
+      <td align="center">Sanchez Gonzales, Gabriel</td>
     </tr>
   </tbody>
 </table>
 
-<div align="center">
+**Período**
 
-**Mes y año:** Septiembre, 2026
+202620
 
 </div>
 
@@ -105,43 +98,43 @@
     <tr>
       <td align="left">1.2</td>
       <td align="left">2026-09-01</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Creación del Startup Profile de Macallys.</td>
     </tr>
     <tr>
       <td align="left">1.3</td>
       <td align="left">2026-09-02</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Redacción de la descripción de la startup.</td>
     </tr>
     <tr>
       <td align="left">1.4</td>
       <td align="left">2026-09-03</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Elaboración del Solution Profile.</td>
     </tr>
     <tr>
       <td align="left">1.5</td>
       <td align="left">2026-09-04</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Definición de Lean UX Problem Statements.</td>
     </tr>
     <tr>
       <td align="left">1.6</td>
       <td align="left">2026-09-05</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Definición de Lean UX Assumptions.</td>
     </tr>
     <tr>
       <td align="left">1.7</td>
       <td align="left">2026-09-06</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Redacción de Lean UX Hypothesis Statements y Lean UX Canvas.</td>
     </tr>
     <tr>
       <td align="left">1.8</td>
       <td align="left">2026-09-07</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Definición de los segmentos objetivo.</td>
     </tr>
     <tr>
@@ -153,7 +146,7 @@
     <tr>
       <td align="left">1.10</td>
       <td align="left">2026-09-09</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Registro de entrevistas.</td>
     </tr>
     <tr>
@@ -201,7 +194,7 @@
     <tr>
       <td align="left">1.18</td>
       <td align="left">2026-09-17</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Aporte a Big Picture EventStorming.</td>
     </tr>
     <tr>
@@ -338,146 +331,140 @@
 
 <!-- TOC:start -->
 
-1. [Student Outcome](#s-student-outcome)
-1. [Capítulo I: Introducción](#s-cap-i)
-    1. [1.1. Startup Profile](#s-1-1)
-        1. [1.1.1. Descripción de la Startup](#s-1-1-1)
-        1. [1.1.2. Perfiles de integrantes del equipo](#s-1-1-2)
-    1. [1.2. Solution Profile](#s-1-2)
-        1. [1.2.1 Antecedentes y problemática](#s-1-2-1)
-        1. [1.2.2 Lean UX Process](#s-1-2-2)
-            1. [1.2.2.1. Lean UX Problem Statements](#s-1-2-2-1)
-            1. [1.2.2.2. Lean UX Assumptions](#s-1-2-2-2)
-            1. [1.2.2.3. Lean UX Hypothesis Statements](#s-1-2-2-3)
-            1. [1.2.2.4. Lean UX Canvas](#s-1-2-2-4)
-    1. [1.3. Segmentos objetivo](#s-1-3)
-            1. [**Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**](#s-segmento-objetivo-1-supervisor-de-seguridad-app-movil)
-            1. [**Segmento Objetivo 2: Encargado de Planta (App Web)**](#s-segmento-objetivo-2-encargado-de-planta-app-web)
-1. [Capítulo II: Requirements Elicitation & Analysis](#s-cap-ii)
-    1. [2.1. Competidores](#s-2-1)
-        1. [2.1.1. Análisis competitivo](#s-2-1-1)
-        1. [2.1.2. Estrategias y tácticas frente a competidores](#s-2-1-2)
-    1. [2.2. Entrevistas](#s-2-2)
-        1. [2.2.1. Diseño de entrevistas](#s-2-2-1)
-        1. [2.2.2. Registro de entrevistas](#s-2-2-2)
-            1. [Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad)
-                1. [Entrevista 1](#s-entrevista-1)
-                1. [Entrevista 2](#s-entrevista-2)
-                1. [Entrevista 3](#s-entrevista-3)
-            1. [Segmento objetivo 2: Encargado de Planta (App Web)](#s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta)
-                1. [Entrevista 1](#s-entrevista-1-entrevista-1)
-                1. [Entrevista 2](#s-entrevista-2-entrevista-2)
-                1. [Entrevista 3](#s-entrevista-3-entrevista-3)
-        1. [2.2.3. Análisis de entrevistas](#s-2-2-3)
-    1. [2.3. Needfinding](#s-2-3)
-        1. [2.3.1. User Personas](#s-2-3-1)
-        1. [2.3.2. User Task Matrix](#s-2-3-2)
-        1. [2.3.3. User Journey Mapping](#s-2-3-3)
-        1. [2.3.4. Empathy Mapping](#s-2-3-4)
-    1. [2.4. Big Picture EventStorming](#s-2-4)
-    1. [2.5. Ubiquitous Language](#s-2-5)
-1. [Chapter III: Requirements Specification](#s-chapter-iii-requirements-specification)
-    1. [3.1. User Stories and Technical Stories](#s-3-1)
-    1. [3.2. Impact Mapping](#s-3-2)
-    1. [3.3. Product Backlog](#s-3-3)
-1. [Capítulo IV: Solution Software Design](#s-cap-iv)
-    1. [4.1. Strategic-Level Domain-Driven Design](#s-4-1)
-        1. [4.1.1. Design-Level EventStorming](#s-4-1-1)
-            1. [4.1.1.1 Candidate Context Discovery](#s-4-1-1-1)
-            1. [4.1.1.2 Domain Message Flows Modeling](#s-4-1-1-2)
-            1. [4.1.1.3 Bounded Context Canvases](#s-4-1-1-3)
-        1. [4.1.2. Context Mapping](#s-4-1-2)
-        1. [4.1.3. Software Architecture](#s-4-1-3)
-            1. [4.1.3.1. Software Architecture System Landscape Diagram](#s-4-1-3-1)
-            1. [4.1.3.2. Software Architecture Context Level Diagrams](#s-4-1-3-2)
-            1. [4.1.3.2. Software Architecture Container Level Diagrams](#s-4-1-3-2-software-architecture-container-level-diagrams)
-            1. [4.1.3.3. Software Architecture Deployment Diagrams](#s-4-1-3-3)
-    1. [4.2. Tactical-Level Domain-Driven Design](#s-4-2)
-        1. [4.2.1. Bounded Context: Plant Monitoring](#s-4-2-1)
-            1. [4.2.1.1. Domain Layer](#s-4-2-1-1)
-            1. [4.2.1.2. Interface Layer](#s-4-2-1-2)
-            1. [4.2.1.3. Application Layer](#s-4-2-1-3)
-            1. [4.2.1.4. Infrastructure Layer](#s-4-2-1-4)
-            1. [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-1-5)
-            1. [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-1-6)
-                1. [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-1-6-1)
-                1. [4.2.1.6.2. Bounded Context Database Design Diagram](#s-4-2-1-6-2)
-        1. [4.2.2. Bounded Context: Safety & Actuation](#s-4-2-2)
-            1. [4.2.2.1. Domain Layer](#s-4-2-2-1)
-            1. [4.2.2.2. Interface Layer](#s-4-2-2-2)
-            1. [4.2.2.3. Application Layer](#s-4-2-2-3)
-            1. [4.2.2.4. Infrastructure Layer](#s-4-2-2-4)
-            1. [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-2-5)
-            1. [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-2-6)
-                1. [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-2-6-1)
-                1. [4.2.2.6.2. Bounded Context Database Design Diagram](#s-4-2-2-6-2)
-        1. [4.2.3. Bounded Context: Device & Edge Management](#s-4-2-3)
-            1. [4.2.3.1. Domain Layer](#s-4-2-3-1)
-            1. [4.2.3.2. Interface Layer](#s-4-2-3-2)
-            1. [4.2.3.3. Application Layer](#s-4-2-3-3)
-            1. [4.2.3.4. Infrastructure Layer](#s-4-2-3-4)
-            1. [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-3-5)
-            1. [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-3-6)
-                1. [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-3-6-1)
-                1. [4.2.3.6.2. Bounded Context Database Design Diagram](#s-4-2-3-6-2)
-        1. [4.2.4. Bounded Context: Identity & Access](#s-4-2-4)
-            1. [4.2.4.1. Domain Layer](#s-4-2-4-1)
-            1. [4.2.4.2. Interface Layer](#s-4-2-4-2)
-            1. [4.2.4.3. Application Layer](#s-4-2-4-3)
-            1. [4.2.4.4. Infrastructure Layer](#s-4-2-4-4)
-            1. [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-4-5)
-            1. [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-4-6)
-                1. [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-4-6-1)
-                1. [4.2.4.6.2. Bounded Context Database Design Diagram](#s-4-2-4-6-2)
-1. [Capítulo V: Solution UI/UX Design](#s-cap-v)
-    1. [5.1. Style Guidelines](#s-5-1)
-        1. [5.1.1. General Style Guidelines](#s-5-1-1)
-        1. [5.1.2. Web, Mobile and IoT Style Guidelines](#s-5-1-2)
-    1. [5.2. Information Architecture](#s-5-2)
-        1. [5.2.1. Organization Systems](#s-5-2-1)
-        1. [5.2.2. Labeling Systems](#s-5-2-2)
-        1. [5.2.3. SEO Tags and Meta Tags](#s-5-2-3)
-        1. [5.2.4. Searching Systems](#s-5-2-4)
-        1. [5.2.5. Navigation Systems](#s-5-2-5)
-    1. [5.3. Landing Page UI Design](#s-5-3)
-        1. [5.3.1. Landing Page Wireframe](#s-5-3-1)
-        1. [5.3.2. Landing Page Mock-up](#s-5-3-2)
-    1. [5.4. Applications UX/UI Design](#s-5-4)
-        1. [5.4.1. Applications Wireframes](#s-5-4-1)
-        1. [5.4.2. Applications Wireflow Diagrams](#s-5-4-2)
-        1. [5.4.2. Applications Mock-ups](#s-5-4-2-applications-mock-ups)
-        1. [5.4.3. Applications User Flow Diagrams](#s-5-4-3)
-    1. [5.5. Applications Prototyping](#s-5-5)
-    1. [5.6. IoT Device Design](#s-5-6)
-1. [Capítulo VI: Product Implementation, Validation & Deployment](#s-cap-vi)
-    1. [6.1. Software Configuration Management](#s-6-1)
-        1. [6.1.1. Software Development Environment Configuration](#s-6-1-1)
-        1. [6.1.2. Source Code Management](#s-6-1-2)
-        1. [6.1.3. Source Code Style Guide & Conventions](#s-6-1-3)
-        1. [6.1.4. Software Deployment Configuration](#s-6-1-4)
-    1. [6.2. Landing Page, Services & Applications Implementation](#s-6-2)
-        1. [6.2.X. Sprint n](#s-6-2-x)
-            1. [6.2.X.1. Sprint Planning n](#s-6-2-x-1)
-            1. [6.2.X.2. Aspect Leaders and Collaborators](#s-6-2-x-2)
-            1. [6.2.X.3. Sprint Backlog n](#s-6-2-x-3)
-            1. [6.2.X.4. Development Evidence for Sprint Review](#s-6-2-x-4)
-            1. [6.2.X.5. Testing Suite Evidence for Sprint Review](#s-6-2-x-5)
-            1. [6.2.X.6. Execution Evidence for Sprint Review](#s-6-2-x-6)
-            1. [6.2.X.7. Services Documentation Evidence for Sprint Review](#s-6-2-x-7)
-            1. [6.2.X.8. Software Deployment Evidence for Sprint Review](#s-6-2-x-8)
-            1. [6.2.X.9. Team Collaboration Insights during Sprint](#s-6-2-x-9)
-    1. [6.3. Validation Interviews](#s-6-3)
-        1. [6.3.1. Diseño de Entrevistas](#s-6-3-1)
-        1. [6.3.2. Registro de Entrevistas](#s-6-3-2)
-        1. [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
-    1. [6.4. Video About-the-Product](#s-6-4)
-1. [Conclusiones](#s-conclusiones)
-    1. [Conclusiones y recomendaciones](#s-conclusiones-recomendaciones)
-    1. [Video About-the-Team](#s-video-about-the-team)
-1. [Bibliografía](#s-bibliografia)
-1. [Anexos](#s-anexos)
-    1. [Videos de Exposiciones](#s-anexo-videos-exposiciones)
-    1. [Repositorios y artefactos](#s-anexo-repositorios)
+- [Student Outcome](#s-student-outcome)
+- [Capítulo I: Introducción](#s-cap-i)
+    - [1.1. Startup Profile](#s-1-1)
+        - [1.1.1. Descripción de la Startup](#s-1-1-1)
+        - [1.1.2. Perfiles de integrantes del equipo](#s-1-1-2)
+    - [1.2. Solution Profile](#s-1-2)
+        - [1.2.1. Antecedentes y problemática](#s-1-2-1)
+        - [1.2.2. Lean UX Process](#s-1-2-2)
+            - [1.2.2.1. Lean UX Problem Statements](#s-1-2-2-1)
+            - [1.2.2.2. Lean UX Assumptions](#s-1-2-2-2)
+            - [1.2.2.3. Lean UX Hypothesis Statements](#s-1-2-2-3)
+            - [1.2.2.4. Lean UX Canvas](#s-1-2-2-4)
+    - [1.3. Segmentos objetivo](#s-1-3)
+        - [1.3.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-1-3-1)
+        - [1.3.2. Segmento objetivo 2: Encargado de Planta (App Web)](#s-1-3-2)
+- [Capítulo II: Requirements Elicitation & Analysis](#s-cap-ii)
+    - [2.1. Competidores](#s-2-1)
+        - [2.1.1. Análisis competitivo](#s-2-1-1)
+        - [2.1.2. Estrategias y tácticas frente a competidores](#s-2-1-2)
+    - [2.2. Entrevistas](#s-2-2)
+        - [2.2.1. Diseño de entrevistas](#s-2-2-1)
+        - [2.2.2. Registro de entrevistas](#s-2-2-2)
+            - [2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-2-2-2-1)
+                - [2.2.2.1.1. Entrevista 1](#s-2-2-2-1-1)
+                - [2.2.2.1.2. Entrevista 2](#s-2-2-2-1-2)
+                - [2.2.2.1.3. Entrevista 3](#s-2-2-2-1-3)
+            - [2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)](#s-2-2-2-2)
+                - [2.2.2.2.1. Entrevista 1](#s-2-2-2-2-1)
+                - [2.2.2.2.2. Entrevista 2](#s-2-2-2-2-2)
+                - [2.2.2.2.3. Entrevista 3](#s-2-2-2-2-3)
+        - [2.2.3. Análisis de entrevistas](#s-2-2-3)
+            - [2.2.3.1. Hallazgos del segmento Supervisor de Seguridad](#s-2-2-3-1)
+            - [2.2.3.2. Hallazgos del segmento Encargado de Planta](#s-2-2-3-2)
+            - [2.2.3.3. Patrones transversales y divergencias de rol](#s-2-2-3-3)
+            - [2.2.3.4. Contrastación con las hipótesis Lean UX](#s-2-2-3-4)
+            - [2.2.3.5. Insights que alimentan el needfinding y el EventStorming](#s-2-2-3-5)
+    - [2.3. Needfinding](#s-2-3)
+        - [2.3.1. User Personas](#s-2-3-1)
+        - [2.3.2. User Task Matrix](#s-2-3-2)
+        - [2.3.3. User Journey Mapping](#s-2-3-3)
+        - [2.3.4. Empathy Mapping](#s-2-3-4)
+    - [2.4. Big Picture EventStorming](#s-2-4)
+    - [2.5. Ubiquitous Language](#s-2-5)
+- [Capítulo III: Requirements Specification](#s-cap-iii)
+    - [3.1. User Stories and Technical Stories](#s-3-1)
+    - [3.2. Impact Mapping](#s-3-2)
+    - [3.3. Product Backlog](#s-3-3)
+- [Capítulo IV: Solution Software Design](#s-cap-iv)
+    - [4.1. Strategic-Level Domain-Driven Design](#s-4-1)
+        - [4.1.1. Design-Level EventStorming](#s-4-1-1)
+            - [4.1.1.1. Candidate Context Discovery](#s-4-1-1-1)
+            - [4.1.1.2. Domain Message Flows Modeling](#s-4-1-1-2)
+            - [4.1.1.3. Bounded Context Canvases](#s-4-1-1-3)
+        - [4.1.2. Context Mapping](#s-4-1-2)
+        - [4.1.3. Software Architecture](#s-4-1-3)
+            - [4.1.3.1. Software Architecture System Landscape Diagram](#s-4-1-3-1)
+            - [4.1.3.2. Software Architecture Context Level Diagrams](#s-4-1-3-2)
+            - [4.1.3.3. Software Architecture Container Level Diagrams](#s-4-1-3-3)
+            - [4.1.3.4. Software Architecture Deployment Diagrams](#s-4-1-3-4)
+    - [4.2. Tactical-Level Domain-Driven Design](#s-4-2)
+        - [4.2.1. Bounded Context: Plant Monitoring](#s-4-2-1)
+            - [4.2.1.1. Domain Layer](#s-4-2-1-1)
+            - [4.2.1.2. Interface Layer](#s-4-2-1-2)
+            - [4.2.1.3. Application Layer](#s-4-2-1-3)
+            - [4.2.1.4. Infrastructure Layer](#s-4-2-1-4)
+            - [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-1-5)
+            - [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-1-6)
+                - [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-1-6-1)
+                - [4.2.1.6.2. Bounded Context Database Design Diagram](#s-4-2-1-6-2)
+        - [4.2.2. Bounded Context: Safety & Actuation](#s-4-2-2)
+            - [4.2.2.1. Domain Layer](#s-4-2-2-1)
+            - [4.2.2.2. Interface Layer](#s-4-2-2-2)
+            - [4.2.2.3. Application Layer](#s-4-2-2-3)
+            - [4.2.2.4. Infrastructure Layer](#s-4-2-2-4)
+            - [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-2-5)
+            - [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-2-6)
+                - [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-2-6-1)
+                - [4.2.2.6.2. Bounded Context Database Design Diagram](#s-4-2-2-6-2)
+        - [4.2.3. Bounded Context: Device & Edge Management](#s-4-2-3)
+            - [4.2.3.1. Domain Layer](#s-4-2-3-1)
+            - [4.2.3.2. Interface Layer](#s-4-2-3-2)
+            - [4.2.3.3. Application Layer](#s-4-2-3-3)
+            - [4.2.3.4. Infrastructure Layer](#s-4-2-3-4)
+            - [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-3-5)
+            - [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-3-6)
+                - [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-3-6-1)
+                - [4.2.3.6.2. Bounded Context Database Design Diagram](#s-4-2-3-6-2)
+        - [4.2.4. Bounded Context: Identity & Access](#s-4-2-4)
+            - [4.2.4.1. Domain Layer](#s-4-2-4-1)
+            - [4.2.4.2. Interface Layer](#s-4-2-4-2)
+            - [4.2.4.3. Application Layer](#s-4-2-4-3)
+            - [4.2.4.4. Infrastructure Layer](#s-4-2-4-4)
+            - [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-4-5)
+            - [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-4-6)
+                - [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-4-6-1)
+                - [4.2.4.6.2. Bounded Context Database Design Diagram](#s-4-2-4-6-2)
+- [Capítulo V: Solution UI/UX Design](#s-cap-v)
+    - [5.1. Style Guidelines](#s-5-1)
+        - [5.1.1. General Style Guidelines](#s-5-1-1)
+        - [5.1.2. Web, Mobile and IoT Style Guidelines](#s-5-1-2)
+    - [5.2. Information Architecture](#s-5-2)
+        - [5.2.1. Organization Systems](#s-5-2-1)
+        - [5.2.2. Labeling Systems](#s-5-2-2)
+        - [5.2.3. SEO Tags and Meta Tags](#s-5-2-3)
+        - [5.2.4. Searching Systems](#s-5-2-4)
+        - [5.2.5. Navigation Systems](#s-5-2-5)
+    - [5.3. Landing Page UI Design](#s-5-3)
+        - [5.3.1. Landing Page Wireframe](#s-5-3-1)
+        - [5.3.2. Landing Page Mock-up](#s-5-3-2)
+    - [5.4. Applications UX/UI Design](#s-5-4)
+        - [5.4.1. Applications Wireframes](#s-5-4-1)
+        - [5.4.2. Applications Wireflow Diagrams](#s-5-4-2)
+        - [5.4.3. Applications Mock-ups](#s-5-4-3)
+        - [5.4.4. Applications User Flow Diagrams](#s-5-4-4)
+    - [5.5. Applications Prototyping](#s-5-5)
+    - [5.6. IoT Device Design](#s-5-6)
+- [Capítulo VI: Product Implementation, Validation & Deployment](#s-cap-vi)
+    - [6.1. Software Configuration Management](#s-6-1)
+        - [6.1.1. Software Development Environment Configuration](#s-6-1-1)
+        - [6.1.2. Source Code Management](#s-6-1-2)
+        - [6.1.3. Source Code Style Guide & Conventions](#s-6-1-3)
+        - [6.1.4. Software Deployment Configuration](#s-6-1-4)
+    - [6.2. Landing Page, Services & Applications Implementation](#s-6-2)
+    - [6.3. Validation Interviews](#s-6-3)
+        - [6.3.1. Diseño de Entrevistas](#s-6-3-1)
+        - [6.3.2. Registro de Entrevistas](#s-6-3-2)
+        - [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
+    - [6.4. Video About-the-Product](#s-6-4)
+- [Conclusiones](#s-conclusiones)
+    - [Video About-the-Team](#s-video-about-the-team)
+- [Bibliografía](#s-bibliografia)
+- [Anexos](#s-anexos)
+    - [Videos de Exposiciones](#s-anexo-videos-exposiciones)
+    - [Repositorios y artefactos](#s-anexo-repositorios)
 
 <!-- TOC:end -->
 
@@ -505,13 +492,13 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <tbody>
     <tr>
       <td align="left">Trabaja en equipo para proporcionar liderazgo en forma conjunta</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Participó activamente en las entrevistas con encargados de planta y supervisores, aportando evidencia de campo para decidir el alcance de SafePlant. Lideró de forma compartida la elaboración de User Stories, la actualización del Product Backlog y el modelado de Domain Message Flows, además de contribuir al Big Picture EventStorming. Con ello, alineó requisitos, dominio y entregables del informe.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Asumió el arranque del Startup Profile, la descripción de Macallys, el Solution Profile y la metodología Lean UX (problem statements, assumptions, hypothesis y canvas). Registró entrevistas y aportó al Big Picture EventStorming, dando al equipo una visión de producto compartida desde el Capítulo I.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Participó en entrevistas y en el EventStorming, y luego lideró el descubrimiento táctico: Domain Message Flows, Candidate Context Discovery y Design-Level EventStorming. Su trabajo conectó el lenguaje del dominio con los bounded contexts del Capítulo IV.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Lideró el análisis competitivo, las estrategias frente a competidores, el needfinding y la User Task Matrix. Aportó al EventStorming para que las decisiones de diferenciación se sostuvieran en evidencias de usuario y de mercado.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Participó en el EventStorming y asumió el liderazgo de la arquitectura de software: System Landscape, Tactical-Level DDD y diagramas de contexto C4. Aseguró coherencia entre el dominio descubierto y la estructura técnica de SafePlant.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Diseñó el guion de entrevistas, participó en su ejecución y colaboró en User Stories, Impact Mapping, Domain Message Flows y EventStorming. Aportó liderazgo en la trazabilidad de necesidades de supervisor y encargado hacia el backlog.</td>
+      <td align="left">Los integrantes demostraron liderazgo compartido en AV1: cada uno condujo una franja del informe —producto, elicitación, dominio o arquitectura— y retroalimentó al resto. El compromiso y la comunicación constante permitieron cerrar la entrega con una visión única de SafePlant.</td>
     </tr>
     <tr>
       <td align="left">Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Coordinó la integración de capítulos en el informe, la evidencia de entrevistas y la consistencia del backlog con las historias. Facilitó que el equipo trabajara sobre un mismo repositorio y un mismo lenguaje ubicuo.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Planificó y completó los entregables iniciales del perfil de startup y Lean UX, dejando plantillas y segmentos claros para que el resto del equipo continuara el needfinding y las entrevistas.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Organizó el paso del EventStorming de Big Picture al nivel de diseño, cumpliendo los objetivos de delimitar agregados y bounded contexts con el equipo.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Estableció metas de análisis (competidores, needfinding y task matrix) y las cerró con artefactos reutilizables para personas, journeys y el tablero de EventStorming.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Planificó los entregables de arquitectura de AV1 y los documentó en el Capítulo IV, alineando landscape, contexto y DDD táctico con lo acordado en Miro.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Definió el diseño de entrevistas y el Impact Map, planificando preguntas y resultados que el equipo usó para priorizar historias y flujos de dominio.</td>
+      <td align="left">En AV1 el equipo construyó un entorno colaborativo: metas por capítulo, tablero compartido en Miro y un informe versionado. Cada integrante planificó su frente y cumplió los objetivos de elicitación, especificación y diseño inicial de SafePlant.</td>
     </tr>
   </tbody>
 </table>
@@ -546,64 +533,131 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 ### 1.1.2. Perfiles de integrantes del equipo
 
 <table>
-  <thead>
-    <tr>
-      <th align="center">Foto</th>
-      <th align="left">Apellidos y Nombres</th>
-      <th align="left">Código</th>
-      <th align="left">Carrera</th>
-      <th align="left">Conocimientos técnicos y habilidades</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td align="center"><img src="../assets/01-capitulo-i/equipo/angelo.jpg" alt="Angelo Héctor Solano Armas" width="140"></td>
-      <td align="left">Solano Armas, Angelo Héctor</td>
-      <td align="left">U20231B775</td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left">Interés marcado por el curso y por las tecnologías emergentes, en especial las aplicadas a IoT. Actitud colaborativa, comunicación clara y disposición constante para aprender. Enfoque positivo ante los retos del proyecto y compromiso con el trabajo en equipo.</td>
+      <td rowspan="4" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/angelo.jpg" alt="Angelo Héctor Solano Armas" width="140">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Angelo Héctor Solano Armas</td>
     </tr>
     <tr>
-      <td align="center">![Gordillo Ramos, Santiago Alonso](../assets/01-capitulo-i/equipo/integrante-2.png)</td>
-      <td align="left">Gordillo Ramos, Santiago Alonso</td>
-      <td align="left">U202215160</td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Código:</strong> U20231B775</td>
     </tr>
     <tr>
-      <td align="center">![Solis Chang, Santiago Valentino](../assets/01-capitulo-i/equipo/integrante-3.png)</td>
-      <td align="left">Solis Chang, Santiago Valentino</td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td align="center">![Huaman Cuba, Johan Giovani](../assets/01-capitulo-i/equipo/integrante-4.png)</td>
-      <td align="left">Huaman Cuba, Johan Giovani</td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Descripción:</strong> Interés marcado por el curso y por las tecnologías emergentes, en especial las aplicadas a IoT. Actitud colaborativa, comunicación clara y disposición constante para aprender. Enfoque positivo ante los retos del proyecto y compromiso con el trabajo en equipo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="4" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-2.jpg" alt="Santiago Alonso Gordillo Ramos" width="140">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Santiago Alonso Gordillo Ramos</td>
     </tr>
     <tr>
-      <td align="center"></td>
-      <td align="left">Baldeon Vivar, Santiago Armando</td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Código:</strong> U202215160</td>
     </tr>
     <tr>
-      <td align="center"></td>
-      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td align="center"></td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software, con conocimiento de frontend. Le interesa JavaScript y cuenta con base sólida en HTML y CSS. Trabaja bien en equipo y se organiza para entregar el trabajo a tiempo. A futuro busca especializarse en ciberseguridad.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="4" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-3.png" alt="Johan Giovani Huamán Cuba" width="140">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Johan Giovani Huamán Cuba</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> U202417448</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software. Le interesa acumular conocimientos de distintos campos: le gusta la tecnología y, sobre todo, lo que se puede construir con ella. Mira el pasado con cautela y proyecta soluciones hacia el futuro.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="4" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-1.png" alt="Santiago Armando Baldeon Vivar" width="140">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Santiago Armando Baldeon Vivar</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> U202319881</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con interés en el análisis de producto y la investigación de usuarios. Se organiza con claridad, comunica con precisión y aporta una mirada competitiva para diferenciar la solución. Comprometido con el trabajo en equipo y con traducir hallazgos de campo en decisiones de diseño.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="4" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-4.jpg" alt="Sergio Sebastián Iglesias Pérez" width="140">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Sergio Sebastián Iglesias Pérez</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> U202316118</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con afinidad por la arquitectura de software y el modelado de sistemas. Trabaja con orden, documenta con rigor y busca que cada diagrama se traduzca en una decisión técnica útil. Aporta liderazgo en el diseño estructural y se alinea con el equipo para mantener coherencia entre dominio e implementación.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="4" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-5.png" alt="Gabriel Sanchez Gonzales" width="140">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Gabriel Sanchez Gonzales</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> U202310609</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con interés en requisitos, entrevistas y trazabilidad del producto. Participa con iniciativa, escucha a los usuarios y convierte sus necesidades en historias e impacto medible. Colabora con el equipo para que el análisis, el backlog y el dominio hablen el mismo lenguaje.</td>
     </tr>
   </tbody>
 </table>
@@ -612,7 +666,7 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 ## 1.2. Solution Profile
 
 <a id="s-1-2-1"></a>
-### 1.2.1 Antecedentes y problemática
+### 1.2.1. Antecedentes y problemática
 
 **Antecedentes**
 
@@ -646,7 +700,7 @@ Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetr
 <a id="s-1-2-2"></a>
 
 <a id="s-1-2-2"></a>
-### 1.2.2 Lean UX Process
+### 1.2.2. Lean UX Process
 
 <a id="s-1-2-2-1"></a>
 #### 1.2.2.1. Lean UX Problem Statements
@@ -717,13 +771,13 @@ Sabremos que hemos tenido éxito cuando observemos una reducción drástica en e
 <a id="s-1-3"></a>
 ## 1.3. Segmentos objetivo
 
-<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil"></a>
-#### **Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**
+<a id="s-1-3-1"></a>
+### 1.3.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
 
 Profesionales encargados de la seguridad industrial en campo, que están en constante movimiento a lo largo de las distintas zonas críticas de la planta. Su herramienta principal es la pp Móvil, a través de la cual realizan el monitoreo en tiempo real de las métricas ambientales y el control del sistema. Se enfrentan a ruidos fuertes, espacios amplios y necesitan información de manera rápida a través de alertas push y notificaciones de emergencia. 
 
-<a id="s-segmento-objetivo-2-encargado-de-planta-app-web"></a>
-#### **Segmento Objetivo 2: Encargado de Planta (App Web)**
+<a id="s-1-3-2"></a>
+### 1.3.2. Segmento objetivo 2: Encargado de Planta (App Web)
 
 Personal de la gerencia técnica y operativa, responsables del rendimiento general y del cumplimiento normativo de la planta industrial. Trabaja mediante la **App Web**, desde una oficina o sala de control. Este segmento se encarga de la configuración del sistema, definiendo los topes máximos de CO2 o decibeles por cada zona de la fábrica. Además, analiza históricos, instala actualizaciones del software de los sensores y emite reportes ambientales semanales o mensuales para sustentar auditorías frente a los inspectores laborales.
 
@@ -908,47 +962,45 @@ Personal de la gerencia técnica y operativa, responsables del rendimiento gener
 
 Las entrevistas fueron grabadas en video previo consentimiento de los participantes y se organizaron por segmento objetivo. Cada registro incluye los datos generales del entrevistado, la captura del video, el enlace de acceso, el timing dentro de la grabación consolidada, la duración y un resumen descriptivo de las respuestas obtenidas.
 
-> Nota para el equipo: las celdas marcadas entre corchetes deben completarse con los datos reales de cada entrevista. Las capturas se colocan en assets/chapter-2/ respetando los nombres de archivo indicados en cada etiqueta de imagen.
+<a id="s-2-2-2-1"></a>
+#### 2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
 
-<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad"></a>
-#### Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
-
-<a id="s-entrevista-1"></a>
-##### Entrevista 1
+<a id="s-2-2-2-1-1"></a>
+##### 2.2.2.1.1. Entrevista 1
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto, ej: Supervisor SSOMA]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Planta de producción, campo, etc.]<br>
-      <b>Tipo de establecimiento:</b> [Ej: Fábrica metalmecánica]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Anyeli Vilcapaza<br>
+      <b>Edad:</b> 26 años<br>
+      <b>Distrito:</b> Surco<br>
+      <b>Ocupación:</b> Supervisora de Seguridad y Salud Ocupacional (SSOMA) de Planta<br>
+      <b>Experiencia laboral:</b> 4 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta de producción (zonas de soldadura y procesos industriales)<br>
+      <b>Tipo de establecimiento:</b> Fábrica metalmecánica<br>
+      <b>Nivel tecnológico:</b> Básico / Intermedio<br>
+      <b>Timing:</b> 00:00:00 - 00:07:20<br>
+      <b>Duración:</b> 07:20<br>
+      <b>Entrevistador:</b> Santiago Armando Baldeon
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQDgMkxRgpj_SZWQGkOVH52TAWt6KcdsMqmX7T0vqytQdNY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SBHV8R">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción detallada de cómo realiza actualmente el monitoreo de seguridad en la planta. Explicar qué herramientas manuales o antiguas utiliza, cuánto tiempo le toma y cuáles son sus mayores frustraciones al no tener control remoto. Mencionar incidentes pasados relacionados con CO2 o ruido.]
+      <b>Resumen:</b> La supervisora describe un proceso de monitoreo reactivo y manual: la planta cuenta con medidores fijos y puntuales de CO₂ y ruido que dejan "zonas ciegas" sin cobertura, y cuando se detecta una condición peligrosa, ella se entera por radio o porque alguien acude físicamente a avisarle, nunca mediante una alerta automática. Relata un incidente donde un extractor de la zona de soldadura falló y un operario llegó a marearse antes de que se activara cualquier respuesta; desde el aviso hasta resolver el problema (evacuar, buscar un medidor portátil en la oficina de mantenimiento, confirmar el nivel de CO₂ y activar el extractor de respaldo) pasaron unos 25 minutos, cuando con una alerta automática se habrían ganado al menos 15 minutos de anticipación. Tampoco existe forma de cruzar datos entre zonas, y la verificación post-incidente de que las medidas funcionaron es completamente manual: pasar lista, revisar medidores portátiles y redactar un reporte escrito, sin ningún registro automático auditable.
       <br><br>
-      [Detallar sus expectativas sobre una aplicación móvil para monitoreo en tiempo real: qué métricas necesita ver primero, cómo espera recibir las alertas de peligro y qué tan dispuesto está a adoptar una nueva tecnología en su rutina diaria.]
+      Sobre una futura aplicación móvil, espera ver de inmediato un resumen tipo semáforo (verde/amarillo/rojo) por zona, y al detectar una alerta roja necesita saber qué zona es, qué parámetro falló (CO₂, ruido o ambos), desde cuándo comenzó a subir y cuántas personas hay registradas trabajando ahí. Quiere un mapa digitalizado en tiempo real para ubicar el foco del problema sin depender de llamadas, y control manual remoto de extractores, sirenas o mamparas desde el celular para casos de fallo de sensores o escenarios no contemplados por la automatización. Exige que las alertas críticas tengan sonido y vibración distintivos, que no puedan silenciarse por accidente y que aparezcan con el teléfono bloqueado, diferenciándolas claramente de las alertas informativas. Se muestra receptiva a adoptar la tecnología, motivada por pasar de un enfoque de "cero incidentes" a uno de "cero sorpresas".
     </td>
   </tr>
 </table>
 
-<a id="s-entrevista-2"></a>
-##### Entrevista 2
+<a id="s-2-2-2-1-2"></a>
+##### 2.2.2.1.2. Entrevista 2
 
 <table border="1">
   <tr>
@@ -979,139 +1031,219 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
-<a id="s-entrevista-3"></a>
-##### Entrevista 3
+<a id="s-2-2-2-1-3"></a>
+##### 2.2.2.1.3. Entrevista 3
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Diego Ruiz del Solar<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Callao<br>
+      <b>Ocupación:</b> Supervisor de seguridad industrial<br>
+      <b>Experiencia laboral:</b> 3 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta de ensamblaje y producción<br>
+      <b>Tipo de establecimiento:</b> Planta de ensamblaje y producción<br>
+      <b>Nivel tecnológico:</b> Básico<br>
+      <b>Timing:</b> 00:00:00 - 00:06:16<br>
+      <b>Duración:</b> 06:16<br>
+      <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-3.png" alt="Entrevista 3 - Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-3.jpeg" alt="Entrevista 3 - Diego Ruiz del Solar, Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
+      <b>Resumen:</b> El trabajo de Diego consiste de rondas de manera presencial y mediciones manuales tradicionales, lo que genera margen de error en la detección de gases y ruidos. Ante situaciones de peligro, la respuesta es lenta y se pierde tiempo crítico en traslados para accionar algún tablero físico.
+      <br><br>
+      Le parece una grata idea contar con una aplicación móvil, destacando la opción del mapa de calor en tiempo real, alertas vibratorias persistentes y la opción de control remoto de mitigadores para actuar ante incidentes impredecibles que requieren intervención del personal antes de que la automatización se ejecute.
     </td>
   </tr>
 </table>
 
-<a id="s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta"></a>
-#### Segmento objetivo 2: Encargado de Planta (App Web)
+<a id="s-2-2-2-2"></a>
+#### 2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)
 
-<a id="s-entrevista-1-entrevista-1"></a>
-##### Entrevista 1
+<a id="s-2-2-2-2-1"></a>
+##### 2.2.2.2.1. Entrevista 1
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Ej: Gerente de Operaciones / Jefe de Planta]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
-      <b>Área de trabajo:</b> [Oficina técnica / Control de operaciones]<br>
-      <b>Tipo de establecimiento:</b> [Ej: Planta procesadora de alimentos]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Fabrizio Buselleu<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Lurín<br>
+      <b>Ocupación:</b> Gerente de Operaciones / Jefe de Planta, Metalúrgica del Pacífico S.A. (MEPSA)<br>
+      <b>Experiencia laboral:</b> 3 en gestión industrial<br>
+      <b>Área de trabajo:</b> Oficina técnica / Control de operaciones<br>
+      <b>Tipo de establecimiento:</b> Fundición y procesamiento de metales no ferrosos (cobre y zinc), con línea secundaria de tratamiento térmico y soldadura industrial para piezas estructurales destinadas a minería — Parque Industrial de Lurín<br>
+      <b>Nivel tecnológico:</b> Intermedio<br>
+      <b>Timing:</b> 00:00 - 9:59 <br>
+      <b>Duración:</b> 9:59 <br>
+      <b>Entrevistador:</b> Santiago Armando Baldeon
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-1.png" alt="Entrevista 1 - Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQAhj6V5o_7xTq1Y6UaKEpQMAQP3gcRDCNbpvQjGy2mHFiM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9b1b0f">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Describir cómo gestiona actualmente el cumplimiento de las normativas de salud ocupacional frente a entidades reguladoras. Mencionar los costos o multas que enfrenta la planta si hay accidentes por ruido o gases, y cómo lleva el registro histórico (probablemente en Excel o papel).]
+      <b>Resumen:</b> Fabrizio enfoca su gestión no solo en el cumplimiento normativo para evitar multas, sino en reducir los tiempos muertos por paradas de seguridad, que hoy le cuestan entre 40 minutos y 2 horas de producción cada vez que se dispara una alarma y hay que evacuar o detener una línea. Su meta a cinco años es reducir en 50% los incidentes ambientales y tener cero observaciones en auditorías de SUNAFIL por exposición a gases o ruido. Actualmente, el proceso de dar de alta un sensor nuevo es completamente manual (Excel, coordinación con mantenimiento, configuración manual de zona/umbral/destinatario de alerta), lo que ha generado sensores "huérfanos" que dejan de reportar sin que nadie lo note. A esto se suman desafíos físicos propios de una planta de fundición: degradación de señal WiFi por las estructuras metálicas del horno, sensores que se desalinean por vibración de maquinaria pesada, y puntos de medición de CO₂ cercanos a fuentes de calor que no todos los sensores comerciales soportan. Las actualizaciones normativas también se gestionan de forma manual, sensor por sensor, lo cual es lento y riesgoso si se omite alguno. Relata además un incidente donde tres sensores de la Zona B estuvieron caídos casi 6 horas sin que nadie lo detectara hasta el cambio de turno, dejando a la planta "operando a ciegas" en CO₂ durante ese periodo — al reportarlo a gerencia, no pudo responder con certeza si algo había ocurrido durante ese lapso.
       <br><br>
-      [Explicar su postura frente a la implementación de un panel web centralizado que le permita configurar topes de decibeles o partes por millón de CO2, y cómo la descarga de reportes automatizados impactaría su productividad y las auditorías.]
+      Frente a un panel web centralizado, se muestra muy receptivo: quiere visualizar todos los sensores en un mapa de planta (no en tablas), con colores según estado, poder configurar umbrales de decibeles y ppm de CO₂ sin depender de soporte técnico —aunque restringiría este permiso solo a sí mismo y al jefe de SSOMA corporativo, dado el riesgo de que un supervisor baje un umbral indebidamente—, y contar con notificaciones configurables por severidad y rol para no saturarse de alertas irrelevantes. Considera fundamental un registro histórico y de auditoría con al menos 12 meses de retención, tanto para responder a requerimientos de SUNAFIL como para reconstruir incidentes o denuncias y detectar patrones anómalos en el proceso. Anticipa que la exportación de reportes en PDF y la automatización de estos registros impactarían positivamente su productividad y facilitarían considerablemente las auditorías externas, reduciendo el trabajo manual y el riesgo de errores humanos que hoy enfrenta.
     </td>
   </tr>
 </table>
 
-<a id="s-entrevista-2-entrevista-2"></a>
-##### Entrevista 2
+<a id="s-2-2-2-2-2"></a>
+##### 2.2.2.2.2. Entrevista 2
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Carlos Mendoza<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Ate<br>
+      <b>Ocupación:</b> Encargado de Planta<br>
+      <b>Experiencia laboral:</b> 4 años en gestión industrial<br>
+      <b>Área de trabajo:</b> Gerencia de Operaciones y Mantenimiento<br>
+      <b>Tipo de establecimiento:</b> Planta de Manufactura<br>
+      <b>Nivel tecnológico:</b> Intermedio / Avanzado<br>
+      <b>Timing:</b> 00:00:00 - 00:07:55<br>
+      <b>Duración:</b> 07:55<br>
+      <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-2.png" alt="Entrevista 2 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-2.jpeg" alt="Entrevista 2 - Carlos Mendoza, Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <b>Enlace:</b> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQCDpfLyPE3JSbAYwBJjdvnCAegV0RnbcJdQn_prFi3eCJU?e=B84siT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+      <b>Resumen:</b> El problema principal que comenta es la enorme pérdida de tiempo tratando de organizar datos ambientales que se encuentran dispersos para poder generar reportes. Sufre de frustraciones y estrés por la dificultad de tener que actualizar máquina por máquina y la falta de permisos. Sus expectativas sobre una plataforma web se centran en tener un dashboard donde pueda controlar de manera general la información de los sensores IoT con las mitigaciones automáticas, permitiendo exportar reportes de manera sencilla y configurar los límites legales de forma centralizada.
     </td>
   </tr>
 </table>
 
-<a id="s-entrevista-3-entrevista-3"></a>
-##### Entrevista 3
+<a id="s-2-2-2-2-3"></a>
+##### 2.2.2.2.3. Entrevista 3
 
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Nathaly Solano Armas<br>
+      <b>Edad:</b> 28 años<br>
+      <b>Distrito:</b> Ate<br>
+      <b>Ocupación:</b> Encargada de planta<br>
+      <b>Experiencia laboral:</b> 6 años en gestión industrial<br>
+      <b>Área de trabajo:</b> Monitoreo y control de planta<br>
+      <b>Tipo de establecimiento:</b> Planta metalmecánica de tamaño medio<br>
+      <b>Nivel tecnológico:</b> Intermedio<br>
+      <b>Timing:</b> 00:00:00 - 00:11:06<br>
+      <b>Duración:</b> 11:06<br>
+      <b>Entrevistador:</b> Angelo Héctor Solano Armas
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-3.png" alt="Entrevista 3 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-3.jpg" alt="Entrevista 3 - Nathaly Solano Armas, Encargada de Planta" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
+      <b>Enlace:</b> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC3qQs5We4vS6zsu7M-w2DgATcBFhIcHwh6Y3EL3vL9im8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=frhwHe">Ver entrevista en Microsoft Stream</a>
       <br><br>
-      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
+      <b>Resumen:</b> Para Nathaly, la planta debe dejar de reaccionar cuando ya hay personal expuesto: el monitoreo continuo y la automatización deben bajar el tiempo de respuesta ante CO₂ y ruido, reducir alertas críticas con ventilación preventiva y dejar evidencia para auditorías, en lugar de depender de recorridos manuales. Lo que más le quita tiempo es armar reportes a mano, alinear umbrales entre turnos, dar altas y bajas de acceso y coordinar sensores caídos; configurar equipos en papel o Excel no escala entre áreas como soldadura, compresores y calderas.
+      <br><br>
+      Registrar sensores o actuadores falla si no se asocian al área correcta y al tipo de dispositivo (CO₂, ruido, PIR, extractor, sirena o mampara); identificadores duplicados, firmware distinto y zonas sin señal desarman el inventario. Los umbrales no son únicos: varían por espacio, tipo de ruido y presencia de personal; un tope mal calibrado no dispara o satura de falsas alertas. En la web exige dashboard por área, historial de mediciones, alertas y acciones, usuarios y roles, y trazabilidad de quién cambió la configuración; el control de actuadores lo deja al supervisor en el celular. Solo otorga rol de supervisor a quien opera seguridad en campo. Las normas llegan por correo o PDF, se traducen a Excel y se copian tarde a cada zona, por lo que quiere actualizar parámetros con versión y fecha. Una caída de internet o de un ESP32 le quita visibilidad y evidencia ante SST: el sistema debe marcar el dispositivo como no disponible y aguantar offline en el gateway. El historial es crítico para auditorías, overrides y patrones por área. Automatizaría la aplicación de umbrales por norma y el armado del reporte de eventos.
     </td>
   </tr>
 </table>
 
 <a id="s-2-2-3"></a>
 ### 2.2.3. Análisis de entrevistas
+
+| Entrevistado | Segmento | Tipo de planta | Nivel tecnológico | Duración |
+|---|---|---|---|---|
+| Anyeli Vilcapaza | Supervisora SSOMA | Fábrica metalmecánica (soldadura y procesos) | Básico / Intermedio | 07:20 |
+| Diego Ruiz del Solar | Supervisor de seguridad industrial | Planta de ensamblaje y producción | Básico | 06:16 |
+| Fabrizio Buselleu | Gerente de operaciones / jefe de planta | Fundición y metales no ferrosos (MEPSA) | Intermedio | 09:59 |
+| Carlos Mendoza | Encargado de planta | Planta de manufactura | Intermedio / Avanzado | 07:55 |
+| Nathaly Solano Armas | Encargada de planta | Planta metalmecánica de tamaño medio | Intermedio | 11:06 |
+
+La muestra cubre metalmecánica, fundición y ensamblaje, con madurez tecnológica de básica a intermedia-avanzada. Eso evita un sesgo de una sola planta “ideal” y permite distinguir lo que es común al rol de lo que es propio del contexto físico (interferencia metálica, calor, vibración).
+
+<a id="s-2-2-3-1"></a>
+#### 2.2.3.1. Hallazgos del segmento Supervisor de Seguridad
+
+En campo el monitoreo actual es **reactivo y presencial**. Anyeli se entera de un riesgo por radio o porque alguien llega a avisarle; no existe alerta automática ni cruce de datos entre áreas. Diego recorre la planta con mediciones manuales, con margen de error en gases y ruido, y pierde tiempo crítico al desplazarse hasta un tablero físico para accionar un mitigador. El incidente relatado por Anyeli cuantifica el costo de ese modelo: un extractor de soldadura falló, un operario se mareó y el ciclo aviso–evacuar–medir con portátil–activar respaldo tomó unos **25 minutos**; ella estima que una alerta automática habría adelantado al menos **15 minutos**.
+
+La verificación post-incidente también es manual (pasar lista, revisar medidores, redactar un reporte) y no deja rastro auditable. Ambos supervisores coinciden en la forma de la solución móvil:
+
+- Un **mapa o semáforo en tiempo real** (verde / amarillo / rojo o mapa de calor) para ubicar el foco sin llamadas.
+- En alerta roja: **área, parámetro (CO₂, ruido o ambos), desde cuándo sube y si hay personal** en el lugar.
+- **Override remoto** de extractores, sirenas o mamparas cuando el sensor falla o el escenario no está cubierto por la automatización.
+- Alertas críticas con **sonido y vibración persistentes**, visibles con el teléfono bloqueado y distintas de las informativas.
+
+Anyeli formula el cambio de mentalidad que el producto debe sostener: pasar de “cero incidentes” a **“cero sorpresas”**. Diego refuerza que la automatización no reemplaza al supervisor: necesita intervenir *antes* de que la regla automática se ejecute cuando el evento es impredecible.
+
+<a id="s-2-2-3-2"></a>
+#### 2.2.3.2. Hallazgos del segmento Encargado de Planta
+
+El encargado no recorre la planta: **gobierna, parametriza y rinde cuentas**. Los tres entrevistados describen un backoffice fragmentado en Excel, papel, correo y coordinación con mantenimiento.
+
+Fabrizio mide el problema en dinero y tiempo de línea: cada alarma que obliga a evacuar o parar le cuesta entre **40 minutos y 2 horas** de producción. Su meta a cinco años es bajar 50 % los incidentes ambientales y llegar a **cero observaciones SUNAFIL** por gases o ruido. El alta de un sensor es manual (zona, umbral, destinatario) y ha producido **sensores huérfanos**; en un caso, tres sensores de la Zona B estuvieron caídos **casi seis horas** sin que nadie lo notara hasta el cambio de turno, y no pudo responder a gerencia si algo ocurrió en ese lapso. Añade restricciones físicas de fundición: Wi-Fi degradada por estructuras metálicas, desalineación por vibración y puntos de CO₂ cerca de calor.
+
+Carlos resume el mismo dolor en productividad gerencial: datos ambientales dispersos, estrés por actualizar **máquina por máquina** y falta de permisos. Espera un dashboard que unifique sensores y mitigaciones, exporte reportes y centralice límites legales.
+
+Nathaly cierra el ciclo operativo. Quiere dejar de reaccionar cuando el personal ya está expuesto: monitoreo continuo, ventilación preventiva y evidencia para auditorías. Le quitan tiempo armar reportes a mano, alinear umbrales entre turnos, dar altas y bajas de acceso y coordinar dispositivos caídos. El inventario se rompe si el sensor o actuador no se asocia al **área correcta y al tipo** (CO₂, ruido, PIR, extractor, sirena, mampara). Los umbrales **no son únicos**: varían por espacio, tipo de ruido y presencia de personal; un tope mal calibrado no dispara o satura de falsas alertas. Las normas llegan por correo o PDF, se copian tarde a cada área y quiere versionar parámetros con fecha. Una caída de internet o de un ESP32 le quita visibilidad ante SST: el sistema debe marcar el dispositivo como no disponible y **aguantar offline en el gateway**.
+
+Los tres encargados piden la misma superficie web: dashboard (mapa o por área, no solo tablas), configuración de umbrales sin soporte técnico, exportación de reportes (PDF) e **historial / auditoría** (Fabrizio pide al menos 12 meses). En permisos hay consenso de control: Fabrizio restringiría umbrales a él y al jefe SSOMA corporativo; Nathaly solo otorga rol de supervisor a quien opera seguridad en campo y deja el control de actuadores al celular del supervisor.
+
+<a id="s-2-2-3-3"></a>
+#### 2.2.3.3. Patrones transversales y divergencias de rol
+
+| Tema | Evidencia | Implicación para SafePlant |
+|---|---|---|
+| Visibilidad en tiempo real por área | Zonas ciegas (Anyeli); rondas manuales (Diego); sensores caídos 6 h (Fabrizio); ESP32 offline (Nathaly) | Telemetría continua de CO₂, ruido y presencia; estado “no disponible” del dispositivo; semáforo / mapa en móvil y dashboard en web |
+| Tiempo de respuesta | 25 min de ciclo en soldadura (Anyeli); traslado a tablero (Diego); paradas de 40 min–2 h (Fabrizio) | Detección + actuación automática de extractores, sirenas y mamparas; override remoto desde el móvil |
+| Configuración manual que no escala | Excel y alta sensor a sensor (Fabrizio, Carlos, Nathaly); normas por correo/PDF (Nathaly) | App web para umbrales por área, inventario de dispositivos y versión / fecha de la norma |
+| Umbrales y falsos positivos | Umbrales distintos por área y presencia (Nathaly); riesgo de bajar un tope (Fabrizio) | Umbrales por área, no globales; permiso de configuración solo en el encargado; correlación con PIR |
+| Auditoría y reportes | Reporte escrito post-incidente (Anyeli); 12 meses y SUNAFIL (Fabrizio); datos dispersos (Carlos); overrides y patrones (Nathaly) | Historial de mediciones, alertas, acciones y cambios de configuración; exportación PDF |
+| Canal según el rol | Móvil para decidir y actuar (Anyeli, Diego); web para gobernar (Fabrizio, Carlos, Nathaly) | Separación estricta: supervisor opera y hace override en móvil; encargado parametriza, usuarios y reportes en web |
+| Resiliencia de planta | Wi-Fi metálica y calor (Fabrizio); offline de gateway (Nathaly) | Procesamiento en el edge, persistencia local y sincronización al recuperar enlace |
+
+La divergencia más útil para el diseño no es de “gusto de interfaz”, sino de **responsabilidad**. El supervisor necesita decidir en segundos con el teléfono en la mano; el encargado necesita que nadie más rebaje un umbral y que un auditor pueda reconstruir qué pasó. SafePlant debe impedir que esas dos intenciones se mezclen en el mismo canal.
+
+<a id="s-2-2-3-4"></a>
+#### 2.2.3.4. Contrastación con las hipótesis Lean UX
+
+Las entrevistas **confirman y precisan** las tres hipótesis del Capítulo I:
+
+1. **Automatización preventiva.** El incidente del extractor y la demanda de Nathaly de ventilar antes de que haya personal expuesto sostienen la hipótesis de detectar CO₂/ruido y accionar extractores sin esperar un recorrido. Se añade una condición de diseño: la automatización debe convivir con override manual, no sustituirlo.
+2. **Monitoreo remoto ágil.** Anyeli y Diego validan alertas inmediatas y control de mitigadores desde el móvil. El umbral “menos de 1 minuto” es creíble frente a los 25 minutos actuales, siempre que la alerta crítica no se pueda silenciar por accidente.
+3. **Parametrización y cumplimiento.** Fabrizio, Carlos y Nathaly validan el panel web de umbrales, dashboard e histórico. La hipótesis de +30 % de eficiencia gerencial se ancla en dos tareas que hoy son manuales y que los tres automatizarían: aplicar la norma a todas las áreas y armar el reporte de eventos.
+
+Quedan supuestos abiertos, no refutados: la magnitud exacta del 90 % de reducción de exposición y del 40 % menos de alertas críticas exige medición en piloto; la interferencia industrial (metal, calor, vibración) es un riesgo de infraestructura, no de discurso de usuario.
+
+<a id="s-2-2-3-5"></a>
+#### 2.2.3.5. Insights que alimentan el needfinding y el EventStorming
+
+Del análisis se retienen cinco decisiones de dominio que luego aparecen en personas, journeys y en el Big Picture EventStorming:
+
+1. La unidad de control no es “la planta” ni un mapa cartográfico: es el **área industrial** (soldadura, compresores, calderas, fundición) con umbral, dispositivos y personal propios.
+2. Un valor ambiental sin **presencia** no tiene la misma urgencia que un valor con personal expuesto; por eso el PIR entra al lenguaje del supervisor.
+3. El evento de negocio no termina en “se superó el umbral”: termina cuando se **actuó**, se verificó y quedó **evidencia**.
+4. Un dispositivo que deja de reportar es tan grave como un exceso no detectado: debe existir el hecho “sensor no disponible”.
+5. Identidad y permisos son parte del problema de seguridad ocupacional: mal rol o umbral editable por cualquiera convierte la plataforma en un riesgo.
+
+Estos insights cierran el ciclo de elicitación: las entrevistas no solo describen frustraciones, sino que delimitan agregados y contextos (sesión y acceso, configuración de planta, ingesta de telemetría, detección y actuación) que se desarrollan en 2.3 y 2.4.
 
 <a id="s-2-3"></a>
 ## 2.3. Needfinding
@@ -1174,7 +1306,11 @@ Segmento Objetivo: Encargado de Planta:
 <a id="s-2-4"></a>
 ## 2.4. Big Picture EventStorming
 
-A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafeGuard. Se trabajó sobre un mismo tablero digital, avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafePlant. Se trabajó sobre un mismo [tablero digital en Miro](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821), avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+
+**Tablero Miro:** [Big Picture EventStorming — SafePlant](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821)
+
+![Big Picture EventStorming — vista general](../assets/02-capitulo-ii/eventstorming/big-picture-eventstorming.png)
 
 **Paso 1 — Unstructured Exploration**
 
@@ -1348,8 +1484,8 @@ Finalmente se encerraron los bloques del tablero como candidatos a bounded conte
 
 ---
 
-<a id="s-chapter-iii-requirements-specification"></a>
-# Chapter III: Requirements Specification
+<a id="s-cap-iii"></a>
+# Capítulo III: Requirements Specification
 
 
 <table>
@@ -4068,32 +4204,72 @@ Then the API responds 403 Forbidden with code equal to insufficient_scope.
 <a id="s-4-1-1"></a>
 ### 4.1.1. Design-Level EventStorming
 
-A partir del Big Picture EventStorming del Capítulo II y de las épicas EP02–EP07, el equipo realizó una sesión de **Design-Level EventStorming** para refinar el modelo hacia la implementación. Se avanzó por capas sobre el mismo tablero. El resultado son cuatro contextos: Identity & Access, Plant Monitoring, Safety & Actuation y Device & Edge Management. El objetivo fue validar flujos críticos —autenticación por rol, registro de telemetría, evaluación de exposición con actuación automática y ciclo de vida de dispositivos edge— antes de definir message flows y el context map.
+A partir del Big Picture EventStorming del Capítulo II y de las épicas EP02–EP07, el equipo realizó una sesión de **Design-Level EventStorming** para refinar el modelo hacia la implementación. Se trabajó sobre el mismo tablero, avanzando por las diez capas de Brandolini: eventos, orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, bounded contexts. El resultado son cuatro contextos: Identity & Access, Plant Monitoring, Safety & Actuation y Device & Edge Management (DEC-001). El objetivo fue validar flujos críticos —autenticación por rol, registro de telemetría, evaluación de exposición con actuación automática y ciclo de vida de dispositivos edge— antes de definir message flows y el context map.
 
-**Captura 1 — Unstructured exploration y timelines** (eventos de dominio en orden de ocurrencia).
+**Paso 1 — Unstructured Exploration**
 
-![Design-Level EventStorming — events and timelines](../assets/04-capitulo-iv/ddd/es-01-events-timelines.png)
+Se volcaron en notas amarillas todos los hechos de dominio relevantes sin imponer aún un orden estricto: autenticación de supervisor y encargado de planta, configuración de áreas e umbrales, lecturas de CO₂, ruido y presencia, evaluación de exposición y actuación de extractores, sirenas y mamparas acústicas.
 
-**Captura 2 — Pain points y pivotal points**
+![Design-Level EventStorming — Paso 1: Unstructured Exploration](../assets/04-capitulo-iv/ddd/es-01-unstructured-exploration.jpg)
 
-![Design-Level EventStorming — pain points and pivotals](../assets/04-capitulo-iv/ddd/es-02-pains-pivotals.png)
+**Paso 2 — Timelines**
 
-**Captura 3 — Commands, policies, read models y sistemas externos.**
+Los eventos se reordenaron en líneas temporales por flujo de negocio, dejando visible la secuencia desde el acceso de usuarios hasta la resolución de una exposición, pasando por configuración de planta e ingesta de telemetría.
 
-![Design-Level EventStorming — commands, policies, reads, externals](../assets/04-capitulo-iv/ddd/es-03-commands-policies-reads-externals.png)
+![Design-Level EventStorming — Paso 2: Timelines](../assets/04-capitulo-iv/ddd/es-02-timelines.jpg)
 
-**Captura 4 — Aggregates** 
+**Paso 3 — Pain Points**
 
-![Design-Level EventStorming — aggregates](../assets/04-capitulo-iv/ddd/es-04-aggregates.png)
+Se marcaron hotspots sobre dudas e incertidumbre: tokens por canal (móvil vs web), umbrales mal configurados, sensores offline o con mala señal, cola local cuando falla el enlace y qué ocurre si no se activan extractores o sirenas.
 
-**Captura 5 — Bounded contexts**
+![Design-Level EventStorming — Paso 3: Pain Points](../assets/04-capitulo-iv/ddd/es-03-pain-points.jpg)
 
-![Design-Level EventStorming — bounded contexts](../assets/04-capitulo-iv/ddd/es-05-bounded-contexts.png)
+**Paso 4 — Pivotal Points**
+
+Se identificaron los puntos pivote del dominio: cambios de estado que concentran decisión o riesgo (exceso detectado, exposición clasificada, actuador activado, override del supervisor o exposición resuelta) y que conectan un flujo con el siguiente.
+
+![Design-Level EventStorming — Paso 4: Pivotal Points](../assets/04-capitulo-iv/ddd/es-04-pivotal-points.jpg)
+
+**Paso 5 — Commands**
+
+Sobre cada evento se añadieron los comandos que lo provocan: iniciar sesión, configurar umbrales, asociar dispositivos, registrar lecturas, evaluar exposición y activar o anular mitigadores.
+
+![Design-Level EventStorming — Paso 5: Commands](../assets/04-capitulo-iv/ddd/es-05-commands.jpg)
+
+**Paso 6 — Policies**
+
+Se documentaron las políticas de reacción automática: si se detecta exceso de CO₂ o ruido con presencia, entonces generar alerta y disparar extractores, sirenas o mamparas según la severidad y la configuración de la zona. El loop automático corre en el servidor de planta.
+
+![Design-Level EventStorming — Paso 6: Policies](../assets/04-capitulo-iv/ddd/es-06-policies.jpg)
+
+**Paso 7 — Read Models**
+
+Se identificaron las vistas que necesitan supervisor y encargado para decidir: mapa de zonas con riesgo, histórico de lecturas, estado de actuadores, umbrales vigentes y resumen de alertas abiertas o resueltas.
+
+![Design-Level EventStorming — Paso 7: Read Models](../assets/04-capitulo-iv/ddd/es-07-read-models.jpg)
+
+**Paso 8 — External Systems**
+
+Se explicitaron dependencias externas al núcleo del dominio: hardware de campo (sensores y actuadores), broker MQTT (XS-03) y servicio de correo. El Edge no es un quinto contexto ni un “IoT Gateway”; Identity permanece first-party.
+
+![Design-Level EventStorming — Paso 8: External Systems](../assets/04-capitulo-iv/ddd/es-08-external-systems.jpg)
+
+**Paso 9 — Aggregates**
+
+Los comandos y eventos se agruparon en agregados candidatos (UserAccount y Session, IndustrialArea y umbrales, AreaTelemetry, ExposureState y AreaActuators, DeviceCredential), delimitando qué invariantes deben mantenerse juntos en cada contexto.
+
+![Design-Level EventStorming — Paso 9: Aggregates](../assets/04-capitulo-iv/ddd/es-09-aggregates.jpg)
+
+**Paso 10 — Bounded Contexts**
+
+Finalmente se encerraron los bloques del tablero como los cuatro bounded contexts cerrados (DEC-001): Identity & Access, Plant Monitoring, Safety & Actuation y Device & Edge Management.
+
+![Design-Level EventStorming — Paso 10: Bounded Contexts](../assets/04-capitulo-iv/ddd/es-10-bounded-contexts.jpg)
 
 EventStorming completo: [ver en Miro](https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ)
 
 <a id="s-4-1-1-1"></a>
-#### 4.1.1.1 Candidate Context Discovery
+#### 4.1.1.1. Candidate Context Discovery
 
 Los contextos candidatos se identificaron aplicando la heurística de **un Bounded Context por lenguaje ubicuo y dueño de datos**, tomando como entrada las user stories abordadas en el Capítulo III y el lenguaje del dominio SafePlant.
 
@@ -4140,7 +4316,7 @@ Los contextos candidatos se identificaron aplicando la heurística de **un Bound
 </table>
 
 <a id="s-4-1-1-2"></a>
-#### 4.1.1.2 Domain Message Flows Modeling
+#### 4.1.1.2. Domain Message Flows Modeling
 
 Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colaboran para resolver casos de uso de SafePlant mediante **Domain Message Flow Modelling** ([ddd-crew](https://github.com/ddd-crew/domain-message-flow-modelling)). Cada diagrama es un escenario de 5 a 9 mensajes numerados (comando, evento o consulta) en formato combinado: nombre, orden y payload. MQTT y el hardware de campo son sistemas; el Edge no es un quinto contexto ni un “IoT Gateway”.
 
@@ -4169,25 +4345,97 @@ Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colabora
 ![Domain message flow — supervisor override](../assets/04-capitulo-iv/ddd/dmf-05-supervisor-override.png)
 
 <a id="s-4-1-1-3"></a>
-#### 4.1.1.3 Bounded Context Canvases
+#### 4.1.1.3. Bounded Context Canvases
 
-Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canvas fija propósito, clasificación estratégica, lenguaje, decisiones de negocio y la comunicación de entrada y salida.
+Cada contexto candidato se documentó con un **Bounded Context Canvas** ([ddd-crew](https://github.com/ddd-crew/bounded-context-canvas), plantilla *Annegret Junker / codecentric AG*, versión BCC v5 · DEC-001). El canvas obliga a declarar, por contexto, seis cosas: propósito y lo que explícitamente **no** hace, clasificación estratégica (dominio, modelo de negocio y evolución), roles de dominio, comunicación de entrada y de salida con su tipo de mensaje, lenguaje ubicuo con las decisiones de negocio que lo sostienen, y finalmente supuestos, métricas de verificación y preguntas abiertas.
 
-**Plant Monitoring (core).** Áreas, umbrales y telemetría.
+Los cuatro canvases se leen en conjunto: el límite de un contexto no se define por lo que contiene, sino por lo que se niega a decidir. Esa frontera es la que evita que la lógica de seguridad ocupacional se filtre al inventario de dispositivos o al módulo de sesiones.
 
-![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.png)
+**BC-01: Plant Monitoring — Definición de planta y telemetría**  
+**Clasificación:** Core Domain · Business model: *engagement* · Evolución: *custom built*
 
-**Safety & Actuation.** Exposición, alertas y actuación automática u override.
+**Descripción:** Da a la planta una definición estable de áreas industriales, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el dueño del dato de estado de la planta: quien abre SafePlant ve aquí cómo está cada área. No decide exposición ni dispara actuadores. Sus roles de dominio son *Specification* y *Analysis*.
 
-![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.png)
+**Reglas de negocio clave:** CO₂, ruido y presencia son hechos distintos y no se unifican en una sola lectura. Los umbrales pertenecen al área, pero en ellos Safety no clasifica exposición. Un `deviceId` no se duplica en la asociación a un área. Las políticas de riesgo `PO-01`, `PO-02` y `PO-12` viven en Safety & Actuation, no aquí. El supervisor configura la planta solo por canal móvil.
 
-**Device & Edge Management (supporting).** Credenciales de dispositivo, ingest, cola y sincronización.
+**Lenguaje ubicuo:** Industrial area, Environmental thresholds, Area device assignment, Carbon dioxide reading, Noise reading, Presence (detected / cleared), Telemetry ingested, Sensor associated to area, Actuator associated to area, Plant metrics history.
 
-![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.png)
+**Capacidades:** Registro y gestión de áreas industriales, configuración de umbrales por área, asociación de sensores y actuadores, registro histórico de lecturas y presencia, ingesta de telemetría e historial de métricas de planta.
 
-**Identity & Access (generic).** Cuentas, sesión por canal y OHS hacia los demás contextos.
+**Capas:** Core (área, umbrales y hecho de telemetría), Soporte (asociación de dispositivos, proyecciones de lectura), Infraestructura (repositorios, `InProcessEventPublisher`, PostgreSQL en nube · stack provisional DEC-008).
 
-![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.png)
+**Mensajes entrantes:** `ManageIndustrialAreaCommand`, `ConfigureThresholdsCommand`, `AssociateDeviceCommand`, `RecordCarbonDioxideReadingCommand`, `RecordNoiseReadingCommand`, `RecordPresenceCommand`, `IngestTelemetryCommand`; consultas `GetAreaSetupSheetQuery` y `GetPlantMetricsHistoryQuery`.
+
+**Mensajes salientes:** `CarbonDioxideReadingRecordedEvent`, `NoiseReadingRecordedEvent`, `PresenceChangedEvent`, `ConditionsWithinThresholdsEvent`, `IngestTelemetryRejectedEvent`.
+
+**Dependencias upstream:** Identity & Access (OHS + Conformist: sesión y canal en el payload). **Downstream:** Safety & Actuation (Customer/Supplier, conformista al *evento* de lectura) y Device & Edge Management (OHS de ingest + ACL en el Edge).
+
+![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.jpg)
+
+**BC-02: Safety & Actuation — Exposición, alertas y mitigación**  
+**Clasificación:** Core Domain · Business model: *compliance* · Evolución: *custom built*
+
+**Descripción:** Es el dueño del riesgo. Cruza la presencia de personal con las condiciones de CO₂ y ruido para clasificar exposición, levantar alertas ambientales y mandar extractores, sirenas y mamparas acústicas, o anularlas. Por `DEC-007` el loop automático corre en el servidor de planta (Edge); la nube supervisa, audita y acepta el override cuando hay enlace. Sus roles de dominio son *Enforcer* y *Execution*.
+
+**Reglas de negocio clave:** `PO-01` detecta el exceso y `PO-02` evalúa la exposición sin encadenarse una a otra. `PO-12` normaliza una sola vez cuando las condiciones vuelven a rango. El override es el comando `C-33` y solo se acepta desde el canal móvil del supervisor. No existe severidad *yellow*: la clasificación no admite un estado intermedio. La copia de alerta en el Edge es para sincronizar, sin transferir el agregado ni la propiedad del riesgo. Los actuadores no esperan internet.
+
+**Lenguaje ubicuo:** Personnel exposure, Exposure severity, Area risk, Environmental alert, Excessive carbon dioxide, Excessive noise, Air extractor, Preventive siren, Acoustic barrier, Manual override, Automatic actuator action.
+
+**Capacidades:** Detección de exceso ambiental, evaluación y clasificación de exposición de personal, alerta ambiental y su retiro, activación automática y normalización de actuadores, override remoto del supervisor, registro de acciones automáticas y consulta de estado operativo y alertas activas.
+
+**Capas:** Core (motor de exposición y reglas de actuación), Soporte (registro de acciones y proyección de alertas), Infraestructura (cliente de actuadores hacia el dispositivo, SQLite en planta, PostgreSQL en nube para auditoría · DEC-008).
+
+**Mensajes entrantes:** eventos de Plant Monitoring (`CarbonDioxideReadingRecorded`, `NoiseReadingRecorded`, `PresenceChanged`, `ConditionsWithinThresholds`); comandos `DetectEnvironmentalExcessCommand`, `EvaluatePersonnelExposureCommand`, `ClassifyExposureSeverityCommand`, `RaiseEnvironmentalAlertCommand`, `OverrideActuatorCommand` (`C-33`); consultas `GetAreaOperationalStatusQuery` y `GetActiveAlertsQuery`; de Identity, `ProtectedActionDenied`.
+
+**Mensajes salientes:** `EnvironmentalAlertRaisedEvent`, `AreaRiskHighlightedEvent`, `AutomaticActuatorActionRecordedEvent`, `ExposureResolvedEvent`; hacia el dispositivo `ActivateActuator` y `NormalizeActuator`; hacia Device & Edge, `StoreOfflineAlert` (`PO-09`).
+
+**Dependencias upstream:** Plant Monitoring (evento de lectura y presencia) e Identity & Access (OHS: sesión móvil para estado, alertas y override). **Downstream:** Device & Edge Management (ACL para persistir y sincronizar la alerta) y el hardware de campo, que ejecuta la actuación física.
+
+![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.jpg)
+
+**BC-03: Device & Edge Management — Dispositivos, ingest y contingencia**  
+**Clasificación:** Supporting Subdomain · Business model: *cost reduction* · Evolución: *custom built*
+
+**Descripción:** Autentica los dispositivos de campo, mueve la telemetría hacia la nube y sostiene la operación cuando se pierde el enlace, mediante cola local, sincronización posterior y copia de alerta. El Edge hace de puente (`DEC-002`): no es un quinto bounded context ni un “IoT Gateway” como sistema aparte. Su rol de dominio es *Gateway* hacia la nube. No interpreta umbrales ni evalúa exposición.
+
+**Reglas de negocio clave:** `PO-10` envía a cola local todo ingest fallido. `PO-11` dispara la sincronización y el reintento `C-19` al restaurarse la conectividad. `PO-09` guarda copia de la alerta para sincronizar, sin que Safety deje de ser dueña del riesgo. La credencial de dispositivo no es una cuenta de usuario: los dispositivos no se autentican en Identity & Access. Las lecturas no se fusionan al publicarse en MQTT. Tras un corte, la sincronización no debe crear un segundo hecho para la misma lectura.
+
+**Lenguaje ubicuo:** Device credential, Device authenticated, Edge node, Telemetry queued locally, Local telemetry sync, Offline alert stored, Duplicate telemetry acknowledged, Ingest telemetry.
+
+**Capacidades:** Emisión, autenticación y revocación de credenciales de dispositivo, recepción de lecturas vía MQTT, ingest hacia Plant Monitoring, encolado local ante fallo, sincronización al recuperar el enlace y persistencia de alerta offline.
+
+**Capas:** Core (credenciales de dispositivo y nodo edge), Soporte (cola local, sincronización e idempotencia), Infraestructura (broker Eclipse Mosquitto como sistema externo `XS-03`, SQLite en planta, cliente HTTP hacia la nube · DEC-008).
+
+**Mensajes entrantes:** `IssueDeviceCredentialCommand`, `AuthenticateDeviceCommand`, `AuthenticateDeviceCredentialCommand`, `RevokeDeviceCredentialCommand`, `IngestTelemetryCommand`, `QueueLocallyCommand`, `SyncLocalTelemetryCommand`, `StoreOfflineAlertCommand`; del broker, `ReadingsDelivered`; de Plant Monitoring, el rechazo o timeout de ingesta.
+
+**Mensajes salientes:** `DeviceAuthenticatedEvent`, `TelemetryQueuedLocallyEvent`, `LocalTelemetrySyncEvent`, `DuplicateTelemetryAcknowledgedEvent`; hacia Plant Monitoring, el reintento de `IngestTelemetry` (`PO-11`).
+
+**Dependencias upstream:** hardware de campo y broker MQTT (`XS-03`, externo), Plant Monitoring como dueño del contrato de ingest y Safety & Actuation para la copia de alerta. **Downstream:** Plant Monitoring, que recibe la telemetría normalizada.
+
+![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.jpg)
+
+**BC-04: Identity & Access — Identidad, sesión y canal**  
+**Clasificación:** Generic Subdomain · Business model: *compliance* · Evolución: *custom built*
+
+**Descripción:** Responde quién entra a SafePlant, con qué rol y por qué canal —app móvil para el Supervisor de Seguridad, app web para el Encargado de Planta— y permite recuperar credenciales. Actúa como Open Host Service upstream de los otros tres contextos: solo concede o niega la sesión, y ese resultado viaja en el payload. Su rol de dominio es *Enforcer* de sesión, rol y canal. No mide la planta ni evalúa exposición.
+
+**Reglas de negocio clave:** Existe un solo `Sign in` (`C-06`) y el canal es un parámetro, no un caso de uso distinto. El setup de planta y el override exigen supervisor en canal móvil, por lo que un intento desde la web se deniega (`C-08` / `E-05`). Un correo equivale a una cuenta: el duplicado rechaza el alta (`E-07`). El rol determina los permisos dentro de cada bounded context. La recuperación de credenciales y el token de acceso vencen por TTL (`C-05`, `C-09`). Identity es propia, sin proveedor de identidad externo.
+
+**Lenguaje ubicuo:** User account, User role, Session, Sign in, Session granted, Protected action denied, Credential recovery, Channel (mobile / web), Supervisor, Plant manager.
+
+**Capacidades:** Alta de cuentas, asignación de roles y permisos, inicio de sesión por canal, cierre de sesión, recuperación y restablecimiento de credenciales, expiración de tokens y consulta del directorio de usuarios.
+
+**Capas:** Core (autenticación y autorización por rol y canal), Soporte (recuperación de credenciales y notificación por correo), Infraestructura (repositorios, adaptador SMTP, token JWT o API key, PostgreSQL · DEC-008).
+
+**Mensajes entrantes:** `CreateUserAccountCommand` (`C-01`), `AssignUserRoleCommand` (`C-02`), `RequestCredentialRecoveryCommand` (`C-03`), `ResetCredentialsCommand` (`C-04`), `ExpireCredentialRecoveryCommand` (`C-05`), `SignInCommand` (`C-06`), `CloseSessionCommand` (`C-07`), `AttemptProtectedActionCommand` (`C-08`), `ExpireAccessTokenCommand` (`C-09`); consulta `GetUserAccountsDirectoryQuery` (`RM-01`).
+
+**Mensajes salientes:** `SessionGrantedEvent`, `ProtectedActionDeniedEvent`, `CredentialRecoveryRequestedEvent` hacia el servicio de correo (`XS-01`).
+
+**Dependencias upstream:** servicio de correo SMTP (`XS-01`, externo). **Downstream:** Plant Monitoring, Safety & Actuation y —solo para usuarios, no para dispositivos— el resto de la plataforma, bajo OHS + Conformist.
+
+![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.jpg)
+
+Las **preguntas abiertas** de los canvases quedan registradas de forma deliberada y se resuelven en 4.2: si `RM-03 AreaOperationalStatus` se proyecta en Plant Monitoring o se compone consultando Safety, si el fallo de relé se reintenta o solo se registra en tablero, si se adopta un proveedor de identidad externo más adelante, y el producto concreto del broker MQTT. Ninguna de ellas altera los límites ya fijados.
 
 <a id="s-4-1-2"></a>
 ### 4.1.2. Context Mapping
@@ -4304,15 +4552,15 @@ El mismo conjunto de personas y sistemas externos, ahora con SafePlant al centro
 
 ![Context Level Diagram](../assets/04-capitulo-iv/architecture/c4-context.png)
 
-<a id="s-4-1-3-2-software-architecture-container-level-diagrams"></a>
-#### 4.1.3.2. Software Architecture Container Level Diagrams
+<a id="s-4-1-3-3"></a>
+#### 4.1.3.3. Software Architecture Container Level Diagrams
 
 Nueve containers. El **Web Monolithic Backend** (ASP.NET Core + PostgreSQL) es una sola caja: los cuatro bounded contexts viven dentro, no como servicios. En planta, **Edge Application** (ASP.NET Core + SQLite) hospeda el runtime de Device & Edge, una proyección de Plant Monitoring y el loop vivo de Safety & Actuation; **Eclipse Mosquitto** queda entre el firmware y ese Edge. El firmware publica lecturas y ejecuta relés; la landing es Angular.
 
 ![Container Level Diagram](../assets/04-capitulo-iv/architecture/c4-container.png)
 
-<a id="s-4-1-3-3"></a>
-#### 4.1.3.3. Software Architecture Deployment Diagrams
+<a id="s-4-1-3-4"></a>
+#### 4.1.3.4. Software Architecture Deployment Diagrams
 
 Cloud en **Azure**: Static Web Apps sirve la landing y el cliente Angular; App Service hospeda el monolito ASP.NET Core; Azure Database for PostgreSQL es el sistema de registro. En la **planta**, un servidor on-prem corre Edge Application, SQLite y Eclipse Mosquitto (sin IoT Hub): ahí vive el loop de Safety. El firmware Arduino/ESP32 está en el dispositivo de campo. La app Flutter corre en el teléfono del supervisor; el correo de recuperación sigue en SMTP externo. Identity es propia (no Azure AD). El override desde la nube hacia Edge exige WAN.
 
@@ -5949,13 +6197,13 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 
 ![Applications Wireflow](../assets/05-capitulo-v/applications/wireflow.png)
 
-<a id="s-5-4-2-applications-mock-ups"></a>
-### 5.4.2. Applications Mock-ups
+<a id="s-5-4-3"></a>
+### 5.4.3. Applications Mock-ups
 
 ![Applications Mock-ups](../assets/05-capitulo-v/applications/mockups.png)
 
-<a id="s-5-4-3"></a>
-### 5.4.3. Applications User Flow Diagrams
+<a id="s-5-4-4"></a>
+### 5.4.4. Applications User Flow Diagrams
 
 ![Applications User Flow](../assets/05-capitulo-v/applications/user-flow.png)
 
@@ -6014,92 +6262,6 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
     </tr>
   </tbody>
 </table>
-
----
-
-<a id="s-6-2-x"></a>
-### 6.2.X. Sprint n
-
-> Plantilla. Copiar a `../sprints/sprint-0N.md` y registrar en el Capítulo VI § 6.2.
-
-**Navegación:** [Capítulo VI](../06-capitulo-vi-product-implementation.md) · [Índice](../00-student-outcome.md#s-tabla-contenidos)
-
----
-
-<a id="s-6-2-x-1"></a>
-#### 6.2.X.1. Sprint Planning n
-
-<a id="s-6-2-x-2"></a>
-#### 6.2.X.2. Aspect Leaders and Collaborators
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">Aspecto</th>
-      <th align="left">Leader</th>
-      <th align="left">Collaborators</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
-
-<a id="s-6-2-x-3"></a>
-#### 6.2.X.3. Sprint Backlog n
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">ID</th>
-      <th align="left">User Story / Work Item</th>
-      <th align="left">Points</th>
-      <th align="left">Estado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
-
-<a id="s-6-2-x-4"></a>
-#### 6.2.X.4. Development Evidence for Sprint Review
-
-![Development Evidence](../assets/06-capitulo-vi/sprints/sprint-n-development.png)
-
-<a id="s-6-2-x-5"></a>
-#### 6.2.X.5. Testing Suite Evidence for Sprint Review
-
-![Testing Suite Evidence](../assets/06-capitulo-vi/sprints/sprint-n-testing.png)
-
-<a id="s-6-2-x-6"></a>
-#### 6.2.X.6. Execution Evidence for Sprint Review
-
-![Execution Evidence](../assets/06-capitulo-vi/sprints/sprint-n-execution.png)
-
-<a id="s-6-2-x-7"></a>
-#### 6.2.X.7. Services Documentation Evidence for Sprint Review
-
-![Services Documentation](../assets/06-capitulo-vi/sprints/sprint-n-services-docs.png)
-
-<a id="s-6-2-x-8"></a>
-#### 6.2.X.8. Software Deployment Evidence for Sprint Review
-
-![Deployment Evidence](../assets/06-capitulo-vi/sprints/sprint-n-deployment.png)
-
-<a id="s-6-2-x-9"></a>
-#### 6.2.X.9. Team Collaboration Insights during Sprint
-
-![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/sprint-n-collaboration.png)
 
 ---
 
