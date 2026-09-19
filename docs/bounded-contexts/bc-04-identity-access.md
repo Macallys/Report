@@ -265,7 +265,7 @@ Un handler por comando del contexto (`C-01`–`C-09`) más el query de directori
 <a id="s-4-2-4-4"></a>
 ## 4.2.4.4. Infrastructure Layer
 
-Implementaciones de los tres repositorios y el adaptador de correo. Motor de base de datos y proveedor de email quedan `TBD` (no se asume Auth0/Cognito ni marca de email — DEC-005).
+Implementaciones de los tres repositorios y el adaptador de correo. Motor de base de datos: **PostgreSQL**; proveedor de email: **SMTP** (DEC-008). Identity sigue propia (no Auth0/Cognito).
 
 <table>
   <thead>
@@ -282,28 +282,28 @@ Implementaciones de los tres repositorios y el adaptador de correo. Motor de bas
       <td align="left">`UserAccountRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IUserAccountRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de cuentas.</td>
     </tr>
     <tr>
       <td align="left">`SessionRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`ISessionRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de sesiones.</td>
     </tr>
     <tr>
       <td align="left">`CredentialRecoveryRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`ICredentialRecoveryRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de procesos de recuperación.</td>
     </tr>
     <tr>
       <td align="left">`EmailServiceAdapter`</td>
       <td align="left">Adapter</td>
       <td align="left">`IEmailSender`</td>
-      <td align="left">Email Service (`XS-01`, proveedor TBD)</td>
+      <td align="left">Email Service (`XS-01`, SMTP)</td>
       <td align="left">Envía el correo de recuperación de credenciales.</td>
     </tr>
   </tbody>

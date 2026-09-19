@@ -1,7 +1,7 @@
 @startuml bc-01-plant-monitoring-domain
 ' Bounded Context Domain Layer Class Diagram — Plant Monitoring (§ 4.2.1.6.1)
 ' Fuente: BCC-01 (.cursor/design/bounded-context-canvas/01-plant-monitoring.md), paso 9 ES (A-04 … A-07).
-' Lecturas CO₂ / ruido / presencia no unificadas; persistencia TBD.
+' Lecturas CO₂ / ruido / presencia no unificadas; persistencia PostgreSQL (DEC-008).
 
 skinparam classAttributeIconSize 0
 

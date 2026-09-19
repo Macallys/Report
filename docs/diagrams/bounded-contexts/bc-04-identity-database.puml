@@ -1,6 +1,6 @@
 @startuml bc-04-identity-database
 ' Bounded Context Database Design Diagram — Identity & Access (§ 4.2.4.6.2)
-' Modelo relacional lógico; motor de base de datos TBD (DEC-005).
+' Modelo relacional lógico; PostgreSQL (DEC-008).
 
 entity "user_accounts" as user_accounts {
   * id : UUID <<PK>>

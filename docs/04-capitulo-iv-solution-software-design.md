@@ -33,7 +33,7 @@ A partir del Big Picture EventStorming del Capítulo II y de las épicas EP02–
 
 ![Design-Level EventStorming — bounded contexts](../assets/04-capitulo-iv/ddd/es-05-bounded-contexts.png)
 
-Event stormig completo : [ver en Miro](ENLACE_AQUI)
+EventStorming completo: [ver en Miro](https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ)
 
 <a id="s-4-1-1-1"></a>
 #### 4.1.1.1 Candidate Context Discovery
@@ -143,6 +143,7 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
       <th align="left">Upstream</th>
       <th align="left">Downstream</th>
       <th align="left">Patrones</th>
+      <th align="left">Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -150,26 +151,31 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
       <td align="left">Identity & Access</td>
       <td align="left">Plant Monitoring</td>
       <td align="left">OHS + Conformist (sesión/canal)</td>
+      <td align="left">Setup de planta (áreas, umbrales, dispositivos) exige sesión de supervisor en canal móvil.</td>
     </tr>
     <tr>
       <td align="left">Identity & Access</td>
       <td align="left">Safety & Actuation</td>
       <td align="left">OHS + Conformist</td>
+      <td align="left">Estado, alertas y override exigen la misma sesión móvil; Identity no evalúa exposición.</td>
     </tr>
     <tr>
       <td align="left">Plant Monitoring</td>
       <td align="left">Safety & Actuation</td>
       <td align="left">Customer/Supplier + Conformist al *evento* de lectura</td>
+      <td align="left">Safety se ciñe al *evento* de lectura/presencia; Plant Monitoring puede registrar telemetría sin que haya actuación.</td>
     </tr>
     <tr>
       <td align="left">Plant Monitoring</td>
       <td align="left">Device & Edge Management</td>
       <td align="left">OHS de ingest + ACL en Edge</td>
+      <td align="left">PM es dueño del hecho y del contrato de ingest; Edge traduce MQTT/cola (ACL). La flecha U→D es del modelo, no del hop MQTT.</td>
     </tr>
     <tr>
       <td align="left">Safety & Actuation</td>
       <td align="left">Device & Edge Management</td>
-      <td align="left">ACL persistencia/sync de alerta; el riesgo no cambia de dueño</td>
+      <td align="left">ACL</td>
+      <td align="left">Alerta persistida/sincronizada (`PO-09`); el dueño del riesgo sigue en Safety, no en `EdgeNode`.</td>
     </tr>
   </tbody>
 </table>
@@ -180,23 +186,78 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
 <a id="s-4-1-3"></a>
 ### 4.1.3. Software Architecture
 
+Los diagramas C4 se generan desde `docs/diagrams/c4.dsl` (Structurizr). El stack visible es **provisional** (DEC-008): ASP.NET Core (C#) en cloud y Edge, PostgreSQL en nube, SQLite en planta, Eclipse Mosquitto, SMTP, landing Angular y firmware Arduino / ESP32. Los clientes ya estaban cerrados: Flutter (móvil) y Angular (web). Identity es propia (no Auth0/Cognito). No hay un sistema “IoT Gateway”; el Edge hace de puente (DEC-002). Safety & Actuation también corre en el servidor de planta (DEC-007).
+
+**Leyenda** (formas; los cuatro bounded contexts usan el mismo hexágono, no un color por contexto).
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Forma</th>
+      <th align="left">Qué representa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Persona</td>
+      <td align="left">Supervisor, encargado de planta</td>
+    </tr>
+    <tr>
+      <td align="left">Persona (gris)</td>
+      <td align="left">Visitante de la landing</td>
+    </tr>
+    <tr>
+      <td align="left">Caja de sistema externo</td>
+      <td align="left">Hardware de campo, correo SMTP</td>
+    </tr>
+    <tr>
+      <td align="left">Caja redondeada</td>
+      <td align="left">Software interno: monolito, Edge Application, firmware</td>
+    </tr>
+    <tr>
+      <td align="left">Cilindro</td>
+      <td align="left">Base de datos (nube o planta)</td>
+    </tr>
+    <tr>
+      <td align="left">Tubo</td>
+      <td align="left">Broker MQTT</td>
+    </tr>
+    <tr>
+      <td align="left">Móvil / navegador / carpeta</td>
+      <td align="left">App Flutter, cliente Angular, landing</td>
+    </tr>
+    <tr>
+      <td align="left">Hexágono</td>
+      <td align="left">Capas Interface / Application / Domain / Infrastructure</td>
+    </tr>
+  </tbody>
+</table>
+
 <a id="s-4-1-3-1"></a>
 #### 4.1.3.1. Software Architecture System Landscape Diagram
+
+SafePlant aparece como un único sistema rodeado por el supervisor, el encargado de planta, el visitante de la landing y dos externos: el **hardware de campo** (ESP32, sensores y actuadores) y el **servicio de correo SMTP** para recuperación de credenciales.
 
 ![System Landscape Diagram](../assets/04-capitulo-iv/architecture/c4-system-landscape.png)
 
 <a id="s-4-1-3-2"></a>
 #### 4.1.3.2. Software Architecture Context Level Diagrams
 
+El mismo recorte, con foco en SafePlant: los usuarios no hablan con el hardware ni con el correo; esas relaciones pasan por el firmware Arduino/ESP32 y el backend ASP.NET Core.
+
 ![Context Level Diagram](../assets/04-capitulo-iv/architecture/c4-context.png)
 
 <a id="s-4-1-3-2-software-architecture-container-level-diagrams"></a>
 #### 4.1.3.2. Software Architecture Container Level Diagrams
 
+Nueve containers. El **Web Monolithic Backend** (ASP.NET Core + PostgreSQL) es una sola caja: los cuatro bounded contexts viven dentro, no como servicios. En planta, **Edge Application** (ASP.NET Core + SQLite) hospeda el runtime de Device & Edge, una proyección de Plant Monitoring y el loop vivo de Safety & Actuation; **Eclipse Mosquitto** queda entre el firmware y ese Edge. El firmware publica lecturas y ejecuta relés; la landing es Angular.
+
 ![Container Level Diagram](../assets/04-capitulo-iv/architecture/c4-container.png)
 
 <a id="s-4-1-3-3"></a>
 #### 4.1.3.3. Software Architecture Deployment Diagrams
+
+Cloud en **Azure**: Static Web Apps sirve la landing y el cliente Angular; App Service hospeda el monolito ASP.NET Core; Azure Database for PostgreSQL es el sistema de registro. En la **planta**, un servidor on-prem corre Edge Application, SQLite y Eclipse Mosquitto (sin IoT Hub): ahí vive el loop de Safety. El firmware Arduino/ESP32 está en el dispositivo de campo. La app Flutter corre en el teléfono del supervisor; el correo de recuperación sigue en SMTP externo. Identity es propia (no Azure AD). El override desde la nube hacia Edge exige WAN.
 
 ![Deployment Diagram](../assets/04-capitulo-iv/architecture/deployment.png)
 

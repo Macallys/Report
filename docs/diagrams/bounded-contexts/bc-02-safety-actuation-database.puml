@@ -1,6 +1,6 @@
 @startuml bc-02-safety-actuation-database
 ' Bounded Context Database Design Diagram — Safety & Actuation (§ 4.2.2.6.2)
-' Modelo relacional lógico; motor TBD. Sin device_id: (area_id, actuator_type) es el relé lógico.
+' Modelo relacional lógico; SQLite en Edge y PostgreSQL en Cloud (DEC-008). Sin device_id: (area_id, actuator_type) es el relé lógico.
 ' DEC-007: mismos hechos en Edge Database (loop vivo) y Cloud Database (sync/auditoría).
 ' No copiar estas tablas al esquema de Device & Edge.
 

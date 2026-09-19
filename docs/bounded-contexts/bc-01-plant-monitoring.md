@@ -334,7 +334,7 @@ Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager
 <a id="s-4-2-1-4"></a>
 ## 4.2.1.4. Infrastructure Layer
 
-Implementaciones de los cuatro repositorios y un publicador in-process. Motor de base de datos `TBD`. No hay adaptador MQTT: Device & Edge es quien consume el broker.
+Implementaciones de los cuatro repositorios y un publicador in-process. Motor de base de datos: **PostgreSQL** (DEC-008). No hay adaptador MQTT: Device & Edge es quien consume el broker.
 
 <table>
   <thead>
@@ -351,28 +351,28 @@ Implementaciones de los cuatro repositorios y un publicador in-process. Motor de
       <td align="left">`IndustrialAreaRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IIndustrialAreaRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de áreas.</td>
     </tr>
     <tr>
       <td align="left">`AreaThresholdsRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaThresholdsRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de umbrales.</td>
     </tr>
     <tr>
       <td align="left">`AreaDeviceAssignmentRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaDeviceAssignmentRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de asociaciones dispositivo–área.</td>
     </tr>
     <tr>
       <td align="left">`AreaTelemetryRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaTelemetryRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia de lecturas en **tres** tablas distintas.</td>
     </tr>
     <tr>

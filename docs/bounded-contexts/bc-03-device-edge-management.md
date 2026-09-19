@@ -268,7 +268,7 @@ Handlers de emisión, autenticación y revocación en la nube; en el Edge, auten
 <a id="s-4-2-3-4"></a>
 ## 4.2.3.4. Infrastructure Layer
 
-Repositorio de credenciales sobre Cloud Database; cola y copias sobre Edge Database; adapter MQTT; ingest hacia Plant Monitoring; sync de credenciales Edge ↔ nube.
+Repositorio de credenciales sobre Cloud Database (PostgreSQL); cola y copias sobre Edge Database (SQLite); adapter MQTT (Eclipse Mosquitto); ingest hacia Plant Monitoring; sync de credenciales Edge ↔ nube.
 
 <table>
   <thead>
@@ -285,21 +285,21 @@ Repositorio de credenciales sobre Cloud Database; cola y copias sobre Edge Datab
       <td align="left">`DeviceCredentialRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IDeviceCredentialRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia del registro maestro de credenciales.</td>
     </tr>
     <tr>
       <td align="left">`EdgeNodeRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IEdgeNodeRepository`</td>
-      <td align="left">Edge Database (motor TBD)</td>
+      <td align="left">Edge Database (SQLite)</td>
       <td align="left">Persistencia del nodo, la cola y las copias de alerta.</td>
     </tr>
     <tr>
       <td align="left">`MqttBrokerAdapter`</td>
       <td align="left">Adapter</td>
       <td align="left">`IMqttSubscriber`</td>
-      <td align="left">MQTT Broker (producto TBD)</td>
+      <td align="left">MQTT Broker (Eclipse Mosquitto)</td>
       <td align="left">Consume los tres tópicos de lecturas. El broker es container interno de SafePlant.</td>
     </tr>
     <tr>
@@ -341,6 +341,6 @@ En runtime, el firmware se autentica en Interface; el broker MQTT entrega lectur
 <a id="s-4-2-3-6-2"></a>
 ### 4.2.3.6.2. Bounded Context Database Design Diagram
 
-Dos esquemas lógicos. Cloud Database: `device_credentials` (`device_id` UNIQUE, `secret_hash`, vigencia, `revoked_at`). Edge Database: `telemetry_queue` (tipo de hecho separado, `idempotency_key`) y `offline_alert_copies` (`area_id`, `alert_id`, `stored_at`).
+Dos esquemas lógicos. Cloud Database (PostgreSQL): `device_credentials` (`device_id` UNIQUE, `secret_hash`, vigencia, `revoked_at`). Edge Database (SQLite): `telemetry_queue` (tipo de hecho separado, `idempotency_key`) y `offline_alert_copies` (`area_id`, `alert_id`, `stored_at`).
 
 ![Database Design Diagram](../../assets/04-capitulo-iv/bounded-contexts/bc-03-database.png)

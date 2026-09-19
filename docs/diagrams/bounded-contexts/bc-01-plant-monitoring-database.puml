@@ -1,6 +1,6 @@
 @startuml bc-01-plant-monitoring-database
 ' Bounded Context Database Design Diagram — Plant Monitoring (§ 4.2.1.6.2)
-' Modelo relacional lógico; motor TBD. Lecturas CO₂ / ruido / presencia en tablas separadas.
+' Modelo relacional lógico; PostgreSQL (DEC-008). Lecturas CO₂ / ruido / presencia en tablas separadas.
 
 entity "industrial_areas" as industrial_areas {
   * id : UUID <<PK>>

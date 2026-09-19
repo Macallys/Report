@@ -1,7 +1,7 @@
 @startuml bc-03-device-edge-database
 ' Bounded Context Database Design Diagram — Device & Edge Management (§ 4.2.3.6.2)
 ' Dos esquemas: Cloud Database (credenciales) y Edge Database (cola + copias).
-' Motores TBD. Sin copiar ExposureState. Lecturas con tipo de hecho separado.
+' Cloud = PostgreSQL; Edge = SQLite (DEC-008). Sin copiar ExposureState. Lecturas con tipo de hecho separado.
 
 package "Cloud Database" {
   entity "device_credentials" as device_credentials {

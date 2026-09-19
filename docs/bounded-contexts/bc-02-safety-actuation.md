@@ -359,7 +359,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
 <a id="s-4-2-2-4"></a>
 ## 4.2.2.4. Infrastructure Layer
 
-Repositorios en **Edge Database** (loop vivo) y **Cloud Database** (auditoría/sync; motor `TBD`). `FirmwareActuatorAdapter` solo en el runtime Edge. `OfflineAlertCopyAdapter` persiste en `EdgeNode` y sincroniza cuando vuelve el enlace.
+Repositorios en **Edge Database** (loop vivo, SQLite) y **Cloud Database** (auditoría/sync, PostgreSQL; DEC-008). `FirmwareActuatorAdapter` solo en el runtime Edge (Arduino / ESP32). `OfflineAlertCopyAdapter` persiste en `EdgeNode` y sincroniza cuando vuelve el enlace.
 
 <table>
   <thead>
@@ -376,21 +376,21 @@ Repositorios en **Edge Database** (loop vivo) y **Cloud Database** (auditoría/s
       <td align="left">`ExposureStateRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IExposureStateRepository`</td>
-      <td align="left">Edge Database (loop vivo) y Cloud Database (sync/auditoría; motor TBD)</td>
+      <td align="left">Edge Database (SQLite, loop vivo) y Cloud Database (PostgreSQL, sync/auditoría)</td>
       <td align="left">Persistencia de exposición y alertas.</td>
     </tr>
     <tr>
       <td align="left">`AreaActuatorsRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaActuatorsRepository`</td>
-      <td align="left">Edge Database (loop vivo) y Cloud Database (sync/auditoría; motor TBD)</td>
+      <td align="left">Edge Database (SQLite, loop vivo) y Cloud Database (PostgreSQL, sync/auditoría)</td>
       <td align="left">Persistencia de estados lógicos por `(area, tipo)`.</td>
     </tr>
     <tr>
       <td align="left">`FirmwareActuatorAdapter`</td>
       <td align="left">Adapter</td>
       <td align="left">`IActuatorCommandPort`</td>
-      <td align="left">Device Embedded Application</td>
+      <td align="left">Device Embedded Application (Arduino / ESP32)</td>
       <td align="left">Entrega `activate` / `normalize` con `areaId` + `actuatorType` al firmware **desde el runtime Edge**, que mueve el relé.</td>
     </tr>
     <tr>
@@ -423,6 +423,6 @@ Safety & Actuation se reparte en dos containers. En **cloud** (`Web Monolithic B
 <a id="s-4-2-2-6-2"></a>
 ### 4.2.2.6.2. Bounded Context Database Design Diagram
 
-Modelo relacional lógico, **los mismos** hechos en dos almacenes: Edge Database (loop vivo) y Cloud Database (sync/auditoría). Tablas: `exposure_states` (`area_id` UNIQUE), `environmental_alerts`, `area_actuator_states` (clave lógica `area_id` + `actuator_type`, **sin** `device_id`) y `automatic_actuator_actions`.
+Modelo relacional lógico, **los mismos** hechos en dos almacenes: Edge Database (SQLite, loop vivo) y Cloud Database (PostgreSQL, sync/auditoría). Tablas: `exposure_states` (`area_id` UNIQUE), `environmental_alerts`, `area_actuator_states` (clave lógica `area_id` + `actuator_type`, **sin** `device_id`) y `automatic_actuator_actions`.
 
 ![Database Design Diagram](../../assets/04-capitulo-iv/bounded-contexts/bc-02-database.png)

@@ -3792,7 +3792,7 @@ A partir del Big Picture EventStorming del Capítulo II y de las épicas EP02–
 
 ![Design-Level EventStorming — bounded contexts](../assets/04-capitulo-iv/ddd/es-05-bounded-contexts.png)
 
-Event stormig completo : [ver en Miro](ENLACE_AQUI)
+EventStorming completo: [ver en Miro](https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ)
 
 <a id="s-4-1-1-1"></a>
 #### 4.1.1.1 Candidate Context Discovery
@@ -3827,7 +3827,7 @@ Los contextos candidatos se identificaron aplicando la heurística de **un Bound
     <tr>
       <td align="left"><strong>Safety & Actuation</strong></td>
       <td align="left">Dominio de reglas de seguridad</td>
-      <td align="left">Cruce presencia × condiciones ambientales (exposición), motor de reglas de riesgo, activación de extractores, sirenas y mamparas acústicas, y anulación remota de actuadores.</td>
+      <td align="left">Cruce presencia × condiciones ambientales (exposición), motor de reglas de riesgo, activación de extractores, sirenas y mamparas acústicas, y anulación remota de actuadores. El loop automático corre en el servidor de planta; la nube supervisa, audita y acepta override cuando hay WAN.</td>
       <td align="left">EP04, EP05</td>
       <td align="left">Configuración de áreas/umbrales (Plant Monitoring), identidad de usuarios ni ciclo de vida de firmware en edge.</td>
     </tr>
@@ -3844,25 +3844,29 @@ Los contextos candidatos se identificaron aplicando la heurística de **un Bound
 <a id="s-4-1-1-2"></a>
 #### 4.1.1.2 Domain Message Flows Modeling
 
-Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colaboran para resolver casos de uso de SafePlant mediante **Domain Message Flow Modelling**: actores, sistemas externos y bounded contexts intercambian mensajes numerados (comando, evento o consulta) con campos de negocio. MQTT es un sistema externo; el Edge no es un quinto contexto ni un “IoT Gateway”.
+Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colaboran para resolver casos de uso de SafePlant mediante **Domain Message Flow Modelling** ([ddd-crew](https://github.com/ddd-crew/domain-message-flow-modelling)). Cada diagrama es un escenario de 5 a 9 mensajes numerados (comando, evento o consulta) en formato combinado: nombre, orden y payload. MQTT y el hardware de campo son sistemas; el Edge no es un quinto contexto ni un “IoT Gateway”.
 
-**Historia 1 — Plant setup.** El supervisor, con sesión móvil en Identity & Access, define áreas, umbrales y asociación de dispositivos en Plant Monitoring.
+**Notación.** Persona = Supervisor o Plant manager; nube = bounded context; engranaje = broker MQTT y hardware Device; recuadro = comando, evento o consulta (la consulta lleva request y response en el mismo recuadro); flecha discontinua = emisor hacia receptor.
+
+![Domain message flow — notation](../assets/04-capitulo-iv/ddd/dmf-00-notation.png)
+
+**Scenario 1 — Plant setup.** El supervisor, con sesión móvil en Identity & Access, define áreas, umbrales y asociación de dispositivos en Plant Monitoring.
 
 ![Domain message flow — plant setup](../assets/04-capitulo-iv/ddd/dmf-01-plant-setup.png)
 
-**Historia 2 — Telemetry ingest.** El dispositivo se autentica, publica lecturas de CO₂, ruido y presencia (sin unificarlas) en el broker MQTT; Device & Edge las ingiere en Plant Monitoring. La evaluación de riesgo queda fuera de este flujo.
+**Scenario 2 — Telemetry ingest.** El dispositivo se autentica, publica lecturas de CO₂, ruido y presencia (sin unificarlas) en el broker MQTT; Device & Edge las ingiere en Plant Monitoring. La evaluación de riesgo queda fuera de este flujo.
 
 ![Domain message flow — telemetry ingest](../assets/04-capitulo-iv/ddd/dmf-02-telemetry-ingest.png)
 
-**Historia 3 — Exposure and actuation.** Plant Monitoring notifica lecturas y presencia a Safety & Actuation, que detecta excesos, clasifica exposición, alerta y activa extractores, sirenas o mamparas; al volver a rango, normaliza. La actuación física la ejecuta el dispositivo, no Device & Edge Management.
+**Scenario 3 — Exposure and actuation.** Plant Monitoring notifica lecturas y presencia a Safety & Actuation, que detecta excesos, clasifica exposición, alerta y activa extractores, sirenas o mamparas; cuando las lecturas vuelven a rango, normaliza. Quien emite `Activate`/`Normalize` es Safety **en el servidor de planta**; la actuación física la ejecuta el dispositivo, no Device & Edge Management.
 
 ![Domain message flow — exposure and actuation](../assets/04-capitulo-iv/ddd/dmf-03-exposure-actuation.png)
 
-**Historia 4 — Offline and sync.** Si el ingest falla, Device & Edge encola telemetría y sincroniza al recuperar conectividad. Si hay alerta ambiental y cloud no alcanza, Device & Edge guarda una copia local; Safety & Actuation sigue siendo dueño del riesgo.
+**Scenario 4 — Offline and sync.** Dos caminos alternativos: si el ingest falla, Device & Edge encola telemetría y reintenta al recuperar la conectividad; si hay alerta ambiental y cloud no alcanza, Safety **ya corre en Edge** y deja la alerta en Device & Edge para sincronizar después. Los actuadores no esperan internet. Safety & Actuation sigue siendo dueño del riesgo.
 
 ![Domain message flow — offline and sync](../assets/04-capitulo-iv/ddd/dmf-04-offline-sync.png)
 
-**Historia 5 — Supervisor override.** El supervisor, autenticado en canal móvil, consulta el estado operativo y las alertas activas y anula un actuador en Safety & Actuation. Identity no evalúa exposición; un intento desde el canal web se deniega.
+**Scenario 5 — Supervisor override.** El supervisor, autenticado en canal móvil, consulta el estado operativo y las alertas activas y anula un actuador en Safety & Actuation. Identity no evalúa exposición; un intento desde el canal web se deniega.
 
 ![Domain message flow — supervisor override](../assets/04-capitulo-iv/ddd/dmf-05-supervisor-override.png)
 
@@ -3898,6 +3902,7 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
       <th align="left">Upstream</th>
       <th align="left">Downstream</th>
       <th align="left">Patrones</th>
+      <th align="left">Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -3905,26 +3910,31 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
       <td align="left">Identity & Access</td>
       <td align="left">Plant Monitoring</td>
       <td align="left">OHS + Conformist (sesión/canal)</td>
+      <td align="left">Setup de planta (áreas, umbrales, dispositivos) exige sesión de supervisor en canal móvil.</td>
     </tr>
     <tr>
       <td align="left">Identity & Access</td>
       <td align="left">Safety & Actuation</td>
       <td align="left">OHS + Conformist</td>
+      <td align="left">Estado, alertas y override exigen la misma sesión móvil; Identity no evalúa exposición.</td>
     </tr>
     <tr>
       <td align="left">Plant Monitoring</td>
       <td align="left">Safety & Actuation</td>
       <td align="left">Customer/Supplier + Conformist al *evento* de lectura</td>
+      <td align="left">Safety se ciñe al *evento* de lectura/presencia; Plant Monitoring puede registrar telemetría sin que haya actuación.</td>
     </tr>
     <tr>
       <td align="left">Plant Monitoring</td>
       <td align="left">Device & Edge Management</td>
       <td align="left">OHS de ingest + ACL en Edge</td>
+      <td align="left">PM es dueño del hecho y del contrato de ingest; Edge traduce MQTT/cola (ACL). La flecha U→D es del modelo, no del hop MQTT.</td>
     </tr>
     <tr>
       <td align="left">Safety & Actuation</td>
       <td align="left">Device & Edge Management</td>
-      <td align="left">ACL (copia de alerta; el riesgo no cambia de dueño)</td>
+      <td align="left">ACL</td>
+      <td align="left">Alerta persistida/sincronizada (`PO-09`); el dueño del riesgo sigue en Safety, no en `EdgeNode`.</td>
     </tr>
   </tbody>
 </table>
@@ -3935,23 +3945,78 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
 <a id="s-4-1-3"></a>
 ### 4.1.3. Software Architecture
 
+Los diagramas C4 se generan desde `docs/diagrams/c4.dsl` (Structurizr). El stack visible es **provisional** (DEC-008): ASP.NET Core (C#) en cloud y Edge, PostgreSQL en nube, SQLite en planta, Eclipse Mosquitto, SMTP, landing Angular y firmware Arduino / ESP32. Los clientes ya estaban cerrados: Flutter (móvil) y Angular (web). Identity es propia (no Auth0/Cognito). No hay un sistema “IoT Gateway”; el Edge hace de puente (DEC-002). Safety & Actuation también corre en el servidor de planta (DEC-007).
+
+**Leyenda** (formas; los cuatro bounded contexts usan el mismo hexágono, no un color por contexto).
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Forma</th>
+      <th align="left">Qué representa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Persona</td>
+      <td align="left">Supervisor, encargado de planta</td>
+    </tr>
+    <tr>
+      <td align="left">Persona (gris)</td>
+      <td align="left">Visitante de la landing</td>
+    </tr>
+    <tr>
+      <td align="left">Caja de sistema externo</td>
+      <td align="left">Hardware de campo, correo SMTP</td>
+    </tr>
+    <tr>
+      <td align="left">Caja redondeada</td>
+      <td align="left">Software interno: monolito, Edge Application, firmware</td>
+    </tr>
+    <tr>
+      <td align="left">Cilindro</td>
+      <td align="left">Base de datos (nube o planta)</td>
+    </tr>
+    <tr>
+      <td align="left">Tubo</td>
+      <td align="left">Broker MQTT</td>
+    </tr>
+    <tr>
+      <td align="left">Móvil / navegador / carpeta</td>
+      <td align="left">App Flutter, cliente Angular, landing</td>
+    </tr>
+    <tr>
+      <td align="left">Hexágono</td>
+      <td align="left">Capas Interface / Application / Domain / Infrastructure</td>
+    </tr>
+  </tbody>
+</table>
+
 <a id="s-4-1-3-1"></a>
 #### 4.1.3.1. Software Architecture System Landscape Diagram
+
+SafePlant aparece como un único sistema rodeado por el supervisor, el encargado de planta, el visitante de la landing y dos externos: el **hardware de campo** (ESP32, sensores y actuadores) y el **servicio de correo SMTP** para recuperación de credenciales.
 
 ![System Landscape Diagram](../assets/04-capitulo-iv/architecture/c4-system-landscape.png)
 
 <a id="s-4-1-3-2"></a>
 #### 4.1.3.2. Software Architecture Context Level Diagrams
 
+El mismo recorte, con foco en SafePlant: los usuarios no hablan con el hardware ni con el correo; esas relaciones pasan por el firmware Arduino/ESP32 y el backend ASP.NET Core.
+
 ![Context Level Diagram](../assets/04-capitulo-iv/architecture/c4-context.png)
 
 <a id="s-4-1-3-2-software-architecture-container-level-diagrams"></a>
 #### 4.1.3.2. Software Architecture Container Level Diagrams
 
+Nueve containers. El **Web Monolithic Backend** (ASP.NET Core + PostgreSQL) es una sola caja: los cuatro bounded contexts viven dentro, no como servicios. En planta, **Edge Application** (ASP.NET Core + SQLite) hospeda el runtime de Device & Edge, una proyección de Plant Monitoring y el loop vivo de Safety & Actuation; **Eclipse Mosquitto** queda entre el firmware y ese Edge. El firmware publica lecturas y ejecuta relés; la landing es Angular.
+
 ![Container Level Diagram](../assets/04-capitulo-iv/architecture/c4-container.png)
 
 <a id="s-4-1-3-3"></a>
 #### 4.1.3.3. Software Architecture Deployment Diagrams
+
+Cloud en **Azure**: Static Web Apps sirve la landing y el cliente Angular; App Service hospeda el monolito ASP.NET Core; Azure Database for PostgreSQL es el sistema de registro. En la **planta**, un servidor on-prem corre Edge Application, SQLite y Eclipse Mosquitto (sin IoT Hub): ahí vive el loop de Safety. El firmware Arduino/ESP32 está en el dispositivo de campo. La app Flutter corre en el teléfono del supervisor; el correo de recuperación sigue en SMTP externo. Identity es propia (no Azure AD). El override desde la nube hacia Edge exige WAN.
 
 ![Deployment Diagram](../assets/04-capitulo-iv/architecture/deployment.png)
 
@@ -4001,7 +4066,7 @@ Las relaciones estructurales entre los cuatro bounded contexts se mapearon con l
 
 ---
 
-Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain**: quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (Safety & Actuation). Vive en el monolito cloud. La ingesta llega vía Device & Edge Management. Setup de planta exige sesión de supervisor en canal **móvil** (OHS de Identity & Access).
+Plant Monitoring da a la planta una definición estable de áreas, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el **Core Domain**: quien usa SafePlant ve el estado de la planta aquí; no se decide exposición ni se disparan actuadores (Safety & Actuation). En `Edge Application` solo hay una **proyección** para el loop local de Safety.
 
 Ubiquitous language: *Industrial area* · *Environmental thresholds* · *Area device assignment* · *Carbon dioxide reading* · *Noise reading* · *Presence (detected / cleared)* · *Telemetry ingested* · *Sensor associated to area* · *Actuator associated to area* · *Plant metrics history*.
 
@@ -4330,7 +4395,7 @@ Dos controllers HTTP cubren setup (supervisor móvil) e historial (plant manager
 <a id="s-4-2-1-4"></a>
 #### 4.2.1.4. Infrastructure Layer
 
-Implementaciones de los cuatro repositorios y un publicador in-process. Motor de base de datos `TBD`. No hay adaptador MQTT: Device & Edge es quien consume el broker.
+Implementaciones de los cuatro repositorios y un publicador in-process. Motor de base de datos: **PostgreSQL** (DEC-008). No hay adaptador MQTT: Device & Edge es quien consume el broker.
 
 <table>
   <thead>
@@ -4347,28 +4412,28 @@ Implementaciones de los cuatro repositorios y un publicador in-process. Motor de
       <td align="left">`IndustrialAreaRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IIndustrialAreaRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de áreas.</td>
     </tr>
     <tr>
       <td align="left">`AreaThresholdsRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaThresholdsRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de umbrales.</td>
     </tr>
     <tr>
       <td align="left">`AreaDeviceAssignmentRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaDeviceAssignmentRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de asociaciones dispositivo–área.</td>
     </tr>
     <tr>
       <td align="left">`AreaTelemetryRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaTelemetryRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia de lecturas en **tres** tablas distintas.</td>
     </tr>
     <tr>
@@ -4384,7 +4449,7 @@ Implementaciones de los cuatro repositorios y un publicador in-process. Motor de
 <a id="s-4-2-1-5"></a>
 #### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-El Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`.
+El Supervisor Mobile App llama a Interface para el setup, el Plant Manager Web Client consulta el historial, y Edge Application entrega el ingest. En el servidor de planta, una **proyección** cachea umbrales y últimas lecturas para Safety. Interface delega en Application, Application invoca Domain, e Infrastructure persiste en `Cloud Database`.
 
 ![Component Level Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-01-component.png)
 
@@ -4416,7 +4481,7 @@ Modelo relacional lógico: `industrial_areas`, `area_thresholds` (FK UNIQUE haci
 
 Safety & Actuation protege al personal cruzando presencia con CO₂ y ruido: clasifica exposición, alerta y manda extractores, sirenas y mamparas, o las anula. Es el **segundo core** (cumplimiento de seguridad ocupacional). Quien opera SafePlant confía en que el riesgo se evalúa aquí.
 
-Recibe en el mismo proceso los eventos de lectura, presencia y retorno a umbral que publica Plant Monitoring. La actuación física va al **firmware** del dispositivo de campo, no a Device & Edge Management: el relé y el ESP32 son el actor de hardware. Device & Edge solo guarda una **copia** de alerta si la nube no alcanza; el dueño del riesgo no cambia. La anulación manual es un comando del supervisor en la aplicación **móvil**, no una regla automática; Identity deniega el mismo intento desde la aplicación web del encargado.
+El mismo bounded context tiene **dos runtimes** (DEC-007). En `Edge Application` corre el loop vivo: `PO-03`–`PO-08`, `Activate actuator` / `Normalize actuator` hacia el **firmware**. En el `Web Monolithic Backend` quedan estado, alertas y override del supervisor **cuando hay WAN**, más la copia de auditoría tras el sync. Device & Edge **no** evalúa riesgo. La anulación manual es un comando del supervisor en la aplicación **móvil**, no una regla automática; Identity deniega el mismo intento desde la aplicación web del encargado. Sin acceso a cloud, el loop automático sigue.
 
 No hay entidad `Device` ni `deviceId` en este contexto: el comando identifica el área y el tipo de actuador. Varias sirenas del mismo tipo en un área se tratan como *la sirena del área*; no se direcciona una instancia suelta.
 
@@ -4425,7 +4490,7 @@ Ubiquitous language: *Personnel exposure* · *Exposure severity* · *Area risk* 
 <a id="s-4-2-2-1"></a>
 #### 4.2.2.1. Domain Layer
 
-Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— y las reglas de negocio como domain services en el mismo proceso. No hay un aggregate por cada tipo de actuador: `AreaActuators` lleva el tipo en el comando. Los umbrales no se copian; llegan en los eventos de Plant Monitoring. La severidad es `None`, `Medium` o `High`. Los fallos de relé se registran; no se reintenta aquí.
+Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— y las reglas de negocio como domain services en el mismo proceso (en planta: el runtime Edge). No hay un aggregate por cada tipo de actuador: `AreaActuators` lleva el tipo en el comando. Los umbrales no se copian como dueño; llegan en los eventos de Plant Monitoring (en planta, vía la **proyección**). La severidad es `None`, `Medium` o `High`. Los fallos de relé se registran; no se reintenta aquí.
 
 <table>
   <thead>
@@ -4570,7 +4635,7 @@ Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— 
     <tr>
       <td align="left">`IOfflineAlertPort`</td>
       <td align="left">Port (interface)</td>
-      <td align="left">Copia de alerta en Edge si la nube no está alcanzable. El riesgo no cambia de dueño.</td>
+      <td align="left">Persistencia/sync de alerta vía `EdgeNode` si la nube no está alcanzable. El riesgo no cambia de dueño; `ExposureState` no vive dentro de `EdgeNode`.</td>
       <td align="left">—</td>
       <td align="left">`storeCopy()`</td>
       <td align="left">implementado en Infrastructure</td>
@@ -4597,7 +4662,7 @@ Dos aggregate roots en el mismo módulo —`ExposureState` y `AreaActuators`— 
 <a id="s-4-2-2-2"></a>
 #### 4.2.2.2. Interface Layer
 
-Un controller HTTP para el supervisor móvil (estado operativo, alertas y anulación) y un consumer en el mismo proceso para los eventos de Plant Monitoring. 
+Un controller HTTP en **cloud** para el supervisor móvil (estado operativo, alertas y anulación) y un consumer en el runtime **Edge** para los eventos de la proyección de Plant Monitoring. 
 
 <table>
   <thead>
@@ -4620,7 +4685,7 @@ Un controller HTTP para el supervisor móvil (estado operativo, alertas y anulac
     <tr>
       <td align="left">`PlantTelemetryEventConsumer`</td>
       <td align="left">Consumer</td>
-      <td align="left">Recibe lecturas, presencia y “conditions within thresholds” desde Plant Monitoring (mismo proceso).</td>
+      <td align="left">Recibe lecturas, presencia y “conditions within thresholds” desde Plant Monitoring (proyección en Edge; in-process en planta).</td>
       <td align="left">`onCarbonDioxideReadingRecorded()`, `onNoiseReadingRecorded()`, `onPresenceChanged()`, `onConditionsWithinThresholds()`</td>
       <td align="left">Plant Monitoring; Application Layer</td>
     </tr>
@@ -4703,7 +4768,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
       <td align="left">`RaiseEnvironmentalAlertHandler`</td>
       <td align="left">Command Handler</td>
       <td align="left">Raise environmental alert</td>
-      <td align="left">Levanta la alerta; si la nube no alcanza, deja copia en Edge.</td>
+      <td align="left">Levanta la alerta; si la nube no alcanza, persiste vía `EdgeNode` para sync (`PO-09`).</td>
       <td align="left">`IExposureStateRepository`, `IOfflineAlertPort`</td>
     </tr>
     <tr>
@@ -4724,7 +4789,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
       <td align="left">`ActivateActuatorHandler`</td>
       <td align="left">Command Handler</td>
       <td align="left">Activate actuator</td>
-      <td align="left">Enciende extractor, sirena o mampara del área vía firmware.</td>
+      <td align="left">Enciende extractor, sirena o mampara del área vía firmware (**runtime Edge**).</td>
       <td align="left">`IAreaActuatorsRepository`, `IActuatorCommandPort`</td>
     </tr>
     <tr>
@@ -4745,7 +4810,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
       <td align="left">`OverrideActuatorHandler`</td>
       <td align="left">Command Handler</td>
       <td align="left">Override actuator</td>
-      <td align="left">Control manual sin esperar sensores. Solo supervisor en la aplicación móvil; Identity ya denegó el canal web.</td>
+      <td align="left">Control manual sin esperar sensores. Solo supervisor en la aplicación móvil; Identity ya denegó el canal web. Cloud reenvía el comando al Safety de Edge si hay WAN.</td>
       <td align="left">`IAreaActuatorsRepository`, `IActuatorCommandPort`</td>
     </tr>
     <tr>
@@ -4768,7 +4833,7 @@ Los event handlers de entrada disparan las reglas de negocio; hay un command han
 <a id="s-4-2-2-4"></a>
 #### 4.2.2.4. Infrastructure Layer
 
-Repositorios sobre Cloud Database (motor `TBD`), adapter de actuación hacia firmware y adapter de copia offline hacia Edge. No hay adaptador MQTT ni inventario de `deviceId`.
+Repositorios en **Edge Database** (loop vivo, SQLite) y **Cloud Database** (auditoría/sync, PostgreSQL; DEC-008). `FirmwareActuatorAdapter` solo en el runtime Edge (Arduino / ESP32). `OfflineAlertCopyAdapter` persiste en `EdgeNode` y sincroniza cuando vuelve el enlace.
 
 <table>
   <thead>
@@ -4785,29 +4850,29 @@ Repositorios sobre Cloud Database (motor `TBD`), adapter de actuación hacia fir
       <td align="left">`ExposureStateRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IExposureStateRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Edge Database (SQLite, loop vivo) y Cloud Database (PostgreSQL, sync/auditoría)</td>
       <td align="left">Persistencia de exposición y alertas.</td>
     </tr>
     <tr>
       <td align="left">`AreaActuatorsRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IAreaActuatorsRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Edge Database (SQLite, loop vivo) y Cloud Database (PostgreSQL, sync/auditoría)</td>
       <td align="left">Persistencia de estados lógicos por `(area, tipo)`.</td>
     </tr>
     <tr>
       <td align="left">`FirmwareActuatorAdapter`</td>
       <td align="left">Adapter</td>
       <td align="left">`IActuatorCommandPort`</td>
-      <td align="left">Device Embedded Application</td>
-      <td align="left">Entrega `activate` / `normalize` con `areaId` + `actuatorType` al firmware, que mueve el relé.</td>
+      <td align="left">Device Embedded Application (Arduino / ESP32)</td>
+      <td align="left">Entrega `activate` / `normalize` con `areaId` + `actuatorType` al firmware **desde el runtime Edge**, que mueve el relé.</td>
     </tr>
     <tr>
       <td align="left">`OfflineAlertCopyAdapter`</td>
       <td align="left">Adapter</td>
       <td align="left">`IOfflineAlertPort`</td>
-      <td align="left">Edge Application</td>
-      <td align="left">Copia la alerta en Edge si la nube no está alcanzable. Safety sigue dueña del riesgo.</td>
+      <td align="left">`EdgeNode`</td>
+      <td align="left">Persiste la alerta para sync si la nube no alcanza. Safety sigue dueña del riesgo; no es un volcado desde el monolito.</td>
     </tr>
   </tbody>
 </table>
@@ -4815,9 +4880,11 @@ Repositorios sobre Cloud Database (motor `TBD`), adapter de actuación hacia fir
 <a id="s-4-2-2-5"></a>
 #### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-Safety & Actuation vive dentro del único container `Web Monolithic Backend`. Sus cuatro capas se modelan como componentes hexagonales: la aplicación móvil del supervisor llama a Interface para estado, alertas y anulación; Interface delega en Application; Application invoca Domain; Infrastructure persiste en `Cloud Database`, manda la actuación al firmware de campo (que conduce extractores, sirenas y mamparas) y deja copias offline en `Edge Application` si la nube no alcanza. Plant Monitoring e Identity no se dibujan en este diagrama: colaboran en el mismo proceso.
+Safety & Actuation se reparte en dos containers. En **cloud** (`Web Monolithic Backend`) las cuatro capas atienden estado, alertas y anulación del supervisor móvil; Infrastructure persiste la copia de auditoría en `Cloud Database` y reenvía el override al runtime Edge si hay WAN. En **planta** (`Edge Application`) las mismas cuatro capas corren el loop `: Interface consume la proyección de Plant Monitoring; Infrastructure escribe el estado vivo en `Edge Database`, manda `activate`/`normalize` al firmware y deja `PO-09` en `EdgeNode`.
 
-![Component Level Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-02-component.png)
+![Component Level Diagram — cloud](../assets/04-capitulo-iv/bounded-contexts/bc-02-component.png)
+
+![Component Level Diagram — edge](../assets/04-capitulo-iv/bounded-contexts/bc-02-component-edge.png)
 
 <a id="s-4-2-2-6"></a>
 #### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
@@ -4830,7 +4897,7 @@ Safety & Actuation vive dentro del único container `Web Monolithic Backend`. Su
 <a id="s-4-2-2-6-2"></a>
 ##### 4.2.2.6.2. Bounded Context Database Design Diagram
 
-Modelo relacional lógico: `exposure_states` (`area_id` UNIQUE), `environmental_alerts`, `area_actuator_states` (clave lógica `area_id` + `actuator_type`, **sin** `device_id`) y `automatic_actuator_actions`.
+Modelo relacional lógico, **los mismos** hechos en dos almacenes: Edge Database (SQLite, loop vivo) y Cloud Database (PostgreSQL, sync/auditoría). Tablas: `exposure_states` (`area_id` UNIQUE), `environmental_alerts`, `area_actuator_states` (clave lógica `area_id` + `actuator_type`, **sin** `device_id`) y `automatic_actuator_actions`.
 
 ![Database Design Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-02-database.png)
 
@@ -4843,11 +4910,9 @@ Modelo relacional lógico: `exposure_states` (`area_id` UNIQUE), `environmental_
 
 ---
 
-Device & Edge Management autentica dispositivos de campo, consume las lecturas publicadas al broker MQTT y las entrega a Plant Monitoring, y mantiene continuidad si la nube no alcanza: cola local, reintento al recuperar el enlace y copia de alerta. Es un contexto **supporting**: no interpreta umbrales ni exposición. El Edge *hace de* pasarela hacia la nube; no hay un colaborador llamado «IoT Gateway».
+Device & Edge Management autentica dispositivos de campo, consume las lecturas publicadas al broker MQTT y las entrega a Plant Monitoring, y mantiene continuidad si la nube no alcanza: cola local, reintento al recuperar el enlace y copia de alerta. Es un contexto **supporting**: no interpreta umbrales ni exposición.
 
-El mismo contexto está **repartido** en dos containers. En el **Web Monolithic Backend** vive el registro maestro de `DeviceCredential`: emitir, revocar y validar contra la fuente de verdad. Identity & Access **no** corre en el Edge; la credencial de dispositivo no es una cuenta de usuario. En la **Edge Application** (con **Edge Database**) vive `EdgeNode`: autenticar el firmware, consumir MQTT sin unificar CO₂, ruido y presencia, ingest hacia Plant Monitoring, cola y sync, y la copia de alerta que Safety & Actuation deja cuando la nube no alcanza. Safety sigue dueña del riesgo; este contexto no copia el estado de exposición. La actuación física sigue yendo al firmware, no a este módulo.
-
-El producto del broker MQTT y el motor SQL (nube y Edge) quedan `TBD`. No se modelan actualización remota de firmware ni salud del servidor de planta: no forman parte del diseño de dominio cerrado.
+El mismo contexto está **repartido** en dos containers. En el **Web Monolithic Backend** vive el registro maestro de `DeviceCredential`: emitir, revocar y validar contra la fuente de verdad. En la **Edge Application** vive `EdgeNode`: autenticar el firmware, consumir MQTT sin unificar CO₂, ruido y presencia, ingest hacia Plant Monitoring, cola y sync, y la copia de alerta que el Safety **runtime (hermano en el mismo container)** deja para sincronizar.
 
 Ubiquitous language: *Device credential* · *Device authenticated* · *Edge node* · *Telemetry queued locally* · *Local telemetry sync* · *Offline alert stored* · *Duplicate telemetry acknowledged* · *Ingest telemetry*.
 
@@ -4986,7 +5051,7 @@ Dos aggregate roots en el mismo bounded context y en distintos procesos: `Device
 <a id="s-4-2-3-2"></a>
 #### 4.2.3.2. Interface Layer
 
-En la nube, un controller interno emite y revoca credenciales de dispositivo (no cuentas de usuario). En el Edge, el firmware se autentica, un consumer MQTT recibe tres hechos sin unificarlos y un consumer recibe la copia de alerta desde Safety & Actuation. No hay un «IoT Gateway» como colaborador.
+En la nube, un controller interno emite y revoca credenciales de dispositivo (no cuentas de usuario). En el Edge, el firmware se autentica, un consumer MQTT recibe tres hechos sin unificarlos y un consumer recibe `Store offline alert` desde el Safety runtime **local**. No hay un «IoT Gateway» como colaborador.
 
 <table>
   <thead>
@@ -5023,7 +5088,7 @@ En la nube, un controller interno emite y revoca credenciales de dispositivo (no
     <tr>
       <td align="left">`OfflineAlertConsumer`</td>
       <td align="left">Consumer (edge)</td>
-      <td align="left">Recibe la copia de alerta desde Safety & Actuation (in-process/HTTP hacia Edge).</td>
+      <td align="left">Recibe `Store offline alert` desde el Safety runtime **local** (in-process). No es un POST desde el monolito.</td>
       <td align="left">`onStoreOfflineAlert()`</td>
       <td align="left">Safety & Actuation; Application Layer (edge)</td>
     </tr>
@@ -5108,7 +5173,7 @@ Handlers de emisión, autenticación y revocación en la nube; en el Edge, auten
 <a id="s-4-2-3-4"></a>
 #### 4.2.3.4. Infrastructure Layer
 
-Repositorio de credenciales sobre Cloud Database; cola y copias sobre Edge Database; adapter MQTT (producto `TBD`); ingest hacia Plant Monitoring; sync de credenciales Edge ↔ nube. Motores SQL `TBD`. No hay adaptador de actuación: el relé lo manda Safety & Actuation al firmware.
+Repositorio de credenciales sobre Cloud Database (PostgreSQL); cola y copias sobre Edge Database (SQLite); adapter MQTT (Eclipse Mosquitto); ingest hacia Plant Monitoring; sync de credenciales Edge ↔ nube.
 
 <table>
   <thead>
@@ -5125,21 +5190,21 @@ Repositorio de credenciales sobre Cloud Database; cola y copias sobre Edge Datab
       <td align="left">`DeviceCredentialRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IDeviceCredentialRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia del registro maestro de credenciales.</td>
     </tr>
     <tr>
       <td align="left">`EdgeNodeRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IEdgeNodeRepository`</td>
-      <td align="left">Edge Database (motor TBD)</td>
+      <td align="left">Edge Database (SQLite)</td>
       <td align="left">Persistencia del nodo, la cola y las copias de alerta.</td>
     </tr>
     <tr>
       <td align="left">`MqttBrokerAdapter`</td>
       <td align="left">Adapter</td>
       <td align="left">`IMqttSubscriber`</td>
-      <td align="left">MQTT Broker (producto TBD)</td>
+      <td align="left">MQTT Broker (Eclipse Mosquitto)</td>
       <td align="left">Consume los tres tópicos de lecturas. El broker es container interno de SafePlant.</td>
     </tr>
     <tr>
@@ -5162,11 +5227,9 @@ Repositorio de credenciales sobre Cloud Database; cola y copias sobre Edge Datab
 <a id="s-4-2-3-5"></a>
 #### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-Device & Edge Management no cabe en una sola vista de componentes: el registro maestro está en `Web Monolithic Backend` y el runtime en `Edge Application`. Las cuatro capas hexagonales se anidan en cada container.
+En la nube, Interface expone emisión y revocación; Application invoca `DeviceCredential`; Infrastructure persiste en `Cloud Database` y atiende el sync desde el Edge.
 
-En la nube, Interface expone emisión y revocación; Application invoca `DeviceCredential`; Infrastructure persiste en `Cloud Database` y atiende el sync desde el Edge. Identity y Safety no se dibujan como hexágonos extra.
-
-En runtime, el firmware se autentica en Interface; el broker MQTT entrega lecturas; Application orquesta ingest, cola y copia de alerta; Infrastructure escribe en `Edge Database`, ingiere en Plant Monitoring (Interface del monolito) y sincroniza credenciales. Safety aparece solo como origen de la copia offline ya modelada hacia el Edge. No hay OTA.
+En runtime, el firmware se autentica en Interface; el broker MQTT entrega lecturas; Application orquesta ingest, cola y copia de alerta. Infrastructure escribe en `Edge Database`, ingiere en Plant Monitoring (Interface del monolito) y sincroniza credenciales.
 
 ![Component Level Diagram — cloud](../assets/04-capitulo-iv/bounded-contexts/bc-03-component-cloud.png)
 
@@ -5178,14 +5241,12 @@ En runtime, el firmware se autentica en Interface; el broker MQTT entrega lectur
 <a id="s-4-2-3-6-1"></a>
 ##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-Aggregates `DeviceCredential` (cloud) y `EdgeNode` (edge) en un mismo class diagram, con value objects, políticas de cola/sync y puertos.
-
 ![Domain Layer Class Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-03-domain-class.png)
 
 <a id="s-4-2-3-6-2"></a>
 ##### 4.2.3.6.2. Bounded Context Database Design Diagram
 
-Dos esquemas lógicos. Cloud Database: `device_credentials` (`device_id` UNIQUE, `secret_hash`, vigencia, `revoked_at`). Edge Database: `telemetry_queue` (tipo de hecho separado, `idempotency_key`) y `offline_alert_copies` (`area_id`, `alert_id`, `stored_at`). Sin tabla de exposición. Motores `TBD`.
+Dos esquemas lógicos. Cloud Database (PostgreSQL): `device_credentials` (`device_id` UNIQUE, `secret_hash`, vigencia, `revoked_at`). Edge Database (SQLite): `telemetry_queue` (tipo de hecho separado, `idempotency_key`) y `offline_alert_copies` (`area_id`, `alert_id`, `stored_at`).
 
 ![Database Design Diagram](../assets/04-capitulo-iv/bounded-contexts/bc-03-database.png)
 
@@ -5458,7 +5519,7 @@ Un handler por comando del contexto (`C-01`–`C-09`) más el query de directori
 <a id="s-4-2-4-4"></a>
 #### 4.2.4.4. Infrastructure Layer
 
-Implementaciones de los tres repositorios y el adaptador de correo. Motor de base de datos y proveedor de email quedan `TBD` (no se asume Auth0/Cognito ni marca de email — DEC-005).
+Implementaciones de los tres repositorios y el adaptador de correo. Motor de base de datos: **PostgreSQL**; proveedor de email: **SMTP** (DEC-008). Identity sigue propia (no Auth0/Cognito).
 
 <table>
   <thead>
@@ -5475,28 +5536,28 @@ Implementaciones de los tres repositorios y el adaptador de correo. Motor de bas
       <td align="left">`UserAccountRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`IUserAccountRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de cuentas.</td>
     </tr>
     <tr>
       <td align="left">`SessionRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`ISessionRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de sesiones.</td>
     </tr>
     <tr>
       <td align="left">`CredentialRecoveryRepository`</td>
       <td align="left">Repository (implementación)</td>
       <td align="left">`ICredentialRecoveryRepository`</td>
-      <td align="left">Cloud Database (motor TBD)</td>
+      <td align="left">Cloud Database (PostgreSQL)</td>
       <td align="left">Persistencia relacional de procesos de recuperación.</td>
     </tr>
     <tr>
       <td align="left">`EmailServiceAdapter`</td>
       <td align="left">Adapter</td>
       <td align="left">`IEmailSender`</td>
-      <td align="left">Email Service (`XS-01`, proveedor TBD)</td>
+      <td align="left">Email Service (`XS-01`, SMTP)</td>
       <td align="left">Envía el correo de recuperación de credenciales.</td>
     </tr>
   </tbody>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bounded-context-canvas">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/.cursor/design/bounded-context-canvas/bounded-context-canvas.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
