@@ -1118,7 +1118,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-2.jpg" alt="Entrevista 2 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-2.jpeg" alt="Entrevista 2 - Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
