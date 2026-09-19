@@ -390,6 +390,84 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <a id="s-2-2-3"></a>
 ### 2.2.3. Análisis de entrevistas
 
+El análisis se construyó sobre las cinco entrevistas válidas del registro 2.2.2 (dos supervisores de seguridad y tres encargados de planta), contrastadas con la guía de 2.2.1. La lectura fue por afinidad: primero se extrajeron dolores, jobs y expectativas de cada participante; después se triangularon coincidencias y divergencias entre segmentos. El objetivo no es resumir otra vez cada ficha, sino convertir evidencia verbal en requisitos de producto para SafePlant: qué debe ocurrir en la **app móvil** del supervisor y qué debe gobernarse desde la **app web** del encargado.
+
+| Entrevistado | Segmento | Tipo de planta | Nivel tecnológico | Duración |
+|---|---|---|---|---|
+| Anyeli Vilcapaza | Supervisora SSOMA | Fábrica metalmecánica (soldadura y procesos) | Básico / Intermedio | 07:20 |
+| Diego Ruiz del Solar | Supervisor de seguridad industrial | Planta de ensamblaje y producción | Básico | 06:16 |
+| Fabrizio Buselleu | Gerente de operaciones / jefe de planta | Fundición y metales no ferrosos (MEPSA) | Intermedio | 09:59 |
+| Carlos Mendoza | Encargado de planta | Planta de manufactura | Intermedio / Avanzado | 07:55 |
+| Nathaly Solano Armas | Encargada de planta | Planta metalmecánica de tamaño medio | Intermedio | 11:06 |
+
+La muestra cubre metalmecánica, fundición y ensamblaje, con madurez tecnológica de básica a intermedia-avanzada. Eso evita un sesgo de una sola planta “ideal” y permite distinguir lo que es común al rol de lo que es propio del contexto físico (interferencia metálica, calor, vibración).
+
+<a id="s-2-2-3-1"></a>
+#### 2.2.3.1. Hallazgos del segmento Supervisor de Seguridad
+
+En campo el monitoreo actual es **reactivo y presencial**. Anyeli se entera de un riesgo por radio o porque alguien llega a avisarle; no existe alerta automática ni cruce de datos entre áreas. Diego recorre la planta con mediciones manuales, con margen de error en gases y ruido, y pierde tiempo crítico al desplazarse hasta un tablero físico para accionar un mitigador. El incidente relatado por Anyeli cuantifica el costo de ese modelo: un extractor de soldadura falló, un operario se mareó y el ciclo aviso–evacuar–medir con portátil–activar respaldo tomó unos **25 minutos**; ella estima que una alerta automática habría adelantado al menos **15 minutos**.
+
+La verificación post-incidente también es manual (pasar lista, revisar medidores, redactar un reporte) y no deja rastro auditable. Ambos supervisores coinciden en la forma de la solución móvil:
+
+- Un **mapa o semáforo en tiempo real** (verde / amarillo / rojo o mapa de calor) para ubicar el foco sin llamadas.
+- En alerta roja: **área, parámetro (CO₂, ruido o ambos), desde cuándo sube y si hay personal** en el lugar.
+- **Override remoto** de extractores, sirenas o mamparas cuando el sensor falla o el escenario no está cubierto por la automatización.
+- Alertas críticas con **sonido y vibración persistentes**, visibles con el teléfono bloqueado y distintas de las informativas.
+
+Anyeli formula el cambio de mentalidad que el producto debe sostener: pasar de “cero incidentes” a **“cero sorpresas”**. Diego refuerza que la automatización no reemplaza al supervisor: necesita intervenir *antes* de que la regla automática se ejecute cuando el evento es impredecible.
+
+<a id="s-2-2-3-2"></a>
+#### 2.2.3.2. Hallazgos del segmento Encargado de Planta
+
+El encargado no recorre la planta: **gobierna, parametriza y rinde cuentas**. Los tres entrevistados describen un backoffice fragmentado en Excel, papel, correo y coordinación con mantenimiento.
+
+Fabrizio mide el problema en dinero y tiempo de línea: cada alarma que obliga a evacuar o parar le cuesta entre **40 minutos y 2 horas** de producción. Su meta a cinco años es bajar 50 % los incidentes ambientales y llegar a **cero observaciones SUNAFIL** por gases o ruido. El alta de un sensor es manual (zona, umbral, destinatario) y ha producido **sensores huérfanos**; en un caso, tres sensores de la Zona B estuvieron caídos **casi seis horas** sin que nadie lo notara hasta el cambio de turno, y no pudo responder a gerencia si algo ocurrió en ese lapso. Añade restricciones físicas de fundición: Wi-Fi degradada por estructuras metálicas, desalineación por vibración y puntos de CO₂ cerca de calor.
+
+Carlos resume el mismo dolor en productividad gerencial: datos ambientales dispersos, estrés por actualizar **máquina por máquina** y falta de permisos. Espera un dashboard que unifique sensores y mitigaciones, exporte reportes y centralice límites legales.
+
+Nathaly cierra el ciclo operativo. Quiere dejar de reaccionar cuando el personal ya está expuesto: monitoreo continuo, ventilación preventiva y evidencia para auditorías. Le quitan tiempo armar reportes a mano, alinear umbrales entre turnos, dar altas y bajas de acceso y coordinar dispositivos caídos. El inventario se rompe si el sensor o actuador no se asocia al **área correcta y al tipo** (CO₂, ruido, PIR, extractor, sirena, mampara). Los umbrales **no son únicos**: varían por espacio, tipo de ruido y presencia de personal; un tope mal calibrado no dispara o satura de falsas alertas. Las normas llegan por correo o PDF, se copian tarde a cada área y quiere versionar parámetros con fecha. Una caída de internet o de un ESP32 le quita visibilidad ante SST: el sistema debe marcar el dispositivo como no disponible y **aguantar offline en el gateway**.
+
+Los tres encargados piden la misma superficie web: dashboard (mapa o por área, no solo tablas), configuración de umbrales sin soporte técnico, exportación de reportes (PDF) e **historial / auditoría** (Fabrizio pide al menos 12 meses). En permisos hay consenso de control: Fabrizio restringiría umbrales a él y al jefe SSOMA corporativo; Nathaly solo otorga rol de supervisor a quien opera seguridad en campo y deja el control de actuadores al celular del supervisor.
+
+<a id="s-2-2-3-3"></a>
+#### 2.2.3.3. Patrones transversales y divergencias de rol
+
+| Tema | Evidencia | Implicación para SafePlant |
+|---|---|---|
+| Visibilidad en tiempo real por área | Zonas ciegas (Anyeli); rondas manuales (Diego); sensores caídos 6 h (Fabrizio); ESP32 offline (Nathaly) | Telemetría continua de CO₂, ruido y presencia; estado “no disponible” del dispositivo; semáforo / mapa en móvil y dashboard en web |
+| Tiempo de respuesta | 25 min de ciclo en soldadura (Anyeli); traslado a tablero (Diego); paradas de 40 min–2 h (Fabrizio) | Detección + actuación automática de extractores, sirenas y mamparas; override remoto desde el móvil |
+| Configuración manual que no escala | Excel y alta sensor a sensor (Fabrizio, Carlos, Nathaly); normas por correo/PDF (Nathaly) | App web para umbrales por área, inventario de dispositivos y versión / fecha de la norma |
+| Umbrales y falsos positivos | Umbrales distintos por área y presencia (Nathaly); riesgo de bajar un tope (Fabrizio) | Umbrales por área, no globales; permiso de configuración solo en el encargado; correlación con PIR |
+| Auditoría y reportes | Reporte escrito post-incidente (Anyeli); 12 meses y SUNAFIL (Fabrizio); datos dispersos (Carlos); overrides y patrones (Nathaly) | Historial de mediciones, alertas, acciones y cambios de configuración; exportación PDF |
+| Canal según el rol | Móvil para decidir y actuar (Anyeli, Diego); web para gobernar (Fabrizio, Carlos, Nathaly) | Separación estricta: supervisor opera y hace override en móvil; encargado parametriza, usuarios y reportes en web |
+| Resiliencia de planta | Wi-Fi metálica y calor (Fabrizio); offline de gateway (Nathaly) | Procesamiento en el edge, persistencia local y sincronización al recuperar enlace |
+
+La divergencia más útil para el diseño no es de “gusto de interfaz”, sino de **responsabilidad**. El supervisor necesita decidir en segundos con el teléfono en la mano; el encargado necesita que nadie más rebaje un umbral y que un auditor pueda reconstruir qué pasó. SafePlant debe impedir que esas dos intenciones se mezclen en el mismo canal.
+
+<a id="s-2-2-3-4"></a>
+#### 2.2.3.4. Contrastación con las hipótesis Lean UX
+
+Las entrevistas **confirman y precisan** las tres hipótesis del Capítulo I:
+
+1. **Automatización preventiva.** El incidente del extractor y la demanda de Nathaly de ventilar antes de que haya personal expuesto sostienen la hipótesis de detectar CO₂/ruido y accionar extractores sin esperar un recorrido. Se añade una condición de diseño: la automatización debe convivir con override manual, no sustituirlo.
+2. **Monitoreo remoto ágil.** Anyeli y Diego validan alertas inmediatas y control de mitigadores desde el móvil. El umbral “menos de 1 minuto” es creíble frente a los 25 minutos actuales, siempre que la alerta crítica no se pueda silenciar por accidente.
+3. **Parametrización y cumplimiento.** Fabrizio, Carlos y Nathaly validan el panel web de umbrales, dashboard e histórico. La hipótesis de +30 % de eficiencia gerencial se ancla en dos tareas que hoy son manuales y que los tres automatizarían: aplicar la norma a todas las áreas y armar el reporte de eventos.
+
+Quedan supuestos abiertos, no refutados: la magnitud exacta del 90 % de reducción de exposición y del 40 % menos de alertas críticas exige medición en piloto; la interferencia industrial (metal, calor, vibración) es un riesgo de infraestructura, no de discurso de usuario.
+
+<a id="s-2-2-3-5"></a>
+#### 2.2.3.5. Insights que alimentan el needfinding y el EventStorming
+
+Del análisis se retienen cinco decisiones de dominio que luego aparecen en personas, journeys y en el Big Picture EventStorming:
+
+1. La unidad de control no es “la planta” ni un mapa cartográfico: es el **área industrial** (soldadura, compresores, calderas, fundición) con umbral, dispositivos y personal propios.
+2. Un valor ambiental sin **presencia** no tiene la misma urgencia que un valor con personal expuesto; por eso el PIR entra al lenguaje del supervisor.
+3. El evento de negocio no termina en “se superó el umbral”: termina cuando se **actuó**, se verificó y quedó **evidencia**.
+4. Un dispositivo que deja de reportar es tan grave como un exceso no detectado: debe existir el hecho “sensor no disponible”.
+5. Identidad y permisos son parte del problema de seguridad ocupacional: mal rol o umbral editable por cualquiera convierte la plataforma en un riesgo.
+
+Estos insights cierran el ciclo de elicitación: las entrevistas no solo describen frustraciones, sino que delimitan agregados y contextos (sesión y acceso, configuración de planta, ingesta de telemetría, detección y actuación) que se desarrollan en 2.3 y 2.4.
+
 <a id="s-2-3"></a>
 ## 2.3. Needfinding
 
