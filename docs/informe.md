@@ -33,45 +33,45 @@
 
 </div>
 
+<div align="center">
+
 <a id="s-relacion-integrantes"></a>
 ## Relación de integrantes
 
-<table>
+<table align="center">
   <thead>
     <tr>
-      <th align="left">Código</th>
-      <th align="left">Apellidos y Nombres</th>
+      <th align="center">Código</th>
+      <th align="center">Apellidos y Nombres</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="left">U20231B775</td>
-      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="center">U20231B775</td>
+      <td align="center">Solano Armas, Angelo Héctor</td>
     </tr>
     <tr>
-      <td align="left">U202215160</td>
-      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="center">U202215160</td>
+      <td align="center">Gordillo Ramos, Santiago Alonso</td>
     </tr>
     <tr>
-      <td align="left">U202417448</td>
-      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="center">U202417448</td>
+      <td align="center">Huaman Cuba, Johan Giovani</td>
     </tr>
     <tr>
-      <td align="left"></td>
-      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="center">U202319881</td>
+      <td align="center">Baldeon Vivar, Santiago Armando</td>
     </tr>
     <tr>
-      <td align="left"></td>
-      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="center">U202316118</td>
+      <td align="center">Iglesias Pérez, Sergio Sebastián</td>
     </tr>
     <tr>
-      <td align="left"></td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="center">U202310609</td>
+      <td align="center">Sanchez Gonzales, Gabriel</td>
     </tr>
   </tbody>
 </table>
-
-<div align="center">
 
 **Mes y año:** Septiembre, 2026
 
@@ -501,13 +501,13 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <tbody>
     <tr>
       <td align="left">Trabaja en equipo para proporcionar liderazgo en forma conjunta</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Participó activamente en las entrevistas con encargados de planta y supervisores, aportando evidencia de campo para decidir el alcance de SafeGuard. Lideró de forma compartida la elaboración de User Stories, la actualización del Product Backlog y el modelado de Domain Message Flows, además de contribuir al Big Picture EventStorming. Con ello, alineó requisitos, dominio y entregables del informe.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Asumió el arranque del Startup Profile, la descripción de Macallys, el Solution Profile y la metodología Lean UX (problem statements, assumptions, hypothesis y canvas). Registró entrevistas y aportó al Big Picture EventStorming, dando al equipo una visión de producto compartida desde el Capítulo I.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Participó en entrevistas y en el EventStorming, y luego lideró el descubrimiento táctico: Domain Message Flows, Candidate Context Discovery y Design-Level EventStorming. Su trabajo conectó el lenguaje del dominio con los bounded contexts del Capítulo IV.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Lideró el análisis competitivo, las estrategias frente a competidores, el needfinding y la User Task Matrix. Aportó al EventStorming para que las decisiones de diferenciación se sostuvieran en evidencias de usuario y de mercado.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Participó en el EventStorming y asumió el liderazgo de la arquitectura de software: System Landscape, Tactical-Level DDD y diagramas de contexto C4. Aseguró coherencia entre el dominio descubierto y la estructura técnica de SafeGuard.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Diseñó el guion de entrevistas, participó en su ejecución y colaboró en User Stories, Impact Mapping, Domain Message Flows y EventStorming. Aportó liderazgo en la trazabilidad de necesidades de supervisor y encargado hacia el backlog.</td>
+      <td align="left">Los integrantes demostraron liderazgo compartido en AV1: cada uno condujo una franja del informe —producto, elicitación, dominio o arquitectura— y retroalimentó al resto. El compromiso y la comunicación constante permitieron cerrar la entrega con una visión única de SafeGuard.</td>
     </tr>
     <tr>
       <td align="left">Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Coordinó la integración de capítulos en el informe, la evidencia de entrevistas y la consistencia del backlog con las historias. Facilitó que el equipo trabajara sobre un mismo repositorio y un mismo lenguaje ubicuo.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Planificó y completó los entregables iniciales del perfil de startup y Lean UX, dejando plantillas y segmentos claros para que el resto del equipo continuara el needfinding y las entrevistas.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Organizó el paso del EventStorming de Big Picture al nivel de diseño, cumpliendo los objetivos de delimitar agregados y bounded contexts con el equipo.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Estableció metas de análisis (competidores, needfinding y task matrix) y las cerró con artefactos reutilizables para personas, journeys y el tablero de EventStorming.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Planificó los entregables de arquitectura de AV1 y los documentó en el Capítulo IV, alineando landscape, contexto y DDD táctico con lo acordado en Miro.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Definió el diseño de entrevistas y el Impact Map, planificando preguntas y resultados que el equipo usó para priorizar historias y flujos de dominio.</td>
+      <td align="left">En AV1 el equipo construyó un entorno colaborativo: metas por capítulo, tablero compartido en Miro y un informe versionado. Cada integrante planificó su frente y cumplió los objetivos de elicitación, especificación y diseño inicial de SafeGuard.</td>
     </tr>
   </tbody>
 </table>
@@ -616,13 +616,13 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left"><strong>Nombre:</strong> Santiago Armando Baldeon Vivar</td>
     </tr>
     <tr>
-      <td align="left"><strong>Código:</strong> —</td>
+      <td align="left"><strong>Código:</strong> U202319881</td>
     </tr>
     <tr>
       <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td align="left"><strong>Descripción:</strong> —</td>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con interés en el análisis de producto y la investigación de usuarios. Se organiza con claridad, comunica con precisión y aporta una mirada competitiva para diferenciar la solución. Comprometido con el trabajo en equipo y con traducir hallazgos de campo en decisiones de diseño.</td>
     </tr>
   </tbody>
 </table>
@@ -633,18 +633,18 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
   <tbody>
     <tr>
       <td rowspan="4" align="center" width="25%">
-        <img src="../assets/01-capitulo-i/equipo/integrante-4.png" alt="Sergio Sebastián Iglesias Pérez" width="140">
+        <img src="../assets/01-capitulo-i/equipo/integrante-4.jpg" alt="Sergio Sebastián Iglesias Pérez" width="140">
       </td>
       <td align="left"><strong>Nombre:</strong> Sergio Sebastián Iglesias Pérez</td>
     </tr>
     <tr>
-      <td align="left"><strong>Código:</strong> —</td>
+      <td align="left"><strong>Código:</strong> U202316118</td>
     </tr>
     <tr>
       <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td align="left"><strong>Descripción:</strong> —</td>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con afinidad por la arquitectura de software y el modelado de sistemas. Trabaja con orden, documenta con rigor y busca que cada diagrama se traduzca en una decisión técnica útil. Aporta liderazgo en el diseño estructural y se alinea con el equipo para mantener coherencia entre dominio e implementación.</td>
     </tr>
   </tbody>
 </table>
@@ -660,13 +660,13 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left"><strong>Nombre:</strong> Gabriel Sanchez Gonzales</td>
     </tr>
     <tr>
-      <td align="left"><strong>Código:</strong> —</td>
+      <td align="left"><strong>Código:</strong> U202310609</td>
     </tr>
     <tr>
       <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td align="left"><strong>Descripción:</strong> —</td>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con interés en requisitos, entrevistas y trazabilidad del producto. Participa con iniciativa, escucha a los usuarios y convierte sus necesidades en historias e impacto medible. Colabora con el equipo para que el análisis, el backlog y el dominio hablen el mismo lenguaje.</td>
     </tr>
   </tbody>
 </table>
@@ -982,30 +982,30 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b>  Diego Ruiz del Solar<br>
-      <b>Edad:</b> 28 años<br>
-      <b>Distrito:</b> Callao <br>
-      <b>Ocupación:</b> Supervisor de seguridad industrial<br>
-      <b>Experiencia laboral:</b> 3 años en el sector industrial<br>
-      <b>Área de trabajo:</b> Planta de ensamblaje y producción<br>
-      <b>Tipo de establecimiento:</b> Planta <br>
-      <b>Nivel tecnológico:</b> Básico <br>
-      <b>Timing:</b> 00:00:00 - 00:06:16]<br>
-      <b>Duración:</b> 06:16<br>
-      <b>Entrevistador:</b> Santiago Gordillo Ramos
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto, ej: Supervisor SSOMA]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
+      <b>Área de trabajo:</b> [Planta de producción, campo, etc.]<br>
+      <b>Tipo de establecimiento:</b> [Ej: Fábrica metalmecánica]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
+      <b>Duración:</b> [mm:ss]<br>
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
     </td>
     <td align="center">
-      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-1.jpeg" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
+      <img src="assets/chapter-2/entrevista-supervisor-1.png" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">[Ver entrevista en Microsoft Stream]</a>
+      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
       <br><br>
-      <b>Resumen:</b> El trabajo de Diego consiste de rondas de manera presencial y mediciones manuales tradicionales, lo que genera margen de error en la detección de gases y ruidos. Ante situaciones de peligro, la respuesta es lenta y se pierde tiempo crítico en traslados para accionar algún tablero físico.
+      <b>Resumen:</b> [Descripción detallada de cómo realiza actualmente el monitoreo de seguridad en la planta. Explicar qué herramientas manuales o antiguas utiliza, cuánto tiempo le toma y cuáles son sus mayores frustraciones al no tener control remoto. Mencionar incidentes pasados relacionados con CO2 o ruido.]
       <br><br>
-      Le parece una grata idea contar con una aplicación móvil, destacando la opción del mapa de calor en tiempo real, alertas vibratorias persistentes y la opción de control remoto de mitigadores para actuar ante incidentes impredecibles que requieren intervención del personal antes de que la automatización se ejecute.
+      [Detallar sus expectativas sobre una aplicación móvil para monitoreo en tiempo real: qué métricas necesita ver primero, cómo espera recibir las alertas de peligro y qué tan dispuesto está a adoptar una nueva tecnología en su rutina diaria.]
     </td>
   </tr>
 </table>
@@ -1117,17 +1117,17 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> Carlos Mendoza<br>
-      <b>Edad:</b> 28 años<br>
-      <b>Distrito:</b> Ate<br>
-      <b>Ocupación:</b> Encargado de Planta<br>
-      <b>Experiencia laboral:</b> 4 años en gestión industrial<br>
-      <b>Área de trabajo:</b>Gerencia de Operaciones y Mantenimiento<br>
-      <b>Tipo de establecimiento:</b>Planta de Manufactura<br>
-      <b>Nivel tecnológico:</b>Intermedio / Avanzado<br>
-      <b>Timing:</b> 00:00:00 - hh:mm:ss]<br>
+      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
+      <b>Edad:</b> [Edad] años<br>
+      <b>Distrito:</b> [Distrito]<br>
+      <b>Ocupación:</b> [Puesto exacto]<br>
+      <b>Experiencia laboral:</b> [Años de experiencia] en gestión industrial<br>
+      <b>Área de trabajo:</b> [Área]<br>
+      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
+      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
+      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
       <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
+      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
     </td>
     <td align="center">
       <img src="assets/chapter-2/entrevista-encargado-2.png" alt="Entrevista 2 - Encargado de Planta" width="85%">
@@ -1137,7 +1137,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
     <td colspan="2">
       <b>Enlace:</b> <a href="[URL del video en Microsoft Stream]">[URL del video en Microsoft Stream]</a>
       <br><br>
-      <b>Resumen:</b> El problema principal que comenta es la enorme pérdida de tiempo tratando de organizar datos ambientales que se encuentran dispersos para poder generar reportes. Sufre de frustraciones y estrés por la dificultad de tener que actualizar máquina por máquina y la falta de permisos. Sus expectativas sobre una plataforma web se centran en tener un dashboard donde pueda controlar de manera general la información de los sensores IoT con las mitigaciones automáticas, permitiendo exportar reportas de manera sencilla y configurar los límites legales de forma centralizada.
+      <b>Resumen:</b> [Descripción de sus dolores actuales en la consolidación de datos ambientales, manejo de auditorías, y sus expectativas sobre el control remoto de los mitigadores desde una aplicación web.]
     </td>
   </tr>
 </table>
@@ -1239,7 +1239,9 @@ Segmento Objetivo: Encargado de Planta:
 <a id="s-2-4"></a>
 ## 2.4. Big Picture EventStorming
 
-A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafeGuard. Se trabajó sobre un mismo tablero digital, avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafeGuard. Se trabajó sobre un mismo [tablero digital en Miro](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821), avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+
+**Tablero Miro:** [Big Picture EventStorming — SafeGuard](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821)
 
 **Paso 1 — Unstructured Exploration**
 

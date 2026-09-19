@@ -449,7 +449,9 @@ Segmento Objetivo: Encargado de Planta:
 <a id="s-2-4"></a>
 ## 2.4. Big Picture EventStorming
 
-A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafeGuard. Se trabajó sobre un mismo tablero digital, avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+A partir de las entrevistas, personas y journeys del needfinding, el equipo realizó una sesión de **Big Picture EventStorming** para descubrir el lenguaje del dominio SafeGuard. Se trabajó sobre un mismo [tablero digital en Miro](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821), avanzando por capas: primero eventos, luego orden temporal, hotspots, pivotes, comandos, políticas, read models, sistemas externos, agregados y, finalmente, candidatos a bounded contexts. El resultado agrupa el flujo en cuatro bloques: Accounts and Sessions, Plant Setup, Sensing and Ingest, y Risk Detection and Actuation.
+
+**Tablero Miro:** [Big Picture EventStorming — SafeGuard](https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821)
 
 **Paso 1 — Unstructured Exploration**
 

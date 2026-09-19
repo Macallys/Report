@@ -104,13 +104,13 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left"><strong>Nombre:</strong> Santiago Armando Baldeon Vivar</td>
     </tr>
     <tr>
-      <td align="left"><strong>Código:</strong> —</td>
+      <td align="left"><strong>Código:</strong> U202319881</td>
     </tr>
     <tr>
       <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td align="left"><strong>Descripción:</strong> —</td>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con interés en el análisis de producto y la investigación de usuarios. Se organiza con claridad, comunica con precisión y aporta una mirada competitiva para diferenciar la solución. Comprometido con el trabajo en equipo y con traducir hallazgos de campo en decisiones de diseño.</td>
     </tr>
   </tbody>
 </table>
@@ -121,18 +121,18 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
   <tbody>
     <tr>
       <td rowspan="4" align="center" width="25%">
-        <img src="../assets/01-capitulo-i/equipo/integrante-4.png" alt="Sergio Sebastián Iglesias Pérez" width="140">
+        <img src="../assets/01-capitulo-i/equipo/integrante-4.jpg" alt="Sergio Sebastián Iglesias Pérez" width="140">
       </td>
       <td align="left"><strong>Nombre:</strong> Sergio Sebastián Iglesias Pérez</td>
     </tr>
     <tr>
-      <td align="left"><strong>Código:</strong> —</td>
+      <td align="left"><strong>Código:</strong> U202316118</td>
     </tr>
     <tr>
       <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td align="left"><strong>Descripción:</strong> —</td>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con afinidad por la arquitectura de software y el modelado de sistemas. Trabaja con orden, documenta con rigor y busca que cada diagrama se traduzca en una decisión técnica útil. Aporta liderazgo en el diseño estructural y se alinea con el equipo para mantener coherencia entre dominio e implementación.</td>
     </tr>
   </tbody>
 </table>
@@ -148,13 +148,13 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
       <td align="left"><strong>Nombre:</strong> Gabriel Sanchez Gonzales</td>
     </tr>
     <tr>
-      <td align="left"><strong>Código:</strong> —</td>
+      <td align="left"><strong>Código:</strong> U202310609</td>
     </tr>
     <tr>
       <td align="left"><strong>Carrera:</strong> Ingeniería de Software</td>
     </tr>
     <tr>
-      <td align="left"><strong>Descripción:</strong> —</td>
+      <td align="left"><strong>Descripción:</strong> Estudiante de Ingeniería de Software con interés en requisitos, entrevistas y trazabilidad del producto. Participa con iniciativa, escucha a los usuarios y convierte sus necesidades en historias e impacto medible. Colabora con el equipo para que el análisis, el backlog y el dominio hablen el mismo lenguaje.</td>
     </tr>
   </tbody>
 </table>
