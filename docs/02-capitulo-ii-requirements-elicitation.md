@@ -390,8 +390,6 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <a id="s-2-2-3"></a>
 ### 2.2.3. Análisis de entrevistas
 
-El análisis se construyó sobre las cinco entrevistas válidas del registro 2.2.2 (dos supervisores de seguridad y tres encargados de planta), contrastadas con la guía de 2.2.1. La lectura fue por afinidad: primero se extrajeron dolores, jobs y expectativas de cada participante; después se triangularon coincidencias y divergencias entre segmentos. El objetivo no es resumir otra vez cada ficha, sino convertir evidencia verbal en requisitos de producto para SafePlant: qué debe ocurrir en la **app móvil** del supervisor y qué debe gobernarse desde la **app web** del encargado.
-
 | Entrevistado | Segmento | Tipo de planta | Nivel tecnológico | Duración |
 |---|---|---|---|---|
 | Anyeli Vilcapaza | Supervisora SSOMA | Fábrica metalmecánica (soldadura y procesos) | Básico / Intermedio | 07:20 |
