@@ -57,7 +57,7 @@
       <td align="left">Gordillo Ramos, Santiago Alonso</td>
     </tr>
     <tr>
-      <td align="left"></td>
+      <td align="left">U202417448</td>
       <td align="left">Huaman Cuba, Johan Giovani</td>
     </tr>
     <tr>
