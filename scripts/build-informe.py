@@ -61,6 +61,7 @@ SPECIAL_IDS = {
     "Student Outcome (ABET - Criterio 5)": "s-student-outcome",
     "Videos de Exposiciones": "s-anexo-videos-exposiciones",
     "Repositorios y artefactos": "s-anexo-repositorios",
+    "Entrevistas": "s-anexo-entrevistas",
     "Capítulo I: Introducción": "s-cap-i",
     "Capítulo II: Requirements Elicitation & Analysis": "s-cap-ii",
     "Capítulo III: Requirements Specification": "s-cap-iii",

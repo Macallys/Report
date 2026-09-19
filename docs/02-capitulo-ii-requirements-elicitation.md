@@ -224,38 +224,6 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
-    </td>
-    <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-2.png" alt="Entrevista 2 - Supervisor de Seguridad" width="85%">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
-      <br><br>
-      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
-    </td>
-  </tr>
-</table>
-
-<a id="s-2-2-2-1-3"></a>
-##### 2.2.2.1.3. Entrevista 3
-
-<table border="1">
-  <tr>
-    <td width="40%">
       <b>Nombres y apellidos:</b> Diego Ruiz del Solar<br>
       <b>Edad:</b> 28 años<br>
       <b>Distrito:</b> Callao<br>
@@ -269,7 +237,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-3.jpeg" alt="Entrevista 3 - Diego Ruiz del Solar, Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-3.jpeg" alt="Entrevista 2 - Diego Ruiz del Solar, Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>

@@ -78,7 +78,7 @@ SafePlant
 
 </div>
 
----
+<div style="page-break-after: always;"></div>
 
 <a id="s-registro-versiones"></a>
 # Registro de Versiones del Informe
@@ -360,7 +360,6 @@ SafePlant
             - [2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](informe.md#s-2-2-2-1)
                 - [2.2.2.1.1. Entrevista 1](informe.md#s-2-2-2-1-1)
                 - [2.2.2.1.2. Entrevista 2](informe.md#s-2-2-2-1-2)
-                - [2.2.2.1.3. Entrevista 3](informe.md#s-2-2-2-1-3)
             - [2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)](informe.md#s-2-2-2-2)
                 - [2.2.2.2.1. Entrevista 1](informe.md#s-2-2-2-2-1)
                 - [2.2.2.2.2. Entrevista 2](informe.md#s-2-2-2-2-2)
@@ -464,11 +463,17 @@ SafePlant
         - [6.3.3. Evaluaciones según heurísticas](informe.md#s-6-3-3)
     - [6.4. Video About-the-Product](informe.md#s-6-4)
 - [Conclusiones](informe.md#s-conclusiones)
+        - [Conclusiones](informe.md#s-conclusiones-conclusiones)
+        - [Recomendaciones](informe.md#s-recomendaciones)
     - [Video About-the-Team](informe.md#s-video-about-the-team)
 - [Bibliografía](informe.md#s-bibliografia)
+    - [Normativa y salud ocupacional](informe.md#s-normativa-y-salud-ocupacional)
+    - [Descubrimiento y diseño del dominio](informe.md#s-descubrimiento-y-diseno-del-dominio)
+    - [Tecnologías y estándares IoT](informe.md#s-tecnologias-y-estandares-iot)
 - [Anexos](informe.md#s-anexos)
     - [Videos de Exposiciones](informe.md#s-anexo-videos-exposiciones)
     - [Repositorios y artefactos](informe.md#s-anexo-repositorios)
+    - [Entrevistas](informe.md#s-anexo-entrevistas)
 
 <!-- TOC:end -->
 

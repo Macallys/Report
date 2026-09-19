@@ -74,7 +74,7 @@ SafePlant
 
 </div>
 
----
+<div style="page-break-after: always;"></div>
 
 <a id="s-registro-versiones"></a>
 # Registro de Versiones del Informe
@@ -356,7 +356,6 @@ SafePlant
             - [2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-2-2-2-1)
                 - [2.2.2.1.1. Entrevista 1](#s-2-2-2-1-1)
                 - [2.2.2.1.2. Entrevista 2](#s-2-2-2-1-2)
-                - [2.2.2.1.3. Entrevista 3](#s-2-2-2-1-3)
             - [2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)](#s-2-2-2-2)
                 - [2.2.2.2.1. Entrevista 1](#s-2-2-2-2-1)
                 - [2.2.2.2.2. Entrevista 2](#s-2-2-2-2-2)
@@ -460,11 +459,17 @@ SafePlant
         - [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
     - [6.4. Video About-the-Product](#s-6-4)
 - [Conclusiones](#s-conclusiones)
+        - [Conclusiones](#s-conclusiones-conclusiones)
+        - [Recomendaciones](#s-recomendaciones)
     - [Video About-the-Team](#s-video-about-the-team)
 - [Bibliografía](#s-bibliografia)
+    - [Normativa y salud ocupacional](#s-normativa-y-salud-ocupacional)
+    - [Descubrimiento y diseño del dominio](#s-descubrimiento-y-diseno-del-dominio)
+    - [Tecnologías y estándares IoT](#s-tecnologias-y-estandares-iot)
 - [Anexos](#s-anexos)
     - [Videos de Exposiciones](#s-anexo-videos-exposiciones)
     - [Repositorios y artefactos](#s-anexo-repositorios)
+    - [Entrevistas](#s-anexo-entrevistas)
 
 <!-- TOC:end -->
 
@@ -1005,38 +1010,6 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
-    </td>
-    <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-2.png" alt="Entrevista 2 - Supervisor de Seguridad" width="85%">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
-      <br><br>
-      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
-    </td>
-  </tr>
-</table>
-
-<a id="s-2-2-2-1-3"></a>
-##### 2.2.2.1.3. Entrevista 3
-
-<table border="1">
-  <tr>
-    <td width="40%">
       <b>Nombres y apellidos:</b> Diego Ruiz del Solar<br>
       <b>Edad:</b> 28 años<br>
       <b>Distrito:</b> Callao<br>
@@ -1050,7 +1023,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-3.jpeg" alt="Entrevista 3 - Diego Ruiz del Solar, Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-3.jpeg" alt="Entrevista 2 - Diego Ruiz del Solar, Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
@@ -6244,6 +6217,8 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 <a id="s-6-2"></a>
 ## 6.2. Landing Page, Services & Applications Implementation
 
+**URL de la landing page desplegada:** https://macallys.github.io/landing-page/
+
 > Documentar cada sprint en `sprints/` a partir de [`templates/sprint.md`](./templates/sprint.md).
 
 <table>
@@ -6313,6 +6288,44 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 <a id="s-conclusiones-recomendaciones"></a>
 ## Conclusiones y recomendaciones
 
+<a id="s-conclusiones-conclusiones"></a>
+### Conclusiones
+
+1. Al haber realizado esta entrega podemos concluir que el emplear la técnica Lean UX nos ayudó a comprender mejor el problema que estamos tratando, así como a las personas afectadas por él, lo que desean y cómo podemos ofrecérselo utilizando herramientas tecnológicas. La formulación de problem statements, assumptions e hypothesis statements nos obligó a declarar por escrito qué creíamos antes de diseñar, y eso nos brindó claridad como equipo y nos hizo abordar los puntos más críticos de la seguridad ocupacional en planta considerando la perspectiva del Supervisor de Seguridad y la del Encargado de Planta por separado, en lugar de asumir un único usuario genérico.
+
+2. Asimismo, el desarrollo de los artefactos de análisis, especificación de requerimientos y diseño de arquitectura permitió consolidar una visión más completa de SafePlant como solución IoT orientada al control ambiental y la prevención de riesgos en plantas industriales. La definición de bounded contexts, user stories, product backlog y diagramas C4 ayudó a organizar las responsabilidades del sistema, reducir ambigüedades y establecer una base técnica más sólida para implementar una plataforma capaz de integrar monitoreo de CO₂, ruido y presencia, actuación automática de mitigadores, gobierno de umbrales y evidencia para auditorías en una misma propuesta de valor.
+
+3. Las entrevistas con usuarios reales —dos supervisores de seguridad industrial y tres encargados de planta de los rubros metalmecánico, de fundición y de ensamblaje— confirmaron que el problema de exposición del personal es operativo y no solo percibido, validando la necesidad del componente de monitoreo y actuación automática sobre ESP32 con sensores de CO₂, ruido y presencia. El caso relatado por la supervisora Anyeli Vilcapaza, en el que el ciclo de aviso, evacuación, medición con equipo portátil y activación del extractor de respaldo tomó cerca de 25 minutos con un operario ya afectado, y el de Fabrizio Buselleu, con tres sensores caídos casi seis horas sin que nadie lo detectara, orientaron la definición de las user stories de monitoreo, exposición y actuación (US14–US35) y de las technical stories de infraestructura IoT y contingencia, logrando criterios de aceptación concretos y verificables alineados con las hipótesis del Lean UX Canvas.
+
+4. La aplicación de Domain-Driven Design produjo cuatro bounded contexts bien delimitados (Plant Monitoring, Safety & Actuation, Device & Edge Management e Identity & Access) con patrones de integración claros como Open Host Service, Customer/Supplier, Conformist y Anti-Corruption Layer. Esta arquitectura garantiza que el componente IoT sea un elemento central del dominio y no un módulo aislado, y que la evaluación del riesgo ocupacional tenga un único dueño explícito, sentando las bases técnicas para que las siguientes entregas puedan implementar la trazabilidad completa desde la lectura del sensor en el área hasta la evidencia auditable del incidente.
+
+5. El Design-Level EventStorming y el Domain Message Flow Modelling nos permitieron validar los flujos críticos antes de escribir código. Al recorrer los cinco escenarios modelados —configuración de planta, ingesta de telemetría, exposición y actuación, contingencia offline con sincronización y override del supervisor— pudimos detectar y corregir decisiones que habrían quedado ambiguas, como que las políticas de detección y de evaluación de exposición no deben encadenarse entre sí, que la normalización del actuador ocurre una sola vez y que CO₂, ruido y presencia deben conservarse como hechos distintos y no unificarse en una sola lectura.
+
+6. Después de haber analizado las condiciones reales de operación descritas por los entrevistados, podemos concluir que situar el loop automático de seguridad en el servidor de planta fue una decisión necesaria para alcanzar un resultado óptimo, y no una optimización posterior. El ESP32 resulta adecuado para capturar las lecturas de los sensores y ejecutar las reacciones a través de los actuadores, mientras que el nodo edge se encarga de evaluar los umbrales vigentes, emitir los comandos de extracción, sirena o mampara acústica y conservar el historial local, de modo que los actuadores no quedan supeditados a la disponibilidad de internet ni a la latencia de la nube.
+
+7. La arquitectura de edge computing diseñada demostró ser coherente con las restricciones físicas que los propios entrevistados señalaron —degradación de la señal Wi-Fi por estructuras metálicas, vibración de maquinaria pesada y fuentes de calor cercanas a los puntos de medición—, al permitir una respuesta rápida ante condiciones fuera de rango dentro de la red local de la planta, desacoplar la lógica de negocio del firmware embebido mediante la actualización de umbrales desde la aplicación, y actuar como puente entre el dispositivo físico y el backend en la nube. De esta forma, un corte de enlace degrada la visibilidad remota pero no la protección del personal en el área.
+
+8. Tras modelar el recorrido completo de la información IoT, podemos concluir que el flujo de datos entre los sensores y las aplicaciones del cliente es bidireccional y coherente con la arquitectura planteada para SafePlant. En el sentido ascendente, los sensores y el ESP32 envían las lecturas hacia el nodo edge y el broker MQTT, que las ingresa como telemetría del área, evalúa la exposición cruzándola con la presencia de personal, sincroniza con el backend cuando hay enlace y permite visualizar el estado por área, el historial y las alertas activas en la app móvil del supervisor y en la app web del encargado. En el sentido descendente, la configuración de áreas y umbrales y la asociación de dispositivos realizadas desde la aplicación se propagan al backend y al edge, donde se aplican a las lecturas futuras y generan los comandos que el ESP32 ejecuta sobre los actuadores, sin necesidad de modificar su firmware; el override manual del supervisor viaja por esa misma vía descendente y queda registrado como acción auditable.
+
+<a id="s-recomendaciones"></a>
+### Recomendaciones
+
+1. Como primera recomendación podemos mencionar el continuar investigando sobre la integración de dispositivos IoT en aplicaciones como la que estamos desarrollando, con el objetivo de mejorar la misma y que esta sea más eficiente para el monitoreo ambiental de las áreas de planta, manteniendo una comunicación constante y sin caídas hacia el usuario. Esto resulta especialmente relevante en entornos industriales, donde las estructuras metálicas, la vibración de la maquinaria y las fuentes de calor cercanas a los puntos de medición fueron señaladas por los propios entrevistados como el mayor riesgo para la continuidad del servicio.
+
+2. Podemos recomendar iniciar las pruebas con el dispositivo IoT real una vez esté totalmente diseñado, de forma en que el grupo logre tener suficiente tiempo como para detectar los errores y volver a integrar las veces que sea necesario, así como para ir mejorando en el camino. Al mismo tiempo, el actuar con tiempo suficiente nos permitiría realizar pruebas con usuarios reales en una sola área de alto riesgo, como soldadura o fundición, antes de escalar al resto de la planta. Así obtendríamos retroalimentación de primera mano que nos ayudaría a orientar mejor nuestra siguiente versión.
+
+3. Recomendamos establecer una estrategia de pruebas de usabilidad continua desde las etapas tempranas del desarrollo, involucrando a supervisores de seguridad y encargados de planta en sesiones periódicas de validación. Contar con retroalimentación real y frecuente permitirá identificar posibles problemas o disgustos en la experiencia de uso, priorizar mejoras de interfaz y asegurar que las funcionalidades implementadas respondan verdaderamente a los flujos de trabajo del usuario final —el supervisor que atiende una alerta desde el piso de planta y el encargado que configura umbrales desde la oficina—, evitando así el tener que volver a trabajar en alguna función y el costo que esto implica en iteraciones futuras.
+
+4. Nos gustaría recomendar que se cuente con un panel físico en cada área monitoreada que permita el reinicio del dispositivo y el control manual de los actuadores de extracción, sirena y mampara acústica, de forma en que el personal pueda tener una mayor disposición sobre las condiciones bajo las que se encuentra su zona de trabajo incluso ante una caída de red. Asimismo, sugerimos que este control también se encuentre disponible tanto en la versión móvil como web de la aplicación, conservando la restricción de que la anulación manual queda reservada al Supervisor de Seguridad y siempre registrada como acción auditable.
+
+5. Recomendamos tratar el umbral ambiental como un dato gobernado y versionado, y no como un parámetro operativo cualquiera. Su modificación debería quedar restringida al Encargado de Planta, registrada con autor, fecha y versión de la norma aplicada, y poder propagarse a todas las áreas afectadas en una sola operación, tomando como referencia el D.S. 015-2005-SA con sus anexos vigentes para CO₂ y la R.M. 375-2008-TR para ruido. Actualmente las normas llegan por correo o en PDF, se trasladan manualmente a Excel y se copian tarde a cada zona, por lo que automatizar esa propagación atiende la causa del desfase normativo y no solamente su síntoma.
+
+6. Asimismo, sugerimos diseñar y probar primero los escenarios de falla, incorporando de manera explícita en las pruebas de aceptación el corte de enlace hacia la nube, el dispositivo que deja de responder, el reintento de ingesta y la sincronización posterior, verificando que al restablecerse la conectividad no se genere un segundo hecho para una misma lectura. Un dispositivo silencioso debe ser visible en el tablero como no disponible, porque la ausencia de datos nunca debe interpretarse como ausencia de riesgo, tal como ocurrió en el caso de los tres sensores caídos durante casi seis horas relatado en las entrevistas.
+
+7. Recomendamos incorporar la retroalimentación obtenida en las entrevistas de descubrimiento del Capítulo II, tales como la necesidad de diferenciar visualmente la alerta crítica de la informativa en el canal móvil, calibrar los umbrales por área durante el piloto para controlar el falso positivo, y conservar el historial de mediciones, alertas, acciones automáticas, anulaciones y cambios de configuración por un período no menor a doce meses con exportación a PDF. Esto responde de forma directa a lo que los tres encargados de planta pidieron para sustentar auditorías ante SUNAFIL y para poder reconstruir un incidente o atender una denuncia.
+
+8. Finalmente, como parte del roadmap de los productos digitales de SafePlant, proponemos avanzar hacia notificaciones push para alertas críticas, soporte para múltiples nodos edge y áreas dentro de una misma planta, la incorporación de actuadores adicionales según el tipo de riesgo de cada zona, y un módulo analítico que relacione las condiciones ambientales acumuladas con los incidentes y las horas de exposición del personal, cerrando así el gap entre el monitoreo continuo y la prevención efectiva identificado desde el inicio del proyecto. También sugerimos resolver antes del diseño de detalle las preguntas abiertas registradas en los Bounded Context Canvas —la proyección de `AreaOperationalStatus`, el tratamiento del fallo de relé, la eventual adopción de un proveedor de identidad externo y el producto concreto del broker MQTT—, dado que el stack declarado en el Capítulo IV aún es provisional (DEC-008).
+
 <a id="s-video-about-the-team"></a>
 ## Video About-the-Team
 
@@ -6325,6 +6338,75 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 <a id="s-bibliografia"></a>
 # Bibliografía
 
+Las referencias se agrupan según su uso en el informe. El primer bloque sustenta el marco normativo de seguridad y salud en el trabajo y los límites de exposición a CO₂ y ruido que SafePlant parametriza por área. El segundo respalda el proceso de descubrimiento y diseño del dominio. El tercero corresponde a las tecnologías y estándares del stack IoT declarado en el Capítulo IV.
+
+<a id="s-normativa-y-salud-ocupacional"></a>
+## Normativa y salud ocupacional
+
+Congreso de la República del Perú. (2011). *Ley N.° 29783, Ley de Seguridad y Salud en el Trabajo*. Diario Oficial El Peruano. https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/243390-29783
+
+Ministerio de Trabajo y Promoción del Empleo. (2012). *Decreto Supremo N.° 005-2012-TR, Reglamento de la Ley N.° 29783, Ley de Seguridad y Salud en el Trabajo*. https://www.gob.pe/institucion/presidencia/normas-legales/462577-005-2012-tr
+
+Ministerio de Trabajo y Promoción del Empleo. (2008). *Resolución Ministerial N.° 375-2008-TR, Norma Básica de Ergonomía y de Procedimiento de Evaluación de Riesgo Disergonómico*. Establece el límite de exposición ocupacional a ruido de 85 dB(A) para una jornada de ocho horas, con la tabla de duración permitida según nivel sonoro.
+
+Ministerio de Salud. (2005). *Decreto Supremo N.° 015-2005-SA, Reglamento sobre Valores Límite Permisibles para Agentes Químicos en el Ambiente de Trabajo*. https://www.gob.pe/institucion/minsa/normas-legales/252380-015-2005-sa
+
+Ministerio de Salud. (2024). *Resolución Ministerial N.° 733-2024-MINSA. Anexos I, II y III del Reglamento sobre Valores Límite Permisibles para Agentes Químicos en el Ambiente de Trabajo*. https://www.gob.pe/institucion/minsa/normas-legales/6130172-733-2024-minsa
+
+Organización Internacional de Normalización. (2018). *ISO 45001:2018. Occupational health and safety management systems — Requirements with guidance for use*. https://www.iso.org/standard/63787.html
+
+National Institute for Occupational Safety and Health. (1998). *Criteria for a recommended standard: Occupational noise exposure — Revised criteria 1998* (DHHS/NIOSH Publication No. 98-126). U.S. Department of Health and Human Services. https://www.cdc.gov/niosh/docs/98-126/
+
+American Society of Heating, Refrigerating and Air-Conditioning Engineers. (2022). *ANSI/ASHRAE Standard 62.1-2022. Ventilation and acceptable indoor air quality*. https://www.ashrae.org/technical-resources/bookstore/standards-62-1-62-2
+
+<a id="s-descubrimiento-y-diseno-del-dominio"></a>
+## Descubrimiento y diseño del dominio
+
+Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley.
+
+Vernon, V. (2013). *Implementing domain-driven design*. Addison-Wesley.
+
+Brandolini, A. (2021). *Introducing EventStorming: An act of deliberate collective learning*. Leanpub. https://leanpub.com/introducing_eventstorming
+
+DDD Crew. (s. f.). *Bounded Context Canvas* [Repositorio de GitHub]. https://github.com/ddd-crew/bounded-context-canvas
+
+DDD Crew. (s. f.). *Domain Message Flow Modelling* [Repositorio de GitHub]. https://github.com/ddd-crew/domain-message-flow-modelling
+
+DDD Crew. (s. f.). *Context Mapping* [Repositorio de GitHub]. https://github.com/ddd-crew/context-mapping
+
+Brown, S. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com
+
+Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3.ª ed.). O'Reilly Media.
+
+Cohn, M. (2004). *User stories applied: For agile software development*. Addison-Wesley.
+
+Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to Scrum — The rules of the game*. https://scrumguides.org
+
+Organización Internacional de Normalización. (2023). *ISO/IEC 25010:2023. Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*. https://www.iso.org/standard/78176.html
+
+<a id="s-tecnologias-y-estandares-iot"></a>
+## Tecnologías y estándares IoT
+
+OASIS. (2019). *MQTT Version 5.0* (OASIS Standard, aprobado el 7 de marzo de 2019). https://www.oasis-open.org/standard/mqtt-v5-0-os/
+
+Eclipse Foundation. (s. f.). *Eclipse Mosquitto: An open source MQTT broker*. https://mosquitto.org
+
+Espressif Systems. (s. f.). *ESP32 series: Datasheet y technical reference manual*. https://www.espressif.com/en/support/documents/technical-documents
+
+SQLite Consortium. (s. f.). *Appropriate uses for SQLite*. https://www.sqlite.org/whentouse.html
+
+PostgreSQL Global Development Group. (s. f.). *PostgreSQL documentation*. https://www.postgresql.org/docs/
+
+Microsoft. (s. f.). *ASP.NET Core documentation*. https://learn.microsoft.com/aspnet/core/
+
+Google. (s. f.). *Flutter documentation*. https://docs.flutter.dev
+
+Google. (s. f.). *Angular documentation*. https://angular.dev
+
+Shi, W., Cao, J., Zhang, Q., Li, Y., & Xu, L. (2016). Edge computing: Vision and challenges. *IEEE Internet of Things Journal, 3*(5), 637–646. https://doi.org/10.1109/JIOT.2016.2579198
+
+Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *Computer Networks, 54*(15), 2787–2805. https://doi.org/10.1016/j.comnet.2010.05.010
+
 ---
 
 <a id="s-anexos"></a>
@@ -6333,65 +6415,32 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 <a id="s-anexo-videos-exposiciones"></a>
 ## Videos de Exposiciones
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">Entrega</th>
-      <th align="left">Descripción</th>
-      <th align="left">URL (Stream / Clipchamp)</th>
-      <th align="left">Archivo .mp4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">AV1</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-    <tr>
-      <td align="left">TB1</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-    <tr>
-      <td align="left">AV2</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-    <tr>
-      <td align="left">TB2</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
+| Entrega | Descripción | URL (Stream / Clipchamp) | Archivo .mp4 |
+| --- | --- | --- | --- |
+| AV1 | Exposición Avance 1 — Needfinding, requirements elicitation y especificación de requisitos | https://youtu.be/x5NXEIdImBM | |
+| TB1 | Exposición Trabajo Parcial — Diseño estratégico y táctico DDD, arquitectura de la solución | | |
+| AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | | |
+| TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | | |
 
 <a id="s-anexo-repositorios"></a>
 ## Repositorios y artefactos
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">Artefacto</th>
-      <th align="left">URL / ubicación</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">Repositorio del informe (Project Report)</td>
-      <td align="left"></td>
-    </tr>
-    <tr>
-      <td align="left">Repositorio(s) de código de la solución</td>
-      <td align="left"></td>
-    </tr>
-    <tr>
-      <td align="left">Prototipos (Figma / UXPressia / LucidChart)</td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
+| Artefacto | URL / ubicación |
+| --- | --- |
+| Repositorio del informe (Project Report) | https://github.com/Macallys/Report |
+| Landing page desplegada | https://macallys.github.io/landing-page/ |
+| Big Picture EventStorming (Miro) | https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821 |
+| Design-Level EventStorming (Miro) | https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ |
+| Diagramas C4 (Structurizr DSL) | [`docs/diagrams/c4.dsl`](./diagrams/c4.dsl) |
+| Bounded Context Canvas (fichas por contexto) | [`docs/bounded-contexts/`](./bounded-contexts/README.md) |
+
+<a id="s-anexo-entrevistas"></a>
+## Entrevistas
+
+| Segmento | Entrevista | Entrevistado | URL (Microsoft Stream) |
+| --- | --- | --- | --- |
+| Supervisor de Seguridad | Entrevista 1 | Anyeli Vilcapaza | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQDgMkxRgpj_SZWQGkOVH52TAWt6KcdsMqmX7T0vqytQdNY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SBHV8R |
+| Supervisor de Seguridad | Entrevista 2 | Diego Ruiz del Solar | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| Encargado de Planta | Entrevista 1 | Fabrizio Buselleu | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQAhj6V5o_7xTq1Y6UaKEpQMAQP3gcRDCNbpvQjGy2mHFiM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9b1b0f |
+| Encargado de Planta | Entrevista 2 | Carlos Mendoza | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQCDpfLyPE3JSbAYwBJjdvnCAegV0RnbcJdQn_prFi3eCJU?e=B84siT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| Encargado de Planta | Entrevista 3 | Nathaly Solano Armas | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC3qQs5We4vS6zsu7M-w2DgATcBFhIcHwh6Y3EL3vL9im8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=frhwHe |

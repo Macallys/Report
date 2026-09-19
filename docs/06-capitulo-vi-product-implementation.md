@@ -25,6 +25,8 @@
 <a id="s-6-2"></a>
 ## 6.2. Landing Page, Services & Applications Implementation
 
+**URL de la landing page desplegada:** https://macallys.github.io/landing-page/
+
 > Documentar cada sprint en `sprints/` a partir de [`templates/sprint.md`](./templates/sprint.md).
 
 <table>
