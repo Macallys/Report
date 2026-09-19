@@ -48,7 +48,7 @@ const html = `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Informe SafeGuard — Macallys</title>
+  <title>Informe SafePlant — Macallys</title>
   <style>
     @page { size: A4; margin: 14mm 12mm 16mm 12mm; }
     body { font-family: "Segoe UI", Arial, sans-serif; font-size: 11pt; line-height: 1.45; color: #111; }

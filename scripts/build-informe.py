@@ -64,6 +64,7 @@ SPECIAL_IDS = {
     "Capítulo I: Introducción": "s-cap-i",
     "Capítulo II: Requirements Elicitation & Analysis": "s-cap-ii",
     "Capítulo III: Requirements Specification": "s-cap-iii",
+    "Chapter III: Requirements Specification": "s-cap-iii",
     "Capítulo IV: Solution Software Design": "s-cap-iv",
     "Capítulo V: Solution UI/UX Design": "s-cap-v",
     "Capítulo VI: Product Implementation, Validation & Deployment": "s-cap-vi",
@@ -75,6 +76,7 @@ SPECIAL_IDS = {
     "Bounded Contexts documentados": "s-4-2-lista",
     "Sprints documentados": "s-6-2-lista",
     "Relación de integrantes": "s-relacion-integrantes",
+    "Integrantes": "s-relacion-integrantes",
 }
 
 
@@ -165,12 +167,14 @@ def strip_nav(text: str) -> str:
 SKIP_TOC_TITLES = {
     "Carátula",
     "Relación de integrantes",
+    "Integrantes",
     "Registro de Versiones del Informe",
     "Project Report Collaboration Insights",
     "Contenido",
     "Tabla de contenidos",
     "Bounded Contexts documentados",
     "Sprints documentados",
+    "Conclusiones y recomendaciones",
 }
 
 NESTED_PARENTS = {"templates", "bounded-contexts", "sprints"}
@@ -203,9 +207,13 @@ def demote_headings(text: str, extra: int) -> str:
     return "\n".join(out) + "\n"
 
 
-def folder_md(folder: Path, fallback: Path) -> list[Path]:
+def folder_md(folder: Path, fallback: Path | None = None) -> list[Path]:
     files = sorted(p for p in folder.glob("*.md") if p.name != "README.md")
-    return files or [fallback]
+    if files:
+        return files
+    if fallback and fallback.exists() and folder.name != "sprints":
+        return [fallback]
+    return []
 
 
 def split_before_heading(text: str, title: str) -> tuple[str, str]:
@@ -274,7 +282,7 @@ def collect_part(
             if am:
                 anchor_id = am.group(1)
         title = match.group(2).strip()
-        if title in SKIP_TOC_TITLES:
+        if title in SKIP_TOC_TITLES or title.startswith(("6.2.X", "4.2.X")):
             continue
         if not anchor_id:
             anchor_id = make_id(title, used_informe)
@@ -321,10 +329,13 @@ def main() -> None:
 
         collect_part(text, path, toc_entries, used_informe, parts)
 
-    # Índice en 00 (para editar / navegar desde el front matter)
+    def toc_title(title: str) -> str:
+        return title.replace("**", "").strip()
+
     toc_for_front = "\n".join(
-        f'{"    " * (level - 1)}1. [{title}](informe.md#{anchor_id})'
+        f'{"    " * (level - 1)}- [{toc_title(title)}](informe.md#{anchor_id})'
         for level, title, anchor_id, _ in toc_entries
+        if not title.startswith(("6.2.X", "4.2.X"))
     )
     write_toc_block(FRONT, toc_for_front)
 

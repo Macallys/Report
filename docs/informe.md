@@ -1,42 +1,37 @@
 <a id="s-caratula"></a>
-# Carátula
-
 <div align="center">
 
 ![Logo de la Universidad](../assets/00-front-matter/upc-logo.png)
 
 **Universidad Peruana de Ciencias Aplicadas**
 
-**Facultad de Ingeniería**
-
 **Carrera de Ingeniería de Software**
 
-**Ciclo académico:** 2026-20
+**1ASI0572**
 
----
+**Desarrollo de Soluciones IoT**
 
-**Código del curso:** 1ASI0572
+**NRC**
 
-**Nombre del curso:** Desarrollo de Soluciones IoT
+8729
 
-**NRC:** 8729
+**Informe del Trabajo Final**
 
-**Nombre del profesor:** León Baca, Marco Antonio
+**Docente**
 
----
+León Baca, Marco Antonio
 
-**Informe de Trabajo Final**
+**Equipo**
 
-**Nombre del startup:** Macallys
+Macallys
 
-**Nombre del producto:** SafePlant
+**Proyecto**
 
-</div>
-
-<div align="center">
+SafePlant
 
 <a id="s-relacion-integrantes"></a>
-## Relación de integrantes
+
+**Integrantes**
 
 <table align="center">
   <thead>
@@ -73,7 +68,9 @@
   </tbody>
 </table>
 
-**Mes y año:** Septiembre, 2026
+**Período**
+
+202620
 
 </div>
 
