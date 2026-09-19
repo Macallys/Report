@@ -30,43 +30,113 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 ### 1.1.2. Perfiles de integrantes del equipo
 
 <table>
-  <thead>
-    <tr>
-      <th align="center">Foto</th>
-      <th align="left">Apellidos y Nombres</th>
-      <th align="left">Código</th>
-      <th align="left">Carrera</th>
-      <th align="left">Conocimientos técnicos y habilidades</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td align="center">![Integrante 1](../assets/01-capitulo-i/equipo/integrante-1.png)</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-1.png" alt="Santiago Armando Baldeon Vivar">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Santiago Armando Baldeon Vivar</td>
     </tr>
     <tr>
-      <td align="center">![Integrante 2](../assets/01-capitulo-i/equipo/integrante-2.png)</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
     </tr>
     <tr>
-      <td align="center">![Integrante 3](../assets/01-capitulo-i/equipo/integrante-3.png)</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-2.png" alt="Santiago Alonso Gordillo Ramos">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Santiago Alonso Gordillo Ramos</td>
     </tr>
     <tr>
-      <td align="center">![Integrante 4](../assets/01-capitulo-i/equipo/integrante-4.png)</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left">Ingeniería de Software</td>
-      <td align="left"></td>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-3.png" alt="Johan Giovani Huamán Cuba">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Johan Giovani Huamán Cuba</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> u202417448</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>Soy Johan, soy un estudiante de Ingeniería de Software. Pero más que eso soy alguien que le encanta acumular conocimientos de diferentes campos, pues soy alguien curioso. Me gusta la tecnología, pero me gusta más lo que podamos hacer con ella. Miro al pasado con cautela y, gracias a esta habilidad, desvarío con la fantasía de construir el mejor futuro.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-4.png" alt="Sergio Sebastián Iglesias Pérez">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Sergio Sebastián Iglesias Pérez</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-5.png" alt="Ariana Mia Sanchez Gonzales">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Ariana Mia Sanchez Gonzales</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="3" align="center" width="25%">
+        <img src="../assets/01-capitulo-i/equipo/integrante-6.png" alt="Angelo Hector Solano Armas">
+      </td>
+      <td align="left"><strong>Nombre:</strong> Angelo Hector Solano Armas</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Código:</strong> [Ingresar código]</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>Descripción:</strong><br>[Ingresar descripción técnica y rol]</td>
     </tr>
   </tbody>
 </table>
