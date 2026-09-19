@@ -118,19 +118,19 @@ Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canv
 
 **Plant Monitoring (core).** Áreas, umbrales y telemetría.
 
-![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.png)
+![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/bounded-contexts/bcc-01-plant-monitoring.png)
 
 **Safety & Actuation.** Exposición, alertas y actuación automática u override.
 
-![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.png)
+![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/bounded-contexts/bcc-02-safety-actuation.png)
 
 **Device & Edge Management (supporting).** Credenciales de dispositivo, ingest, cola y sincronización.
 
-![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.png)
+![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/bounded-contexts/bcc-03-device-edge-management.png)
 
 **Identity & Access (generic).** Cuentas, sesión por canal y OHS hacia los demás contextos.
 
-![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.png)
+![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/bounded-contexts/bcc-04-identity-access.png)
 
 <a id="s-4-1-2"></a>
 ### 4.1.2. Context Mapping
