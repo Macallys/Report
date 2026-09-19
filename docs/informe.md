@@ -984,7 +984,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Entrevistador:</b> Santiago Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-1.jpeg" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-1.jpeg" alt="Entrevista 1 - Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
@@ -1118,7 +1118,7 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Entrevistador:</b> Santiago Alonso Gordillo Ramos
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-encargado-2.jpeg" alt="Entrevista 2 - Encargado de Planta" width="85%">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-encargado-2.jpg" alt="Entrevista 2 - Encargado de Planta" width="85%">
     </td>
   </tr>
   <tr>
