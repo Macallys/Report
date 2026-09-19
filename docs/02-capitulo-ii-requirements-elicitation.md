@@ -223,28 +223,28 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 <table border="1">
   <tr>
     <td width="40%">
-      <b>Nombres y apellidos:</b> [Nombres y apellidos]<br>
-      <b>Edad:</b> [Edad] años<br>
-      <b>Distrito:</b> [Distrito]<br>
-      <b>Ocupación:</b> [Puesto exacto]<br>
-      <b>Experiencia laboral:</b> [Años de experiencia] en el sector industrial<br>
-      <b>Área de trabajo:</b> [Área]<br>
-      <b>Tipo de establecimiento:</b> [Tipo de planta]<br>
-      <b>Nivel tecnológico:</b> [Básico / Intermedio / Avanzado]<br>
-      <b>Timing:</b> [hh:mm:ss - hh:mm:ss]<br>
-      <b>Duración:</b> [mm:ss]<br>
-      <b>Entrevistador:</b> [Nombre del integrante del Grupo 03]
+      <b>Nombres y apellidos:</b> Mark Alex Esquivel Cabrera <br>
+      <b>Edad:</b> 26 años<br>
+      <b>Distrito:</b> Ate <br>
+      <b>Ocupación:</b> Supervisor de seguridad <br>
+      <b>Experiencia laboral:</b> 2 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta embotelladora <br>
+      <b>Tipo de establecimiento:</b> Planta <br>
+      <b>Nivel tecnológico:</b> Intermedio <br>
+      <b>Timing:</b> 01:12 - 10:04 <br>
+      <b>Duración:</b> 10:04 minutos <br>
+      <b>Entrevistador:</b>   Johan Giovani Huamán Cuba
     </td>
     <td align="center">
-      <img src="assets/chapter-2/entrevista-supervisor-2.png" alt="Entrevista 2 - Supervisor de Seguridad" width="85%">
+      <img src="assets/02-capitulo-ii/entrevistas/entrevista-supervisor-2.png" alt="Entrevista 2 - Supervisor de Seguridad" width="85%">
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <b>Enlace:</b>
-      <a href="[URL del video en Microsoft Stream]">[Ver entrevista en Microsoft Stream]</a>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202417448_upc_edu_pe/IQAbyCZ09KjySpvlaptYhdsFAdVY106873xXl5llO0Zu4Ec?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=h7Xg4U"> Ver entrevista en Microsoft Stream </a>
       <br><br>
-      <b>Resumen:</b> [Descripción de su flujo de trabajo actual, problemas de comunicación en la planta, respuesta ante emergencias ambientales y disposición para utilizar una aplicación móvil de alertas automáticas.]
+      <b>Resumen:</b> El trabajo del entrevistado depende actualmente de métodos reactivos, enfrentando una profunda frustración al depender de medidores obsoletos o de que el personal presente síntomas físicos (mareos, tos) para detectar fugas de CO₂ invisibles. Su protocolo actual ante incidentes es lento y manual, obligándolo a coordinar evacuaciones, verificar personal en el patio y ventilar abriendo puertas a la antigua, perdiendo minutos vitales. <br> <br> Considera indispensable una aplicación móvil que elimine las conjeturas mediante un mapa digitalizado con indicadores visuales de riesgo inmediato (sistema de semáforo rojo/verde). Exige notificaciones persistentes y sonoras tipo alarma despertador que no pasen desapercibidas. Finalmente, destaca como función crítica la capacidad de tomar el control remoto desde su celular para forzar el encendido de extractores o sirenas en caso de que la automatización de la planta falle, permitiéndole actuar antes de que el personal resulte intoxicado.
     </td>
   </tr>
 </table>
