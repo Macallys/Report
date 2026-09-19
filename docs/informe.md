@@ -3797,7 +3797,7 @@ EventStorming completo: [ver en Miro](https://miro.com/app/dashboard/space/2rIho
 <a id="s-4-1-1-1"></a>
 #### 4.1.1.1 Candidate Context Discovery
 
-Los contextos candidatos se identificaron aplicando la heurística de **un Bounded Context por lenguaje ubicuo y dueño de datos**, tomando como entrada las user stories abordadas Capítulo III y el lenguaje del dominio SafePlant.
+Los contextos candidatos se identificaron aplicando la heurística de **un Bounded Context por lenguaje ubicuo y dueño de datos**, tomando como entrada las user stories abordadas en el Capítulo III y el lenguaje del dominio SafePlant.
 
 <table>
   <thead>
@@ -3822,21 +3822,21 @@ Los contextos candidatos se identificaron aplicando la heurística de **un Bound
       <td align="left">Core Domain</td>
       <td align="left">Definición topológica de la planta (áreas, umbrales) y registro histórico de telemetría: CO₂, ruido y presencia.</td>
       <td align="left">EP03</td>
-      <td align="left">Evaluación de exposición, disparo de actuadores, inventario hardware ni despliegues OTA.</td>
+      <td align="left">Evaluación de exposición, disparo de actuadores ni inventario de hardware de campo.</td>
     </tr>
     <tr>
       <td align="left"><strong>Safety & Actuation</strong></td>
       <td align="left">Dominio de reglas de seguridad</td>
       <td align="left">Cruce presencia × condiciones ambientales (exposición), motor de reglas de riesgo, activación de extractores, sirenas y mamparas acústicas, y anulación remota de actuadores. El loop automático corre en el servidor de planta; la nube supervisa, audita y acepta override cuando hay WAN.</td>
       <td align="left">EP04, EP05</td>
-      <td align="left">Configuración de áreas/umbrales (Plant Monitoring), identidad de usuarios ni ciclo de vida de firmware en edge.</td>
+      <td align="left">Configuración de áreas/umbrales (Plant Monitoring) ni identidad de usuarios.</td>
     </tr>
     <tr>
       <td align="left"><strong>Device & Edge Management</strong></td>
       <td align="left">Supporting Subdomain</td>
-      <td align="left">Inventario y salud de hardware edge (ESP32, Raspberry Pi), despliegues OTA, sincronización offline y conectividad segura hacia Cloud.</td>
+      <td align="left">Credenciales de dispositivo, ingest MQTT hacia Plant Monitoring, cola local y sincronización cuando vuelve el enlace.</td>
       <td align="left">EP07</td>
-      <td align="left">Reglas de negocio de seguridad ocupacional ni semántica de telemetría/umbrales de planta.</td>
+      <td align="left">Reglas de seguridad ocupacional, semántica de umbrales, actualizaciones remotas de firmware (OTA) ni un chasis Raspberry Pi como nodo de diseño.</td>
     </tr>
   </tbody>
 </table>
@@ -4002,7 +4002,7 @@ SafePlant aparece como un único sistema rodeado por el supervisor, el encargado
 <a id="s-4-1-3-2"></a>
 #### 4.1.3.2. Software Architecture Context Level Diagrams
 
-El mismo recorte, con foco en SafePlant: los usuarios no hablan con el hardware ni con el correo; esas relaciones pasan por el firmware Arduino/ESP32 y el backend ASP.NET Core.
+El mismo conjunto de personas y sistemas externos, ahora con SafePlant al centro: Landscape y Context se parecen porque no hay un segundo software system interno. Los usuarios no hablan con el hardware ni con el correo; esas relaciones pasan por el firmware Arduino/ESP32 y el backend ASP.NET Core.
 
 ![Context Level Diagram](../assets/04-capitulo-iv/architecture/c4-context.png)
 
@@ -4023,7 +4023,7 @@ Cloud en **Azure**: Static Web Apps sirve la landing y el cliente Angular; App S
 <a id="s-4-2"></a>
 ## 4.2. Tactical-Level Domain-Driven Design
 
-> Documentar cada Bounded Context en `bounded-contexts/` a partir de [`templates/bounded-context.md`](./templates/bounded-context.md).
+Cada bounded context se documenta con las cuatro capas tácticas, un diagrama de componentes C4 y los diagramas de código (clases de dominio y base de datos).
 
 <table>
   <thead>
@@ -4880,7 +4880,7 @@ Repositorios en **Edge Database** (loop vivo, SQLite) y **Cloud Database** (audi
 <a id="s-4-2-2-5"></a>
 #### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-Safety & Actuation se reparte en dos containers. En **cloud** (`Web Monolithic Backend`) las cuatro capas atienden estado, alertas y anulación del supervisor móvil; Infrastructure persiste la copia de auditoría en `Cloud Database` y reenvía el override al runtime Edge si hay WAN. En **planta** (`Edge Application`) las mismas cuatro capas corren el loop `: Interface consume la proyección de Plant Monitoring; Infrastructure escribe el estado vivo en `Edge Database`, manda `activate`/`normalize` al firmware y deja `PO-09` en `EdgeNode`.
+Safety & Actuation se reparte en dos containers. En **cloud** (`Web Monolithic Backend`) las cuatro capas atienden estado, alertas y anulación del supervisor móvil; Infrastructure persiste la copia de auditoría en `Cloud Database` y reenvía el override al runtime Edge si hay WAN. En **planta** (`Edge Application`) las mismas cuatro capas corren el loop: Interface consume la proyección de Plant Monitoring; Infrastructure escribe el estado vivo en `Edge Database`, manda `activate`/`normalize` al firmware y deja `PO-09` en `EdgeNode`.
 
 ![Component Level Diagram — cloud](../assets/04-capitulo-iv/bounded-contexts/bc-02-component.png)
 

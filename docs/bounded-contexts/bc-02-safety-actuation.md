@@ -406,7 +406,7 @@ Repositorios en **Edge Database** (loop vivo, SQLite) y **Cloud Database** (audi
 <a id="s-4-2-2-5"></a>
 ## 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-Safety & Actuation se reparte en dos containers. En **cloud** (`Web Monolithic Backend`) las cuatro capas atienden estado, alertas y anulación del supervisor móvil; Infrastructure persiste la copia de auditoría en `Cloud Database` y reenvía el override al runtime Edge si hay WAN. En **planta** (`Edge Application`) las mismas cuatro capas corren el loop `: Interface consume la proyección de Plant Monitoring; Infrastructure escribe el estado vivo en `Edge Database`, manda `activate`/`normalize` al firmware y deja `PO-09` en `EdgeNode`.
+Safety & Actuation se reparte en dos containers. En **cloud** (`Web Monolithic Backend`) las cuatro capas atienden estado, alertas y anulación del supervisor móvil; Infrastructure persiste la copia de auditoría en `Cloud Database` y reenvía el override al runtime Edge si hay WAN. En **planta** (`Edge Application`) las mismas cuatro capas corren el loop: Interface consume la proyección de Plant Monitoring; Infrastructure escribe el estado vivo en `Edge Database`, manda `activate`/`normalize` al firmware y deja `PO-09` en `EdgeNode`.
 
 ![Component Level Diagram — cloud](../../assets/04-capitulo-iv/bounded-contexts/bc-02-component.png)
 
