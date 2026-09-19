@@ -198,8 +198,8 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
       <b>Área de trabajo:</b> Planta de ensamblaje y producción<br>
       <b>Tipo de establecimiento:</b> Planta <br>
       <b>Nivel tecnológico:</b> Básico <br>
-      <b>Timing:</b> 00:00:00 - 00:08:45]<br>
-      <b>Duración:</b> 08:45<br>
+      <b>Timing:</b> 00:00:00 - 00:06:16]<br>
+      <b>Duración:</b> 06:16<br>
       <b>Entrevistador:</b> Santiago Gordillo Ramos
     </td>
     <td align="center">
