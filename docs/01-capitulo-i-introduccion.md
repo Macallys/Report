@@ -163,7 +163,7 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 ## 1.2. Solution Profile
 
 <a id="s-1-2-1"></a>
-### 1.2.1 Antecedentes y problemática
+### 1.2.1. Antecedentes y problemática
 
 **Antecedentes**
 
@@ -197,7 +197,7 @@ Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetr
 <a id="s-1-2-2"></a>
 
 <a id="s-1-2-2"></a>
-### 1.2.2 Lean UX Process
+### 1.2.2. Lean UX Process
 
 <a id="s-1-2-2-1"></a>
 #### 1.2.2.1. Lean UX Problem Statements
@@ -268,13 +268,13 @@ Sabremos que hemos tenido éxito cuando observemos una reducción drástica en e
 <a id="s-1-3"></a>
 ## 1.3. Segmentos objetivo
 
-<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil"></a>
-#### **Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**
+<a id="s-1-3-1"></a>
+### 1.3.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
 
 Profesionales encargados de la seguridad industrial en campo, que están en constante movimiento a lo largo de las distintas zonas críticas de la planta. Su herramienta principal es la pp Móvil, a través de la cual realizan el monitoreo en tiempo real de las métricas ambientales y el control del sistema. Se enfrentan a ruidos fuertes, espacios amplios y necesitan información de manera rápida a través de alertas push y notificaciones de emergencia. 
 
-<a id="s-segmento-objetivo-2-encargado-de-planta-app-web"></a>
-#### **Segmento Objetivo 2: Encargado de Planta (App Web)**
+<a id="s-1-3-2"></a>
+### 1.3.2. Segmento objetivo 2: Encargado de Planta (App Web)
 
 Personal de la gerencia técnica y operativa, responsables del rendimiento general y del cumplimiento normativo de la planta industrial. Trabaja mediante la **App Web**, desde una oficina o sala de control. Este segmento se encarga de la configuración del sistema, definiendo los topes máximos de CO2 o decibeles por cada zona de la fábrica. Además, analiza históricos, instala actualizaciones del software de los sensores y emite reportes ambientales semanales o mensuales para sustentar auditorías frente a los inspectores laborales.
 

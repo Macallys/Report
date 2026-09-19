@@ -334,146 +334,135 @@
 
 <!-- TOC:start -->
 
-1. [Student Outcome](#s-student-outcome)
-1. [Capítulo I: Introducción](#s-cap-i)
-    1. [1.1. Startup Profile](#s-1-1)
-        1. [1.1.1. Descripción de la Startup](#s-1-1-1)
-        1. [1.1.2. Perfiles de integrantes del equipo](#s-1-1-2)
-    1. [1.2. Solution Profile](#s-1-2)
-        1. [1.2.1 Antecedentes y problemática](#s-1-2-1)
-        1. [1.2.2 Lean UX Process](#s-1-2-2)
-            1. [1.2.2.1. Lean UX Problem Statements](#s-1-2-2-1)
-            1. [1.2.2.2. Lean UX Assumptions](#s-1-2-2-2)
-            1. [1.2.2.3. Lean UX Hypothesis Statements](#s-1-2-2-3)
-            1. [1.2.2.4. Lean UX Canvas](#s-1-2-2-4)
-    1. [1.3. Segmentos objetivo](#s-1-3)
-            1. [**Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**](#s-segmento-objetivo-1-supervisor-de-seguridad-app-movil)
-            1. [**Segmento Objetivo 2: Encargado de Planta (App Web)**](#s-segmento-objetivo-2-encargado-de-planta-app-web)
-1. [Capítulo II: Requirements Elicitation & Analysis](#s-cap-ii)
-    1. [2.1. Competidores](#s-2-1)
-        1. [2.1.1. Análisis competitivo](#s-2-1-1)
-        1. [2.1.2. Estrategias y tácticas frente a competidores](#s-2-1-2)
-    1. [2.2. Entrevistas](#s-2-2)
-        1. [2.2.1. Diseño de entrevistas](#s-2-2-1)
-        1. [2.2.2. Registro de entrevistas](#s-2-2-2)
-            1. [Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad)
-                1. [Entrevista 1](#s-entrevista-1)
-                1. [Entrevista 2](#s-entrevista-2)
-                1. [Entrevista 3](#s-entrevista-3)
-            1. [Segmento objetivo 2: Encargado de Planta (App Web)](#s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta)
-                1. [Entrevista 1](#s-entrevista-1-entrevista-1)
-                1. [Entrevista 2](#s-entrevista-2-entrevista-2)
-                1. [Entrevista 3](#s-entrevista-3-entrevista-3)
-        1. [2.2.3. Análisis de entrevistas](#s-2-2-3)
-    1. [2.3. Needfinding](#s-2-3)
-        1. [2.3.1. User Personas](#s-2-3-1)
-        1. [2.3.2. User Task Matrix](#s-2-3-2)
-        1. [2.3.3. User Journey Mapping](#s-2-3-3)
-        1. [2.3.4. Empathy Mapping](#s-2-3-4)
-    1. [2.4. Big Picture EventStorming](#s-2-4)
-    1. [2.5. Ubiquitous Language](#s-2-5)
-1. [Chapter III: Requirements Specification](#s-chapter-iii-requirements-specification)
-    1. [3.1. User Stories and Technical Stories](#s-3-1)
-    1. [3.2. Impact Mapping](#s-3-2)
-    1. [3.3. Product Backlog](#s-3-3)
-1. [Capítulo IV: Solution Software Design](#s-cap-iv)
-    1. [4.1. Strategic-Level Domain-Driven Design](#s-4-1)
-        1. [4.1.1. Design-Level EventStorming](#s-4-1-1)
-            1. [4.1.1.1 Candidate Context Discovery](#s-4-1-1-1)
-            1. [4.1.1.2 Domain Message Flows Modeling](#s-4-1-1-2)
-            1. [4.1.1.3 Bounded Context Canvases](#s-4-1-1-3)
-        1. [4.1.2. Context Mapping](#s-4-1-2)
-        1. [4.1.3. Software Architecture](#s-4-1-3)
-            1. [4.1.3.1. Software Architecture System Landscape Diagram](#s-4-1-3-1)
-            1. [4.1.3.2. Software Architecture Context Level Diagrams](#s-4-1-3-2)
-            1. [4.1.3.2. Software Architecture Container Level Diagrams](#s-4-1-3-2-software-architecture-container-level-diagrams)
-            1. [4.1.3.3. Software Architecture Deployment Diagrams](#s-4-1-3-3)
-    1. [4.2. Tactical-Level Domain-Driven Design](#s-4-2)
-        1. [4.2.1. Bounded Context: Plant Monitoring](#s-4-2-1)
-            1. [4.2.1.1. Domain Layer](#s-4-2-1-1)
-            1. [4.2.1.2. Interface Layer](#s-4-2-1-2)
-            1. [4.2.1.3. Application Layer](#s-4-2-1-3)
-            1. [4.2.1.4. Infrastructure Layer](#s-4-2-1-4)
-            1. [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-1-5)
-            1. [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-1-6)
-                1. [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-1-6-1)
-                1. [4.2.1.6.2. Bounded Context Database Design Diagram](#s-4-2-1-6-2)
-        1. [4.2.2. Bounded Context: Safety & Actuation](#s-4-2-2)
-            1. [4.2.2.1. Domain Layer](#s-4-2-2-1)
-            1. [4.2.2.2. Interface Layer](#s-4-2-2-2)
-            1. [4.2.2.3. Application Layer](#s-4-2-2-3)
-            1. [4.2.2.4. Infrastructure Layer](#s-4-2-2-4)
-            1. [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-2-5)
-            1. [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-2-6)
-                1. [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-2-6-1)
-                1. [4.2.2.6.2. Bounded Context Database Design Diagram](#s-4-2-2-6-2)
-        1. [4.2.3. Bounded Context: Device & Edge Management](#s-4-2-3)
-            1. [4.2.3.1. Domain Layer](#s-4-2-3-1)
-            1. [4.2.3.2. Interface Layer](#s-4-2-3-2)
-            1. [4.2.3.3. Application Layer](#s-4-2-3-3)
-            1. [4.2.3.4. Infrastructure Layer](#s-4-2-3-4)
-            1. [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-3-5)
-            1. [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-3-6)
-                1. [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-3-6-1)
-                1. [4.2.3.6.2. Bounded Context Database Design Diagram](#s-4-2-3-6-2)
-        1. [4.2.4. Bounded Context: Identity & Access](#s-4-2-4)
-            1. [4.2.4.1. Domain Layer](#s-4-2-4-1)
-            1. [4.2.4.2. Interface Layer](#s-4-2-4-2)
-            1. [4.2.4.3. Application Layer](#s-4-2-4-3)
-            1. [4.2.4.4. Infrastructure Layer](#s-4-2-4-4)
-            1. [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-4-5)
-            1. [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-4-6)
-                1. [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-4-6-1)
-                1. [4.2.4.6.2. Bounded Context Database Design Diagram](#s-4-2-4-6-2)
-1. [Capítulo V: Solution UI/UX Design](#s-cap-v)
-    1. [5.1. Style Guidelines](#s-5-1)
-        1. [5.1.1. General Style Guidelines](#s-5-1-1)
-        1. [5.1.2. Web, Mobile and IoT Style Guidelines](#s-5-1-2)
-    1. [5.2. Information Architecture](#s-5-2)
-        1. [5.2.1. Organization Systems](#s-5-2-1)
-        1. [5.2.2. Labeling Systems](#s-5-2-2)
-        1. [5.2.3. SEO Tags and Meta Tags](#s-5-2-3)
-        1. [5.2.4. Searching Systems](#s-5-2-4)
-        1. [5.2.5. Navigation Systems](#s-5-2-5)
-    1. [5.3. Landing Page UI Design](#s-5-3)
-        1. [5.3.1. Landing Page Wireframe](#s-5-3-1)
-        1. [5.3.2. Landing Page Mock-up](#s-5-3-2)
-    1. [5.4. Applications UX/UI Design](#s-5-4)
-        1. [5.4.1. Applications Wireframes](#s-5-4-1)
-        1. [5.4.2. Applications Wireflow Diagrams](#s-5-4-2)
-        1. [5.4.2. Applications Mock-ups](#s-5-4-2-applications-mock-ups)
-        1. [5.4.3. Applications User Flow Diagrams](#s-5-4-3)
-    1. [5.5. Applications Prototyping](#s-5-5)
-    1. [5.6. IoT Device Design](#s-5-6)
-1. [Capítulo VI: Product Implementation, Validation & Deployment](#s-cap-vi)
-    1. [6.1. Software Configuration Management](#s-6-1)
-        1. [6.1.1. Software Development Environment Configuration](#s-6-1-1)
-        1. [6.1.2. Source Code Management](#s-6-1-2)
-        1. [6.1.3. Source Code Style Guide & Conventions](#s-6-1-3)
-        1. [6.1.4. Software Deployment Configuration](#s-6-1-4)
-    1. [6.2. Landing Page, Services & Applications Implementation](#s-6-2)
-        1. [6.2.X. Sprint n](#s-6-2-x)
-            1. [6.2.X.1. Sprint Planning n](#s-6-2-x-1)
-            1. [6.2.X.2. Aspect Leaders and Collaborators](#s-6-2-x-2)
-            1. [6.2.X.3. Sprint Backlog n](#s-6-2-x-3)
-            1. [6.2.X.4. Development Evidence for Sprint Review](#s-6-2-x-4)
-            1. [6.2.X.5. Testing Suite Evidence for Sprint Review](#s-6-2-x-5)
-            1. [6.2.X.6. Execution Evidence for Sprint Review](#s-6-2-x-6)
-            1. [6.2.X.7. Services Documentation Evidence for Sprint Review](#s-6-2-x-7)
-            1. [6.2.X.8. Software Deployment Evidence for Sprint Review](#s-6-2-x-8)
-            1. [6.2.X.9. Team Collaboration Insights during Sprint](#s-6-2-x-9)
-    1. [6.3. Validation Interviews](#s-6-3)
-        1. [6.3.1. Diseño de Entrevistas](#s-6-3-1)
-        1. [6.3.2. Registro de Entrevistas](#s-6-3-2)
-        1. [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
-    1. [6.4. Video About-the-Product](#s-6-4)
-1. [Conclusiones](#s-conclusiones)
-    1. [Conclusiones y recomendaciones](#s-conclusiones-recomendaciones)
-    1. [Video About-the-Team](#s-video-about-the-team)
-1. [Bibliografía](#s-bibliografia)
-1. [Anexos](#s-anexos)
-    1. [Videos de Exposiciones](#s-anexo-videos-exposiciones)
-    1. [Repositorios y artefactos](#s-anexo-repositorios)
+- [Student Outcome](#s-student-outcome)
+- [Capítulo I: Introducción](#s-cap-i)
+    - [1.1. Startup Profile](#s-1-1)
+        - [1.1.1. Descripción de la Startup](#s-1-1-1)
+        - [1.1.2. Perfiles de integrantes del equipo](#s-1-1-2)
+    - [1.2. Solution Profile](#s-1-2)
+        - [1.2.1. Antecedentes y problemática](#s-1-2-1)
+        - [1.2.2. Lean UX Process](#s-1-2-2)
+            - [1.2.2.1. Lean UX Problem Statements](#s-1-2-2-1)
+            - [1.2.2.2. Lean UX Assumptions](#s-1-2-2-2)
+            - [1.2.2.3. Lean UX Hypothesis Statements](#s-1-2-2-3)
+            - [1.2.2.4. Lean UX Canvas](#s-1-2-2-4)
+    - [1.3. Segmentos objetivo](#s-1-3)
+        - [1.3.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-1-3-1)
+        - [1.3.2. Segmento objetivo 2: Encargado de Planta (App Web)](#s-1-3-2)
+- [Capítulo II: Requirements Elicitation & Analysis](#s-cap-ii)
+    - [2.1. Competidores](#s-2-1)
+        - [2.1.1. Análisis competitivo](#s-2-1-1)
+        - [2.1.2. Estrategias y tácticas frente a competidores](#s-2-1-2)
+    - [2.2. Entrevistas](#s-2-2)
+        - [2.2.1. Diseño de entrevistas](#s-2-2-1)
+        - [2.2.2. Registro de entrevistas](#s-2-2-2)
+            - [2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-2-2-2-1)
+                - [2.2.2.1.1. Entrevista 1](#s-2-2-2-1-1)
+                - [2.2.2.1.2. Entrevista 2](#s-2-2-2-1-2)
+                - [2.2.2.1.3. Entrevista 3](#s-2-2-2-1-3)
+            - [2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)](#s-2-2-2-2)
+                - [2.2.2.2.1. Entrevista 1](#s-2-2-2-2-1)
+                - [2.2.2.2.2. Entrevista 2](#s-2-2-2-2-2)
+                - [2.2.2.2.3. Entrevista 3](#s-2-2-2-2-3)
+        - [2.2.3. Análisis de entrevistas](#s-2-2-3)
+    - [2.3. Needfinding](#s-2-3)
+        - [2.3.1. User Personas](#s-2-3-1)
+        - [2.3.2. User Task Matrix](#s-2-3-2)
+        - [2.3.3. User Journey Mapping](#s-2-3-3)
+        - [2.3.4. Empathy Mapping](#s-2-3-4)
+    - [2.4. Big Picture EventStorming](#s-2-4)
+    - [2.5. Ubiquitous Language](#s-2-5)
+- [Capítulo III: Requirements Specification](#s-cap-iii)
+    - [3.1. User Stories and Technical Stories](#s-3-1)
+    - [3.2. Impact Mapping](#s-3-2)
+    - [3.3. Product Backlog](#s-3-3)
+- [Capítulo IV: Solution Software Design](#s-cap-iv)
+    - [4.1. Strategic-Level Domain-Driven Design](#s-4-1)
+        - [4.1.1. Design-Level EventStorming](#s-4-1-1)
+            - [4.1.1.1. Candidate Context Discovery](#s-4-1-1-1)
+            - [4.1.1.2. Domain Message Flows Modeling](#s-4-1-1-2)
+            - [4.1.1.3. Bounded Context Canvases](#s-4-1-1-3)
+        - [4.1.2. Context Mapping](#s-4-1-2)
+        - [4.1.3. Software Architecture](#s-4-1-3)
+            - [4.1.3.1. Software Architecture System Landscape Diagram](#s-4-1-3-1)
+            - [4.1.3.2. Software Architecture Context Level Diagrams](#s-4-1-3-2)
+            - [4.1.3.3. Software Architecture Container Level Diagrams](#s-4-1-3-3)
+            - [4.1.3.4. Software Architecture Deployment Diagrams](#s-4-1-3-4)
+    - [4.2. Tactical-Level Domain-Driven Design](#s-4-2)
+        - [4.2.1. Bounded Context: Plant Monitoring](#s-4-2-1)
+            - [4.2.1.1. Domain Layer](#s-4-2-1-1)
+            - [4.2.1.2. Interface Layer](#s-4-2-1-2)
+            - [4.2.1.3. Application Layer](#s-4-2-1-3)
+            - [4.2.1.4. Infrastructure Layer](#s-4-2-1-4)
+            - [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-1-5)
+            - [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-1-6)
+                - [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-1-6-1)
+                - [4.2.1.6.2. Bounded Context Database Design Diagram](#s-4-2-1-6-2)
+        - [4.2.2. Bounded Context: Safety & Actuation](#s-4-2-2)
+            - [4.2.2.1. Domain Layer](#s-4-2-2-1)
+            - [4.2.2.2. Interface Layer](#s-4-2-2-2)
+            - [4.2.2.3. Application Layer](#s-4-2-2-3)
+            - [4.2.2.4. Infrastructure Layer](#s-4-2-2-4)
+            - [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-2-5)
+            - [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-2-6)
+                - [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-2-6-1)
+                - [4.2.2.6.2. Bounded Context Database Design Diagram](#s-4-2-2-6-2)
+        - [4.2.3. Bounded Context: Device & Edge Management](#s-4-2-3)
+            - [4.2.3.1. Domain Layer](#s-4-2-3-1)
+            - [4.2.3.2. Interface Layer](#s-4-2-3-2)
+            - [4.2.3.3. Application Layer](#s-4-2-3-3)
+            - [4.2.3.4. Infrastructure Layer](#s-4-2-3-4)
+            - [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-3-5)
+            - [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-3-6)
+                - [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-3-6-1)
+                - [4.2.3.6.2. Bounded Context Database Design Diagram](#s-4-2-3-6-2)
+        - [4.2.4. Bounded Context: Identity & Access](#s-4-2-4)
+            - [4.2.4.1. Domain Layer](#s-4-2-4-1)
+            - [4.2.4.2. Interface Layer](#s-4-2-4-2)
+            - [4.2.4.3. Application Layer](#s-4-2-4-3)
+            - [4.2.4.4. Infrastructure Layer](#s-4-2-4-4)
+            - [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](#s-4-2-4-5)
+            - [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](#s-4-2-4-6)
+                - [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](#s-4-2-4-6-1)
+                - [4.2.4.6.2. Bounded Context Database Design Diagram](#s-4-2-4-6-2)
+- [Capítulo V: Solution UI/UX Design](#s-cap-v)
+    - [5.1. Style Guidelines](#s-5-1)
+        - [5.1.1. General Style Guidelines](#s-5-1-1)
+        - [5.1.2. Web, Mobile and IoT Style Guidelines](#s-5-1-2)
+    - [5.2. Information Architecture](#s-5-2)
+        - [5.2.1. Organization Systems](#s-5-2-1)
+        - [5.2.2. Labeling Systems](#s-5-2-2)
+        - [5.2.3. SEO Tags and Meta Tags](#s-5-2-3)
+        - [5.2.4. Searching Systems](#s-5-2-4)
+        - [5.2.5. Navigation Systems](#s-5-2-5)
+    - [5.3. Landing Page UI Design](#s-5-3)
+        - [5.3.1. Landing Page Wireframe](#s-5-3-1)
+        - [5.3.2. Landing Page Mock-up](#s-5-3-2)
+    - [5.4. Applications UX/UI Design](#s-5-4)
+        - [5.4.1. Applications Wireframes](#s-5-4-1)
+        - [5.4.2. Applications Wireflow Diagrams](#s-5-4-2)
+        - [5.4.3. Applications Mock-ups](#s-5-4-3)
+        - [5.4.4. Applications User Flow Diagrams](#s-5-4-4)
+    - [5.5. Applications Prototyping](#s-5-5)
+    - [5.6. IoT Device Design](#s-5-6)
+- [Capítulo VI: Product Implementation, Validation & Deployment](#s-cap-vi)
+    - [6.1. Software Configuration Management](#s-6-1)
+        - [6.1.1. Software Development Environment Configuration](#s-6-1-1)
+        - [6.1.2. Source Code Management](#s-6-1-2)
+        - [6.1.3. Source Code Style Guide & Conventions](#s-6-1-3)
+        - [6.1.4. Software Deployment Configuration](#s-6-1-4)
+    - [6.2. Landing Page, Services & Applications Implementation](#s-6-2)
+    - [6.3. Validation Interviews](#s-6-3)
+        - [6.3.1. Diseño de Entrevistas](#s-6-3-1)
+        - [6.3.2. Registro de Entrevistas](#s-6-3-2)
+        - [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
+    - [6.4. Video About-the-Product](#s-6-4)
+- [Conclusiones](#s-conclusiones)
+    - [Video About-the-Team](#s-video-about-the-team)
+- [Bibliografía](#s-bibliografia)
+- [Anexos](#s-anexos)
+    - [Videos de Exposiciones](#s-anexo-videos-exposiciones)
+    - [Repositorios y artefactos](#s-anexo-repositorios)
 
 <!-- TOC:end -->
 
@@ -675,7 +664,7 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 ## 1.2. Solution Profile
 
 <a id="s-1-2-1"></a>
-### 1.2.1 Antecedentes y problemática
+### 1.2.1. Antecedentes y problemática
 
 **Antecedentes**
 
@@ -709,7 +698,7 @@ Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetr
 <a id="s-1-2-2"></a>
 
 <a id="s-1-2-2"></a>
-### 1.2.2 Lean UX Process
+### 1.2.2. Lean UX Process
 
 <a id="s-1-2-2-1"></a>
 #### 1.2.2.1. Lean UX Problem Statements
@@ -780,13 +769,13 @@ Sabremos que hemos tenido éxito cuando observemos una reducción drástica en e
 <a id="s-1-3"></a>
 ## 1.3. Segmentos objetivo
 
-<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil"></a>
-#### **Segmento Objetivo 1: Supervisor de Seguridad (App Móvil)**
+<a id="s-1-3-1"></a>
+### 1.3.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
 
 Profesionales encargados de la seguridad industrial en campo, que están en constante movimiento a lo largo de las distintas zonas críticas de la planta. Su herramienta principal es la pp Móvil, a través de la cual realizan el monitoreo en tiempo real de las métricas ambientales y el control del sistema. Se enfrentan a ruidos fuertes, espacios amplios y necesitan información de manera rápida a través de alertas push y notificaciones de emergencia. 
 
-<a id="s-segmento-objetivo-2-encargado-de-planta-app-web"></a>
-#### **Segmento Objetivo 2: Encargado de Planta (App Web)**
+<a id="s-1-3-2"></a>
+### 1.3.2. Segmento objetivo 2: Encargado de Planta (App Web)
 
 Personal de la gerencia técnica y operativa, responsables del rendimiento general y del cumplimiento normativo de la planta industrial. Trabaja mediante la **App Web**, desde una oficina o sala de control. Este segmento se encarga de la configuración del sistema, definiendo los topes máximos de CO2 o decibeles por cada zona de la fábrica. Además, analiza históricos, instala actualizaciones del software de los sensores y emite reportes ambientales semanales o mensuales para sustentar auditorías frente a los inspectores laborales.
 
@@ -973,11 +962,11 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
 
 > Nota para el equipo: las celdas marcadas entre corchetes deben completarse con los datos reales de cada entrevista. Las capturas se colocan en assets/chapter-2/ respetando los nombres de archivo indicados en cada etiqueta de imagen.
 
-<a id="s-segmento-objetivo-1-supervisor-de-seguridad-app-movil-segmento-objetivo-1-supervisor-de-seguridad"></a>
-#### Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
+<a id="s-2-2-2-1"></a>
+#### 2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)
 
-<a id="s-entrevista-1"></a>
-##### Entrevista 1
+<a id="s-2-2-2-1-1"></a>
+##### 2.2.2.1.1. Entrevista 1
 
 <table border="1">
   <tr>
@@ -1010,8 +999,8 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
-<a id="s-entrevista-2"></a>
-##### Entrevista 2
+<a id="s-2-2-2-1-2"></a>
+##### 2.2.2.1.2. Entrevista 2
 
 <table border="1">
   <tr>
@@ -1042,8 +1031,8 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
-<a id="s-entrevista-3"></a>
-##### Entrevista 3
+<a id="s-2-2-2-1-3"></a>
+##### 2.2.2.1.3. Entrevista 3
 
 <table border="1">
   <tr>
@@ -1074,11 +1063,11 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
-<a id="s-segmento-objetivo-2-encargado-de-planta-app-web-segmento-objetivo-2-encargado-de-planta"></a>
-#### Segmento objetivo 2: Encargado de Planta (App Web)
+<a id="s-2-2-2-2"></a>
+#### 2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)
 
-<a id="s-entrevista-1-entrevista-1"></a>
-##### Entrevista 1
+<a id="s-2-2-2-2-1"></a>
+##### 2.2.2.2.1. Entrevista 1
 
 <table border="1">
   <tr>
@@ -1111,8 +1100,8 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
-<a id="s-entrevista-2-entrevista-2"></a>
-##### Entrevista 2
+<a id="s-2-2-2-2-2"></a>
+##### 2.2.2.2.2. Entrevista 2
 
 <table border="1">
   <tr>
@@ -1142,8 +1131,8 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
-<a id="s-entrevista-3-entrevista-3"></a>
-##### Entrevista 3
+<a id="s-2-2-2-2-3"></a>
+##### 2.2.2.2.3. Entrevista 3
 
 <table border="1">
   <tr>
@@ -1415,8 +1404,8 @@ Finalmente se encerraron los bloques del tablero como candidatos a bounded conte
 
 ---
 
-<a id="s-chapter-iii-requirements-specification"></a>
-# Chapter III: Requirements Specification
+<a id="s-cap-iii"></a>
+# Capítulo III: Requirements Specification
 
 
 <table>
@@ -4160,7 +4149,7 @@ A partir del Big Picture EventStorming del Capítulo II y de las épicas EP02–
 EventStorming completo: [ver en Miro](https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ)
 
 <a id="s-4-1-1-1"></a>
-#### 4.1.1.1 Candidate Context Discovery
+#### 4.1.1.1. Candidate Context Discovery
 
 Los contextos candidatos se identificaron aplicando la heurística de **un Bounded Context por lenguaje ubicuo y dueño de datos**, tomando como entrada las user stories abordadas en el Capítulo III y el lenguaje del dominio SafePlant.
 
@@ -4207,7 +4196,7 @@ Los contextos candidatos se identificaron aplicando la heurística de **un Bound
 </table>
 
 <a id="s-4-1-1-2"></a>
-#### 4.1.1.2 Domain Message Flows Modeling
+#### 4.1.1.2. Domain Message Flows Modeling
 
 Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colaboran para resolver casos de uso de SafePlant mediante **Domain Message Flow Modelling** ([ddd-crew](https://github.com/ddd-crew/domain-message-flow-modelling)). Cada diagrama es un escenario de 5 a 9 mensajes numerados (comando, evento o consulta) en formato combinado: nombre, orden y payload. MQTT y el hardware de campo son sistemas; el Edge no es un quinto contexto ni un “IoT Gateway”.
 
@@ -4236,7 +4225,7 @@ Con los cuatro bounded contexts ya delimitados, el equipo modeló cómo colabora
 ![Domain message flow — supervisor override](../assets/04-capitulo-iv/ddd/dmf-05-supervisor-override.png)
 
 <a id="s-4-1-1-3"></a>
-#### 4.1.1.3 Bounded Context Canvases
+#### 4.1.1.3. Bounded Context Canvases
 
 Cada contexto candidato se documentó con un **Bounded Context Canvas**. El canvas fija propósito, clasificación estratégica, lenguaje, decisiones de negocio y la comunicación de entrada y salida.
 
@@ -4371,15 +4360,15 @@ El mismo conjunto de personas y sistemas externos, ahora con SafePlant al centro
 
 ![Context Level Diagram](../assets/04-capitulo-iv/architecture/c4-context.png)
 
-<a id="s-4-1-3-2-software-architecture-container-level-diagrams"></a>
-#### 4.1.3.2. Software Architecture Container Level Diagrams
+<a id="s-4-1-3-3"></a>
+#### 4.1.3.3. Software Architecture Container Level Diagrams
 
 Nueve containers. El **Web Monolithic Backend** (ASP.NET Core + PostgreSQL) es una sola caja: los cuatro bounded contexts viven dentro, no como servicios. En planta, **Edge Application** (ASP.NET Core + SQLite) hospeda el runtime de Device & Edge, una proyección de Plant Monitoring y el loop vivo de Safety & Actuation; **Eclipse Mosquitto** queda entre el firmware y ese Edge. El firmware publica lecturas y ejecuta relés; la landing es Angular.
 
 ![Container Level Diagram](../assets/04-capitulo-iv/architecture/c4-container.png)
 
-<a id="s-4-1-3-3"></a>
-#### 4.1.3.3. Software Architecture Deployment Diagrams
+<a id="s-4-1-3-4"></a>
+#### 4.1.3.4. Software Architecture Deployment Diagrams
 
 Cloud en **Azure**: Static Web Apps sirve la landing y el cliente Angular; App Service hospeda el monolito ASP.NET Core; Azure Database for PostgreSQL es el sistema de registro. En la **planta**, un servidor on-prem corre Edge Application, SQLite y Eclipse Mosquitto (sin IoT Hub): ahí vive el loop de Safety. El firmware Arduino/ESP32 está en el dispositivo de campo. La app Flutter corre en el teléfono del supervisor; el correo de recuperación sigue en SMTP externo. Identity es propia (no Azure AD). El override desde la nube hacia Edge exige WAN.
 
@@ -6016,13 +6005,13 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 
 ![Applications Wireflow](../assets/05-capitulo-v/applications/wireflow.png)
 
-<a id="s-5-4-2-applications-mock-ups"></a>
-### 5.4.2. Applications Mock-ups
+<a id="s-5-4-3"></a>
+### 5.4.3. Applications Mock-ups
 
 ![Applications Mock-ups](../assets/05-capitulo-v/applications/mockups.png)
 
-<a id="s-5-4-3"></a>
-### 5.4.3. Applications User Flow Diagrams
+<a id="s-5-4-4"></a>
+### 5.4.4. Applications User Flow Diagrams
 
 ![Applications User Flow](../assets/05-capitulo-v/applications/user-flow.png)
 
@@ -6081,92 +6070,6 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
     </tr>
   </tbody>
 </table>
-
----
-
-<a id="s-6-2-x"></a>
-### 6.2.X. Sprint n
-
-> Plantilla. Copiar a `../sprints/sprint-0N.md` y registrar en el Capítulo VI § 6.2.
-
-**Navegación:** [Capítulo VI](../06-capitulo-vi-product-implementation.md) · [Índice](../00-student-outcome.md#s-tabla-contenidos)
-
----
-
-<a id="s-6-2-x-1"></a>
-#### 6.2.X.1. Sprint Planning n
-
-<a id="s-6-2-x-2"></a>
-#### 6.2.X.2. Aspect Leaders and Collaborators
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">Aspecto</th>
-      <th align="left">Leader</th>
-      <th align="left">Collaborators</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
-
-<a id="s-6-2-x-3"></a>
-#### 6.2.X.3. Sprint Backlog n
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">ID</th>
-      <th align="left">User Story / Work Item</th>
-      <th align="left">Points</th>
-      <th align="left">Estado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
-
-<a id="s-6-2-x-4"></a>
-#### 6.2.X.4. Development Evidence for Sprint Review
-
-![Development Evidence](../assets/06-capitulo-vi/sprints/sprint-n-development.png)
-
-<a id="s-6-2-x-5"></a>
-#### 6.2.X.5. Testing Suite Evidence for Sprint Review
-
-![Testing Suite Evidence](../assets/06-capitulo-vi/sprints/sprint-n-testing.png)
-
-<a id="s-6-2-x-6"></a>
-#### 6.2.X.6. Execution Evidence for Sprint Review
-
-![Execution Evidence](../assets/06-capitulo-vi/sprints/sprint-n-execution.png)
-
-<a id="s-6-2-x-7"></a>
-#### 6.2.X.7. Services Documentation Evidence for Sprint Review
-
-![Services Documentation](../assets/06-capitulo-vi/sprints/sprint-n-services-docs.png)
-
-<a id="s-6-2-x-8"></a>
-#### 6.2.X.8. Software Deployment Evidence for Sprint Review
-
-![Deployment Evidence](../assets/06-capitulo-vi/sprints/sprint-n-deployment.png)
-
-<a id="s-6-2-x-9"></a>
-#### 6.2.X.9. Team Collaboration Insights during Sprint
-
-![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/sprint-n-collaboration.png)
 
 ---
 
