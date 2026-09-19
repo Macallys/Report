@@ -57,7 +57,7 @@
       <td align="left">Gordillo Ramos, Santiago Alonso</td>
     </tr>
     <tr>
-      <td align="left"></td>
+      <td align="left">U202417448</td>
       <td align="left">Huaman Cuba, Johan Giovani</td>
     </tr>
     <tr>
@@ -457,27 +457,20 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 5.
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">Criterio específico</th>
-      <th align="left">Acciones realizadas</th>
-      <th align="left">Conclusiones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">Trabaja en equipo para proporcionar liderazgo en forma conjunta</td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-    <tr>
-      <td align="left">Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
+<td align="left">
+        <strong>Baldeon Vivar, Santiago Armando</strong><br>
+        AV1: Lideró la sesión de Design-Level EventStorming (sección 4.1.1), guiando al equipo en la identificación de comandos y políticas del dominio de monitoreo IoT, asegurando que todos los integrantes aportaran desde sus roles.<br><br>
+        <strong>Gordillo Ramos, Santiago Alonso</strong><br>
+        AV1: Asumió el liderazgo en la investigación de usuarios (secciones 2.2 y 2.3), moderando las entrevistas con los supervisores de seguridad y consolidando los hallazgos para definir los User Personas del proyecto.<br><br>
+        <strong>Huamán Cuba, Johan Giovani</strong><br>
+        AV1: Dirigió la definición de la Arquitectura de Software (sección 4.1.3), estructurando los diagramas C4 y coordinando con el equipo la separación por capas aplicando Domain-Driven Design y Clean Architecture.<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián</strong><br>
+        AV1: Lideró la estrategia de despliegue y control de versiones (sección 6.1), capacitando al equipo en el uso de GitFlow y Conventional Commits para mantener un repositorio ordenado y libre de conflictos.<br><br>
+        <strong>Sanchez Gonzales, Ariana Mia</strong><br>
+        AV1: Tomó la iniciativa en el diseño UX/UI (Capítulo V), estableciendo el Design System y las guías de estilo, y dirigiendo las sesiones de wireframing en Figma para la aplicación móvil y web.<br><br>
+        <strong>Solano Armas, Angelo Hector</strong><br>
+        AV1: Coordinó la redacción y estandarización del Ubiquitous Language (sección 2.5), asegurando que los términos del sector industrial (CO2, mitigadores, umbrales) se usaran de forma consistente en toda la documentación.
+      </td>
 
 ---
 
