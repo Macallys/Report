@@ -66,13 +66,13 @@
 
 ![Applications Wireflow](../assets/05-capitulo-v/applications/wireflow.png)
 
-<a id="s-5-4-2-applications-mock-ups"></a>
-### 5.4.2. Applications Mock-ups
+<a id="s-5-4-3"></a>
+### 5.4.3. Applications Mock-ups
 
 ![Applications Mock-ups](../assets/05-capitulo-v/applications/mockups.png)
 
-<a id="s-5-4-3"></a>
-### 5.4.3. Applications User Flow Diagrams
+<a id="s-5-4-4"></a>
+### 5.4.4. Applications User Flow Diagrams
 
 ![Applications User Flow](../assets/05-capitulo-v/applications/user-flow.png)
 

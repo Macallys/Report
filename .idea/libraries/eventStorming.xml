@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="eventStorming">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/.cursor/design/event_storming/eventStorming.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

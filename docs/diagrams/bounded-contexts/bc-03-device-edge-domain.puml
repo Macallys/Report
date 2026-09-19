@@ -1,0 +1,114 @@
+@startuml bc-03-device-edge-domain
+' Bounded Context Domain Layer Class Diagram — Device & Edge Management (§ 4.2.3.6.1)
+' Un BC, dos despliegues: DeviceCredential (cloud) y EdgeNode (runtime).
+' Lecturas CO₂ / ruido / presencia como hechos separados. Sin OTA ni ExposureState.
+
+skinparam classAttributeIconSize 0
+
+enum ReadingKind {
+  CarbonDioxide
+  Noise
+  Presence
+}
+
+class DeviceId <<Value Object>> {
+  -value: UUID
+  +equals(other: DeviceId): Boolean
+}
+
+class DeviceSecret <<Value Object>> {
+  -hash: String
+  +matches(presented: String): Boolean
+  +equals(other: DeviceSecret): Boolean
+}
+
+class QueuedReading <<Value Object>> {
+  -deviceId: DeviceId
+  -kind: ReadingKind
+  -measuredAt: DateTime
+  -payload: String
+  -idempotencyKey: String
+  +equals(other: QueuedReading): Boolean
+}
+
+class OfflineAlertCopy <<Value Object>> {
+  -areaId: UUID
+  -alertId: UUID
+  -storedAt: DateTime
+  +equals(other: OfflineAlertCopy): Boolean
+}
+
+package "Cloud" {
+  class DeviceCredential <<Aggregate Root>> {
+    -id: UUID
+    -deviceId: DeviceId
+    -secret: DeviceSecret
+    -issuedAt: DateTime
+    -expiresAt: DateTime
+    -revokedAt: DateTime
+    +issue(deviceId: DeviceId, secret: DeviceSecret): DeviceCredential
+    +authenticate(presentedSecret: String): Boolean
+    +revoke(): void
+  }
+
+  interface IDeviceCredentialRepository <<Repository>> {
+    +findByDeviceId(deviceId: DeviceId): DeviceCredential
+    +save(credential: DeviceCredential): void
+  }
+}
+
+package "Edge" {
+  class EdgeNode <<Aggregate Root>> {
+    -id: UUID
+    +queueTelemetry(reading: QueuedReading): void
+    +syncLocalTelemetry(): void
+    +storeOfflineAlert(copy: OfflineAlertCopy): void
+    +acknowledgeDuplicate(idempotencyKey: String): void
+  }
+
+  class LocalQueuePolicy <<Domain Service>> {
+    +onIngestFailedOrUnreachable(): void
+  }
+
+  class TelemetrySyncPolicy <<Domain Service>> {
+    +onConnectivityRestored(): void
+  }
+
+  interface IEdgeNodeRepository <<Repository>> {
+    +load(): EdgeNode
+    +save(node: EdgeNode): void
+    +findPendingReadings(): QueuedReading[]
+    +saveQueuedReading(reading: QueuedReading): void
+  }
+
+  interface IMqttSubscriber <<Port>> {
+    +subscribeCarbonDioxide(): void
+    +subscribeNoise(): void
+    +subscribePresence(): void
+  }
+
+  interface ITelemetryIngestPort <<Port>> {
+    +ingest(reading: QueuedReading): void
+  }
+
+  interface ICredentialSyncPort <<Port>> {
+    +syncFromCloud(deviceId: DeviceId): DeviceCredential
+  }
+}
+
+DeviceCredential *-- "1" DeviceId
+DeviceCredential *-- "1" DeviceSecret
+IDeviceCredentialRepository ..> DeviceCredential : manages
+
+EdgeNode *-- "0..*" QueuedReading : queues >
+EdgeNode *-- "0..*" OfflineAlertCopy : stores >
+QueuedReading *-- "1" DeviceId
+QueuedReading *-- "1" ReadingKind
+LocalQueuePolicy ..> EdgeNode : commands
+TelemetrySyncPolicy ..> EdgeNode : commands
+IEdgeNodeRepository ..> EdgeNode : manages
+EdgeNode ..> ITelemetryIngestPort : ingest toward Plant Monitoring
+EdgeNode ..> ICredentialSyncPort : syncs credentials
+IMqttSubscriber ..> QueuedReading : delivers separate facts
+
+@enduml

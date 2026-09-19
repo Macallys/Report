@@ -1,0 +1,110 @@
+@startuml bc-04-identity-domain
+' Bounded Context Domain Layer Class Diagram — Identity & Access (§ 4.2.4.6.1)
+' Fuente: BCC-04 (.cursor/design/bounded-context-canvas/04-identity-access.md), paso 9 ES (A-01, A-02, A-03).
+' No IdP externo (DEC-005); persistencia PostgreSQL (DEC-008).
+
+skinparam classAttributeIconSize 0
+
+enum UserRole {
+  Supervisor
+  PlantManager
+}
+
+enum Channel {
+  Mobile
+  Web
+}
+
+class Email <<Value Object>> {
+  -value: String
+  +equals(other: Email): Boolean
+}
+
+class SessionToken <<Value Object>> {
+  -value: String
+  +equals(other: SessionToken): Boolean
+}
+
+class RecoveryToken <<Value Object>> {
+  -value: String
+  +equals(other: RecoveryToken): Boolean
+}
+
+class UserAccount <<Aggregate Root>> {
+  -id: UUID
+  -email: Email
+  -passwordHash: String
+  -role: UserRole
+  -enabled: Boolean
+  +create(email: Email, passwordHash: String, role: UserRole): UserAccount
+  +assignRole(role: UserRole): void
+  +disable(): void
+  +verifyPassword(password: String): Boolean
+}
+
+class Session <<Aggregate Root>> {
+  -id: UUID
+  -accountId: UUID
+  -channel: Channel
+  -token: SessionToken
+  -issuedAt: DateTime
+  -expiresAt: DateTime
+  -closedAt: DateTime
+  +grant(account: UserAccount, channel: Channel): Session
+  +close(): void
+  +isValid(): Boolean
+}
+
+class CredentialRecovery <<Aggregate Root>> {
+  -id: UUID
+  -accountId: UUID
+  -token: RecoveryToken
+  -requestedAt: DateTime
+  -expiresAt: DateTime
+  -usedAt: DateTime
+  +request(account: UserAccount): CredentialRecovery
+  +reset(newPasswordHash: String): void
+  +isExpired(): Boolean
+}
+
+class AccessPolicy <<Domain Service>> {
+  +isActionAllowed(session: Session, requiredRole: UserRole, requiredChannel: Channel): Boolean
+}
+
+interface IUserAccountRepository <<Repository>> {
+  +findById(id: UUID): UserAccount
+  +findByEmail(email: Email): UserAccount
+  +save(account: UserAccount): void
+}
+
+interface ISessionRepository <<Repository>> {
+  +findByToken(token: SessionToken): Session
+  +save(session: Session): void
+}
+
+interface ICredentialRecoveryRepository <<Repository>> {
+  +findByToken(token: RecoveryToken): CredentialRecovery
+  +save(recovery: CredentialRecovery): void
+}
+
+interface IEmailSender <<Port>> {
+  +send(to: Email, subject: String, body: String): void
+}
+
+UserAccount "1" -- "0..*" Session : owns >
+UserAccount "1" -- "0..*" CredentialRecovery : requests >
+UserAccount *-- "1" Email
+UserAccount *-- "1" UserRole
+Session *-- "1" Channel
+Session *-- "1" SessionToken
+CredentialRecovery *-- "1" RecoveryToken
+
+AccessPolicy ..> Session : evaluates
+AccessPolicy ..> UserRole : evaluates
+
+IUserAccountRepository ..> UserAccount : manages
+ISessionRepository ..> Session : manages
+ICredentialRecoveryRepository ..> CredentialRecovery : manages
+CredentialRecovery ..> IEmailSender : notifies
+
+@enduml

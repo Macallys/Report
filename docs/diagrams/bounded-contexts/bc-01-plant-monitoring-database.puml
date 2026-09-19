@@ -1,0 +1,68 @@
+@startuml bc-01-plant-monitoring-database
+' Bounded Context Database Design Diagram — Plant Monitoring (§ 4.2.1.6.2)
+' Modelo relacional lógico; PostgreSQL (DEC-008). Lecturas CO₂ / ruido / presencia en tablas separadas.
+
+entity "industrial_areas" as industrial_areas {
+  * id : UUID <<PK>>
+  --
+  * name : VARCHAR <<UNIQUE>>
+  * location : VARCHAR
+  * created_at : TIMESTAMP
+  * updated_at : TIMESTAMP
+}
+
+entity "area_thresholds" as area_thresholds {
+  * id : UUID <<PK>>
+  --
+  * area_id : UUID <<FK, UNIQUE>>
+  * co2_limit : DECIMAL
+  * noise_limit : DECIMAL
+  * configured_at : TIMESTAMP
+}
+
+entity "area_device_assignments" as area_device_assignments {
+  * id : UUID <<PK>>
+  --
+  * area_id : UUID <<FK>>
+  * device_id : VARCHAR <<UNIQUE>>
+  * kind : VARCHAR
+  * associated_at : TIMESTAMP
+}
+
+entity "carbon_dioxide_readings" as carbon_dioxide_readings {
+  * id : UUID <<PK>>
+  --
+  * area_id : UUID <<FK>>
+  * device_id : VARCHAR
+  * ppm : DECIMAL
+  * recorded_at : TIMESTAMP
+  * ingest_status : VARCHAR
+}
+
+entity "noise_readings" as noise_readings {
+  * id : UUID <<PK>>
+  --
+  * area_id : UUID <<FK>>
+  * device_id : VARCHAR
+  * db : DECIMAL
+  * recorded_at : TIMESTAMP
+  * ingest_status : VARCHAR
+}
+
+entity "presence_events" as presence_events {
+  * id : UUID <<PK>>
+  --
+  * area_id : UUID <<FK>>
+  * device_id : VARCHAR
+  * state : VARCHAR
+  * recorded_at : TIMESTAMP
+  * ingest_status : VARCHAR
+}
+
+industrial_areas ||--o| area_thresholds : "1 area has 0..1 thresholds"
+industrial_areas ||--o{ area_device_assignments : "1 area has many assignments"
+industrial_areas ||--o{ carbon_dioxide_readings : "1 area has many CO2 readings"
+industrial_areas ||--o{ noise_readings : "1 area has many noise readings"
+industrial_areas ||--o{ presence_events : "1 area has many presence events"
+
+@enduml
