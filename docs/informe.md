@@ -1,5 +1,5 @@
 <a id="s-caratula"></a>
-<div align="center">
+<div align="center" class="caratula">
 
 ![Logo de la Universidad](../assets/00-front-matter/upc-logo.png)
 
@@ -73,8 +73,6 @@ SafePlant
 202620
 
 </div>
-
-<div style="page-break-after: always;"></div>
 
 <a id="s-registro-versiones"></a>
 # Registro de Versiones del Informe

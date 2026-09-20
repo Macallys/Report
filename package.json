@@ -1,0 +1,12 @@
+{
+  "name": "safeplant-report",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "export:pdf": "node scripts/export-pdf.mjs"
+  },
+  "devDependencies": {
+    "markdown-it": "^14.1.0",
+    "puppeteer-core": "^23.11.1"
+  }
+}

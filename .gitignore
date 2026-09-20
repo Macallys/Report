@@ -1,4 +1,8 @@
-.cursor
-**/__pycache__/
+# Dependencias y caché de exportación PDF
+node_modules/
+package-lock.json
+docs/.informe-export.html
 .chrome-pdf-profile/
-docs/_informe-export.html
+
+# PDFs generados / de referencia (no versionar)
+*.pdf

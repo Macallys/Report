@@ -33,6 +33,12 @@ CHAPTER_FILES = [
     DOCS / "09-anexos.md",
 ]
 
+# Capítulos excluidos del ensamblado (vacío = se incluyen todos).
+# Para una entrega parcial, añadir aquí el nombre del archivo, p. ej.:
+#   "05-capitulo-v-solution-ui-ux-design.md",
+#   "06-capitulo-vi-product-implementation.md",
+EXCLUDED_FROM_INFORME: set[str] = set()
+
 TEMPLATE_BC = DOCS / "templates" / "bounded-context.md"
 TEMPLATE_SPRINT = DOCS / "templates" / "sprint.md"
 
@@ -308,7 +314,7 @@ def main() -> None:
     sprint_files = folder_md(DOCS / "sprints", TEMPLATE_SPRINT)
 
     for path in CHAPTER_FILES:
-        if not path.exists():
+        if not path.exists() or path.name in EXCLUDED_FROM_INFORME:
             continue
         text = prepare(path)
 
@@ -345,7 +351,7 @@ def main() -> None:
     toc_entries = []
     used_informe = set()
     for path in CHAPTER_FILES:
-        if not path.exists():
+        if not path.exists() or path.name in EXCLUDED_FROM_INFORME:
             continue
         text = prepare(path)
         if path.name == "04-capitulo-iv-solution-software-design.md":
