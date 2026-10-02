@@ -675,14 +675,14 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 
 **Antecedentes**
 
-El sector industrial enfrenta retos constantes relacionados a la salud ocupacional y el cumplimiento de las normativas ambientales. Según la Organización Internacional del Trabajo, cada año se producen millones de casos de enfermedades profesionales en el mundo derivadas de la exposición prolongada a agentes químicos y físicos en el lugar de trabajo. La acumulación de CO2 en espacios confinados y la alta contaminación sonora por maquinaria pesada figuran entre los principales causantes de bajas médicas y problemas respiratorios. 
+El sector industrial enfrenta retos constantes relacionados con la salud ocupacional y el cumplimiento estricto de las normativas ambientales. Según la Organización Internacional del Trabajo (OIT, 2022), cada año se producen casi 3 millones de muertes y cientos de millones de casos de enfermedades profesionales en el mundo derivadas de la exposición prolongada a agentes químicos y físicos en el lugar de trabajo. La acumulación de CO2 en espacios confinados deteriora rápidamente la calidad del aire respirable (ASHRAE, 2022), mientras que la alta contaminación sonora por maquinaria pesada figura entre los principales causantes de pérdida auditiva inducida por el ruido y estrés fisiológico grave (NIOSH, 1998).
 
-Las soluciones actuales implementadas en muchas plantas son insuficientes: dependen de mediciones manuales esporádicas o de sistemas antiguos que solo emiten alertas visuales en paneles fijos, pero no toman acciones correctivas de manera automática. Esto deja a los trabajadores expuestos al riesgo hasta que un operador humano se da cuenta y enciende un extractor o evacúa el área.
+Las soluciones actuales implementadas en muchas plantas son insuficientes para cumplir con los estándares modernos de gestión de seguridad, como la ISO 45001 (Organización Internacional de Normalización, 2018). Estas dependen de mediciones manuales esporádicas o de sistemas heredados que únicamente emiten alertas visuales en paneles fijos, pero no ejecutan acciones correctivas de manera automática. Esto deja a los trabajadores expuestos al riesgo hasta que un operador humano advierte la anomalía y enciende un extractor o evacúa el área de forma puramente reactiva.
 
 **Problematica**
 
 **What (Qué)**
-Las industrias enfrentan un alto riesgo de enfermedades ocupacionales y multas debido a la exposición prolongada de su personal a niveles tóxicos de CO2 y contaminación sonora excesiva.
+Las industrias enfrentan un alto riesgo de enfermedades ocupacionales y multas regulatorias debido a la exposición prolongada de su personal a niveles tóxicos de CO2 y contaminación sonora excesiva que superan los Valores Límite Permisibles (Ministerio de Salud, 2005).
 
 **When (Cuándo)**
 Los problemas de contaminación y ruido se evidencian principalmente durante los picos de producción, donde la maquinaria opera a máxima capacidad y se genera mayor combustión o ruido. El personal técnico está más ocupado y puede omitir las revisiones manuales de calidad ambiental.
@@ -694,13 +694,13 @@ Los incidentes ocurren en las zonas críticas dentro de las plantas: cuartos de 
 Los involucrados principales son los Operarios de planta, quienes sufren directamente las consecuencias en su salud, y los Supervisores de Seguridad, que deben monitorear estas variables pero carecen de herramientas remotas. 
 
 **Why (Porqué)**
-Se implementa para automatizar la respuesta de seguridad, protegiendo la salud del personal y evitando indemnizaciones o accidentes de planta. Este sistema funciona al reaccionar en segundos sin depender del error o la demora humana, centralizando la información en aplicaciones dedicadas.
+Se implementa para automatizar la respuesta de seguridad, protegiendo la salud del personal y garantizando el cumplimiento de la Ley de Seguridad y Salud en el Trabajo (Congreso de la República del Perú, 2011). Este sistema reacciona en segundos sin depender del error o la demora humana.
 
 **How (Cómo)**
 Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetros y detectores de presencia conectados a la plataforma Macallys. El sistema acciona como mitigación en milisegundos si se rompe el limite permitido. A la par, el Encargado de Planta configura las métricas desde la App Web, y el Supervisor de Seguridad visualiza el estado en tiempo real desde su App Móvil.
 
 **How much(Cuánto)**
-- **Impacto económico:** Las multas impuestas por la SUNAFIL (Superintendencia Nacional de Fiscalización Laboral) por incumplimiento de normativas de salud en el trabajo pueden superar los miles de soles, sin contar las indemnizaciones médicas por pérdida auditiva irreversible.
+- **Impacto económico:** Las multas impuestas por la SUNAFIL (Superintendencia Nacional de Fiscalización Laboral) por incumplimientos graves y muy graves de normativas de salud en el trabajo pueden alcanzar montos superiores a las decenas de miles de soles (Ministerio de Trabajo y Promoción del Empleo, 2012), sin contar las indemnizaciones médicas por pérdida auditiva irreversible o daños respiratorios.
 - **Tiempos de inactividad:** Las evacuaciones de emergencia por acumulación de gases paralizan las líneas de producción, costando a la empresa miles de dólares por cada hora de inactividad.
 <a id="s-1-2-2"></a>
 
@@ -6200,6 +6200,8 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 <a id="s-6-1"></a>
 ## 6.1. Software Configuration Management
 
+La configuración del software en SafePlant establece las herramientas que permiten al equipo mantener el control sobre los cambios en el código fuente, asegurar la calidad y organizar el despliegue hacia los entornos de producción (Cloud y Edge).
+
 <a id="s-6-1-1"></a>
 ### 6.1.1. Software Development Environment Configuration
 
@@ -6211,6 +6213,24 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 
 <a id="s-6-1-4"></a>
 ### 6.1.4. Software Deployment Configuration
+La arquitectura de despliegue se divide en tres niveles operativos, tal como se especifica en el Diagrama de Despliegue del sistema:
+
+**1. Despliegue en la Nube (Cloud - Azure)**
+Se utiliza la plataforma Microsoft Azure para hospedar los componentes centrales:
+*   **Azure Static Web Apps:** Para la landing page y el cliente Angular para la aplicación web.
+*   **Azure App Service:** Hospeda el monolito ASP.NET Core que gestiona la lógica en la nube.
+*   **Azure Database for PostgreSQL:** Actúa como el sistema de registro central en la nube.
+
+**2. Despliegue en Planta (Edge On-Premise)**
+Para garantizar la operación continua sin dependencia de internet, se despliega infraestructura local en la planta:
+*   **Servidor On-Premise:** Ejecuta la Edge Application que contiene el loop de seguridad vivo (Safety & Actuation).
+*   **Base de Datos Local:** Utiliza SQLite en planta para mantener el estado y la contingencia offline.
+*   **Broker de Mensajería:** Eclipse Mosquitto opera localmente como intermediario entre el firmware y la aplicación Edge.
+
+**3. Despliegue de Clientes y Hardware**
+*   **App Móvil:** La aplicación Flutter se ejecuta en el dispositivo móvil del supervisor.
+*   **Hardware de Campo:** El firmware Arduino/ESP32 se despliega directamente en los dispositivos conectados a sensores y actuadores físicos.
+*   **Servicios Externos:** Se utiliza un servicio SMTP externo para el envío de correos, mientras que la identidad es propia del sistema.
 
 ![Software Deployment Configuration](../assets/06-capitulo-vi/scm/deployment-configuration.png)
 
