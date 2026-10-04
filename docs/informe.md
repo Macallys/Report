@@ -6208,6 +6208,30 @@ La configuración del software en SafePlant establece las herramientas que permi
 <a id="s-6-1-2"></a>
 ### 6.1.2. Source Code Management
 
+El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys`. Actualmente, la organización alberga los siguientes repositorios principales: [https://github.com/Macallys/Report](https://github.com/Macallys/Report)
+
+*   **`Report`:** Repositorio central que contiene la documentación  y el informe del proyecto.
+*   **`safeplant-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
+*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular.
+*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático.
+
+**Estrategia de Ramas**
+El equipo ha adaptado su flujo de trabajo para agilizar la integración continua. Inicialmente, se implementó un enfoque basado en ramas de características específicas para segmentar el trabajo. Sin embargo, la estrategia actual se ha simplificado: los miembros del equipo ahora integran sus aportes y actualizaciones de forma directa en la rama `develop` para acelerar el ciclo de desarrollo y consolidación. 
+
+La estructura base del flujo de trabajo se compone de:
+*   **`main`:** Contiene el código en estado de producción, asegurando que siempre sea estable y desplegable.
+*   **`develop`:** Rama por defecto y principal vía de integración activa, donde se encuentran todas las modificaciones directas del equipo antes de un pase a producción.
+*   **`feature/*`:** Ramas temporales utilizadas históricamente para la división de tareas específicas.
+
+**Estándares de Commits**
+Para mantener un historial de cambios legible y auditable, el equipo aplica la convención de *Conventional Commits* con la estructura:
+*   `feat`: Una nueva funcionalidad.
+*   `fix`: Corrección de un error.
+*   `docs`: Cambios en la documentación.
+*   `style`: Cambios de formato que no afectan la lógica.
+*   `refactor`: Cambio en el código que no corrige errores ni añade funciones.
+*   `test`: Añadir o corregir pruebas.
+
 <a id="s-6-1-3"></a>
 ### 6.1.3. Source Code Style Guide & Conventions
 
