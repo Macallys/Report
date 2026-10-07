@@ -6294,7 +6294,7 @@ Para el desarrollo colaborativo del ecosistema SafePlant, el equipo utiliza las 
 El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys`. Actualmente, la organización alberga los siguientes repositorios principales: [https://github.com/Macallys/Report](https://github.com/Macallys/Report)
 
 *   **`Report`:** Repositorio central que contiene la documentación  y el informe del proyecto.
-*   **`safeplant-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
+*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
 *   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular.
 *   **`landing-page`:** Repositorio dedicado al sitio web informativo estático.
 
@@ -6320,16 +6320,16 @@ Para mantener un historial de cambios legible y auditable, el equipo aplica la c
 Para mantener la legibilidad y consistencia del código entre los  miembros del equipo, se siguen las convenciones oficiales de cada tecnología utilizada en SafePlant:
 
 **C# (ASP.NET Core - Backend & Edge)**
-*   Utilizar *PascalCase* para nombres de clases, registros y métodos.
-*   Utilizar *camelCase* para variables locales y parámetros de métodos.
-*   Mantener una estructura de carpetas estricta que refleje las capas de Domain-Driven Design (Domain, Application, Infrastructure, Interface)
-*   Aplicar inyección de dependencias para los repositorios y servicios, evitando el alto acoplamiento.
+La estructura del repositorio backend refleja fielmente el diseño estratégico (DDD), imponiendo las siguientes reglas a nivel de solución:
+*   **Separación de Hosts:** Los puntos de entrada de la aplicación se mantienen aislados en la carpeta `src/Hosts`, diferenciando el proyecto `Cloud.Api` del proyecto `Plant.Host` (para ejecución en el servidor Edge local).
+*   **Aislamiento Modular:** El código se organiza en la carpeta `src/Modules` según los Bounded Contexts definidos: `DeviceEdgeManagement`, `IAM`, `PlantMonitoring` y `SafetyActuation`, además de un `SharedKernel` para lógica transversal.
+*   **Capas Tácticas:** Cada uno implementa estrictamente tres capas: `Application`, `Domain` e `Infrastructure`.
 
 **TypeScript (Angular - Web Client)**
-*   Utilizar *PascalCase* para clases e interfaces, y *camelCase* para variables y funciones.
-*   Nombrar los archivos utilizando sufijos descriptivos separados por puntos.
-*   Tipar estrictamente las respuestas de la API.
-
+El desarrollo del cliente web se estructura mediante una arquitectura modular orientada a funcionalidades:
+*   **Estructura por Features:** El código se organiza en la carpeta `src/app/features`, dividiendo la aplicación en módulos funcionales como `accounts`, `metrics` y `recovery`. La lógica se ubica en `core` y `shared`.
+*   **Separación de Responsabilidades:** Se separan las responsabilidades en archivos específicos utilizando sufijos descriptivos: `.api.ts` para llamadas HTTP, `.models.ts` para interfaces de datos, y `.store.ts` para la gestión de estado local.
+  
 **Dart (Flutter - Mobile App)**
 *   Utilizar *UpperCamelCase* para nombrar clases, enumeraciones y extensiones.
 *   Utilizar *lowerCamelCase* para nombrar variables, constantes y métodos.
