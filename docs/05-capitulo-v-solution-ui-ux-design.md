@@ -164,7 +164,19 @@ Además de la búsqueda por texto, el usuario puede refinar los resultados con f
 <a id="s-5-3-2"></a>
 ### 5.3.2. Landing Page Mock-up
 
-![Landing Page Wireframe](../assets/05-capitulo-v/landing/landing_mockup.png)
+La landing page de SAFEPLANT presenta la propuesta de valor y sus principales capacidades de forma visual, guiando al visitante desde una introducción al sistema hasta la invitación a conocer o iniciar la solución. El mock-up aplica los lineamientos visuales del proyecto y adapta su composición para navegadores de escritorio y móviles.
+
+**Landing Page para Desktop Web Browser**
+
+En la versión de escritorio se utiliza una paleta de tonos azul oscuro con acentos celestes y turquesa, asociada con la tecnología, la seguridad y el monitoreo ambiental. La jerarquía tipográfica, las tarjetas de contenido y los botones de acción permiten identificar rápidamente las funciones principales de SAFEPLANT, mientras que el contraste favorece la legibilidad y mantiene una presentación visual consistente.
+
+![Landing Page para Desktop Web Browser](../assets/05-capitulo-v/landing/landing_mockup.png)
+
+**Landing Page para Mobile Web Browser**
+
+La versión móvil reorganiza el contenido en una columna para facilitar la lectura y la navegación en pantallas reducidas. Conserva la identidad visual, las secciones y las acciones principales de la versión de escritorio, priorizando el acceso mediante controles táctiles y manteniendo textos e indicadores legibles.
+
+![Landing Page para Mobile Web Browser](<../assets/05-capitulo-v/landing/Landing Page para Mobile Web Browser.png>)
 
 <a id="s-5-4"></a>
 ## 5.4. Applications UX/UI Design
@@ -207,9 +219,29 @@ MOVIL:
 <a id="s-5-5"></a>
 ## 5.5. Applications Prototyping
 
-**URL del prototipo Movil: [Link a Prototipo](https://www.figma.com/proto/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=76-2192&t=gFTPorlHMMO2VxnX-1&scaling=scale-down&content-scaling=responsive&page-id=9%3A2&starting-point-node-id=76%3A2192)** 
+En esta sección presentamos los prototipos de interfaz de SAFEPLANT para navegadores web de escritorio y dispositivos móviles. Estos permiten simular la navegación y las interacciones principales antes de implementar la solución, y complementan los wireframes, mock-ups y diagramas de User Flow presentados anteriormente. Los criterios de diseño se aplican de manera coherente a la landing page y a la aplicación web, respetando las necesidades de información de cada contexto.
 
-**URL del prototipo Web: [Link a Prototipo](https://www.figma.com/proto/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=67-2086&p=f&t=DnfUCKPU45KIZ1SG-1&scaling=scale-down&content-scaling=responsive&page-id=62%3A234&starting-point-node-id=62%3A2071)**
+<a id="s-5-5-1"></a>
+### 5.5.1. Criterios de diseño y decisiones de interacción
+
+Las decisiones de interacción se definieron a partir de la arquitectura de información de SAFEPLANT y de los recorridos descritos en los User Flow Diagrams. La navegación principal conserva las secciones Panel de Control, Alertas, Umbrales, Historial y Dispositivos; su organización prioriza primero la consulta del estado de la planta y permite acceder después al detalle o a las acciones de configuración según el rol del usuario. La navegación contextual conecta indicadores o incidentes con la información relacionada, evitando que el usuario tenga que regresar al inicio para continuar una tarea.
+
+Para que las pantallas sean reconocibles, se mantienen etiquetas, iconos, colores y patrones visuales consistentes con los style guides. Los niveles de severidad y los estados del sistema conservan los mismos significados en las distintas vistas. Los controles utilizan convenciones conocidas —como pestañas, filtros, selectores, botones y ventanas de confirmación— para que sus funciones puedan identificarse sin instrucciones adicionales.
+
+El diseño responsive adapta la distribución de los contenidos al espacio disponible en escritorio y móvil, preservando la jerarquía visual, la legibilidad y el acceso a las acciones relevantes. En pantallas amplias, la interfaz facilita la comparación simultánea de indicadores y tablas; en móvil, prioriza la consulta rápida y organiza la navegación y el contenido para una pantalla reducida, sin cambiar los nombres ni el significado de las secciones.
+
+La información se presenta de forma clara y orientada a la tarea: los indicadores importantes se distinguen de los datos complementarios, las etiquetas describen el contenido y los mensajes comunican estados o acciones con lenguaje directo. Las interacciones simuladas —por ejemplo, cambiar el periodo de una gráfica, filtrar alertas, consultar el detalle de un incidente o ajustar un umbral— corresponden a tareas previstas en los User Flow Diagrams y muestran la respuesta esperada de la interfaz. De esta manera, la arquitectura de información determina tanto qué opciones se muestran como el orden y la relación entre ellas.
+
+<a id="s-5-5-2"></a>
+### 5.5.2. Prototipos web de escritorio y móvil
+
+El prototipo web de escritorio presenta la navegación y las vistas de consulta y gestión de SAFEPLANT para el supervisor de seguridad y la consulta de resultados para el gerente de planta, de acuerdo con los permisos descritos en la arquitectura de información. El prototipo móvil conserva las mismas secciones y etiquetas, adaptando su distribución para facilitar el acceso desde una pantalla más pequeña.
+
+En ambos prototipos se busca representar los recorridos principales: ingresar al Panel de Control para revisar las condiciones de la planta; abrir una alerta para consultar el incidente y su mitigación; revisar el Historial para analizar eventos; y, para el supervisor, acceder a Umbrales o Dispositivos cuando la tarea requiera configuración o verificación. La navegación y los controles son una simulación de interacción para comunicar el comportamiento esperado de la solución.
+
+**Prototipo móvil:** [Abrir prototipo en Figma](https://www.figma.com/proto/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=76-2192&t=gFTPorlHMMO2VxnX-1&scaling=scale-down&content-scaling=responsive&page-id=9%3A2&starting-point-node-id=76%3A2192).
+
+**Prototipo web de escritorio:** [Abrir prototipo en Figma](https://www.figma.com/proto/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=67-2086&p=f&t=DnfUCKPU45KIZ1SG-1&scaling=scale-down&content-scaling=responsive&page-id=62%3A234&starting-point-node-id=62%3A2071).
 
 <a id="s-5-6"></a>
 ## 5.6. IoT Device Design
