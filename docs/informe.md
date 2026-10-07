@@ -6275,6 +6275,28 @@ Para mantener un historial de cambios legible y auditable, el equipo aplica la c
 
 <a id="s-6-1-3"></a>
 ### 6.1.3. Source Code Style Guide & Conventions
+Para mantener la legibilidad y consistencia del código entre los  miembros del equipo, se siguen las convenciones oficiales de cada tecnología utilizada en SafePlant:
+
+**C# (ASP.NET Core - Backend & Edge)**
+*   Utilizar *PascalCase* para nombres de clases, registros y métodos.
+*   Utilizar *camelCase* para variables locales y parámetros de métodos.
+*   Mantener una estructura de carpetas estricta que refleje las capas de Domain-Driven Design (Domain, Application, Infrastructure, Interface)
+*   Aplicar inyección de dependencias para los repositorios y servicios, evitando el alto acoplamiento.
+
+**TypeScript (Angular - Web Client)**
+*   Utilizar *PascalCase* para clases e interfaces, y *camelCase* para variables y funciones.
+*   Nombrar los archivos utilizando sufijos descriptivos separados por puntos.
+*   Tipar estrictamente las respuestas de la API.
+
+**Dart (Flutter - Mobile App)**
+*   Utilizar *UpperCamelCase* para nombrar clases, enumeraciones y extensiones.
+*   Utilizar *lowerCamelCase* para nombrar variables, constantes y métodos.
+*   Nombrar los archivos y carpetas utilizando *snake_case*.
+
+**C++ (Arduino/ESP32 - Firmware)**
+*   Utilizar letras mayúsculas separadas por guiones bajos para definir constantes y pines.
+*   Implementar código que garantice que el dispositivo no pierda la conexión con el broker Eclipse Mosquitto.
+*   Comentar la lógica detrás de la lectura de sensores y activación de relés para facilitar el mantenimiento del hardware de campo.
 
 <a id="s-6-1-4"></a>
 ### 6.1.4. Software Deployment Configuration
