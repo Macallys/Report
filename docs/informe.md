@@ -6237,6 +6237,15 @@ La configuración del software en SafePlant establece las herramientas que permi
 <a id="s-6-1-1"></a>
 ### 6.1.1. Software Development Environment Configuration
 
+Para el desarrollo colaborativo del ecosistema SafePlant, el equipo utiliza las siguientes herramientas y entornos de desarrollo, alineados con la arquitectura del proyecto:
+
+*   **Figma:** Herramienta colaborativa en la nube utilizada para el diseño de wireframes, wireflows, mock-ups y prototipado de las interfaces web y móvil.
+*   **Visual Studio / VS Code:** Principales para la construcción del Web Monolithic Backend y la Edge Application en ASP.NET Core, así como para el desarrollo del frontend en Angular.
+*   **Android Studio / VS Code:** Entornos configurados con los SDKs necesarios para la programación de la aplicación móvil multiplataforma utilizando Flutter.
+*   **Arduino IDE / PlatformIO:** Entornos utilizados para escribir, compilar y cargar el firmware en C++ hacia los microcontroladores ESP32.
+*   **GitHub:** Plataforma en la nube utilizada como repositorio central para el control de versiones y el trabajo colaborativo del código fuente.
+*   **pgAdmin / DBeaver:** Gestores de bases de datos utilizados para modelar y administrar la Cloud Database en PostgreSQL localmente antes de su despliegue.
+
 <a id="s-6-1-2"></a>
 ### 6.1.2. Source Code Management
 
