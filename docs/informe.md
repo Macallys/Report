@@ -6150,7 +6150,15 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 <a id="s-5-3-1"></a>
 ### 5.3.1. Landing Page Wireframe
 
+El wireframe de la landing page de SAFEPLANT define la estructura base de la página y la distribución de sus elementos antes de aplicar el diseño visual final. Se elaboró en blanco y negro, con texto de relleno y marcadores de posición para imágenes e íconos, de modo que la atención se centre en la jerarquía de la información, el orden de las secciones y la ubicación de las acciones principales.
+
+**Landing Page para Desktop Web Browser**
+
 ![Landing Page Wireframe](../assets/05-capitulo-v/landing/wireframe.png)
+
+**Landing Page para Mobile Web Browser**
+
+![Landing Page Wireframe](../assets/05-capitulo-v/landing/WF_LandingMobile.png)
 
 <a id="s-5-3-2"></a>
 ### 5.3.2. Landing Page Mock-up
@@ -6318,8 +6326,6 @@ Para garantizar la operación continua sin dependencia de internet, se despliega
 *   **App Móvil:** La aplicación Flutter se ejecuta en el dispositivo móvil del supervisor.
 *   **Hardware de Campo:** El firmware Arduino/ESP32 se despliega directamente en los dispositivos conectados a sensores y actuadores físicos.
 *   **Servicios Externos:** Se utiliza un servicio SMTP externo para el envío de correos, mientras que la identidad es propia del sistema.
-
-![Software Deployment Configuration](../assets/06-capitulo-vi/scm/deployment-configuration.png)
 
 <a id="s-6-2"></a>
 ## 6.2. Landing Page, Services & Applications Implementation
