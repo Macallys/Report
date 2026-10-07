@@ -187,6 +187,7 @@ WEB:
 ![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup2.png)
 ![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup3.png)
 ![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup4.png)
+![Gobernanza de cuentas - aplicación web](../assets/05-capitulo-v/mockups/web/mockup5.png)
 
 MOVIL:
 
