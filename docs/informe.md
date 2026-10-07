@@ -6199,9 +6199,15 @@ El esquema para la plataforma web, orientado al Encargado de Planta, distribuye 
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WF_5.png)
 
+![Applications Wireframes](../assets/05-capitulo-v/applications/WF_6.png)
+
 **Wireframes de Aplicación Móvil**
 
 El diseño para el dispositivo móvil, dirigido al Supervisor de Seguridad en campo, organiza la interfaz en una sola columna para facilitar la interacción rápida. Su estructura destaca los indicadores de telemetría en tiempo real por área industrial, la visualización clara de alertas críticas y el acceso directo a los controles manuales de los actuadores para situaciones de emergencia.
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_6.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_7.png)
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_1.png)
 
@@ -6213,9 +6219,6 @@ El diseño para el dispositivo móvil, dirigido al Supervisor de Seguridad en ca
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_5.png)
 
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_6.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_7.png)
 
 <a id="s-5-4-2"></a>
 ### 5.4.2. Applications Wireflow Diagrams
