@@ -6183,12 +6183,43 @@ La versión móvil reorganiza el contenido en una columna para facilitar la lect
 <a id="s-5-4-1"></a>
 ### 5.4.1. Applications Wireframes
 
-![Applications Wireframes](../assets/05-capitulo-v/applications/wireframes.png)
+Los wireframes de las aplicaciones de SAFEPLANT definen la estructura base y la distribución funcional para las plataformas web y móvil. Aseguran que la atención se centre en la jerarquía de la información, el flujo de navegación y la ubicación de las acciones principales de los usuarios antes de aplicar el diseño visual final.
+
+**Wireframes de Aplicación Web**
+
+El esquema para la plataforma web, orientado al Encargado de Planta, distribuye el contenido aprovechando el formato de escritorio. Su estructura prioriza paneles de control amplios (dashboards) para el monitoreo consolidado, tablas detalladas para la auditoría de historiales y vistas estructuradas.
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WF_1.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WF_2.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WF_3.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WF_4.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WF_5.png)
+
+**Wireframes de Aplicación Móvil**
+
+El diseño para el dispositivo móvil, dirigido al Supervisor de Seguridad en campo, organiza la interfaz en una sola columna para facilitar la interacción rápida. Su estructura destaca los indicadores de telemetría en tiempo real por área industrial, la visualización clara de alertas críticas y el acceso directo a los controles manuales de los actuadores para situaciones de emergencia.
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_1.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_2.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_3.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_4.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_5.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_6.png)
+
+![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_7.png)
 
 <a id="s-5-4-2"></a>
 ### 5.4.2. Applications Wireflow Diagrams
 
-![Applications Wireflow](../assets/05-capitulo-v/applications/wireflow.png)
 
 <a id="s-5-4-3"></a>
 ### 5.4.3. Applications Mock-ups
