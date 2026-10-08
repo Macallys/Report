@@ -558,13 +558,30 @@ En ambos prototipos se busca representar los recorridos principales: ingresar al
 <a id="s-5-6"></a>
 ## 5.6. IoT Device Design
 
-Link a proyecto de Wowki: [https://wokwi.com/projects/477285427305212929](https://wokwi.com/projects/477285427305212929)
+El nodo de campo se diseñó y probó en el simulador Wokwi, antes de cargar el firmware en un ESP32 físico. El circuito reúne en una sola placa lo que el supervisor ve en la aplicación: la lectura de gas, ruido y presencia, y la actuación del extractor, la alarma y las mamparas. El proyecto está en [Wokwi — nodo SafePlant](https://wokwi.com/projects/477285427305212929).
 
-![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi.png)
+El controlador es un ESP32. A él se conectan tres sensores y tres actuadores:
 
-![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi1.png)
+- **Gas.** Un sensor MQ-2, rotulado en el diagrama como CO₂ (MQ-2). En la consola de la simulación la lectura aparece como `Gas`, en valor numérico, con estado `normal` o `ACTIVO`. En esta entrega el MQ-2 representa el canal de gas del nodo; no es un medidor de CO₂ en ppm.
+- **Ruido.** Un sensor de sonido rotulado `Ruido (dB)`. La consola informa el nivel en decibeles y lo marca `normal` o `ACTIVO`.
+- **Presencia.** Un sensor PIR. La consola informa `sin movimiento` o `MOVIMIENTO`.
+- **Alarma.** Un zumbador. Estado `OFF` u `ON`.
+- **Mamparas.** Un servomotor. Estado `ABIERTAS` o `CERRADAS`.
+- **Extractor.** Un motor paso a paso gobernado por un driver A4988. Estado `OFF` u `ON`.
 
-![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi2.png)
+El ESP32 imprime en cada ciclo una línea con las seis señales, para comprobar en la simulación que la lectura y la actuación coinciden. El estado de reposo, que se mantuvo estable en la primera prueba, es gas en 0, ruido en 30.0 dB, PIR sin movimiento, extractor apagado, alarma apagada y mamparas abiertas.
+
+![Reposo del nodo: gas, ruido y presencia en normal; extractor y alarma apagados; mamparas abiertas](../assets/05-capitulo-v/iot-device/wokwi.png)
+
+En la segunda prueba el gas pasó a 56 y quedó `ACTIVO`, el PIR detectó movimiento y el ruido se mantuvo en `normal` (entre 51.9 dB y 83.5 dB). El nodo encendió el extractor y la alarma. Las mamparas siguieron abiertas.
+
+![Gas activo y presencia detectada: extractor y alarma encendidos](../assets/05-capitulo-v/iot-device/wokwi1.png)
+
+En la tercera prueba se recorrió el cambio de estado en la misma consola. Partió del reposo. Cuando el gas pasó a `ACTIVO` (56) sin movimiento en el PIR, el extractor se encendió, la alarma permaneció apagada y las mamparas pasaron a `CERRADAS`. Después el ruido también llegó a `ACTIVO` (101.8 dB y 98.2 dB) y luego volvió a `normal` (78.7 dB). Mientras el gas siguió activo, el extractor se mantuvo encendido y las mamparas cerradas.
+
+![Gas activo: extractor encendido y mamparas cerradas; el ruido llega a activo sin reabrir las mamparas](../assets/05-capitulo-v/iot-device/wokwi2.png)
+
+Esta simulación cubre el lazo local del nodo: medir, decidir y actuar en el propio ESP32. El alta del dispositivo, el ajuste de umbrales y el reconocimiento del incidente quedan en la aplicación del supervisor, como se describe en las secciones anteriores. El nodo físico y su enlace con el gateway de planta no forman parte de esta prueba.
 
 ---
 
