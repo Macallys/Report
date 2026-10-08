@@ -164,17 +164,27 @@ A continuación se detallan los sistemas de organización, etiquetado, posiciona
 <a id="s-5-2-1"></a>
 ### 5.2.1. Organization Systems
 
-En nuestra plataforma SAFEPLANT, organizamos la información para que los usuarios puedan monitorear, analizar y controlar las condiciones ambientales de la planta de forma rápida y clara. La plataforma es utilizada por dos tipos de usuarios: el supervisor de seguridad, que consulta y configura el sistema desde la app móvil y la consola web, y el gerente de planta, que consulta los resultados desde la web. A continuación, explicamos los sistemas de organización que utilizamos en distintas secciones de la aplicación:
+En SAFEPLANT cada grupo de información usa el sistema que mejor sirve a la tarea. Hay dos familias. La organización visual define cómo se lee un conjunto en pantalla: de forma jerárquica, secuencial o matricial. La categorización define cómo se agrupa y se recupera ese contenido: por tópicos, por zona, por orden alfabético, por tiempo y por audiencia.
 
-Utilizamos la **organización jerárquica** principalmente en el Panel de Control, donde destacamos primero los indicadores generales (nivel de CO₂, presión acústica y personal en zonas críticas), luego la matriz ambiental de zonas y finalmente la respuesta automatizada y el estado de los nodos IoT. Asimismo, también está presente en la pantalla de Alertas, donde los incidentes críticos tienen mayor relevancia visual que las advertencias y los mensajes informativos.
+**Organización visual**
 
-Por otro lado, aplicamos la **organización secuencial** en el ciclo de vida de un incidente, que sigue pasos consecutivos: detección del peligro, mitigación automática, pendiente de confirmación y, finalmente, resuelto o auditado. También se aplica en la configuración de umbrales, donde el supervisor selecciona una zona, ajusta el límite de CO₂ o de ruido y finalmente guarda el cambio.
+La **organización jerárquica** se aplica cuando el usuario debe ver primero lo urgente. En el Panel de Control el orden visual es indicadores generales (CO₂, presión acústica y personal en zonas críticas), luego la matriz de zonas y, al final, la respuesta automatizada y el estado de los nodos. En Alertas, el incidente crítico tiene más peso visual que la advertencia y que el mensaje informativo.
 
-Además, para la presentación de datos se utiliza una **organización matricial**, que permite visualizar y comparar varios elementos simultáneamente en una cuadrícula. Se aplica en la matriz ambiental de zonas, en la matriz comparativa de umbrales y en las tablas de alertas y de registro de incidentes.
+La **organización secuencial** se aplica cuando la tarea se completa por pasos. El incidente sigue detección del peligro, mitigación automática, pendiente de confirmación y, al cierre, resuelto o auditado. La configuración de umbrales sigue otro recorrido: el supervisor elige la zona, ajusta el límite de CO₂ o de ruido y guarda el cambio.
 
-En cuanto a la categorización, aplicamos la **organización por tópicos** para agrupar la información según el parámetro medido (CO₂, presión acústica y presencia de personal) y, en la sección Dispositivos, según su función: sensores de monitoreo y actuadores de control. También implementamos la **organización geográfica**, que divide la planta en zonas industriales y permite filtrar datos, alertas y dispositivos por zona. De igual forma, usamos la **organización alfabética** para ubicar zonas, nodos y eventos mediante sus códigos, y la **organización cronológica** para ordenar los incidentes y registros desde los más recientes hasta los más antiguos, además de permitir elegir la ventana temporal de las gráficas (1h, 6h, 12h y 24h).
+La **organización matricial** se aplica cuando hay que comparar varios elementos a la vez. Se usa en la matriz ambiental de zonas, en la matriz comparativa de umbrales y en las tablas de alertas y de registro de incidentes.
 
-Finalmente, aplicamos una **categorización por audiencia**. El supervisor de seguridad tiene acceso a todas las secciones y es el único que puede configurar umbrales, gestionar alertas y administrar dispositivos IoT. El gerente de planta accede únicamente en modo consulta al Panel de Control y al Historial, donde visualiza el dashboard, las gráficas y los resultados, sin posibilidad de modificar la configuración del sistema.
+**Categorización del contenido**
+
+La **categorización por tópicos** agrupa la telemetría según el parámetro medido: CO₂, presión acústica y presencia de personal. En Dispositivos, el mismo criterio separa sensores de monitoreo y actuadores de control.
+
+La **categorización geográfica** divide la planta en zonas industriales. Alertas, historial, umbrales y dispositivos se filtran por zona, porque el riesgo se atiende en el lugar donde ocurre.
+
+La **categorización alfabética** se usa para localizar un elemento conocido por su código. Zonas, nodos y eventos se ordenan por ese código cuando el usuario busca un identificador concreto, no cuando evalúa la urgencia.
+
+La **categorización cronológica** ordena incidentes y registros del más reciente al más antiguo. En las gráficas, el mismo criterio ofrece las ventanas 1h, 6h, 12h y 24h, y en el historial también 7d y 30d.
+
+La **categorización por audiencia** separa lo que ve cada grupo de usuarios. El supervisor de seguridad accede a todas las secciones y es quien configura umbrales, gestiona alertas y administra los nodos, desde la app móvil y la consola web. El gerente de planta consulta el Panel de Control y el Historial: ve el dashboard, las gráficas y los resultados, y no modifica la configuración.
 
 
 
