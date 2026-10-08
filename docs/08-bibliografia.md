@@ -24,6 +24,12 @@ Organización Internacional de Normalización. (2018). *ISO 45001:2018. Occupati
 
 National Institute for Occupational Safety and Health. (1998). *Criteria for a recommended standard: Occupational noise exposure — Revised criteria 1998* (DHHS/NIOSH Publication No. 98-126). U.S. Department of Health and Human Services. https://www.cdc.gov/niosh/docs/98-126/
 
+National Institute for Occupational Safety and Health. (s. f.). *NIOSH pocket guide to chemical hazards: Carbon dioxide*. Centers for Disease Control and Prevention. https://www.cdc.gov/niosh/npg/npgd0103.html
+
+Occupational Safety and Health Administration. (s. f.). *Carbon dioxide*. U.S. Department of Labor. https://www.osha.gov/chemicaldata/183
+
+World Health Organization & International Labour Organization. (2021). *WHO/ILO joint estimates of the work-related burden of disease and injury, 2000–2016: Global monitoring report*. https://www.who.int/publications/i/item/9789240034945
+
 American Society of Heating, Refrigerating and Air-Conditioning Engineers. (2022). *ANSI/ASHRAE Standard 62.1-2022. Ventilation and acceptable indoor air quality*. https://www.ashrae.org/technical-resources/bookstore/standards-62-1-62-2
 
 <a id="s-descubrimiento-y-diseno-del-dominio"></a>

@@ -252,6 +252,40 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
+<a id="s-2-2-2-1-3"></a>
+##### 2.2.2.1.3. Entrevista 3
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> Mark Alex Esquivel Cabrera<br>
+      <b>Edad:</b> 26 años<br>
+      <b>Distrito:</b> Ate<br>
+      <b>Ocupación:</b> Supervisor de seguridad<br>
+      <b>Experiencia laboral:</b> 2 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta embotelladora<br>
+      <b>Tipo de establecimiento:</b> Planta<br>
+      <b>Nivel tecnológico:</b> Intermedio<br>
+      <b>Timing:</b> 01:12 - 10:04<br>
+      <b>Duración:</b> 10:04<br>
+      <b>Entrevistador:</b> Johan Giovani Huamán Cuba
+    </td>
+    <td align="center">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-2.png" alt="Entrevista 3 - Mark Alex Esquivel Cabrera, Supervisor de Seguridad" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202417448_upc_edu_pe/IQAbyCZ09KjySpvlaptYhdsFAdVY106873xXl5llO0Zu4Ec?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=h7Xg4U">Ver entrevista en Microsoft Stream</a>
+      <br><br>
+      <b>Resumen:</b> El trabajo del entrevistado depende actualmente de métodos reactivos, enfrentando una profunda frustración al depender de medidores obsoletos o de que el personal presente síntomas físicos (mareos, tos) para detectar fugas de CO₂ invisibles. Su protocolo actual ante incidentes es lento y manual, obligándolo a coordinar evacuaciones, verificar personal en el patio y ventilar abriendo puertas a la antigua, perdiendo minutos vitales.
+      <br><br>
+      Considera indispensable una aplicación móvil que elimine las conjeturas mediante un mapa digitalizado con indicadores visuales de riesgo inmediato (sistema de semáforo rojo/verde). Exige notificaciones persistentes y sonoras tipo alarma despertador que no pasen desapercibidas. Finalmente, destaca como función crítica la capacidad de tomar el control remoto desde su celular para forzar el encendido de extractores o sirenas en caso de que la automatización de la planta falle, permitiéndole actuar antes de que el personal resulte intoxicado.
+    </td>
+  </tr>
+</table>
+
 <a id="s-2-2-2-2"></a>
 #### 2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)
 
@@ -396,15 +430,52 @@ Los tres encargados piden la misma superficie web: dashboard (mapa o por área, 
 <a id="s-2-2-3-3"></a>
 #### 2.2.3.3. Patrones transversales y divergencias de rol
 
-| Tema | Evidencia | Implicación para SafePlant |
-|---|---|---|
-| Visibilidad en tiempo real por área | Zonas ciegas (Anyeli); rondas manuales (Diego); sensores caídos 6 h (Fabrizio); ESP32 offline (Nathaly) | Telemetría continua de CO₂, ruido y presencia; estado “no disponible” del dispositivo; semáforo / mapa en móvil y dashboard en web |
-| Tiempo de respuesta | 25 min de ciclo en soldadura (Anyeli); traslado a tablero (Diego); paradas de 40 min–2 h (Fabrizio) | Detección + actuación automática de extractores, sirenas y mamparas; override remoto desde el móvil |
-| Configuración manual que no escala | Excel y alta sensor a sensor (Fabrizio, Carlos, Nathaly); normas por correo/PDF (Nathaly) | App web para umbrales por área, inventario de dispositivos y versión / fecha de la norma |
-| Umbrales y falsos positivos | Umbrales distintos por área y presencia (Nathaly); riesgo de bajar un tope (Fabrizio) | Umbrales por área, no globales; permiso de configuración solo en el encargado; correlación con PIR |
-| Auditoría y reportes | Reporte escrito post-incidente (Anyeli); 12 meses y SUNAFIL (Fabrizio); datos dispersos (Carlos); overrides y patrones (Nathaly) | Historial de mediciones, alertas, acciones y cambios de configuración; exportación PDF |
-| Canal según el rol | Móvil para decidir y actuar (Anyeli, Diego); web para gobernar (Fabrizio, Carlos, Nathaly) | Separación estricta: supervisor opera y hace override en móvil; encargado parametriza, usuarios y reportes en web |
-| Resiliencia de planta | Wi-Fi metálica y calor (Fabrizio); offline de gateway (Nathaly) | Procesamiento en el edge, persistencia local y sincronización al recuperar enlace |
+<table border="1">
+  <thead>
+    <tr>
+      <th align="left">Tema</th>
+      <th align="left">Evidencia</th>
+      <th align="left">Implicación para SafePlant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Visibilidad en tiempo real por área</td>
+      <td>Zonas ciegas (Anyeli); rondas manuales (Diego); sensores caídos 6 h (Fabrizio); ESP32 offline (Nathaly)</td>
+      <td>Telemetría continua de CO₂, ruido y presencia; estado “no disponible” del dispositivo; semáforo / mapa en móvil y dashboard en web</td>
+    </tr>
+    <tr>
+      <td>Tiempo de respuesta</td>
+      <td>25 min de ciclo en soldadura (Anyeli); traslado a tablero (Diego); paradas de 40 min–2 h (Fabrizio)</td>
+      <td>Detección y actuación automática de extractores, sirenas y mamparas; override remoto desde el móvil</td>
+    </tr>
+    <tr>
+      <td>Configuración manual que no escala</td>
+      <td>Excel y alta sensor a sensor (Fabrizio, Carlos, Nathaly); normas por correo/PDF (Nathaly)</td>
+      <td>App web para umbrales por área, inventario de dispositivos y versión / fecha de la norma</td>
+    </tr>
+    <tr>
+      <td>Umbrales y falsos positivos</td>
+      <td>Umbrales distintos por área y presencia (Nathaly); riesgo de bajar un tope (Fabrizio)</td>
+      <td>Umbrales por área, no globales; permiso de configuración solo en el encargado; correlación con PIR</td>
+    </tr>
+    <tr>
+      <td>Auditoría y reportes</td>
+      <td>Reporte escrito post-incidente (Anyeli); 12 meses y SUNAFIL (Fabrizio); datos dispersos (Carlos); overrides y patrones (Nathaly)</td>
+      <td>Historial de mediciones, alertas, acciones y cambios de configuración; exportación PDF</td>
+    </tr>
+    <tr>
+      <td>Canal según el rol</td>
+      <td>Móvil para decidir y actuar (Anyeli, Diego); web para gobernar (Fabrizio, Carlos, Nathaly)</td>
+      <td>Separación estricta: supervisor opera y hace override en móvil; encargado parametriza, usuarios y reportes en web</td>
+    </tr>
+    <tr>
+      <td>Resiliencia de planta</td>
+      <td>Wi-Fi metálica y calor (Fabrizio); offline de gateway (Nathaly)</td>
+      <td>Procesamiento en el edge, persistencia local y sincronización al recuperar enlace</td>
+    </tr>
+  </tbody>
+</table>
 
 La divergencia más útil para el diseño no es de “gusto de interfaz”, sino de **responsabilidad**. El supervisor necesita decidir en segundos con el teléfono en la mano; el encargado necesita que nadie más rebaje un umbral y que un auditor pueda reconstruir qué pasó. SafePlant debe impedir que esas dos intenciones se mezclen en el mismo canal.
 
