@@ -6564,7 +6564,7 @@ Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *
 
 | Entrega | Descripción | URL (Stream / Clipchamp) | Archivo .mp4 |
 | --- | --- | --- | --- |
-| AV1 | Exposición Avance 1 — Needfinding, requirements elicitation y especificación de requisitos | https://youtu.be/x5NXEIdImBM | |
+| AV1 | Exposición Avance 1 — Needfinding, requirements elicitation y especificación de requisitos | [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:f:/g/personal/u202310609_upc_edu_pe/IgD9nIUdmGDMTqz8phm_bOSkASBHWsTO8X6VHlrMoQWcpmU?e=PCzh7K) | |
 | TB1 | Exposición Trabajo Parcial — Diseño estratégico y táctico DDD, arquitectura de la solución | | |
 | AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | | |
 | TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | | |
