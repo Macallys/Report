@@ -337,6 +337,7 @@ La siguiente tabla detalla las User Stories asignadas al sprint, junto con los w
 </table>
 
 <a id="s-6-2-1-4"></a>
+
 #### 6.2.1.4. Development Evidence for Sprint Review
 
 Durante el Sprint 1 se implementó la landing page de SafePlant, las vistas de la aplicación web del Encargado de Planta en Angular y el bounded context Identity & Access del backend en ASP.NET Core, con los endpoints de autenticación y gestión de cuentas. Las siguientes tablas registran los commits de cada repositorio de la organización Macallys.
@@ -487,9 +488,11 @@ En el Sprint 1 se desplegaron los tres productos implementados. Las plataformas 
 
 Los pasos realizados fueron los siguientes:
 
-1. **Landing page:** se habilitó GitHub Pages en el repositorio `landing-page` de la organización Macallys, sirviendo `index.html` y `styles.css` desde la rama `main`. Al ser un sitio estático no requiere proceso de compilación.
-2. **Aplicación web:** se importó el repositorio `safeplant-web-client` en Vercel, que detecta el proyecto Angular, ejecuta la compilación y publica una nueva versión con cada integración.
-3. **Backend:** se creó el recurso Azure App Service `wa-safeplant-cloudbackend-prod` y se generó el workflow de GitHub Actions que, en cada push a `main`, compila la solución con .NET 10, publica el proyecto `Cloud.Api` y lo despliega en el slot `Production` autenticándose con Azure mediante OpenID Connect.
+1. **Landing page:** se habilitó GitHub Pages en el repositorio "landing-page" de la organización Macallys, sirviendo `index.html` y `styles.css` desde la rama `main`. Al ser un sitio estático no requiere proceso de compilación.
+2. 
+3. **Aplicación web:** se importó el repositorio "safeplant-web-client" en Vercel, que detecta el proyecto Angular, ejecuta la compilación y publica una nueva versión con cada integración.
+4. 
+5. **Backend:** se creó el recurso Azure App Service "wa-safeplant-cloudbackend-prod" y se generó el workflow de GitHub Actions que, en cada push a `main`, compila la solución con .NET 10, publica el proyecto "Cloud.Api" y lo despliega en el slot "Production" autenticándose con Azure mediante OpenID Connect.
 
 
 <a id="s-6-2-1-9"></a>
