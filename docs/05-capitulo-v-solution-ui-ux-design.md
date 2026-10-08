@@ -281,7 +281,15 @@ Además de la búsqueda por texto, el usuario puede refinar los resultados con f
 <a id="s-5-3-1"></a>
 ### 5.3.1. Landing Page Wireframe
 
+La versión wireframe de la landing page de SAFEPLANT fija la estructura en baja fidelidad, antes de color, tipografía e imágenes. Ordena la lectura del visitante: entender qué resuelve la plataforma, ver cómo se monitorea la planta y llegar a una acción para ingresar. Arriba, la navegación es un bloque de logo, enlaces y un botón. El hero deja a la izquierda el titular, un texto de apoyo y dos botones. A la derecha, una tarjeta reúne indicadores y una gráfica simple para anticipar CO₂, ruido y presencia. Debajo hay franjas de tarjetas: tres de capacidades, tres de métricas, tres módulos con ícono y cuatro bloques de incidentes o zonas. Luego, tres pasos numerados acompañan un rectángulo de formulario o consola. El cierre es un botón y el pie repite logo y enlaces. Gráficos y tarjetas son cajas simples, para revisar la jerarquía antes del mock-up.
+
 ![Landing Page Wireframe](../assets/05-capitulo-v/landing/wireframe.png)
+
+**Versión móvil**
+
+En el wireframe móvil el mismo contenido pasa a una sola columna. El menú se reduce a un ícono, el hero apila el titular, los botones y la tarjeta de indicadores, y las franjas de tarjetas, los pasos y el cierre se leen de arriba hacia abajo. Se conservan las secciones y la acción de ingreso.
+
+![Landing Page Wireframe móvil](../assets/05-capitulo-v/landing/WF_LandingMobile.png)
 
 <a id="s-5-3-2"></a>
 ### 5.3.2. Landing Page Mock-up
