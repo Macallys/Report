@@ -349,16 +349,20 @@ En este sprint se documentaron con OpenAPI (Swagger) los endpoints del bounded c
 </table>
 
 
-![Services Documentation](../../assets/06-capitulo-vi/sprints/sprint-n-services-docs.png)
+![Documentación OpenAPI (Swagger) de Cloud.Api — endpoints IAM](../../assets/06-capitulo-vi/sprints/sprint-1-services-docs.png)
 
 <a id="s-6-2-1-8"></a>
 ## 6.2.1.8. Software Deployment Evidence for Sprint Review
 
 En el Sprint 1 se desplegaron la landing page, la aplicación web y el backend en la nube. La landing page se publicó en GitHub Pages desde el repositorio <code>landing-page</code> de la organización Macallys. La aplicación web Angular se publicó en Vercel (<code>safeplant-web-client</code>). El backend (<code>Cloud.Api</code>) se publicó en Azure App Service: https://wa-safeplant-cloudbackend-prod-hpe0b8bra9ftfshg.canadacentral-01.azurewebsites.net
 
-![alt text](../../assets/06-capitulo-vi/sprints/deploy.png)
+![Despliegue de la landing y la aplicación web (evidencia del equipo)](../../assets/06-capitulo-vi/sprints/deploy.png)
 
-![alt text](../../assets/06-capitulo-vi/sprints/deploy1.png)
+![Despliegue de la landing y la aplicación web (evidencia del equipo)](../../assets/06-capitulo-vi/sprints/deploy1.png)
+
+![Azure App Service — backend <code>wa-safeplant-cloudbackend-prod</code> en ejecución (GitHub Actions)](../../assets/06-capitulo-vi/sprints/deploy-backend-azure.png)
+
+![Prueba de <code>POST /api/v1/auth/login</code> contra el backend en producción (Postman)](../../assets/06-capitulo-vi/sprints/deploy-backend-postman.png)
 
 <a id="s-6-2-1-9"></a>
 ## 6.2.1.9. Team Collaboration Insights during Sprint
