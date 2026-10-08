@@ -443,9 +443,9 @@ SafePlant
         - [5.4.3. Applications Mock-ups](#s-5-4-3)
         - [5.4.4. Applications User Flow Diagrams](#s-5-4-4)
     - [5.5. Applications Prototyping](#s-5-5)
-            - [5.5.1. Criterios de diseño y decisiones de interacción](#s-5-5-1)
-            - [5.5.2. Prototipos web de escritorio y móvil](#s-5-5-2)
-        - [5.6. IoT Device Design](#s-5-6)
+        - [5.5.1. Criterios de diseño y decisiones de interacción](#s-5-5-1)
+        - [5.5.2. Prototipos web de escritorio y móvil](#s-5-5-2)
+    - [5.6. IoT Device Design](#s-5-6)
 - [Capítulo VI: Product Implementation, Validation & Deployment](#s-cap-vi)
     - [6.1. Software Configuration Management](#s-6-1)
         - [6.1.1. Software Development Environment Configuration](#s-6-1-1)
@@ -453,6 +453,15 @@ SafePlant
         - [6.1.3. Source Code Style Guide & Conventions](#s-6-1-3)
         - [6.1.4. Software Deployment Configuration](#s-6-1-4)
     - [6.2. Landing Page, Services & Applications Implementation](#s-6-2)
+        - [6.2.1. Sprint 1](#s-6-2-1)
+            - [6.2.1.1. Sprint Planning 1](#s-6-2-1-1)
+            - [6.2.1.2. Aspect Leaders and Collaborators](#s-6-2-1-2)
+            - [6.2.1.4. Development Evidence for Sprint Review](#s-6-2-1-4)
+            - [6.2.1.5. Testing Suite Evidence for Sprint Review](#s-6-2-1-5)
+            - [6.2.1.6. Execution Evidence for Sprint Review](#s-6-2-1-6)
+            - [6.2.1.7. Services Documentation Evidence for Sprint Review](#s-6-2-1-7)
+            - [6.2.1.8. Software Deployment Evidence for Sprint Review](#s-6-2-1-8)
+            - [6.2.1.9. Team Collaboration Insights during Sprint](#s-6-2-1-9)
     - [6.3. Validation Interviews](#s-6-3)
         - [6.3.1. Diseño de Entrevistas](#s-6-3-1)
         - [6.3.2. Registro de Entrevistas](#s-6-3-2)
@@ -675,14 +684,14 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 
 **Antecedentes**
 
-El sector industrial enfrenta retos constantes relacionados con la salud ocupacional y el cumplimiento estricto de las normativas ambientales. Según la Organización Internacional del Trabajo (OIT, 2022), cada año se producen casi 3 millones de muertes y cientos de millones de casos de enfermedades profesionales en el mundo derivadas de la exposición prolongada a agentes químicos y físicos en el lugar de trabajo. La acumulación de CO2 en espacios confinados deteriora rápidamente la calidad del aire respirable (ASHRAE, 2022), mientras que la alta contaminación sonora por maquinaria pesada figura entre los principales causantes de pérdida auditiva inducida por el ruido y estrés fisiológico grave (NIOSH, 1998).
+El sector industrial enfrenta retos constantes relacionados a la salud ocupacional y el cumplimiento de las normativas ambientales. Según la Organización Internacional del Trabajo, cada año se producen millones de casos de enfermedades profesionales en el mundo derivadas de la exposición prolongada a agentes químicos y físicos en el lugar de trabajo. La acumulación de CO2 en espacios confinados y la alta contaminación sonora por maquinaria pesada figuran entre los principales causantes de bajas médicas y problemas respiratorios. 
 
-Las soluciones actuales implementadas en muchas plantas son insuficientes para cumplir con los estándares modernos de gestión de seguridad, como la ISO 45001 (Organización Internacional de Normalización, 2018). Estas dependen de mediciones manuales esporádicas o de sistemas heredados que únicamente emiten alertas visuales en paneles fijos, pero no ejecutan acciones correctivas de manera automática. Esto deja a los trabajadores expuestos al riesgo hasta que un operador humano advierte la anomalía y enciende un extractor o evacúa el área de forma puramente reactiva.
+Las soluciones actuales implementadas en muchas plantas son insuficientes: dependen de mediciones manuales esporádicas o de sistemas antiguos que solo emiten alertas visuales en paneles fijos, pero no toman acciones correctivas de manera automática. Esto deja a los trabajadores expuestos al riesgo hasta que un operador humano se da cuenta y enciende un extractor o evacúa el área.
 
 **Problematica**
 
 **What (Qué)**
-Las industrias enfrentan un alto riesgo de enfermedades ocupacionales y multas regulatorias debido a la exposición prolongada de su personal a niveles tóxicos de CO2 y contaminación sonora excesiva que superan los Valores Límite Permisibles (Ministerio de Salud, 2005).
+Las industrias enfrentan un alto riesgo de enfermedades ocupacionales y multas debido a la exposición prolongada de su personal a niveles tóxicos de CO2 y contaminación sonora excesiva.
 
 **When (Cuándo)**
 Los problemas de contaminación y ruido se evidencian principalmente durante los picos de producción, donde la maquinaria opera a máxima capacidad y se genera mayor combustión o ruido. El personal técnico está más ocupado y puede omitir las revisiones manuales de calidad ambiental.
@@ -694,13 +703,13 @@ Los incidentes ocurren en las zonas críticas dentro de las plantas: cuartos de 
 Los involucrados principales son los Operarios de planta, quienes sufren directamente las consecuencias en su salud, y los Supervisores de Seguridad, que deben monitorear estas variables pero carecen de herramientas remotas. 
 
 **Why (Porqué)**
-Se implementa para automatizar la respuesta de seguridad, protegiendo la salud del personal y garantizando el cumplimiento de la Ley de Seguridad y Salud en el Trabajo (Congreso de la República del Perú, 2011). Este sistema reacciona en segundos sin depender del error o la demora humana.
+Se implementa para automatizar la respuesta de seguridad, protegiendo la salud del personal y evitando indemnizaciones o accidentes de planta. Este sistema funciona al reaccionar en segundos sin depender del error o la demora humana, centralizando la información en aplicaciones dedicadas.
 
 **How (Cómo)**
 Mediante la instalación de una red IoT compuesta por sensores de CO2, sonómetros y detectores de presencia conectados a la plataforma Macallys. El sistema acciona como mitigación en milisegundos si se rompe el limite permitido. A la par, el Encargado de Planta configura las métricas desde la App Web, y el Supervisor de Seguridad visualiza el estado en tiempo real desde su App Móvil.
 
 **How much(Cuánto)**
-- **Impacto económico:** Las multas impuestas por la SUNAFIL (Superintendencia Nacional de Fiscalización Laboral) por incumplimientos graves y muy graves de normativas de salud en el trabajo pueden alcanzar montos superiores a las decenas de miles de soles (Ministerio de Trabajo y Promoción del Empleo, 2012), sin contar las indemnizaciones médicas por pérdida auditiva irreversible o daños respiratorios.
+- **Impacto económico:** Las multas impuestas por la SUNAFIL (Superintendencia Nacional de Fiscalización Laboral) por incumplimiento de normativas de salud en el trabajo pueden superar los miles de soles, sin contar las indemnizaciones médicas por pérdida auditiva irreversible.
 - **Tiempos de inactividad:** Las evacuaciones de emergencia por acumulación de gases paralizan las líneas de producción, costando a la empresa miles de dólares por cada hora de inactividad.
 <a id="s-1-2-2"></a>
 
@@ -4343,7 +4352,8 @@ Los cuatro canvases se leen en conjunto: el límite de un contexto no se define 
 
 **Dependencias upstream:** Identity & Access (OHS + Conformist: sesión y canal en el payload). **Downstream:** Safety & Actuation (Customer/Supplier, conformista al *evento* de lectura) y Device & Edge Management (OHS de ingest + ACL en el Edge).
 
-![Bounded Context Canvas — Plant Monitoring](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.jpg)
+![Bounded Context Canvas — Plant Monitoring (Boceto)](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.jpg)
+![Bounded Context Canvas — Plant Monitoring (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-01-plant-monitoring.png)
 
 **BC-02: Safety & Actuation — Exposición, alertas y mitigación**  
 **Clasificación:** Core Domain · Business model: *compliance* · Evolución: *custom built*
@@ -4364,7 +4374,8 @@ Los cuatro canvases se leen en conjunto: el límite de un contexto no se define 
 
 **Dependencias upstream:** Plant Monitoring (evento de lectura y presencia) e Identity & Access (OHS: sesión móvil para estado, alertas y override). **Downstream:** Device & Edge Management (ACL para persistir y sincronizar la alerta) y el hardware de campo, que ejecuta la actuación física.
 
-![Bounded Context Canvas — Safety & Actuation](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.jpg)
+![Bounded Context Canvas — Safety & Actuation (Boceto)](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.jpg)
+![Bounded Context Canvas — Safety & Actuation (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-02-safety-actuation.png)
 
 **BC-03: Device & Edge Management — Dispositivos, ingest y contingencia**  
 **Clasificación:** Supporting Subdomain · Business model: *cost reduction* · Evolución: *custom built*
@@ -4385,7 +4396,8 @@ Los cuatro canvases se leen en conjunto: el límite de un contexto no se define 
 
 **Dependencias upstream:** hardware de campo y broker MQTT (`XS-03`, externo), Plant Monitoring como dueño del contrato de ingest y Safety & Actuation para la copia de alerta. **Downstream:** Plant Monitoring, que recibe la telemetría normalizada.
 
-![Bounded Context Canvas — Device & Edge Management](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.jpg)
+![Bounded Context Canvas — Device & Edge Management (Boceto)](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.jpg)
+![Bounded Context Canvas — Device & Edge Management (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-03-device-edge-management.png)
 
 **BC-04: Identity & Access — Identidad, sesión y canal**  
 **Clasificación:** Generic Subdomain · Business model: *compliance* · Evolución: *custom built*
@@ -4406,9 +4418,108 @@ Los cuatro canvases se leen en conjunto: el límite de un contexto no se define 
 
 **Dependencias upstream:** servicio de correo SMTP (`XS-01`, externo). **Downstream:** Plant Monitoring, Safety & Actuation y —solo para usuarios, no para dispositivos— el resto de la plataforma, bajo OHS + Conformist.
 
-![Bounded Context Canvas — Identity & Access](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.jpg)
+![Bounded Context Canvas — Identity & Access (Boceto)](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.jpg)
+![Bounded Context Canvas — Identity & Access (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-04-identity-access.png)
 
 Las **preguntas abiertas** de los canvases quedan registradas de forma deliberada y se resuelven en 4.2: si `RM-03 AreaOperationalStatus` se proyecta en Plant Monitoring o se compone consultando Safety, si el fallo de relé se reintenta o solo se registra en tablero, si se adopta un proveedor de identidad externo más adelante, y el producto concreto del broker MQTT. Ninguna de ellas altera los límites ya fijados.
+
+<a id="s-4-1-2"></a>#### 4.1.1.3. Bounded Context Canvases
+
+Cada contexto candidato se documentó con un **Bounded Context Canvas** ([ddd-crew](https://github.com/ddd-crew/bounded-context-canvas), plantilla *Annegret Junker / codecentric AG*, versión BCC v5 · DEC-001). El canvas obliga a declarar, por contexto, seis cosas: propósito y lo que explícitamente **no** hace, clasificación estratégica (dominio, modelo de negocio y evolución), roles de dominio, comunicación de entrada y de salida con su tipo de mensaje, lenguaje ubicuo con las decisiones de negocio que lo sostienen, y finalmente supuestos, métricas de verificación y preguntas abiertas.
+
+Los cuatro canvases se leen en conjunto: el límite de un contexto no se define por lo que contiene, sino por lo que se niega a decidir. Esa frontera es la que evita que la lógica de seguridad ocupacional se filtre al inventario de dispositivos o al módulo de sesiones.
+
+**BC-01: Plant Monitoring — Definición de planta y telemetría**  
+**Clasificación:** Core Domain · Business model: *engagement* · Evolución: *custom built*
+
+**Descripción:** Da a la planta una definición estable de áreas industriales, umbrales ambientales y qué dispositivo mide o actúa en cada zona, y registra el hecho histórico de CO₂, ruido y presencia. Es el dueño del dato de estado de la planta: quien abre SafePlant ve aquí cómo está cada área. No decide exposición ni dispara actuadores. Sus roles de dominio son *Specification* y *Analysis*.
+
+**Reglas de negocio clave:** CO₂, ruido y presencia son hechos distintos y no se unifican en una sola lectura. Los umbrales pertenecen al área, pero en ellos Safety no clasifica exposición. Un `deviceId` no se duplica en la asociación a un área. Las políticas de riesgo `PO-01`, `PO-02` y `PO-12` viven en Safety & Actuation, no aquí. El supervisor configura la planta solo por canal móvil.
+
+**Lenguaje ubicuo:** Industrial area, Environmental thresholds, Area device assignment, Carbon dioxide reading, Noise reading, Presence (detected / cleared), Telemetry ingested, Sensor associated to area, Actuator associated to area, Plant metrics history.
+
+**Capacidades:** Registro y gestión de áreas industriales, configuración de umbrales por área, asociación de sensores y actuadores, registro histórico de lecturas y presencia, ingesta de telemetría e historial de métricas de planta.
+
+**Capas:** Core (área, umbrales y hecho de telemetría), Soporte (asociación de dispositivos, proyecciones de lectura), Infraestructura (repositorios, `InProcessEventPublisher`, PostgreSQL en nube · stack provisional DEC-008).
+
+**Mensajes entrantes:** `ManageIndustrialAreaCommand`, `ConfigureThresholdsCommand`, `AssociateDeviceCommand`, `RecordCarbonDioxideReadingCommand`, `RecordNoiseReadingCommand`, `RecordPresenceCommand`, `IngestTelemetryCommand`; consultas `GetAreaSetupSheetQuery` y `GetPlantMetricsHistoryQuery`.
+
+**Mensajes salientes:** `CarbonDioxideReadingRecordedEvent`, `NoiseReadingRecordedEvent`, `PresenceChangedEvent`, `ConditionsWithinThresholdsEvent`, `IngestTelemetryRejectedEvent`.
+
+**Dependencias upstream:** Identity & Access (OHS + Conformist: sesión y canal en el payload). **Downstream:** Safety & Actuation (Customer/Supplier, conformista al *evento* de lectura) y Device & Edge Management (OHS de ingest + ACL en el Edge).
+
+![Bounded Context Canvas — Plant Monitoring (Boceto)](../assets/04-capitulo-iv/ddd/bcc-01-plant-monitoring.jpg)
+![Bounded Context Canvas — Plant Monitoring (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-01-plant-monitoring.png)
+
+**BC-02: Safety & Actuation — Exposición, alertas y mitigación**  
+**Clasificación:** Core Domain · Business model: *compliance* · Evolución: *custom built*
+
+**Descripción:** Es el dueño del riesgo. Cruza la presencia de personal con las condiciones de CO₂ y ruido para clasificar exposición, levantar alertas ambientales y mandar extractores, sirenas y mamparas acústicas, o anularlas. Por `DEC-007` el loop automático corre en el servidor de planta (Edge); la nube supervisa, audita y acepta el override cuando hay enlace. Sus roles de dominio son *Enforcer* y *Execution*.
+
+**Reglas de negocio clave:** `PO-01` detecta el exceso y `PO-02` evalúa la exposición sin encadenarse una a otra. `PO-12` normaliza una sola vez cuando las condiciones vuelven a rango. El override es el comando `C-33` y solo se acepta desde el canal móvil del supervisor. No existe severidad *yellow*: la clasificación no admite un estado intermedio. La copia de alerta en el Edge es para sincronizar, sin transferir el agregado ni la propiedad del riesgo. Los actuadores no esperan internet.
+
+**Lenguaje ubicuo:** Personnel exposure, Exposure severity, Area risk, Environmental alert, Excessive carbon dioxide, Excessive noise, Air extractor, Preventive siren, Acoustic barrier, Manual override, Automatic actuator action.
+
+**Capacidades:** Detección de exceso ambiental, evaluación y clasificación de exposición de personal, alerta ambiental y su retiro, activación automática y normalización de actuadores, override remoto del supervisor, registro de acciones automáticas y consulta de estado operativo y alertas activas.
+
+**Capas:** Core (motor de exposición y reglas de actuación), Soporte (registro de acciones y proyección de alertas), Infraestructura (cliente de actuadores hacia el dispositivo, SQLite en planta, PostgreSQL en nube para auditoría · DEC-008).
+
+**Mensajes entrantes:** eventos de Plant Monitoring (`CarbonDioxideReadingRecorded`, `NoiseReadingRecorded`, `PresenceChanged`, `ConditionsWithinThresholds`); comandos `DetectEnvironmentalExcessCommand`, `EvaluatePersonnelExposureCommand`, `ClassifyExposureSeverityCommand`, `RaiseEnvironmentalAlertCommand`, `OverrideActuatorCommand` (`C-33`); consultas `GetAreaOperationalStatusQuery` y `GetActiveAlertsQuery`; de Identity, `ProtectedActionDenied`.
+
+**Mensajes salientes:** `EnvironmentalAlertRaisedEvent`, `AreaRiskHighlightedEvent`, `AutomaticActuatorActionRecordedEvent`, `ExposureResolvedEvent`; hacia el dispositivo `ActivateActuator` y `NormalizeActuator`; hacia Device & Edge, `StoreOfflineAlert` (`PO-09`).
+
+**Dependencias upstream:** Plant Monitoring (evento de lectura y presencia) e Identity & Access (OHS: sesión móvil para estado, alertas y override). **Downstream:** Device & Edge Management (ACL para persistir y sincronizar la alerta) y el hardware de campo, que ejecuta la actuación física.
+
+![Bounded Context Canvas — Safety & Actuation (Boceto)](../assets/04-capitulo-iv/ddd/bcc-02-safety-actuation.jpg)
+![Bounded Context Canvas — Safety & Actuation (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-02-safety-actuation.png)
+
+**BC-03: Device & Edge Management — Dispositivos, ingest y contingencia**  
+**Clasificación:** Supporting Subdomain · Business model: *cost reduction* · Evolución: *custom built*
+
+**Descripción:** Autentica los dispositivos de campo, mueve la telemetría hacia la nube y sostiene la operación cuando se pierde el enlace, mediante cola local, sincronización posterior y copia de alerta. El Edge hace de puente (`DEC-002`): no es un quinto bounded context ni un “IoT Gateway” como sistema aparte. Su rol de dominio es *Gateway* hacia la nube. No interpreta umbrales ni evalúa exposición.
+
+**Reglas de negocio clave:** `PO-10` envía a cola local todo ingest fallido. `PO-11` dispara la sincronización y el reintento `C-19` al restaurarse la conectividad. `PO-09` guarda copia de la alerta para sincronizar, sin que Safety deje de ser dueña del riesgo. La credencial de dispositivo no es una cuenta de usuario: los dispositivos no se autentican en Identity & Access. Las lecturas no se fusionan al publicarse en MQTT. Tras un corte, la sincronización no debe crear un segundo hecho para la misma lectura.
+
+**Lenguaje ubicuo:** Device credential, Device authenticated, Edge node, Telemetry queued locally, Local telemetry sync, Offline alert stored, Duplicate telemetry acknowledged, Ingest telemetry.
+
+**Capacidades:** Emisión, autenticación y revocación de credenciales de dispositivo, recepción de lecturas vía MQTT, ingest hacia Plant Monitoring, encolado local ante fallo, sincronización al recuperar el enlace y persistencia de alerta offline.
+
+**Capas:** Core (credenciales de dispositivo y nodo edge), Soporte (cola local, sincronización e idempotencia), Infraestructura (broker Eclipse Mosquitto como sistema externo `XS-03`, SQLite en planta, cliente HTTP hacia la nube · DEC-008).
+
+**Mensajes entrantes:** `IssueDeviceCredentialCommand`, `AuthenticateDeviceCommand`, `AuthenticateDeviceCredentialCommand`, `RevokeDeviceCredentialCommand`, `IngestTelemetryCommand`, `QueueLocallyCommand`, `SyncLocalTelemetryCommand`, `StoreOfflineAlertCommand`; del broker, `ReadingsDelivered`; de Plant Monitoring, el rechazo o timeout de ingesta.
+
+**Mensajes salientes:** `DeviceAuthenticatedEvent`, `TelemetryQueuedLocallyEvent`, `LocalTelemetrySyncEvent`, `DuplicateTelemetryAcknowledgedEvent`; hacia Plant Monitoring, el reintento de `IngestTelemetry` (`PO-11`).
+
+**Dependencias upstream:** hardware de campo y broker MQTT (`XS-03`, externo), Plant Monitoring como dueño del contrato de ingest y Safety & Actuation para la copia de alerta. **Downstream:** Plant Monitoring, que recibe la telemetría normalizada.
+
+![Bounded Context Canvas — Device & Edge Management (Boceto)](../assets/04-capitulo-iv/ddd/bcc-03-device-edge-management.jpg)
+![Bounded Context Canvas — Device & Edge Management (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-03-device-edge-management.png)
+
+**BC-04: Identity & Access — Identidad, sesión y canal**  
+**Clasificación:** Generic Subdomain · Business model: *compliance* · Evolución: *custom built*
+
+**Descripción:** Responde quién entra a SafePlant, con qué rol y por qué canal —app móvil para el Supervisor de Seguridad, app web para el Encargado de Planta— y permite recuperar credenciales. Actúa como Open Host Service upstream de los otros tres contextos: solo concede o niega la sesión, y ese resultado viaja en el payload. Su rol de dominio es *Enforcer* de sesión, rol y canal. No mide la planta ni evalúa exposición.
+
+**Reglas de negocio clave:** Existe un solo `Sign in` (`C-06`) y el canal es un parámetro, no un caso de uso distinto. El setup de planta y el override exigen supervisor en canal móvil, por lo que un intento desde la web se deniega (`C-08` / `E-05`). Un correo equivale a una cuenta: el duplicado rechaza el alta (`E-07`). El rol determina los permisos dentro de cada bounded context. La recuperación de credenciales y el token de acceso vencen por TTL (`C-05`, `C-09`). Identity es propia, sin proveedor de identidad externo.
+
+**Lenguaje ubicuo:** User account, User role, Session, Sign in, Session granted, Protected action denied, Credential recovery, Channel (mobile / web), Supervisor, Plant manager.
+
+**Capacidades:** Alta de cuentas, asignación de roles y permisos, inicio de sesión por canal, cierre de sesión, recuperación y restablecimiento de credenciales, expiración de tokens y consulta del directorio de usuarios.
+
+**Capas:** Core (autenticación y autorización por rol y canal), Soporte (recuperación de credenciales y notificación por correo), Infraestructura (repositorios, adaptador SMTP, token JWT o API key, PostgreSQL · DEC-008).
+
+**Mensajes entrantes:** `CreateUserAccountCommand` (`C-01`), `AssignUserRoleCommand` (`C-02`), `RequestCredentialRecoveryCommand` (`C-03`), `ResetCredentialsCommand` (`C-04`), `ExpireCredentialRecoveryCommand` (`C-05`), `SignInCommand` (`C-06`), `CloseSessionCommand` (`C-07`), `AttemptProtectedActionCommand` (`C-08`), `ExpireAccessTokenCommand` (`C-09`); consulta `GetUserAccountsDirectoryQuery` (`RM-01`).
+
+**Mensajes salientes:** `SessionGrantedEvent`, `ProtectedActionDeniedEvent`, `CredentialRecoveryRequestedEvent` hacia el servicio de correo (`XS-01`).
+
+**Dependencias upstream:** servicio de correo SMTP (`XS-01`, externo). **Downstream:** Plant Monitoring, Safety & Actuation y —solo para usuarios, no para dispositivos— el resto de la plataforma, bajo OHS + Conformist.
+
+![Bounded Context Canvas — Identity & Access (Boceto)](../assets/04-capitulo-iv/ddd/bcc-04-identity-access.jpg)
+![Bounded Context Canvas — Identity & Access (EventStorming)](../assets/04-capitulo-iv/bounded-contexts/bcc-04-identity-access.png)
+
+Las **preguntas abiertas** de los canvases quedan registradas de forma deliberada y se resuelven en 4.2: si `RM-03 AreaOperationalStatus` se proyecta en Plant Monitoring o se compone consultando Safety, si el fallo de relé se reintenta o solo se registra en tablero, si se adopta un proveedor de identidad externo más adelante, y el producto concreto del broker MQTT. Ninguna de ellas altera los límites ya fijados.
+
+<a id="s-4-1-2"></a>
 
 <a id="s-4-1-2"></a>
 ### 4.1.2. Context Mapping
@@ -6115,34 +6226,270 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 <a id="s-5-1-1"></a>
 ### 5.1.1. General Style Guidelines
 
-![General Style Guidelines](../assets/05-capitulo-v/style-guidelines/general.png)
+Los *style guidelines* son un conjunto de principios visuales y comunicacionales que permite mantener coherencia y claridad en la interfaz del producto. En el caso de SAFEPLANT, esta guía busca comunicar profesionalismo, precisión técnica y una identidad cercana al rubro de la seguridad industrial y el monitoreo de plantas.
+
+La sección fija las decisiones de marca, tipografía, color y espaciado, y define el tono del lenguaje. El punto de partida es un design system de referencia: la escala modular tipográfica y los colores semánticos de Tailwind CSS. Esas referencias se adaptan al monitoreo industrial para que la consola web, la aplicación móvil y el dispositivo IoT se lean con rapidez cuando una condición de planta exige una respuesta. Las decisiones se apoyan en cuatro principios: jerarquía visual, para distinguir el dato crítico del contexto; consistencia, para que el mismo signo conserve su significado en todas las pantallas; contraste, para que el texto y los estados sigan siendo legibles; y retroalimentación, para que cada control confirme la acción del usuario.
+
+**Branding: Nombre de marca**
+
+SAFEPLANT representa una plataforma digital de telemetría y seguridad para plantas industriales. El nombre fusiona la protección del personal y de las condiciones de trabajo ("safe") con el entorno industrial donde opera el sistema ("plant").
+
+El signo es un escudo con una marca de verificación. El contenedor en azul marino y el símbolo en cian separan la identidad de los colores de estado: el rojo, el ámbar y el verde quedan reservados para crítico, advertencia y condición normal. Se definen dos configuraciones del mismo logo, apilada y horizontal, para usarlo en el menú, la barra superior y la pantalla del dispositivo sin alterar el signo.
+
+
+![Logo de SAFEPLANT](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 6 - Logo (Light).png>)
+
+![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (1).png>)
+
+**Misión:**
+Brindar herramientas digitales que profesionalicen el trabajo del supervisor de seguridad y del encargado de planta, integrando la tecnología IoT con la prevención de riesgos ambientales.
+
+**Visión:**
+Ser la plataforma líder en monitoreo, mitigación automática y trazabilidad de condiciones de seguridad para plantas industriales en Latinoamérica.
+
+**Colores:**
+
+La paleta toma como referencia los tokens semánticos de Tailwind CSS y los adapta con un azul marino y un cian propios de SAFEPLANT. El azul marino (#0F2744) sostiene la navegación, el logo y el texto sobre fondo claro. El cian (#00E5FF) y el azul (#2563EB) marcan la acción y la tecnología de monitoreo. El verde (#10B981), el ámbar (#F59E0B) y el rojo (#EF4444) codifican una condición normal, una advertencia y un estado crítico, de modo que la severidad se reconoce antes de leer la etiqueta. El texto blanco (#FFFFFF) sobre el azul marino, y el azul marino sobre los fondos claros (#F8F9FF y #FFFFFF), conservan el contraste de lectura en la consola.
+
+**Primario:** Azul Marino #0F2744
+
+**Secundarios:** Azul Profundo #1B3B64, Azul #2563EB y Cian #00E5FF
+
+**Terciarios:** Azul Claro #CBDBF5, Azul Hielo #EFF4FF y Fondo #F8F9FF
+
+**Estados:** Verde #10B981, Ámbar #F59E0B, Rojo #EF4444 y Gris #64748B
+
+**Color de texto:**
+
+Sobre fondo oscuro: #FFFFFF
+
+Sobre fondo claro: #0F2744
+
+![Paleta de colores de SAFEPLANT](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 1 - Color Palette (Light).png>)
+
+**Color de botones:**
+
+**Oscuro:** #0F2744
+
+**Azul:** #2563EB
+
+**Cian:** #00E5FF
+
+**Gris:** #64748B
+
+**Claro:** #CBDBF5
+
+Cada variante se muestra en tres estados: Normal, Hover y Clicked / Checked.
+
+![Estados de los botones de SAFEPLANT](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 12 - Button states (Light).png>)
+
+**Tipografía:**
+
+La tipografía define la jerarquía visual y la legibilidad de la plataforma. SAFEPLANT usa una sola familia, Space Grotesk, para que la consola, la aplicación móvil y las referencias del dispositivo se perciban como el mismo producto. Es una sans geométrica de alto rendimiento en pantalla: sus formas abiertas favorecen la lectura de etiquetas cortas y de valores como PPM y dBA.
+
+La escala parte de una base de 16px, con proporción Major Third (1.25) e interlineado de 1.5. Esa proporción, habitual en los design systems de interfaz, produce saltos perceptibles entre niveles y evita elegir tamaños de forma arbitraria. Los peldaños resultantes son 61, 49, 39, 31, 25, 20, 16 y 13px. Cada estilo se nombra como Nombre / Tamaño / Peso.
+
+En la interfaz, esa escala es la referencia y algunos tamaños se ajustan al contexto de lectura. El título de página sube a 128px en la vista principal, y el texto de cuerpo se fija en 18px para leer indicadores con comodidad. Los estilos aplicados son:
+
+- **Heading 01:** Space Grotesk Black – 128px. Título principal de página.
+- **Heading 02:** Space Grotesk Bold – 60px. Título de sección.
+- **Heading 03:** Space Grotesk Bold – 43px. Título de subsección.
+- **Heading 04:** Space Grotesk Bold – 30px. Encabezado menor.
+- **Heading 05:** Space Grotesk Bold – 32px. Subtítulo.
+- **Heading 06:** Space Grotesk SemiBold – 24px. Encabezado pequeño dentro de una tarjeta o panel.
+- **Texto principal:** Space Grotesk Regular – 18px. Párrafos, indicadores y valores técnicos. El texto destacado usa Bold, las citas Italic y los enlaces Regular con subrayado y color azul.
+- **Captions:** Space Grotesk ExtraLight Italic – 18px. Acompañan gráficas y tablas sin competir con el dato.
+
+Los pesos disponibles van de Thin a Black. En la práctica se usan Regular para leer, Medium y SemiBold para la jerarquía intermedia, y Bold o Black para lo que debe verse primero. Los valores técnicos, como PPM y dBA, permanecen en Space Grotesk para conservar una sola familia en cifras, unidades y etiquetas.
+
+![Escala tipográfica](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 2 - Type Scale.png>)
+
+![Pesos tipográficos](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 3 - Font Weights.png>)
+
+![Convención de nombres](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 4 - Naming Convention.png>)
+
+![Ejemplos de la escala](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 5 - Type Scale Examples.png>)
+
+![Headings](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 7 - Headings.png>)
+
+**Espaciado:**
+
+El espaciado ordena la relación entre texto, controles y bloques de información. La base de 16px fija una retícula de 8px, la misma lógica de espaciado de Tailwind, adaptada a esta interfaz. Los intervalos crecen en múltiplos de esa unidad —8, 16, 24 y 32px— para que márgenes, separación entre tarjetas y aire alrededor de los indicadores sigan el mismo ritmo en escritorio y en móvil. El interlineado de 1.5 evita comprimir los valores de CO₂, ruido y estado. Los botones, campos y paneles usan un radio de 10px: suaviza el contorno y conserva la sobriedad de una consola de planta.
+
+**Tono de comunicación:**
+
+El lenguaje se define sobre cuatro dimensiones, de acuerdo con el contexto de uso: un supervisor o un gerente que consulta el estado de la planta y, en ocasiones, debe actuar sobre un incidente.
+
+- **Serio.** La interfaz informa riesgo ocupacional y cumplimiento. Las etiquetas nombran la condición con precisión —Crítico, Advertencia, Información, Normal, Precaución, Elevado— y reservan el énfasis visual para la severidad.
+- **Formal y accesible.** Se mantiene el término técnico que el personal ya usa (CO₂, PPM, dBA, zona, nodo), en etiquetas de una a cuatro palabras. Un botón dice "Reconocer" o "Guardar Límite de CO₂", y un indicador muestra el límite junto al valor.
+- **Respetuoso.** El sistema se dirige al supervisor de seguridad y al gerente de planta como responsables de la operación. Los mensajes describen el estado y la acción disponible, sin culpabilizar al usuario ni minimizar el evento.
+- **Sereno.** Ante una alerta, el texto se mantiene directo y calmado. La urgencia la comunican el color, la jerarquía y el orden del incidente —detección, mitigación, confirmación y cierre—, no la exageración del mensaje. Esa calma favorece una respuesta oportuna.
+
+En conjunto, el tono es profesional y técnico, y se mantiene claro para quien opera en planta.
 
 <a id="s-5-1-2"></a>
 ### 5.1.2. Web, Mobile and IoT Style Guidelines
 
-![Web, Mobile and IoT Style Guidelines](../assets/05-capitulo-v/style-guidelines/web-mobile-iot.png)
+SAFEPLANT mantiene la misma paleta, la misma tipografía y los mismos colores de severidad en la consola web, la aplicación móvil y la lectura del nodo IoT. Cambia el gesto y el espacio disponible. En escritorio se comparan varias zonas a la vez. En el teléfono se consulta y se reconoce una alerta con una mano. En la planta, el dispositivo ejecuta la respuesta física y la confirmación queda en la pantalla del supervisor.
+
+**Interfaz web**
+
+El diseño web es limpio y está centrado en la operación. Las tarjetas resumen primero el estado —CO₂, presión acústica, personal en zona y alertas— y después dejan paso a la tabla y a la curva. Las gráficas marcan el límite normativo con una línea de contraste alto, para ver de inmediato si la lectura lo superó. Cada zona, sensor y actuador lleva un ícono y el color de severidad definido en la guía.
+
+Los botones primarios son redondeados, con fondo #0F2744 y texto blanco. Los secundarios usan el azul #2563EB o el fondo claro #CBDBF5. El rojo #EF4444 identifica la severidad crítica y la confirmación de una acción que interrumpe una mitigación, y así queda separado del botón de trabajo habitual. Cada botón responde en Normal, Hover y Clicked / Checked.
+
+Las tablas listan incidentes, zonas y nodos. El encabezado marca la jerarquía, la severidad ocupa un lugar visible y las filas se separan para recorrer código, lectura y estado. Zona, severidad y ventana temporal se filtran en la misma vista.
+
+Las confirmaciones usan ventanas propias de la aplicación, sobre un fondo atenuado, con la acción y el cierre visibles. Sirven para reconocer un incidente o guardar un umbral. En web, móvil e IoT se usan los mismos controles genéricos: botones, campos de búsqueda, paneles de filtro y ventanas emergentes.
+
+![Composición web: tarjetas, curva y tabla](../assets/05-capitulo-v/style-guidelines/web-layout-generico.jpg)
+
+![Estados de los botones](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 12 - Button states (Light).png>)
+
+![Cajas de texto](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 13 - Text input boxes (Light).png>)
+
+![Paneles desplegables](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 14 - Dropdown panels (Light).png>)
+
+![Ventanas emergentes](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 15 - Pop-up windows (Light).png>)
+
+**Interfaz móvil**
+
+La aplicación conserva los nombres de sección y el significado de cada color. El contenido pasa a una columna, la navegación baja a una barra de cinco íconos —Panel, Alertas, Umbrales, Historial y Equipos— y la alerta crítica queda arriba, al alcance del pulgar. Reconocer o aceptar se hace sobre la tarjeta. En un ancho menor, las tarjetas y las gráficas se apilan y las etiquetas se mantienen.
+
+![Composición móvil](../assets/05-capitulo-v/style-guidelines/mobile-layout-generico.jpg)
+
+**Interfaz de la aplicación IoT y del dispositivo físico**
+
+En el panel y en Equipos, el nodo usa el mismo lenguaje que la consola: En línea, En diagnóstico, sensor, extractor, alarma y mampara. La vista es compacta porque el supervisor la consulta en planta, a menudo desde el teléfono.
+
+La interfaz física del nodo comunica el riesgo con la actuación. El ESP32 mide CO₂, ruido y presencia, y quien está en la zona percibe el ventilador de extracción, la alarma acústica o la mampara de seguridad. Esos efectos siguen la misma regla que la alerta en pantalla. Reconocer el incidente y cambiar un umbral se hacen en la aplicación o en la web, para que el personal no tenga que operar el nodo dentro del área expuesta. Si el enlace falla, la interfaz muestra diagnóstico o pérdida de telemetría, y la actuación local sigue disponible en la planta.
+
+![Interfaz física del nodo](../assets/05-capitulo-v/style-guidelines/iot-fisico-generico.jpg)
+<a id="s-5-2"></a>
+
 
 <a id="s-5-2"></a>
 ## 5.2. Information Architecture
 
+La arquitectura de información de SAFEPLANT guía al supervisor de seguridad y al gerente de planta de forma lógica, eficiente y contextual. Cada módulo sigue el ciclo de la seguridad en planta: leer las condiciones de la zona (CO₂, ruido y presencia), detectar la exposición, ejecutar la mitigación, confirmar el incidente y dejar el registro listo para auditoría. Así, el dato técnico se captura en el momento y queda disponible para el análisis y la decisión posterior, tanto en la consola web como en el teléfono.
+
+El Panel de Control es el punto de entrada porque la primera pregunta del usuario es el estado de la planta. Desde ahí, la arquitectura acerca el detalle solo cuando aparece una anomalía, hace falta ajustar un umbral o conviene revisar un nodo. El supervisor recorre todas las secciones y puede configurar el sistema. El gerente consulta el panel y el historial, sin modificar la operación.
+
+A continuación se detallan los sistemas de organización, etiquetado, posicionamiento web, búsqueda y navegación que sostienen esa experiencia.
+
 <a id="s-5-2-1"></a>
 ### 5.2.1. Organization Systems
 
+En SAFEPLANT cada grupo de información usa el sistema que mejor sirve a la tarea. Hay dos familias. La organización visual define cómo se lee un conjunto en pantalla: de forma jerárquica, secuencial o matricial. La categorización define cómo se agrupa y se recupera ese contenido: por tópicos, por zona, por orden alfabético, por tiempo y por audiencia.
+
+**Organización visual**
+
+La **organización jerárquica** se aplica cuando el usuario debe ver primero lo urgente. En el Panel de Control el orden visual es indicadores generales (CO₂, presión acústica y personal en zonas críticas), luego la matriz de zonas y, al final, la respuesta automatizada y el estado de los nodos. En Alertas, el incidente crítico tiene más peso visual que la advertencia y que el mensaje informativo.
+
+La **organización secuencial** se aplica cuando la tarea se completa por pasos. El incidente sigue detección del peligro, mitigación automática, pendiente de confirmación y, al cierre, resuelto o auditado. La configuración de umbrales sigue otro recorrido: el supervisor elige la zona, ajusta el límite de CO₂ o de ruido y guarda el cambio.
+
+La **organización matricial** se aplica cuando hay que comparar varios elementos a la vez. Se usa en la matriz ambiental de zonas, en la matriz comparativa de umbrales y en las tablas de alertas y de registro de incidentes.
+
+**Categorización del contenido**
+
+La **categorización por tópicos** agrupa la telemetría según el parámetro medido: CO₂, presión acústica y presencia de personal. En Dispositivos, el mismo criterio separa sensores de monitoreo y actuadores de control.
+
+La **categorización geográfica** divide la planta en zonas industriales. Alertas, historial, umbrales y dispositivos se filtran por zona, porque el riesgo se atiende en el lugar donde ocurre.
+
+La **categorización alfabética** se usa para localizar un elemento conocido por su código. Zonas, nodos y eventos se ordenan por ese código cuando el usuario busca un identificador concreto, no cuando evalúa la urgencia.
+
+La **categorización cronológica** ordena incidentes y registros del más reciente al más antiguo. En las gráficas, el mismo criterio ofrece las ventanas 1h, 6h, 12h y 24h, y en el historial también 7d y 30d.
+
+La **categorización por audiencia** separa lo que ve cada grupo de usuarios. El supervisor de seguridad accede a todas las secciones y es quien configura umbrales, gestiona alertas y administra los nodos, desde la app móvil y la consola web. El gerente de planta consulta el Panel de Control y el Historial: ve el dashboard, las gráficas y los resultados, y no modifica la configuración.
+
+
+
 ![Organization Systems](../assets/05-capitulo-v/information-architecture/organization-systems.png)
+
 
 <a id="s-5-2-2"></a>
 ### 5.2.2. Labeling Systems
 
+El sistema de etiquetado busca representar la información de forma clara y sin ambigüedades, usando etiquetas concisas de una a cuatro palabras, un lenguaje técnico reconocible para el personal de seguridad industrial y un estilo consistente en toda la plataforma. Cuando es necesario, las etiquetas se acompañan de íconos y de colores que refuerzan su significado. Las etiquetas utilizadas son:
+
+- **Navegación principal:** Panel de Control, Umbrales, Alertas, Historial y Dispositivos. En la versión móvil se abrevian a Panel, Alertas, Umbrales, Historial y Equipos.
+- **Niveles de severidad:** Crítico, Advertencia e Información. Se diferencian por color: rojo para crítico, amarillo para advertencia y azul para información.
+- **Estados de lectura y zona:** Normal, Precaución y Elevado.
+- **Estados del incidente:** Mitigación Activa, Pendiente de Confirmación, Normalizado y Resuelto / Auditado.
+- **Estados de dispositivos y reglas:** En Línea, En Espera, Sincronizado, En Diagnóstico y Armada y Activa.
+- **Botones de acción:** Reconocer, Aceptar, Filtrar, Exportar PDF, Reporte de Cumplimiento (PDF), Configurar Disparadores de Alerta, Guardar Límite de CO₂ y Guardar Límite de Ruido.
+- **Parámetros y unidades:** CO₂ (PPM) y Presión Acústica (dBA), siempre acompañados de su límite normativo (por ejemplo, "Límite: 800 PPM").
+- **Componentes de dispositivos:** Sensor de Sonido, Sensor de CO₂, Sensor de Movimiento, Ventilador de Extracción, Alarma Acústica y Mamparas de Seguridad.
+
+Este lenguaje directo evita la sobrecarga de información y permite tomar decisiones rápidas ante una situación de riesgo.
+
+
 <a id="s-5-2-3"></a>
 ### 5.2.3. SEO Tags and Meta Tags
+
+Para la versión web de SAFEPLANT se definen las siguientes etiquetas base:
+
+```html
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAFEPLANT | Telemetría de Seguridad Industrial</title>
+```
+
+Meta tags adicionales que pueden implementarse:
+
+```html
+<meta name="description" content="SAFEPLANT es una plataforma IoT que monitorea en tiempo real el CO₂, el ruido y la presencia de personal en zonas industriales, y activa respuestas automáticas de seguridad.">
+<meta name="keywords" content="IoT, seguridad industrial, telemetría, CO2, ruido">
+<meta property="og:title" content="SAFEPLANT | Telemetría de Seguridad Industrial">
+<meta property="og:description" content="Monitoreo ambiental en tiempo real y mitigación automatizada en planta.">
+<meta property="og:image" content="URL_imagen_destacada.jpg">
+```
+
+- `description` ofrece un resumen del proyecto para los buscadores.
+- `keywords` ayuda a clasificar el tema de la plataforma.
+- `og:title`, `og:description` y `og:image` controlan cómo se ve SAFEPLANT al compartirse en redes sociales.
+
 
 <a id="s-5-2-4"></a>
 ### 5.2.4. Searching Systems
 
+SAFEPLANT cuenta con un sistema de búsqueda simple, basado en barras de texto ubicadas dentro de las secciones donde hay grandes volúmenes de registros:
+
+- **Alertas:** barra "Buscar código, zona o incidente..." que permite localizar una alerta específica.
+- **Historial:** barra "Buscar por código, operador, nodo..." para encontrar eventos auditados.
+- **Versión móvil:** barra "Buscar por código (ej. EVT) o nodo..." en el registro de eventos.
+
+Además de la búsqueda por texto, el usuario puede refinar los resultados con filtros combinables: zona, severidad (Todos, Crítico, Advertencia, Auditados), ventana temporal y parámetro de telemetría. La búsqueda se ejecuta al escribir el término clave y presionar "Enter".
+
+```html
+<!-- Barra de búsqueda de alertas e incidentes -->
+<form action="/alertas/search" method="GET">
+  <input
+    type="text"
+    name="query"
+    placeholder="Buscar código, zona o incidente..."
+    aria-label="Buscar código, zona o incidente"
+    style="width: 100%; padding: 10px; font-size: 16px;" />
+</form>
+```
+
 <a id="s-5-2-5"></a>
 ### 5.2.5. Navigation Systems
 
-![Navigation Systems](../assets/05-capitulo-v/information-architecture/navigation-systems.png)
+**Navegación lateral (web):** la consola web incluye un menú lateral con las cinco secciones principales: Panel de Control, Umbrales, Alertas, Historial y Dispositivos. En la parte superior del menú se muestra el estado del sistema operativo (Planta Alfa y cantidad de nodos de telemetría activos), y la sección Alertas muestra un indicador numérico con las alertas pendientes. La barra superior presenta la ruta de ubicación (SAFEPLANT / Vista de Consola) y el usuario activo con su cargo.
+
+**Navegación inferior (móvil):** en la aplicación móvil, las mismas secciones se acceden desde una barra inferior con íconos (Panel, Alertas, Umbrales, Historial y Equipos), que permite cambiar de sección con una sola mano y mantiene visible la ubicación actual.
+
+**Navegación interna:** dentro de cada sección el usuario refina el contenido mediante:
+- Pestañas de ventana temporal (1h, 6h, 12h, 24h; 7d, 30d).
+- Filtros por zona, severidad y parámetro.
+- Pestañas de estado de incidentes (Todos, Crítico, Advertencia, Auditados).
+- Selector de zona en Dispositivos (Zona A a Zona E) y en la matriz comparativa de Umbrales, donde al tocar una zona se cargan sus límites.
+- Paginación en las tablas de incidentes y registros.
+
+**Navegación contextual:** desde el Panel de Control el usuario puede pasar al detalle, por ejemplo a Alertas desde un indicador crítico, o a Dispositivos desde la red de nodos IoT (Todos los Nodos). Desde Alertas y Historial se puede exportar el Reporte de Cumplimiento en PDF.
+
+**Flujo de navegación esperado:** el usuario inicia sesión y llega al Panel de Control, donde evalúa el estado general de la planta. Si detecta una anomalía, entra a Alertas para reconocer el incidente y revisar la mitigación automática. Luego consulta el Historial para analizar la curva y auditar el evento, y si es necesario ajusta los límites en Umbrales. Finalmente revisa el estado de sensores y actuadores en Dispositivos.
 
 <a id="s-5-3"></a>
 ## 5.3. Landing Page UI Design
@@ -6150,15 +6497,15 @@ Modelo relacional lógico: `user_accounts`, `sessions` y `credential_recoveries`
 <a id="s-5-3-1"></a>
 ### 5.3.1. Landing Page Wireframe
 
-El wireframe de la landing page de SAFEPLANT define la estructura base de la página y la distribución de sus elementos antes de aplicar el diseño visual final. Se elaboró en blanco y negro, con texto de relleno y marcadores de posición para imágenes e íconos, de modo que la atención se centre en la jerarquía de la información, el orden de las secciones y la ubicación de las acciones principales.
-
-**Landing Page para Desktop Web Browser**
+La versión wireframe de la landing page de SAFEPLANT fija la estructura en baja fidelidad, antes de color, tipografía e imágenes. Ordena la lectura del visitante: entender qué resuelve la plataforma, ver cómo se monitorea la planta y llegar a una acción para ingresar. Arriba, la navegación es un bloque de logo, enlaces y un botón. El hero deja a la izquierda el titular, un texto de apoyo y dos botones. A la derecha, una tarjeta reúne indicadores y una gráfica simple para anticipar CO₂, ruido y presencia. Debajo hay franjas de tarjetas: tres de capacidades, tres de métricas, tres módulos con ícono y cuatro bloques de incidentes o zonas. Luego, tres pasos numerados acompañan un rectángulo de formulario o consola. El cierre es un botón y el pie repite logo y enlaces. Gráficos y tarjetas son cajas simples, para revisar la jerarquía antes del mock-up.
 
 ![Landing Page Wireframe](../assets/05-capitulo-v/landing/wireframe.png)
 
-**Landing Page para Mobile Web Browser**
+**Versión móvil**
 
-![Landing Page Wireframe](../assets/05-capitulo-v/landing/WF_LandingMobile.png)
+En el wireframe móvil el mismo contenido pasa a una sola columna. El menú se reduce a un ícono, el hero apila el titular, los botones y la tarjeta de indicadores, y las franjas de tarjetas, los pasos y el cierre se leen de arriba hacia abajo. Se conservan las secciones y la acción de ingreso.
+
+![Landing Page Wireframe móvil](../assets/05-capitulo-v/landing/WF_LandingMobile.png)
 
 <a id="s-5-3-2"></a>
 ### 5.3.2. Landing Page Mock-up
@@ -6183,51 +6530,32 @@ La versión móvil reorganiza el contenido en una columna para facilitar la lect
 <a id="s-5-4-1"></a>
 ### 5.4.1. Applications Wireframes
 
-Los wireframes de las aplicaciones de SAFEPLANT definen la estructura base y la distribución funcional para las plataformas web y móvil. Aseguran que la atención se centre en la jerarquía de la información, el flujo de navegación y la ubicación de las acciones principales de los usuarios antes de aplicar el diseño visual final.
-
-**Wireframes de Aplicación Web**
-
-El esquema para la plataforma web, orientado al Encargado de Planta, distribuye el contenido aprovechando el formato de escritorio. Su estructura prioriza paneles de control amplios (dashboards) para el monitoreo consolidado, tablas detalladas para la auditoría de historiales y vistas estructuradas.
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WF_1.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WF_2.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WF_3.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WF_4.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WF_5.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WF_6.png)
-
-**Wireframes de Aplicación Móvil**
-
-El diseño para el dispositivo móvil, dirigido al Supervisor de Seguridad en campo, organiza la interfaz en una sola columna para facilitar la interacción rápida. Su estructura destaca los indicadores de telemetría en tiempo real por área industrial, la visualización clara de alertas críticas y el acceso directo a los controles manuales de los actuadores para situaciones de emergencia.
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_6.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_7.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_1.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_2.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_3.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_4.png)
-
-![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_5.png)
-
+![Applications Wireframes](../assets/05-capitulo-v/applications/wireframes.png)
 
 <a id="s-5-4-2"></a>
 ### 5.4.2. Applications Wireflow Diagrams
 
+![Applications Wireflow](../assets/05-capitulo-v/applications/wireflow.png)
 
 <a id="s-5-4-3"></a>
 ### 5.4.3. Applications Mock-ups
 
-![Applications Mock-ups](../assets/05-capitulo-v/applications/mockups.png)
+WEB:
+![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup1.png)
+![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup2.png)
+![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup3.png)
+![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup4.png)
+![Gobernanza de cuentas - aplicación web](../assets/05-capitulo-v/mockups/web/mockup5.png)
+
+MOVIL:
+
+![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (1).png>)
+![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (2).png>)
+![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (3).png>)
+![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (4).png>)
+![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (5).png>)
+![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (6).png>)
+![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (7).png>)
 
 <a id="s-5-4-4"></a>
 ### 5.4.4. Applications User Flow Diagrams
@@ -6264,7 +6592,13 @@ En ambos prototipos se busca representar los recorridos principales: ingresar al
 <a id="s-5-6"></a>
 ## 5.6. IoT Device Design
 
-![IoT Device Design](../assets/05-capitulo-v/iot-device/device-design.png)
+Link a proyecto de Wowki: [https://wokwi.com/projects/477285427305212929](https://wokwi.com/projects/477285427305212929)
+
+![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi.png)
+
+![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi1.png)
+
+![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi2.png)
 
 ---
 
@@ -6274,92 +6608,19 @@ En ambos prototipos se busca representar los recorridos principales: ingresar al
 <a id="s-6-1"></a>
 ## 6.1. Software Configuration Management
 
-La configuración del software en SafePlant establece las herramientas que permiten al equipo mantener el control sobre los cambios en el código fuente, asegurar la calidad y organizar el despliegue hacia los entornos de producción (Cloud y Edge).
-
 <a id="s-6-1-1"></a>
 ### 6.1.1. Software Development Environment Configuration
-
-Para el desarrollo colaborativo del ecosistema SafePlant, el equipo utiliza las siguientes herramientas y entornos de desarrollo, alineados con la arquitectura del proyecto:
-
-*   **Figma:** Herramienta colaborativa en la nube utilizada para el diseño de wireframes, wireflows, mock-ups y prototipado de las interfaces web y móvil.
-*   **Visual Studio / VS Code:** Principales para la construcción del Web Monolithic Backend y la Edge Application en ASP.NET Core, así como para el desarrollo del frontend en Angular.
-*   **Android Studio / VS Code:** Entornos configurados con los SDKs necesarios para la programación de la aplicación móvil multiplataforma utilizando Flutter.
-*   **Arduino IDE / PlatformIO:** Entornos utilizados para escribir, compilar y cargar el firmware en C++ hacia los microcontroladores ESP32.
-*   **GitHub:** Plataforma en la nube utilizada como repositorio central para el control de versiones y el trabajo colaborativo del código fuente.
-*   **pgAdmin / DBeaver:** Gestores de bases de datos utilizados para modelar y administrar la Cloud Database en PostgreSQL localmente antes de su despliegue.
 
 <a id="s-6-1-2"></a>
 ### 6.1.2. Source Code Management
 
-El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys`. Actualmente, la organización alberga los siguientes repositorios principales: [https://github.com/Macallys/Report](https://github.com/Macallys/Report)
-
-*   **`Report`:** Repositorio central que contiene la documentación  y el informe del proyecto.
-*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
-*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular.
-*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático.
-
-**Estrategia de Ramas**
-El equipo ha adaptado su flujo de trabajo para agilizar la integración continua. Inicialmente, se implementó un enfoque basado en ramas de características específicas para segmentar el trabajo. Sin embargo, la estrategia actual se ha simplificado: los miembros del equipo ahora integran sus aportes y actualizaciones de forma directa en la rama `develop` para acelerar el ciclo de desarrollo y consolidación. 
-
-La estructura base del flujo de trabajo se compone de:
-*   **`main`:** Contiene el código en estado de producción, asegurando que siempre sea estable y desplegable.
-*   **`develop`:** Rama por defecto y principal vía de integración activa, donde se encuentran todas las modificaciones directas del equipo antes de un pase a producción.
-*   **`feature/*`:** Ramas temporales utilizadas históricamente para la división de tareas específicas.
-
-**Estándares de Commits**
-Para mantener un historial de cambios legible y auditable, el equipo aplica la convención de *Conventional Commits* con la estructura:
-*   `feat`: Una nueva funcionalidad.
-*   `fix`: Corrección de un error.
-*   `docs`: Cambios en la documentación.
-*   `style`: Cambios de formato que no afectan la lógica.
-*   `refactor`: Cambio en el código que no corrige errores ni añade funciones.
-*   `test`: Añadir o corregir pruebas.
-
 <a id="s-6-1-3"></a>
 ### 6.1.3. Source Code Style Guide & Conventions
-Para mantener la legibilidad y consistencia del código entre los  miembros del equipo, se siguen las convenciones oficiales de cada tecnología utilizada en SafePlant:
-
-**C# (ASP.NET Core - Backend & Edge)**
-La estructura del repositorio backend refleja fielmente el diseño estratégico (DDD), imponiendo las siguientes reglas a nivel de solución:
-*   **Separación de Hosts:** Los puntos de entrada de la aplicación se mantienen aislados en la carpeta `src/Hosts`, diferenciando el proyecto `Cloud.Api` del proyecto `Plant.Host` (para ejecución en el servidor Edge local).
-*   **Aislamiento Modular:** El código se organiza en la carpeta `src/Modules` según los Bounded Contexts definidos: `DeviceEdgeManagement`, `IAM`, `PlantMonitoring` y `SafetyActuation`, además de un `SharedKernel` para lógica transversal.
-*   **Capas Tácticas:** Cada uno implementa estrictamente tres capas: `Application`, `Domain` e `Infrastructure`.
-
-**TypeScript (Angular - Web Client)**
-El desarrollo del cliente web se estructura mediante una arquitectura modular orientada a funcionalidades:
-*   **Estructura por Features:** El código se organiza en la carpeta `src/app/features`, dividiendo la aplicación en módulos funcionales como `accounts`, `metrics` y `recovery`. La lógica se ubica en `core` y `shared`.
-*   **Separación de Responsabilidades:** Se separan las responsabilidades en archivos específicos utilizando sufijos descriptivos: `.api.ts` para llamadas HTTP, `.models.ts` para interfaces de datos, y `.store.ts` para la gestión de estado local.
-  
-**Dart (Flutter - Mobile App)**
-*   Utilizar *UpperCamelCase* para nombrar clases, enumeraciones y extensiones.
-*   Utilizar *lowerCamelCase* para nombrar variables, constantes y métodos.
-*   Nombrar los archivos y carpetas utilizando *snake_case*.
-
-**C++ (Arduino/ESP32 - Firmware)**
-*   Utilizar letras mayúsculas separadas por guiones bajos para definir constantes y pines.
-*   Implementar código que garantice que el dispositivo no pierda la conexión con el broker Eclipse Mosquitto.
-*   Comentar la lógica detrás de la lectura de sensores y activación de relés para facilitar el mantenimiento del hardware de campo.
 
 <a id="s-6-1-4"></a>
 ### 6.1.4. Software Deployment Configuration
-La arquitectura de despliegue se divide en tres niveles operativos, tal como se especifica en el Diagrama de Despliegue del sistema:
 
-**1. Despliegue en la Nube (Cloud - Azure)**
-Se utiliza la plataforma Microsoft Azure para hospedar los componentes centrales:
-*   **Azure Static Web Apps:** Para la landing page y el cliente Angular para la aplicación web.
-*   **Azure App Service:** Hospeda el monolito ASP.NET Core que gestiona la lógica en la nube.
-*   **Azure Database for PostgreSQL:** Actúa como el sistema de registro central en la nube.
-
-**2. Despliegue en Planta (Edge On-Premise)**
-Para garantizar la operación continua sin dependencia de internet, se despliega infraestructura local en la planta:
-*   **Servidor On-Premise:** Ejecuta la Edge Application que contiene el loop de seguridad vivo (Safety & Actuation).
-*   **Base de Datos Local:** Utiliza SQLite en planta para mantener el estado y la contingencia offline.
-*   **Broker de Mensajería:** Eclipse Mosquitto opera localmente como intermediario entre el firmware y la aplicación Edge.
-
-**3. Despliegue de Clientes y Hardware**
-*   **App Móvil:** La aplicación Flutter se ejecuta en el dispositivo móvil del supervisor.
-*   **Hardware de Campo:** El firmware Arduino/ESP32 se despliega directamente en los dispositivos conectados a sensores y actuadores físicos.
-*   **Servicios Externos:** Se utiliza un servicio SMTP externo para el envío de correos, mientras que la identidad es propia del sistema.
+![Software Deployment Configuration](../assets/06-capitulo-vi/scm/deployment-configuration.png)
 
 <a id="s-6-2"></a>
 ## 6.2. Landing Page, Services & Applications Implementation
@@ -6384,6 +6645,328 @@ Para garantizar la operación continua sin dependencia de internet, se despliega
     </tr>
   </tbody>
 </table>
+
+---
+
+<a id="s-6-2-1"></a>
+### 6.2.1. Sprint 1
+
+
+En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo del Sprint 1 de SafePlant. El sprint se centró en la presencia pública del producto, con la landing page desplegada; en la capa de presentación de la aplicación web del Encargado de Planta, con todas sus pantallas implementadas y desplegadas; y en la base del backend, con el módulo Identity & Access y los endpoints de registro e inicio de sesión. La integración entre la aplicación web y el backend queda como trabajo pendiente para el siguiente sprint.
+
+
+<a id="s-6-2-1-1"></a>
+#### 6.2.1.1. Sprint Planning 1
+
+El Sprint Planning Meeting del Sprint 1 tuvo como propósito definir el primer incremento visible de SafePlant. El equipo priorizó lo que permite presentar el producto a los segmentos objetivo y validar la experiencia del Encargado de Planta: la landing page informativa, las vistas de la aplicación web de gobernanza y la autenticación de usuarios en el backend. Al ser el primer sprint, no existen Review ni Retrospective previos.
+
+
+<table>
+  <thead>
+    <tr>
+      <th align="left" colspan="2">Sprint # - Sprint 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left" colspan="2"><strong>Sprint Planning Background</strong></td>
+    </tr>
+    <tr>
+      <td align="left">Date</td>
+      <td align="left">[2026-10-07]</td>
+    </tr>
+    <tr>
+      <td align="left">Time</td>
+      <td align="left">[21:00 PM]</td>
+    </tr>
+    <tr>
+      <td align="left">Location</td>
+      <td align="left">Reunión virtual vía Discord</td>
+    </tr>
+    <tr>
+      <td align="left">Prepared By</td>
+      <td align="left">Gabriel Sanchez</td>
+    </tr>
+    <tr>
+      <td align="left">Attendees (to planning meeting)</td>
+      <td align="left">Solano Armas, Angelo Héctor / Gordillo Ramos, Santiago Alonso / Huaman Cuba, Johan Giovani / Baldeon Vivar, Santiago Armando / Iglesias Pérez, Sergio Sebastián / Sanchez Gonzales, Gabriel</td>
+    </tr>
+    <tr>
+      <td align="left">Sprint 0 Review Summary</td>
+      <td align="left">No aplica.</td>
+    </tr>
+    <tr>
+      <td align="left">Sprint 0 Retrospective Summary</td>
+      <td align="left">No aplica. </td>
+    </tr>
+    <tr>
+      <td align="left" colspan="2"><strong>Sprint Goal &amp; User Stories</strong></td>
+    </tr>
+    <tr>
+      <td align="left">Sprint 1 Goal</td>
+      <td align="left">
+        <strong>Our focus is on</strong> dar a conocer SafePlant mediante una landing page desplegada que explique su propósito, sus beneficios y su arquitectura, y en ofrecer al Encargado de Planta las vistas de su aplicación web (inicio de sesión, gestión de cuentas y roles, dashboard de métricas e historial), respaldadas por un backend capaz de registrar usuarios e iniciar sesión.<br><br>
+        <strong>We believe it delivers</strong> una comprensión clara de la propuesta de valor de SafePlant y una primera experiencia navegable de gobernanza de la planta <strong>to</strong> los visitantes interesados en la solución y los Encargados de Planta.<br><br>
+        <strong>This will be confirmed when</strong> un visitante pueda recorrer la landing desplegada y acceder desde ella a la aplicación web publicada, un Encargado de Planta pueda navegar todas las vistas web, y el backend registre una cuenta y emita un token de acceso válido al iniciar sesión.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">Sprint 1 Velocity</td>
+      <td align="left">30 Story Points</td>
+    </tr>
+    <tr>
+      <td align="left">Sum of Story Points</td>
+      <td align="left">27 Story Points</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="s-6-2-1-2"></a>
+#### 6.2.1.2. Aspect Leaders and Collaborators
+
+
+Los aspectos considerados en el Sprint 1 corresponden a los productos trabajados en la iteración: la landing page, la aplicación web del Encargado de Planta, el backend con el bounded context Identity & Access, el despliegue de los productos y la documentación del sprint en el informe. Para cada aspecto se define un líder, responsable de coordinar y validar el avance, y colaboradores que participan en su implementación.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Team Member (Last Name, First Name)</th>
+      <th align="left">GitHub Username</th>
+      <th align="left">Landing Page</th>
+      <th align="left">Web Application</th>
+      <th align="left">Backend (Identity &amp; Access)</th>
+      <th align="left">Deployment</th>
+      <th align="left">Report</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Angelo5214</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+    </tr>
+    <tr>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">SantiIHC</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+    </tr>
+    <tr>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Johancuba</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+    </tr>
+    <tr>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Santibal11</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+    </tr>
+    <tr>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">ghostrider101218</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+      <td align="left">L</td>
+      <td align="left">C</td>
+    </tr>
+    <tr>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">yigabriel</td>
+      <td align="left">L</td>
+      <td align="left">L</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="s-6-2-1-4"></a>
+#### 6.2.1.4. Development Evidence for Sprint Review
+
+
+Durante el Sprint 1 se implementó la landing page completa de SafePlant, todas las vistas de la aplicación web del Encargado de Planta en Angular y el módulo Identity & Access del backend en ASP.NET Core, con los endpoints de registro e inicio de sesión. La siguiente tabla relaciona los commits de implementación de cada repositorio.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Repository</th>
+      <th align="left">Branch</th>
+      <th align="left">Commit Id</th>
+      <th align="left">Commit Message</th>
+      <th align="left">Commit Message Body</th>
+      <th align="left">Committed on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Macallys/landing-page</td>
+      <td align="left">develop</td>
+      <td align="left"><a href="https://github.com/Macallys/landing-page/commit/9ba1a93dd2923408c13ece85a9839d930a680a1e">9ba1a93</a></td>
+      <td align="left">Initial commit</td>
+      <td align="left">Creación del repositorio de la landing page.</td>
+      <td align="left">09/09/2026</td>
+    </tr>
+    <tr>
+      <td align="left">Macallys/landing-page</td>
+      <td align="left">develop</td>
+      <td align="left"><a href="https://github.com/Macallys/landing-page/commit/ccefe6d1b451594ddc3d8d4898fe4059c8ceac4b">ccefe6d</a></td>
+      <td align="left">feat: add landing page</td>
+      <td align="left">Implementación de la landing page de SafePlant.</td>
+      <td align="left">09/09/2026</td>
+    </tr>
+    <tr>
+      <td align="left">Macallys/safeplant-web-client</td>
+      <td align="left">develop</td>
+      <td align="left"><a href="https://github.com/Macallys/safeplant-web-client/commit/695489b12b749aa18fbeffb8f17933abc79fcb33">695489b</a></td>
+      <td align="left">initial commit</td>
+      <td align="left">Creación del repositorio de la aplicación web.</td>
+      <td align="left">02/10/2026</td>
+    </tr>
+    <tr>
+      <td align="left">Macallys/safeplant-web-client</td>
+      <td align="left">develop</td>
+      <td align="left"><a href="https://github.com/Macallys/safeplant-web-client/commit/eaec417bcf9c478464338a9b9c215dec0003cecd">eaec417</a></td>
+      <td align="left">chore: initial setup</td>
+      <td align="left">Configuración inicial del proyecto Angular.</td>
+      <td align="left">02/10/2026</td>
+    </tr>
+    <tr>
+      <td align="left">Macallys/safeplant-web-client</td>
+      <td align="left">develop</td>
+      <td align="left"><a href="https://github.com/Macallys/safeplant-web-client/commit/5e084de9ef9c2218d0db995505b3bb7020148986">5e084de</a></td>
+      <td align="left">feat: add sign up, sign in, metrics, history features and pages</td>
+      <td align="left">Implementación de las vistas de registro, inicio de sesión, métricas e historial.</td>
+      <td align="left">04/10/2026</td>
+    </tr>
+    <tr>
+      <td align="left">Macallys/safeplant-web-client</td>
+      <td align="left">develop</td>
+      <td align="left"><a href="https://github.com/Macallys/safeplant-web-client/commit/d1528d733763e28654f4201f05a80a7d64a7cbb8">d1528d7</a></td>
+      <td align="left">feat: administracion de roles</td>
+      <td align="left">Implementación de la vista de administración y asignación de roles.</td>
+      <td align="left">07/10/2026</td>
+    </tr>
+    <tr>
+      <td align="left">Macallys/safeplant-web-backend</td>
+      <td align="left">develop</td>
+      <td align="left"><a href="https://github.com/Macallys/safeplant-web-backend/commit/7d011b6a4271da4cfaf1fa60a2d22c1194d8ddbf">7d011b6</a></td>
+      <td align="left">chore: initial setup</td>
+      <td align="left">Configuración inicial de la solución ASP.NET Core.</td>
+      <td align="left">04/10/2026</td>
+    </tr>
+    <tr>
+      <td align="left">Macallys/safeplant-web-backend</td>
+      <td align="left">develop</td>
+      <td align="left"><a href="https://github.com/Macallys/safeplant-web-backend/commit/be399e58592de36e84d9ab2269ec784c81393751">be399e5</a></td>
+      <td align="left">chore: global error and extensions</td>
+      <td align="left">Manejo global de errores y métodos de extensión del backend.</td>
+      <td align="left">06/10/2026</td>
+    </tr>
+  </tbody>
+</table>
+
+![Development Evidence](../assets/06-capitulo-vi/sprints/development_sprint1.png)
+
+![Development Evidence](../assets/06-capitulo-vi/sprints/development_sprint1_2.png)
+
+![Development Evidence](../assets/06-capitulo-vi/sprints/development_sprint1_3.png)
+
+
+<a id="s-6-2-1-5"></a>
+#### 6.2.1.5. Testing Suite Evidence for Sprint Review
+
+Dentro de este Sprint no se contemplaron las pruebas
+
+<a id="s-6-2-1-6"></a>
+#### 6.2.1.6. Execution Evidence for Sprint Review
+
+Al cierre del Sprint 1, la landing page de SafePlant está disponible públicamente y presenta el propósito del sistema, el monitoreo en tiempo real, la respuesta automática, los beneficios y la arquitectura técnica, con acceso directo a la aplicación web. La aplicación web del Encargado de Planta está desplegada con todas sus vistas navegables: inicio de sesión, gestión de cuentas, asignación de roles, dashboard de métricas e historial. Estas vistas aún trabajan con datos de muestra hasta su integración con el backend.
+
+**URL de la landing page:** https://macallys.github.io/landing-page/
+
+![E1ecution Evidence](../assets/06-capitulo-vi/sprints/landing.png)
+
+**URL de la aplicación web:** [https://safeplant-web-client.vercel.app/signIn]
+
+
+![E1ecution Evidence](../assets/06-capitulo-vi/sprints/web.png)
+
+<a id="s-6-2-1-7"></a>
+#### 6.2.1.7. Services Documentation Evidence for Sprint Review
+
+
+En este sprint se documentaron con OpenAPI (Swagger) los endpoints del bounded context Identity &amp; Access: el registro de usuarios y el inicio de sesión con emisión de JWT.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Endpoint</th>
+      <th align="left">Verbo HTTP</th>
+      <th align="left">Sintaxis de llamada</th>
+      <th align="left">Parámetros</th>
+      <th align="left">Response</th>
+      <th align="left">Documentación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Sign up</td>
+      <td align="left">POST</td>
+      <td align="left"><code>[/api/v1/auth/sign-up]</code></td>
+      <td align="left">Body JSON: <code>email</code>, <code>password</code>, <code>role</code></td>
+      <td align="left"><code>201 Created</code> con el identificador de la cuenta creada; <code>409 Conflict</code> si el correo ya está registrado.</td>
+      <td align="left">[URL Swagger]</td>
+    </tr>
+    <tr>
+      <td align="left">Sign in</td>
+      <td align="left">POST</td>
+      <td align="left"><code>/api/v1/auth/login</code></td>
+      <td align="left">Body JSON: <code>email</code>, <code>password</code></td>
+      <td align="left"><code>200 OK</code> con <code>accessToken</code>, <code>role</code> y <code>expiresIn</code>; <code>401 Unauthorized</code> con <code>invalid_credentials</code> si las credenciales no son válidas.</td>
+      <td align="left">[URL Swagger]</td>
+    </tr>
+  </tbody>
+</table>
+
+
+![Services Documentation](../assets/06-capitulo-vi/sprints/sprint-n-services-docs.png)
+
+<a id="s-6-2-1-8"></a>
+#### 6.2.1.8. Software Deployment Evidence for Sprint Review
+
+En el Sprint 1 se desplegaron la landing page y la aplicación web. La landing page se publicó en GitHub Pages desde el repositorio <code>landing-page</code> de la organización Macallys. La aplicación web Angular se publicó en [plataforma de despliegue]. El backend esta desplegado en {}.
+
+![alt text](../assets/06-capitulo-vi/sprints/deploy.png)
+
+![alt text](../assets/06-capitulo-vi/sprints/deploy1 .png)
+
+<a id="s-6-2-1-9"></a>
+#### 6.2.1.9. Team Collaboration Insights during Sprint
+
+![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab.png)
+
+![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab1.png)
+
+![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab2.png)
 
 ---
 

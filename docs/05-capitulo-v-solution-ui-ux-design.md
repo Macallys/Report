@@ -153,6 +153,7 @@ La interfaz física del nodo comunica el riesgo con la actuación. El ESP32 mide
 <a id="s-5-2"></a>
 
 
+<a id="s-5-2"></a>
 ## 5.2. Information Architecture
 
 La arquitectura de información de SAFEPLANT guía al supervisor de seguridad y al gerente de planta de forma lógica, eficiente y contextual. Cada módulo sigue el ciclo de la seguridad en planta: leer las condiciones de la zona (CO₂, ruido y presencia), detectar la exposición, ejecutar la mitigación, confirmar el incidente y dejar el registro listo para auditoría. Así, el dato técnico se captura en el momento y queda disponible para el análisis y la decisión posterior, tanto en la consola web como en el teléfono.
@@ -376,7 +377,13 @@ En ambos prototipos se busca representar los recorridos principales: ingresar al
 <a id="s-5-6"></a>
 ## 5.6. IoT Device Design
 
-![IoT Device Design](../assets/05-capitulo-v/iot-device/device-design.png)
+Link a proyecto de Wowki: [https://wokwi.com/projects/477285427305212929](https://wokwi.com/projects/477285427305212929)
+
+![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi.png)
+
+![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi1.png)
+
+![IoT Device Design](../assets/05-capitulo-v/iot-device/wokwi2.png)
 
 ---
 

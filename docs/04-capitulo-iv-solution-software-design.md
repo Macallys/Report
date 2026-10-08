@@ -346,6 +346,7 @@ Las **preguntas abiertas** de los canvases quedan registradas de forma deliberad
 
 <a id="s-4-1-2"></a>
 
+<a id="s-4-1-2"></a>
 ### 4.1.2. Context Mapping
 
 Las relaciones estructurales entre los cuatro bounded contexts se mapearon con los patrones de **ddd-crew**, tal como se muestra en el diagrama a continuación.
