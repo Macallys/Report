@@ -11,43 +11,155 @@
 <a id="s-5-1-1"></a>
 ### 5.1.1. General Style Guidelines
 
-Para el desarrollo de SAFEPLANT elegimos cuidadosamente los colores que nos representarían, ya que conforman la paleta principal que el usuario visualizará al ingresar a la plataforma. Al tratarse de una solución de entrenamiento inteligente con un espejo conectado, buscamos colores que transmitan energía, motivación y confianza, pero que a la vez sean cómodos a la vista durante sesiones largas de ejercicio. Cada color cumple una función: los tonos principales guían la atención hacia las acciones importantes, los tonos claros aportan descanso visual y los tonos oscuros aseguran la legibilidad del texto.
+Los *style guidelines* son un conjunto de principios visuales y comunicacionales que permite mantener coherencia y claridad en la interfaz del producto. En el caso de SAFEPLANT, esta guía busca comunicar profesionalismo, precisión técnica y una identidad cercana al rubro de la seguridad industrial y el monitoreo de plantas.
+
+La sección fija las decisiones de marca, tipografía, color y espaciado, y define el tono del lenguaje. El punto de partida es un design system de referencia: la escala modular tipográfica y los colores semánticos de Tailwind CSS. Esas referencias se adaptan al monitoreo industrial para que la consola web, la aplicación móvil y el dispositivo IoT se lean con rapidez cuando una condición de planta exige una respuesta. Las decisiones se apoyan en cuatro principios: jerarquía visual, para distinguir el dato crítico del contexto; consistencia, para que el mismo signo conserve su significado en todas las pantallas; contraste, para que el texto y los estados sigan siendo legibles; y retroalimentación, para que cada control confirme la acción del usuario.
+
+**Branding: Nombre de marca**
+
+SAFEPLANT representa una plataforma digital de telemetría y seguridad para plantas industriales. El nombre fusiona la protección del personal y de las condiciones de trabajo ("safe") con el entorno industrial donde opera el sistema ("plant").
+
+El signo es un escudo con una marca de verificación. El contenedor en azul marino y el símbolo en cian separan la identidad de los colores de estado: el rojo, el ámbar y el verde quedan reservados para crítico, advertencia y condición normal. Se definen dos configuraciones del mismo logo, apilada y horizontal, para usarlo en el menú, la barra superior y la pantalla del dispositivo sin alterar el signo.
+
+
+![Logo de SAFEPLANT](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 6 - Logo (Light).png>)
 
 ![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (1).png>)
+
+**Misión:**
+Brindar herramientas digitales que profesionalicen el trabajo del supervisor de seguridad y del encargado de planta, integrando la tecnología IoT con la prevención de riesgos ambientales.
+
+**Visión:**
+Ser la plataforma líder en monitoreo, mitigación automática y trazabilidad de condiciones de seguridad para plantas industriales en Latinoamérica.
+
+**Colores:**
+
+La paleta toma como referencia los tokens semánticos de Tailwind CSS y los adapta con un azul marino y un cian propios de SAFEPLANT. El azul marino (#0F2744) sostiene la navegación, el logo y el texto sobre fondo claro. El cian (#00E5FF) y el azul (#2563EB) marcan la acción y la tecnología de monitoreo. El verde (#10B981), el ámbar (#F59E0B) y el rojo (#EF4444) codifican una condición normal, una advertencia y un estado crítico, de modo que la severidad se reconoce antes de leer la etiqueta. El texto blanco (#FFFFFF) sobre el azul marino, y el azul marino sobre los fondos claros (#F8F9FF y #FFFFFF), conservan el contraste de lectura en la consola.
+
+**Primario:** Azul Marino #0F2744
+
+**Secundarios:** Azul Profundo #1B3B64, Azul #2563EB y Cian #00E5FF
+
+**Terciarios:** Azul Claro #CBDBF5, Azul Hielo #EFF4FF y Fondo #F8F9FF
+
+**Estados:** Verde #10B981, Ámbar #F59E0B, Rojo #EF4444 y Gris #64748B
+
+**Color de texto:**
+
+Sobre fondo oscuro: #FFFFFF
+
+Sobre fondo claro: #0F2744
+
+![Paleta de colores de SAFEPLANT](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 1 - Color Palette (Light).png>)
+
+**Color de botones:**
+
+**Oscuro:** #0F2744
+
+**Azul:** #2563EB
+
+**Cian:** #00E5FF
+
+**Gris:** #64748B
+
+**Claro:** #CBDBF5
+
+Cada variante se muestra en tres estados: Normal, Hover y Clicked / Checked.
+
+![Estados de los botones de SAFEPLANT](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 12 - Button states (Light).png>)
+
+**Tipografía:**
+
+La tipografía define la jerarquía visual y la legibilidad de la plataforma. SAFEPLANT usa una sola familia, Space Grotesk, para que la consola, la aplicación móvil y las referencias del dispositivo se perciban como el mismo producto. Es una sans geométrica de alto rendimiento en pantalla: sus formas abiertas favorecen la lectura de etiquetas cortas y de valores como PPM y dBA.
+
+La escala parte de una base de 16px, con proporción Major Third (1.25) e interlineado de 1.5. Esa proporción, habitual en los design systems de interfaz, produce saltos perceptibles entre niveles y evita elegir tamaños de forma arbitraria. Los peldaños resultantes son 61, 49, 39, 31, 25, 20, 16 y 13px. Cada estilo se nombra como Nombre / Tamaño / Peso.
+
+En la interfaz, esa escala es la referencia y algunos tamaños se ajustan al contexto de lectura. El título de página sube a 128px en la vista principal, y el texto de cuerpo se fija en 18px para leer indicadores con comodidad. Los estilos aplicados son:
+
+- **Heading 01:** Space Grotesk Black – 128px. Título principal de página.
+- **Heading 02:** Space Grotesk Bold – 60px. Título de sección.
+- **Heading 03:** Space Grotesk Bold – 43px. Título de subsección.
+- **Heading 04:** Space Grotesk Bold – 30px. Encabezado menor.
+- **Heading 05:** Space Grotesk Bold – 32px. Subtítulo.
+- **Heading 06:** Space Grotesk SemiBold – 24px. Encabezado pequeño dentro de una tarjeta o panel.
+- **Texto principal:** Space Grotesk Regular – 18px. Párrafos, indicadores y valores técnicos. El texto destacado usa Bold, las citas Italic y los enlaces Regular con subrayado y color azul.
+- **Captions:** Space Grotesk ExtraLight Italic – 18px. Acompañan gráficas y tablas sin competir con el dato.
+
+Los pesos disponibles van de Thin a Black. En la práctica se usan Regular para leer, Medium y SemiBold para la jerarquía intermedia, y Bold o Black para lo que debe verse primero. Los valores técnicos, como PPM y dBA, permanecen en Space Grotesk para conservar una sola familia en cifras, unidades y etiquetas.
+
+![Escala tipográfica](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 2 - Type Scale.png>)
+
+![Pesos tipográficos](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 3 - Font Weights.png>)
+
+![Convención de nombres](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 4 - Naming Convention.png>)
+
+![Ejemplos de la escala](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 5 - Type Scale Examples.png>)
+
+![Headings](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 7 - Headings.png>)
+
+**Espaciado:**
+
+El espaciado ordena la relación entre texto, controles y bloques de información. La base de 16px fija una retícula de 8px, la misma lógica de espaciado de Tailwind, adaptada a esta interfaz. Los intervalos crecen en múltiplos de esa unidad —8, 16, 24 y 32px— para que márgenes, separación entre tarjetas y aire alrededor de los indicadores sigan el mismo ritmo en escritorio y en móvil. El interlineado de 1.5 evita comprimir los valores de CO₂, ruido y estado. Los botones, campos y paneles usan un radio de 10px: suaviza el contorno y conserva la sobriedad de una consola de planta.
+
+**Tono de comunicación:**
+
+El lenguaje se define sobre cuatro dimensiones, de acuerdo con el contexto de uso: un supervisor o un gerente que consulta el estado de la planta y, en ocasiones, debe actuar sobre un incidente.
+
+- **Serio.** La interfaz informa riesgo ocupacional y cumplimiento. Las etiquetas nombran la condición con precisión —Crítico, Advertencia, Información, Normal, Precaución, Elevado— y reservan el énfasis visual para la severidad.
+- **Formal y accesible.** Se mantiene el término técnico que el personal ya usa (CO₂, PPM, dBA, zona, nodo), en etiquetas de una a cuatro palabras. Un botón dice "Reconocer" o "Guardar Límite de CO₂", y un indicador muestra el límite junto al valor.
+- **Respetuoso.** El sistema se dirige al supervisor de seguridad y al gerente de planta como responsables de la operación. Los mensajes describen el estado y la acción disponible, sin culpabilizar al usuario ni minimizar el evento.
+- **Sereno.** Ante una alerta, el texto se mantiene directo y calmado. La urgencia la comunican el color, la jerarquía y el orden del incidente —detección, mitigación, confirmación y cierre—, no la exageración del mensaje. Esa calma favorece una respuesta oportuna.
+
+En conjunto, el tono es profesional y técnico, y se mantiene claro para quien opera en planta.
 
 <a id="s-5-1-2"></a>
 ### 5.1.2. Web, Mobile and IoT Style Guidelines
 
-Para el diseño web, móvil y de los dispositivos IoT usamos la misma paleta de colores y tipografía, pues la consistencia permite que el usuario perciba continuidad entre las pantallas. Todos los elementos usan bordes redondeados de 10px para lograr un estilo amigable a la vista. Empleamos distintos tamaños de letra y variaciones de color para evitar la sobrecarga de información, y cuidamos que cada pantalla tenga un descanso visual adecuado.
+SAFEPLANT mantiene la misma paleta, la misma tipografía y los mismos colores de severidad en la consola web, la aplicación móvil y la lectura del nodo IoT. Cambia el gesto y el espacio disponible. En escritorio se comparan varias zonas a la vez. En el teléfono se consulta y se reconoce una alerta con una mano. En la planta, el dispositivo ejecuta la respuesta física y la confirmación queda en la pantalla del supervisor.
 
-**Headings:** del H1 al H6 definen la jerarquía de la información. El H1 se usa para el título principal de la página y el H6 para títulos pequeños dentro de secciones.
+**Interfaz web**
 
-**Body text:** el texto de cuerpo usa 18px. Los párrafos van en Regular, el texto destacado en Bold, las citas en Italic y los enlaces se distinguen por su subrayado y color.
+El diseño web es limpio y está centrado en la operación. Las tarjetas resumen primero el estado —CO₂, presión acústica, personal en zona y alertas— y después dejan paso a la tabla y a la curva. Las gráficas marcan el límite normativo con una línea de contraste alto, para ver de inmediato si la lectura lo superó. Cada zona, sensor y actuador lleva un ícono y el color de severidad definido en la guía.
 
-**Captions:** acompañan imágenes y tablas (por ejemplo, gráficos de [datos de sensores / monitoreo]) con un peso ExtraLight en cursiva para no competir con el contenido principal.
+Los botones primarios son redondeados, con fondo #0F2744 y texto blanco. Los secundarios usan el azul #2563EB o el fondo claro #CBDBF5. El rojo #EF4444 identifica la severidad crítica y la confirmación de una acción que interrumpe una mitigación, y así queda separado del botón de trabajo habitual. Cada botón responde en Normal, Hover y Clicked / Checked.
 
-**Forms:** incluyen etiquetas, placeholders, mensajes de error (Bold y color de énfasis) y textos de ayuda, por ejemplo al registrarse o configurar un dispositivo.
+Las tablas listan incidentes, zonas y nodos. El encabezado marca la jerarquía, la severidad ocupa un lugar visible y las filas se separan para recorrer código, lectura y estado. Zona, severidad y ventana temporal se filtran en la misma vista.
 
-**Buttons:** se definen tres tamaños de texto: primario (Bold, 24px), secundario (Regular, 24px) y pequeño (Regular, 20px). Los botones tienen tres estados (Normal, Hover y Clicked / Checked) que se oscurecen para dar retroalimentación inmediata.
+Las confirmaciones usan ventanas propias de la aplicación, sobre un fondo atenuado, con la acción y el cierre visibles. Sirven para reconocer un incidente o guardar un umbral. En web, móvil e IoT se usan los mismos controles genéricos: botones, campos de búsqueda, paneles de filtro y ventanas emergentes.
 
-**Caja de texto:** usa bordes de 10px, un ícono de búsqueda a la derecha y el texto guía "Ingrese texto aquí…".
+![Composición web: tarjetas, curva y tabla](../assets/05-capitulo-v/style-guidelines/web-layout-generico.jpg)
 
-**Ventanas desplegables y emergentes:** las desplegables agrupan opciones relacionadas (menús, filtros) con título, ítems separados por divisores y un botón de acción. Las emergentes mantienen la misma estructura, pero se muestran sobre un fondo atenuado para pedir confirmación o mostrar alertas importantes, como la [alerta de un sensor].
+![Estados de los botones](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 12 - Button states (Light).png>)
 
+![Cajas de texto](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 13 - Text input boxes (Light).png>)
 
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (7).png>)
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (8).png>)
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (9).png>)
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (10).png>)
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (11).png>)
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (12).png>)
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (13).png>)
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (14).png>)
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (15).png>)
+![Paneles desplegables](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 14 - Dropdown panels (Light).png>)
+
+![Ventanas emergentes](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 15 - Pop-up windows (Light).png>)
+
+**Interfaz móvil**
+
+La aplicación conserva los nombres de sección y el significado de cada color. El contenido pasa a una columna, la navegación baja a una barra de cinco íconos —Panel, Alertas, Umbrales, Historial y Equipos— y la alerta crítica queda arriba, al alcance del pulgar. Reconocer o aceptar se hace sobre la tarjeta. En un ancho menor, las tarjetas y las gráficas se apilan y las etiquetas se mantienen.
+
+![Composición móvil](../assets/05-capitulo-v/style-guidelines/mobile-layout-generico.jpg)
+
+**Interfaz de la aplicación IoT y del dispositivo físico**
+
+En el panel y en Equipos, el nodo usa el mismo lenguaje que la consola: En línea, En diagnóstico, sensor, extractor, alarma y mampara. La vista es compacta porque el supervisor la consulta en planta, a menudo desde el teléfono.
+
+La interfaz física del nodo comunica el riesgo con la actuación. El ESP32 mide CO₂, ruido y presencia, y quien está en la zona percibe el ventilador de extracción, la alarma acústica o la mampara de seguridad. Esos efectos siguen la misma regla que la alerta en pantalla. Reconocer el incidente y cambiar un umbral se hacen en la aplicación o en la web, para que el personal no tenga que operar el nodo dentro del área expuesta. Si el enlace falla, la interfaz muestra diagnóstico o pérdida de telemetría, y la actuación local sigue disponible en la planta.
+
+![Interfaz física del nodo](../assets/05-capitulo-v/style-guidelines/iot-fisico-generico.jpg)
 <a id="s-5-2"></a>
 
 
 ## 5.2. Information Architecture
+
+La arquitectura de información de SAFEPLANT guía al supervisor de seguridad y al gerente de planta de forma lógica, eficiente y contextual. Cada módulo sigue el ciclo de la seguridad en planta: leer las condiciones de la zona (CO₂, ruido y presencia), detectar la exposición, ejecutar la mitigación, confirmar el incidente y dejar el registro listo para auditoría. Así, el dato técnico se captura en el momento y queda disponible para el análisis y la decisión posterior, tanto en la consola web como en el teléfono.
+
+El Panel de Control es el punto de entrada porque la primera pregunta del usuario es el estado de la planta. Desde ahí, la arquitectura acerca el detalle solo cuando aparece una anomalía, hace falta ajustar un umbral o conviene revisar un nodo. El supervisor recorre todas las secciones y puede configurar el sistema. El gerente consulta el panel y el historial, sin modificar la operación.
+
+A continuación se detallan los sistemas de organización, etiquetado, posicionamiento web, búsqueda y navegación que sostienen esa experiencia.
 
 <a id="s-5-2-1"></a>
 ### 5.2.1. Organization Systems
