@@ -333,13 +333,13 @@ WEB:
 
 MOVIL:
 
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (1).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (2).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (3).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (4).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (5).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (6).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (7).png>)
+![Iniciar sesión](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Iniciar Sesión (Minimalista & Cálido).png>)
+![Registro](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Registro (Estilo Limpio & Oficial).png>)
+![Panel de Control](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Panel de Control.png>)
+![Alertas Activas](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Alertas Activas.png>)
+![Umbrales de Seguridad](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Umbrales de Seguridad.png>)
+![Historial y Eventos](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Historial y Eventos.png>)
+![Dispositivos por Área](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Dispositivos por Área.png>)
 
 <a id="s-5-4-4"></a>
 ### 5.4.4. Applications User Flow Diagrams
