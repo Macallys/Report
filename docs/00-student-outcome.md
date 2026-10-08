@@ -461,6 +461,7 @@ SafePlant
         - [6.2.1. Sprint 1](informe.md#s-6-2-1)
             - [6.2.1.1. Sprint Planning 1](informe.md#s-6-2-1-1)
             - [6.2.1.2. Aspect Leaders and Collaborators](informe.md#s-6-2-1-2)
+            - [6.2.1.3. Sprint Backlog 1](informe.md#s-6-2-1-3)
             - [6.2.1.4. Development Evidence for Sprint Review](informe.md#s-6-2-1-4)
             - [6.2.1.5. Testing Suite Evidence for Sprint Review](informe.md#s-6-2-1-5)
             - [6.2.1.6. Execution Evidence for Sprint Review](informe.md#s-6-2-1-6)
