@@ -6,3 +6,4 @@ docs/.informe-export.html
 
 # PDFs generados / de referencia (no versionar)
 *.pdf
+.cursor/

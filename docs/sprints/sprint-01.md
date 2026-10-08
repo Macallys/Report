@@ -255,8 +255,9 @@ Al cierre del Sprint 1, la landing page de SafePlant está disponible públicame
 
 ![E1ecution Evidence](../../assets/06-capitulo-vi/sprints/landing.png)
 
-**URL de la aplicación web:** [https://safeplant-web-client.vercel.app/signIn]
+**URL de la aplicación web:** https://safeplant-web-client.vercel.app/signIn
 
+**URL del backend (cloud):** https://wa-safeplant-cloudbackend-prod-hpe0b8bra9ftfshg.canadacentral-01.azurewebsites.net
 
 ![E1ecution Evidence](../../assets/06-capitulo-vi/sprints/web.png)
 
@@ -264,7 +265,9 @@ Al cierre del Sprint 1, la landing page de SafePlant está disponible públicame
 ## 6.2.1.7. Services Documentation Evidence for Sprint Review
 
 
-En este sprint se documentaron con OpenAPI (Swagger) los endpoints del bounded context Identity &amp; Access: el registro de usuarios y el inicio de sesión con emisión de JWT.
+En este sprint se documentaron con OpenAPI (Swagger) los endpoints del bounded context Identity &amp; Access implementados en <code>Cloud.Api</code>: autenticación, sesión, recuperación de credenciales y directorio de cuentas.
+
+**URL base del backend (Azure):** https://wa-safeplant-cloudbackend-prod-hpe0b8bra9ftfshg.canadacentral-01.azurewebsites.net
 
 <table>
   <thead>
@@ -279,20 +282,68 @@ En este sprint se documentaron con OpenAPI (Swagger) los endpoints del bounded c
   </thead>
   <tbody>
     <tr>
-      <td align="left">Sign up</td>
-      <td align="left">POST</td>
-      <td align="left"><code>[/api/v1/auth/sign-up]</code></td>
-      <td align="left">Body JSON: <code>email</code>, <code>password</code>, <code>role</code></td>
-      <td align="left"><code>201 Created</code> con el identificador de la cuenta creada; <code>409 Conflict</code> si el correo ya está registrado.</td>
-      <td align="left">[URL Swagger]</td>
-    </tr>
-    <tr>
       <td align="left">Sign in</td>
       <td align="left">POST</td>
       <td align="left"><code>/api/v1/auth/login</code></td>
-      <td align="left">Body JSON: <code>email</code>, <code>password</code></td>
-      <td align="left"><code>200 OK</code> con <code>accessToken</code>, <code>role</code> y <code>expiresIn</code>; <code>401 Unauthorized</code> con <code>invalid_credentials</code> si las credenciales no son válidas.</td>
-      <td align="left">[URL Swagger]</td>
+      <td align="left">Body JSON: <code>email</code>, <code>password</code>, <code>channel</code> (<code>Web</code> o <code>Mobile</code>)</td>
+      <td align="left"><code>200 OK</code> con <code>accessToken</code>, <code>role</code>, <code>expiresAt</code>; <code>401</code> <code>invalid_credentials</code>; <code>403</code> <code>account_disabled</code> o <code>role_not_allowed</code>.</td>
+      <td align="left"><a href="http://localhost:5297/swagger">Swagger UI</a></td>
+    </tr>
+    <tr>
+      <td align="left">Logout</td>
+      <td align="left">POST</td>
+      <td align="left"><code>/api/v1/auth/logout</code></td>
+      <td align="left">Header <code>Authorization: Bearer &lt;accessToken&gt;</code>. Sin body.</td>
+      <td align="left"><code>204 No Content</code>; <code>401</code> <code>unauthorized</code> si el token o la sesión no son válidos.</td>
+      <td align="left"><a href="http://localhost:5297/swagger">Swagger UI</a></td>
+    </tr>
+    <tr>
+      <td align="left">Request recovery</td>
+      <td align="left">POST</td>
+      <td align="left"><code>/api/v1/auth/recovery</code></td>
+      <td align="left">Body JSON: <code>email</code></td>
+      <td align="left"><code>202 Accepted</code> sin cuerpo (misma respuesta si el correo no existe o la cuenta está deshabilitada).</td>
+      <td align="left"><a href="http://localhost:5297/swagger">Swagger UI</a></td>
+    </tr>
+    <tr>
+      <td align="left">Reset password</td>
+      <td align="left">POST</td>
+      <td align="left"><code>/api/v1/auth/reset</code></td>
+      <td align="left">Body JSON: <code>token</code>, <code>password</code></td>
+      <td align="left"><code>204 No Content</code>; <code>422</code> <code>recovery_expired</code> si el token venció o ya se usó.</td>
+      <td align="left"><a href="http://localhost:5297/swagger">Swagger UI</a></td>
+    </tr>
+    <tr>
+      <td align="left">Create user</td>
+      <td align="left">POST</td>
+      <td align="left"><code>/api/v1/users</code></td>
+      <td align="left">Bearer de Plant Manager en canal <code>Web</code>. Body JSON: <code>email</code>, <code>password</code>, <code>role</code> (<code>PlantManager</code> o <code>Supervisor</code>).</td>
+      <td align="left"><code>201 Created</code> con <code>id</code>, <code>email</code>, <code>role</code>, <code>enabled</code>; <code>409</code> <code>email_already_exists</code>; <code>403</code> <code>role_not_allowed</code>.</td>
+      <td align="left"><a href="http://localhost:5297/swagger">Swagger UI</a></td>
+    </tr>
+    <tr>
+      <td align="left">Assign role</td>
+      <td align="left">PATCH</td>
+      <td align="left"><code>/api/v1/users/{accountId}/role</code></td>
+      <td align="left">Bearer de Plant Manager en canal <code>Web</code>. Body JSON: <code>role</code>.</td>
+      <td align="left"><code>200 OK</code> con <code>id</code>, <code>email</code>, <code>role</code>, <code>enabled</code>; <code>404</code> <code>account_not_found</code>; <code>403</code> <code>role_not_allowed</code>.</td>
+      <td align="left"><a href="http://localhost:5297/swagger">Swagger UI</a></td>
+    </tr>
+    <tr>
+      <td align="left">Set enabled</td>
+      <td align="left">PATCH</td>
+      <td align="left"><code>/api/v1/users/{accountId}/enabled</code></td>
+      <td align="left">Bearer de Plant Manager en canal <code>Web</code>. Body JSON: <code>enabled</code> (boolean).</td>
+      <td align="left"><code>200 OK</code> con <code>id</code>, <code>email</code>, <code>role</code>, <code>enabled</code>; <code>404</code> <code>account_not_found</code>; <code>403</code> <code>role_not_allowed</code>.</td>
+      <td align="left"><a href="http://localhost:5297/swagger">Swagger UI</a></td>
+    </tr>
+    <tr>
+      <td align="left">List users</td>
+      <td align="left">GET</td>
+      <td align="left"><code>/api/v1/users</code></td>
+      <td align="left">Bearer de Plant Manager en canal <code>Web</code>.</td>
+      <td align="left"><code>200 OK</code> con <code>items</code> (array de <code>id</code>, <code>email</code>, <code>role</code>, <code>enabled</code>); <code>403</code> <code>role_not_allowed</code>.</td>
+      <td align="left"><a href="http://localhost:5297/swagger">Swagger UI</a></td>
     </tr>
   </tbody>
 </table>
@@ -303,11 +354,11 @@ En este sprint se documentaron con OpenAPI (Swagger) los endpoints del bounded c
 <a id="s-6-2-1-8"></a>
 ## 6.2.1.8. Software Deployment Evidence for Sprint Review
 
-En el Sprint 1 se desplegaron la landing page y la aplicación web. La landing page se publicó en GitHub Pages desde el repositorio <code>landing-page</code> de la organización Macallys. La aplicación web Angular se publicó en [plataforma de despliegue]. El backend esta desplegado en {}.
+En el Sprint 1 se desplegaron la landing page, la aplicación web y el backend en la nube. La landing page se publicó en GitHub Pages desde el repositorio <code>landing-page</code> de la organización Macallys. La aplicación web Angular se publicó en Vercel (<code>safeplant-web-client</code>). El backend (<code>Cloud.Api</code>) se publicó en Azure App Service: https://wa-safeplant-cloudbackend-prod-hpe0b8bra9ftfshg.canadacentral-01.azurewebsites.net
 
 ![alt text](../../assets/06-capitulo-vi/sprints/deploy.png)
 
-![alt text](../../assets/06-capitulo-vi/sprints/deploy1 .png)
+![alt text](../../assets/06-capitulo-vi/sprints/deploy1.png)
 
 <a id="s-6-2-1-9"></a>
 ## 6.2.1.9. Team Collaboration Insights during Sprint
