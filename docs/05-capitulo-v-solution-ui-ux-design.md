@@ -319,7 +319,87 @@ La versión móvil reorganiza el contenido en una columna para facilitar la lect
 <a id="s-5-4-2"></a>
 ### 5.4.2. Applications Wireflow Diagrams
 
-![Applications Wireflow](../assets/05-capitulo-v/applications/wireflow.png)
+Los wireflows de SAFEPLANT combinan las pantallas diseñadas para la aplicación web y la aplicación móvil con flechas de navegación, de modo que cada diagrama muestra cómo el usuario pasa de una pantalla a otra para cumplir un objetivo. Cada diagrama se presenta como un *User Goal* con una breve descripción de su recorrido.
+
+El texto sobre cada flecha indica el elemento de la interfaz (botón, enlace, pestaña o menú lateral) que dispara la transición. El código USxx del título de cada pantalla identifica la user story a la que responde. Los flujos se agrupan por canal: la aplicación web de gobernanza y métricas, utilizada por el Encargado de Planta, y la aplicación móvil de operación, utilizada por el Supervisor de Seguridad.
+
+**Aplicación Web (Encargado de Planta)**
+
+*User Goal: Completar el registro y activar la cuenta (web).*
+
+Una vez creada su cuenta desde Gobernanza, el usuario accede a la pantalla "Completar Registro", donde configura su rol o cargo operativo, confirma su correo corporativo y crea y confirma su contraseña. Al presionar "Activar Cuenta y Entrar" ingresa al Panel de control. Si ya tiene una cuenta activa, puede ir a "Iniciar Sesión" mediante el enlace "¿Ya tienes cuenta activa? Inicia sesión".
+
+![Completar el registro y activar la cuenta (web).](../assets/05-capitulo-v/applications/wireflows/w_registro_web.png)
+
+*User Goal: Iniciar sesión (web).*
+
+El Encargado de Planta ingresa su correo electrónico corporativo y su contraseña, y presiona "Ingresar al Sistema" para acceder al Panel de control. Si todavía no tiene cuenta, el enlace "Regístrate" lo lleva a la pantalla de registro.
+
+![Iniciar sesión (web).](../assets/05-capitulo-v/applications/wireflows/w_login_web.png)
+
+*User Goal: Recuperar el acceso a la cuenta (web).*
+
+Cuando el usuario olvida su contraseña, accede desde el inicio de sesión a "Recuperar credenciales", ingresa su correo corporativo y solicita el enlace de restablecimiento con "Enviar enlace de restablecimiento". Desde esta pantalla no se crean usuarios; el enlace "Volver a iniciar sesión" lo regresa al formulario de acceso.
+
+![Recuperar el acceso a la cuenta (web).](../assets/05-capitulo-v/applications/wireflows/w_recuperar_web.png)
+
+*User Goal: Monitorear la telemetría ambiental y revisar las alertas (web).*
+
+Desde el Panel de control, el encargado visualiza el nivel promedio de CO₂, la presión acústica, el personal en zonas críticas, la matriz ambiental por zonas y las reglas de respuesta automática. Mediante el menú lateral accede a "Alertas", donde consulta el registro de alertas y eventos de seguridad, el flujo de auditoría de incidentes y el historial de telemetría, y puede regresar al Panel de Control en cualquier momento.
+
+![Monitorear la telemetría ambiental y revisar las alertas (web).](../assets/05-capitulo-v/applications/wireflows/w_panel_alertas_web.png)
+
+*User Goal: Gestionar las cuentas de supervisores en Gobernanza.*
+
+Desde el menú lateral, el encargado selecciona "Gobernanza" y visualiza el directorio de supervisores, con búsqueda, edición, eliminación y exportación. Con el botón "+ Añadir supervisor" abre la ventana "Añadir Nuevo Usuario", ingresa el correo corporativo y presiona "Crear supervisor y ver clave"; el sistema muestra en pantalla la clave temporal generada y retorna al directorio. También puede cancelar la operación.
+
+![Gestionar las cuentas de supervisores en Gobernanza.](../assets/05-capitulo-v/applications/wireflows/w_gobernanza_web.png)
+
+*User Goal: Cerrar la sesión activa (web).*
+
+Desde el menú lateral de la aplicación, el usuario presiona "Cerrar sesión". El sistema finaliza la sesión y lo devuelve a la pantalla de "Iniciar Sesión", desde donde deberá autenticarse nuevamente para acceder a las funciones protegidas.
+
+![Cerrar la sesión activa (web).](../assets/05-capitulo-v/applications/wireflows/w_logout_web.png)
+
+**Aplicación Móvil (Supervisor de Seguridad)**
+
+*User Goal: Completar la cuenta e ingresar (móvil).*
+
+El supervisor invitado abre la pantalla "Completa tu cuenta", donde ve su correo corporativo y su rol preasignado "Supervisor/a de Seguridad" por invitación. Crea y confirma su contraseña y presiona "Completar Registro e Ingresar" para entrar al Panel de la aplicación. Si ya tiene una cuenta activa, el enlace "Iniciar sesión" lo lleva al acceso.
+
+![Completar la cuenta e ingresar (móvil).](../assets/05-capitulo-v/applications/wireflows/w_registro_mov.png)
+
+*User Goal: Iniciar sesión (móvil).*
+
+El supervisor ingresa su correo corporativo y su contraseña, puede marcar la opción "Recordar mi cuenta en este teléfono" y presiona "Entrar a SafePlant" para llegar al Panel. Si aún no tiene cuenta, el enlace "Registrarse" lo lleva a la pantalla de registro.
+
+![Iniciar sesión (móvil).](../assets/05-capitulo-v/applications/wireflows/w_login_mov.png)
+
+*User Goal: Monitorear la planta por zonas y revisar las alertas (móvil).*
+
+Desde el Panel, el supervisor observa en tiempo real el nivel de CO₂, la presión acústica, el estado de cada zona y las reglas de causa-efecto activas. Con la pestaña "Alertas" de la barra inferior accede a las alertas e incidentes, donde ve su severidad, la mitigación del PLC en curso y las tendencias de las últimas 24 horas, y puede reconocer o aceptar cada alerta. Con la pestaña "Panel" regresa al resumen.
+
+![Monitorear la planta por zonas y revisar las alertas (móvil).](../assets/05-capitulo-v/applications/wireflows/w_panel_alertas_mov.png)
+
+*User Goal: Configurar los umbrales de CO₂ y ruido por zona.*
+
+El supervisor puede llegar a "Umbrales" desde la pestaña de la barra inferior o directamente desde una alerta mediante el botón de ajuste. En esta pantalla elige la zona activa, modifica el límite de CO₂ y de ruido con los controles "−" y "+", guarda cada límite y verifica su estado de sincronización en la matriz comparativa de zonas.
+
+![Configurar los umbrales de CO₂ y ruido por zona.](../assets/05-capitulo-v/applications/wireflows/w_umbrales_mov.png)
+
+*User Goal: Consultar el historial de telemetría.*
+
+Desde el Panel, el supervisor selecciona la pestaña "Historial" y revisa las curvas de CO₂ y presión acústica frente a su límite, el promedio y el tiempo de respuesta del PLC, filtra el periodo (24 h, 7 d o 30 d), busca en el registro de eventos y puede exportar el reporte en PDF.
+
+![Consultar el historial de telemetría.](../assets/05-capitulo-v/applications/wireflows/w_historial_mov.png)
+
+*User Goal: Supervisar los dispositivos por área.*
+
+Desde el Panel, el supervisor selecciona la pestaña "Equipos" y visualiza, por cada zona, los sensores de monitoreo (sonido, CO₂ y movimiento) y los actuadores de control (ventilador de extracción, alarma acústica y mamparas de seguridad) con su estado en vivo.
+
+![Supervisar los dispositivos por área.](../assets/05-capitulo-v/applications/wireflows/w_equipos_mov.png)
+
+
 
 <a id="s-5-4-3"></a>
 ### 5.4.3. Applications Mock-ups
@@ -346,7 +426,35 @@ MOVIL:
 <a id="s-5-4-4"></a>
 ### 5.4.4. Applications User Flow Diagrams
 
-![Applications User Flow](../assets/05-capitulo-v/applications/user-flow.png)
+Los user flow diagrams describen, en formato de historia de usuario, el recorrido completo que sigue cada actor para cumplir una tarea de SAFEPLANT. Los círculos numerados indican el orden de los pasos y el texto sobre cada flecha, la acción o condición que hace avanzar al usuario. A diferencia de los wireflows, que detallan la navegación entre pantallas, estos diagramas se centran en la secuencia de la tarea de principio a fin e incluyen transiciones entre el canal web y el móvil.
+
+**USER GOAL: Alta de un supervisor y activación de su cuenta.** Como Encargado de Planta, puedo crear desde Gobernanza la cuenta de un supervisor de seguridad; el sistema muestra en pantalla una clave temporal que le entrego directamente, sin enviarla por correo. Con ella, el supervisor completa su registro en la aplicación móvil, donde su rol ya viene preasignado por invitación, y accede al Panel de telemetría de la planta.
+
+![Alta de un supervisor y activación de su cuenta](../assets/05-capitulo-v/applications/user-flows/u_alta_cuenta.png)
+
+**USER GOAL: Ingreso y supervisión desde la web.** Como Encargado de Planta, puedo iniciar sesión con mis credenciales corporativas y ver el panel de control con la telemetría de seguridad ambiental de la planta. Desde allí paso al registro de alertas y eventos para auditar los incidentes, su estado de mitigación y las curvas de telemetría, y así gobernar la operación con información consolidada.
+
+![Ingreso y supervisión desde la web](../assets/05-capitulo-v/applications/user-flows/u_login_web.png)
+
+**USER GOAL: Ingreso y atención de alertas desde el móvil.** Como Supervisor de Seguridad, puedo iniciar sesión en la aplicación móvil desde cualquier lugar y ver el estado de cada zona de la planta. Cuando una zona presenta una condición de precaución, entro a Alertas para conocer el incidente, el tiempo de respuesta y la mitigación automática que el sistema ya ejecutó.
+
+![Ingreso y atención de alertas desde el móvil](../assets/05-capitulo-v/applications/user-flows/u_login_mov.png)
+
+**USER GOAL: Recuperar el acceso a mi cuenta.** Como usuario registrado, puedo recuperar el acceso cuando olvido mi contraseña: solicito el enlace de restablecimiento con mi correo corporativo, lo recibo en mi bandeja, defino una nueva contraseña, vuelvo a iniciar sesión y retomo mi trabajo en el Panel de control.
+
+![Recuperar el acceso a mi cuenta](../assets/05-capitulo-v/applications/user-flows/u_recuperar.png)
+
+**USER GOAL: Atender una alerta crítica de CO₂.** Como Supervisor de Seguridad, puedo detectar en el Panel que una zona, por ejemplo la Zona C de Fundición e Inducción, supera el nivel normal de CO₂. En Alertas reconozco el incidente mientras el PLC mantiene activa la mitigación, ajusto el umbral de la zona en Umbrales si corresponde y verifico en Historial la curva del pico y el tiempo de respuesta del sistema, para dejar el evento auditado.
+
+![Atender una alerta crítica de CO₂](../assets/05-capitulo-v/applications/user-flows/u_alerta_critica.png)
+
+**USER GOAL: Verificar los equipos de una zona y auditar los eventos.** Como Supervisor de Seguridad, puedo revisar desde el Panel una zona con lecturas elevadas, comprobar en Equipos que los sensores y actuadores (ventilador, alarma y mamparas) funcionan y están en el estado esperado, y luego consultar el Historial para auditar los eventos y la efectividad de la respuesta automática.
+
+![Verificar los equipos de una zona y auditar los eventos](../assets/05-capitulo-v/applications/user-flows/u_equipos.png)
+
+**USER GOAL: Gestionar el directorio de supervisores.** Como Encargado de Planta, puedo abrir Gobernanza desde el Panel de control, consultar el directorio de supervisores activos y añadir uno nuevo con su correo corporativo. Al crearlo obtengo su clave temporal y regreso al directorio actualizado, con lo que controlo quién accede a la operación móvil de la planta.
+
+![Gestionar el directorio de supervisores](../assets/05-capitulo-v/applications/user-flows/u_gobernanza.png)
 
 <a id="s-5-5"></a>
 ## 5.5. Applications Prototyping
