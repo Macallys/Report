@@ -354,6 +354,7 @@ SafePlant
             - [2.2.2.1. Segmento objetivo 1: Supervisor de Seguridad (App Móvil)](#s-2-2-2-1)
                 - [2.2.2.1.1. Entrevista 1](#s-2-2-2-1-1)
                 - [2.2.2.1.2. Entrevista 2](#s-2-2-2-1-2)
+                - [2.2.2.1.3. Entrevista 3](#s-2-2-2-1-3)
             - [2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)](#s-2-2-2-2)
                 - [2.2.2.2.1. Entrevista 1](#s-2-2-2-2-1)
                 - [2.2.2.2.2. Entrevista 2](#s-2-2-2-2-2)
@@ -443,9 +444,9 @@ SafePlant
         - [5.4.3. Applications Mock-ups](#s-5-4-3)
         - [5.4.4. Applications User Flow Diagrams](#s-5-4-4)
     - [5.5. Applications Prototyping](#s-5-5)
-            - [5.5.1. Criterios de diseño y decisiones de interacción](#s-5-5-1)
-            - [5.5.2. Prototipos web de escritorio y móvil](#s-5-5-2)
-        - [5.6. IoT Device Design](#s-5-6)
+        - [5.5.1. Criterios de diseño y decisiones de interacción](#s-5-5-1)
+        - [5.5.2. Prototipos web de escritorio y móvil](#s-5-5-2)
+    - [5.6. IoT Device Design](#s-5-6)
 - [Capítulo VI: Product Implementation, Validation & Deployment](#s-cap-vi)
     - [6.1. Software Configuration Management](#s-6-1)
         - [6.1.1. Software Development Environment Configuration](#s-6-1-1)
@@ -453,6 +454,15 @@ SafePlant
         - [6.1.3. Source Code Style Guide & Conventions](#s-6-1-3)
         - [6.1.4. Software Deployment Configuration](#s-6-1-4)
     - [6.2. Landing Page, Services & Applications Implementation](#s-6-2)
+        - [6.2.1. Sprint 1](#s-6-2-1)
+            - [6.2.1.1. Sprint Planning 1](#s-6-2-1-1)
+            - [6.2.1.2. Aspect Leaders and Collaborators](#s-6-2-1-2)
+            - [6.2.1.4. Development Evidence for Sprint Review](#s-6-2-1-4)
+            - [6.2.1.5. Testing Suite Evidence for Sprint Review](#s-6-2-1-5)
+            - [6.2.1.6. Execution Evidence for Sprint Review](#s-6-2-1-6)
+            - [6.2.1.7. Services Documentation Evidence for Sprint Review](#s-6-2-1-7)
+            - [6.2.1.8. Software Deployment Evidence for Sprint Review](#s-6-2-1-8)
+            - [6.2.1.9. Team Collaboration Insights during Sprint](#s-6-2-1-9)
     - [6.3. Validation Interviews](#s-6-3)
         - [6.3.1. Diseño de Entrevistas](#s-6-3-1)
         - [6.3.2. Registro de Entrevistas](#s-6-3-2)
@@ -675,9 +685,11 @@ Aspiramos a convertirnos en el estándar líder en la automatización de la segu
 
 **Antecedentes**
 
-El sector industrial enfrenta retos constantes relacionados a la salud ocupacional y el cumplimiento de las normativas ambientales. Según la Organización Internacional del Trabajo, cada año se producen millones de casos de enfermedades profesionales en el mundo derivadas de la exposición prolongada a agentes químicos y físicos en el lugar de trabajo. La acumulación de CO2 en espacios confinados y la alta contaminación sonora por maquinaria pesada figuran entre los principales causantes de bajas médicas y problemas respiratorios. 
+La exposición laboral a agentes físicos y químicos sigue siendo una causa mayor de enfermedad y muerte. Las estimaciones conjuntas de la Organización Mundial de la Salud y la Organización Internacional del Trabajo indican que casi dos millones de personas mueren cada año por causas relacionadas con el trabajo (World Health Organization & International Labour Organization, 2021). En planta, dos de esos agentes son el ruido de la maquinaria y el dióxido de carbono en zonas con poca ventilación.
 
-Las soluciones actuales implementadas en muchas plantas son insuficientes: dependen de mediciones manuales esporádicas o de sistemas antiguos que solo emiten alertas visuales en paneles fijos, pero no toman acciones correctivas de manera automática. Esto deja a los trabajadores expuestos al riesgo hasta que un operador humano se da cuenta y enciende un extractor o evacúa el área.
+El National Institute for Occupational Safety and Health (1998) fija en 85 dB(A), como promedio de ocho horas, el nivel a partir del cual el ruido ocupacional se considera peligroso y exige un programa de prevención de la pérdida auditiva. En el Perú, la Resolución Ministerial N.° 375-2008-TR recoge ese mismo criterio para la jornada de ocho horas (Ministerio de Trabajo y Promoción del Empleo, 2008). Para el CO₂, el límite de exposición ocupacional de referencia es de 5 000 ppm como promedio de ocho horas (National Institute for Occupational Safety and Health, s. f.; Occupational Safety and Health Administration, s. f.). La Ley N.° 29783 obliga al empleador a prevenir esos riesgos y a dejar evidencia de la gestión (Congreso de la República del Perú, 2011), en la línea de un sistema de gestión como el que describe la ISO 45001 (Organización Internacional de Normalización, 2018).
+
+Las plantas suelen depender todavía de mediciones manuales o de paneles que solo avisan, sin accionar la ventilación ni registrar la exposición. Esa demora deja al personal en la zona hasta que alguien recorre el área, enciende un extractor o evacúa. SafePlant parte de ese antecedente: monitorear CO₂, ruido y presencia, y mitigar sin esperar el recorrido.
 
 **Problematica**
 
@@ -1038,6 +1050,40 @@ Las entrevistas fueron grabadas en video previo consentimiento de los participan
   </tr>
 </table>
 
+<a id="s-2-2-2-1-3"></a>
+##### 2.2.2.1.3. Entrevista 3
+
+<table border="1">
+  <tr>
+    <td width="40%">
+      <b>Nombres y apellidos:</b> Mark Alex Esquivel Cabrera<br>
+      <b>Edad:</b> 26 años<br>
+      <b>Distrito:</b> Ate<br>
+      <b>Ocupación:</b> Supervisor de seguridad<br>
+      <b>Experiencia laboral:</b> 2 años en el sector industrial<br>
+      <b>Área de trabajo:</b> Planta embotelladora<br>
+      <b>Tipo de establecimiento:</b> Planta<br>
+      <b>Nivel tecnológico:</b> Intermedio<br>
+      <b>Timing:</b> 01:12 - 10:04<br>
+      <b>Duración:</b> 10:04<br>
+      <b>Entrevistador:</b> Johan Giovani Huamán Cuba
+    </td>
+    <td align="center">
+      <img src="../assets/02-capitulo-ii/entrevistas/entrevista-supervisor-2.png" alt="Entrevista 3 - Mark Alex Esquivel Cabrera, Supervisor de Seguridad" width="85%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Enlace:</b>
+      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202417448_upc_edu_pe/IQAbyCZ09KjySpvlaptYhdsFAdVY106873xXl5llO0Zu4Ec?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=h7Xg4U">Ver entrevista en Microsoft Stream</a>
+      <br><br>
+      <b>Resumen:</b> El trabajo del entrevistado depende actualmente de métodos reactivos, enfrentando una profunda frustración al depender de medidores obsoletos o de que el personal presente síntomas físicos (mareos, tos) para detectar fugas de CO₂ invisibles. Su protocolo actual ante incidentes es lento y manual, obligándolo a coordinar evacuaciones, verificar personal en el patio y ventilar abriendo puertas a la antigua, perdiendo minutos vitales.
+      <br><br>
+      Considera indispensable una aplicación móvil que elimine las conjeturas mediante un mapa digitalizado con indicadores visuales de riesgo inmediato (sistema de semáforo rojo/verde). Exige notificaciones persistentes y sonoras tipo alarma despertador que no pasen desapercibidas. Finalmente, destaca como función crítica la capacidad de tomar el control remoto desde su celular para forzar el encendido de extractores o sirenas en caso de que la automatización de la planta falle, permitiéndole actuar antes de que el personal resulte intoxicado.
+    </td>
+  </tr>
+</table>
+
 <a id="s-2-2-2-2"></a>
 #### 2.2.2.2. Segmento objetivo 2: Encargado de Planta (App Web)
 
@@ -1182,15 +1228,52 @@ Los tres encargados piden la misma superficie web: dashboard (mapa o por área, 
 <a id="s-2-2-3-3"></a>
 #### 2.2.3.3. Patrones transversales y divergencias de rol
 
-| Tema | Evidencia | Implicación para SafePlant |
-|---|---|---|
-| Visibilidad en tiempo real por área | Zonas ciegas (Anyeli); rondas manuales (Diego); sensores caídos 6 h (Fabrizio); ESP32 offline (Nathaly) | Telemetría continua de CO₂, ruido y presencia; estado “no disponible” del dispositivo; semáforo / mapa en móvil y dashboard en web |
-| Tiempo de respuesta | 25 min de ciclo en soldadura (Anyeli); traslado a tablero (Diego); paradas de 40 min–2 h (Fabrizio) | Detección + actuación automática de extractores, sirenas y mamparas; override remoto desde el móvil |
-| Configuración manual que no escala | Excel y alta sensor a sensor (Fabrizio, Carlos, Nathaly); normas por correo/PDF (Nathaly) | App web para umbrales por área, inventario de dispositivos y versión / fecha de la norma |
-| Umbrales y falsos positivos | Umbrales distintos por área y presencia (Nathaly); riesgo de bajar un tope (Fabrizio) | Umbrales por área, no globales; permiso de configuración solo en el encargado; correlación con PIR |
-| Auditoría y reportes | Reporte escrito post-incidente (Anyeli); 12 meses y SUNAFIL (Fabrizio); datos dispersos (Carlos); overrides y patrones (Nathaly) | Historial de mediciones, alertas, acciones y cambios de configuración; exportación PDF |
-| Canal según el rol | Móvil para decidir y actuar (Anyeli, Diego); web para gobernar (Fabrizio, Carlos, Nathaly) | Separación estricta: supervisor opera y hace override en móvil; encargado parametriza, usuarios y reportes en web |
-| Resiliencia de planta | Wi-Fi metálica y calor (Fabrizio); offline de gateway (Nathaly) | Procesamiento en el edge, persistencia local y sincronización al recuperar enlace |
+<table border="1">
+  <thead>
+    <tr>
+      <th align="left">Tema</th>
+      <th align="left">Evidencia</th>
+      <th align="left">Implicación para SafePlant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Visibilidad en tiempo real por área</td>
+      <td>Zonas ciegas (Anyeli); rondas manuales (Diego); sensores caídos 6 h (Fabrizio); ESP32 offline (Nathaly)</td>
+      <td>Telemetría continua de CO₂, ruido y presencia; estado “no disponible” del dispositivo; semáforo / mapa en móvil y dashboard en web</td>
+    </tr>
+    <tr>
+      <td>Tiempo de respuesta</td>
+      <td>25 min de ciclo en soldadura (Anyeli); traslado a tablero (Diego); paradas de 40 min–2 h (Fabrizio)</td>
+      <td>Detección y actuación automática de extractores, sirenas y mamparas; override remoto desde el móvil</td>
+    </tr>
+    <tr>
+      <td>Configuración manual que no escala</td>
+      <td>Excel y alta sensor a sensor (Fabrizio, Carlos, Nathaly); normas por correo/PDF (Nathaly)</td>
+      <td>App web para umbrales por área, inventario de dispositivos y versión / fecha de la norma</td>
+    </tr>
+    <tr>
+      <td>Umbrales y falsos positivos</td>
+      <td>Umbrales distintos por área y presencia (Nathaly); riesgo de bajar un tope (Fabrizio)</td>
+      <td>Umbrales por área, no globales; permiso de configuración solo en el encargado; correlación con PIR</td>
+    </tr>
+    <tr>
+      <td>Auditoría y reportes</td>
+      <td>Reporte escrito post-incidente (Anyeli); 12 meses y SUNAFIL (Fabrizio); datos dispersos (Carlos); overrides y patrones (Nathaly)</td>
+      <td>Historial de mediciones, alertas, acciones y cambios de configuración; exportación PDF</td>
+    </tr>
+    <tr>
+      <td>Canal según el rol</td>
+      <td>Móvil para decidir y actuar (Anyeli, Diego); web para gobernar (Fabrizio, Carlos, Nathaly)</td>
+      <td>Separación estricta: supervisor opera y hace override en móvil; encargado parametriza, usuarios y reportes en web</td>
+    </tr>
+    <tr>
+      <td>Resiliencia de planta</td>
+      <td>Wi-Fi metálica y calor (Fabrizio); offline de gateway (Nathaly)</td>
+      <td>Procesamiento en el edge, persistencia local y sincronización al recuperar enlace</td>
+    </tr>
+  </tbody>
+</table>
 
 La divergencia más útil para el diseño no es de “gusto de interfaz”, sino de **responsabilidad**. El supervisor necesita decidir en segundos con el teléfono en la mano; el encargado necesita que nadie más rebaje un umbral y que un auditor pueda reconstruir qué pasó. SafePlant debe impedir que esas dos intenciones se mezclen en el mismo canal.
 
@@ -6586,36 +6669,145 @@ El diseño para el dispositivo móvil, dirigido al Supervisor de Seguridad en ca
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_5.png)
 
-
 <a id="s-5-4-2"></a>
 ### 5.4.2. Applications Wireflow Diagrams
 
-![Applications Wireflow](../assets/05-capitulo-v/applications/wireflow.png)
+Los wireflows de SAFEPLANT combinan las pantallas diseñadas para la aplicación web y la aplicación móvil con flechas de navegación, de modo que cada diagrama muestra cómo el usuario pasa de una pantalla a otra para cumplir un objetivo. Cada diagrama se presenta como un *User Goal* con una breve descripción de su recorrido.
+
+El texto sobre cada flecha indica el elemento de la interfaz (botón, enlace, pestaña o menú lateral) que dispara la transición. El código USxx del título de cada pantalla identifica la user story a la que responde. Los flujos se agrupan por canal: la aplicación web de gobernanza y métricas, utilizada por el Encargado de Planta, y la aplicación móvil de operación, utilizada por el Supervisor de Seguridad.
+
+**Aplicación Web (Encargado de Planta)**
+
+*User Goal: Completar el registro y activar la cuenta (web).*
+
+Una vez creada su cuenta desde Gobernanza, el usuario accede a la pantalla "Completar Registro", donde configura su rol o cargo operativo, confirma su correo corporativo y crea y confirma su contraseña. Al presionar "Activar Cuenta y Entrar" ingresa al Panel de control. Si ya tiene una cuenta activa, puede ir a "Iniciar Sesión" mediante el enlace "¿Ya tienes cuenta activa? Inicia sesión".
+
+![Completar el registro y activar la cuenta (web).](../assets/05-capitulo-v/applications/wireflows/w_registro_web.png)
+
+*User Goal: Iniciar sesión (web).*
+
+El Encargado de Planta ingresa su correo electrónico corporativo y su contraseña, y presiona "Ingresar al Sistema" para acceder al Panel de control. Si todavía no tiene cuenta, el enlace "Regístrate" lo lleva a la pantalla de registro.
+
+![Iniciar sesión (web).](../assets/05-capitulo-v/applications/wireflows/w_login_web.png)
+
+*User Goal: Recuperar el acceso a la cuenta (web).*
+
+Cuando el usuario olvida su contraseña, accede desde el inicio de sesión a "Recuperar credenciales", ingresa su correo corporativo y solicita el enlace de restablecimiento con "Enviar enlace de restablecimiento". Desde esta pantalla no se crean usuarios; el enlace "Volver a iniciar sesión" lo regresa al formulario de acceso.
+
+![Recuperar el acceso a la cuenta (web).](../assets/05-capitulo-v/applications/wireflows/w_recuperar_web.png)
+
+*User Goal: Monitorear la telemetría ambiental y revisar las alertas (web).*
+
+Desde el Panel de control, el encargado visualiza el nivel promedio de CO₂, la presión acústica, el personal en zonas críticas, la matriz ambiental por zonas y las reglas de respuesta automática. Mediante el menú lateral accede a "Alertas", donde consulta el registro de alertas y eventos de seguridad, el flujo de auditoría de incidentes y el historial de telemetría, y puede regresar al Panel de Control en cualquier momento.
+
+![Monitorear la telemetría ambiental y revisar las alertas (web).](../assets/05-capitulo-v/applications/wireflows/w_panel_alertas_web.png)
+
+*User Goal: Gestionar las cuentas de supervisores en Gobernanza.*
+
+Desde el menú lateral, el encargado selecciona "Gobernanza" y visualiza el directorio de supervisores, con búsqueda, edición, eliminación y exportación. Con el botón "+ Añadir supervisor" abre la ventana "Añadir Nuevo Usuario", ingresa el correo corporativo y presiona "Crear supervisor y ver clave"; el sistema muestra en pantalla la clave temporal generada y retorna al directorio. También puede cancelar la operación.
+
+![Gestionar las cuentas de supervisores en Gobernanza.](../assets/05-capitulo-v/applications/wireflows/w_gobernanza_web.png)
+
+*User Goal: Cerrar la sesión activa (web).*
+
+Desde el menú lateral de la aplicación, el usuario presiona "Cerrar sesión". El sistema finaliza la sesión y lo devuelve a la pantalla de "Iniciar Sesión", desde donde deberá autenticarse nuevamente para acceder a las funciones protegidas.
+
+![Cerrar la sesión activa (web).](../assets/05-capitulo-v/applications/wireflows/w_logout_web.png)
+
+**Aplicación Móvil (Supervisor de Seguridad)**
+
+*User Goal: Completar la cuenta e ingresar (móvil).*
+
+El supervisor invitado abre la pantalla "Completa tu cuenta", donde ve su correo corporativo y su rol preasignado "Supervisor/a de Seguridad" por invitación. Crea y confirma su contraseña y presiona "Completar Registro e Ingresar" para entrar al Panel de la aplicación. Si ya tiene una cuenta activa, el enlace "Iniciar sesión" lo lleva al acceso.
+
+![Completar la cuenta e ingresar (móvil).](../assets/05-capitulo-v/applications/wireflows/w_registro_mov.png)
+
+*User Goal: Iniciar sesión (móvil).*
+
+El supervisor ingresa su correo corporativo y su contraseña, puede marcar la opción "Recordar mi cuenta en este teléfono" y presiona "Entrar a SafePlant" para llegar al Panel. Si aún no tiene cuenta, el enlace "Registrarse" lo lleva a la pantalla de registro.
+
+![Iniciar sesión (móvil).](../assets/05-capitulo-v/applications/wireflows/w_login_mov.png)
+
+*User Goal: Monitorear la planta por zonas y revisar las alertas (móvil).*
+
+Desde el Panel, el supervisor observa en tiempo real el nivel de CO₂, la presión acústica, el estado de cada zona y las reglas de causa-efecto activas. Con la pestaña "Alertas" de la barra inferior accede a las alertas e incidentes, donde ve su severidad, la mitigación del PLC en curso y las tendencias de las últimas 24 horas, y puede reconocer o aceptar cada alerta. Con la pestaña "Panel" regresa al resumen.
+
+![Monitorear la planta por zonas y revisar las alertas (móvil).](../assets/05-capitulo-v/applications/wireflows/w_panel_alertas_mov.png)
+
+*User Goal: Configurar los umbrales de CO₂ y ruido por zona.*
+
+El supervisor puede llegar a "Umbrales" desde la pestaña de la barra inferior o directamente desde una alerta mediante el botón de ajuste. En esta pantalla elige la zona activa, modifica el límite de CO₂ y de ruido con los controles "−" y "+", guarda cada límite y verifica su estado de sincronización en la matriz comparativa de zonas.
+
+![Configurar los umbrales de CO₂ y ruido por zona.](../assets/05-capitulo-v/applications/wireflows/w_umbrales_mov.png)
+
+*User Goal: Consultar el historial de telemetría.*
+
+Desde el Panel, el supervisor selecciona la pestaña "Historial" y revisa las curvas de CO₂ y presión acústica frente a su límite, el promedio y el tiempo de respuesta del PLC, filtra el periodo (24 h, 7 d o 30 d), busca en el registro de eventos y puede exportar el reporte en PDF.
+
+![Consultar el historial de telemetría.](../assets/05-capitulo-v/applications/wireflows/w_historial_mov.png)
+
+*User Goal: Supervisar los dispositivos por área.*
+
+Desde el Panel, el supervisor selecciona la pestaña "Equipos" y visualiza, por cada zona, los sensores de monitoreo (sonido, CO₂ y movimiento) y los actuadores de control (ventilador de extracción, alarma acústica y mamparas de seguridad) con su estado en vivo.
+
+![Supervisar los dispositivos por área.](../assets/05-capitulo-v/applications/wireflows/w_equipos_mov.png)
+
+
 
 <a id="s-5-4-3"></a>
 ### 5.4.3. Applications Mock-ups
 
 WEB:
-![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup1.png)
-![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup2.png)
-![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup3.png)
-![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup4.png)
-![Gobernanza de cuentas - aplicación web](../assets/05-capitulo-v/mockups/web/mockup5.png)
+
+![Iniciar sesión del encargado](<../assets/05-capitulo-v/mockups/web/Iniciar Sesion Encargado.png>)
+![Completar registro](<../assets/05-capitulo-v/mockups/web/crear nuevo registro.png>)
+![Panel de control del encargado](<../assets/05-capitulo-v/mockups/web/Panel de control del encargado.png>)
+![Alertas del encargado de planta](<../assets/05-capitulo-v/mockups/web/Alertas del encargado de planta.png>)
+![Gobernanza de cuentas - aplicación web](<../assets/05-capitulo-v/mockups/web/ADMINISTRACION DE ROLES.png>)
+![Crear nuevo usuario](<../assets/05-capitulo-v/mockups/web/Crear nuevo usuario.png>)
 
 MOVIL:
 
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (1).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (2).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (3).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (4).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (5).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (6).png>)
-![Applications mockup](<../assets/05-capitulo-v/mockups/movil/movil (7).png>)
+![Iniciar sesión](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Iniciar Sesión (Minimalista & Cálido).png>)
+![Registro](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Registro (Estilo Limpio & Oficial).png>)
+![Panel de Control](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Panel de Control.png>)
+![Alertas Activas](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Alertas Activas.png>)
+![Umbrales de Seguridad](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Umbrales de Seguridad.png>)
+![Historial y Eventos](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Historial y Eventos.png>)
+![Dispositivos por Área](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Dispositivos por Área.png>)
 
 <a id="s-5-4-4"></a>
 ### 5.4.4. Applications User Flow Diagrams
 
-![Applications User Flow](../assets/05-capitulo-v/applications/user-flow.png)
+Los user flow diagrams describen, en formato de historia de usuario, el recorrido completo que sigue cada actor para cumplir una tarea de SAFEPLANT. Los círculos numerados indican el orden de los pasos y el texto sobre cada flecha, la acción o condición que hace avanzar al usuario. A diferencia de los wireflows, que detallan la navegación entre pantallas, estos diagramas se centran en la secuencia de la tarea de principio a fin e incluyen transiciones entre el canal web y el móvil.
+
+**USER GOAL: Alta de un supervisor y activación de su cuenta.** Como Encargado de Planta, puedo crear desde Gobernanza la cuenta de un supervisor de seguridad; el sistema muestra en pantalla una clave temporal que le entrego directamente, sin enviarla por correo. Con ella, el supervisor completa su registro en la aplicación móvil, donde su rol ya viene preasignado por invitación, y accede al Panel de telemetría de la planta.
+
+![Alta de un supervisor y activación de su cuenta](../assets/05-capitulo-v/applications/user-flows/u_alta_cuenta.png)
+
+**USER GOAL: Ingreso y supervisión desde la web.** Como Encargado de Planta, puedo iniciar sesión con mis credenciales corporativas y ver el panel de control con la telemetría de seguridad ambiental de la planta. Desde allí paso al registro de alertas y eventos para auditar los incidentes, su estado de mitigación y las curvas de telemetría, y así gobernar la operación con información consolidada.
+
+![Ingreso y supervisión desde la web](../assets/05-capitulo-v/applications/user-flows/u_login_web.png)
+
+**USER GOAL: Ingreso y atención de alertas desde el móvil.** Como Supervisor de Seguridad, puedo iniciar sesión en la aplicación móvil desde cualquier lugar y ver el estado de cada zona de la planta. Cuando una zona presenta una condición de precaución, entro a Alertas para conocer el incidente, el tiempo de respuesta y la mitigación automática que el sistema ya ejecutó.
+
+![Ingreso y atención de alertas desde el móvil](../assets/05-capitulo-v/applications/user-flows/u_login_mov.png)
+
+**USER GOAL: Recuperar el acceso a mi cuenta.** Como usuario registrado, puedo recuperar el acceso cuando olvido mi contraseña: solicito el enlace de restablecimiento con mi correo corporativo, lo recibo en mi bandeja, defino una nueva contraseña, vuelvo a iniciar sesión y retomo mi trabajo en el Panel de control.
+
+![Recuperar el acceso a mi cuenta](../assets/05-capitulo-v/applications/user-flows/u_recuperar.png)
+
+**USER GOAL: Atender una alerta crítica de CO₂.** Como Supervisor de Seguridad, puedo detectar en el Panel que una zona, por ejemplo la Zona C de Fundición e Inducción, supera el nivel normal de CO₂. En Alertas reconozco el incidente mientras el PLC mantiene activa la mitigación, ajusto el umbral de la zona en Umbrales si corresponde y verifico en Historial la curva del pico y el tiempo de respuesta del sistema, para dejar el evento auditado.
+
+![Atender una alerta crítica de CO₂](../assets/05-capitulo-v/applications/user-flows/u_alerta_critica.png)
+
+**USER GOAL: Verificar los equipos de una zona y auditar los eventos.** Como Supervisor de Seguridad, puedo revisar desde el Panel una zona con lecturas elevadas, comprobar en Equipos que los sensores y actuadores (ventilador, alarma y mamparas) funcionan y están en el estado esperado, y luego consultar el Historial para auditar los eventos y la efectividad de la respuesta automática.
+
+![Verificar los equipos de una zona y auditar los eventos](../assets/05-capitulo-v/applications/user-flows/u_equipos.png)
+
+**USER GOAL: Gestionar el directorio de supervisores.** Como Encargado de Planta, puedo abrir Gobernanza desde el Panel de control, consultar el directorio de supervisores activos y añadir uno nuevo con su correo corporativo. Al crearlo obtengo su clave temporal y regreso al directorio actualizado, con lo que controlo quién accede a la operación móvil de la planta.
+
+![Gestionar el directorio de supervisores](../assets/05-capitulo-v/applications/user-flows/u_gobernanza.png)
 
 <a id="s-5-5"></a>
 ## 5.5. Applications Prototyping
@@ -6641,6 +6833,10 @@ El prototipo web de escritorio presenta la navegación y las vistas de consulta 
 En ambos prototipos se busca representar los recorridos principales: ingresar al Panel de Control para revisar las condiciones de la planta; abrir una alerta para consultar el incidente y su mitigación; revisar el Historial para analizar eventos; y, para el supervisor, acceder a Umbrales o Dispositivos cuando la tarea requiera configuración o verificación. La navegación y los controles son una simulación de interacción para comunicar el comportamiento esperado de la solución.
 
 **Prototipo móvil:** [Abrir prototipo en Figma](https://www.figma.com/proto/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=76-2192&t=gFTPorlHMMO2VxnX-1&scaling=scale-down&content-scaling=responsive&page-id=9%3A2&starting-point-node-id=76%3A2192).
+
+**Explicación del prototipo móvil:** [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC0z40dQIqVQbQvuddVxnAmAejBnKbEFgnXIzfK4z9N5c4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jVhkvW).
+
+![Evidencia de la explicación del prototipo móvil](../assets/05-capitulo-v/prototipos/explicacion-prototipo-movil.png)
 
 **Prototipo web de escritorio:** [Abrir prototipo en Figma](https://www.figma.com/proto/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=67-2086&p=f&t=DnfUCKPU45KIZ1SG-1&scaling=scale-down&content-scaling=responsive&page-id=62%3A234&starting-point-node-id=62%3A2071).
 
@@ -7149,6 +7345,12 @@ Ministerio de Salud. (2024). *Resolución Ministerial N.° 733-2024-MINSA. Anexo
 Organización Internacional de Normalización. (2018). *ISO 45001:2018. Occupational health and safety management systems — Requirements with guidance for use*. https://www.iso.org/standard/63787.html
 
 National Institute for Occupational Safety and Health. (1998). *Criteria for a recommended standard: Occupational noise exposure — Revised criteria 1998* (DHHS/NIOSH Publication No. 98-126). U.S. Department of Health and Human Services. https://www.cdc.gov/niosh/docs/98-126/
+
+National Institute for Occupational Safety and Health. (s. f.). *NIOSH pocket guide to chemical hazards: Carbon dioxide*. Centers for Disease Control and Prevention. https://www.cdc.gov/niosh/npg/npgd0103.html
+
+Occupational Safety and Health Administration. (s. f.). *Carbon dioxide*. U.S. Department of Labor. https://www.osha.gov/chemicaldata/183
+
+World Health Organization & International Labour Organization. (2021). *WHO/ILO joint estimates of the work-related burden of disease and injury, 2000–2016: Global monitoring report*. https://www.who.int/publications/i/item/9789240034945
 
 American Society of Heating, Refrigerating and Air-Conditioning Engineers. (2022). *ANSI/ASHRAE Standard 62.1-2022. Ventilation and acceptable indoor air quality*. https://www.ashrae.org/technical-resources/bookstore/standards-62-1-62-2
 
