@@ -6954,6 +6954,13 @@ Para garantizar la operación continua sin dependencia de internet, se despliega
 *   **Hardware de Campo:** El firmware Arduino/ESP32 se despliega directamente en los dispositivos conectados a sensores y actuadores físicos.
 *   **Servicios Externos:** Se utiliza un servicio SMTP externo para el envío de correos, mientras que la identidad es propia del sistema.
 
+  **Estado del despliegue**
+
+| Componente | Plataforma objetivo | Plataforma actual (Sprint 1) | Estado |
+| --- | --- | --- | --- |
+| Landing page | Azure Static Web Apps | GitHub Pages | Desplegado |
+| Aplicación web | Azure Static Web Apps | Vercel | Desplegado |
+
 <a id="s-6-2"></a>
 ## 6.2. Landing Page, Services & Applications Implementation
 
