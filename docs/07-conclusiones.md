@@ -50,13 +50,6 @@
 
 9. Como novena recomendación, en lo que sigue, sumar avisos al celular para las alertas críticas, más de un nodo en la misma planta, actuadores según el riesgo de cada zona, y una vista que relacione las condiciones acumuladas con los incidentes y las horas de exposición. Antes del diseño de detalle conviene cerrar lo que quedó abierto: cómo se proyecta el estado operativo del área, qué pasa si falla un relé, si más adelante se usa un proveedor externo de identidad y cuál será el broker MQTT. El stack del Capítulo IV sigue siendo provisional (DEC-008).
 
-<a id="s-video-about-the-team"></a>
-## Video About-the-Team
-
-**URL del video:** 
-
-![Video About-the-Team](../assets/07-conclusiones/about-the-team.png)
-
 ---
 
 **Navegación:** [Índice](./00-student-outcome.md#s-tabla-contenidos) · Anterior: [Capítulo VI](./06-capitulo-vi-product-implementation.md) · Siguiente: [Bibliografía](./08-bibliografia.md)

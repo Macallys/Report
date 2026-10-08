@@ -304,157 +304,157 @@ SafePlant
       <td align="left">Elaboración de Software Architecture Context Level Diagrams.</td>
     </tr>
     <tr>
-      <td align="left">1.37</td>
+      <td align="left">2.1</td>
       <td align="left">2026-10-05</td>
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Elaboración de Software Architecture Container Level Diagrams y Deployment Diagrams (C4).</td>
     </tr>
     <tr>
-      <td align="left">1.38</td>
+      <td align="left">2.2</td>
       <td align="left">2026-10-05</td>
       <td align="left">Huaman Cuba, Johan Giovani</td>
       <td align="left">Documentación táctica del Bounded Context Plant Monitoring (capas, componentes y código).</td>
     </tr>
     <tr>
-      <td align="left">1.39</td>
+      <td align="left">2.3</td>
       <td align="left">2026-10-05</td>
       <td align="left">Huaman Cuba, Johan Giovani</td>
       <td align="left">Documentación táctica del Bounded Context Safety &amp; Actuation.</td>
     </tr>
     <tr>
-      <td align="left">1.40</td>
+      <td align="left">2.4</td>
       <td align="left">2026-10-06</td>
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Documentación táctica del Bounded Context Device &amp; Edge Management.</td>
     </tr>
     <tr>
-      <td align="left">1.41</td>
+      <td align="left">2.5</td>
       <td align="left">2026-10-06</td>
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Documentación táctica del Bounded Context Identity &amp; Access.</td>
     </tr>
     <tr>
-      <td align="left">1.42</td>
+      <td align="left">2.6</td>
       <td align="left">2026-10-06</td>
       <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Elaboración de General Style Guidelines y Web, Mobile and IoT Style Guidelines.</td>
     </tr>
     <tr>
-      <td align="left">1.43</td>
+      <td align="left">2.7</td>
       <td align="left">2026-10-06</td>
       <td align="left">Baldeon Vivar, Santiago Armando</td>
       <td align="left">Definición de Information Architecture: organización, etiquetado, SEO, búsqueda y navegación.</td>
     </tr>
     <tr>
-      <td align="left">1.44</td>
+      <td align="left">2.8</td>
       <td align="left">2026-10-06</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Diseño de Landing Page Wireframe y Mock-up (escritorio y móvil).</td>
     </tr>
     <tr>
-      <td align="left">1.45</td>
+      <td align="left">2.9</td>
       <td align="left">2026-10-07</td>
       <td align="left">Baldeon Vivar, Santiago Armando</td>
       <td align="left">Elaboración de Applications Wireframes (web del Encargado de Planta y móvil del Supervisor).</td>
     </tr>
     <tr>
-      <td align="left">1.46</td>
+      <td align="left">2.10</td>
       <td align="left">2026-10-07</td>
       <td align="left">Solano Armas, Angelo Héctor</td>
       <td align="left">Elaboración de Applications Wireflow Diagrams y User Flow Diagrams.</td>
     </tr>
     <tr>
-      <td align="left">1.47</td>
+      <td align="left">2.11</td>
       <td align="left">2026-10-07</td>
       <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Elaboración de Applications Mock-ups y criterios de prototipado.</td>
     </tr>
     <tr>
-      <td align="left">1.48</td>
+      <td align="left">2.12</td>
       <td align="left">2026-10-07</td>
       <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Documentación de prototipos web de escritorio y móvil.</td>
     </tr>
     <tr>
-      <td align="left">1.49</td>
+      <td align="left">2.13</td>
       <td align="left">2026-10-07</td>
       <td align="left">Baldeon Vivar, Santiago Armando</td>
       <td align="left">Diseño del dispositivo IoT (nodo ESP32, sensores y actuadores; evidencia Wokwi).</td>
     </tr>
     <tr>
-      <td align="left">1.50</td>
+      <td align="left">2.14</td>
       <td align="left">2026-10-07</td>
       <td align="left">Gordillo Ramos, Santiago Alonso</td>
       <td align="left">Documentación de Software Configuration Management: entorno de desarrollo, SCM, convenciones y despliegue.</td>
     </tr>
     <tr>
-      <td align="left">1.51</td>
+      <td align="left">2.15</td>
       <td align="left">2026-10-07</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Sprint Planning 1, Aspect Leaders and Collaborators y Sprint Backlog 1.</td>
     </tr>
     <tr>
-      <td align="left">1.52</td>
+      <td align="left">2.16</td>
       <td align="left">2026-10-07</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Implementación y despliegue de la landing page (US01, US02, US05, US09).</td>
     </tr>
     <tr>
-      <td align="left">1.53</td>
+      <td align="left">2.17</td>
       <td align="left">2026-10-07</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Implementación de vistas web: sign-in, dashboard, historial y directorio de cuentas (US08, US11, US12, US23).</td>
     </tr>
     <tr>
-      <td align="left">1.54</td>
+      <td align="left">2.18</td>
       <td align="left">2026-10-07</td>
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Configuración del cliente Angular y despliegue de la aplicación web en Vercel.</td>
     </tr>
     <tr>
-      <td align="left">1.55</td>
+      <td align="left">2.19</td>
       <td align="left">2026-10-08</td>
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Implementación del backend Identity &amp; Access (JWT, cuentas, OpenAPI) y despliegue en Azure App Service (TS21).</td>
     </tr>
     <tr>
-      <td align="left">1.56</td>
+      <td align="left">2.20</td>
       <td align="left">2026-10-08</td>
       <td align="left">Huaman Cuba, Johan Giovani</td>
       <td align="left">Registro de evidencias de desarrollo, ejecución, servicios y despliegue del Sprint 1.</td>
     </tr>
     <tr>
-      <td align="left">1.57</td>
+      <td align="left">2.21</td>
       <td align="left">2026-10-08</td>
       <td align="left">Huaman Cuba, Johan Giovani</td>
       <td align="left">Team Collaboration Insights during Sprint 1 y compromisos de flujo Git para el Sprint 2.</td>
     </tr>
     <tr>
-      <td align="left">1.58</td>
+      <td align="left">2.22</td>
       <td align="left">2026-10-08</td>
       <td align="left">Solano Armas, Angelo Héctor</td>
       <td align="left">Correcciones de estilo y referencias de AV1; actualización de conclusiones y recomendaciones.</td>
     </tr>
     <tr>
-      <td align="left">1.59</td>
+      <td align="left">2.23</td>
       <td align="left">2026-10-08</td>
       <td align="left">Solano Armas, Angelo Héctor</td>
       <td align="left">Actualización de bibliografía y anexos (repositorios, landing desplegada y evidencias TB1).</td>
     </tr>
     <tr>
-      <td align="left">1.60</td>
+      <td align="left">2.24</td>
       <td align="left">2026-10-08</td>
       <td align="left">Equipo Macallys</td>
       <td align="left">Actualización de Student Outcome ABET–EAC SO5 con acciones y conclusiones de la entrega TB1.</td>
     </tr>
     <tr>
-      <td align="left">1.61</td>
+      <td align="left">2.25</td>
       <td align="left">2026-10-08</td>
       <td align="left">Equipo Macallys</td>
       <td align="left">Actualización de Project Report Collaboration Insights para la entrega TB1.</td>
     </tr>
     <tr>
-      <td align="left">1.62</td>
+      <td align="left">2.26</td>
       <td align="left">2026-10-08</td>
       <td align="left">Equipo Macallys</td>
       <td align="left">Cierre del informe para la entrega del Trabajo Parcial (TB1): diseño estratégico y táctico DDD, arquitectura, UI/UX e incremento del Sprint 1.</td>
@@ -627,15 +627,9 @@ SafePlant
             - [6.2.1.7. Services Documentation Evidence for Sprint Review](#s-6-2-1-7)
             - [6.2.1.8. Software Deployment Evidence for Sprint Review](#s-6-2-1-8)
             - [6.2.1.9. Team Collaboration Insights during Sprint](#s-6-2-1-9)
-    - [6.3. Validation Interviews](#s-6-3)
-        - [6.3.1. Diseño de Entrevistas](#s-6-3-1)
-        - [6.3.2. Registro de Entrevistas](#s-6-3-2)
-        - [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
-    - [6.4. Video About-the-Product](#s-6-4)
 - [Conclusiones](#s-conclusiones)
         - [Conclusiones](#s-conclusiones-conclusiones)
         - [Recomendaciones](#s-recomendaciones)
-    - [Video About-the-Team](#s-video-about-the-team)
 - [Bibliografía](#s-bibliografia)
     - [Normativa y salud ocupacional](#s-normativa-y-salud-ocupacional)
     - [Descubrimiento y diseño del dominio](#s-descubrimiento-y-diseno-del-dominio)
@@ -6920,24 +6914,61 @@ Desde el Panel, el supervisor selecciona la pestaña "Equipos" y visualiza, por 
 <a id="s-5-4-3"></a>
 ### 5.4.3. Applications Mock-ups
 
-WEB:
+**Mock-ups de Aplicación Web**
+
+**Completar Registro - US11**
+
+![Completar registro](<../assets/05-capitulo-v/mockups/web/crear nuevo registro.png>)
+
+**Inicio de Sesión - US08**
 
 ![Iniciar sesión del encargado](<../assets/05-capitulo-v/mockups/web/Iniciar Sesion Encargado.png>)
-![Completar registro](<../assets/05-capitulo-v/mockups/web/crear nuevo registro.png>)
+
+**Panel Principal de Seguridad - US23**
+
 ![Panel de control del encargado](<../assets/05-capitulo-v/mockups/web/Panel de control del encargado.png>)
+
+**Alertas Activas y Registro de Incidentes - US23**
+
 ![Alertas del encargado de planta](<../assets/05-capitulo-v/mockups/web/Alertas del encargado de planta.png>)
+
+**Administración de Cuentas y Roles - US11 y US12**
+
 ![Gobernanza de cuentas - aplicación web](<../assets/05-capitulo-v/mockups/web/ADMINISTRACION DE ROLES.png>)
+
+**Crear nuevo usuario - US11**
+
 ![Crear nuevo usuario](<../assets/05-capitulo-v/mockups/web/Crear nuevo usuario.png>)
 
-MOVIL:
+**Mock-ups de Aplicación Móvil**
+
+**Completar Registro - US11**
+
+![Registro](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Registro (Estilo Limpio & Oficial).png>)
+
+**Inicio de Sesión - US07**
 
 ![Iniciar sesión](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Iniciar Sesión (Minimalista & Cálido).png>)
-![Registro](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Registro (Estilo Limpio & Oficial).png>)
+
+**Panel de Control - US14**
+
 ![Panel de Control](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Panel de Control.png>)
+
+**Alertas Activas - US18**
+
 ![Alertas Activas](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Alertas Activas.png>)
-![Umbrales de Seguridad](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Umbrales de Seguridad.png>)
-![Historial y Eventos](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Historial y Eventos.png>)
+
+**Dispositivos por Área - US22**
+
 ![Dispositivos por Área](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Dispositivos por Área.png>)
+
+**Historial y Eventos - US26 y US33**
+
+![Historial y Eventos](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Historial y Eventos.png>)
+
+**Umbrales de Seguridad - US21**
+
+![Umbrales de Seguridad](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Umbrales de Seguridad.png>)
 
 <a id="s-5-4-4"></a>
 ### 5.4.4. Applications User Flow Diagrams
@@ -7147,25 +7178,6 @@ Para garantizar la operación continua sin dependencia de internet, se despliega
 
 **URL de la landing page desplegada:** https://macallys.github.io/landing-page/
 
-> Documentar cada sprint en `sprints/` a partir de [`templates/sprint.md`](./templates/sprint.md).
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">#</th>
-      <th align="left">Sprint</th>
-      <th align="left">Documento</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">6.2.1</td>
-      <td align="left">Sprint 1</td>
-      <td align="left"><a href="./sprints/sprint-01.md">Sprint 1</a></td>
-    </tr>
-  </tbody>
-</table>
-
 ---
 
 <a id="s-6-2-1"></a>
@@ -7227,7 +7239,7 @@ El Sprint Planning Meeting del Sprint 1 tuvo como propósito definir el primer i
       <td align="left">
         <strong>Our focus is on</strong> dar a conocer SafePlant mediante una landing page desplegada que explique su propósito, sus beneficios y su arquitectura, y en ofrecer al Encargado de Planta las vistas de su aplicación web (inicio de sesión, gestión de cuentas y roles, dashboard de métricas e historial), respaldadas por un backend capaz de registrar usuarios e iniciar sesión.<br><br>
         <strong>We believe it delivers</strong> una comprensión clara de la propuesta de valor de SafePlant y una primera experiencia navegable de gobernanza de la planta <strong>to</strong> los visitantes interesados en la solución y los Encargados de Planta.<br><br>
-        <strong>This will be confirmed when</strong> un visitante pueda recorrer la landing desplegada y acceder desde ella a la aplicación web publicada, un Encargado de Planta pueda navegar todas las vistas web, y el backend registre una cuenta y emita un token de acceso válido al iniciar sesión.
+        <strong>This will be confirmed when</strong> un visitante pueda recorrer la landing desplegada, un Encargado de Planta pueda navegar todas las vistas de la aplicación web publicada, y el backend registre una cuenta y emita un token de acceso válido al iniciar sesión.
       </td>
     </tr>
     <tr>
@@ -7324,7 +7336,11 @@ Los aspectos considerados en el Sprint 1 corresponden a los productos trabajados
 
 El objetivo principal del Sprint 1 fue entregar el primer incremento visible de SafePlant: la landing page desplegada, las vistas de la aplicación web del Encargado de Planta y la autenticación en el backend. El tablero del sprint se gestionó en Trello, donde cada work-item avanzó por los estados To-do, In-Process, To-Review y Done.
 
-La siguiente tabla detalla las User Stories asignadas al sprint, junto con los work-items resultantes de su descomposición y las tareas complementarias que no dependen de una User Story en particular.
+**Tablero del Sprint 1:** [Sprint Backlog 1](https://trello.com/invite/b/6ac821586e78c0cf18180ab8/ATTIceb3bbc97ae5d0dea9294fb1ee9becb5E0A72C81/sprint-backlog-1)
+
+![Tablero del Sprint 1 en Trello: To-do, In-Process, To-Review y Done](../assets/06-capitulo-vi/sprints/sprint-1-trello.png)
+
+Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: US01 (2), US02 (1), US05 (2), US06 (2), US08 (3), US09 (2), US11 (5), US12 (5) y US23 (5). La siguiente tabla detalla esas historias, los work-items resultantes de su descomposición y las tareas complementarias que no dependen de una User Story en particular.
 
 <table>
   <thead>
@@ -7337,11 +7353,11 @@ La siguiente tabla detalla las User Stories asignadas al sprint, junto con los w
       <th align="left" colspan="6">Work-Item / Task</th>
     </tr>
     <tr>
-      <th align="left">Id</th>
-      <th align="left">Title</th>
-      <th align="left">Id</th>
-      <th align="left">Title</th>
-      <th align="left">Description</th>
+      <th align="left">Story Id</th>
+      <th align="left">Story Title</th>
+      <th align="left">Task Id</th>
+      <th align="left">Task Title</th>
+      <th align="left">Task Description</th>
       <th align="left">Estimation (Hours)</th>
       <th align="left">Assigned To</th>
       <th align="left">Status (To-do / In-Process / To-Review / Done)</th>
@@ -7379,11 +7395,21 @@ La siguiente tabla detalla las User Stories asignadas al sprint, junto con los w
       <td align="left">Done</td>
     </tr>
     <tr>
+      <td align="left">US06</td>
+      <td align="left">Navigate to the operations mobile app</td>
+      <td align="left">T21</td>
+      <td align="left">Call-to-action hacia la aplicación móvil</td>
+      <td align="left">Incluir en la landing un acceso identificable a la aplicación móvil del Supervisor de Seguridad, distinto del acceso web. El botón App móvil apunta a https://app.safeplant.io/mobile/login. Ese dominio aún no resuelve y la aplicación móvil no está publicada en este sprint.</td>
+      <td align="left">1</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">To-Review</td>
+    </tr>
+    <tr>
       <td align="left" rowspan="2">US09</td>
       <td align="left" rowspan="2">Navigate to the governance and metrics web application</td>
       <td align="left">T04</td>
       <td align="left">Call-to-action hacia la aplicación web</td>
-      <td align="left">Incluir en la landing el acceso a la aplicación web para el Encargado de Planta. El enlace apunta aún a un dominio provisional y debe actualizarse a la URL desplegada.</td>
+      <td align="left">Incluir en la landing un acceso identificable a la aplicación web del Encargado de Planta, distinto del acceso móvil. El botón App web apunta a https://app.safeplant.io/web/login. La aplicación publicada en este sprint está en https://safeplant-web-client.vercel.app/signIn; el dominio de la landing aún no resuelve hacia esa URL.</td>
       <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">To-Review</td>
@@ -7621,6 +7647,7 @@ Commits realizados sobre el repositorio del informe entre el 20 de septiembre y 
 | US01 View SafePlant system information | T01 | `ccefe6d` | Done |
 | US02 View SafePlant benefits and advantages | T02 | `ccefe6d` | Done |
 | US05 View system technical architecture | T03 | `ccefe6d` | Done |
+| US06 Navigate to the operations mobile app | T21 | `ccefe6d` | To-Review |
 | US09 Navigate to the governance and metrics web application | T04, T05 | `ccefe6d` | To-Review |
 | US08 Plant Manager sign-in on the web application | T06, T07 | `695489b`, `eaec417`, `5e084de` | Done |
 | US23 Plant metrics dashboard and full history | T08 | `5e084de` | Done |
@@ -7760,48 +7787,6 @@ Para el Sprint 2 el equipo adopta los siguientes compromisos:
 
 ---
 
-<a id="s-6-3"></a>
-## 6.3. Validation Interviews
-
-<a id="s-6-3-1"></a>
-### 6.3.1. Diseño de Entrevistas
-
-<a id="s-6-3-2"></a>
-### 6.3.2. Registro de Entrevistas
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">ID</th>
-      <th align="left">Fecha</th>
-      <th align="left">Entrevistado</th>
-      <th align="left">Segmento objetivo</th>
-      <th align="left">Evidencia</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">V-01</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
-
-<a id="s-6-3-3"></a>
-### 6.3.3. Evaluaciones según heurísticas
-
-<a id="s-6-4"></a>
-## 6.4. Video About-the-Product
-
-**URL del video:** 
-
-![Video About-the-Product](../assets/06-capitulo-vi/videos/about-the-product.png)
-
----
-
 <a id="s-conclusiones"></a>
 # Conclusiones
 
@@ -7849,13 +7834,6 @@ Para el Sprint 2 el equipo adopta los siguientes compromisos:
 8. Como octava recomendación, al programar, respetar lo que ya muestran los prototipos. Los umbrales, el alta de sensores y actuadores, y el override van en el celular del supervisor. Las métricas, el historial completo, los reportes y la gobernanza de cuentas van en la web del encargado. Cada menú muestra solo lo que le toca a ese rol.
 
 9. Como novena recomendación, en lo que sigue, sumar avisos al celular para las alertas críticas, más de un nodo en la misma planta, actuadores según el riesgo de cada zona, y una vista que relacione las condiciones acumuladas con los incidentes y las horas de exposición. Antes del diseño de detalle conviene cerrar lo que quedó abierto: cómo se proyecta el estado operativo del área, qué pasa si falla un relé, si más adelante se usa un proveedor externo de identidad y cuál será el broker MQTT. El stack del Capítulo IV sigue siendo provisional (DEC-008).
-
-<a id="s-video-about-the-team"></a>
-## Video About-the-Team
-
-**URL del video:** 
-
-![Video About-the-Team](../assets/07-conclusiones/about-the-team.png)
 
 ---
 
@@ -7945,12 +7923,12 @@ Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *
 <a id="s-anexo-videos-exposiciones"></a>
 ## Videos de Exposiciones
 
-| Entrega | Descripción | URL (Stream / Clipchamp) | Archivo .mp4 |
-| --- | --- | --- | --- |
-| AV1 | Exposición Avance 1 — Needfinding, requirements elicitation y especificación de requisitos | [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:f:/g/personal/u202310609_upc_edu_pe/IgD9nIUdmGDMTqz8phm_bOSkASBHWsTO8X6VHlrMoQWcpmU?e=PCzh7K) | |
-| TB1 | Exposición Trabajo Parcial — Diseño estratégico y táctico DDD, arquitectura de la solución | | |
-| AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | | |
-| TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | | |
+| Entrega | Descripción | URL (Stream / Clipchamp) |
+| --- | --- | --- |
+| AV1 | Exposición Avance 1 — Needfinding, requirements elicitation y especificación de requisitos | [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310609_upc_edu_pe/IQAjuLFwBixfSq4ABtQD3ySMAdVYZjDwhU2YdhwwqU0x59A?e=HRUQ6H) |
+| TB1 | Exposición Trabajo Parcial — Diseño estratégico y táctico DDD, arquitectura de la solución | [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310609_upc_edu_pe/IQBwrdHlhPNvSZi9QIEwr8OyAY-xF7_MldIeSK57MVKRTAw?e=puS5V3) |
+| AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | |
+| TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | |
 
 <a id="s-anexo-repositorios"></a>
 ## Repositorios y artefactos
@@ -7971,6 +7949,7 @@ Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *
 | --- | --- | --- | --- |
 | Supervisor de Seguridad | Entrevista 1 | Anyeli Vilcapaza | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQDgMkxRgpj_SZWQGkOVH52TAWt6KcdsMqmX7T0vqytQdNY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SBHV8R |
 | Supervisor de Seguridad | Entrevista 2 | Diego Ruiz del Solar | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| Supervisor de Seguridad | Entrevista 3 | Mark Alex Esquivel Cabrera | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202417448_upc_edu_pe/IQAbyCZ09KjySpvlaptYhdsFAdVY106873xXl5llO0Zu4Ec?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=h7Xg4U |
 | Encargado de Planta | Entrevista 1 | Fabrizio Buselleu | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQAhj6V5o_7xTq1Y6UaKEpQMAQP3gcRDCNbpvQjGy2mHFiM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9b1b0f |
 | Encargado de Planta | Entrevista 2 | Carlos Mendoza | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQCDpfLyPE3JSbAYwBJjdvnCAegV0RnbcJdQn_prFi3eCJU?e=B84siT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | Encargado de Planta | Entrevista 3 | Nathaly Solano Armas | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC3qQs5We4vS6zsu7M-w2DgATcBFhIcHwh6Y3EL3vL9im8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=frhwHe |

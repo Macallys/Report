@@ -57,7 +57,7 @@ El Sprint Planning Meeting del Sprint 1 tuvo como propósito definir el primer i
       <td align="left">
         <strong>Our focus is on</strong> dar a conocer SafePlant mediante una landing page desplegada que explique su propósito, sus beneficios y su arquitectura, y en ofrecer al Encargado de Planta las vistas de su aplicación web (inicio de sesión, gestión de cuentas y roles, dashboard de métricas e historial), respaldadas por un backend capaz de registrar usuarios e iniciar sesión.<br><br>
         <strong>We believe it delivers</strong> una comprensión clara de la propuesta de valor de SafePlant y una primera experiencia navegable de gobernanza de la planta <strong>to</strong> los visitantes interesados en la solución y los Encargados de Planta.<br><br>
-        <strong>This will be confirmed when</strong> un visitante pueda recorrer la landing desplegada y acceder desde ella a la aplicación web publicada, un Encargado de Planta pueda navegar todas las vistas web, y el backend registre una cuenta y emita un token de acceso válido al iniciar sesión.
+        <strong>This will be confirmed when</strong> un visitante pueda recorrer la landing desplegada, un Encargado de Planta pueda navegar todas las vistas de la aplicación web publicada, y el backend registre una cuenta y emita un token de acceso válido al iniciar sesión.
       </td>
     </tr>
     <tr>
@@ -154,7 +154,11 @@ Los aspectos considerados en el Sprint 1 corresponden a los productos trabajados
 
 El objetivo principal del Sprint 1 fue entregar el primer incremento visible de SafePlant: la landing page desplegada, las vistas de la aplicación web del Encargado de Planta y la autenticación en el backend. El tablero del sprint se gestionó en Trello, donde cada work-item avanzó por los estados To-do, In-Process, To-Review y Done.
 
-La siguiente tabla detalla las User Stories asignadas al sprint, junto con los work-items resultantes de su descomposición y las tareas complementarias que no dependen de una User Story en particular.
+**Tablero del Sprint 1:** [Sprint Backlog 1](https://trello.com/invite/b/6ac821586e78c0cf18180ab8/ATTIceb3bbc97ae5d0dea9294fb1ee9becb5E0A72C81/sprint-backlog-1)
+
+![Tablero del Sprint 1 en Trello: To-do, In-Process, To-Review y Done](../../assets/06-capitulo-vi/sprints/sprint-1-trello.png)
+
+Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: US01 (2), US02 (1), US05 (2), US06 (2), US08 (3), US09 (2), US11 (5), US12 (5) y US23 (5). La siguiente tabla detalla esas historias, los work-items resultantes de su descomposición y las tareas complementarias que no dependen de una User Story en particular.
 
 <table>
   <thead>
@@ -167,11 +171,11 @@ La siguiente tabla detalla las User Stories asignadas al sprint, junto con los w
       <th align="left" colspan="6">Work-Item / Task</th>
     </tr>
     <tr>
-      <th align="left">Id</th>
-      <th align="left">Title</th>
-      <th align="left">Id</th>
-      <th align="left">Title</th>
-      <th align="left">Description</th>
+      <th align="left">Story Id</th>
+      <th align="left">Story Title</th>
+      <th align="left">Task Id</th>
+      <th align="left">Task Title</th>
+      <th align="left">Task Description</th>
       <th align="left">Estimation (Hours)</th>
       <th align="left">Assigned To</th>
       <th align="left">Status (To-do / In-Process / To-Review / Done)</th>
@@ -209,11 +213,21 @@ La siguiente tabla detalla las User Stories asignadas al sprint, junto con los w
       <td align="left">Done</td>
     </tr>
     <tr>
+      <td align="left">US06</td>
+      <td align="left">Navigate to the operations mobile app</td>
+      <td align="left">T21</td>
+      <td align="left">Call-to-action hacia la aplicación móvil</td>
+      <td align="left">Incluir en la landing un acceso identificable a la aplicación móvil del Supervisor de Seguridad, distinto del acceso web. El botón App móvil apunta a https://app.safeplant.io/mobile/login. Ese dominio aún no resuelve y la aplicación móvil no está publicada en este sprint.</td>
+      <td align="left">1</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">To-Review</td>
+    </tr>
+    <tr>
       <td align="left" rowspan="2">US09</td>
       <td align="left" rowspan="2">Navigate to the governance and metrics web application</td>
       <td align="left">T04</td>
       <td align="left">Call-to-action hacia la aplicación web</td>
-      <td align="left">Incluir en la landing el acceso a la aplicación web para el Encargado de Planta. El enlace apunta aún a un dominio provisional y debe actualizarse a la URL desplegada.</td>
+      <td align="left">Incluir en la landing un acceso identificable a la aplicación web del Encargado de Planta, distinto del acceso móvil. El botón App web apunta a https://app.safeplant.io/web/login. La aplicación publicada en este sprint está en https://safeplant-web-client.vercel.app/signIn; el dominio de la landing aún no resuelve hacia esa URL.</td>
       <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">To-Review</td>
@@ -451,6 +465,7 @@ Commits realizados sobre el repositorio del informe entre el 20 de septiembre y 
 | US01 View SafePlant system information | T01 | `ccefe6d` | Done |
 | US02 View SafePlant benefits and advantages | T02 | `ccefe6d` | Done |
 | US05 View system technical architecture | T03 | `ccefe6d` | Done |
+| US06 Navigate to the operations mobile app | T21 | `ccefe6d` | To-Review |
 | US09 Navigate to the governance and metrics web application | T04, T05 | `ccefe6d` | To-Review |
 | US08 Plant Manager sign-in on the web application | T06, T07 | `695489b`, `eaec417`, `5e084de` | Done |
 | US23 Plant metrics dashboard and full history | T08 | `5e084de` | Done |

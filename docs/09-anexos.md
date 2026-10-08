@@ -8,12 +8,12 @@
 <a id="s-anexo-videos-exposiciones"></a>
 ## Videos de Exposiciones
 
-| Entrega | Descripción | URL (Stream / Clipchamp) | Archivo .mp4 |
-| --- | --- | --- | --- |
-| AV1 | Exposición Avance 1 — Needfinding, requirements elicitation y especificación de requisitos | [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:f:/g/personal/u202310609_upc_edu_pe/IgD9nIUdmGDMTqz8phm_bOSkASBHWsTO8X6VHlrMoQWcpmU?e=PCzh7K) | |
-| TB1 | Exposición Trabajo Parcial — Diseño estratégico y táctico DDD, arquitectura de la solución | | |
-| AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | | |
-| TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | | |
+| Entrega | Descripción | URL (Stream / Clipchamp) |
+| --- | --- | --- |
+| AV1 | Exposición Avance 1 — Needfinding, requirements elicitation y especificación de requisitos | [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310609_upc_edu_pe/IQAjuLFwBixfSq4ABtQD3ySMAdVYZjDwhU2YdhwwqU0x59A?e=HRUQ6H) |
+| TB1 | Exposición Trabajo Parcial — Diseño estratégico y táctico DDD, arquitectura de la solución | [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310609_upc_edu_pe/IQBwrdHlhPNvSZi9QIEwr8OyAY-xF7_MldIeSK57MVKRTAw?e=puS5V3) |
+| AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | |
+| TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | |
 
 <a id="s-anexo-repositorios"></a>
 ## Repositorios y artefactos
@@ -34,6 +34,7 @@
 | --- | --- | --- | --- |
 | Supervisor de Seguridad | Entrevista 1 | Anyeli Vilcapaza | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQDgMkxRgpj_SZWQGkOVH52TAWt6KcdsMqmX7T0vqytQdNY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SBHV8R |
 | Supervisor de Seguridad | Entrevista 2 | Diego Ruiz del Solar | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQB8eUTe-4fqT5HM2dtXNVpxAbgPiOEQps-5yLaMtsDK22g?e=dcyOZL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| Supervisor de Seguridad | Entrevista 3 | Mark Alex Esquivel Cabrera | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202417448_upc_edu_pe/IQAbyCZ09KjySpvlaptYhdsFAdVY106873xXl5llO0Zu4Ec?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=h7Xg4U |
 | Encargado de Planta | Entrevista 1 | Fabrizio Buselleu | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319881_upc_edu_pe/IQAhj6V5o_7xTq1Y6UaKEpQMAQP3gcRDCNbpvQjGy2mHFiM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9b1b0f |
 | Encargado de Planta | Entrevista 2 | Carlos Mendoza | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215160_upc_edu_pe/IQCDpfLyPE3JSbAYwBJjdvnCAegV0RnbcJdQn_prFi3eCJU?e=B84siT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | Encargado de Planta | Entrevista 3 | Nathaly Solano Armas | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC3qQs5We4vS6zsu7M-w2DgATcBFhIcHwh6Y3EL3vL9im8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=frhwHe |

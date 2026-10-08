@@ -112,64 +112,7 @@ Para garantizar la operación continua sin dependencia de internet, se despliega
 
 **URL de la landing page desplegada:** https://macallys.github.io/landing-page/
 
-> Documentar cada sprint en `sprints/` a partir de [`templates/sprint.md`](./templates/sprint.md).
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">#</th>
-      <th align="left">Sprint</th>
-      <th align="left">Documento</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">6.2.1</td>
-      <td align="left">Sprint 1</td>
-      <td align="left"><a href="./sprints/sprint-01.md">Sprint 1</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<a id="s-6-3"></a>
-## 6.3. Validation Interviews
-
-<a id="s-6-3-1"></a>
-### 6.3.1. Diseño de Entrevistas
-
-<a id="s-6-3-2"></a>
-### 6.3.2. Registro de Entrevistas
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">ID</th>
-      <th align="left">Fecha</th>
-      <th align="left">Entrevistado</th>
-      <th align="left">Segmento objetivo</th>
-      <th align="left">Evidencia</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">V-01</td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
-
-<a id="s-6-3-3"></a>
-### 6.3.3. Evaluaciones según heurísticas
-
-<a id="s-6-4"></a>
-## 6.4. Video About-the-Product
-
-**URL del video:** 
-
-![Video About-the-Product](../assets/06-capitulo-vi/videos/about-the-product.png)
+<!-- sprint-insert -->
 
 ---
 

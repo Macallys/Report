@@ -36,14 +36,30 @@
 <table>
   <thead>
     <tr>
-      <th align="left">ID</th>
-      <th align="left">User Story / Work Item</th>
-      <th align="left">Points</th>
-      <th align="left">Estado</th>
+      <th align="left">Sprint #</th>
+      <th align="left" colspan="7">Sprint n</th>
+    </tr>
+    <tr>
+      <th align="left" colspan="2">User Story</th>
+      <th align="left" colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th align="left">Story Id</th>
+      <th align="left">Story Title</th>
+      <th align="left">Task Id</th>
+      <th align="left">Task Title</th>
+      <th align="left">Task Description</th>
+      <th align="left">Estimation (Hours)</th>
+      <th align="left">Assigned To</th>
+      <th align="left">Status (To-do / In-Process / To-Review / Done)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td align="left"></td>
+      <td align="left"></td>
+      <td align="left"></td>
+      <td align="left"></td>
       <td align="left"></td>
       <td align="left"></td>
       <td align="left"></td>

@@ -223,22 +223,13 @@ def folder_md(folder: Path, fallback: Path | None = None) -> list[Path]:
     return []
 
 
-def split_before_heading(text: str, title: str) -> tuple[str, str]:
-    lines = text.splitlines()
-    in_fence = False
-    for i, line in enumerate(lines):
-        if FENCE_RE.match(line.strip()):
-            in_fence = not in_fence
-            continue
-        if in_fence:
-            continue
-        match = HEADING_RE.match(line)
-        if match and match.group(2).strip() == title:
-            start = i - 1 if i > 0 and EXISTING_ANCHOR_RE.match(lines[i - 1]) else i
-            before = "\n".join(lines[:start]).strip() + "\n"
-            after = "\n".join(lines[start:]).strip() + "\n"
-            return before, after
-    return text, ""
+def split_before_marker(text: str, marker: str) -> tuple[str, str]:
+    index = text.find(marker)
+    if index == -1:
+        return text, ""
+    before = text[:index].strip() + "\n"
+    after = text[index + len(marker) :].strip() + "\n"
+    return before, after
 
 
 def prepare(path: Path) -> str:
@@ -326,7 +317,7 @@ def main() -> None:
             continue
 
         if path.name == "06-capitulo-vi-product-implementation.md":
-            before, after = split_before_heading(text, "6.3. Validation Interviews")
+            before, after = split_before_marker(text, "<!-- sprint-insert -->")
             collect_part(before, path, toc_entries, used_informe, parts)
             for nested in sprint_files:
                 if nested.exists():
@@ -361,7 +352,7 @@ def main() -> None:
                     collect_part(prepare(nested), nested, toc_entries, used_informe, parts)
             continue
         if path.name == "06-capitulo-vi-product-implementation.md":
-            before, after = split_before_heading(text, "6.3. Validation Interviews")
+            before, after = split_before_marker(text, "<!-- sprint-insert -->")
             collect_part(before, path, toc_entries, used_informe, parts)
             for nested in sprint_files:
                 if nested.exists():

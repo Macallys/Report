@@ -468,24 +468,61 @@ Desde el Panel, el supervisor selecciona la pestaña "Equipos" y visualiza, por 
 <a id="s-5-4-3"></a>
 ### 5.4.3. Applications Mock-ups
 
-WEB:
+**Mock-ups de Aplicación Web**
+
+**Completar Registro - US11**
+
+![Completar registro](<../assets/05-capitulo-v/mockups/web/crear nuevo registro.png>)
+
+**Inicio de Sesión - US08**
 
 ![Iniciar sesión del encargado](<../assets/05-capitulo-v/mockups/web/Iniciar Sesion Encargado.png>)
-![Completar registro](<../assets/05-capitulo-v/mockups/web/crear nuevo registro.png>)
+
+**Panel Principal de Seguridad - US23**
+
 ![Panel de control del encargado](<../assets/05-capitulo-v/mockups/web/Panel de control del encargado.png>)
+
+**Alertas Activas y Registro de Incidentes - US23**
+
 ![Alertas del encargado de planta](<../assets/05-capitulo-v/mockups/web/Alertas del encargado de planta.png>)
+
+**Administración de Cuentas y Roles - US11 y US12**
+
 ![Gobernanza de cuentas - aplicación web](<../assets/05-capitulo-v/mockups/web/ADMINISTRACION DE ROLES.png>)
+
+**Crear nuevo usuario - US11**
+
 ![Crear nuevo usuario](<../assets/05-capitulo-v/mockups/web/Crear nuevo usuario.png>)
 
-MOVIL:
+**Mock-ups de Aplicación Móvil**
+
+**Completar Registro - US11**
+
+![Registro](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Registro (Estilo Limpio & Oficial).png>)
+
+**Inicio de Sesión - US07**
 
 ![Iniciar sesión](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Iniciar Sesión (Minimalista & Cálido).png>)
-![Registro](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Registro (Estilo Limpio & Oficial).png>)
+
+**Panel de Control - US14**
+
 ![Panel de Control](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Panel de Control.png>)
+
+**Alertas Activas - US18**
+
 ![Alertas Activas](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Alertas Activas.png>)
-![Umbrales de Seguridad](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Umbrales de Seguridad.png>)
-![Historial y Eventos](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Historial y Eventos.png>)
+
+**Dispositivos por Área - US22**
+
 ![Dispositivos por Área](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Dispositivos por Área.png>)
+
+**Historial y Eventos - US26 y US33**
+
+![Historial y Eventos](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Historial y Eventos.png>)
+
+**Umbrales de Seguridad - US21**
+
+![Umbrales de Seguridad](<../assets/05-capitulo-v/mockups/movil/SAFEPLANT Mobile _ Umbrales de Seguridad.png>)
 
 <a id="s-5-4-4"></a>
 ### 5.4.4. Applications User Flow Diagrams

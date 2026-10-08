@@ -307,6 +307,163 @@ SafePlant
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Elaboración de Software Architecture Context Level Diagrams.</td>
     </tr>
+    </tr>
+    <tr>
+      <td align="left">2.1</td>
+      <td align="left">2026-10-05</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Elaboración de Software Architecture Container Level Diagrams y Deployment Diagrams (C4).</td>
+    </tr>
+    <tr>
+      <td align="left">2.2</td>
+      <td align="left">2026-10-05</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Documentación táctica del Bounded Context Plant Monitoring (capas, componentes y código).</td>
+    </tr>
+    <tr>
+      <td align="left">2.3</td>
+      <td align="left">2026-10-05</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Documentación táctica del Bounded Context Safety &amp; Actuation.</td>
+    </tr>
+    <tr>
+      <td align="left">2.4</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Documentación táctica del Bounded Context Device &amp; Edge Management.</td>
+    </tr>
+    <tr>
+      <td align="left">2.5</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Documentación táctica del Bounded Context Identity &amp; Access.</td>
+    </tr>
+    <tr>
+      <td align="left">2.6</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Elaboración de General Style Guidelines y Web, Mobile and IoT Style Guidelines.</td>
+    </tr>
+    <tr>
+      <td align="left">2.7</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Definición de Information Architecture: organización, etiquetado, SEO, búsqueda y navegación.</td>
+    </tr>
+    <tr>
+      <td align="left">2.8</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Diseño de Landing Page Wireframe y Mock-up (escritorio y móvil).</td>
+    </tr>
+    <tr>
+      <td align="left">2.9</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Elaboración de Applications Wireframes (web del Encargado de Planta y móvil del Supervisor).</td>
+    </tr>
+    <tr>
+      <td align="left">2.10</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Elaboración de Applications Wireflow Diagrams y User Flow Diagrams.</td>
+    </tr>
+    <tr>
+      <td align="left">2.11</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Elaboración de Applications Mock-ups y criterios de prototipado.</td>
+    </tr>
+    <tr>
+      <td align="left">2.12</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Documentación de prototipos web de escritorio y móvil.</td>
+    </tr>
+    <tr>
+      <td align="left">2.13</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Diseño del dispositivo IoT (nodo ESP32, sensores y actuadores; evidencia Wokwi).</td>
+    </tr>
+    <tr>
+      <td align="left">2.14</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Documentación de Software Configuration Management: entorno de desarrollo, SCM, convenciones y despliegue.</td>
+    </tr>
+    <tr>
+      <td align="left">2.15</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Sprint Planning 1, Aspect Leaders and Collaborators y Sprint Backlog 1.</td>
+    </tr>
+    <tr>
+      <td align="left">2.16</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Implementación y despliegue de la landing page (US01, US02, US05, US09).</td>
+    </tr>
+    <tr>
+      <td align="left">2.17</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Implementación de vistas web: sign-in, dashboard, historial y directorio de cuentas (US08, US11, US12, US23).</td>
+    </tr>
+    <tr>
+      <td align="left">2.18</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Configuración del cliente Angular y despliegue de la aplicación web en Vercel.</td>
+    </tr>
+    <tr>
+      <td align="left">2.19</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Implementación del backend Identity &amp; Access (JWT, cuentas, OpenAPI) y despliegue en Azure App Service (TS21).</td>
+    </tr>
+    <tr>
+      <td align="left">2.20</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Registro de evidencias de desarrollo, ejecución, servicios y despliegue del Sprint 1.</td>
+    </tr>
+    <tr>
+      <td align="left">2.21</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Team Collaboration Insights during Sprint 1 y compromisos de flujo Git para el Sprint 2.</td>
+    </tr>
+    <tr>
+      <td align="left">2.22</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Correcciones de estilo y referencias de AV1; actualización de conclusiones y recomendaciones.</td>
+    </tr>
+    <tr>
+      <td align="left">2.23</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Actualización de bibliografía y anexos (repositorios, landing desplegada y evidencias TB1).</td>
+    </tr>
+    <tr>
+      <td align="left">2.24</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Actualización de Student Outcome ABET–EAC SO5 con acciones y conclusiones de la entrega TB1.</td>
+    </tr>
+    <tr>
+      <td align="left">2.25</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Actualización de Project Report Collaboration Insights para la entrega TB1.</td>
+    </tr>
+    <tr>
+      <td align="left">2.26</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Cierre del informe para la entrega del Trabajo Parcial (TB1): diseño estratégico y táctico DDD, arquitectura, UI/UX e incremento del Sprint 1.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -468,15 +625,9 @@ SafePlant
             - [6.2.1.7. Services Documentation Evidence for Sprint Review](informe.md#s-6-2-1-7)
             - [6.2.1.8. Software Deployment Evidence for Sprint Review](informe.md#s-6-2-1-8)
             - [6.2.1.9. Team Collaboration Insights during Sprint](informe.md#s-6-2-1-9)
-    - [6.3. Validation Interviews](informe.md#s-6-3)
-        - [6.3.1. Diseño de Entrevistas](informe.md#s-6-3-1)
-        - [6.3.2. Registro de Entrevistas](informe.md#s-6-3-2)
-        - [6.3.3. Evaluaciones según heurísticas](informe.md#s-6-3-3)
-    - [6.4. Video About-the-Product](informe.md#s-6-4)
 - [Conclusiones](informe.md#s-conclusiones)
         - [Conclusiones](informe.md#s-conclusiones-conclusiones)
         - [Recomendaciones](informe.md#s-recomendaciones)
-    - [Video About-the-Team](informe.md#s-video-about-the-team)
 - [Bibliografía](informe.md#s-bibliografia)
     - [Normativa y salud ocupacional](informe.md#s-normativa-y-salud-ocupacional)
     - [Descubrimiento y diseño del dominio](informe.md#s-descubrimiento-y-diseno-del-dominio)
