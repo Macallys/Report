@@ -25,26 +25,6 @@
 <a id="s-6-2"></a>
 ## 6.2. Landing Page, Services & Applications Implementation
 
-> Documentar cada sprint en `sprints/` a partir de [`templates/sprint.md`](./templates/sprint.md).
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">#</th>
-      <th align="left">Sprint</th>
-      <th align="left">Documento</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">6.2.1</td>
-      <td align="left">Sprint 1</td>
-      <td align="left"></td>
-    </tr>
-  </tbody>
-</table>
-
-<a id="s-6-3"></a>
 
 ### 6.2.1. Sprint 1
 
@@ -146,10 +126,6 @@ Los aspectos considerados en el Sprint 1 corresponden a los productos trabajados
 #### 6.2.1.3. Sprint Backlog 1
 
 El objetivo principal del Sprint 1 fue entregar el primer incremento visible de SafePlant: la landing page desplegada, las vistas de la aplicación web del Encargado de Planta y la autenticación en el backend. El tablero del sprint se gestionó en Trello, donde cada work-item avanzó por los estados To-do, In-Process, To-Review y Done.
-
-**URL del Board del Sprint 1:** [https://trello.com/b/XXXXXXXX/safeplant-sprint-1](https://trello.com/b/XXXXXXXX/safeplant-sprint-1)
-
-![Sprint Backlog 1](../assets/06-capitulo-vi/sprints/sprint-1-board.png)
 
 La siguiente tabla detalla las User Stories asignadas al sprint, junto con los work-items resultantes de su descomposición y las tareas complementarias que no dependen de una User Story en particular.
 
@@ -388,7 +364,7 @@ Se registra el historial completo de los tres repositorios, ya que fueron creado
 | Macallys/safeplant-web-backend | develop | [1c595f8](https://github.com/Macallys/safeplant-web-backend/commit/1c595f81906741d7a14fbffc4f5478adb6172f77) | Merge branch 'main' of github.com:Macallys/safeplant-web-backend into develop wa | - | 2026-10-08 |
 | Macallys/safeplant-web-backend | develop | [9b8aa1b](https://github.com/Macallys/safeplant-web-backend/commit/9b8aa1bd19cda70722d71097de40466161f151b2) | feat: azure workflow | - | 2026-10-08 |
 
-**Repositorio del informe (`Report`)**
+**Repositorio del informe (Report)**
 
 Commits realizados sobre el repositorio del informe entre el 20 de septiembre y el 7 de octubre de 2026, posteriores a la entrega AV1. Se conservan los mensajes originales, incluidos los generados por la interfaz web de GitHub al subir archivos y los de integración de ramas, para mantener la trazabilidad real del trabajo.
 
@@ -439,11 +415,6 @@ Commits realizados sobre el repositorio del informe entre el 20 de septiembre y 
 | US12 Assign user roles and permissions | T10 | `d1528d7` (vista web), `57c278c` (endpoints) | Done |
 | TS21 User authentication API endpoint for mobile and web | T12 – T16 | `7d011b6`, `be399e5`, `b2d0c6a`, `69cd193`, `57c278c`, `36fa06f`, `5abf8c9`, `2c6d416`, `9b8aa1b` | Done |
 
-![Development Evidence](../assets/06-capitulo-vi/sprints/development_sprint1.png)
-
-![Development Evidence](../assets/06-capitulo-vi/sprints/development_sprint1_2.png)
-
-![Development Evidence](../assets/06-capitulo-vi/sprints/development_sprint1_3.png)
 
 <a id="s-6-2-1-5"></a>
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
@@ -459,18 +430,14 @@ Al cierre del Sprint 1, la landing page de SafePlant está disponible públicame
 
 **URL de la landing page:** [https://macallys.github.io/landing-page/](https://macallys.github.io/landing-page/)
 
-![Execution Evidence - Landing Page](../assets/06-capitulo-vi/sprints/landing.png)
 
 **URL de la aplicación web:** [https://safeplant-web-client.vercel.app/signIn](https://safeplant-web-client.vercel.app/signIn)
 
-![Execution Evidence - Web Application](../assets/06-capitulo-vi/sprints/web.png)
-
-**Video de navegación del Sprint 1:** [upc-pre-202620-1asi0572-NRC-macallys-product-navigation-sprint-1](URL_DEL_VIDEO)
 
 <a id="s-6-2-1-7"></a>
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
-En este sprint se documentaron con OpenAPI (Swagger UI) los endpoints del bounded context Identity & Access, implementados en el repositorio `safeplant-web-backend`. Los endpoints de la sección superior son públicos; los de gestión de sesión y cuentas requieren un token de acceso válido y, en el caso de la gestión de cuentas, el rol `PlantManager`. Los errores se devuelven en un formato uniforme con un código (`invalid_credentials`, `role_not_allowed`, etc.) y un identificador de correlación.
+En este sprint se documentaron con OpenAPI (Swagger UI) los endpoints del bounded context Identity & Access, implementados en el repositorio safeplant-web-backend. Los endpoints de la sección superior son públicos; los de gestión de sesión y cuentas requieren un token de acceso válido y, en el caso de la gestión de cuentas, el rol PlantManager. Los errores se devuelven en un formato uniforme con un código (invalid_credentials, role_not_allowed, etc.) y un identificador de correlación.
 
 | Endpoint | Verbo HTTP | Sintaxis de llamada | Parámetros | Response | Commit |
 | :--- | :---: | :--- | :--- | :--- | :---: |
@@ -508,8 +475,6 @@ Content-Type: application/json
 
 **Repositorio de Web Services:** [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend) — commits de documentación: `36fa06f` (Swagger UI).
 
-![Services Documentation](../assets/06-capitulo-vi/sprints/sprint-1-services-docs.png)
-
 <a id="s-6-2-1-8"></a>
 #### 6.2.1.8. Software Deployment Evidence for Sprint Review
 
@@ -527,9 +492,6 @@ Los pasos realizados fueron los siguientes:
 2. **Aplicación web:** se importó el repositorio `safeplant-web-client` en Vercel, que detecta el proyecto Angular, ejecuta la compilación y publica una nueva versión con cada integración.
 3. **Backend:** se creó el recurso Azure App Service `wa-safeplant-cloudbackend-prod` y se generó el workflow de GitHub Actions que, en cada push a `main`, compila la solución con .NET 10, publica el proyecto `Cloud.Api` y lo despliega en el slot `Production` autenticándose con Azure mediante OpenID Connect.
 
-![Deployment Evidence](../assets/06-capitulo-vi/sprints/deploy.png)
-
-![Deployment Evidence](../assets/06-capitulo-vi/sprints/deploy1.png)
 
 <a id="s-6-2-1-9"></a>
 #### 6.2.1.9. Team Collaboration Insights during Sprint
@@ -554,11 +516,6 @@ Para el Sprint 2 el equipo adopta los siguientes compromisos:
 - Todos los integrantes tendrán commits propios en al menos un repositorio de producto.
 - El trabajo realizado en pareja se registrará con el trailer `Co-authored-by` para que el historial refleje a ambos participantes.
 
-![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab.png)
-
-![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab1.png)
-
-![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab2.png)
 ## 6.3. Validation Interviews
 
 <a id="s-6-3-1"></a>
