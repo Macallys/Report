@@ -6290,6 +6290,10 @@ En ambos prototipos se busca representar los recorridos principales: ingresar al
 
 **Prototipo web de escritorio:** [Abrir prototipo en Figma](https://www.figma.com/proto/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=67-2086&p=f&t=DnfUCKPU45KIZ1SG-1&scaling=scale-down&content-scaling=responsive&page-id=62%3A234&starting-point-node-id=62%3A2071).
 
+**Explicación del prototipo web:** [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQACIq6Cv0-cQLxQ1Ce_OAIJAcl4q4FVlA-Jfpse8Tw30Xc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=QlFb91).
+
+![Evidencia de la explicación del prototipo web](../assets/05-capitulo-v/prototipos/explicacion-prototipo-web.png)
+
 <a id="s-5-6"></a>
 ## 5.6. IoT Device Design
 

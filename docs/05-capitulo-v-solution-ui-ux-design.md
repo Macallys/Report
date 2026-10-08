@@ -325,11 +325,13 @@ La versión móvil reorganiza el contenido en una columna para facilitar la lect
 ### 5.4.3. Applications Mock-ups
 
 WEB:
-![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup1.png)
-![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup2.png)
-![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup3.png)
-![Applications mockup](../assets/05-capitulo-v/mockups/web/mockup4.png)
-![Gobernanza de cuentas - aplicación web](../assets/05-capitulo-v/mockups/web/mockup5.png)
+
+![Iniciar sesión del encargado](<../assets/05-capitulo-v/mockups/web/Iniciar Sesion Encargado.png>)
+![Completar registro](<../assets/05-capitulo-v/mockups/web/crear nuevo registro.png>)
+![Panel de control del encargado](<../assets/05-capitulo-v/mockups/web/Panel de control del encargado.png>)
+![Alertas del encargado de planta](<../assets/05-capitulo-v/mockups/web/Alertas del encargado de planta.png>)
+![Gobernanza de cuentas - aplicación web](<../assets/05-capitulo-v/mockups/web/ADMINISTRACION DE ROLES.png>)
+![Crear nuevo usuario](<../assets/05-capitulo-v/mockups/web/Crear nuevo usuario.png>)
 
 MOVIL:
 
@@ -376,6 +378,10 @@ En ambos prototipos se busca representar los recorridos principales: ingresar al
 ![Evidencia de la explicación del prototipo móvil](../assets/05-capitulo-v/prototipos/explicacion-prototipo-movil.png)
 
 **Prototipo web de escritorio:** [Abrir prototipo en Figma](https://www.figma.com/proto/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=67-2086&p=f&t=DnfUCKPU45KIZ1SG-1&scaling=scale-down&content-scaling=responsive&page-id=62%3A234&starting-point-node-id=62%3A2071).
+
+**Explicación del prototipo web:** [Ver video en SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQACIq6Cv0-cQLxQ1Ce_OAIJAcl4q4FVlA-Jfpse8Tw30Xc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=QlFb91).
+
+![Evidencia de la explicación del prototipo web](../assets/05-capitulo-v/prototipos/explicacion-prototipo-web.png)
 
 <a id="s-5-6"></a>
 ## 5.6. IoT Device Design
