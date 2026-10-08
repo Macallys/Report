@@ -6189,15 +6189,29 @@ Los wireframes de las aplicaciones de SAFEPLANT definen la estructura base y la 
 
 El esquema para la plataforma web, orientado al Encargado de Planta, distribuye el contenido aprovechando el formato de escritorio. Su estructura prioriza paneles de control amplios (dashboards) para el monitoreo consolidado, tablas detalladas para la auditoría de historiales y vistas estructuradas.
 
+**Enlace para acceder al Figma:** [SAFEPLANT-Wireframes](https://www.figma.com/design/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT?node-id=16-2&p=f&t=DtY3CbltLXacNxro-0)
+
+**Completar Registro - US11**
+
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WF_1.png)
+
+**Inicio de Sesión - US08**
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WF_2.png)
 
+**Panel Principal de Seguridad - US23**
+
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WF_3.png)
+
+**Alertas Activas y Registro de Incidentes - US23**
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WF_4.png)
 
+**Historial de Telemetría y Eventos - US23**
+
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WF_5.png)
+
+**Administración de Cuentas y Roles - US11 y US12**
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WF_6.png)
 
@@ -6205,17 +6219,32 @@ El esquema para la plataforma web, orientado al Encargado de Planta, distribuye 
 
 El diseño para el dispositivo móvil, dirigido al Supervisor de Seguridad en campo, organiza la interfaz en una sola columna para facilitar la interacción rápida. Su estructura destaca los indicadores de telemetría en tiempo real por área industrial, la visualización clara de alertas críticas y el acceso directo a los controles manuales de los actuadores para situaciones de emergencia.
 
+
+**Completar Registro - US11**
+
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_6.png)
+
+**Inicio de Sesión - US07**
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_7.png)
 
+**Panel de Control - US14**
+
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_1.png)
+
+**Alertas Activas - US18**
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_2.png)
 
+**Dispositivos por Área - US22**
+
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_3.png)
 
+**Historial y Eventos - US26 y US33**
+
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_4.png)
+
+**Umbrales de Seguridad - US21**
 
 ![Applications Wireframes](../assets/05-capitulo-v/applications/WFM_5.png)
 
