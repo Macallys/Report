@@ -419,9 +419,9 @@ Commits realizados sobre el repositorio del informe entre el 20 de septiembre y 
 <a id="s-6-2-1-5"></a>
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
 
-En el Sprint 1 el equipo priorizó la construcción de la estructura modular del backend y los endpoints de Identity & Access, por lo que no se implementaron Unit Tests, Integration Tests ni Acceptance Tests automatizados para los Web Services. La única especificación existente es la prueba por defecto del componente raíz generada por Angular (`src/app/app.spec.ts`) en `safeplant-web-client`.
+En el Sprint 1 el equipo priorizó la construcción de la estructura modular del backend y los endpoints de Identity & Access, por lo que no se implementaron Unit Tests, Integration Tests ni Acceptance Tests automatizados para los Web Services. La única especificación existente es la prueba por defecto del componente raíz generada por Angular (src/app/app.spec.ts) en safeplant-web-client.
 
-Para el Sprint 2 se incorporará un proyecto de pruebas en `safeplant-web-backend` con Unit Tests sobre los servicios de dominio de Identity & Access (`SignInService`, `DirectoryService`, `RecoveryService`) y archivos `.feature` en Gherkin para los escenarios de request/response de TS21, US11 y US12.
+Para el Sprint 2 se incorporará un proyecto de pruebas en safeplant-web-backend con Unit Tests sobre los servicios de dominio de Identity & Access (SignInService, DirectoryService, RecoveryService) y archivos .feature en Gherkin para los escenarios de request/response de TS21, US11 y US12.
 
 <a id="s-6-2-1-6"></a>
 #### 6.2.1.6. Execution Evidence for Sprint Review
@@ -471,7 +471,6 @@ Content-Type: application/json
 }
 ```
 
-**Documentación desplegada:** la especificación OpenAPI se expone en `/openapi/v1.json` y Swagger UI en `/swagger`. En este sprint ambos están habilitados en el entorno de desarrollo (`https://localhost:7222/swagger`).
 
 **Repositorio de Web Services:** [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend) — commits de documentación: `36fa06f` (Swagger UI).
 
