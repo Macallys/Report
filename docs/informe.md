@@ -303,6 +303,162 @@ SafePlant
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Elaboración de Software Architecture Context Level Diagrams.</td>
     </tr>
+    <tr>
+      <td align="left">1.37</td>
+      <td align="left">2026-10-05</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Elaboración de Software Architecture Container Level Diagrams y Deployment Diagrams (C4).</td>
+    </tr>
+    <tr>
+      <td align="left">1.38</td>
+      <td align="left">2026-10-05</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Documentación táctica del Bounded Context Plant Monitoring (capas, componentes y código).</td>
+    </tr>
+    <tr>
+      <td align="left">1.39</td>
+      <td align="left">2026-10-05</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Documentación táctica del Bounded Context Safety &amp; Actuation.</td>
+    </tr>
+    <tr>
+      <td align="left">1.40</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Documentación táctica del Bounded Context Device &amp; Edge Management.</td>
+    </tr>
+    <tr>
+      <td align="left">1.41</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Documentación táctica del Bounded Context Identity &amp; Access.</td>
+    </tr>
+    <tr>
+      <td align="left">1.42</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Elaboración de General Style Guidelines y Web, Mobile and IoT Style Guidelines.</td>
+    </tr>
+    <tr>
+      <td align="left">1.43</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Definición de Information Architecture: organización, etiquetado, SEO, búsqueda y navegación.</td>
+    </tr>
+    <tr>
+      <td align="left">1.44</td>
+      <td align="left">2026-10-06</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Diseño de Landing Page Wireframe y Mock-up (escritorio y móvil).</td>
+    </tr>
+    <tr>
+      <td align="left">1.45</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Elaboración de Applications Wireframes (web del Encargado de Planta y móvil del Supervisor).</td>
+    </tr>
+    <tr>
+      <td align="left">1.46</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Elaboración de Applications Wireflow Diagrams y User Flow Diagrams.</td>
+    </tr>
+    <tr>
+      <td align="left">1.47</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Elaboración de Applications Mock-ups y criterios de prototipado.</td>
+    </tr>
+    <tr>
+      <td align="left">1.48</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Documentación de prototipos web de escritorio y móvil.</td>
+    </tr>
+    <tr>
+      <td align="left">1.49</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Diseño del dispositivo IoT (nodo ESP32, sensores y actuadores; evidencia Wokwi).</td>
+    </tr>
+    <tr>
+      <td align="left">1.50</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Documentación de Software Configuration Management: entorno de desarrollo, SCM, convenciones y despliegue.</td>
+    </tr>
+    <tr>
+      <td align="left">1.51</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Sprint Planning 1, Aspect Leaders and Collaborators y Sprint Backlog 1.</td>
+    </tr>
+    <tr>
+      <td align="left">1.52</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Implementación y despliegue de la landing page (US01, US02, US05, US09).</td>
+    </tr>
+    <tr>
+      <td align="left">1.53</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Implementación de vistas web: sign-in, dashboard, historial y directorio de cuentas (US08, US11, US12, US23).</td>
+    </tr>
+    <tr>
+      <td align="left">1.54</td>
+      <td align="left">2026-10-07</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Configuración del cliente Angular y despliegue de la aplicación web en Vercel.</td>
+    </tr>
+    <tr>
+      <td align="left">1.55</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Implementación del backend Identity &amp; Access (JWT, cuentas, OpenAPI) y despliegue en Azure App Service (TS21).</td>
+    </tr>
+    <tr>
+      <td align="left">1.56</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Registro de evidencias de desarrollo, ejecución, servicios y despliegue del Sprint 1.</td>
+    </tr>
+    <tr>
+      <td align="left">1.57</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Huaman Cuba, Johan Giovani</td>
+      <td align="left">Team Collaboration Insights during Sprint 1 y compromisos de flujo Git para el Sprint 2.</td>
+    </tr>
+    <tr>
+      <td align="left">1.58</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Correcciones de estilo y referencias de AV1; actualización de conclusiones y recomendaciones.</td>
+    </tr>
+    <tr>
+      <td align="left">1.59</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Actualización de bibliografía y anexos (repositorios, landing desplegada y evidencias TB1).</td>
+    </tr>
+    <tr>
+      <td align="left">1.60</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Actualización de Student Outcome ABET–EAC SO5 con acciones y conclusiones de la entrega TB1.</td>
+    </tr>
+    <tr>
+      <td align="left">1.61</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Actualización de Project Report Collaboration Insights para la entrega TB1.</td>
+    </tr>
+    <tr>
+      <td align="left">1.62</td>
+      <td align="left">2026-10-08</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Cierre del informe para la entrega del Trabajo Parcial (TB1): diseño estratégico y táctico DDD, arquitectura, UI/UX e incremento del Sprint 1.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -508,17 +664,16 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <tbody>
     <tr>
       <td align="left">Trabaja en equipo para proporcionar liderazgo en forma conjunta</td>
-      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Participó activamente en las entrevistas con encargados de planta y supervisores, aportando evidencia de campo para decidir el alcance de SafePlant. Lideró de forma compartida la elaboración de User Stories, la actualización del Product Backlog y el modelado de Domain Message Flows, además de contribuir al Big Picture EventStorming. Con ello, alineó requisitos, dominio y entregables del informe.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Asumió el arranque del Startup Profile, la descripción de Macallys, el Solution Profile y la metodología Lean UX (problem statements, assumptions, hypothesis y canvas). Registró entrevistas y aportó al Big Picture EventStorming, dando al equipo una visión de producto compartida desde el Capítulo I.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Participó en entrevistas y en el EventStorming, y luego lideró el descubrimiento táctico: Domain Message Flows, Candidate Context Discovery y Design-Level EventStorming. Su trabajo conectó el lenguaje del dominio con los bounded contexts del Capítulo IV.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Lideró el análisis competitivo, las estrategias frente a competidores, el needfinding y la User Task Matrix. Aportó al EventStorming para que las decisiones de diferenciación se sostuvieran en evidencias de usuario y de mercado.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Participó en el EventStorming y asumió el liderazgo de la arquitectura de software: System Landscape, Tactical-Level DDD y diagramas de contexto C4. Aseguró coherencia entre el dominio descubierto y la estructura técnica de SafePlant.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Diseñó el guion de entrevistas, participó en su ejecución y colaboró en User Stories, Impact Mapping, Domain Message Flows y EventStorming. Aportó liderazgo en la trazabilidad de necesidades de supervisor y encargado hacia el backlog.</td>
-      <td align="left">Los integrantes demostraron liderazgo compartido en AV1: cada uno condujo una franja del informe —producto, elicitación, dominio o arquitectura— y retroalimentó al resto. El compromiso y la comunicación constante permitieron cerrar la entrega con una visión única de SafePlant.</td>
+      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Participó activamente en las entrevistas con encargados de planta y supervisores, aportando evidencia de campo para decidir el alcance de SafePlant. Lideró de forma compartida la elaboración de User Stories, la actualización del Product Backlog y el modelado de Domain Message Flows, además de contribuir al Big Picture EventStorming. Con ello, alineó requisitos, dominio y entregables del informe.<br>TB1: Lideró el informe (aspecto Report) y condujo wireflows y user flows del Capítulo V, de modo que el canal móvil del Supervisor y el canal web del Encargado de Planta quedaron trazados a las user stories. Coordinó las correcciones de AV1 y las conclusiones del Trabajo Parcial.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Asumió el arranque del Startup Profile, la descripción de Macallys, el Solution Profile y la metodología Lean UX (problem statements, assumptions, hypothesis y canvas). Registró entrevistas y aportó al Big Picture EventStorming, dando al equipo una visión de producto compartida desde el Capítulo I.<br>TB1: Lideró style guidelines, mock-ups y prototipos, y documentó Software Configuration Management (entorno, Git, convenciones y despliegue). Convirtió las decisiones de marca y de repositorio en una guía común para diseñar e implementar.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Participó en entrevistas y en el EventStorming, y luego lideró el descubrimiento táctico: Domain Message Flows, Candidate Context Discovery y Design-Level EventStorming. Su trabajo conectó el lenguaje del dominio con los bounded contexts del Capítulo IV.<br>TB1: Completó el diseño táctico de Plant Monitoring y Safety &amp; Actuation, y lideró el registro de evidencias del Sprint 1 (desarrollo, ejecución, servicios, despliegue y colaboración). Hizo visible el incremento frente al backlog.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Lideró el análisis competitivo, las estrategias frente a competidores, el needfinding y la User Task Matrix. Aportó al EventStorming para que las decisiones de diferenciación se sostuvieran en evidencias de usuario y de mercado.<br>TB1: Lideró information architecture, wireframes de aplicaciones y el diseño del nodo IoT. Tradujo personas y tareas del Capítulo II a pantallas y al dispositivo de campo documentado en Wokwi.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Participó en el EventStorming y asumió el liderazgo de la arquitectura de software: System Landscape, Tactical-Level DDD y diagramas de contexto C4. Aseguró coherencia entre el dominio descubierto y la estructura técnica de SafePlant.<br>TB1: Cerró Container y Deployment C4 y el diseño táctico de Device &amp; Edge Management e Identity &amp; Access. Lideró backend (Identity &amp; Access) y despliegue: estructura modular ASP.NET Core, JWT, OpenAPI y Azure App Service, además de la base Angular y Vercel.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Diseñó el guion de entrevistas, participó en su ejecución y colaboró en User Stories, Impact Mapping, Domain Message Flows y EventStorming. Aportó liderazgo en la trazabilidad de necesidades de supervisor y encargado hacia el backlog.<br>TB1: Lideró landing page y aplicación web: planificación del Sprint 1, backlog, implementación de vistas (sign-in, métricas, cuentas) y publicación en GitHub Pages. Dejó el primer incremento navegable del Encargado de Planta.</td>
+      <td align="left"><strong>AV1:</strong> Los integrantes demostraron liderazgo compartido: cada uno condujo una franja del informe —producto, elicitación, dominio o arquitectura— y retroalimentó al resto. El compromiso y la comunicación constante permitieron cerrar la entrega con una visión única de SafePlant.<br><br><strong>TB1:</strong> El liderazgo se redistribuyó por aspecto (informe, UI/UX, IoT, backend, landing/web y evidencias de sprint). Cada integrante condujo un frente, retroalimentó al resto y el equipo cerró el Trabajo Parcial con arquitectura táctica, interfaces trazables a historias y el Sprint 1 desplegado, sin perder la visión única de SafePlant.</td>
     </tr>
     <tr>
       <td align="left">Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</td>
-      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Coordinó la integración de capítulos en el informe, la evidencia de entrevistas y la consistencia del backlog con las historias. Facilitó que el equipo trabajara sobre un mismo repositorio y un mismo lenguaje ubicuo.<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Planificó y completó los entregables iniciales del perfil de startup y Lean UX, dejando plantillas y segmentos claros para que el resto del equipo continuara el needfinding y las entrevistas.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Organizó el paso del EventStorming de Big Picture al nivel de diseño, cumpliendo los objetivos de delimitar agregados y bounded contexts con el equipo.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Estableció metas de análisis (competidores, needfinding y task matrix) y las cerró con artefactos reutilizables para personas, journeys y el tablero de EventStorming.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Planificó los entregables de arquitectura de AV1 y los documentó en el Capítulo IV, alineando landscape, contexto y DDD táctico con lo acordado en Miro.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Definió el diseño de entrevistas y el Impact Map, planificando preguntas y resultados que el equipo usó para priorizar historias y flujos de dominio.</td>
-      <td align="left">En AV1 el equipo construyó un entorno colaborativo: metas por capítulo, tablero compartido en Miro y un informe versionado. Cada integrante planificó su frente y cumplió los objetivos de elicitación, especificación y diseño inicial de SafePlant.</td>
+      <td align="left"><strong>Solano Armas, Angelo Héctor</strong><br>AV1: Coordinó la integración de capítulos en el informe, la evidencia de entrevistas y la consistencia del backlog con las historias. Facilitó que el equipo trabajara sobre un mismo repositorio y un mismo lenguaje ubicuo.<br>TB1: Planificó la integración de Capítulos V–VII y anexos, aplicó correcciones de AV1 y unificó el informe para TB1. Mantuvo a todo el equipo sobre el mismo repositorio <code>Report</code> y el mismo lenguaje de canales (móvil vs web).<br><br><strong>Gordillo Ramos, Santiago Alonso</strong><br>AV1: Planificó y completó los entregables iniciales del perfil de startup y Lean UX, dejando plantillas y segmentos claros para que el resto del equipo continuara el needfinding y las entrevistas.<br>TB1: Estableció metas de identidad visual y de configuración de software; entregó style guidelines, prototipos y la sección 6.1 para que diseño e implementación compartieran tokens, ramas y convenciones de commit.<br><br><strong>Huaman Cuba, Johan Giovani</strong><br>AV1: Organizó el paso del EventStorming de Big Picture al nivel de diseño, cumpliendo los objetivos de delimitar agregados y bounded contexts con el equipo.<br>TB1: Planificó el cierre táctico de monitoreo y actuación y el empaquetado de evidencias del Sprint 1, de modo que el Review pudiera contrastar commits, URLs y OpenAPI con el sprint backlog.<br><br><strong>Baldeon Vivar, Santiago Armando</strong><br>AV1: Estableció metas de análisis (competidores, needfinding y task matrix) y las cerró con artefactos reutilizables para personas, journeys y el tablero de EventStorming.<br>TB1: Fijó metas de arquitectura de información y de dispositivo; entregó wireframes y el diseño IoT para que web, móvil y nodo de campo usaran la misma jerarquía de zonas, alertas y umbrales.<br><br><strong>Iglesias Pérez, Sergio Sebastián</strong><br>AV1: Planificó los entregables de arquitectura de AV1 y los documentó en el Capítulo IV, alineando landscape, contexto y DDD táctico con lo acordado en Miro.<br>TB1: Planificó los entregables técnicos de TB1 (C4 container/deployment, módulos Identity y Edge, CI/CD) y los cumplió con Cloud.Api en Azure, Swagger y el cliente Angular desplegado.<br><br><strong>Sanchez Gonzales, Gabriel</strong><br>AV1: Definió el diseño de entrevistas y el Impact Map, planificando preguntas y resultados que el equipo usó para priorizar historias y flujos de dominio.<br>TB1: Preparó el Sprint Planning (meta, 27 SP, líderes L/C) y cerró landing y vistas web. El tablero Trello (To-do → Done) y las URLs públicas dejaron el objetivo del sprint verificable.</td>
+      <td align="left"><strong>AV1:</strong> El equipo construyó un entorno colaborativo con metas por capítulo, tablero compartido en Miro y un informe versionado. Cada integrante planificó su frente y cumplió los objetivos de elicitación, especificación y diseño inicial de SafePlant.<br><br><strong>TB1:</strong> El entorno colaborativo pasó a metas de sprint, aspectos con líder y colaborador, repositorios de producto y despliegues públicos. Cada integrante planificó su frente y cumplió diseño táctico, UI/UX e incremento del Sprint 1. El equipo reconoció que los commits de producto se concentraron en landing/web y backend, y acordó ramas <code>feature/*</code>, pull requests y <code>Co-authored-by</code> para el Sprint 2, de modo que la inclusión quede también en el historial de Git.</td>
     </tr>
   </tbody>
 </table>
-
 ---
 
 <a id="s-cap-i"></a>
