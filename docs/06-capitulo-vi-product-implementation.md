@@ -364,7 +364,7 @@ Se registra el historial completo de los tres repositorios, ya que fueron creado
 | Macallys/safeplant-web-backend | develop | [1c595f8](https://github.com/Macallys/safeplant-web-backend/commit/1c595f81906741d7a14fbffc4f5478adb6172f77) | Merge branch 'main' of github.com:Macallys/safeplant-web-backend into develop wa | - | 2026-10-08 |
 | Macallys/safeplant-web-backend | develop | [9b8aa1b](https://github.com/Macallys/safeplant-web-backend/commit/9b8aa1bd19cda70722d71097de40466161f151b2) | feat: azure workflow | - | 2026-10-08 |
 
-**Repositorio del informe (Report)**
+**Repositorio del informe (Reporte)**
 
 Commits realizados sobre el repositorio del informe entre el 20 de septiembre y el 7 de octubre de 2026, posteriores a la entrega AV1. Se conservan los mensajes originales, incluidos los generados por la interfaz web de GitHub al subir archivos y los de integración de ramas, para mantener la trazabilidad real del trabajo.
 
