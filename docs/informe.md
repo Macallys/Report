@@ -627,6 +627,20 @@ SafePlant
             - [6.2.1.7. Services Documentation Evidence for Sprint Review](#s-6-2-1-7)
             - [6.2.1.8. Software Deployment Evidence for Sprint Review](#s-6-2-1-8)
             - [6.2.1.9. Team Collaboration Insights during Sprint](#s-6-2-1-9)
+        - [6.2.2. Sprint 2](#s-6-2-2)
+            - [6.2.2.1. Sprint Planning 2](#s-6-2-2-1)
+            - [6.2.2.2. Aspect Leaders and Collaborators](#s-6-2-2-2)
+            - [6.2.2.3. Sprint Backlog 2](#s-6-2-2-3)
+            - [6.2.2.4. Development Evidence for Sprint Review](#s-6-2-2-4)
+            - [6.2.2.5. Testing Suite Evidence for Sprint Review](#s-6-2-2-5)
+            - [6.2.2.6. Execution Evidence for Sprint Review](#s-6-2-2-6)
+            - [6.2.2.7. Services Documentation Evidence for Sprint Review](#s-6-2-2-7)
+            - [6.2.2.8. Software Deployment Evidence for Sprint Review](#s-6-2-2-8)
+            - [6.2.2.9. Team Collaboration Insights during Sprint](#s-6-2-2-9)
+    - [6.3. Validation Interviews](#s-6-3)
+        - [6.3.1. Diseño de Entrevistas](#s-6-3-1)
+        - [6.3.2. Registro de Entrevistas](#s-6-3-2)
+        - [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
 - [Conclusiones](#s-conclusiones)
         - [Conclusiones](#s-conclusiones-conclusiones)
         - [Recomendaciones](#s-recomendaciones)
@@ -7091,14 +7105,13 @@ Para el desarrollo colaborativo del ecosistema SafePlant, el equipo utiliza las 
 <a id="s-6-1-2"></a>
 ### 6.1.2. Source Code Management
 
-El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys`. Actualmente, la organización alberga los siguientes repositorios principales:
+El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys` ([https://github.com/Macallys](https://github.com/Macallys)). Actualmente, la organización alberga los siguientes repositorios:
 
-[https://github.com/Macallys/Report](https://github.com/Macallys/Report)
-
-*   **`Report`:** Repositorio central que contiene la documentación  y el informe del proyecto.
-*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
-*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular.
-*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático.
+*   **`Report`:** Repositorio central que contiene la documentación y el informe del proyecto. [https://github.com/Macallys/Report](https://github.com/Macallys/Report)
+*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático. [https://github.com/Macallys/landing-page](https://github.com/Macallys/landing-page)
+*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular. [https://github.com/Macallys/safeplant-web-client](https://github.com/Macallys/safeplant-web-client)
+*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core. [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend)
+*   **`App-Movil`:** Contiene el código fuente de la aplicación móvil del Supervisor de Seguridad. [https://github.com/Macallys/App-Movil](https://github.com/Macallys/App-Movil)
 
 **Estrategia de Ramas**
 El equipo ha adaptado su flujo de trabajo para agilizar la integración continua. Inicialmente, se implementó un enfoque basado en ramas de características específicas para segmentar el trabajo. Sin embargo, la estrategia actual se ha simplificado: los miembros del equipo ahora integran sus aportes y actualizaciones de forma directa en la rama `develop` para acelerar el ciclo de desarrollo y consolidación. 
@@ -7365,41 +7378,73 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
   </thead>
   <tbody>
     <tr>
-      <td align="left">US01</td>
-      <td align="left">View SafePlant system information</td>
+      <td align="left" rowspan="2">US01</td>
+      <td align="left" rowspan="2">View SafePlant system information</td>
       <td align="left">T01</td>
-      <td align="left">Hero, propósito y flujo del sistema</td>
-      <td align="left">Maquetar la estructura base de la landing (navbar, hero) y las secciones "Qué es SafePlant", "Monitoreo en tiempo real", "Cómo responde el sistema" y "De la detección a la acción automática".</td>
-      <td align="left">5</td>
+      <td align="left">Estructura base, hero y propósito</td>
+      <td align="left">Maquetar la estructura base de la landing (navbar, hero) y la sección "Qué es SafePlant".</td>
+      <td align="left">2</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US02</td>
-      <td align="left">View SafePlant benefits and advantages</td>
+      <td align="left">T22</td>
+      <td align="left">Secciones de monitoreo y flujo del sistema</td>
+      <td align="left">Implementar las secciones "Monitoreo en tiempo real", "Cómo responde el sistema" y "De la detección a la acción automática".</td>
+      <td align="left">3</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US02</td>
+      <td align="left" rowspan="2">View SafePlant benefits and advantages</td>
       <td align="left">T02</td>
       <td align="left">Sección de beneficios</td>
-      <td align="left">Implementar la sección "El valor de SafePlant para tu planta" con las ventajas de la solución.</td>
-      <td align="left">2</td>
+      <td align="left">Maquetar la sección "El valor de SafePlant para tu planta" con las ventajas de la solución.</td>
+      <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US05</td>
-      <td align="left">View system technical architecture</td>
+      <td align="left">T23</td>
+      <td align="left">Diseño responsivo de la sección de beneficios</td>
+      <td align="left">Adaptar las tarjetas de beneficios a resoluciones de escritorio, tablet y móvil.</td>
+      <td align="left">1</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US05</td>
+      <td align="left" rowspan="2">View system technical architecture</td>
       <td align="left">T03</td>
       <td align="left">Sección de arquitectura técnica</td>
-      <td align="left">Implementar la sección que explica la relación entre dispositivos ESP32, IoT Gateway, nube, aplicación móvil y aplicación web.</td>
-      <td align="left">2</td>
+      <td align="left">Maquetar la sección que explica la relación entre dispositivos ESP32, IoT Gateway, nube, aplicación móvil y aplicación web.</td>
+      <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US06</td>
-      <td align="left">Navigate to the operations mobile app</td>
+      <td align="left">T24</td>
+      <td align="left">Validación del contenido técnico</td>
+      <td align="left">Revisar que los textos de la sección de arquitectura sean coherentes con la arquitectura documentada en el informe y ajustar el diseño responsivo.</td>
+      <td align="left">1</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US06</td>
+      <td align="left" rowspan="2">Navigate to the operations mobile app</td>
       <td align="left">T21</td>
       <td align="left">Call-to-action hacia la aplicación móvil</td>
       <td align="left">Incluir en la landing un acceso identificable a la aplicación móvil del Supervisor de Seguridad, distinto del acceso web. El botón App móvil apunta a https://app.safeplant.io/mobile/login. Ese dominio aún no resuelve y la aplicación móvil no está publicada en este sprint.</td>
+      <td align="left">1</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">To-Review</td>
+    </tr>
+    <tr>
+      <td align="left">T25</td>
+      <td align="left">Verificación del enlace a la aplicación móvil</td>
+      <td align="left">Comprobar el comportamiento del botón App móvil en escritorio y móvil, y validar la redirección cuando la aplicación móvil esté publicada.</td>
       <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">To-Review</td>
@@ -7441,32 +7486,56 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US23</td>
-      <td align="left">Plant metrics dashboard and full history</td>
+      <td align="left" rowspan="2">US23</td>
+      <td align="left" rowspan="2">Plant metrics dashboard and full history</td>
       <td align="left">T08</td>
-      <td align="left">Dashboard de métricas e historial</td>
-      <td align="left">Implementar el dashboard de métricas por área, el historial de alertas y el gráfico de telemetría, con datos de muestra.</td>
-      <td align="left">8</td>
+      <td align="left">Dashboard de métricas por área</td>
+      <td align="left">Implementar el dashboard de métricas por área con datos de muestra.</td>
+      <td align="left">4</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US11</td>
-      <td align="left">Create user accounts as Plant Manager</td>
+      <td align="left">T26</td>
+      <td align="left">Historial de alertas y gráfico de telemetría</td>
+      <td align="left">Implementar el historial de alertas y el gráfico de telemetría, con datos de muestra.</td>
+      <td align="left">4</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US11</td>
+      <td align="left" rowspan="2">Create user accounts as Plant Manager</td>
       <td align="left">T09</td>
-      <td align="left">Directorio y creación de cuentas</td>
-      <td align="left">Implementar el directorio de cuentas y el panel lateral de creación de cuentas para Safety Supervisors y Plant Managers.</td>
-      <td align="left">5</td>
+      <td align="left">Directorio de cuentas</td>
+      <td align="left">Implementar el directorio de cuentas de Safety Supervisors y Plant Managers.</td>
+      <td align="left">2</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US12</td>
-      <td align="left">Assign user roles and permissions</td>
-      <td align="left">T10</td>
-      <td align="left">Administración de roles</td>
-      <td align="left">Implementar la asignación y modificación de roles desde el directorio de cuentas.</td>
+      <td align="left">T27</td>
+      <td align="left">Panel de creación de cuentas</td>
+      <td align="left">Implementar el panel lateral de creación de cuentas con su formulario y validaciones.</td>
       <td align="left">3</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US12</td>
+      <td align="left" rowspan="2">Assign user roles and permissions</td>
+      <td align="left">T10</td>
+      <td align="left">Asignación de roles</td>
+      <td align="left">Implementar la asignación de rol a las cuentas desde el directorio de cuentas.</td>
+      <td align="left">2</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T28</td>
+      <td align="left">Modificación de roles</td>
+      <td align="left">Implementar el cambio de rol de una cuenta existente desde el directorio de cuentas.</td>
+      <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
@@ -7784,6 +7853,48 @@ Para el Sprint 2 el equipo adopta los siguientes compromisos:
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab1.png)
 
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab2.png)
+
+<a id="s-6-2-2"></a>
+### 6.2.2. Sprint 2
+
+<a id="s-6-2-2-1"></a>
+#### 6.2.2.1. Sprint Planning 2
+
+<a id="s-6-2-2-2"></a>
+#### 6.2.2.2. Aspect Leaders and Collaborators
+
+<a id="s-6-2-2-3"></a>
+#### 6.2.2.3. Sprint Backlog 2
+
+<a id="s-6-2-2-4"></a>
+#### 6.2.2.4. Development Evidence for Sprint Review
+
+<a id="s-6-2-2-5"></a>
+#### 6.2.2.5. Testing Suite Evidence for Sprint Review
+
+<a id="s-6-2-2-6"></a>
+#### 6.2.2.6. Execution Evidence for Sprint Review
+
+<a id="s-6-2-2-7"></a>
+#### 6.2.2.7. Services Documentation Evidence for Sprint Review
+
+<a id="s-6-2-2-8"></a>
+#### 6.2.2.8. Software Deployment Evidence for Sprint Review
+
+<a id="s-6-2-2-9"></a>
+#### 6.2.2.9. Team Collaboration Insights during Sprint
+
+<a id="s-6-3"></a>
+## 6.3. Validation Interviews
+
+<a id="s-6-3-1"></a>
+### 6.3.1. Diseño de Entrevistas
+
+<a id="s-6-3-2"></a>
+### 6.3.2. Registro de Entrevistas
+
+<a id="s-6-3-3"></a>
+### 6.3.3. Evaluaciones según heurísticas
 
 ---
 
