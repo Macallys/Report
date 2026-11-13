@@ -8000,14 +8000,303 @@ Los aspectos del Sprint 2 son los productos trabajados en la iteración: el back
 <a id="s-6-2-2-3"></a>
 #### 6.2.2.3. Sprint Backlog 2
 
+El objetivo del Sprint 2 fue completar la ruta del dato en el backend y conectar con ella las aplicaciones. El tablero se gestionó en Trello con los estados To-do, In-Process, To-Review y Done.
+
+**Tablero del Sprint 2:** [PENDIENTE: enlace de Trello]
+
+![Tablero del Sprint 2 en Trello: To-do, In-Process, To-Review y Done](../assets/06-capitulo-vi/sprints/sprint-2-trello.png)
+
+Las user stories asignadas suman 63 story points:
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Sprint #</th>
+      <th align="left" colspan="7">Sprint 2</th>
+    </tr>
+    <tr>
+      <th align="left" colspan="2">User Story</th>
+      <th align="left" colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th align="left">Story Id</th>
+      <th align="left">Story Title</th>
+      <th align="left">Task Id</th>
+      <th align="left">Task Title</th>
+      <th align="left">Task Description</th>
+      <th align="left">Estimation (Hours)</th>
+      <th align="left">Assigned To</th>
+      <th align="left">Status (To-do / In-Process / To-Review / Done)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">US20</td>
+      <td align="left">Register and manage industrial areas</td>
+      <td align="left">T29</td>
+      <td align="left">Registro y edición de áreas</td>
+      <td align="left">Implementar <code>POST /api/v1/areas</code> y <code>PUT /api/v1/areas/{areaId}</code> con nombre y ubicación, y el rechazo de nombres duplicados.</td>
+      <td align="left">5</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">US21</td>
+      <td align="left">Configure environmental thresholds by area</td>
+      <td align="left">T30</td>
+      <td align="left">Umbrales por área</td>
+      <td align="left">Implementar <code>PUT /api/v1/areas/{areaId}/thresholds</code> con el límite de CO₂ en ppm y el de ruido en dB.</td>
+      <td align="left">4</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US22</td>
+      <td align="left" rowspan="2">Register IoT devices by area</td>
+      <td align="left">T31</td>
+      <td align="left">Emisión de credenciales de dispositivo</td>
+      <td align="left">Implementar <code>POST /api/v1/devices</code>, el listado y la revocación de credenciales de sensores y actuadores.</td>
+      <td align="left">6</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T32</td>
+      <td align="left">Asociación de dispositivos al área</td>
+      <td align="left">Implementar <code>POST /api/v1/areas/{areaId}/devices</code> y <code>GET /api/v1/areas/{areaId}/setup</code>.</td>
+      <td align="left">4</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="3">TS01 / TS09</td>
+      <td align="left" rowspan="3">API endpoints for telemetry ingestion and query by area</td>
+      <td align="left">T33</td>
+      <td align="left">Recepción de telemetría por MQTT</td>
+      <td align="left">Implementar el worker que se suscribe al tópico <code>safeplant/v1/+/telemetry</code> del broker Mosquitto en la planta y entrega cada lectura al servicio de admisión.</td>
+      <td align="left">6</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T34</td>
+      <td align="left">Ingestión de telemetría en la nube</td>
+      <td align="left">Implementar <code>POST /internal/v1/telemetry</code>, protegido con la cabecera <code>X-Plant-Key</code>, que valida la credencial del dispositivo y el formato de la lectura.</td>
+      <td align="left">5</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T35</td>
+      <td align="left">Consulta de telemetría por área</td>
+      <td align="left">Implementar <code>GET /api/v1/areas/{areaId}/telemetry/latest</code>, <code>GET /api/v1/metrics/dashboard</code> y <code>GET /api/v1/areas/{areaId}/history</code>.</td>
+      <td align="left">5</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US14</td>
+      <td align="left" rowspan="2">Consolidated operational dashboard of plant areas</td>
+      <td align="left">T36</td>
+      <td align="left">Estado operativo por área (backend)</td>
+      <td align="left">Implementar <code>GET /api/v1/areas/operational-status</code> y <code>GET /api/v1/areas/{areaId}/operational-status</code>.</td>
+      <td align="left">5</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T37</td>
+      <td align="left">Panel de seguridad móvil (Flutter)</td>
+      <td align="left">Implementar el panel con el estado operativo de las áreas y el detalle por área con su última telemetría, consumiendo <code>/api/v1/areas/operational-status</code> y <code>/api/v1/areas/{areaId}/telemetry/latest</code>.</td>
+      <td align="left">8</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US18 / TS10</td>
+      <td align="left" rowspan="2">View active alerts / API endpoint for remote actuator override</td>
+      <td align="left">T38</td>
+      <td align="left">Alertas, exposiciones y acciones</td>
+      <td align="left">Implementar <code>GET /api/v1/alerts/active</code>, <code>GET /api/v1/areas/{areaId}/exposures</code> y <code>GET /api/v1/areas/{areaId}/actuator-actions</code>.</td>
+      <td align="left">6</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T39</td>
+      <td align="left">Override remoto de actuadores</td>
+      <td align="left">Implementar <code>POST /api/v1/areas/{areaId}/actuators/override</code>, que valida el par actuador-estado, reenvía la orden al host de la planta mediante <code>/internal/v1/overrides</code> y exige rol Supervisor desde el canal móvil. Defecto conocido: el endpoint termina devolviendo <code>503</code> aun cuando la planta acepta la orden.</td>
+      <td align="left">5</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">To-Review</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="3">US27 / US28</td>
+      <td align="left" rowspan="3">Detect CO₂ excess / Detect excessive noise</td>
+      <td align="left">T40</td>
+      <td align="left">Evaluación de exposición y política de actuadores</td>
+      <td align="left">Implementar en el contexto Safety &amp; Actuation las políticas de exposición y de actuadores (presencia con exceso de CO₂ o ruido) y su sincronización con la planta.</td>
+      <td align="left">8</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T41</td>
+      <td align="left">Persistencia local y contingencia en planta</td>
+      <td align="left">Persistir en SQLite local las lecturas y los eventos de la planta, y publicar las órdenes a los actuadores en <code>safeplant/v1/actuators/{type}</code>.</td>
+      <td align="left">8</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T42</td>
+      <td align="left">Contrato MQTT del nodo ESP32</td>
+      <td align="left">Definir el mensaje que el nodo publica en <code>safeplant/v1/{deviceId}/telemetry</code> (<code>secret</code>, <code>measure</code>, <code>ppm</code>, <code>db</code>, <code>state</code>, <code>recordedAt</code>) y los comandos que recibe en <code>safeplant/v1/actuators/{type}</code>. El circuito se probó en Wokwi (sección 5.6); en los repositorios visibles de la organización no hay código de firmware.</td>
+      <td align="left">4</td>
+      <td align="left">[PENDIENTE: responsable]</td>
+      <td align="left">[PENDIENTE: estado]</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US07 / US10 / US13</td>
+      <td align="left" rowspan="2">Safety Supervisor sign-in, sign-out and credential recovery on the mobile app</td>
+      <td align="left">T43</td>
+      <td align="left">Sesión en la app móvil (Flutter)</td>
+      <td align="left">Implementar inicio de sesión con <code>channel</code> igual a <code>Mobile</code>, restauración y cierre de sesión, recuperación y restablecimiento de credenciales. El token y el rol se guardan en <code>flutter_secure_storage</code> y un rol distinto de supervisor no entra a la aplicación.</td>
+      <td align="left">10</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T47</td>
+      <td align="left">Unión de la app móvil con el backend</td>
+      <td align="left">Alinear los contratos de la app con <code>Cloud.Api</code> (sobre <code>items</code> en alertas, exposiciones y acciones; umbrales enteros; secreto del dispositivo mostrado una sola vez) y configurar la URL de la API con <code>--dart-define=API_BASE_URL</code>.</td>
+      <td align="left">8</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US18 / US26 / US33</td>
+      <td align="left" rowspan="2">View active alerts, short exposure history and short log of automatic actions</td>
+      <td align="left">T48</td>
+      <td align="left">Alertas activas (Flutter)</td>
+      <td align="left">Implementar la pantalla de alertas activas con actualización periódica (<code>/api/v1/alerts/active</code>).</td>
+      <td align="left">5</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T49</td>
+      <td align="left">Historial de exposición y acciones de actuadores (Flutter)</td>
+      <td align="left">Implementar las pantallas de historial corto de exposiciones y de acciones ejecutadas por los actuadores.</td>
+      <td align="left">6</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">US32</td>
+      <td align="left">Remote manual actuator override in emergency</td>
+      <td align="left">T50</td>
+      <td align="left">Override de actuadores (Flutter)</td>
+      <td align="left">Implementar la pantalla de override manual de extractor, sirena y mamparas, que llama a <code>/api/v1/areas/{areaId}/actuators/override</code>.</td>
+      <td align="left">6</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">To-Review</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="1">US20 / US21 / US22</td>
+      <td align="left">Manage areas, thresholds and devices from the mobile app</td>
+      <td align="left">T51</td>
+      <td align="left">Configuración de planta (Flutter)</td>
+      <td align="left">Implementar el alta y la edición de áreas, la configuración de umbrales, el registro, el inventario y la revocación de dispositivos, y la vista de configuración del área.</td>
+      <td align="left">12</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">—</td>
+      <td align="left">Diseño visual de la app móvil</td>
+      <td align="left">T52</td>
+      <td align="left">Diseño de las pantallas existentes</td>
+      <td align="left">Aplicar el tema, la tipografía y el diseño visual a las pantallas de sesión, seguridad y configuración de planta. Está en la rama <code>diseno/ui-movil</code> y falta integrarlo a <code>main</code>.</td>
+      <td align="left">8</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">To-Review</td>
+    </tr>
+    <tr>
+      <td align="left">—</td>
+      <td align="left">Pruebas de la app móvil</td>
+      <td align="left">T53</td>
+      <td align="left">Suite de pruebas Flutter</td>
+      <td align="left">Escribir pruebas de casos de uso, DTO, mappers, controladores y páginas de sesión, seguridad y configuración de planta, y actualizarlas al contrato de <code>Cloud.Api</code>.</td>
+      <td align="left">10</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">—</td>
+      <td align="left">Integración de la aplicación web con la API</td>
+      <td align="left">T44</td>
+      <td align="left">Integración de la aplicación web</td>
+      <td align="left">Reemplazar los datos de muestra por la API en el inicio de sesión, el dashboard y el historial, con interceptor de autenticación, guard de sesión y proxy de desarrollo.</td>
+      <td align="left">8</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">—</td>
+      <td align="left">Entorno local de pruebas</td>
+      <td align="left">T45</td>
+      <td align="left">Docker Compose</td>
+      <td align="left">Definir <code>compose.yaml</code> con TimescaleDB, Eclipse Mosquitto, <code>Cloud.Api</code> y <code>Plant.Host</code> para probar el flujo completo en local.</td>
+      <td align="left">3</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">—</td>
+      <td align="left">Documentación del informe</td>
+      <td align="left">T46</td>
+      <td align="left">Sprint 2 en el informe</td>
+      <td align="left">Documentar el Sprint 2: planning, backlog, evidencias de desarrollo, pruebas, ejecución, servicios, despliegue y colaboración.</td>
+      <td align="left">5</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Done</td>
+    </tr>
+  </tbody>
+</table>
+
 <a id="s-6-2-2-4"></a>
 #### 6.2.2.4. Development Evidence for Sprint Review
 
 <a id="s-6-2-2-5"></a>
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
+En el Sprint 1 se asumió el compromiso de incorporar pruebas automatizadas.
+
+**Aplicación móvil** : El repositorio incluye 66 archivos de prueba con 296 casos de prueba de Flutter (`flutter_test`), organizados por feature: sesión, seguridad y configuración de planta. Cubren los casos de uso, los DTO y los mappers, los controladores y las páginas con pruebas de widget, y la ruta y el shell de la aplicación.  
+
+**Backend** : Para probar el flujo completo en local, el repositorio incluye `compose.yaml` con TimescaleDB, Eclipse Mosquitto, `Cloud.Api` y `Plant.Host`.
+
+| Tipo de prueba | Alcance | Herramienta | Resultado |
+| :--- | :--- | :--- | :--- |
+| Unit y widget tests | App móvil: sesión, seguridad y configuración de planta | `flutter_test` | 296 casos declarados en 66 archivos |
+| Unit, integration y acceptance | Backend | — | Pendiente para el Sprint 3 |
+
+![Testing Suite Evidence](../assets/06-capitulo-vi/sprints/testing_sprint2.png)
+
 <a id="s-6-2-2-6"></a>
 #### 6.2.2.6. Execution Evidence for Sprint Review
+
+Al cierre del Sprint 2 la aplicación móvil se compila y ejecuta, y el flujo completo del backend se ejecuta en local con Docker Compose, que levanta TimescaleDB, el broker Eclipse Mosquitto, `Cloud.Api` y `Plant.Host`. Una lectura publicada en el tópico MQTT del dispositivo llega al host de la planta, se guarda en la base local y se envía a la nube, donde la consultan el dashboard y el historial de la aplicación web integrada con la API.
+
+**URL de la aplicación web:** [https://safeplant-web-client.vercel.app/signIn](https://safeplant-web-client.vercel.app/signIn)
+
+**Proyecto Wokwi del nodo:** [Wokwi — nodo SafePlant](https://wokwi.com/projects/477285427305212929)
+
+Las capturas siguientes recorren el flujo en este orden: `docker compose up` con los cuatro servicios, el dashboard de la aplicación web con la lectura, y la app móvil con inicio de sesión, panel de seguridad, alertas activas y configuración de áreas.
+
+![Execution Evidence](../assets/06-capitulo-vi/sprints/execution_sprint2_flow.png)
+
 
 <a id="s-6-2-2-7"></a>
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
