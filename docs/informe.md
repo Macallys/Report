@@ -7857,11 +7857,145 @@ Para el Sprint 2 el equipo adopta los siguientes compromisos:
 <a id="s-6-2-2"></a>
 ### 6.2.2. Sprint 2
 
+En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo del Sprint 2 de SafePlant. El sprint se centró en el backend, que pasó de tener solo Identity & Access a cubrir los cuatro bounded contexts: Plant Monitoring (áreas, umbrales, dispositivos, dashboard e historial), Safety & Actuation (estado operativo, alertas, exposiciones, acciones de actuadores y override) y Device & Edge Management (credenciales de dispositivos, recepción de telemetría por MQTT y persistencia local en planta). En paralelo avanzaron la aplicación móvil del Supervisor en Flutter, el nodo IoT con ESP32 y la integración de la aplicación web con el backend.
+
 <a id="s-6-2-2-1"></a>
 #### 6.2.2.1. Sprint Planning 2
 
+El Sprint Planning Meeting del Sprint 2 tuvo como propósito construir los contextos de monitoreo, seguridad y dispositivos del backend, conectar la aplicación web con la API y avanzar con la app móvil del Supervisor y el nodo de campo. Se partió de lo que dejó pendiente el Sprint 1: la integración entre la aplicación web y el backend, las pruebas automatizadas y el comportamiento de los accesos de la landing hacia las aplicaciones.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left" colspan="2">Sprint # - Sprint 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left" colspan="2"><strong>Sprint Planning Background</strong></td>
+    </tr>
+    <tr>
+      <td align="left">Date</td>
+      <td align="left">13-11-2026</td>
+    </tr>
+    <tr>
+      <td align="left">Time</td>
+      <td align="left">22:00</td>
+    </tr>
+    <tr>
+      <td align="left">Location</td>
+      <td align="left">Reunión virtual vía Discord</td>
+    </tr>
+    <tr>
+      <td align="left">Prepared By</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+    </tr>
+    <tr>
+      <td align="left">Attendees (to planning meeting)</td>
+      <td align="left">Solano Armas, Angelo Héctor / Gordillo Ramos, Santiago Alonso  / Baldeon Vivar, Santiago Armando / Iglesias Pérez, Sergio Sebastián / Sanchez Gonzales, Gabriel</td>
+    </tr>
+    <tr>
+      <td align="left">Sprint 1 Review Summary</td>
+      <td align="left">Se entregó la landing page desplegada, las vistas de la aplicación web del Encargado de Planta con datos de muestra y el módulo Identity &amp; Access del backend, desplegado en Azure App Service. Los accesos de la landing hacia las aplicaciones (US06, US09) quedaron en To-Review porque el dominio de destino aún no resuelve. La aplicación web no estaba integrada con el backend.</td>
+    </tr>
+    <tr>
+      <td align="left">Sprint 1 Retrospective Summary</td>
+      <td align="left">La implementación se concentró en dos integrantes y la documentación en otros tres. Se acordó que cada User Story tenga su rama <code>feature/*</code> integrada por Pull Request revisado por otro integrante, que todos tengan commits propios en al menos un repositorio de producto y que el trabajo en pareja se registre con <code>Co-authored-by</code>. Se asumió además el compromiso de incorporar pruebas automatizadas en el backend.</td>
+    </tr>
+    <tr>
+      <td align="left" colspan="2"><strong>Sprint Goal &amp; User Stories</strong></td>
+    </tr>
+    <tr>
+      <td align="left">Sprint 2 Goal</td>
+      <td align="left">
+        <strong>Our focus is on</strong> completar en el backend los contextos de monitoreo de planta, seguridad y actuación, y gestión de dispositivos y borde, con recepción de telemetría por MQTT, y conectar la aplicación web con la API, mientras avanzan la app móvil del Supervisor y el nodo ESP32.<br><br>
+        <strong>We believe it delivers</strong> la primera ruta completa del dato en SafePlant, desde el sensor hasta las pantallas de gobierno y operación, con decisión y actuación local en planta incluso sin internet <strong>to</strong> los Supervisores de Seguridad y los Encargados de Planta.<br><br>
+        <strong>This will be confirmed when</strong> una lectura publicada por MQTT quede guardada en la planta y sincronizada a la nube, el dashboard y el historial la muestren en la aplicación web, y el estado operativo y las alertas del área respondan a los umbrales configurados.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">Sprint 2 Velocity</td>
+      <td align="left">[COMPLETAR: velocidad acordada; en el Sprint 1 fue 30]</td>
+    </tr>
+    <tr>
+      <td align="left">Sum of Story Points</td>
+      <td align="left">43 Story Points</td>
+    </tr>
+  </tbody>
+</table>
+
 <a id="s-6-2-2-2"></a>
 #### 6.2.2.2. Aspect Leaders and Collaborators
+
+Los aspectos del Sprint 2 son los productos trabajados en la iteración: el backend, la integración de la aplicación web, la aplicación móvil, el dispositivo IoT, el despliegue y la documentación en el informe. Cada aspecto tiene un líder (L) y colaboradores (C).
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Team Member (Last Name, First Name)</th>
+      <th align="left">GitHub Username</th>
+      <th align="left">Backend</th>
+      <th align="left">Web Integration</th>
+      <th align="left">Mobile App (Flutter)</th>
+      <th align="left">IoT Device</th>
+      <th align="left">Deployment</th>
+      <th align="left">Report</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Angelo5214</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+      <td align="left">C</td>
+    </tr>
+    <tr>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">SantiIHC</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+    </tr>
+    <tr>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Santibal11</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+    </tr>
+    <tr>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">ghostrider101218</td>
+      <td align="left">L</td>
+      <td align="left">L</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+      <td align="left">C</td>
+    </tr>
+    <tr>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">yigabriel</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">C</td>
+      <td align="left">L</td>
+      <td align="left">L</td>
+      <td align="left">C</td>
+    </tr>
+  </tbody>
+</table>
+
 
 <a id="s-6-2-2-3"></a>
 #### 6.2.2.3. Sprint Backlog 2
