@@ -8481,11 +8481,13 @@ La suite incluye 66 archivos de prueba con 296 casos: 230 pruebas unitarias y 66
 <a id="s-6-2-2-6"></a>
 #### 6.2.2.6. Execution Evidence for Sprint Review
 
-Al cierre del Sprint 2 la aplicación móvil se compila y ejecuta, y el flujo completo del backend se ejecuta en local con Docker Compose, que levanta TimescaleDB, el broker Eclipse Mosquitto, Cloud.Api y Plant.Host. Una lectura publicada en el tópico MQTT del dispositivo llega al host de la planta, se guarda en la base local y se envía a la nube, donde la consultan el dashboard y el historial de la aplicación web integrada con la API.
+Al cierre del Sprint 2 se verificó la ejecución de los tres productos del incremento ya desplegados. La aplicación móvil del Supervisor se publica como APK (SafePlant Mobile v0.1.0). El backend Cloud.Api corre en Azure App Service (wa-safeplant-cloudbackend-prod). La aplicación web del Encargado de Planta está en Vercel y consume esa API con sesión autenticada. El recorrido del dato queda así: el nodo publica la lectura por MQTT, Plant.Host la recibe y la guarda en la planta, la nube la sincroniza y la web la muestra en telemetría, alertas e historial.
 
-**Backend: entorno local con Docker Compose**
+Backend: Cloud.Api desplegado y verificación con Docker Compose
 
-El comando docker compose up levanta cuatro servicios: TimescaleDB (puerto 5432), Eclipse Mosquitto (puerto 1883), Cloud.Api (puerto 8080) y Plant.Host. Desde `http://localhost:8080/swagger/index.html` se prueban los endpoints documentados en la sección 6.2.2.7.
+La evidencia principal de ejecución del backend es el servicio publicado en Azure. Cloud.Api responde en https://wa-safeplant-cloudbackend-prod.azurewebsites.net y su Swagger UI desplegado permite probar los endpoints documentados en la sección 6.2.2.7. La web en Vercel y la app móvil apuntan a esa misma API.
+
+Además, el equipo mantiene un compose.yaml para reproducir el stack completo en laboratorio: TimescaleDB, Eclipse Mosquitto, Cloud.Api y Plant.Host. Esa configuración local no sustituye al despliegue; sirve para validar MQTT, la persistencia en planta y la sincronización hacia la nube antes de publicar. Las capturas siguientes muestran ese entorno de verificación y Swagger UI de Cloud.Api con los módulos de áreas, telemetría, alertas y dispositivos.
 
 ![Backend: servicios levantados con Docker Compose](../assets/06-capitulo-vi/sprints/execution_sprint2_compose.png)
 
