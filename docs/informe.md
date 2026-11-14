@@ -8416,8 +8416,34 @@ HTTP/1.1 204 No Content
 <a id="s-6-2-2-8"></a>
 #### 6.2.2.8. Software Deployment Evidence for Sprint Review
 
+El despliegue en producción del backend se hace con un workflow de GitHub Actions que se dispara con cada push a main. La rama main terminó en el commit `6824ee8` del 8 de octubre de 2026 y develop tiene 10 commits más, todos del Sprint 2. En el entorno local, Docker Compose levanta los cuatro servicios del flujo completo.
+
+| Producto | Repositorio | Plataforma | URL / ubicación | Mecanismo |
+| :--- | :--- | :--- | :--- | :--- |
+| Backend (Cloud API) | `safeplant-web-backend` | Azure App Service (`wa-safeplant-cloudbackend-prod`) | `https://wa-safeplant-cloudbackend-prod-hpe0b8bra9ftfshg.canadacentral-01.azurewebsites.net` | Workflow de GitHub Actions en cada push a `main` |
+| Host de planta (Plant.Host) | `safeplant-web-backend` | Docker Compose (local) | `compose.yaml` | `docker compose up` |
+| Aplicación web | `safeplant-web-client` | Vercel | [https://safeplant-web-client.vercel.app](https://safeplant-web-client.vercel.app) | Despliegue automático en cada push |
+| Landing page | `landing-page` | GitHub Pages | [https://macallys.github.io/landing-page/](https://macallys.github.io/landing-page/) | Publicación desde la rama `main` |
+| Aplicación móvil | `App-Movil` | APK Android (`com.macallys.safeplant_mobile`, versión 0.1.0+1) | Compilación local; no publicada en una tienda | `flutter build apk --debug` o `--release` con `--dart-define=API_BASE_URL` |
+| Nodo IoT | Sin repositorio de firmware visible en la organización | Simulador Wokwi (sección 5.6) | [Wokwi — nodo SafePlant](https://wokwi.com/projects/477285427305212929) | Ejecución en el simulador |
+
+![Despliegue y entorno local del Sprint 2](../assets/06-capitulo-vi/sprints/deploy-sprint2.png)
+
 <a id="s-6-2-2-9"></a>
 #### 6.2.2.9. Team Collaboration Insights during Sprint
+
+La colaboración se midió sobre los repositorios de la organización con commits desde el 9 de octubre de 2026. Las cifras son reproducibles con `git shortlog -sn --since="2026-10-09" --all` y agrupan las identidades de Git de un mismo integrante.
+
+| Integrante | `Report` | `landing-page` | `safeplant-web-client` | `safeplant-web-backend` | `App-Movil` | Total |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Iglesias Pérez, Sergio Sebastián | 0 | 5 | 1 | 10 | 0 | 16 |
+| Solano Armas, Angelo Héctor | 0 | 0 | 4 | 0 | 10 | 14 |
+| Sanchez Gonzales, Gabriel | 1 | 0 | 5 | 0 | 7 | 13 |
+| Gordillo Ramos, Santiago Alonso | 5 | 0 | 5 | 0 | 1 | 11 |
+| Baldeon Vivar, Santiago Armando | 0 | 0 | 7 | 0 | 2 | 9 |
+| **Total** | **6** | **5** | **22** | **10** | **20** | **63** |
+
+Las tres compromisos propuestos en el Sprint 1 se cumplieron correctament. El backend usa una rama feature/* por contexto y la app móvil tiene la rama diseno/ui-movil para el diseño visual. El de commits propios de todos los integrantes se cumplió. 
 
 <a id="s-6-3"></a>
 ## 6.3. Validation Interviews
