@@ -8301,7 +8301,11 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Macallys/Report | develop | [65f4dfe](https://github.com/Macallys/Report/commit/65f4dfe) | docs: add sprint 2 skeleton | - | 2026-10-23 |
+| Macallys/Report | develop | [65f4dfe](https://github.com/Macallys/Report/commit/65f4dfe5e6e3d542af8fe03b7376f95f289e069a) | docs: add sprint 2 skeleton | - | 2026-10-23 |
+| Macallys/Report | develop | [e090609](https://github.com/Macallys/Report/commit/e0906091213c2d0a2cc7835f354e9f2eaec62821) | Documentar avance del Sprint 2 de SafePlant | - | 2026-11-13 |
+| Macallys/Report | develop | [49a892a](https://github.com/Macallys/Report/commit/49a892ab3f9978f169bb1f20552e1f3ff03bd258) | Update Sprint 2 documentation in informe.md | - | 2026-11-13 |
+| Macallys/Report | develop | [16104c5](https://github.com/Macallys/Report/commit/16104c5349c7a3db13f410e715231a41859cff84) | Revise documentation  Sprint 2 | - | 2026-11-13 |
+| Macallys/Report | develop | [9fc76fa](https://github.com/Macallys/Report/commit/9fc76fa39d990aa094ed0ef74be030c011d4a353) | Update informe.md | - | 2026-11-13 |
 
 **Trazabilidad por User Story**
 
