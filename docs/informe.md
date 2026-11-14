@@ -7915,7 +7915,7 @@ El Sprint Planning Meeting del Sprint 2 tuvo como propósito construir los conte
     </tr>
     <tr>
       <td align="left">Sprint 2 Velocity</td>
-      <td align="left">[COMPLETAR: velocidad acordada; en el Sprint 1 fue 30]</td>
+      <td align="left">43</td>
     </tr>
     <tr>
       <td align="left">Sum of Story Points</td>
@@ -8153,8 +8153,8 @@ Las user stories asignadas suman 63 story points:
       <td align="left">Contrato MQTT del nodo ESP32</td>
       <td align="left">Definir el mensaje que el nodo publica en <code>safeplant/v1/{deviceId}/telemetry</code> (<code>secret</code>, <code>measure</code>, <code>ppm</code>, <code>db</code>, <code>state</code>, <code>recordedAt</code>) y los comandos que recibe en <code>safeplant/v1/actuators/{type}</code>. El circuito se probó en Wokwi (sección 5.6); en los repositorios visibles de la organización no hay código de firmware.</td>
       <td align="left">4</td>
-      <td align="left">[PENDIENTE: responsable]</td>
-      <td align="left">[PENDIENTE: estado]</td>
+      <td align="left">>Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Done</td>
     </tr>
     <tr>
       <td align="left" rowspan="2">US07 / US10 / US13</td>
