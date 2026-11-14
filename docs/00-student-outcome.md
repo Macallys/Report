@@ -584,6 +584,12 @@ SafePlant
       <td align="left">Equipo Macallys</td>
       <td align="left">Documentación de pruebas frontend Angular (64 casos) en 6.2.2.5 Testing Suite Evidence.</td>
     </tr>
+    <tr>
+      <td align="left">3.21</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Evidencia del artefacto IoT físico en 6.2.2.6 Execution Evidence y actualización de conclusiones con Sprint 2.</td>
+    </tr>
   </tbody>
 </table>
 

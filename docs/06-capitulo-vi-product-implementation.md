@@ -737,7 +737,7 @@ La suite incluye 66 archivos de prueba con 296 casos: 230 pruebas unitarias y 66
 <a id="s-6-2-2-6"></a>
 #### 6.2.2.6. Execution Evidence for Sprint Review
 
-Al cierre del Sprint 2 se verificó la ejecución de los tres productos del incremento ya desplegados. La aplicación móvil del Supervisor se publica como APK (SafePlant Mobile v0.1.0). El backend Cloud.Api corre en Azure App Service (wa-safeplant-cloudbackend-prod). La aplicación web del Encargado de Planta está en Vercel y consume esa API con sesión autenticada. El recorrido del dato queda así: el nodo publica la lectura por MQTT, Plant.Host la recibe y la guarda en la planta, la nube la sincroniza y la web la muestra en telemetría, alertas e historial.
+Al cierre del Sprint 2 se verificó la ejecución de los tres productos del incremento ya desplegados y del artefacto IoT de laboratorio. La aplicación móvil del Supervisor se publica como APK (SafePlant Mobile v0.1.0). El backend Cloud.Api corre en Azure App Service (wa-safeplant-cloudbackend-prod). La aplicación web del Encargado de Planta está en Vercel y consume esa API con sesión autenticada. El recorrido del dato queda así: el nodo físico publica la lectura por MQTT, Plant.Host la recibe y la guarda en la planta, la nube la sincroniza y la web o el móvil la muestran en telemetría, alertas e historial.
 
 Backend: Cloud.Api desplegado y verificación con Docker Compose
 
@@ -808,6 +808,34 @@ Mobile: configuración de umbrales
 Mobile: registro e inventario de dispositivos
 
 ![Mobile: registro e inventario de dispositivos](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_devices.jpeg)
+
+IoT: artefacto físico de área industrial
+
+Además de Wokwi, el equipo construyó un artefacto físico de laboratorio que representa un área industrial monitoreada. El modelo incluye tanques y tuberías de maqueta, sensor de presencia PIR, sensor de gas (CO₂), actuador tipo servo (mampara o barrera), cableado hacia el nodo y breadboard con ESP32, LED y buzzer (sirena). Ese hardware es la punta de campo del recorrido MQTT → Plant.Host → Cloud.Api → web/móvil documentado arriba.
+
+IoT: vista general del área con tanques y sensores
+
+![IoT: vista general del área con tanques y sensores](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_area.jpg)
+
+IoT: detalle de sensores PIR, gas y actuador servo
+
+![IoT: detalle de sensores PIR, gas y actuador servo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_sensors.jpg)
+
+IoT: ensamblaje del área monitoreada
+
+![IoT: ensamblaje del área monitoreada](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_assembly.jpg)
+
+IoT: vista de conjunto del artefacto en mesa de trabajo
+
+![IoT: vista de conjunto del artefacto en mesa de trabajo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_overview.jpg)
+
+IoT: cableado del panel hacia el nodo
+
+![IoT: cableado del panel hacia el nodo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_wiring.jpg)
+
+IoT: nodo ESP32 en breadboard con LED y buzzer
+
+![IoT: nodo ESP32 en breadboard con LED y buzzer](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_node.jpg)
 
 
 <a id="s-6-2-2-7"></a>
