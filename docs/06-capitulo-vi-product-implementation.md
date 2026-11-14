@@ -740,23 +740,100 @@ HTTP/1.1 204 No Content
 <a id="s-6-2-2-8"></a>
 #### 6.2.2.8. Software Deployment Evidence for Sprint Review
 
-El despliegue en producción del backend se hace con un workflow de GitHub Actions que se dispara con cada push a main. La rama main terminó en el commit `6824ee8` del 8 de octubre de 2026 y develop tiene 10 commits más, todos del Sprint 2. En el entorno local, Docker Compose levanta los cuatro servicios del flujo completo.
+El despliegue en producción del backend se hace con un workflow de GitHub Actions que se dispara con cada push a main. La aplicación web App Service wa-safeplant-cloudbackend-prod corre en Azure (East US) sobre el plan asp-safeplant-lab-eus. En el entorno local, Docker Compose levanta los cuatro servicios del flujo completo. La aplicación móvil se construye y publica con el workflow build-apk.yml de App-Movil: en cada push a main se ejecutan las pruebas Flutter, se genera el APK release apuntando a Cloud.Api y se publica el release SafePlant Mobile v0.1.0 con el artefacto app-release.apk.
 
 | Producto | Repositorio | Plataforma | URL / ubicación | Mecanismo |
 | :--- | :--- | :--- | :--- | :--- |
-| Backend (Cloud API) | `safeplant-web-backend` | Azure App Service (`wa-safeplant-cloudbackend-prod`) | `https://wa-safeplant-cloudbackend-prod-hpe0b8bra9ftfshg.canadacentral-01.azurewebsites.net` | Workflow de GitHub Actions en cada push a `main` |
+| Backend (Cloud API) | `safeplant-web-backend` | Azure App Service (`wa-safeplant-cloudbackend-prod`) | [https://wa-safeplant-cloudbackend-prod.azurewebsites.net](https://wa-safeplant-cloudbackend-prod.azurewebsites.net) | Workflow de GitHub Actions en cada push a `main` |
 | Host de planta (Plant.Host) | `safeplant-web-backend` | Docker Compose (local) | `compose.yaml` | `docker compose up` |
 | Aplicación web | `safeplant-web-client` | Vercel | [https://safeplant-web-client.vercel.app](https://safeplant-web-client.vercel.app) | Despliegue automático en cada push |
 | Landing page | `landing-page` | GitHub Pages | [https://macallys.github.io/landing-page/](https://macallys.github.io/landing-page/) | Publicación desde la rama `main` |
-| Aplicación móvil | `App-Movil` | APK Android (`com.macallys.safeplant_mobile`, versión 0.1.0+1) | Compilación local; no publicada en una tienda | `flutter build apk --debug` o `--release` con `--dart-define=API_BASE_URL` |
+| Aplicación móvil | `App-Movil` | APK Android (`SafePlant Mobile v0.1.0`) | [Release v0.1.0 — `app-release.apk`](https://github.com/Macallys/App-Movil/releases/tag/v0.1.0) | GitHub Actions (`build-apk.yml`) en push a `main` + Release |
 | Nodo IoT | Sin repositorio de firmware visible en la organización | Simulador Wokwi (sección 5.6) | [Wokwi — nodo SafePlant](https://wokwi.com/projects/477285427305212929) | Ejecución en el simulador |
 
 ![Despliegue y entorno local del Sprint 2](../assets/06-capitulo-vi/sprints/deploy-sprint2.png)
 
+Configuración del workflow de build y release del APK
+
+Para automatizar el despliegue móvil, se configuró el workflow Build and Release APK dentro del repositorio App-Movil de la organización Macallys. Este flujo se ejecuta ante cambios en la rama main o de forma manual mediante workflow_dispatch. La configuración prepara el entorno con Java 17 y Flutter 3.47.5, instala dependencias con flutter pub get, ejecuta la suite de pruebas, genera el APK en modo release con dart-define API_BASE_URL apuntando a Cloud.Api en Azure y publica el artefacto en GitHub Releases.
+
+La imagen evidencia la definición del archivo build-apk.yml, donde se especifican el checkout del código, la instalación de Flutter, la ejecución de flutter test, la construcción del APK mediante flutter build apk --release y la carga del archivo app-release.apk como artefacto safeplant-android-release.
+
+![Workflow build-apk.yml — Build and Release APK](../assets/06-capitulo-vi/sprints/deploy-sprint2-mobile-workflow.png)
+
+Ejecución del workflow en GitHub Actions
+
+Una vez configurado el flujo, se ejecutó el workflow desde GitHub Actions para validar que el pipeline de construcción y publicación pudiera completarse correctamente desde el repositorio móvil. Esta ejecución permite comprobar que el despliegue no depende de acciones manuales locales y que el APK puede generarse en un entorno controlado.
+
+La imagen muestra el inicio del check asociado al workflow Build and Release APK, confirmando que GitHub detectó la ejecución del proceso de despliegue móvil sobre el commit 10b9f6a de la rama main.
+
+![GitHub Actions — ejecución del workflow de APK](../assets/06-capitulo-vi/sprints/deploy-sprint2-mobile-actions-running.png)
+
+Durante la ejecución se observa la preparación del entorno, la descarga de Flutter, la instalación de dependencias del proyecto y el avance del job de build. Esto evidencia que la aplicación móvil del Supervisor de Seguridad fue construida dentro de GitHub Actions y no únicamente desde un entorno local de desarrollo.
+
+Validación del build del APK
+
+Finalizada la ejecución, GitHub Actions reportó el estado exitoso del job de construcción. Esta validación confirma que el código fuente de la aplicación móvil compila correctamente y que el workflow puede generar el artefacto de despliegue esperado.
+
+La imagen evidencia que el workflow build-apk.yml terminó con estado Success (6 m 17 s), después de ejecutar el job de build. Con ello se valida que el proceso automatizado queda disponible para futuras versiones de SafePlant Mobile y que el artefacto safeplant-android-release (51.1 MB) quedó disponible para descarga.
+
+![GitHub Actions — workflow exitoso y artefacto safeplant-android-release](../assets/06-capitulo-vi/sprints/deploy-sprint2-mobile-actions-success.png)
+
+Publicación del APK en GitHub Releases
+
+Como resultado del workflow, se generó una release del proyecto móvil con el APK listo para descarga. Esta publicación permite distribuir la aplicación Android del Supervisor generada durante el Sprint 2 y contar con una versión identificable para revisión, instalación y pruebas académicas.
+
+La evidencia muestra la release SafePlant Mobile v0.1.0 marcada como Latest, junto con el archivo app-release.apk como asset descargable. De esta manera, el Sprint 2 incorpora una evidencia de despliegue móvil equivalente al deployment evidence del Sprint 1, pero orientada a la generación y publicación de la aplicación Android.
+
+Página de releases del APK: https://github.com/Macallys/App-Movil/releases
+
+![GitHub Release — SafePlant Mobile v0.1.0 con app-release.apk](../assets/06-capitulo-vi/sprints/deploy-sprint2-mobile-release.png)
+
+Backend — Azure App Service en ejecución
+
+El backend Cloud.Api permanece desplegado en Azure App Service. El plan asp-safeplant-lab-eus (Linux, East US, B1) sostiene la aplicación web wa-safeplant-cloudbackend-prod, cuyo estado en el portal aparece como En ejecución y cuyo último despliegue figura como Correcto. Las métricas de CPU, memoria y datos de entrada confirman que el servicio está activo y recibe tráfico.
+
+![Azure App Service Plan asp-safeplant-lab-eus](../assets/06-capitulo-vi/sprints/deploy-sprint2-azure-plan.png)
+
+![Azure Web App wa-safeplant-cloudbackend-prod en ejecución](../assets/06-capitulo-vi/sprints/deploy-sprint2-azure-backend.png)
+
 <a id="s-6-2-2-9"></a>
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
-La colaboración se midió sobre los repositorios de la organización con commits desde el 9 de octubre de 2026. Las cifras son reproducibles con `git shortlog -sn --since="2026-10-09" --all` y agrupan las identidades de Git de un mismo integrante.
+La colaboración del Sprint 2 se midió sobre los repositorios de la organización con commits desde el 9 de octubre de 2026. Cada integrante asumió un frente de producto y un bloque del informe, de modo que el incremento —backend, web integrada, app móvil e IoT— quedó trazable en Git y en la documentación.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Alumno</th>
+      <th align="left">Actividad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Encargado del desarrollo de la aplicación móvil del Supervisor de Seguridad. Implementó la sesión (inicio, cierre y recuperación de credenciales), el panel de seguridad, alertas, exposiciones, acciones, override y la configuración de planta (áreas, umbrales y dispositivos), alineando la app con el contrato de Cloud.Api. Ejecutó y documentó la suite de 296 pruebas Flutter. En el informe se encargó de 6.2.2.4 Development Evidence (móvil), 6.2.2.5 Testing Suite Evidence, 6.2.2.6 Execution Evidence (flujos móviles) y 6.2.2.8 Software Deployment Evidence (conexión del móvil con la API en Azure), además de la demo móvil del Video About-the-Product, el Final Project Keynote, el APK y las evidencias móviles del ZIP.</td>
+    </tr>
+    <tr>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Lideró la consolidación del Final Project Documentation Report para AV2. Actualizó el Registro de Versiones 3.x, Project Report Collaboration Insights y Student Outcome; corrigió artefactos previos y el diseño visual de la aplicación móvil (rama diseno/ui-movil). En el informe se encargó de 6.2.2.1 Sprint Planning 2, 6.2.2.2 Aspect Leaders and Collaborators, 6.2.2.3 Sprint Backlog 2, 6.2.2.9 Team Collaboration Insights during Sprint y aportó a 6.3.3 Evaluaciones según heurísticas con la revisión de diseño y hallazgos de interfaz.</td>
+    </tr>
+    <tr>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Encargado de la validación con usuarios. Organizó y realizó las entrevistas de validación, preparó el guion y las preguntas, y registró respuestas, hallazgos y enlaces a las grabaciones. Definió el contrato MQTT del nodo ESP32 y documentó la evidencia del circuito IoT en Wokwi. En el informe se encargó de 6.3 Validation Interviews (6.3.1 Diseño de Entrevistas, 6.3.2 Registro de Entrevistas y aporte a 6.3.3 Evaluaciones según heurísticas) y de la sección de validación del Final Project Keynote.</td>
+    </tr>
+    <tr>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Encargado del backend y de la integración de la aplicación web. Implementó los bounded contexts Plant Monitoring, Safety &amp; Actuation y Device &amp; Edge Management, con recepción de telemetría por MQTT, persistencia local en planta, Docker Compose y la API publicada en Azure App Service. Reemplazó los datos de muestra de la web por el consumo real de Cloud.Api. En el informe se encargó de 6.2.2.4 Development Evidence (backend), 6.2.2.6 Execution Evidence (Docker Compose), 6.2.2.7 Services Documentation Evidence (Swagger/OpenAPI) y 6.2.2.8 Software Deployment Evidence (API en Azure), además de la demo del backend en el Video About-the-Product y el Final Project Keynote.</td>
+    </tr>
+    <tr>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Encargado del componente IoT y del nodo de campo. Actualizó 5.1 Style Guidelines y documentó el flujo de telemetría por MQTT desde el ESP32 hacia Plant.Host y la nube. Preparó la evidencia del componente IoT en su entorno de prueba y los archivos del ZIP. En el informe se encargó de 6.2.2.4 Development Evidence (nodo y MQTT), 6.2.2.6 Execution Evidence (IoT) y de la demostración del componente IoT en el Video About-the-Product y el Final Project Keynote.</td>
+    </tr>
+  </tbody>
+</table>
+
+Las cifras de commits son reproducibles con `git shortlog -sn --since="2026-10-09" --all` y agrupan las identidades de Git de un mismo integrante.
 
 | Integrante | `Report` | `landing-page` | `safeplant-web-client` | `safeplant-web-backend` | `App-Movil` | Total |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -767,15 +844,11 @@ La colaboración se midió sobre los repositorios de la organización con commit
 | Baldeon Vivar, Santiago Armando | 0 | 0 | 7 | 0 | 2 | 9 |
 | **Total** | **6** | **5** | **22** | **10** | **20** | **63** |
 
-Las tres compromisos propuestos en el Sprint 1 se cumplieron correctament. El backend usa una rama feature/* por contexto y la app móvil tiene la rama diseno/ui-movil para el diseño visual. El de commits propios de todos los integrantes se cumplió.
+Los tres compromisos propuestos en el Sprint 1 se cumplieron correctamente. El backend usa una rama feature/* por contexto y la app móvil tiene la rama diseno/ui-movil para el diseño visual. El de commits propios de todos los integrantes se cumplió.
 
 **Repositorio Report**
 
 ![Team Collaboration Insights — Report](../assets/06-capitulo-vi/sprints/teamcollab-sprint2-report.png)
-
-**Aplicación móvil (App-Movil)**
-
-![Team Collaboration Insights — App-Movil](../assets/06-capitulo-vi/sprints/teamcollab-sprint2-mobile.png)
 
 <a id="s-6-3"></a>
 ## 6.3. Validation Interviews
