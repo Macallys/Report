@@ -131,8 +131,6 @@
     </tr>
   </tbody>
 </table>
-<a id="s-2-1-2"></a>
-### 2.1.2. Estrategias y tácticas frente a competidores
 
 <a id="s-2-2"></a>
 ## 2.2. Entrevistas

@@ -54,10 +54,6 @@ SafePlant
       <td align="center">Gordillo Ramos, Santiago Alonso</td>
     </tr>
     <tr>
-      <td align="center">U202417448</td>
-      <td align="center">Huaman Cuba, Johan Giovani</td>
-    </tr>
-    <tr>
       <td align="center">U202319881</td>
       <td align="center">Baldeon Vivar, Santiago Armando</td>
     </tr>
@@ -652,7 +648,6 @@ SafePlant
 - [Capítulo II: Requirements Elicitation & Analysis](informe.md#s-cap-ii)
     - [2.1. Competidores](informe.md#s-2-1)
         - [2.1.1. Análisis competitivo](informe.md#s-2-1-1)
-        - [2.1.2. Estrategias y tácticas frente a competidores](informe.md#s-2-1-2)
     - [2.2. Entrevistas](informe.md#s-2-2)
         - [2.2.1. Diseño de entrevistas](informe.md#s-2-2-1)
         - [2.2.2. Registro de entrevistas](informe.md#s-2-2-2)

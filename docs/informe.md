@@ -50,10 +50,6 @@ SafePlant
       <td align="center">Gordillo Ramos, Santiago Alonso</td>
     </tr>
     <tr>
-      <td align="center">U202417448</td>
-      <td align="center">Huaman Cuba, Johan Giovani</td>
-    </tr>
-    <tr>
       <td align="center">U202319881</td>
       <td align="center">Baldeon Vivar, Santiago Armando</td>
     </tr>
@@ -648,7 +644,6 @@ SafePlant
 - [Capítulo II: Requirements Elicitation & Analysis](#s-cap-ii)
     - [2.1. Competidores](#s-2-1)
         - [2.1.1. Análisis competitivo](#s-2-1-1)
-        - [2.1.2. Estrategias y tácticas frente a competidores](#s-2-1-2)
     - [2.2. Entrevistas](#s-2-2)
         - [2.2.1. Diseño de entrevistas](#s-2-2-1)
         - [2.2.2. Registro de entrevistas](#s-2-2-2)
@@ -1244,8 +1239,6 @@ Personal de la gerencia técnica y operativa, responsables del rendimiento gener
     </tr>
   </tbody>
 </table>
-<a id="s-2-1-2"></a>
-### 2.1.2. Estrategias y tácticas frente a competidores
 
 <a id="s-2-2"></a>
 ## 2.2. Entrevistas
@@ -6627,8 +6620,6 @@ El signo es un escudo con una marca de verificación. El contenedor en azul mari
 
 
 ![Logo de SAFEPLANT](<../assets/05-capitulo-v/style-guidelines/Style Guide _ Sheet 6 - Logo (Light).png>)
-
-![General Style Guidelines](<../assets/05-capitulo-v/style-guidelines/Style Guide_Sheet1 (1).png>)
 
 **Misión:**
 Brindar herramientas digitales que profesionalicen el trabajo del supervisor de seguridad y del encargado de planta, integrando la tecnología IoT con la prevención de riesgos ambientales.
