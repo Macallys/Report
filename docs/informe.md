@@ -8355,7 +8355,7 @@ La suite incluye 66 archivos de prueba con 296 casos: 230 pruebas unitarias y 66
 | `app`, `core` y raíz | 7 | 19 | Router, shell de la aplicación, tema, configuración del cliente HTTP y manifiesto de Android |
 | **Total** | **66** | **296** | |
 
-El repositorio no guarda el resultado de ninguna ejecución, por lo que no se registra aquí un conteo de pruebas exitosas.
+![Testing_Mobile](../assets/06-capitulo-vi/sprints/testing_sprint2_mobile.png)
 
 **Tabla de commits relacionados al mobile testing**
 
@@ -8415,11 +8415,12 @@ La aplicación móvil arranca en una pantalla de inicio que restaura la sesión 
 ![Mobile: registro e inventario de dispositivos](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_devices.png)
 
 
-
 <a id="s-6-2-2-7"></a>
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
 
 En este sprint se documentaron con OpenAPI los endpoints de los nuevos bounded contexts, implementados en safeplant-web-backend. Los endpoints /api/v1 requieren un token de acceso válido; los /internal/v1 son de comunicación entre la planta y la nube y se protegen con la clave de la planta. Los errores usan el formato uniforme del Sprint 1.
+
+Los endpoints se ejecutan en local con Docker Compose y se documentan en `http://localhost:8080/swagger/index.html` (OpenAPI en `/openapi/v1.json`). 
 
 Roles: S = Supervisor desde el canal móvil; M = Plant Manager desde el canal web.
 
@@ -8468,7 +8469,6 @@ Content-Type: application/json
 ```http
 HTTP/1.1 204 No Content
 ```
-
 
 **Repositorio de Web Services:** [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend)
 
