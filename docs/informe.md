@@ -586,6 +586,12 @@ SafePlant
       <td align="left">Equipo Macallys</td>
       <td align="left">Evidencia del artefacto IoT físico en 6.2.2.6 Execution Evidence y actualización de conclusiones con Sprint 2.</td>
     </tr>
+    <tr>
+      <td align="left">3.22</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Sección 6.4 Video About-the-Product con enlace a Drive y captura del cierre SAFEPLANT.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -770,6 +776,7 @@ SafePlant
         - [6.3.1. Diseño de Entrevistas](#s-6-3-1)
         - [6.3.2. Registro de Entrevistas](#s-6-3-2)
         - [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
+    - [6.4. Video About-the-Product](#s-6-4)
 - [Conclusiones](#s-conclusiones)
         - [Conclusiones](#s-conclusiones-conclusiones)
         - [Recomendaciones](#s-recomendaciones)
@@ -8847,6 +8854,15 @@ Los tres compromisos propuestos en el Sprint 1 se cumplieron correctamente. El b
 
 <a id="s-6-3-3"></a>
 ### 6.3.3. Evaluaciones según heurísticas
+
+<a id="s-6-4"></a>
+## 6.4. Video About-the-Product
+
+El Video About-the-Product presenta SafePlant en aproximadamente 30 segundos: el problema de exposición en planta, la propuesta IoT (sensores, actuadores y borde), y los canales del Supervisor (móvil) y del Encargado de Planta (web), cerrando con la marca SAFEPLANT y el lema «Plantas más inteligentes, equipos más seguros.»
+
+**URL del video:** [SafePlant_Video_About_The_Product.mp4](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing)
+
+![Video About-the-Product — SAFEPLANT](../assets/06-capitulo-vi/video-about-the-product.png)
 
 ---
 

@@ -590,6 +590,12 @@ SafePlant
       <td align="left">Equipo Macallys</td>
       <td align="left">Evidencia del artefacto IoT físico en 6.2.2.6 Execution Evidence y actualización de conclusiones con Sprint 2.</td>
     </tr>
+    <tr>
+      <td align="left">3.22</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Sección 6.4 Video About-the-Product con enlace a Drive y captura del cierre SAFEPLANT.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -774,6 +780,7 @@ SafePlant
         - [6.3.1. Diseño de Entrevistas](informe.md#s-6-3-1)
         - [6.3.2. Registro de Entrevistas](informe.md#s-6-3-2)
         - [6.3.3. Evaluaciones según heurísticas](informe.md#s-6-3-3)
+    - [6.4. Video About-the-Product](informe.md#s-6-4)
 - [Conclusiones](informe.md#s-conclusiones)
         - [Conclusiones](informe.md#s-conclusiones-conclusiones)
         - [Recomendaciones](informe.md#s-recomendaciones)

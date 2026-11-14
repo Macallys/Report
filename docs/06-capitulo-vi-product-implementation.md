@@ -1031,6 +1031,15 @@ Los tres compromisos propuestos en el Sprint 1 se cumplieron correctamente. El b
 <a id="s-6-3-3"></a>
 ### 6.3.3. Evaluaciones según heurísticas
 
+<a id="s-6-4"></a>
+## 6.4. Video About-the-Product
+
+El Video About-the-Product presenta SafePlant en aproximadamente 30 segundos: el problema de exposición en planta, la propuesta IoT (sensores, actuadores y borde), y los canales del Supervisor (móvil) y del Encargado de Planta (web), cerrando con la marca SAFEPLANT y el lema «Plantas más inteligentes, equipos más seguros.»
+
+**URL del video:** [SafePlant_Video_About_The_Product.mp4](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing)
+
+![Video About-the-Product — SAFEPLANT](../assets/06-capitulo-vi/video-about-the-product.png)
+
 ---
 
 **Navegación:** [Índice](./00-student-outcome.md#s-tabla-contenidos) · Anterior: [Capítulo V](./05-capitulo-v-solution-ui-ux-design.md) · Siguiente: [Conclusiones](./07-conclusiones.md)
