@@ -8306,6 +8306,9 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 | Macallys/Report | develop | [49a892a](https://github.com/Macallys/Report/commit/49a892ab3f9978f169bb1f20552e1f3ff03bd258) | Update Sprint 2 documentation in informe.md | - | 2026-11-13 |
 | Macallys/Report | develop | [16104c5](https://github.com/Macallys/Report/commit/16104c5349c7a3db13f410e715231a41859cff84) | Revise documentation  Sprint 2 | - | 2026-11-13 |
 | Macallys/Report | develop | [9fc76fa](https://github.com/Macallys/Report/commit/9fc76fa39d990aa094ed0ef74be030c011d4a353) | Update informe.md | - | 2026-11-13 |
+| Macallys/Report | develop | [50b7f41](https://github.com/Macallys/Report/commit/50b7f41d15bb4600a42e6af9f7945f231385e2b7) | Update commit history and documentation in informe.md | - | 2026-11-13 |
+| Macallys/Report | develop | [6beac4a](https://github.com/Macallys/Report/commit/6beac4a40f18da9e755bb2d160ac1655a1cdeff1) | Document mobile testing suite and execution evidence | - | 2026-11-13 |
+| Macallys/Report | develop | [f0c71a5](https://github.com/Macallys/Report/commit/f0c71a56f98f72193a765672fd0f2f8df7a73ce8) | Update Sprint 2 velocity and task assignments | - | 2026-11-14 |
 
 **Trazabilidad por User Story**
 
@@ -8317,7 +8320,7 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 | TS01 / TS09 Telemetry ingestion and query by area | T33, T34, T35 | `2d2b742`, `b17cf98`, `12e9f14` | Done |
 | US14 Consolidated operational dashboard of plant areas | T36, T37 | `0250c31` (backend), `8ba1ba6`, `2b40542` (móvil) | Done |
 | US18 / TS10 View active alerts / Remote actuator override | T38, T39 | `5856652` | Done / To-Review |
-| US27 / US28 Detect CO₂ excess / Detect excessive noise | T40, T41, T42 | `e8ef621`, `b17cf98`, `58b3bf4` | Backend Done; nodo [PENDIENTE] |
+| US27 / US28 Detect CO₂ excess / Detect excessive noise | T40, T41, T42 | `e8ef621`, `b17cf98`, `58b3bf4` | Done |
 | US07 / US10 / US13 Sesión en la app móvil | T43, T47 | `8ba1ba6`, `2b40542` | Done |
 | US18 / US26 / US33 Alertas, exposiciones y acciones (móvil) | T48, T49 | `8ba1ba6`, `83a3b4b`, `2b40542` | Done |
 | US32 Remote manual actuator override (móvil) | T50 | `8ba1ba6`, `2b40542` | To-Review |
