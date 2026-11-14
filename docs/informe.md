@@ -8491,15 +8491,21 @@ El comando docker compose up levanta cuatro servicios: TimescaleDB (puerto 5432)
 
 ![Backend: documentación Swagger UI de Cloud.Api](../assets/06-capitulo-vi/sprints/execution_sprint2_swagger.png)
 
-**Web: aplicación del Encargado de Planta integrada con la API**
+Web: aplicación del Encargado de Planta integrada con la API
 
-La aplicación web deja de usar datos de muestra en el inicio de sesión, el dashboard y el historial, y consume la API mediante un interceptor de autenticación y un guard de sesión.
+La aplicación web deja de usar datos de muestra y consume Cloud.Api mediante autenticación JWT. Desde Vercel se verifican tres vistas del Encargado de Planta: telemetría ambiental en el Panel de Control, el registro de alertas con historial de telemetría, y el Control de Usuarios para la gobernanza de cuentas y roles.
 
-![Web: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_web_signin.png)
+Web: telemetría ambiental (Panel de Control)
 
-![Web: dashboard de métricas por área](../assets/06-capitulo-vi/sprints/execution_sprint2_web_dashboard.png)
+![Web: telemetría ambiental — Panel de Control](../assets/06-capitulo-vi/sprints/execution_sprint2_web_dashboard.png)
 
-![Web: historial por área](../assets/06-capitulo-vi/sprints/execution_sprint2_web_history.png)
+Web: Alertas e historial de telemetría
+
+![Web: Alertas e historial de telemetría](../assets/06-capitulo-vi/sprints/execution_sprint2_web_alerts.png)
+
+Web: Control de Usuarios
+
+![Web: Control de Usuarios — Gobernanza de Cuentas](../assets/06-capitulo-vi/sprints/execution_sprint2_web_users.png)
 
 **Mobile: aplicación del Supervisor de Seguridad**
 
