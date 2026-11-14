@@ -56,6 +56,15 @@
 
 9. Como novena recomendación, para el Trabajo Final conviene sumar avisos push en alertas críticas, más de un nodo por planta y una vista de exposición acumulada. También cerrar lo que quedó abierto en DEC-008, como el fallo de un relé y la política de identidad a largo plazo.
 
+<a id="s-about-the-team"></a>
+## Video About-the-Team
+
+El Video About-the-Team presenta a los integrantes de Macallys y el aporte de cada uno al Sprint 2 de SafePlant (móvil, web, backend e IoT).
+
+**URL del video:** [SafePlant About the Team](https://drive.google.com/drive/folders/1lF1s9I0KDZ6Gxppw16HgWryyvUzbC5J3?usp=sharing)
+
+![Video About-the-Team — SAFEPLANT](../assets/06-capitulo-vi/video-about-the-team.png)
+
 ---
 
 **Navegación:** [Índice](./00-student-outcome.md#s-tabla-contenidos) · Anterior: [Capítulo VI](./06-capitulo-vi-product-implementation.md) · Siguiente: [Bibliografía](./08-bibliografia.md)

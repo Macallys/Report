@@ -785,6 +785,7 @@ SafePlant
 - [Conclusiones](informe.md#s-conclusiones)
         - [Conclusiones](informe.md#s-conclusiones-conclusiones)
         - [Recomendaciones](informe.md#s-recomendaciones)
+    - [Video About-the-Team](informe.md#s-about-the-team)
 - [Bibliografía](informe.md#s-bibliografia)
     - [Normativa y salud ocupacional](informe.md#s-normativa-y-salud-ocupacional)
     - [Descubrimiento y diseño del dominio](informe.md#s-descubrimiento-y-diseno-del-dominio)

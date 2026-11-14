@@ -781,6 +781,7 @@ SafePlant
 - [Conclusiones](#s-conclusiones)
         - [Conclusiones](#s-conclusiones-conclusiones)
         - [Recomendaciones](#s-recomendaciones)
+    - [Video About-the-Team](#s-about-the-team)
 - [Bibliografía](#s-bibliografia)
     - [Normativa y salud ocupacional](#s-normativa-y-salud-ocupacional)
     - [Descubrimiento y diseño del dominio](#s-descubrimiento-y-diseno-del-dominio)
@@ -7242,12 +7243,11 @@ Para el desarrollo colaborativo del ecosistema SafePlant, el equipo utiliza las 
 
 El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys`. Actualmente, la organización alberga los siguientes repositorios principales:
 
-[https://github.com/Macallys/Report](https://github.com/Macallys/Report)
-
-*   **`Report`:** Repositorio central que contiene la documentación  y el informe del proyecto.
-*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
-*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular.
-*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático.
+*   **[`Report`](https://github.com/Macallys/Report):** Repositorio central que contiene la documentación y el informe del proyecto.
+*   **[`safeplant-web-backend`](https://github.com/Macallys/safeplant-web-backend):** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
+*   **[`safeplant-web-client`](https://github.com/Macallys/safeplant-web-client):** Contiene el código fuente de la aplicación web frontend en Angular.
+*   **[`landing-page`](https://github.com/Macallys/landing-page):** Repositorio dedicado al sitio web informativo estático.
+*   **[`App-Movil`](https://github.com/Macallys/App-Movil):** Contiene el código fuente de la aplicación móvil del Supervisor de Seguridad en Flutter.
 
 **Estrategia de Ramas**
 El equipo ha adaptado su flujo de trabajo para agilizar la integración continua. Inicialmente, se implementó un enfoque basado en ramas de características específicas para segmentar el trabajo. Sin embargo, la estrategia actual se ha simplificado: los miembros del equipo ahora integran sus aportes y actualizaciones de forma directa en la rama `develop` para acelerar el ciclo de desarrollo y consolidación. 
@@ -8958,8 +8958,6 @@ El Video About-the-Product presenta SafePlant: el problema de exposición en pla
 
 ![Video About-the-Product — SAFEPLANT](../assets/06-capitulo-vi/video-about-the-product.png)
 
----
-
 <a id="s-conclusiones"></a>
 # Conclusiones
 
@@ -9013,6 +9011,15 @@ El Video About-the-Product presenta SafePlant: el problema de exposición en pla
 8. Como octava recomendación, mantener en el código la separación de canales que ya corre en Sprint 2. Umbrales, alta de dispositivos y override van en el celular del supervisor. Métricas, historial completo y gobernanza de cuentas van en la web del encargado.
 
 9. Como novena recomendación, para el Trabajo Final conviene sumar avisos push en alertas críticas, más de un nodo por planta y una vista de exposición acumulada. También cerrar lo que quedó abierto en DEC-008, como el fallo de un relé y la política de identidad a largo plazo.
+
+<a id="s-about-the-team"></a>
+## Video About-the-Team
+
+El Video About-the-Team presenta a los integrantes de Macallys y el aporte de cada uno al Sprint 2 de SafePlant (móvil, web, backend e IoT).
+
+**URL del video:** [SafePlant About the Team](https://drive.google.com/drive/folders/1lF1s9I0KDZ6Gxppw16HgWryyvUzbC5J3?usp=sharing)
+
+![Video About-the-Team — SAFEPLANT](../assets/06-capitulo-vi/video-about-the-team.png)
 
 ---
 
@@ -9115,6 +9122,7 @@ Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *
 | Video | Descripción | URL |
 | --- | --- | --- |
 | Video About-the-Product | Presentación de SafePlant: problema, propuesta IoT y canales móvil / web | [Google Drive](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing) |
+| Video About-the-Team | Presentación del equipo Macallys y aporte por integrante (Sprint 2) | [Google Drive](https://drive.google.com/drive/folders/1lF1s9I0KDZ6Gxppw16HgWryyvUzbC5J3?usp=sharing) |
 | SafePlant Prototipo | Demostración del artefacto IoT físico (área de maqueta, sensores, actuador y nodo) | [YouTube](https://www.youtube.com/watch?v=FqdvoVivrnM) |
 | Explicación del prototipo móvil (Figma) | Recorrido del prototipo del Supervisor | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC0z40dQIqVQbQvuddVxnAmAejBnKbEFgnXIzfK4z9N5c4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jVhkvW) |
 | Explicación del prototipo web (Figma) | Recorrido del prototipo del Encargado de Planta | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQACIq6Cv0-cQLxQ1Ce_OAIJAcl4q4FVlA-Jfpse8Tw30Xc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&e=QlFb91) |

@@ -34,9 +34,24 @@ const STYLES = `
     color: #1f2328;
     margin: 0;
   }
-  h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.4em 0 0.6em; }
-  h2, h3, h4, h5, h6 { page-break-after: avoid; }
-  h1 { font-size: 20pt; border-bottom: 1px solid #d1d9e0; padding-bottom: 0.2em; }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+    margin: 1.4em 0 0.6em;
+    page-break-after: avoid;
+    break-after: avoid-page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  h1 {
+    font-size: 20pt;
+    border-bottom: 1px solid #d1d9e0;
+    padding-bottom: 0.2em;
+    page-break-before: always;
+    break-before: page;
+    margin-top: 0;
+  }
+  /* Evita página en blanco al inicio si el primer h1 abre el cuerpo. */
+  h1:first-of-type { page-break-before: avoid; break-before: auto; }
   h2 { font-size: 16pt; border-bottom: 1px solid #d1d9e0; padding-bottom: 0.2em; }
   h3 { font-size: 13.5pt; }
   h4 { font-size: 12pt; }
@@ -45,28 +60,91 @@ const STYLES = `
   a { color: #0969da; text-decoration: none; word-break: break-word; }
   code, kbd, pre { font-family: "Cascadia Mono", Consolas, monospace; font-size: 9.5pt; }
   code { background: #f0f1f3; padding: 0.15em 0.35em; border-radius: 4px; }
-  pre { background: #f6f8fa; padding: 10px 12px; border-radius: 6px; overflow-wrap: break-word; white-space: pre-wrap; page-break-inside: avoid; }
+  pre {
+    background: #f6f8fa;
+    padding: 10px 12px;
+    border-radius: 6px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
   pre code { background: none; padding: 0; }
   blockquote { margin: 1em 0; padding: 0 1em; color: #59636e; border-left: 4px solid #d1d9e0; }
   /* Los separadores del ensamblado no se imprimen: el corte lo marca la página. */
   hr { display: none; }
-  /* Cada capítulo y sección de primer nivel empieza en página nueva. */
-  h1 { page-break-before: always; }
-  /* max-height evita que una imagen alta se corte entre dos páginas. */
-  img { max-width: 100%; max-height: 225mm; height: auto; page-break-inside: avoid; }
-  table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 9.5pt; page-break-inside: auto; }
+  /* Imágenes más compactas para evitar hojas casi vacías. */
+  img {
+    max-width: 100%;
+    max-height: 130mm;
+    height: auto;
+    display: block;
+    margin: 0.4em auto 0.8em;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  img[src*="mobile"],
+  img[src*="execution_sprint2_mobile"],
+  img[src*="video-about"] {
+    max-height: 105mm;
+  }
+  figure.exec-shot {
+    margin: 0.5em 0 0.9em;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  figure.exec-shot img {
+    max-height: 105mm;
+    margin: 0 auto 0.35em;
+  }
+  figure.exec-shot figcaption {
+    font-size: 9.5pt;
+    text-align: center;
+    color: #424a53;
+    margin: 0;
+  }
+  .page-break {
+    break-before: page;
+    page-break-before: always;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.8em 0;
+    font-size: 9.5pt;
+    page-break-inside: auto;
+    break-inside: auto;
+  }
   table th, table td { border: 1px solid #d1d9e0; padding: 5px 8px; vertical-align: top; word-break: break-word; }
   table th { background: #f6f8fa; }
-  tr, td, th { page-break-inside: avoid; }
+  tr, td, th { page-break-inside: avoid; break-inside: avoid; }
   thead { display: table-header-group; }
-  @page { size: A4; margin: 18mm 15mm; }
-  /* La carátula debe caber en una sola página. */
-  .caratula { font-size: 10pt; line-height: 1.2; }
-  .caratula img { max-height: 30mm; width: auto; margin: 0 0 2mm; }
+  tfoot { display: table-footer-group; }
+  @page { size: A4; margin: 18mm 15mm 16mm 15mm; }
+  /* Carátula sola en la primera página; el siguiente bloque empieza limpio. */
+  .caratula {
+    font-size: 10pt;
+    line-height: 1.2;
+    page-break-after: always;
+    break-after: page;
+  }
+  .caratula img { max-height: 30mm; width: auto; margin: 0 auto 2mm; }
   .caratula p { margin: 2.2mm 0; }
   .caratula table { width: auto; margin: 2mm auto; font-size: 9.5pt; }
   .caratula table th, .caratula table td { padding: 2px 10px; }
 `;
+
+/** Evita que Markdown-it trate títulos como texto crudo tras bloques HTML. */
+function normalizeMarkdown(markdown) {
+  return markdown
+    .replace(/<\/table>(\s*)(?=<a id=|#{1,6}\s)/g, "</table>\n\n")
+    .replace(/^(<a id="[^"]+"><\/a>)[ \t]*\n(?=#{1,6}\s)/gm, "$1\n\n")
+    .replace(/\n{4,}/g, "\n\n\n");
+}
 
 function findChrome() {
   const fromEnv = process.env.CHROME_PATH;
@@ -80,10 +158,18 @@ function findChrome() {
   return found;
 }
 
+/** Junta título + captura para que no queden en páginas distintas. */
+function wrapExecutionShots(html) {
+  return html.replace(
+    /<p>((?:Mobile|Web|IoT|Backend|Testing)[^<]*)<\/p>\s*<p><img ([^>]+)><\/p>/g,
+    "<figure class=\"exec-shot\"><img $2><figcaption>$1</figcaption></figure>",
+  );
+}
+
 async function main() {
-  const markdown = await readFile(SOURCE, "utf8");
+  const markdown = normalizeMarkdown(await readFile(SOURCE, "utf8"));
   const md = new MarkdownIt({ html: true, linkify: true, breaks: false });
-  const body = md.render(markdown);
+  const body = wrapExecutionShots(md.render(markdown));
 
   const html = `<!doctype html>
 <html lang="es">

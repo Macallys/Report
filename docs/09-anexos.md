@@ -21,6 +21,7 @@
 | Video | Descripción | URL |
 | --- | --- | --- |
 | Video About-the-Product | Presentación de SafePlant: problema, propuesta IoT y canales móvil / web | [Google Drive](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing) |
+| Video About-the-Team | Presentación del equipo Macallys y aporte por integrante (Sprint 2) | [Google Drive](https://drive.google.com/drive/folders/1lF1s9I0KDZ6Gxppw16HgWryyvUzbC5J3?usp=sharing) |
 | SafePlant Prototipo | Demostración del artefacto IoT físico (área de maqueta, sensores, actuador y nodo) | [YouTube](https://www.youtube.com/watch?v=FqdvoVivrnM) |
 | Explicación del prototipo móvil (Figma) | Recorrido del prototipo del Supervisor | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC0z40dQIqVQbQvuddVxnAmAejBnKbEFgnXIzfK4z9N5c4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jVhkvW) |
 | Explicación del prototipo web (Figma) | Recorrido del prototipo del Encargado de Planta | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQACIq6Cv0-cQLxQ1Ce_OAIJAcl4q4FVlA-Jfpse8Tw30Xc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&e=QlFb91) |

@@ -27,12 +27,11 @@ Para el desarrollo colaborativo del ecosistema SafePlant, el equipo utiliza las 
 
 El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys`. Actualmente, la organización alberga los siguientes repositorios principales:
 
-[https://github.com/Macallys/Report](https://github.com/Macallys/Report)
-
-*   **`Report`:** Repositorio central que contiene la documentación  y el informe del proyecto.
-*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
-*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular.
-*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático.
+*   **[`Report`](https://github.com/Macallys/Report):** Repositorio central que contiene la documentación y el informe del proyecto.
+*   **[`safeplant-web-backend`](https://github.com/Macallys/safeplant-web-backend):** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
+*   **[`safeplant-web-client`](https://github.com/Macallys/safeplant-web-client):** Contiene el código fuente de la aplicación web frontend en Angular.
+*   **[`landing-page`](https://github.com/Macallys/landing-page):** Repositorio dedicado al sitio web informativo estático.
+*   **[`App-Movil`](https://github.com/Macallys/App-Movil):** Contiene el código fuente de la aplicación móvil del Supervisor de Seguridad en Flutter.
 
 **Estrategia de Ramas**
 El equipo ha adaptado su flujo de trabajo para agilizar la integración continua. Inicialmente, se implementó un enfoque basado en ramas de características específicas para segmentar el trabajo. Sin embargo, la estrategia actual se ha simplificado: los miembros del equipo ahora integran sus aportes y actualizaciones de forma directa en la rama `develop` para acelerar el ciclo de desarrollo y consolidación. 
