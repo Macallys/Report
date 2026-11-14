@@ -596,6 +596,12 @@ SafePlant
       <td align="left">Equipo Macallys</td>
       <td align="left">Sección 6.4 Video About-the-Product con enlace a Drive y captura del cierre SAFEPLANT.</td>
     </tr>
+    <tr>
+      <td align="left">3.23</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Actualización de Anexos (videos de producto, repositorios y despliegues AV2) y ajuste del texto de 6.4.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -790,6 +796,7 @@ SafePlant
     - [Tecnologías y estándares IoT](informe.md#s-tecnologias-y-estandares-iot)
 - [Anexos](informe.md#s-anexos)
     - [Videos de Exposiciones](informe.md#s-anexo-videos-exposiciones)
+    - [Videos de producto](informe.md#s-videos-de-producto)
     - [Repositorios y artefactos](informe.md#s-anexo-repositorios)
     - [Entrevistas](informe.md#s-anexo-entrevistas)
 

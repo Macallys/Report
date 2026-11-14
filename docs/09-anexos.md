@@ -15,15 +15,37 @@
 | AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | |
 | TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | |
 
+<a id="s-videos-de-producto"></a>
+## Videos de producto
+
+| Video | Descripción | URL |
+| --- | --- | --- |
+| Video About-the-Product | Presentación de SafePlant: problema, propuesta IoT y canales móvil / web | [Google Drive](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing) |
+| SafePlant Prototipo | Demostración del artefacto IoT físico (área de maqueta, sensores, actuador y nodo) | [YouTube](https://www.youtube.com/watch?v=FqdvoVivrnM) |
+| Explicación del prototipo móvil (Figma) | Recorrido del prototipo del Supervisor | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC0z40dQIqVQbQvuddVxnAmAejBnKbEFgnXIzfK4z9N5c4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jVhkvW) |
+| Explicación del prototipo web (Figma) | Recorrido del prototipo del Encargado de Planta | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQACIq6Cv0-cQLxQ1Ce_OAIJAcl4q4FVlA-Jfpse8Tw30Xc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&e=QlFb91) |
+
 <a id="s-anexo-repositorios"></a>
 ## Repositorios y artefactos
 
 | Artefacto | URL / ubicación |
 | --- | --- |
 | Repositorio del informe (Project Report) | https://github.com/Macallys/Report |
+| Landing page (código) | https://github.com/Macallys/landing-page |
 | Landing page desplegada | https://macallys.github.io/landing-page/ |
+| Backend Cloud.Api / Plant.Host | https://github.com/Macallys/safeplant-web-backend |
+| Backend desplegado (Azure App Service) | https://wa-safeplant-cloudbackend-prod.azurewebsites.net |
+| Swagger UI / OpenAPI | https://wa-safeplant-cloudbackend-prod.azurewebsites.net/swagger/index.html |
+| Aplicación web (código) | https://github.com/Macallys/safeplant-web-client |
+| Aplicación web desplegada (Vercel) | https://safeplant-web-client.vercel.app/signIn |
+| Aplicación móvil (código) | https://github.com/Macallys/App-Movil |
+| APK / Release móvil (v0.1.0) | https://github.com/Macallys/App-Movil/releases |
 | Big Picture EventStorming (Miro) | https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821 |
 | Design-Level EventStorming (Miro) | https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ |
+| Wireframes y prototipos (Figma) | https://www.figma.com/design/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT |
+| Nodo IoT en Wokwi | https://wokwi.com/projects/477285427305212929 |
+| Tablero Sprint Backlog 1 (Trello) | https://trello.com/invite/b/6ac821586e78c0cf18180ab8/ATTIceb3bbc97ae5d0dea9294fb1ee9becb5E0A72C81/sprint-backlog-1 |
+| Tablero Sprint Backlog 2 (Trello) | https://trello.com/invite/b/6af8014efa2b04f1705811d9/ATTI36694e92f42020e7d35239dbb6bbed77E5BFE9A3/sprint-backlog-2 |
 | Diagramas C4 (Structurizr DSL) | [`docs/diagrams/c4.dsl`](./diagrams/c4.dsl) |
 | Bounded Context Canvas (fichas por contexto) | [`docs/bounded-contexts/`](./bounded-contexts/README.md) |
 

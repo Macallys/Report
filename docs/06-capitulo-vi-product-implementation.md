@@ -837,6 +837,14 @@ IoT: nodo ESP32 en breadboard con LED y buzzer
 
 ![IoT: nodo ESP32 en breadboard con LED y buzzer](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_node.jpg)
 
+IoT: video del prototipo físico
+
+La demostración en video del artefacto muestra el área de maqueta, los sensores, el actuador (servo / mampara), el nodo en breadboard y la conexión al entorno de desarrollo. Complementa las fotos anteriores y el diseño en Wokwi del Capítulo V.
+
+**URL del video:** [SafePlant Prototipo](https://www.youtube.com/watch?v=FqdvoVivrnM)
+
+![IoT: video SafePlant Prototipo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_prototype_video.png)
+
 
 <a id="s-6-2-2-7"></a>
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
@@ -1034,7 +1042,7 @@ Los tres compromisos propuestos en el Sprint 1 se cumplieron correctamente. El b
 <a id="s-6-4"></a>
 ## 6.4. Video About-the-Product
 
-El Video About-the-Product presenta SafePlant en aproximadamente 30 segundos: el problema de exposición en planta, la propuesta IoT (sensores, actuadores y borde), y los canales del Supervisor (móvil) y del Encargado de Planta (web), cerrando con la marca SAFEPLANT y el lema «Plantas más inteligentes, equipos más seguros.»
+El Video About-the-Product presenta SafePlant: el problema de exposición en planta, la propuesta IoT (sensores, actuadores y borde), y los canales del Supervisor (móvil) y del Encargado de Planta (web), cerrando con la marca SAFEPLANT y el lema «Plantas más inteligentes, equipos más seguros.»
 
 **URL del video:** [SafePlant_Video_About_The_Product.mp4](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing)
 

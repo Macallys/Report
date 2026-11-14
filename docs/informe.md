@@ -592,6 +592,12 @@ SafePlant
       <td align="left">Equipo Macallys</td>
       <td align="left">Sección 6.4 Video About-the-Product con enlace a Drive y captura del cierre SAFEPLANT.</td>
     </tr>
+    <tr>
+      <td align="left">3.23</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Actualización de Anexos (videos de producto, repositorios y despliegues AV2) y ajuste del texto de 6.4.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -786,6 +792,7 @@ SafePlant
     - [Tecnologías y estándares IoT](#s-tecnologias-y-estandares-iot)
 - [Anexos](#s-anexos)
     - [Videos de Exposiciones](#s-anexo-videos-exposiciones)
+    - [Videos de producto](#s-videos-de-producto)
     - [Repositorios y artefactos](#s-anexo-repositorios)
     - [Entrevistas](#s-anexo-entrevistas)
 
@@ -8661,6 +8668,14 @@ IoT: nodo ESP32 en breadboard con LED y buzzer
 
 ![IoT: nodo ESP32 en breadboard con LED y buzzer](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_node.jpg)
 
+IoT: video del prototipo físico
+
+La demostración en video del artefacto muestra el área de maqueta, los sensores, el actuador (servo / mampara), el nodo en breadboard y la conexión al entorno de desarrollo. Complementa las fotos anteriores y el diseño en Wokwi del Capítulo V.
+
+**URL del video:** [SafePlant Prototipo](https://www.youtube.com/watch?v=FqdvoVivrnM)
+
+![IoT: video SafePlant Prototipo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_prototype_video.png)
+
 
 <a id="s-6-2-2-7"></a>
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
@@ -8858,7 +8873,7 @@ Los tres compromisos propuestos en el Sprint 1 se cumplieron correctamente. El b
 <a id="s-6-4"></a>
 ## 6.4. Video About-the-Product
 
-El Video About-the-Product presenta SafePlant en aproximadamente 30 segundos: el problema de exposición en planta, la propuesta IoT (sensores, actuadores y borde), y los canales del Supervisor (móvil) y del Encargado de Planta (web), cerrando con la marca SAFEPLANT y el lema «Plantas más inteligentes, equipos más seguros.»
+El Video About-the-Product presenta SafePlant: el problema de exposición en planta, la propuesta IoT (sensores, actuadores y borde), y los canales del Supervisor (móvil) y del Encargado de Planta (web), cerrando con la marca SAFEPLANT y el lema «Plantas más inteligentes, equipos más seguros.»
 
 **URL del video:** [SafePlant_Video_About_The_Product.mp4](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing)
 
@@ -9015,15 +9030,37 @@ Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *
 | AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | |
 | TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | |
 
+<a id="s-videos-de-producto"></a>
+## Videos de producto
+
+| Video | Descripción | URL |
+| --- | --- | --- |
+| Video About-the-Product | Presentación de SafePlant: problema, propuesta IoT y canales móvil / web | [Google Drive](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing) |
+| SafePlant Prototipo | Demostración del artefacto IoT físico (área de maqueta, sensores, actuador y nodo) | [YouTube](https://www.youtube.com/watch?v=FqdvoVivrnM) |
+| Explicación del prototipo móvil (Figma) | Recorrido del prototipo del Supervisor | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC0z40dQIqVQbQvuddVxnAmAejBnKbEFgnXIzfK4z9N5c4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jVhkvW) |
+| Explicación del prototipo web (Figma) | Recorrido del prototipo del Encargado de Planta | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQACIq6Cv0-cQLxQ1Ce_OAIJAcl4q4FVlA-Jfpse8Tw30Xc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&e=QlFb91) |
+
 <a id="s-anexo-repositorios"></a>
 ## Repositorios y artefactos
 
 | Artefacto | URL / ubicación |
 | --- | --- |
 | Repositorio del informe (Project Report) | https://github.com/Macallys/Report |
+| Landing page (código) | https://github.com/Macallys/landing-page |
 | Landing page desplegada | https://macallys.github.io/landing-page/ |
+| Backend Cloud.Api / Plant.Host | https://github.com/Macallys/safeplant-web-backend |
+| Backend desplegado (Azure App Service) | https://wa-safeplant-cloudbackend-prod.azurewebsites.net |
+| Swagger UI / OpenAPI | https://wa-safeplant-cloudbackend-prod.azurewebsites.net/swagger/index.html |
+| Aplicación web (código) | https://github.com/Macallys/safeplant-web-client |
+| Aplicación web desplegada (Vercel) | https://safeplant-web-client.vercel.app/signIn |
+| Aplicación móvil (código) | https://github.com/Macallys/App-Movil |
+| APK / Release móvil (v0.1.0) | https://github.com/Macallys/App-Movil/releases |
 | Big Picture EventStorming (Miro) | https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821 |
 | Design-Level EventStorming (Miro) | https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ |
+| Wireframes y prototipos (Figma) | https://www.figma.com/design/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT |
+| Nodo IoT en Wokwi | https://wokwi.com/projects/477285427305212929 |
+| Tablero Sprint Backlog 1 (Trello) | https://trello.com/invite/b/6ac821586e78c0cf18180ab8/ATTIceb3bbc97ae5d0dea9294fb1ee9becb5E0A72C81/sprint-backlog-1 |
+| Tablero Sprint Backlog 2 (Trello) | https://trello.com/invite/b/6af8014efa2b04f1705811d9/ATTI36694e92f42020e7d35239dbb6bbed77E5BFE9A3/sprint-backlog-2 |
 | Diagramas C4 (Structurizr DSL) | [`docs/diagrams/c4.dsl`](./diagrams/c4.dsl) |
 | Bounded Context Canvas (fichas por contexto) | [`docs/bounded-contexts/`](./bounded-contexts/README.md) |
 
