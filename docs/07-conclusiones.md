@@ -29,26 +29,32 @@
 
 9. Como novena conclusión, el Capítulo V dejó esa separación en las pantallas. El azul marino y el cian identifican a SAFEPLANT, y el verde, el ámbar y el rojo marcan si la condición es normal, de cuidado o crítica. En el celular el supervisor entra, ve el panel y las alertas, ajusta umbrales y revisa el historial y los dispositivos. En la web el encargado inicia sesión, activa la cuenta, consulta el panel y las alertas, y administra las cuentas, incluido el alta de un supervisor. Los dos recorridos quedaron explicados en video.
 
+10. Como décima conclusión, el Sprint 1 del Capítulo VI dejó el primer incremento visible. Quedó la landing en GitHub Pages, las pantallas web del Encargado de Planta y el módulo Identity & Access del backend en Azure. Ese sprint cerró la presencia pública y la sesión, pero la web aún consumía datos de muestra y la ruta del dato IoT no estaba completa.
+
+11. Como undécima conclusión, el Sprint 2 cerró la ruta del dato y conectó los tres canales. Cloud.Api quedó en Azure con Plant Monitoring, Safety & Actuation y Device & Edge Management. Plant.Host recibe MQTT y persiste en planta. La web en Vercel dejó los mocks y consume la API. La app móvil del Supervisor se publicó como APK v0.1.0 y opera sesión, panel, alertas, exposiciones, override y setup contra esa misma API.
+
+12. Como duodécima conclusión, la evidencia de pruebas del Sprint 2 acompaña ese incremento. El backend sumó 44 Unit Tests en SafePlant.UnitTests. El frontend Angular pasó 64 casos con `ng test`. La app móvil Flutter pasó 296 casos. Esas suites y las capturas de ejecución y despliegue sostienen la revisión del sprint en el informe.
+
 <a id="s-recomendaciones"></a>
 ### Recomendaciones
 
-1. Como primera recomendación, seguir estudiando cómo integrar los dispositivos IoT para que el monitoreo de las áreas no se corte. En planta, el metal, la vibración y el calor cerca de los sensores son el mayor riesgo de que el dato deje de llegar.
+1. Como primera recomendación, seguir endureciendo la integración IoT en planta real. El metal, la vibración y el calor cerca de los sensores siguen siendo el mayor riesgo de que el dato deje de llegar, aunque el stack de laboratorio y el APK ya estén desplegados.
 
-2. Como segunda recomendación, probar el dispositivo real apenas el diseño esté cerrado, con tiempo para corregir y volver a integrar. Conviene empezar en una sola área de alto riesgo, como soldadura o fundición, con personas que trabajan ahí, y después pasar al resto de la planta.
+2. Como segunda recomendación, probar el dispositivo físico en una sola área de alto riesgo, como soldadura o fundición, con quienes trabajan ahí. Conviene corregir firmware y umbrales ahí antes de escalar al resto de la planta.
 
-3. Como tercera recomendación, probar el uso desde temprano, con el supervisor y con el encargado por separado. El supervisor atiende la alerta, ajusta el umbral y asocia el dispositivo desde el teléfono. El encargado mira las métricas y el historial, y administra las cuentas en la web. Cada uno tiene que probar la pantalla que le corresponde.
+3. Como tercera recomendación, completar las entrevistas de validación del apartado 6.3 con supervisor y encargado por separado. Cada uno debe recorrer la pantalla que ya está en producción, no solo el prototipo del Capítulo V.
 
-4. Como cuarta recomendación, poner en cada área un panel físico para reiniciar el equipo y manejar a mano el extractor, la sirena y la mampara cuando se cae la red. El override a distancia queda en el celular del supervisor y se registra. En la web del encargado ese registro se consulta como evidencia.
+4. Como cuarta recomendación, poner en cada área un panel físico para reiniciar el equipo y manejar a mano el extractor, la sirena y la mampara cuando se cae la red. El override a distancia ya está en el celular del supervisor y se registra. En la web del encargado ese registro se consulta como evidencia.
 
-5. Como quinta recomendación, guardar cada umbral con su autor, su fecha y la norma que se aplicó. Lo ajusta el supervisor desde el celular, por área, con el D.S. 015-2005-SA para el CO₂ y la R.M. 375-2008-TR para el ruido. El encargado ve ese historial en la web. El cambio debería poder aplicarse a las áreas que correspondan de una sola vez, porque hoy la norma llega por correo o PDF, pasa a Excel y se copia tarde en cada zona.
+5. Como quinta recomendación, guardar cada umbral con su autor, su fecha y la norma que se aplicó. Lo ajusta el supervisor desde el celular, por área, con el D.S. 015-2005-SA para el CO₂ y la R.M. 375-2008-TR para el ruido. El encargado ve ese historial en la web. El cambio debería poder aplicarse a las áreas que correspondan de una sola vez.
 
-6. Como sexta recomendación, probar primero lo que falla: un corte de internet, un equipo que deja de responder, el reintento y la sincronización cuando vuelve el enlace, cuidando que una misma lectura no se guarde dos veces. Si un sensor calla, el tablero tiene que mostrarlo como no disponible. Que no lleguen datos no significa que el área esté bien, como pasó con los tres sensores caídos casi seis horas.
+6. Como sexta recomendación, probar primero lo que falla en el entorno desplegado: corte de internet, equipo que deja de responder, reintento y sincronización al volver el enlace, cuidando que una misma lectura no se guarde dos veces. Si un sensor calla, el tablero tiene que mostrarlo como no disponible.
 
-7. Como séptima recomendación, recoger lo que pidieron en las entrevistas del Capítulo II. En el celular, que la alerta crítica se distinga de la informativa y que los umbrales se calibren por área en el piloto, para bajar las falsas alarmas. En la web, guardar mediciones, alertas, acciones, anulaciones y cambios de configuración al menos doce meses, y poder exportarlos a PDF. Es lo que los encargados necesitan para SUNAFIL y para reconstruir un incidente.
+7. Como séptima recomendación, recoger lo que pidieron en las entrevistas del Capítulo II. En el celular, que la alerta crítica se distinga de la informativa y que los umbrales se calibren por área en el piloto. En la web, retener mediciones, alertas, acciones, anulaciones y cambios de configuración al menos doce meses, con exportación a PDF para SUNAFIL.
 
-8. Como octava recomendación, al programar, respetar lo que ya muestran los prototipos. Los umbrales, el alta de sensores y actuadores, y el override van en el celular del supervisor. Las métricas, el historial completo, los reportes y la gobernanza de cuentas van en la web del encargado. Cada menú muestra solo lo que le toca a ese rol.
+8. Como octava recomendación, mantener en el código la separación de canales que ya corre en Sprint 2. Umbrales, alta de dispositivos y override van en el celular del supervisor. Métricas, historial completo y gobernanza de cuentas van en la web del encargado.
 
-9. Como novena recomendación, en lo que sigue, sumar avisos al celular para las alertas críticas, más de un nodo en la misma planta, actuadores según el riesgo de cada zona, y una vista que relacione las condiciones acumuladas con los incidentes y las horas de exposición. Antes del diseño de detalle conviene cerrar lo que quedó abierto: cómo se proyecta el estado operativo del área, qué pasa si falla un relé, si más adelante se usa un proveedor externo de identidad y cuál será el broker MQTT. El stack del Capítulo IV sigue siendo provisional (DEC-008).
+9. Como novena recomendación, para el Trabajo Final conviene sumar avisos push en alertas críticas, más de un nodo por planta y una vista de exposición acumulada. También cerrar lo que quedó abierto en DEC-008, como el fallo de un relé y la política de identidad a largo plazo.
 
 ---
 

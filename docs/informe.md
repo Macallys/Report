@@ -303,6 +303,7 @@ SafePlant
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Elaboración de Software Architecture Context Level Diagrams.</td>
     </tr>
+    </tr>
     <tr>
       <td align="left">2.1</td>
       <td align="left">2026-10-05</td>
@@ -529,7 +530,7 @@ SafePlant
       <td align="left">3.12</td>
       <td align="left">2026-11-12</td>
       <td align="left">Solano Armas, Angelo Héctor</td>
-      <td align="left">Suite de pruebas Flutter (296 casos) y evidencia de testing del Sprint 2.</td>
+      <td align="left">Suite de pruebas Flutter (296), backend (44) y frontend Angular (64) documentadas en 6.2.2.5.</td>
     </tr>
     <tr>
       <td align="left">3.13</td>
@@ -567,6 +568,36 @@ SafePlant
       <td align="left">Equipo Macallys</td>
       <td align="left">Registro y cierre de la entrega AV2.</td>
     </tr>
+    <tr>
+      <td align="left">3.19</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Documentación de Unit Tests de backend (44 casos) en 6.2.2.5 Testing Suite Evidence.</td>
+    </tr>
+    <tr>
+      <td align="left">3.20</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Documentación de pruebas frontend Angular (64 casos) en 6.2.2.5 Testing Suite Evidence.</td>
+    </tr>
+    <tr>
+      <td align="left">3.21</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Evidencia del artefacto IoT físico en 6.2.2.6 Execution Evidence y actualización de conclusiones con Sprint 2.</td>
+    </tr>
+    <tr>
+      <td align="left">3.22</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Sección 6.4 Video About-the-Product con enlace a Drive y captura del cierre SAFEPLANT.</td>
+    </tr>
+    <tr>
+      <td align="left">3.23</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Actualización de Anexos (videos de producto, repositorios y despliegues AV2) y ajuste del texto de 6.4.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -582,12 +613,6 @@ SafePlant
 ![Analíticos de colaboración — captura](../assets/00-front-matter/github-collaboration-insights-1.png)
 
 ![Commits / contribución — captura](../assets/00-front-matter/github-collaboration-insights-2.png)
-
-**Entrega:** TB1 (Trabajo Parcial)
-
-![Analíticos de colaboración — captura](../assets/00-front-matter/github-collaboration-insights-1-tb.png)
-
-![Commits / contribución — captura](../assets/00-front-matter/github-collaboration-insights-2-tb.png)
 
 **Entrega:** AV2
 
@@ -746,6 +771,9 @@ SafePlant
             - [6.2.2.3. Sprint Backlog 2](#s-6-2-2-3)
             - [6.2.2.4. Development Evidence for Sprint Review](#s-6-2-2-4)
             - [6.2.2.5. Testing Suite Evidence for Sprint Review](#s-6-2-2-5)
+            - [Pruebas de Backend realizadas](#s-pruebas-de-backend-realizadas)
+            - [Pruebas de Frontend realizadas](#s-pruebas-de-frontend-realizadas)
+            - [Pruebas de Mobile realizadas](#s-pruebas-de-mobile-realizadas)
             - [6.2.2.6. Execution Evidence for Sprint Review](#s-6-2-2-6)
             - [6.2.2.7. Services Documentation Evidence for Sprint Review](#s-6-2-2-7)
             - [6.2.2.8. Software Deployment Evidence for Sprint Review](#s-6-2-2-8)
@@ -754,6 +782,7 @@ SafePlant
         - [6.3.1. Diseño de Entrevistas](#s-6-3-1)
         - [6.3.2. Registro de Entrevistas](#s-6-3-2)
         - [6.3.3. Evaluaciones según heurísticas](#s-6-3-3)
+    - [6.4. Video About-the-Product](#s-6-4)
 - [Conclusiones](#s-conclusiones)
         - [Conclusiones](#s-conclusiones-conclusiones)
         - [Recomendaciones](#s-recomendaciones)
@@ -763,6 +792,7 @@ SafePlant
     - [Tecnologías y estándares IoT](#s-tecnologias-y-estandares-iot)
 - [Anexos](#s-anexos)
     - [Videos de Exposiciones](#s-anexo-videos-exposiciones)
+    - [Videos de producto](#s-videos-de-producto)
     - [Repositorios y artefactos](#s-anexo-repositorios)
     - [Entrevistas](#s-anexo-entrevistas)
 
@@ -802,6 +832,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     </tr>
   </tbody>
 </table>
+
 ---
 
 <a id="s-cap-i"></a>
@@ -7218,13 +7249,14 @@ Para el desarrollo colaborativo del ecosistema SafePlant, el equipo utiliza las 
 <a id="s-6-1-2"></a>
 ### 6.1.2. Source Code Management
 
-El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys` ([https://github.com/Macallys](https://github.com/Macallys)). Actualmente, la organización alberga los siguientes repositorios:
+El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys`. Actualmente, la organización alberga los siguientes repositorios principales:
 
-*   **`Report`:** Repositorio central que contiene la documentación y el informe del proyecto. [https://github.com/Macallys/Report](https://github.com/Macallys/Report)
-*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático. [https://github.com/Macallys/landing-page](https://github.com/Macallys/landing-page)
-*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular. [https://github.com/Macallys/safeplant-web-client](https://github.com/Macallys/safeplant-web-client)
-*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core. [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend)
-*   **`App-Movil`:** Contiene el código fuente de la aplicación móvil del Supervisor de Seguridad. [https://github.com/Macallys/App-Movil](https://github.com/Macallys/App-Movil)
+[https://github.com/Macallys/Report](https://github.com/Macallys/Report)
+
+*   **`Report`:** Repositorio central que contiene la documentación  y el informe del proyecto.
+*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
+*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular.
+*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático.
 
 **Estrategia de Ramas**
 El equipo ha adaptado su flujo de trabajo para agilizar la integración continua. Inicialmente, se implementó un enfoque basado en ramas de características específicas para segmentar el trabajo. Sin embargo, la estrategia actual se ha simplificado: los miembros del equipo ahora integran sus aportes y actualizaciones de forma directa en la rama `develop` para acelerar el ciclo de desarrollo y consolidación. 
@@ -7491,73 +7523,41 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
   </thead>
   <tbody>
     <tr>
-      <td align="left" rowspan="2">US01</td>
-      <td align="left" rowspan="2">View SafePlant system information</td>
+      <td align="left">US01</td>
+      <td align="left">View SafePlant system information</td>
       <td align="left">T01</td>
-      <td align="left">Estructura base, hero y propósito</td>
-      <td align="left">Maquetar la estructura base de la landing (navbar, hero) y la sección "Qué es SafePlant".</td>
+      <td align="left">Hero, propósito y flujo del sistema</td>
+      <td align="left">Maquetar la estructura base de la landing (navbar, hero) y las secciones "Qué es SafePlant", "Monitoreo en tiempo real", "Cómo responde el sistema" y "De la detección a la acción automática".</td>
+      <td align="left">5</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">US02</td>
+      <td align="left">View SafePlant benefits and advantages</td>
+      <td align="left">T02</td>
+      <td align="left">Sección de beneficios</td>
+      <td align="left">Implementar la sección "El valor de SafePlant para tu planta" con las ventajas de la solución.</td>
       <td align="left">2</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">T22</td>
-      <td align="left">Secciones de monitoreo y flujo del sistema</td>
-      <td align="left">Implementar las secciones "Monitoreo en tiempo real", "Cómo responde el sistema" y "De la detección a la acción automática".</td>
-      <td align="left">3</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US02</td>
-      <td align="left" rowspan="2">View SafePlant benefits and advantages</td>
-      <td align="left">T02</td>
-      <td align="left">Sección de beneficios</td>
-      <td align="left">Maquetar la sección "El valor de SafePlant para tu planta" con las ventajas de la solución.</td>
-      <td align="left">1</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left">T23</td>
-      <td align="left">Diseño responsivo de la sección de beneficios</td>
-      <td align="left">Adaptar las tarjetas de beneficios a resoluciones de escritorio, tablet y móvil.</td>
-      <td align="left">1</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US05</td>
-      <td align="left" rowspan="2">View system technical architecture</td>
+      <td align="left">US05</td>
+      <td align="left">View system technical architecture</td>
       <td align="left">T03</td>
       <td align="left">Sección de arquitectura técnica</td>
-      <td align="left">Maquetar la sección que explica la relación entre dispositivos ESP32, IoT Gateway, nube, aplicación móvil y aplicación web.</td>
-      <td align="left">1</td>
+      <td align="left">Implementar la sección que explica la relación entre dispositivos ESP32, IoT Gateway, nube, aplicación móvil y aplicación web.</td>
+      <td align="left">2</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">T24</td>
-      <td align="left">Validación del contenido técnico</td>
-      <td align="left">Revisar que los textos de la sección de arquitectura sean coherentes con la arquitectura documentada en el informe y ajustar el diseño responsivo.</td>
-      <td align="left">1</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US06</td>
-      <td align="left" rowspan="2">Navigate to the operations mobile app</td>
+      <td align="left">US06</td>
+      <td align="left">Navigate to the operations mobile app</td>
       <td align="left">T21</td>
       <td align="left">Call-to-action hacia la aplicación móvil</td>
       <td align="left">Incluir en la landing un acceso identificable a la aplicación móvil del Supervisor de Seguridad, distinto del acceso web. El botón App móvil apunta a https://app.safeplant.io/mobile/login. Ese dominio aún no resuelve y la aplicación móvil no está publicada en este sprint.</td>
-      <td align="left">1</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">To-Review</td>
-    </tr>
-    <tr>
-      <td align="left">T25</td>
-      <td align="left">Verificación del enlace a la aplicación móvil</td>
-      <td align="left">Comprobar el comportamiento del botón App móvil en escritorio y móvil, y validar la redirección cuando la aplicación móvil esté publicada.</td>
       <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">To-Review</td>
@@ -7599,56 +7599,32 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left" rowspan="2">US23</td>
-      <td align="left" rowspan="2">Plant metrics dashboard and full history</td>
+      <td align="left">US23</td>
+      <td align="left">Plant metrics dashboard and full history</td>
       <td align="left">T08</td>
-      <td align="left">Dashboard de métricas por área</td>
-      <td align="left">Implementar el dashboard de métricas por área con datos de muestra.</td>
-      <td align="left">4</td>
+      <td align="left">Dashboard de métricas e historial</td>
+      <td align="left">Implementar el dashboard de métricas por área, el historial de alertas y el gráfico de telemetría, con datos de muestra.</td>
+      <td align="left">8</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">T26</td>
-      <td align="left">Historial de alertas y gráfico de telemetría</td>
-      <td align="left">Implementar el historial de alertas y el gráfico de telemetría, con datos de muestra.</td>
-      <td align="left">4</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US11</td>
-      <td align="left" rowspan="2">Create user accounts as Plant Manager</td>
+      <td align="left">US11</td>
+      <td align="left">Create user accounts as Plant Manager</td>
       <td align="left">T09</td>
-      <td align="left">Directorio de cuentas</td>
-      <td align="left">Implementar el directorio de cuentas de Safety Supervisors y Plant Managers.</td>
-      <td align="left">2</td>
+      <td align="left">Directorio y creación de cuentas</td>
+      <td align="left">Implementar el directorio de cuentas y el panel lateral de creación de cuentas para Safety Supervisors y Plant Managers.</td>
+      <td align="left">5</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">T27</td>
-      <td align="left">Panel de creación de cuentas</td>
-      <td align="left">Implementar el panel lateral de creación de cuentas con su formulario y validaciones.</td>
-      <td align="left">3</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US12</td>
-      <td align="left" rowspan="2">Assign user roles and permissions</td>
+      <td align="left">US12</td>
+      <td align="left">Assign user roles and permissions</td>
       <td align="left">T10</td>
-      <td align="left">Asignación de roles</td>
-      <td align="left">Implementar la asignación de rol a las cuentas desde el directorio de cuentas.</td>
-      <td align="left">2</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left">T28</td>
-      <td align="left">Modificación de roles</td>
-      <td align="left">Implementar el cambio de rol de una cuenta existente desde el directorio de cuentas.</td>
-      <td align="left">1</td>
+      <td align="left">Administración de roles</td>
+      <td align="left">Implementar la asignación y modificación de roles desde el directorio de cuentas.</td>
+      <td align="left">3</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
@@ -7939,7 +7915,7 @@ Los pasos realizados fueron los siguientes:
 <a id="s-6-2-1-9"></a>
 #### 6.2.1.9. Team Collaboration Insights during Sprint
 
-La colaboración del Sprint 1 se midió sobre los cuatro repositorios de la organización. Para el repositorio "Report" se consideran los commits del 20 de septiembre al 7 de octubre de 2026; para los repositorios de producto, su historial completo. Las cifras son reproducibles con `git shortlog -sn --all` y agrupan las distintas identidades de Git de un mismo integrante.
+La colaboración del Sprint 1 se midió sobre los cuatro repositorios de la organización. Para el repositorio `Report` se consideran los commits del 20 de septiembre al 7 de octubre de 2026; para los repositorios de producto, su historial completo. Las cifras son reproducibles con `git shortlog -sn --all` y agrupan las distintas identidades de Git de un mismo integrante.
 
 | Integrante | `Report` | `landing-page` | `safeplant-web-client` | `safeplant-web-backend` | Total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
@@ -7957,15 +7933,17 @@ La implementación de los productos se concentró en dos integrantes: Sanchez Go
 
 Para el Sprint 2 el equipo adopta los siguientes compromisos:
 
-- Cada User Story se desarrollará en su propia rama "feature/*", creada por el integrante responsable, e integrada a "develop" mediante Pull Request revisado por otro integrante.
+- Cada User Story se desarrollará en su propia rama `feature/*`, creada por el integrante responsable, e integrada a `develop` mediante Pull Request revisado por otro integrante.
 - Todos los integrantes tendrán commits propios en al menos un repositorio de producto.
-- El trabajo realizado en pareja se registrará con el trailer Co-authored-by para que el historial refleje a ambos participantes.
+- El trabajo realizado en pareja se registrará con el trailer `Co-authored-by` para que el historial refleje a ambos participantes.
 
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab.png)
 
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab1.png)
 
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab2.png)
+
+---
 
 <a id="s-6-2-2"></a>
 ### 6.2.2. Sprint 2
@@ -8448,6 +8426,115 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 <a id="s-6-2-2-5"></a>
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
+<a id="s-pruebas-de-backend-realizadas"></a>
+#### Pruebas de Backend realizadas
+
+**Repository:** https://github.com/Macallys/safeplant-web-backend.git
+
+Los Unit Tests del backend se implementaron en el proyecto `tests/SafePlant.UnitTests` con .NET, Visual Studio Test Explorer y FluentAssertions. Validan la lógica de Application (servicios de Identity & Access, Plant Monitoring y Safety & Actuation) y de Domain (políticas de actuadores, exposición, sesión y cuentas). Para no depender de Azure ni de TimescaleDB, los servicios de Application usan dobles de los repositorios e interfaces del dominio. La suite se ejecuta desde el Explorador de pruebas de Visual Studio o con:
+
+```bash
+dotnet test tests/SafePlant.UnitTests
+```
+
+Resultado de la corrida documentada: 44 pruebas superadas, 0 con error, 0 omitidas (290 ms).
+
+**Unit Tests — Application**
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `AreaServiceTests.cs` | Unit Test | US20 — Register and manage industrial areas | Valida el alta de áreas: rechaza nombre vacío o duplicado, deniega el canal web del Plant Manager y acepta la creación desde el Supervisor. | Passed (4) |
+| `ThresholdServiceTests.cs` | Unit Test | US21 — Configure environmental thresholds by area | Valida la configuración de umbrales de CO₂ y ruido por área en el servicio de aplicación. | Passed (4) |
+| `SignInServiceTests.cs` | Unit Test | TS21 / US07 / US08 — Autenticación móvil y web | Valida el inicio de sesión: rechaza contraseña incorrecta y cuenta deshabilitada; entrega token para Supervisor y para el canal autorizado. | Passed (4) |
+| `OverrideServiceTests.cs` | Unit Test | US32 / TS10 — Remote manual actuator override | Valida el override remoto: propaga indisponibilidad del edge, rechaza estados Failed y envía el comando cuando el actuador está operativo. | Passed (5) |
+
+![Testing Backend Application](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_application.png)
+
+**Unit Tests — Domain**
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `ActuatorPolicyTests.cs` | Unit Test | US27 / US28 / US33 — Detección de exceso y acciones automáticas | Valida la política de actuadores: despliegue o repliegue de mampara, encendido o apagado de extractor y sirena según CO₂, ruido y presencia. | Passed (13) |
+| `ExposurePolicyTests.cs` | Unit Test | US26 / US27 / US28 — Exposición de personal | Valida la severidad de exposición (None, Medium, High) al correlacionar lecturas ambientales con presencia. | Passed (8) |
+| `SessionTests.cs` | Unit Test | TS21 / US07 / US08 — Sesión autenticada | Valida el ciclo de vida de la sesión: cierre explícito y expiración. | Passed (3) |
+| `UserAccountTests.cs` | Unit Test | US11 / US12 — Cuentas y roles | Valida normalización de correo y restricción de canal por rol (Plant Manager solo Web; Supervisor solo Mobile). | Passed (3) |
+
+![Testing Backend Domain](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_domain.png)
+
+**Test Execution Evidence (Backend)**
+
+La corrida completa en Visual Studio reportó 44 pruebas superadas en Application (17) y Domain (27).
+
+![Testing Backend Execution](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_execution.png)
+
+| Capa | Archivos de prueba | Casos de prueba | Cobertura |
+| :--- | ---: | ---: | :--- |
+| Application | 4 | 17 | Áreas, umbrales, sign-in y override |
+| Domain | 4 | 27 | Políticas de actuadores y exposición, sesión y cuentas |
+| **Total** | **8** | **44** | |
+
+<a id="s-pruebas-de-frontend-realizadas"></a>
+#### Pruebas de Frontend realizadas
+
+**Repository:** https://github.com/Macallys/safeplant-web-client.git
+
+Los Unit Tests y Component Tests del frontend se implementaron con Angular (`ng test` / Vitest) sobre archivos `.spec.ts` en `src/app`. Cubren el núcleo de sesión y autenticación, el módulo de cuentas (Identity & Access en web) y el módulo de métricas (dashboard, historial y telemetría). Para no depender de Cloud.Api en Azure, las pruebas usan servicios mockeados (`accounts.mock.api` y dobles de la API de métricas). La suite se ejecuta con:
+
+```bash
+npx ng test --watch=false
+```
+
+Resultado de la corrida documentada: 64 pruebas superadas (2.58 s).
+
+**Unit Tests**
+
+Los Unit Tests validan utilidades, stores, guards, interceptores y clientes API de forma aislada.
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `session.spec.ts` | Unit Test | US08 / TS21 — Sesión del Encargado de Planta | Valida el ciclo de vida de la sesión en el cliente web. | Passed (6) |
+| `session.guard.spec.ts` | Unit Test | US08 — Acceso protegido a rutas web | Valida el guard de sesión antes de entrar al panel y al historial. | Passed (3) |
+| `auth.interceptor.spec.ts` | Unit Test | TS21 — JWT en peticiones a Cloud.Api | Valida que el interceptor adjunta el token y reacciona a respuestas no autorizadas. | Passed (6) |
+| `auth.store.spec.ts` | Unit Test | US08 — Sign-in web | Valida el estado de autenticación del store tras iniciar o cerrar sesión. | Passed (5) |
+| `auth.api.spec.ts` | Unit Test | US08 / TS21 — Cliente de autenticación | Valida el contrato del cliente HTTP de autenticación con respuestas mockeadas. | Passed |
+| `accounts.api.spec.ts` | Unit Test | US11 / US12 — Directorio de cuentas | Valida el cliente API de cuentas y roles con `accounts.mock.api`. | Passed (3) |
+| `metrics.api.spec.ts` | Unit Test | US14 / US23 — Plant metrics dashboard and full history | Valida el cliente API de métricas (dashboard e historial) con datos mockeados. | Passed (3) |
+| `safety-rules.spec.ts` | Unit Test | US14 / US18 — Reglas de estado operativo | Valida la evaluación de reglas de seguridad usadas en el panel web. | Passed |
+| `app.routes.spec.ts` | Unit Test | US08 / US11 / US14 — Enrutamiento web | Valida las rutas del Encargado de Planta (sign-in, dashboard, historial, cuentas). | Passed (3) |
+| `app.spec.ts` | Unit Test | — Arranque de la aplicación | Valida la creación del componente raíz. | Passed (2) |
+
+**Component / Integration Tests**
+
+Los Component Tests e Integration Tests frontend validan la interacción entre vistas del canal web y servicios mockeados. Simulan respuestas de autenticación, telemetría, historial y directorio de cuentas para comprobar que la interfaz reacciona correctamente.
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `sign-in.spec.ts` | Component Test | US08 — Plant Manager sign-in on the web application | Valida el formulario de inicio de sesión y el flujo hacia la sesión autenticada. | Passed (4) |
+| `dashboard.spec.ts` | Component Test / Integration Test | US14 — Consolidated operational dashboard of plant areas | Valida el panel de control con telemetría ambiental mockeada. | Passed (7) |
+| `history.spec.ts` | Component Test / Integration Test | US23 — Plant metrics dashboard and full history | Valida la carga del historial ambiental y el filtrado con datos mockeados. | Passed (8) |
+| `telemetry-chart.spec.ts` | Component Test | US23 — Plant metrics dashboard and full history | Valida el renderizado del gráfico de telemetría a partir de series mockeadas. | Passed (5) |
+| `accounts.spec.ts` | Component Test / Integration Test | US11 / US12 — Create user accounts / Assign roles | Valida el directorio de cuentas y la administración de roles con API mockeada. | Passed |
+
+![Testing Frontend Execution](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_execution.png)
+
+**Test Execution Evidence (Frontend)**
+
+La corrida completa con `npx ng test --watch=false` reportó 64 pruebas superadas en 2.58 s. Las capturas siguientes muestran la cola de archivos `.spec.ts` y el avance de la suite hasta el resumen final.
+
+![Testing Frontend Queue](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_queue.png)
+
+![Testing Frontend Running](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_running.png)
+
+| Módulo | Cobertura | Resultado |
+| :--- | :--- | :---: |
+| Core / Auth / App | Sesión, guard, interceptor, store, rutas y arranque | Passed |
+| Accounts | API de cuentas y directorio / roles | Passed |
+| Metrics | Dashboard, historial, gráfico de telemetría, API y reglas de seguridad | Passed |
+| **Total (corrida)** | Suite Angular `ng test --watch=false` | **64 Passed** |
+
+<a id="s-pruebas-de-mobile-realizadas"></a>
+#### Pruebas de Mobile realizadas
+
 **Mobile Testing Suite Evidence**
 
 Para la aplicación móvil se implementó una suite de pruebas automatizadas que valida las funcionalidades de sesión, seguridad y configuración de planta incluidas en el Sprint Backlog 2. Las pruebas están en la carpeta test/ del repositorio App-Movil, en la rama `main`, y se ejecutan con el comando:
@@ -8481,59 +8568,127 @@ La suite incluye 66 archivos de prueba con 296 casos: 230 pruebas unitarias y 66
 <a id="s-6-2-2-6"></a>
 #### 6.2.2.6. Execution Evidence for Sprint Review
 
-Al cierre del Sprint 2 la aplicación móvil se compila y ejecuta, y el flujo completo del backend se ejecuta en local con Docker Compose, que levanta TimescaleDB, el broker Eclipse Mosquitto, Cloud.Api y Plant.Host. Una lectura publicada en el tópico MQTT del dispositivo llega al host de la planta, se guarda en la base local y se envía a la nube, donde la consultan el dashboard y el historial de la aplicación web integrada con la API.
+Al cierre del Sprint 2 se verificó la ejecución de los tres productos del incremento ya desplegados y del artefacto IoT de laboratorio. La aplicación móvil del Supervisor se publica como APK (SafePlant Mobile v0.1.0). El backend Cloud.Api corre en Azure App Service (wa-safeplant-cloudbackend-prod). La aplicación web del Encargado de Planta está en Vercel y consume esa API con sesión autenticada. El recorrido del dato queda así: el nodo físico publica la lectura por MQTT, Plant.Host la recibe y la guarda en la planta, la nube la sincroniza y la web o el móvil la muestran en telemetría, alertas e historial.
 
-**Backend: entorno local con Docker Compose**
+Backend: Cloud.Api desplegado y verificación con Docker Compose
 
-El comando docker compose up levanta cuatro servicios: TimescaleDB (puerto 5432), Eclipse Mosquitto (puerto 1883), Cloud.Api (puerto 8080) y Plant.Host. Desde `http://localhost:8080/swagger/index.html` se prueban los endpoints documentados en la sección 6.2.2.7.
+La evidencia principal de ejecución del backend es el servicio publicado en Azure. Cloud.Api responde en https://wa-safeplant-cloudbackend-prod.azurewebsites.net y su Swagger UI desplegado permite probar los endpoints documentados en la sección 6.2.2.7. La web en Vercel y la app móvil apuntan a esa misma API.
+
+Además, el equipo mantiene un compose.yaml para reproducir el stack completo en laboratorio: TimescaleDB, Eclipse Mosquitto, Cloud.Api y Plant.Host. Esa configuración local no sustituye al despliegue; sirve para validar MQTT, la persistencia en planta y la sincronización hacia la nube antes de publicar. Las capturas siguientes muestran ese entorno de verificación y Swagger UI de Cloud.Api con los módulos de áreas, telemetría, alertas y dispositivos.
 
 ![Backend: servicios levantados con Docker Compose](../assets/06-capitulo-vi/sprints/execution_sprint2_compose.png)
 
 ![Backend: documentación Swagger UI de Cloud.Api](../assets/06-capitulo-vi/sprints/execution_sprint2_swagger.png)
 
-**Web: aplicación del Encargado de Planta integrada con la API**
+Web: aplicación del Encargado de Planta integrada con la API
 
-La aplicación web deja de usar datos de muestra en el inicio de sesión, el dashboard y el historial, y consume la API mediante un interceptor de autenticación y un guard de sesión.
+La aplicación web deja de usar datos de muestra y consume Cloud.Api mediante autenticación JWT. Desde Vercel se verifican tres vistas del Encargado de Planta: telemetría ambiental en el Panel de Control, el registro de alertas con historial de telemetría, y el Control de Usuarios para la gobernanza de cuentas y roles.
 
-![Web: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_web_signin.png)
+Web: telemetría ambiental (Panel de Control)
 
-![Web: dashboard de métricas por área](../assets/06-capitulo-vi/sprints/execution_sprint2_web_dashboard.png)
+![Web: telemetría ambiental — Panel de Control](../assets/06-capitulo-vi/sprints/execution_sprint2_web_dashboard.png)
 
-![Web: historial por área](../assets/06-capitulo-vi/sprints/execution_sprint2_web_history.png)
+Web: Alertas e historial de telemetría
 
-**Mobile: aplicación del Supervisor de Seguridad**
+![Web: Alertas e historial de telemetría](../assets/06-capitulo-vi/sprints/execution_sprint2_web_alerts.png)
+
+Web: Control de Usuarios
+
+![Web: Control de Usuarios — Gobernanza de Cuentas](../assets/06-capitulo-vi/sprints/execution_sprint2_web_users.png)
+
+Mobile: aplicación del Supervisor de Seguridad
 
 La aplicación móvil arranca en una pantalla de inicio que restaura la sesión guardada. Desde el inicio de sesión el supervisor accede a dos módulos: Seguridad, con el panel de áreas, y Configuración de planta.
 
-![Mobile: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_signin.png)
+Mobile: inicio de sesión
 
-![Mobile: recuperación y restablecimiento de credenciales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_recovery.png)
+![Mobile: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_signin.jpeg)
 
-![Mobile: panel de seguridad con el estado operativo de las áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_home.png)
+Mobile: recuperación y restablecimiento de credenciales
 
-![Mobile: detalle del área con su última telemetría](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_area_detail.png)
+![Mobile: recuperación y restablecimiento de credenciales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_recovery.jpeg)
 
-![Mobile: alertas activas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_alerts.png)
+Mobile: panel de seguridad con el estado operativo de las áreas
 
-![Mobile: historial corto de exposiciones](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_exposures.png)
+![Mobile: panel de seguridad con el estado operativo de las áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_home.jpeg)
 
-![Mobile: acciones ejecutadas por los actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_actions.png)
+Mobile: detalle del área con su última telemetría
 
-![Mobile: override manual de actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_override.png)
+![Mobile: detalle del área con su última telemetría](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_area_detail.jpeg)
 
-![Mobile: configuración de planta y alta de áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_setup.png)
+Mobile: alertas activas
 
-![Mobile: configuración de umbrales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_thresholds.png)
+![Mobile: alertas activas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_alerts.jpeg)
 
-![Mobile: registro e inventario de dispositivos](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_devices.png)
+Mobile: historial corto de exposiciones
+
+![Mobile: historial corto de exposiciones](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_exposures.jpeg)
+
+Mobile: override manual de actuadores
+
+![Mobile: override manual de actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_override.jpeg)
+
+Mobile: configuración de planta y alta de áreas
+
+![Mobile: configuración de planta y alta de áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_setup.jpeg)
+
+Mobile: configuración de umbrales
+
+![Mobile: configuración de umbrales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_thresholds.jpeg)
+
+Mobile: registro e inventario de dispositivos
+
+![Mobile: registro e inventario de dispositivos](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_devices.jpeg)
+
+IoT: artefacto físico de área industrial
+
+Además de Wokwi, el equipo construyó un artefacto físico de laboratorio que representa un área industrial monitoreada. El modelo incluye tanques y tuberías de maqueta, sensor de presencia PIR, sensor de gas (CO₂), actuador tipo servo (mampara o barrera), cableado hacia el nodo y breadboard con ESP32, LED y buzzer (sirena). Ese hardware es la punta de campo del recorrido MQTT → Plant.Host → Cloud.Api → web/móvil documentado arriba.
+
+IoT: vista general del área con tanques y sensores
+
+![IoT: vista general del área con tanques y sensores](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_area.jpg)
+
+IoT: detalle de sensores PIR, gas y actuador servo
+
+![IoT: detalle de sensores PIR, gas y actuador servo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_sensors.jpg)
+
+IoT: ensamblaje del área monitoreada
+
+![IoT: ensamblaje del área monitoreada](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_assembly.jpg)
+
+IoT: vista de conjunto del artefacto en mesa de trabajo
+
+![IoT: vista de conjunto del artefacto en mesa de trabajo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_overview.jpg)
+
+IoT: cableado del panel hacia el nodo
+
+![IoT: cableado del panel hacia el nodo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_wiring.jpg)
+
+IoT: nodo ESP32 en breadboard con LED y buzzer
+
+![IoT: nodo ESP32 en breadboard con LED y buzzer](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_artifact_node.jpg)
+
+IoT: video del prototipo físico
+
+La demostración en video del artefacto muestra el área de maqueta, los sensores, el actuador (servo / mampara), el nodo en breadboard y la conexión al entorno de desarrollo. Complementa las fotos anteriores y el diseño en Wokwi del Capítulo V.
+
+**URL del video:** [SafePlant Prototipo](https://www.youtube.com/watch?v=FqdvoVivrnM)
+
+![IoT: video SafePlant Prototipo](../assets/06-capitulo-vi/sprints/execution_sprint2_iot_prototype_video.png)
 
 
 <a id="s-6-2-2-7"></a>
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
 
-En este sprint se documentaron con OpenAPI los endpoints de los nuevos bounded contexts, implementados en safeplant-web-backend. Los endpoints /api/v1 requieren un token de acceso válido; los /internal/v1 son de comunicación entre la planta y la nube y se protegen con la clave de la planta. Los errores usan el formato uniforme del Sprint 1.
+Durante el Sprint 2 se documentaron los Web Services de SafePlant mediante OpenAPI y Swagger UI. Esta documentación permitió visualizar los endpoints de los bounded contexts Plant Monitoring, Safety and Actuation y Device and Edge Management, incluyendo sus métodos HTTP, rutas, parámetros, cuerpos de solicitud, códigos de respuesta y ejemplos de ejecución. Los servicios fueron validados en el entorno desplegado: el backend Cloud.Api se encuentra alojado en Azure App Service (wa-safeplant-cloudbackend-prod) y utiliza TimescaleDB sobre PostgreSQL para el registro en la nube, además del entorno local con Docker Compose (TimescaleDB, Eclipse Mosquitto, Cloud.Api y Plant.Host).
 
-Los endpoints se ejecutan en local con Docker Compose y se documentan en `http://localhost:8080/swagger/index.html` (OpenAPI en `/openapi/v1.json`). 
+La documentación generada permite comprobar que los endpoints del Sprint 2 se encuentran disponibles y organizados por módulos funcionales. Entre ellos se incluyen los servicios de áreas y umbrales de CO₂ y ruido, telemetría y dashboard, estado operativo, alertas, exposiciones, acciones de actuadores, override remoto y credenciales de dispositivos. Desde Swagger UI se realizaron pruebas sobre las rutas expuestas, verificando la disponibilidad del API, el uso de autenticación mediante JWT en /api/v1, la clave de planta X-Plant-Key en /internal/v1 y la persistencia de información en la base desplegada. Los errores conservan el formato uniforme del Sprint 1.
+
+URL de Swagger UI desplegado: https://wa-safeplant-cloudbackend-prod.azurewebsites.net/swagger/index.html
+
+URL de documentación OpenAPI: https://wa-safeplant-cloudbackend-prod.azurewebsites.net/openapi/v1.json
+
+Repositorio de Web Services: https://github.com/Macallys/safeplant-web-backend
 
 Roles: S = Supervisor desde el canal móvil; M = Plant Manager desde el canal web.
 
@@ -8583,31 +8738,110 @@ Content-Type: application/json
 HTTP/1.1 204 No Content
 ```
 
-**Repositorio de Web Services:** [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend)
+Documentación OpenAPI de los servicios de SafePlant:
 
 ![Documentación OpenAPI (Swagger) de Cloud.Api — nuevos contextos](../assets/06-capitulo-vi/sprints/sprint-2-services-docs.png)
+
+![Documentación OpenAPI (Swagger) de Cloud.Api — áreas, telemetría, alertas y dispositivos](../assets/06-capitulo-vi/sprints/sprint-2-services-docs-2.png)
 
 
 <a id="s-6-2-2-8"></a>
 #### 6.2.2.8. Software Deployment Evidence for Sprint Review
 
-El despliegue en producción del backend se hace con un workflow de GitHub Actions que se dispara con cada push a main. La rama main terminó en el commit `6824ee8` del 8 de octubre de 2026 y develop tiene 10 commits más, todos del Sprint 2. En el entorno local, Docker Compose levanta los cuatro servicios del flujo completo.
+El despliegue en producción del backend se hace con un workflow de GitHub Actions que se dispara con cada push a main. La aplicación web App Service wa-safeplant-cloudbackend-prod corre en Azure (East US) sobre el plan asp-safeplant-lab-eus. En el entorno local, Docker Compose levanta los cuatro servicios del flujo completo. La aplicación móvil se construye y publica con el workflow build-apk.yml de App-Movil: en cada push a main se ejecutan las pruebas Flutter, se genera el APK release apuntando a Cloud.Api y se publica el release SafePlant Mobile v0.1.0 con el artefacto app-release.apk.
 
 | Producto | Repositorio | Plataforma | URL / ubicación | Mecanismo |
 | :--- | :--- | :--- | :--- | :--- |
-| Backend (Cloud API) | `safeplant-web-backend` | Azure App Service (`wa-safeplant-cloudbackend-prod`) | `https://wa-safeplant-cloudbackend-prod-hpe0b8bra9ftfshg.canadacentral-01.azurewebsites.net` | Workflow de GitHub Actions en cada push a `main` |
+| Backend (Cloud API) | `safeplant-web-backend` | Azure App Service (`wa-safeplant-cloudbackend-prod`) | [https://wa-safeplant-cloudbackend-prod.azurewebsites.net](https://wa-safeplant-cloudbackend-prod.azurewebsites.net) | Workflow de GitHub Actions en cada push a `main` |
 | Host de planta (Plant.Host) | `safeplant-web-backend` | Docker Compose (local) | `compose.yaml` | `docker compose up` |
 | Aplicación web | `safeplant-web-client` | Vercel | [https://safeplant-web-client.vercel.app](https://safeplant-web-client.vercel.app) | Despliegue automático en cada push |
 | Landing page | `landing-page` | GitHub Pages | [https://macallys.github.io/landing-page/](https://macallys.github.io/landing-page/) | Publicación desde la rama `main` |
-| Aplicación móvil | `App-Movil` | APK Android (`com.macallys.safeplant_mobile`, versión 0.1.0+1) | Compilación local; no publicada en una tienda | `flutter build apk --debug` o `--release` con `--dart-define=API_BASE_URL` |
+| Aplicación móvil | `App-Movil` | APK Android (`SafePlant Mobile v0.1.0`) | [Release v0.1.0 — `app-release.apk`](https://github.com/Macallys/App-Movil/releases/tag/v0.1.0) | GitHub Actions (`build-apk.yml`) en push a `main` + Release |
 | Nodo IoT | Sin repositorio de firmware visible en la organización | Simulador Wokwi (sección 5.6) | [Wokwi — nodo SafePlant](https://wokwi.com/projects/477285427305212929) | Ejecución en el simulador |
 
 ![Despliegue y entorno local del Sprint 2](../assets/06-capitulo-vi/sprints/deploy-sprint2.png)
 
+Configuración del workflow de build y release del APK
+
+Para automatizar el despliegue móvil, se configuró el workflow Build and Release APK dentro del repositorio App-Movil de la organización Macallys. Este flujo se ejecuta ante cambios en la rama main o de forma manual mediante workflow_dispatch. La configuración prepara el entorno con Java 17 y Flutter 3.47.5, instala dependencias con flutter pub get, ejecuta la suite de pruebas, genera el APK en modo release con dart-define API_BASE_URL apuntando a Cloud.Api en Azure y publica el artefacto en GitHub Releases.
+
+La imagen evidencia la definición del archivo build-apk.yml, donde se especifican el checkout del código, la instalación de Flutter, la ejecución de flutter test, la construcción del APK mediante flutter build apk --release y la carga del archivo app-release.apk como artefacto safeplant-android-release.
+
+![Workflow build-apk.yml — Build and Release APK](../assets/06-capitulo-vi/sprints/deploy-sprint2-mobile-workflow.png)
+
+Ejecución del workflow en GitHub Actions
+
+Una vez configurado el flujo, se ejecutó el workflow desde GitHub Actions para validar que el pipeline de construcción y publicación pudiera completarse correctamente desde el repositorio móvil. Esta ejecución permite comprobar que el despliegue no depende de acciones manuales locales y que el APK puede generarse en un entorno controlado.
+
+La imagen muestra el inicio del check asociado al workflow Build and Release APK, confirmando que GitHub detectó la ejecución del proceso de despliegue móvil sobre el commit 10b9f6a de la rama main.
+
+![GitHub Actions — ejecución del workflow de APK](../assets/06-capitulo-vi/sprints/deploy-sprint2-mobile-actions-running.png)
+
+Durante la ejecución se observa la preparación del entorno, la descarga de Flutter, la instalación de dependencias del proyecto y el avance del job de build. Esto evidencia que la aplicación móvil del Supervisor de Seguridad fue construida dentro de GitHub Actions y no únicamente desde un entorno local de desarrollo.
+
+Validación del build del APK
+
+Finalizada la ejecución, GitHub Actions reportó el estado exitoso del job de construcción. Esta validación confirma que el código fuente de la aplicación móvil compila correctamente y que el workflow puede generar el artefacto de despliegue esperado.
+
+La imagen evidencia que el workflow build-apk.yml terminó con estado Success (6 m 17 s), después de ejecutar el job de build. Con ello se valida que el proceso automatizado queda disponible para futuras versiones de SafePlant Mobile y que el artefacto safeplant-android-release (51.1 MB) quedó disponible para descarga.
+
+![GitHub Actions — workflow exitoso y artefacto safeplant-android-release](../assets/06-capitulo-vi/sprints/deploy-sprint2-mobile-actions-success.png)
+
+Publicación del APK en GitHub Releases
+
+Como resultado del workflow, se generó una release del proyecto móvil con el APK listo para descarga. Esta publicación permite distribuir la aplicación Android del Supervisor generada durante el Sprint 2 y contar con una versión identificable para revisión, instalación y pruebas académicas.
+
+La evidencia muestra la release SafePlant Mobile v0.1.0 marcada como Latest, junto con el archivo app-release.apk como asset descargable. De esta manera, el Sprint 2 incorpora una evidencia de despliegue móvil equivalente al deployment evidence del Sprint 1, pero orientada a la generación y publicación de la aplicación Android.
+
+Página de releases del APK: https://github.com/Macallys/App-Movil/releases
+
+![GitHub Release — SafePlant Mobile v0.1.0 con app-release.apk](../assets/06-capitulo-vi/sprints/deploy-sprint2-mobile-release.png)
+
+Backend — Azure App Service en ejecución
+
+El backend Cloud.Api permanece desplegado en Azure App Service. El plan asp-safeplant-lab-eus (Linux, East US, B1) sostiene la aplicación web wa-safeplant-cloudbackend-prod, cuyo estado en el portal aparece como En ejecución y cuyo último despliegue figura como Correcto. Las métricas de CPU, memoria y datos de entrada confirman que el servicio está activo y recibe tráfico.
+
+![Azure App Service Plan asp-safeplant-lab-eus](../assets/06-capitulo-vi/sprints/deploy-sprint2-azure-plan.png)
+
+![Azure Web App wa-safeplant-cloudbackend-prod en ejecución](../assets/06-capitulo-vi/sprints/deploy-sprint2-azure-backend.png)
+
 <a id="s-6-2-2-9"></a>
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
-La colaboración se midió sobre los repositorios de la organización con commits desde el 9 de octubre de 2026. Las cifras son reproducibles con `git shortlog -sn --since="2026-10-09" --all` y agrupan las identidades de Git de un mismo integrante.
+La colaboración del Sprint 2 se midió sobre los repositorios de la organización con commits desde el 9 de octubre de 2026. Cada integrante asumió un frente de producto y un bloque del informe, de modo que el incremento —backend, web integrada, app móvil e IoT— quedó trazable en Git y en la documentación.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Alumno</th>
+      <th align="left">Actividad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Encargado del desarrollo de la aplicación móvil del Supervisor de Seguridad. Implementó la sesión (inicio, cierre y recuperación de credenciales), el panel de seguridad, alertas, exposiciones, acciones, override y la configuración de planta (áreas, umbrales y dispositivos), alineando la app con el contrato de Cloud.Api. Ejecutó y documentó la suite de 296 pruebas Flutter. En el informe se encargó de 6.2.2.4 Development Evidence (móvil), 6.2.2.5 Testing Suite Evidence, 6.2.2.6 Execution Evidence (flujos móviles) y 6.2.2.8 Software Deployment Evidence (conexión del móvil con la API en Azure), además de la demo móvil del Video About-the-Product, el Final Project Keynote, el APK y las evidencias móviles del ZIP.</td>
+    </tr>
+    <tr>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Lideró la consolidación del Final Project Documentation Report para AV2. Actualizó el Registro de Versiones 3.x, Project Report Collaboration Insights y Student Outcome; corrigió artefactos previos y el diseño visual de la aplicación móvil (rama diseno/ui-movil). En el informe se encargó de 6.2.2.1 Sprint Planning 2, 6.2.2.2 Aspect Leaders and Collaborators, 6.2.2.3 Sprint Backlog 2, 6.2.2.9 Team Collaboration Insights during Sprint y aportó a 6.3.3 Evaluaciones según heurísticas con la revisión de diseño y hallazgos de interfaz.</td>
+    </tr>
+    <tr>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Encargado de la validación con usuarios. Organizó y realizó las entrevistas de validación, preparó el guion y las preguntas, y registró respuestas, hallazgos y enlaces a las grabaciones. Definió el contrato MQTT del nodo ESP32 y documentó la evidencia del circuito IoT en Wokwi. En el informe se encargó de 6.3 Validation Interviews (6.3.1 Diseño de Entrevistas, 6.3.2 Registro de Entrevistas y aporte a 6.3.3 Evaluaciones según heurísticas) y de la sección de validación del Final Project Keynote.</td>
+    </tr>
+    <tr>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Encargado del backend y de la integración de la aplicación web. Implementó los bounded contexts Plant Monitoring, Safety &amp; Actuation y Device &amp; Edge Management, con recepción de telemetría por MQTT, persistencia local en planta, Docker Compose y la API publicada en Azure App Service. Reemplazó los datos de muestra de la web por el consumo real de Cloud.Api. En el informe se encargó de 6.2.2.4 Development Evidence (backend), 6.2.2.6 Execution Evidence (Docker Compose), 6.2.2.7 Services Documentation Evidence (Swagger/OpenAPI) y 6.2.2.8 Software Deployment Evidence (API en Azure), además de la demo del backend en el Video About-the-Product y el Final Project Keynote.</td>
+    </tr>
+    <tr>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Encargado del componente IoT y del nodo de campo. Actualizó 5.1 Style Guidelines y documentó el flujo de telemetría por MQTT desde el ESP32 hacia Plant.Host y la nube. Preparó la evidencia del componente IoT en su entorno de prueba y los archivos del ZIP. En el informe se encargó de 6.2.2.4 Development Evidence (nodo y MQTT), 6.2.2.6 Execution Evidence (IoT) y de la demostración del componente IoT en el Video About-the-Product y el Final Project Keynote.</td>
+    </tr>
+  </tbody>
+</table>
+
+Las cifras de commits son reproducibles con `git shortlog -sn --since="2026-10-09" --all` y agrupan las identidades de Git de un mismo integrante.
 
 | Integrante | `Report` | `landing-page` | `safeplant-web-client` | `safeplant-web-backend` | `App-Movil` | Total |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -8618,7 +8852,11 @@ La colaboración se midió sobre los repositorios de la organización con commit
 | Baldeon Vivar, Santiago Armando | 0 | 0 | 7 | 0 | 2 | 9 |
 | **Total** | **6** | **5** | **22** | **10** | **20** | **63** |
 
-Las tres compromisos propuestos en el Sprint 1 se cumplieron correctament. El backend usa una rama feature/* por contexto y la app móvil tiene la rama diseno/ui-movil para el diseño visual. El de commits propios de todos los integrantes se cumplió. 
+Los tres compromisos propuestos en el Sprint 1 se cumplieron correctamente. El backend usa una rama feature/* por contexto y la app móvil tiene la rama diseno/ui-movil para el diseño visual. El de commits propios de todos los integrantes se cumplió.
+
+**Repositorio Report**
+
+![Team Collaboration Insights — Report](../assets/06-capitulo-vi/sprints/teamcollab-sprint2-report.png)
 
 <a id="s-6-3"></a>
 ## 6.3. Validation Interviews
@@ -8631,6 +8869,15 @@ Las tres compromisos propuestos en el Sprint 1 se cumplieron correctament. El ba
 
 <a id="s-6-3-3"></a>
 ### 6.3.3. Evaluaciones según heurísticas
+
+<a id="s-6-4"></a>
+## 6.4. Video About-the-Product
+
+El Video About-the-Product presenta SafePlant: el problema de exposición en planta, la propuesta IoT (sensores, actuadores y borde), y los canales del Supervisor (móvil) y del Encargado de Planta (web), cerrando con la marca SAFEPLANT y el lema «Plantas más inteligentes, equipos más seguros.»
+
+**URL del video:** [SafePlant_Video_About_The_Product.mp4](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing)
+
+![Video About-the-Product — SAFEPLANT](../assets/06-capitulo-vi/video-about-the-product.png)
 
 ---
 
@@ -8661,26 +8908,32 @@ Las tres compromisos propuestos en el Sprint 1 se cumplieron correctament. El ba
 
 9. Como novena conclusión, el Capítulo V dejó esa separación en las pantallas. El azul marino y el cian identifican a SAFEPLANT, y el verde, el ámbar y el rojo marcan si la condición es normal, de cuidado o crítica. En el celular el supervisor entra, ve el panel y las alertas, ajusta umbrales y revisa el historial y los dispositivos. En la web el encargado inicia sesión, activa la cuenta, consulta el panel y las alertas, y administra las cuentas, incluido el alta de un supervisor. Los dos recorridos quedaron explicados en video.
 
+10. Como décima conclusión, el Sprint 1 del Capítulo VI dejó el primer incremento visible. Quedó la landing en GitHub Pages, las pantallas web del Encargado de Planta y el módulo Identity & Access del backend en Azure. Ese sprint cerró la presencia pública y la sesión, pero la web aún consumía datos de muestra y la ruta del dato IoT no estaba completa.
+
+11. Como undécima conclusión, el Sprint 2 cerró la ruta del dato y conectó los tres canales. Cloud.Api quedó en Azure con Plant Monitoring, Safety & Actuation y Device & Edge Management. Plant.Host recibe MQTT y persiste en planta. La web en Vercel dejó los mocks y consume la API. La app móvil del Supervisor se publicó como APK v0.1.0 y opera sesión, panel, alertas, exposiciones, override y setup contra esa misma API.
+
+12. Como duodécima conclusión, la evidencia de pruebas del Sprint 2 acompaña ese incremento. El backend sumó 44 Unit Tests en SafePlant.UnitTests. El frontend Angular pasó 64 casos con `ng test`. La app móvil Flutter pasó 296 casos. Esas suites y las capturas de ejecución y despliegue sostienen la revisión del sprint en el informe.
+
 <a id="s-recomendaciones"></a>
 ### Recomendaciones
 
-1. Como primera recomendación, seguir estudiando cómo integrar los dispositivos IoT para que el monitoreo de las áreas no se corte. En planta, el metal, la vibración y el calor cerca de los sensores son el mayor riesgo de que el dato deje de llegar.
+1. Como primera recomendación, seguir endureciendo la integración IoT en planta real. El metal, la vibración y el calor cerca de los sensores siguen siendo el mayor riesgo de que el dato deje de llegar, aunque el stack de laboratorio y el APK ya estén desplegados.
 
-2. Como segunda recomendación, probar el dispositivo real apenas el diseño esté cerrado, con tiempo para corregir y volver a integrar. Conviene empezar en una sola área de alto riesgo, como soldadura o fundición, con personas que trabajan ahí, y después pasar al resto de la planta.
+2. Como segunda recomendación, probar el dispositivo físico en una sola área de alto riesgo, como soldadura o fundición, con quienes trabajan ahí. Conviene corregir firmware y umbrales ahí antes de escalar al resto de la planta.
 
-3. Como tercera recomendación, probar el uso desde temprano, con el supervisor y con el encargado por separado. El supervisor atiende la alerta, ajusta el umbral y asocia el dispositivo desde el teléfono. El encargado mira las métricas y el historial, y administra las cuentas en la web. Cada uno tiene que probar la pantalla que le corresponde.
+3. Como tercera recomendación, completar las entrevistas de validación del apartado 6.3 con supervisor y encargado por separado. Cada uno debe recorrer la pantalla que ya está en producción, no solo el prototipo del Capítulo V.
 
-4. Como cuarta recomendación, poner en cada área un panel físico para reiniciar el equipo y manejar a mano el extractor, la sirena y la mampara cuando se cae la red. El override a distancia queda en el celular del supervisor y se registra. En la web del encargado ese registro se consulta como evidencia.
+4. Como cuarta recomendación, poner en cada área un panel físico para reiniciar el equipo y manejar a mano el extractor, la sirena y la mampara cuando se cae la red. El override a distancia ya está en el celular del supervisor y se registra. En la web del encargado ese registro se consulta como evidencia.
 
-5. Como quinta recomendación, guardar cada umbral con su autor, su fecha y la norma que se aplicó. Lo ajusta el supervisor desde el celular, por área, con el D.S. 015-2005-SA para el CO₂ y la R.M. 375-2008-TR para el ruido. El encargado ve ese historial en la web. El cambio debería poder aplicarse a las áreas que correspondan de una sola vez, porque hoy la norma llega por correo o PDF, pasa a Excel y se copia tarde en cada zona.
+5. Como quinta recomendación, guardar cada umbral con su autor, su fecha y la norma que se aplicó. Lo ajusta el supervisor desde el celular, por área, con el D.S. 015-2005-SA para el CO₂ y la R.M. 375-2008-TR para el ruido. El encargado ve ese historial en la web. El cambio debería poder aplicarse a las áreas que correspondan de una sola vez.
 
-6. Como sexta recomendación, probar primero lo que falla: un corte de internet, un equipo que deja de responder, el reintento y la sincronización cuando vuelve el enlace, cuidando que una misma lectura no se guarde dos veces. Si un sensor calla, el tablero tiene que mostrarlo como no disponible. Que no lleguen datos no significa que el área esté bien, como pasó con los tres sensores caídos casi seis horas.
+6. Como sexta recomendación, probar primero lo que falla en el entorno desplegado: corte de internet, equipo que deja de responder, reintento y sincronización al volver el enlace, cuidando que una misma lectura no se guarde dos veces. Si un sensor calla, el tablero tiene que mostrarlo como no disponible.
 
-7. Como séptima recomendación, recoger lo que pidieron en las entrevistas del Capítulo II. En el celular, que la alerta crítica se distinga de la informativa y que los umbrales se calibren por área en el piloto, para bajar las falsas alarmas. En la web, guardar mediciones, alertas, acciones, anulaciones y cambios de configuración al menos doce meses, y poder exportarlos a PDF. Es lo que los encargados necesitan para SUNAFIL y para reconstruir un incidente.
+7. Como séptima recomendación, recoger lo que pidieron en las entrevistas del Capítulo II. En el celular, que la alerta crítica se distinga de la informativa y que los umbrales se calibren por área en el piloto. En la web, retener mediciones, alertas, acciones, anulaciones y cambios de configuración al menos doce meses, con exportación a PDF para SUNAFIL.
 
-8. Como octava recomendación, al programar, respetar lo que ya muestran los prototipos. Los umbrales, el alta de sensores y actuadores, y el override van en el celular del supervisor. Las métricas, el historial completo, los reportes y la gobernanza de cuentas van en la web del encargado. Cada menú muestra solo lo que le toca a ese rol.
+8. Como octava recomendación, mantener en el código la separación de canales que ya corre en Sprint 2. Umbrales, alta de dispositivos y override van en el celular del supervisor. Métricas, historial completo y gobernanza de cuentas van en la web del encargado.
 
-9. Como novena recomendación, en lo que sigue, sumar avisos al celular para las alertas críticas, más de un nodo en la misma planta, actuadores según el riesgo de cada zona, y una vista que relacione las condiciones acumuladas con los incidentes y las horas de exposición. Antes del diseño de detalle conviene cerrar lo que quedó abierto: cómo se proyecta el estado operativo del área, qué pasa si falla un relé, si más adelante se usa un proveedor externo de identidad y cuál será el broker MQTT. El stack del Capítulo IV sigue siendo provisional (DEC-008).
+9. Como novena recomendación, para el Trabajo Final conviene sumar avisos push en alertas críticas, más de un nodo por planta y una vista de exposición acumulada. También cerrar lo que quedó abierto en DEC-008, como el fallo de un relé y la política de identidad a largo plazo.
 
 ---
 
@@ -8777,15 +9030,37 @@ Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *
 | AV2 | Exposición Avance 2 — Implementación de landing page, aplicaciones y dispositivo IoT | |
 | TB2 | Exposición Trabajo Final — Validación, despliegue y flujo IoT completo | |
 
+<a id="s-videos-de-producto"></a>
+## Videos de producto
+
+| Video | Descripción | URL |
+| --- | --- | --- |
+| Video About-the-Product | Presentación de SafePlant: problema, propuesta IoT y canales móvil / web | [Google Drive](https://drive.google.com/file/d/1kRvSzv2Fi7qz3cwPXIkiDWtbsP9iLITb/view?usp=sharing) |
+| SafePlant Prototipo | Demostración del artefacto IoT físico (área de maqueta, sensores, actuador y nodo) | [YouTube](https://www.youtube.com/watch?v=FqdvoVivrnM) |
+| Explicación del prototipo móvil (Figma) | Recorrido del prototipo del Supervisor | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQC0z40dQIqVQbQvuddVxnAmAejBnKbEFgnXIzfK4z9N5c4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jVhkvW) |
+| Explicación del prototipo web (Figma) | Recorrido del prototipo del Encargado de Planta | [SharePoint](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b775_upc_edu_pe/IQACIq6Cv0-cQLxQ1Ce_OAIJAcl4q4FVlA-Jfpse8Tw30Xc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&e=QlFb91) |
+
 <a id="s-anexo-repositorios"></a>
 ## Repositorios y artefactos
 
 | Artefacto | URL / ubicación |
 | --- | --- |
 | Repositorio del informe (Project Report) | https://github.com/Macallys/Report |
+| Landing page (código) | https://github.com/Macallys/landing-page |
 | Landing page desplegada | https://macallys.github.io/landing-page/ |
+| Backend Cloud.Api / Plant.Host | https://github.com/Macallys/safeplant-web-backend |
+| Backend desplegado (Azure App Service) | https://wa-safeplant-cloudbackend-prod.azurewebsites.net |
+| Swagger UI / OpenAPI | https://wa-safeplant-cloudbackend-prod.azurewebsites.net/swagger/index.html |
+| Aplicación web (código) | https://github.com/Macallys/safeplant-web-client |
+| Aplicación web desplegada (Vercel) | https://safeplant-web-client.vercel.app/signIn |
+| Aplicación móvil (código) | https://github.com/Macallys/App-Movil |
+| APK / Release móvil (v0.1.0) | https://github.com/Macallys/App-Movil/releases |
 | Big Picture EventStorming (Miro) | https://miro.com/app/board/uXjVHoeD1bM=/?share_link_id=724295404821 |
 | Design-Level EventStorming (Miro) | https://miro.com/app/dashboard/space/2rIhoPYmRYvJJWSdjnYfNQ |
+| Wireframes y prototipos (Figma) | https://www.figma.com/design/LQrxGncQXV76uBaTK4ZvQe/SAFEPLANT-IoT |
+| Nodo IoT en Wokwi | https://wokwi.com/projects/477285427305212929 |
+| Tablero Sprint Backlog 1 (Trello) | https://trello.com/invite/b/6ac821586e78c0cf18180ab8/ATTIceb3bbc97ae5d0dea9294fb1ee9becb5E0A72C81/sprint-backlog-1 |
+| Tablero Sprint Backlog 2 (Trello) | https://trello.com/invite/b/6af8014efa2b04f1705811d9/ATTI36694e92f42020e7d35239dbb6bbed77E5BFE9A3/sprint-backlog-2 |
 | Diagramas C4 (Structurizr DSL) | [`docs/diagrams/c4.dsl`](./diagrams/c4.dsl) |
 | Bounded Context Canvas (fichas por contexto) | [`docs/bounded-contexts/`](./bounded-contexts/README.md) |
 
