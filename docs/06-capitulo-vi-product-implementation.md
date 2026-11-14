@@ -1095,13 +1095,19 @@ Se contemplaron tres participantes por cada segmento, con perfiles diferenciados
 
 Cuenta con 6 años de experiencia en el sector manufacturero. Durante la simulación, presentó una percepción positiva de la aplicación móvil, destacando que la información de CO₂ y ruido resulta sencilla de consultar y comprender. Consideró que las alertas facilitan la identificación de condiciones que requieren atención y que la centralización de las mediciones representa una ventaja frente al uso de registros manuales. Como oportunidad de mejora, propuso incorporar reportes de incidentes y un historial de alertas para facilitar el seguimiento de situaciones anteriores.
 
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
 **Entrevistado 2: Andrea Vilcapaza – Prevencionista de Riesgos**
 
 Cuenta con 4 años de experiencia en el sector minero. Durante la simulación, valoró la posibilidad de consultar las condiciones ambientales por zonas y recibir alertas cuando se presentan situaciones de riesgo. Consideró que la aplicación puede facilitar las actividades de supervisión, aunque señaló la importancia de mostrar información adicional en las alertas, como la ubicación exacta del evento y recomendaciones de actuación. También sugirió mejorar la diferenciación visual de las alertas según el nivel de riesgo.
 
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
 **Entrevistado 3: Roberto Salazar – Supervisor HSE**
 
 Cuenta con 12 años de experiencia en el sector de producción industrial. Durante la simulación, destacó la utilidad de disponer de indicadores ambientales y alertas desde un dispositivo móvil, especialmente para realizar supervisiones sin depender de registros físicos. Consideró que la organización de las pantallas facilita la navegación y permite acceder a la información necesaria. Como mejora, propuso incorporar reportes históricos, filtros por zonas y notificaciones más detalladas para facilitar la toma de decisiones durante una emergencia.
+
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
 
 **Entrevistas a Encargados de Planta**
 
@@ -1109,13 +1115,19 @@ Cuenta con 12 años de experiencia en el sector de producción industrial. Duran
 
 Cuenta con 5 años de experiencia en la fabricación de productos plásticos. Durante la simulación, destacó que el panel de administración presenta una navegación sencilla y permite consultar los valores de CO₂ y ruido de manera organizada. Consideró que los registros históricos son útiles para identificar cambios en las condiciones ambientales y que centralizar esta información facilitaría la preparación de reportes. Como mejora, sugirió incorporar la descarga de información en formatos Excel o PDF y permitir comparaciones entre diferentes periodos.
 
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
 **Entrevistado 5: Ariana Curipaco – Encargada de Operaciones**
 
 Cuenta con 5 años de experiencia en una planta de procesamiento minero. Durante la simulación, valoró la organización del panel web y la posibilidad de consultar las mediciones ambientales por zonas. Consideró que la configuración de los límites de CO₂ y ruido resulta comprensible, aunque recomendó mostrar claramente los valores establecidos y solicitar una confirmación antes de guardar modificaciones. También destacó la utilidad de incorporar filtros por fechas y zonas para facilitar la revisión de los registros históricos.
 
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
 **Entrevistado 6: Roberto Salazar – Gerente de Operaciones**
 
 Cuenta con 15 años de experiencia en el sector industrial. Durante la simulación, destacó que el panel permite centralizar información importante para supervisar las condiciones ambientales de la planta. Consideró que los registros históricos pueden facilitar las evaluaciones internas y la preparación de auditorías. Como oportunidades de mejora, propuso incorporar indicadores generales por zona, reportes personalizados y diferentes niveles de acceso para los responsables de la administración del sistema.
+
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
 
 **Síntesis de las entrevistas**
 
