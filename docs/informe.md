@@ -8525,8 +8525,6 @@ La aplicación móvil arranca en una pantalla de inicio que restaura la sesión 
 
 ![Mobile: historial corto de exposiciones](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_exposures.jpeg)
 
-![Mobile: acciones ejecutadas por los actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_actions.jpeg)
-
 ![Mobile: override manual de actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_override.jpeg)
 
 ![Mobile: configuración de planta y alta de áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_setup.jpeg)
