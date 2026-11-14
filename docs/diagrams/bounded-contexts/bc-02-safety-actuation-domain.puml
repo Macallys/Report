@@ -1,146 +1,136 @@
 @startuml bc-02-safety-actuation-domain
-' Bounded Context Domain Layer Class Diagram — Safety & Actuation (§ 4.2.2.6.1)
-' Fuente: BCC-02, paso 9 ES (A-08, A-09), DMF-03 / DMF-05.
-' Sin Device / deviceId; comando por areaId + actuatorType. Sin severidad yellow.
+' Domain class diagram — Safety & Actuation, as implemented in SafetyActuation.Domain.
+' Severity, actuator type, run state and mode are strings. Policies hold the allowed values.
 
 skinparam classAttributeIconSize 0
 
-enum ExposureSeverity {
-  None
-  Medium
-  High
-}
-
-enum ActuatorType {
-  Extractor
-  Siren
-  Barrier
-}
-
-enum ActuatorMode {
-  Auto
-  Overridden
-}
-
-enum ActuatorRunState {
-  Off
-  On
-  Deployed
-  Retracted
-  Failed
-}
-
-class AreaRisk <<Value Object>> {
+class ExposureState <<Entity>> {
+  -areaId: Guid
+  -severity: String
   -highlighted: Boolean
-  +equals(other: AreaRisk): Boolean
-}
-
-class ExposureState <<Aggregate Root>> {
-  -id: UUID
-  -areaId: UUID
-  -personnelPresent: Boolean
-  -severity: ExposureSeverity
-  -risk: AreaRisk
-  -alertActive: Boolean
-  +detectExcess(co2Exceeded: Boolean, noiseExceeded: Boolean): void
-  +evaluateExposure(personnelPresent: Boolean): void
-  +classifySeverity(): ExposureSeverity
-  +highlightRisk(): void
-  +raiseAlert(): void
-  +withdrawAlert(): void
-  +resolve(): void
-  +skipClassification(): void
+  +{static} Record(areaId: Guid, severity: String, highlighted: Boolean): ExposureState
+  +Apply(severity: String, highlighted: Boolean): void
 }
 
 class EnvironmentalAlert <<Entity>> {
-  -id: UUID
-  -areaId: UUID
+  -id: Guid
+  -areaId: Guid
   -raisedAt: DateTime
   -withdrawnAt: DateTime
-}
-
-class AreaActuators <<Aggregate Root>> {
-  -id: UUID
-  -areaId: UUID
-  +activate(type: ActuatorType): void
-  +normalize(type: ActuatorType): void
-  +override(type: ActuatorType, requestedState: ActuatorRunState): void
-  +recordAutomaticAction(type: ActuatorType, succeeded: Boolean): void
+  +{static} Raise(id: Guid, areaId: Guid, raisedAt: DateTime): EnvironmentalAlert
+  +Withdraw(withdrawnAt: DateTime): void
 }
 
 class ActuatorState <<Entity>> {
-  -type: ActuatorType
-  -runState: ActuatorRunState
-  -mode: ActuatorMode
+  -id: Guid
+  -areaId: Guid
+  -type: String
+  -runState: String
+  -mode: String
   -lastChangedAt: DateTime
+  +{static} Record(id: Guid, areaId: Guid, type: String, runState: String, mode: String, lastChangedAt: DateTime): ActuatorState
+  +Apply(runState: String, mode: String, lastChangedAt: DateTime): void
 }
 
-class AutomaticActuatorAction <<Entity>> {
-  -id: UUID
-  -type: ActuatorType
+class ActuatorAction <<Entity>> {
+  -id: Guid
+  -areaId: Guid
+  -type: String
   -succeeded: Boolean
   -recordedAt: DateTime
+  +{static} Record(id: Guid, areaId: Guid, type: String, succeeded: Boolean, recordedAt: DateTime): ActuatorAction
 }
 
-class ExcessDetectionPolicy <<Domain Service>> {
-  +onReadingRecorded(): void
+class ExposurePolicy <<Domain Service>> {
+  +{static} None: String
+  +{static} Medium: String
+  +{static} High: String
+  +{static} Severity(ppm: Integer, co2LimitPpm: Integer, decibels: Integer, noiseLimitDb: Integer): String
+  +{static} Highlighted(severity: String): Boolean
 }
 
-class ExposureEvaluationPolicy <<Domain Service>> {
-  +onReadingOrPresenceChanged(): void
+class ActuatorPolicy <<Domain Service>> {
+  +{static} Extractor: String
+  +{static} Siren: String
+  +{static} Barrier: String
+  +{static} Auto: String
+  +{static} Overridden: String
+  +{static} On: String
+  +{static} Off: String
+  +{static} Deployed: String
+  +{static} Retracted: String
+  +{static} Detected: String
+  +{static} Cleared: String
+  +{static} Targets(co2Known: Boolean, co2High: Boolean, noiseKnown: Boolean, noiseHigh: Boolean, presence: String): Target[]
+  +{static} IsValidPair(actuatorType: String, runState: String): Boolean
+  +{static} IsMode(mode: String): Boolean
 }
 
-class SeverityClassificationPolicy <<Domain Service>> {
-  +onExposureEvaluated(): void
+class Target <<Value Object>> {
+  +type: String
+  +runState: String
 }
 
-class ActuationPolicy <<Domain Service>> {
-  +onExcessOrExposure(): void
+class SafetySync <<Record>> {
+  +areaId: Guid
+  +severity: String
+  +highlighted: Boolean
 }
 
-class NormalizePolicy <<Domain Service>> {
-  +onConditionsWithinThresholds(): void
+class SafetyAlertSync <<Record>> {
+  +id: Guid
+  +raisedAt: DateTime
+  +withdrawnAt: DateTime
 }
 
-interface IExposureStateRepository <<Repository>> {
-  +findByAreaId(areaId: UUID): ExposureState
-  +save(state: ExposureState): void
+class SafetyActuatorSync <<Record>> {
+  +id: Guid
+  +type: String
+  +runState: String
+  +mode: String
+  +lastChangedAt: DateTime
 }
 
-interface IAreaActuatorsRepository <<Repository>> {
-  +findByAreaId(areaId: UUID): AreaActuators
-  +save(actuators: AreaActuators): void
+class SafetyActionSync <<Record>> {
+  +id: Guid
+  +type: String
+  +succeeded: Boolean
+  +recordedAt: DateTime
 }
 
-interface IActuatorCommandPort <<Port>> {
-  +activate(areaId: UUID, type: ActuatorType): void
-  +normalize(areaId: UUID, type: ActuatorType): void
+interface ISafetyRecordStore <<Store>> {
+  +ListActiveAlerts(): EnvironmentalAlert[]
+  +ListAlertsByArea(areaId: Guid): EnvironmentalAlert[]
+  +ListActionsByArea(areaId: Guid): ActuatorAction[]
 }
 
-interface IOfflineAlertPort <<Port>> {
-  +storeCopy(areaId: UUID, alert: EnvironmentalAlert): void
+interface IActuatorStore <<Store>> {
+  +ListByArea(areaId: Guid): ActuatorState[]
 }
 
-ExposureState "1" *-- "0..*" EnvironmentalAlert : raises >
-ExposureState *-- "1" ExposureSeverity
-ExposureState *-- "1" AreaRisk
+interface ISafetySyncStore <<Store>> {
+  +Upsert(sync: SafetySync): void
+}
 
-AreaActuators "1" *-- "1..3" ActuatorState : contains >
-AreaActuators "1" *-- "0..*" AutomaticActuatorAction : records >
-ActuatorState *-- "1" ActuatorType
-ActuatorState *-- "1" ActuatorRunState
-ActuatorState *-- "1" ActuatorMode
+interface IPlantOverrideLink <<Port>> {
+  +Send(areaId: Guid, actuatorType: String, runState: String): void
+}
 
-ExcessDetectionPolicy ..> ExposureState : commands
-ExposureEvaluationPolicy ..> ExposureState : commands
-SeverityClassificationPolicy ..> ExposureState : commands
-ActuationPolicy ..> AreaActuators : commands
-NormalizePolicy ..> ExposureState : commands
-NormalizePolicy ..> AreaActuators : commands
+ExposureState "1" -- "0..*" EnvironmentalAlert : areaId >
+ExposureState "1" -- "0..*" ActuatorState : areaId >
+ExposureState "1" -- "0..*" ActuatorAction : areaId >
 
-IExposureStateRepository ..> ExposureState : manages
-IAreaActuatorsRepository ..> AreaActuators : manages
-AreaActuators ..> IActuatorCommandPort : drives
-ExposureState ..> IOfflineAlertPort : copies when cloud unreachable
+ExposurePolicy ..> ExposureState : classifies
+ActuatorPolicy ..> Target : returns
+ActuatorPolicy ..> ActuatorState : decides
+
+SafetySync "1" *-- "0..*" SafetyAlertSync
+SafetySync "1" *-- "0..*" SafetyActuatorSync
+SafetySync "1" *-- "0..*" SafetyActionSync
+
+ISafetyRecordStore ..> EnvironmentalAlert : reads
+ISafetyRecordStore ..> ActuatorAction : reads
+IActuatorStore ..> ActuatorState : reads
+ISafetySyncStore ..> SafetySync : upserts
 
 @enduml

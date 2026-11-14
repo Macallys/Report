@@ -1,114 +1,164 @@
 @startuml bc-03-device-edge-domain
-' Bounded Context Domain Layer Class Diagram — Device & Edge Management (§ 4.2.3.6.1)
-' Un BC, dos despliegues: DeviceCredential (cloud) y EdgeNode (runtime).
-' Lecturas CO₂ / ruido / presencia como hechos separados. Sin OTA ni ExposureState.
+' Domain class diagram — Device & Edge Management, as implemented in DeviceEdgeManagement.Domain.
+' One bounded context, two deployments: credential on the cloud, sheet and loop on the plant.
 
 skinparam classAttributeIconSize 0
 
-enum ReadingKind {
-  CarbonDioxide
-  Noise
-  Presence
-}
-
-class DeviceId <<Value Object>> {
-  -value: UUID
-  +equals(other: DeviceId): Boolean
-}
-
-class DeviceSecret <<Value Object>> {
-  -hash: String
-  +matches(presented: String): Boolean
-  +equals(other: DeviceSecret): Boolean
-}
-
-class QueuedReading <<Value Object>> {
-  -deviceId: DeviceId
-  -kind: ReadingKind
-  -measuredAt: DateTime
-  -payload: String
-  -idempotencyKey: String
-  +equals(other: QueuedReading): Boolean
-}
-
-class OfflineAlertCopy <<Value Object>> {
-  -areaId: UUID
-  -alertId: UUID
-  -storedAt: DateTime
-  +equals(other: OfflineAlertCopy): Boolean
-}
-
 package "Cloud" {
-  class DeviceCredential <<Aggregate Root>> {
-    -id: UUID
-    -deviceId: DeviceId
-    -secret: DeviceSecret
+  class DeviceCredential <<Entity>> {
+    -deviceId: String
+    -secretHash: String
     -issuedAt: DateTime
     -expiresAt: DateTime
     -revokedAt: DateTime
-    +issue(deviceId: DeviceId, secret: DeviceSecret): DeviceCredential
-    +authenticate(presentedSecret: String): Boolean
-    +revoke(): void
+    -lastSeenAt: DateTime
+    +Revoke(revokedAt: DateTime): void
+    +Seen(seenAt: DateTime): void
   }
 
-  interface IDeviceCredentialRepository <<Repository>> {
-    +findByDeviceId(deviceId: DeviceId): DeviceCredential
-    +save(credential: DeviceCredential): void
+  interface IDeviceCredentialStore <<Store>> {
+    +FindByDeviceId(deviceId: String): DeviceCredential
+    +List(): DeviceCredential[]
+    +Add(credential: DeviceCredential): void
+    +Remove(credential: DeviceCredential): void
+    +Save(): void
   }
 }
 
 package "Edge" {
-  class EdgeNode <<Aggregate Root>> {
-    -id: UUID
-    +queueTelemetry(reading: QueuedReading): void
-    +syncLocalTelemetry(): void
-    +storeOfflineAlert(copy: OfflineAlertCopy): void
-    +acknowledgeDuplicate(idempotencyKey: String): void
+  class PlantSheet <<Record>> {
   }
 
-  class LocalQueuePolicy <<Domain Service>> {
-    +onIngestFailedOrUnreachable(): void
+  class PlantAreaReplica <<Record>> {
+    +id: Guid
+    +name: String
+    +location: String
+    +updatedAt: DateTime
   }
 
-  class TelemetrySyncPolicy <<Domain Service>> {
-    +onConnectivityRestored(): void
+  class PlantThresholdReplica <<Record>> {
+    +areaId: Guid
+    +co2LimitPpm: Integer
+    +noiseLimitDb: Integer
+    +updatedAt: DateTime
   }
 
-  interface IEdgeNodeRepository <<Repository>> {
-    +load(): EdgeNode
-    +save(node: EdgeNode): void
-    +findPendingReadings(): QueuedReading[]
-    +saveQueuedReading(reading: QueuedReading): void
+  class PlantDeviceReplica <<Record>> {
+    +deviceId: String
+    +areaId: Guid
+    +kind: String
   }
 
-  interface IMqttSubscriber <<Port>> {
-    +subscribeCarbonDioxide(): void
-    +subscribeNoise(): void
-    +subscribePresence(): void
+  class PlantCredentialReplica <<Record>> {
+    +deviceId: String
+    +secretHash: String
+    +expiresAt: DateTime
+    +revokedAt: DateTime
   }
 
-  interface ITelemetryIngestPort <<Port>> {
-    +ingest(reading: QueuedReading): void
+  class LocalReading <<Record>> {
+    +areaId: Guid
+    +measure: String
+    +deviceId: String
+    +ppm: Integer
+    +decibels: Integer
+    +state: String
+    +recordedAt: DateTime
   }
 
-  interface ICredentialSyncPort <<Port>> {
-    +syncFromCloud(deviceId: DeviceId): DeviceCredential
+  class OutboundMessage <<Record>> {
+    +id: Long
+    +body: String
+  }
+
+  class AreaLoopState <<Record>> {
+    +areaId: Guid
+    +co2LimitPpm: Integer
+    +noiseLimitDb: Integer
+  }
+
+  class LocalExposure <<Record>> {
+    +areaId: Guid
+    +severity: String
+    +highlighted: Boolean
+  }
+
+  class LocalAlert <<Record>> {
+    +id: Guid
+    +areaId: Guid
+    +raisedAt: DateTime
+    +withdrawnAt: DateTime
+  }
+
+  class LocalActuator <<Record>> {
+    +id: Guid
+    +areaId: Guid
+    +type: String
+    +runState: String
+    +mode: String
+    +lastChangedAt: DateTime
+  }
+
+  class LocalAction <<Record>> {
+    +id: Guid
+    +areaId: Guid
+    +type: String
+    +succeeded: Boolean
+    +recordedAt: DateTime
+    +attemptedRunState: String
+    +synced: Boolean
+  }
+
+  class AreaUpdate <<Record>> {
+    +areaId: Guid
+    +writeExposure: Boolean
+    +severity: String
+    +highlighted: Boolean
+    +writeAlerts: Boolean
+  }
+
+  interface IPlantLocalStore <<Store>> {
+    +ReplaceSheet(sheet: PlantSheet): void
+    +FindCredential(deviceId: String): PlantCredentialReplica
+    +FindDevice(deviceId: String): PlantDeviceReplica
+    +SaveReading(reading: LocalReading): void
+    +EnqueueTelemetry(reading: LocalReading, body: String): void
+    +PeekTelemetry(): OutboundMessage
+    +Drop(id: Long): void
+    +ReadLoop(): AreaLoopState[]
+    +ApplyUpdate(update: AreaUpdate, safetyBody: String): void
+    +PeekSafety(): OutboundMessage
+    +CompleteSafety(id: Long, body: String, syncedActionIds: Guid[]): Boolean
+  }
+
+  interface IActuatorPublisher <<Port>> {
+    +Publish(areaId: Guid, type: String, runState: String, mode: String): Boolean
   }
 }
 
-DeviceCredential *-- "1" DeviceId
-DeviceCredential *-- "1" DeviceSecret
-IDeviceCredentialRepository ..> DeviceCredential : manages
+IDeviceCredentialStore ..> DeviceCredential : persists
 
-EdgeNode *-- "0..*" QueuedReading : queues >
-EdgeNode *-- "0..*" OfflineAlertCopy : stores >
-QueuedReading *-- "1" DeviceId
-QueuedReading *-- "1" ReadingKind
-LocalQueuePolicy ..> EdgeNode : commands
-TelemetrySyncPolicy ..> EdgeNode : commands
-IEdgeNodeRepository ..> EdgeNode : manages
-EdgeNode ..> ITelemetryIngestPort : ingest toward Plant Monitoring
-EdgeNode ..> ICredentialSyncPort : syncs credentials
-IMqttSubscriber ..> QueuedReading : delivers separate facts
+PlantSheet "1" *-- "0..*" PlantAreaReplica
+PlantSheet "1" *-- "0..*" PlantThresholdReplica
+PlantSheet "1" *-- "0..*" PlantDeviceReplica
+PlantSheet "1" *-- "0..*" PlantCredentialReplica
+
+AreaLoopState "1" o-- "0..1" LocalReading : carbonDioxide >
+AreaLoopState "1" o-- "0..1" LocalReading : noise >
+AreaLoopState "1" o-- "0..1" LocalReading : presence >
+AreaLoopState "1" o-- "0..1" LocalExposure
+AreaLoopState "1" *-- "0..*" LocalAlert
+AreaLoopState "1" *-- "0..*" LocalActuator
+AreaLoopState "1" *-- "0..*" LocalAction
+
+AreaUpdate "1" *-- "0..*" LocalAlert
+AreaUpdate "1" *-- "0..*" LocalActuator
+AreaUpdate "1" *-- "0..*" LocalAction
+
+IPlantLocalStore ..> PlantSheet : replaces
+IPlantLocalStore ..> LocalReading : saves
+IPlantLocalStore ..> AreaLoopState : reads
+IPlantLocalStore ..> AreaUpdate : applies
+IPlantLocalStore ..> OutboundMessage : queues
 
 @enduml

@@ -1,110 +1,73 @@
 @startuml bc-04-identity-domain
-' Bounded Context Domain Layer Class Diagram — Identity & Access (§ 4.2.4.6.1)
-' Fuente: BCC-04 (.cursor/design/bounded-context-canvas/04-identity-access.md), paso 9 ES (A-01, A-02, A-03).
-' No IdP externo (DEC-005); persistencia PostgreSQL (DEC-008).
+' Domain class diagram — Identity & Access, as implemented in IAM.Domain.
+' Email is a string. The session does not store the access token. Recovery keeps a token hash.
 
 skinparam classAttributeIconSize 0
 
-enum UserRole {
-  Supervisor
+enum Role {
   PlantManager
+  Supervisor
 }
 
 enum Channel {
-  Mobile
   Web
+  Mobile
 }
 
-class Email <<Value Object>> {
-  -value: String
-  +equals(other: Email): Boolean
-}
-
-class SessionToken <<Value Object>> {
-  -value: String
-  +equals(other: SessionToken): Boolean
-}
-
-class RecoveryToken <<Value Object>> {
-  -value: String
-  +equals(other: RecoveryToken): Boolean
-}
-
-class UserAccount <<Aggregate Root>> {
-  -id: UUID
-  -email: Email
+class UserAccount <<Entity>> {
+  -id: Guid
+  -email: String
   -passwordHash: String
-  -role: UserRole
+  -role: Role
   -enabled: Boolean
-  +create(email: Email, passwordHash: String, role: UserRole): UserAccount
-  +assignRole(role: UserRole): void
-  +disable(): void
-  +verifyPassword(password: String): Boolean
+  +Accepts(channel: Channel): Boolean
+  +ChangeRole(role: Role): void
+  +SetEnabled(enabled: Boolean): void
+  +ChangePassword(passwordHash: String): void
 }
 
-class Session <<Aggregate Root>> {
-  -id: UUID
-  -accountId: UUID
+class Session <<Entity>> {
+  -id: Guid
+  -accountId: Guid
   -channel: Channel
-  -token: SessionToken
-  -issuedAt: DateTime
   -expiresAt: DateTime
   -closedAt: DateTime
-  +grant(account: UserAccount, channel: Channel): Session
-  +close(): void
-  +isValid(): Boolean
+  +{static} Open(id: Guid, accountId: Guid, channel: Channel, expiresAt: DateTime): Session
+  +IsOpen(now: DateTime): Boolean
+  +Close(now: DateTime): void
 }
 
-class CredentialRecovery <<Aggregate Root>> {
-  -id: UUID
-  -accountId: UUID
-  -token: RecoveryToken
-  -requestedAt: DateTime
+class RecoveryToken <<Entity>> {
+  -id: Guid
+  -accountId: Guid
+  -tokenHash: String
   -expiresAt: DateTime
   -usedAt: DateTime
-  +request(account: UserAccount): CredentialRecovery
-  +reset(newPasswordHash: String): void
-  +isExpired(): Boolean
+  +{static} Issue(id: Guid, accountId: Guid, tokenHash: String, expiresAt: DateTime): RecoveryToken
+  +IsUsable(now: DateTime): Boolean
+  +MarkUsed(now: DateTime): void
 }
 
-class AccessPolicy <<Domain Service>> {
-  +isActionAllowed(session: Session, requiredRole: UserRole, requiredChannel: Channel): Boolean
+interface IIamStore <<Store>> {
+  +FindByEmail(email: String): UserAccount
+  +FindById(id: Guid): UserAccount
+  +List(): UserAccount[]
+  +AddAccount(account: UserAccount): void
+  +AddSession(session: Session): void
+  +FindSession(sessionId: Guid): Session
+  +InvalidateUnusedRecoveryTokens(accountId: Guid, now: DateTime): void
+  +AddRecoveryToken(token: RecoveryToken): void
+  +FindRecoveryTokenByHash(tokenHash: String): RecoveryToken
+  +SaveChanges(): void
 }
 
-interface IUserAccountRepository <<Repository>> {
-  +findById(id: UUID): UserAccount
-  +findByEmail(email: Email): UserAccount
-  +save(account: UserAccount): void
-}
-
-interface ISessionRepository <<Repository>> {
-  +findByToken(token: SessionToken): Session
-  +save(session: Session): void
-}
-
-interface ICredentialRecoveryRepository <<Repository>> {
-  +findByToken(token: RecoveryToken): CredentialRecovery
-  +save(recovery: CredentialRecovery): void
-}
-
-interface IEmailSender <<Port>> {
-  +send(to: Email, subject: String, body: String): void
-}
-
-UserAccount "1" -- "0..*" Session : owns >
-UserAccount "1" -- "0..*" CredentialRecovery : requests >
-UserAccount *-- "1" Email
-UserAccount *-- "1" UserRole
+UserAccount "1" -- "0..*" Session : accountId >
+UserAccount "1" -- "0..*" RecoveryToken : accountId >
+UserAccount *-- "1" Role
 Session *-- "1" Channel
-Session *-- "1" SessionToken
-CredentialRecovery *-- "1" RecoveryToken
 
-AccessPolicy ..> Session : evaluates
-AccessPolicy ..> UserRole : evaluates
-
-IUserAccountRepository ..> UserAccount : manages
-ISessionRepository ..> Session : manages
-ICredentialRecoveryRepository ..> CredentialRecovery : manages
-CredentialRecovery ..> IEmailSender : notifies
+IIamStore ..> UserAccount : persists
+IIamStore ..> Session : persists
+IIamStore ..> RecoveryToken : persists
 
 @enduml

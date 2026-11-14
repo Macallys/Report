@@ -1,163 +1,104 @@
 @startuml bc-01-plant-monitoring-domain
-' Bounded Context Domain Layer Class Diagram — Plant Monitoring (§ 4.2.1.6.1)
-' Fuente: BCC-01 (.cursor/design/bounded-context-canvas/01-plant-monitoring.md), paso 9 ES (A-04 … A-07).
-' Lecturas CO₂ / ruido / presencia no unificadas; persistencia PostgreSQL (DEC-008).
+' Domain class diagram — Plant Monitoring, as implemented in PlantMonitoring.Domain.
+' Readings are separate entities keyed by AreaId. Limits and names are primitives, not value objects.
 
 skinparam classAttributeIconSize 0
 
-enum DeviceKind {
-  Sensor
-  Actuator
+class IndustrialArea <<Entity>> {
+  -id: Guid
+  -name: String
+  -location: String
+  -updatedAt: DateTime
+  +Update(name: String, location: String, updatedAt: DateTime): void
 }
 
-enum PresenceState {
-  Detected
-  Cleared
+class AreaThresholds <<Entity>> {
+  -areaId: Guid
+  -co2LimitPpm: Integer
+  -noiseLimitDb: Integer
+  -updatedAt: DateTime
+  +Replace(co2LimitPpm: Integer, noiseLimitDb: Integer, updatedAt: DateTime): void
 }
 
-class AreaName <<Value Object>> {
-  -value: String
-  +equals(other: AreaName): Boolean
-}
-
-class Location <<Value Object>> {
-  -value: String
-  +equals(other: Location): Boolean
-}
-
-class Co2Limit <<Value Object>> {
-  -ppm: Decimal
-  +equals(other: Co2Limit): Boolean
-}
-
-class NoiseLimit <<Value Object>> {
-  -db: Decimal
-  +equals(other: NoiseLimit): Boolean
-}
-
-class DeviceId <<Value Object>> {
-  -value: String
-  +equals(other: DeviceId): Boolean
-}
-
-class Co2Ppm <<Value Object>> {
-  -value: Decimal
-  +isValid(): Boolean
-}
-
-class NoiseDb <<Value Object>> {
-  -value: Decimal
-}
-
-class IndustrialArea <<Aggregate Root>> {
-  -id: UUID
-  -name: AreaName
-  -location: Location
-  +register(name: AreaName, location: Location): IndustrialArea
-  +update(name: AreaName, location: Location): void
-  +updateSystemConfiguration(): void
-}
-
-class AreaThresholds <<Aggregate Root>> {
-  -id: UUID
-  -areaId: UUID
-  -co2Limit: Co2Limit
-  -noiseLimit: NoiseLimit
-  +configure(area: IndustrialArea, co2Limit: Co2Limit, noiseLimit: NoiseLimit): AreaThresholds
-  +update(co2Limit: Co2Limit, noiseLimit: NoiseLimit): void
-}
-
-class AreaDeviceAssignment <<Aggregate Root>> {
-  -id: UUID
-  -areaId: UUID
-  -deviceId: DeviceId
-  -kind: DeviceKind
-  +associate(area: IndustrialArea, deviceId: DeviceId, kind: DeviceKind): AreaDeviceAssignment
-}
-
-class AreaTelemetry <<Aggregate Root>> {
-  -id: UUID
-  -areaId: UUID
-  +recordCarbonDioxide(deviceId: DeviceId, ppm: Co2Ppm, recordedAt: DateTime): CarbonDioxideReading
-  +recordNoise(deviceId: DeviceId, db: NoiseDb, recordedAt: DateTime): NoiseReading
-  +recordPresence(deviceId: DeviceId, state: PresenceState, recordedAt: DateTime): PresenceChange
-  +acceptIngest(): void
-  +rejectIngest(): void
-  +acknowledgeDuplicate(): void
-  +markSensorUnavailable(deviceId: DeviceId): void
+class AreaDevice <<Entity>> {
+  -id: Guid
+  -areaId: Guid
+  -deviceId: String
+  -kind: String
 }
 
 class CarbonDioxideReading <<Entity>> {
-  -id: UUID
-  -deviceId: DeviceId
-  -ppm: Co2Ppm
+  -id: Guid
+  -deviceId: String
+  -areaId: Guid
+  -ppm: Integer
   -recordedAt: DateTime
+  +{static} Record(id: Guid, deviceId: String, areaId: Guid, ppm: Integer, recordedAt: DateTime): CarbonDioxideReading
 }
 
 class NoiseReading <<Entity>> {
-  -id: UUID
-  -deviceId: DeviceId
-  -db: NoiseDb
+  -id: Guid
+  -deviceId: String
+  -areaId: Guid
+  -db: Integer
   -recordedAt: DateTime
+  +{static} Record(id: Guid, deviceId: String, areaId: Guid, decibels: Integer, recordedAt: DateTime): NoiseReading
 }
 
 class PresenceChange <<Entity>> {
-  -id: UUID
-  -deviceId: DeviceId
-  -state: PresenceState
+  -id: Guid
+  -deviceId: String
+  -areaId: Guid
+  -state: String
   -recordedAt: DateTime
+  +{static} Record(id: Guid, deviceId: String, areaId: Guid, state: String, recordedAt: DateTime): PresenceChange
 }
 
-interface IIndustrialAreaRepository <<Repository>> {
-  +findById(id: UUID): IndustrialArea
-  +findByName(name: AreaName): IndustrialArea
-  +save(area: IndustrialArea): void
+interface IAreaStore <<Store>> {
+  +FindById(id: Guid): IndustrialArea
+  +FindByName(name: String): IndustrialArea
+  +List(): IndustrialArea[]
+  +Add(area: IndustrialArea): void
+  +SaveChanges(): void
 }
 
-interface IAreaThresholdsRepository <<Repository>> {
-  +findByAreaId(areaId: UUID): AreaThresholds
-  +save(thresholds: AreaThresholds): void
+interface IThresholdStore <<Store>> {
+  +FindByAreaId(areaId: Guid): AreaThresholds
+  +List(): AreaThresholds[]
+  +Add(thresholds: AreaThresholds): AreaThresholds
+  +SaveChanges(): void
 }
 
-interface IAreaDeviceAssignmentRepository <<Repository>> {
-  +findByDeviceId(deviceId: DeviceId): AreaDeviceAssignment
-  +save(assignment: AreaDeviceAssignment): void
+interface IDeviceStore <<Store>> {
+  +FindByDeviceId(deviceId: String): AreaDevice
+  +List(): AreaDevice[]
+  +ListByAreaId(areaId: Guid): AreaDevice[]
+  +Add(device: AreaDevice): void
 }
 
-interface IAreaTelemetryRepository <<Repository>> {
-  +findLatestByAreaId(areaId: UUID): AreaTelemetry
-  +save(telemetry: AreaTelemetry): void
+interface IReadingStore <<Store>> {
+  +LatestCarbonDioxide(areaId: Guid): CarbonDioxideReading
+  +LatestNoise(areaId: Guid): NoiseReading
+  +LatestPresence(areaId: Guid): PresenceChange
+  +CarbonDioxideBetween(areaId: Guid, from: DateTime, to: DateTime): CarbonDioxideReading[]
+  +NoiseBetween(areaId: Guid, from: DateTime, to: DateTime): NoiseReading[]
+  +PresenceBetween(areaId: Guid, from: DateTime, to: DateTime): PresenceChange[]
+  +AppendCarbonDioxide(reading: CarbonDioxideReading): void
+  +AppendNoise(reading: NoiseReading): void
+  +AppendPresence(reading: PresenceChange): void
 }
 
-interface IDomainEventPublisher <<Port>> {
-  +publish(event: DomainEvent): void
-}
+IndustrialArea "1" -- "0..1" AreaThresholds : areaId >
+IndustrialArea "1" -- "0..*" AreaDevice : areaId >
+IndustrialArea "1" -- "0..*" CarbonDioxideReading : areaId >
+IndustrialArea "1" -- "0..*" NoiseReading : areaId >
+IndustrialArea "1" -- "0..*" PresenceChange : areaId >
 
-IndustrialArea "1" -- "0..1" AreaThresholds : configures >
-IndustrialArea "1" -- "0..*" AreaDeviceAssignment : assigns >
-IndustrialArea "1" -- "1" AreaTelemetry : records >
-
-IndustrialArea *-- "1" AreaName
-IndustrialArea *-- "1" Location
-AreaThresholds *-- "1" Co2Limit
-AreaThresholds *-- "1" NoiseLimit
-AreaDeviceAssignment *-- "1" DeviceId
-AreaDeviceAssignment *-- "1" DeviceKind
-
-AreaTelemetry "1" *-- "0..*" CarbonDioxideReading : contains >
-AreaTelemetry "1" *-- "0..*" NoiseReading : contains >
-AreaTelemetry "1" *-- "0..*" PresenceChange : contains >
-CarbonDioxideReading *-- "1" Co2Ppm
-CarbonDioxideReading *-- "1" DeviceId
-NoiseReading *-- "1" NoiseDb
-NoiseReading *-- "1" DeviceId
-PresenceChange *-- "1" PresenceState
-PresenceChange *-- "1" DeviceId
-
-IIndustrialAreaRepository ..> IndustrialArea : manages
-IAreaThresholdsRepository ..> AreaThresholds : manages
-IAreaDeviceAssignmentRepository ..> AreaDeviceAssignment : manages
-IAreaTelemetryRepository ..> AreaTelemetry : manages
-AreaTelemetry ..> IDomainEventPublisher : publishes
+IAreaStore ..> IndustrialArea : persists
+IThresholdStore ..> AreaThresholds : persists
+IDeviceStore ..> AreaDevice : persists
+IReadingStore ..> CarbonDioxideReading : persists
+IReadingStore ..> NoiseReading : persists
+IReadingStore ..> PresenceChange : persists
 
 @enduml
