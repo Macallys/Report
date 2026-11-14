@@ -8618,7 +8618,15 @@ La colaboración se midió sobre los repositorios de la organización con commit
 | Baldeon Vivar, Santiago Armando | 0 | 0 | 7 | 0 | 2 | 9 |
 | **Total** | **6** | **5** | **22** | **10** | **20** | **63** |
 
-Las tres compromisos propuestos en el Sprint 1 se cumplieron correctament. El backend usa una rama feature/* por contexto y la app móvil tiene la rama diseno/ui-movil para el diseño visual. El de commits propios de todos los integrantes se cumplió. 
+Las tres compromisos propuestos en el Sprint 1 se cumplieron correctament. El backend usa una rama feature/* por contexto y la app móvil tiene la rama diseno/ui-movil para el diseño visual. El de commits propios de todos los integrantes se cumplió.
+
+**Repositorio Report**
+
+![Team Collaboration Insights — Report](../assets/06-capitulo-vi/sprints/teamcollab-sprint2-report.png)
+
+**Aplicación móvil (App-Movil)**
+
+![Team Collaboration Insights — App-Movil](../assets/06-capitulo-vi/sprints/teamcollab-sprint2-mobile.png)
 
 <a id="s-6-3"></a>
 ## 6.3. Validation Interviews
