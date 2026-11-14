@@ -678,9 +678,15 @@ La aplicación móvil arranca en una pantalla de inicio que restaura la sesión 
 <a id="s-6-2-2-7"></a>
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
 
-En este sprint se documentaron con OpenAPI los endpoints de los nuevos bounded contexts, implementados en safeplant-web-backend. Los endpoints /api/v1 requieren un token de acceso válido; los /internal/v1 son de comunicación entre la planta y la nube y se protegen con la clave de la planta. Los errores usan el formato uniforme del Sprint 1.
+Durante el Sprint 2 se documentaron los Web Services de SafePlant mediante OpenAPI y Swagger UI. Esta documentación permitió visualizar los endpoints de los bounded contexts Plant Monitoring, Safety and Actuation y Device and Edge Management, incluyendo sus métodos HTTP, rutas, parámetros, cuerpos de solicitud, códigos de respuesta y ejemplos de ejecución. Los servicios fueron validados en el entorno desplegado: el backend Cloud.Api se encuentra alojado en Azure App Service (wa-safeplant-cloudbackend-prod) y utiliza TimescaleDB sobre PostgreSQL para el registro en la nube, además del entorno local con Docker Compose (TimescaleDB, Eclipse Mosquitto, Cloud.Api y Plant.Host).
 
-Los endpoints se ejecutan en local con Docker Compose y se documentan en `http://localhost:8080/swagger/index.html` (OpenAPI en `/openapi/v1.json`). 
+La documentación generada permite comprobar que los endpoints del Sprint 2 se encuentran disponibles y organizados por módulos funcionales. Entre ellos se incluyen los servicios de áreas y umbrales de CO₂ y ruido, telemetría y dashboard, estado operativo, alertas, exposiciones, acciones de actuadores, override remoto y credenciales de dispositivos. Desde Swagger UI se realizaron pruebas sobre las rutas expuestas, verificando la disponibilidad del API, el uso de autenticación mediante JWT en /api/v1, la clave de planta X-Plant-Key en /internal/v1 y la persistencia de información en la base desplegada. Los errores conservan el formato uniforme del Sprint 1.
+
+URL de Swagger UI desplegado: https://wa-safeplant-cloudbackend-prod.azurewebsites.net/swagger/index.html
+
+URL de documentación OpenAPI: https://wa-safeplant-cloudbackend-prod.azurewebsites.net/openapi/v1.json
+
+Repositorio de Web Services: https://github.com/Macallys/safeplant-web-backend
 
 Roles: S = Supervisor desde el canal móvil; M = Plant Manager desde el canal web.
 
@@ -730,7 +736,7 @@ Content-Type: application/json
 HTTP/1.1 204 No Content
 ```
 
-**Repositorio de Web Services:** [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend)
+Documentación OpenAPI de los servicios de SafePlant:
 
 ![Documentación OpenAPI (Swagger) de Cloud.Api — nuevos contextos](../assets/06-capitulo-vi/sprints/sprint-2-services-docs.png)
 
