@@ -8943,11 +8943,189 @@ Los tres compromisos propuestos en el Sprint 1 se cumplieron correctamente. El b
 <a id="s-6-3-1"></a>
 ### 6.3.1. Diseño de Entrevistas
 
+En esta sección se presenta el diseño de las entrevistas de validación dirigidas a los dos segmentos objetivo de SAFEPLANT. El propósito de estas entrevistas es evaluar la experiencia de los usuarios al interactuar con las aplicaciones móvil y web, considerando la facilidad de navegación, comprensión de la información ambiental, gestión de parámetros de seguridad y utilidad de las funcionalidades implementadas.
+
+Para ello, se establecieron preguntas de contextualización que permiten conocer el perfil de los participantes, sus responsabilidades y los procedimientos que utilizan actualmente en sus actividades. Asimismo, se definieron preguntas de validación orientadas a recoger sus percepciones sobre la solución e identificar posibles oportunidades de mejora.
+
+Las entrevistas se organizaron en dos segmentos:
+
+**Segmento #1: Supervisores de Seguridad Industrial**
+
+*(Funciones: Aplicación móvil, monitoreo de condiciones ambientales, consulta de niveles de CO₂ y ruido, visualización de alertas y supervisión de zonas de riesgo).*
+
+Este segmento está dirigido a profesionales responsables de supervisar las condiciones de seguridad dentro de las instalaciones industriales. La validación busca conocer si la aplicación móvil facilita el acceso a la información ambiental, permite comprender los indicadores presentados y ayuda a identificar oportunamente situaciones de riesgo.
+
+**Preguntas de contextualización**
+
+1. ¿Cuál es su cargo actual y cuántos años de experiencia tiene en el área de seguridad industrial?
+2. ¿Qué herramientas o sistemas utiliza actualmente para supervisar las condiciones ambientales de una planta?
+3. ¿Con qué frecuencia necesita consultar información relacionada con niveles de ruido, CO₂ u otros riesgos ambientales?
+
+**Preguntas de validación**
+
+1. ¿Qué tan sencillo le resultó encontrar la información de las condiciones ambientales de la planta?
+2. ¿Los valores e indicadores de CO₂ y ruido fueron fáciles de comprender?
+3. ¿Considera que las alertas presentadas permiten identificar rápidamente una situación de riesgo?
+4. ¿La organización de las pantallas le permitió navegar sin dificultades?
+5. ¿Qué información adicional necesitaría para tomar decisiones durante una emergencia?
+6. ¿Considera que esta aplicación podría facilitar sus actividades de supervisión en comparación con los procedimientos que utiliza actualmente?
+7. ¿Qué funcionalidades modificaría o incorporaría para mejorar su experiencia?
+
+**Segmento #2: Encargados de Planta**
+
+*(Funciones: Aplicación web, panel de administración, monitoreo ambiental, configuración de límites de CO₂ y ruido, consulta de registros históricos y supervisión general de las condiciones ambientales).*
+
+Este segmento está dirigido a profesionales responsables de gestionar las operaciones y supervisar el funcionamiento de las instalaciones industriales. La validación busca evaluar si el panel web permite comprender el estado general de la planta, configurar adecuadamente los parámetros de seguridad y consultar información histórica que facilite la toma de decisiones.
+
+**Preguntas de contextualización**
+
+1. ¿Cuál es su cargo actual y cuántos años de experiencia tiene en la gestión de operaciones industriales?
+2. ¿Qué herramientas utiliza para supervisar el funcionamiento de las instalaciones y sus condiciones ambientales?
+3. ¿Cómo se realiza actualmente la configuración de parámetros de seguridad y el seguimiento de los registros ambientales?
+
+**Preguntas de validación**
+
+1. ¿Qué tan intuitiva le resultó la navegación por el panel de administración?
+2. ¿La información presentada le permite comprender el estado general de las condiciones ambientales de la planta?
+3. ¿Considera adecuada la organización de las opciones para configurar los límites de CO₂ y ruido?
+4. ¿Los registros históricos resultan comprensibles y útiles para el seguimiento de las condiciones ambientales?
+5. ¿La información disponible facilitaría la elaboración de reportes o la preparación de auditorías?
+6. ¿Considera que SAFEPLANT podría contribuir a mejorar la gestión de seguridad ambiental de una planta industrial?
+7. ¿Qué aspectos de la interfaz o de las funcionalidades considera necesario mejorar?
+
 <a id="s-6-3-2"></a>
 ### 6.3.2. Registro de Entrevistas
 
+Para organizar la información obtenida durante las sesiones de validación, se estableció un registro individual para cada participante, considerando su cargo, experiencia laboral, sector industrial y principales observaciones sobre la solución.
+
+Se contemplaron tres participantes por cada segmento, con perfiles diferenciados para representar distintos niveles de experiencia y responsabilidades dentro de una planta industrial.
+
+**Entrevistas a Supervisores de Seguridad Industrial**
+
+**Entrevistado 1: Carlos Mendoza – Supervisor de Seguridad Industrial**
+
+Cuenta con 6 años de experiencia en el sector manufacturero. Durante la simulación, presentó una percepción positiva de la aplicación móvil, destacando que la información de CO₂ y ruido resulta sencilla de consultar y comprender. Consideró que las alertas facilitan la identificación de condiciones que requieren atención y que la centralización de las mediciones representa una ventaja frente al uso de registros manuales. Como oportunidad de mejora, propuso incorporar reportes de incidentes y un historial de alertas para facilitar el seguimiento de situaciones anteriores.
+
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
+**Entrevistado 2: Andrea Vilcapaza – Prevencionista de Riesgos**
+
+Cuenta con 4 años de experiencia en el sector minero. Durante la simulación, valoró la posibilidad de consultar las condiciones ambientales por zonas y recibir alertas cuando se presentan situaciones de riesgo. Consideró que la aplicación puede facilitar las actividades de supervisión, aunque señaló la importancia de mostrar información adicional en las alertas, como la ubicación exacta del evento y recomendaciones de actuación. También sugirió mejorar la diferenciación visual de las alertas según el nivel de riesgo.
+
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
+**Entrevistado 3: Roberto Salazar – Supervisor HSE**
+
+Cuenta con 12 años de experiencia en el sector de producción industrial. Durante la simulación, destacó la utilidad de disponer de indicadores ambientales y alertas desde un dispositivo móvil, especialmente para realizar supervisiones sin depender de registros físicos. Consideró que la organización de las pantallas facilita la navegación y permite acceder a la información necesaria. Como mejora, propuso incorporar reportes históricos, filtros por zonas y notificaciones más detalladas para facilitar la toma de decisiones durante una emergencia.
+
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
+**Entrevistas a Encargados de Planta**
+
+**Entrevistado 4: Celine Tapia – Jefe de Planta**
+
+Cuenta con 5 años de experiencia en la fabricación de productos plásticos. Durante la simulación, destacó que el panel de administración presenta una navegación sencilla y permite consultar los valores de CO₂ y ruido de manera organizada. Consideró que los registros históricos son útiles para identificar cambios en las condiciones ambientales y que centralizar esta información facilitaría la preparación de reportes. Como mejora, sugirió incorporar la descarga de información en formatos Excel o PDF y permitir comparaciones entre diferentes periodos.
+
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
+**Entrevistado 5: Ariana Curipaco – Encargada de Operaciones**
+
+Cuenta con 5 años de experiencia en una planta de procesamiento minero. Durante la simulación, valoró la organización del panel web y la posibilidad de consultar las mediciones ambientales por zonas. Consideró que la configuración de los límites de CO₂ y ruido resulta comprensible, aunque recomendó mostrar claramente los valores establecidos y solicitar una confirmación antes de guardar modificaciones. También destacó la utilidad de incorporar filtros por fechas y zonas para facilitar la revisión de los registros históricos.
+
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
+**Entrevistado 6: Roberto Salazar – Gerente de Operaciones**
+
+Cuenta con 15 años de experiencia en el sector industrial. Durante la simulación, destacó que el panel permite centralizar información importante para supervisar las condiciones ambientales de la planta. Consideró que los registros históricos pueden facilitar las evaluaciones internas y la preparación de auditorías. Como oportunidades de mejora, propuso incorporar indicadores generales por zona, reportes personalizados y diferentes niveles de acceso para los responsables de la administración del sistema.
+
+[Video de entrevistas de validación de SAFEPLANT](https://youtu.be/1rzV-8ed_O8)
+
+**Síntesis de las entrevistas**
+
+A partir de las respuestas representadas en los seis guiones de simulación, se identificaron oportunidades de mejora comunes para ambas aplicaciones. En el segmento de Supervisores de Seguridad, se destacó la importancia de mejorar la información presentada en las alertas, facilitar el acceso al historial de eventos y proporcionar información adicional para la atención de emergencias.
+
+Por otro lado, en el segmento de Encargados de Planta, se identificó la necesidad de fortalecer las funcionalidades de consulta histórica, incorporar filtros de búsqueda y facilitar la generación y exportación de reportes.
+
+En general, las respuestas de los perfiles simulados reflejan una percepción favorable sobre la utilidad potencial de SAFEPLANT, principalmente por la centralización de las mediciones ambientales y la posibilidad de consultar información relacionada con las condiciones de seguridad de la planta. Estas observaciones constituyen insumos para orientar futuras mejoras de la solución y deberán contrastarse con entrevistas realizadas a usuarios reales.
+
 <a id="s-6-3-3"></a>
 ### 6.3.3. Evaluaciones según heurísticas
+
+La evaluación heurística tiene como finalidad identificar posibles problemas de usabilidad en las interfaces de SAFEPLANT, considerando principios reconocidos de diseño e interacción. Para esta evaluación se toman como referencia las diez heurísticas de usabilidad de Jakob Nielsen, las cuales permiten analizar aspectos como la visibilidad del estado del sistema, la correspondencia entre el sistema y el mundo real, el control del usuario, la consistencia y la prevención de errores.
+
+La evaluación contempla las dos interfaces de la solución: la aplicación móvil utilizada por los Supervisores de Seguridad y la aplicación web utilizada por los Encargados de Planta.
+
+**Información general**
+
+| Campo | Información |
+|---|---|
+| Carrera | Ingeniería de Software |
+| Proyecto | SAFEPLANT |
+| Sistema evaluado | SAFEPLANT – Aplicación móvil y aplicación web |
+| Segmento 1 | Supervisores de Seguridad Industrial |
+| Segmento 2 | Encargados de Planta |
+| Enfoque de evaluación | Usabilidad y experiencia de usuario |
+| Referencia | Diez heurísticas de usabilidad de Jakob Nielsen |
+
+**Tareas consideradas para la evaluación**
+
+**Aplicación móvil – Supervisor de Seguridad**
+
+1. Consultar las condiciones ambientales de las diferentes zonas de la planta.
+2. Visualizar e interpretar los niveles de CO₂ y ruido.
+3. Identificar alertas relacionadas con condiciones ambientales de riesgo.
+4. Navegar entre las pantallas de monitoreo y consultar información relevante.
+5. Consultar información que permita realizar acciones ante una situación de emergencia.
+
+**Aplicación web – Encargado de Planta**
+
+1. Acceder al panel de administración y reconocer el estado general de la planta.
+2. Consultar las mediciones ambientales de CO₂ y ruido.
+3. Configurar los límites de seguridad establecidos para los parámetros ambientales.
+4. Consultar los registros históricos de las condiciones ambientales.
+5. Identificar información útil para la elaboración de reportes y el seguimiento de las condiciones de seguridad.
+
+**Escala de severidad**
+
+| Nivel | Descripción |
+|---|---|
+| 0 | No representa un problema de usabilidad. |
+| 1 | Problema superficial, de impacto mínimo para el usuario. |
+| 2 | Problema menor que puede dificultar ocasionalmente la interacción. |
+| 3 | Problema mayor que afecta significativamente la experiencia de uso. |
+| 4 | Problema crítico que impide completar una tarea o continuar utilizando la funcionalidad. |
+
+**Heurísticas consideradas**
+
+| N.º | Heurística | Aspecto evaluado en SAFEPLANT |
+|---|---|---|
+| 1 | Visibilidad del estado del sistema | Claridad de los indicadores, estados de los dispositivos y notificaciones de alertas. |
+| 2 | Correspondencia entre el sistema y el mundo real | Comprensión de los términos, unidades de medida y conceptos de seguridad industrial. |
+| 3 | Control y libertad del usuario | Posibilidad de regresar, cancelar acciones y corregir configuraciones. |
+| 4 | Consistencia y estándares | Uniformidad de botones, iconos, colores y elementos de navegación. |
+| 5 | Prevención de errores | Confirmación de cambios en los límites de CO₂ y ruido y prevención de configuraciones incorrectas. |
+| 6 | Reconocimiento antes que recuerdo | Facilidad para identificar zonas, indicadores, opciones y registros sin memorizar pasos. |
+| 7 | Flexibilidad y eficiencia de uso | Acceso rápido a mediciones, alertas, filtros y registros históricos. |
+| 8 | Diseño estético y minimalista | Organización de la información y presentación clara de gráficos e indicadores ambientales. |
+| 9 | Reconocimiento, diagnóstico y recuperación de errores | Claridad de los mensajes de error y orientación para solucionar problemas durante la interacción. |
+| 10 | Ayuda y documentación | Disponibilidad de información de apoyo para comprender las funcionalidades y configuraciones. |
+
+**Matriz de registro de problemas de usabilidad**
+
+Los siguientes campos permiten documentar los problemas identificados durante la inspección de las interfaces. La severidad y la heurística afectada deberán asignarse a partir de observaciones verificables de cada tarea realizada.
+
+| N.º | Problema identificado | Interfaz | Severidad | Heurística relacionada |
+|---|---|---|---|---|
+| 1 | Se podría mejorar la diferenciación visual de las alertas para facilitar la identificación inmediata de los niveles de riesgo y priorizar las situaciones que requieren atención. | Aplicación móvil | 2 - Menor | Visibilidad del estado del sistema |
+| 2 | Sería conveniente incorporar información complementaria en las mediciones ambientales, como referencias de los valores registrados respecto a los límites establecidos, para facilitar su interpretación. | Aplicación móvil | 2 - Menor | Reconocimiento antes que recuerdo |
+| 3 | La sección de configuración de parámetros podría incluir indicaciones adicionales sobre los límites de CO₂ y ruido, con el fin de reducir posibles dudas durante su modificación. | Aplicación web | 2 - Menor | Prevención de errores |
+| 4 | Se podría mejorar la presentación de los registros históricos mediante opciones adicionales de filtrado y organización, facilitando la consulta de información específica para el seguimiento y la elaboración de reportes. | Aplicación web | 2 - Menor | Flexibilidad y eficiencia de uso |
+
+**Conclusión de la evaluación**
+
+La evaluación heurística permitirá complementar los resultados de las entrevistas mediante la identificación de posibles dificultades relacionadas con la interacción y presentación de las funcionalidades de SAFEPLANT. Mientras que las entrevistas permiten conocer las percepciones y necesidades de los usuarios, la evaluación heurística se enfoca en revisar las interfaces a partir de principios de usabilidad.
+
+De esta manera, ambos métodos permitirán establecer oportunidades de mejora para facilitar el monitoreo de las condiciones ambientales, la identificación de situaciones de riesgo y la administración de los parámetros de seguridad industrial.
 
 <a id="s-6-4"></a>
 ## 6.4. Video About-the-Product

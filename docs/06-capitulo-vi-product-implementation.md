@@ -1138,7 +1138,7 @@ Por otro lado, en el segmento de Encargados de Planta, se identificó la necesid
 En general, las respuestas de los perfiles simulados reflejan una percepción favorable sobre la utilidad potencial de SAFEPLANT, principalmente por la centralización de las mediciones ambientales y la posibilidad de consultar información relacionada con las condiciones de seguridad de la planta. Estas observaciones constituyen insumos para orientar futuras mejoras de la solución y deberán contrastarse con entrevistas realizadas a usuarios reales.
 
 <a id="s-6-3-3"></a>
-#### 6.3.3. Evaluaciones según heurística
+#### 6.3.3. Evaluaciones según heurísticas
 
 La evaluación heurística tiene como finalidad identificar posibles problemas de usabilidad en las interfaces de SAFEPLANT, considerando principios reconocidos de diseño e interacción. Para esta evaluación se toman como referencia las diez heurísticas de usabilidad de Jakob Nielsen, las cuales permiten analizar aspectos como la visibilidad del estado del sistema, la correspondencia entre el sistema y el mundo real, el control del usuario, la consistencia y la prevención de errores.
 
