@@ -8332,31 +8332,86 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 <a id="s-6-2-2-5"></a>
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
-En el Sprint 1 se asumió el compromiso de incorporar pruebas automatizadas.
+**Mobile Testing Suite Evidence**
 
-**Aplicación móvil** : El repositorio incluye 66 archivos de prueba con 296 casos de prueba de Flutter, organizados por feature: sesión, seguridad y configuración de planta. Cubren los casos de uso, los DTO y los mappers, los controladores y las páginas con pruebas de widget, y la ruta y el shell de la aplicación.  
+Para la aplicación móvil se implementó una suite de pruebas automatizadas que valida las funcionalidades de sesión, seguridad y configuración de planta incluidas en el Sprint Backlog 2. Las pruebas están en la carpeta test/ del repositorio App-Movil, en la rama `main`, y se ejecutan con el comando:
 
-**Backend** : Para probar el flujo completo en local, el repositorio incluye compose.yaml con TimescaleDB, Eclipse Mosquitto, Cloud.Api y Plant.Host.
+```bash
+flutter test
+```
 
-| Tipo de prueba | Alcance | Herramienta | Resultado |
-| :--- | :--- | :--- | :--- |
-| Unit y widget tests | App móvil: sesión, seguridad y configuración de planta | flutter_test | 296 casos declarados en 66 archivos |
-| Unit, integration y acceptance | Backend | — | Pendiente para el Sprint 3 |
+**Repository:** https://github.com/Macallys/App-Movil.git
 
-![Testing Suite Evidence](../assets/06-capitulo-vi/sprints/testing_sprint2.png)
+La suite incluye 66 archivos de prueba con 296 casos: 230 pruebas unitarias y 66 pruebas de widget. Las pruebas unitarias cubren los casos de uso, los DTO, los mappers, los repositorios y los controladores; las de widget validan las páginas; y las pruebas de contrat verifican que la app interpreta las respuestas de Cloud.Api. Para no depender del backend desplegado, las pruebas usan dobles del datasource remoto. No hay archivos `.feature` en Gherkin.
+
+| Módulo | Archivos de prueba | Casos de prueba | Cobertura |
+| :--- | ---: | ---: | :--- |
+| `session` | 12 | 36 | Inicio, restauración y cierre de sesión, recuperación y restablecimiento de credenciales, interceptor de autenticación |
+| `safety` | 26 | 139 | Estado operativo, última telemetría, alertas activas, historial de exposiciones, acciones de actuadores y override |
+| `plant_setup` | 21 | 102 | Áreas, umbrales, registro, inventario y revocación de dispositivos |
+| `app`, `core` y raíz | 7 | 19 | Router, shell de la aplicación, tema, configuración del cliente HTTP y manifiesto de Android |
+| **Total** | **66** | **296** | |
+
+El repositorio no guarda el resultado de ninguna ejecución, por lo que no se registra aquí un conteo de pruebas exitosas.
+
+**Tabla de commits relacionados al mobile testing**
+
+| Repository | Branch | Commit Id | Commit Message | Archivos de prueba modificados | Committed on (Date) |
+| :--- | :--- | :--- | :--- | ---: | :--- |
+| Macallys/App-Movil | main | [8ba1ba6](https://github.com/Macallys/App-Movil/commit/8ba1ba60deb4adaeaec1a0f6c112c391793d5039) | app safe primera version | 31 | 2026-10-29 |
+| Macallys/App-Movil | main | [afd1f26](https://github.com/Macallys/App-Movil/commit/afd1f264869fbb5f8d2776d0953d0d798b859098) | Update plant setup tests for signed Cloud.Api contract | 3 | 2026-11-12 |
+| Macallys/App-Movil | main | [c81a22c](https://github.com/Macallys/App-Movil/commit/c81a22c4d44835929abe3b2b3fe5729078b99aa6) | Update safety tests for telemetry alerts and override contract | 7 | 2026-11-12 |
 
 <a id="s-6-2-2-6"></a>
 #### 6.2.2.6. Execution Evidence for Sprint Review
 
 Al cierre del Sprint 2 la aplicación móvil se compila y ejecuta, y el flujo completo del backend se ejecuta en local con Docker Compose, que levanta TimescaleDB, el broker Eclipse Mosquitto, Cloud.Api y Plant.Host. Una lectura publicada en el tópico MQTT del dispositivo llega al host de la planta, se guarda en la base local y se envía a la nube, donde la consultan el dashboard y el historial de la aplicación web integrada con la API.
 
-**URL de la aplicación web:** [https://safeplant-web-client.vercel.app/signIn](https://safeplant-web-client.vercel.app/signIn)
+**Backend: entorno local con Docker Compose**
 
-**Proyecto Wokwi del nodo:** [Wokwi — nodo SafePlant](https://wokwi.com/projects/477285427305212929)
+El comando docker compose up levanta cuatro servicios: TimescaleDB (puerto 5432), Eclipse Mosquitto (puerto 1883), Cloud.Api (puerto 8080) y Plant.Host. Desde `http://localhost:8080/swagger/index.html` se prueban los endpoints documentados en la sección 6.2.2.7.
 
-Las capturas siguientes recorren el flujo en este orden: docker compose up con los cuatro servicios, el dashboard de la aplicación web con la lectura, y la app móvil con inicio de sesión, panel de seguridad, alertas activas y configuración de áreas.
+![Backend: servicios levantados con Docker Compose](../assets/06-capitulo-vi/sprints/execution_sprint2_compose.png)
 
-![Execution Evidence](../assets/06-capitulo-vi/sprints/execution_sprint2_flow.png)
+![Backend: documentación Swagger UI de Cloud.Api](../assets/06-capitulo-vi/sprints/execution_sprint2_swagger.png)
+
+**Web: aplicación del Encargado de Planta integrada con la API**
+
+La aplicación web deja de usar datos de muestra en el inicio de sesión, el dashboard y el historial, y consume la API mediante un interceptor de autenticación y un guard de sesión.
+
+![Web: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_web_signin.png)
+
+![Web: dashboard de métricas por área](../assets/06-capitulo-vi/sprints/execution_sprint2_web_dashboard.png)
+
+![Web: historial por área](../assets/06-capitulo-vi/sprints/execution_sprint2_web_history.png)
+
+**Mobile: aplicación del Supervisor de Seguridad**
+
+La aplicación móvil arranca en una pantalla de inicio que restaura la sesión guardada. Desde el inicio de sesión el supervisor accede a dos módulos: Seguridad, con el panel de áreas, y Configuración de planta.
+
+![Mobile: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_signin.png)
+
+![Mobile: recuperación y restablecimiento de credenciales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_recovery.png)
+
+![Mobile: panel de seguridad con el estado operativo de las áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_home.png)
+
+![Mobile: detalle del área con su última telemetría](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_area_detail.png)
+
+![Mobile: alertas activas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_alerts.png)
+
+![Mobile: historial corto de exposiciones](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_exposures.png)
+
+![Mobile: acciones ejecutadas por los actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_actions.png)
+
+![Mobile: override manual de actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_override.png)
+
+![Mobile: configuración de planta y alta de áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_setup.png)
+
+![Mobile: configuración de umbrales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_thresholds.png)
+
+![Mobile: registro e inventario de dispositivos](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_devices.png)
+
+
 
 <a id="s-6-2-2-7"></a>
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
