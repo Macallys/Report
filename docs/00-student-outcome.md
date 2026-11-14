@@ -464,6 +464,114 @@ SafePlant
       <td align="left">Equipo Macallys</td>
       <td align="left">Cierre del informe para la entrega del Trabajo Parcial (TB1): diseño estratégico y táctico DDD, arquitectura, UI/UX e incremento del Sprint 1.</td>
     </tr>
+    <tr>
+      <td align="left">3.1</td>
+      <td align="left">2026-11-13</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Sprint Planning 2: meta del sprint, velocidad 43 SP, revisión y retrospectiva del Sprint 1.</td>
+    </tr>
+    <tr>
+      <td align="left">3.2</td>
+      <td align="left">2026-11-13</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Aspect Leaders and Collaborators del Sprint 2 (equipo de cinco integrantes).</td>
+    </tr>
+    <tr>
+      <td align="left">3.3</td>
+      <td align="left">2026-10-23</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Backend Plant Monitoring: registro y edición de áreas (US20) y umbrales por área (US21).</td>
+    </tr>
+    <tr>
+      <td align="left">3.4</td>
+      <td align="left">2026-11-11</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Backend Device &amp; Edge Management: credenciales, asociación de dispositivos y setup de área (US22).</td>
+    </tr>
+    <tr>
+      <td align="left">3.5</td>
+      <td align="left">2026-11-11</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Telemetría por área: dashboard, historial y última lectura (TS01 / TS09).</td>
+    </tr>
+    <tr>
+      <td align="left">3.6</td>
+      <td align="left">2026-11-11</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Backend Safety &amp; Actuation: estado operativo, alertas, exposiciones, acciones y override (US14, US18, TS10).</td>
+    </tr>
+    <tr>
+      <td align="left">3.7</td>
+      <td align="left">2026-11-12</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Recepción MQTT, persistencia local en planta, Docker Compose y políticas de exposición (US27 / US28).</td>
+    </tr>
+    <tr>
+      <td align="left">3.8</td>
+      <td align="left">2026-11-12</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Integración de la aplicación web con Cloud.Api (login, dashboard e historial).</td>
+    </tr>
+    <tr>
+      <td align="left">3.9</td>
+      <td align="left">2026-10-29</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Primera versión de la aplicación móvil Flutter del Supervisor (sesión y estructura base).</td>
+    </tr>
+    <tr>
+      <td align="left">3.10</td>
+      <td align="left">2026-11-12</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">App móvil: panel de seguridad, alertas, exposiciones, acciones y override (US14, US18, US26, US32, US33).</td>
+    </tr>
+    <tr>
+      <td align="left">3.11</td>
+      <td align="left">2026-11-12</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">App móvil: configuración de planta (áreas, umbrales y dispositivos) alineada con Cloud.Api (US20, US21, US22).</td>
+    </tr>
+    <tr>
+      <td align="left">3.12</td>
+      <td align="left">2026-11-12</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Suite de pruebas Flutter (296 casos) y evidencia de testing del Sprint 2.</td>
+    </tr>
+    <tr>
+      <td align="left">3.13</td>
+      <td align="left">2026-11-05</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Diseño visual de las pantallas de la app móvil (rama diseno/ui-movil).</td>
+    </tr>
+    <tr>
+      <td align="left">3.14</td>
+      <td align="left">2026-11-12</td>
+      <td align="left">Baldeon Vivar, Santiago Armando</td>
+      <td align="left">Contrato MQTT del nodo ESP32 y evidencia del circuito IoT en Wokwi.</td>
+    </tr>
+    <tr>
+      <td align="left">3.15</td>
+      <td align="left">2026-11-13</td>
+      <td align="left">Gordillo Ramos, Santiago Alonso</td>
+      <td align="left">Documentación del Sprint 2 en el informe: planning, backlog, desarrollo, pruebas, ejecución, servicios, despliegue y colaboración.</td>
+    </tr>
+    <tr>
+      <td align="left">3.16</td>
+      <td align="left">2026-11-13</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Evidencias de despliegue del Sprint 2 (Azure, Vercel, GitHub Pages, APK móvil y entorno local).</td>
+    </tr>
+    <tr>
+      <td align="left">3.17</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Actualización de velocidad, asignaciones y trazabilidad de commits del Sprint 2.</td>
+    </tr>
+    <tr>
+      <td align="left">3.18</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Registro y cierre de la entrega AV2.</td>
+    </tr>
   </tbody>
 </table>
 
