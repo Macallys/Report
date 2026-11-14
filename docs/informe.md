@@ -585,10 +585,15 @@ SafePlant
 
 **Entrega:** TB1 (Trabajo Parcial)
 
-
 ![Analíticos de colaboración — captura](../assets/00-front-matter/github-collaboration-insights-1-tb.png)
 
 ![Commits / contribución — captura](../assets/00-front-matter/github-collaboration-insights-2-tb.png)
+
+**Entrega:** AV2
+
+![Analíticos de colaboración — captura](../assets/00-front-matter/github-collaboration-insights-1-av2.png)
+
+![Commits / contribución — captura](../assets/00-front-matter/github-collaboration-insights-2-av2.png)
 
 ---
 
