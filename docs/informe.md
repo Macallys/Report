@@ -7514,8 +7514,8 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
   </thead>
   <tbody>
     <tr>
-      <td align="left">US01</td>
-      <td align="left">View SafePlant system information</td>
+      <td align="left" rowspan="2">US01</td>
+      <td align="left" rowspan="2">View SafePlant system information</td>
       <td align="left">T01</td>
       <td align="left">Hero, propósito y flujo del sistema</td>
       <td align="left">Maquetar la estructura base de la landing (navbar, hero) y las secciones "Qué es SafePlant", "Monitoreo en tiempo real", "Cómo responde el sistema" y "De la detección a la acción automática".</td>
@@ -7524,8 +7524,16 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US02</td>
-      <td align="left">View SafePlant benefits and advantages</td>
+      <td align="left">T22</td>
+      <td align="left">Diseño responsive y navegación interna</td>
+      <td align="left">Adaptar la landing a móvil, tablet y escritorio, y enlazar los ítems de la navbar con anclas a cada sección del sistema.</td>
+      <td align="left">2</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US02</td>
+      <td align="left" rowspan="2">View SafePlant benefits and advantages</td>
       <td align="left">T02</td>
       <td align="left">Sección de beneficios</td>
       <td align="left">Implementar la sección "El valor de SafePlant para tu planta" con las ventajas de la solución.</td>
@@ -7534,8 +7542,16 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US05</td>
-      <td align="left">View system technical architecture</td>
+      <td align="left">T23</td>
+      <td align="left">Contenido e íconos de beneficios</td>
+      <td align="left">Redactar los textos de cada beneficio (reducción de la exposición, respuesta automática y trazabilidad) e incorporar los íconos y recursos gráficos de la sección.</td>
+      <td align="left">1</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US05</td>
+      <td align="left" rowspan="2">View system technical architecture</td>
       <td align="left">T03</td>
       <td align="left">Sección de arquitectura técnica</td>
       <td align="left">Implementar la sección que explica la relación entre dispositivos ESP32, IoT Gateway, nube, aplicación móvil y aplicación web.</td>
@@ -7544,11 +7560,27 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US06</td>
-      <td align="left">Navigate to the operations mobile app</td>
+      <td align="left">T24</td>
+      <td align="left">Diagrama del flujo de arquitectura</td>
+      <td align="left">Elaborar e integrar en la sección el diagrama visual del recorrido del dato: ESP32 → IoT Gateway → nube → aplicaciones móvil y web.</td>
+      <td align="left">2</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US06</td>
+      <td align="left" rowspan="2">Navigate to the operations mobile app</td>
       <td align="left">T21</td>
       <td align="left">Call-to-action hacia la aplicación móvil</td>
       <td align="left">Incluir en la landing un acceso identificable a la aplicación móvil del Supervisor de Seguridad, distinto del acceso web. El botón App móvil apunta a https://app.safeplant.io/mobile/login. Ese dominio aún no resuelve y la aplicación móvil no está publicada en este sprint.</td>
+      <td align="left">1</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">To-Review</td>
+    </tr>
+    <tr>
+      <td align="left">T25</td>
+      <td align="left">Acceso móvil en menú colapsable y pie de página</td>
+      <td align="left">Incluir el acceso a la aplicación móvil en el menú colapsable de la navbar para pantallas pequeñas y en el pie de página de la landing.</td>
       <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">To-Review</td>
@@ -7590,8 +7622,8 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US23</td>
-      <td align="left">Plant metrics dashboard and full history</td>
+      <td align="left" rowspan="2">US23</td>
+      <td align="left" rowspan="2">Plant metrics dashboard and full history</td>
       <td align="left">T08</td>
       <td align="left">Dashboard de métricas e historial</td>
       <td align="left">Implementar el dashboard de métricas por área, el historial de alertas y el gráfico de telemetría, con datos de muestra.</td>
@@ -7600,8 +7632,16 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US11</td>
-      <td align="left">Create user accounts as Plant Manager</td>
+      <td align="left">T26</td>
+      <td align="left">Filtros del historial por área y fechas</td>
+      <td align="left">Implementar los filtros por área y rango de fechas en el historial de alertas, con el estado vacío cuando no hay registros.</td>
+      <td align="left">3</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US11</td>
+      <td align="left" rowspan="2">Create user accounts as Plant Manager</td>
       <td align="left">T09</td>
       <td align="left">Directorio y creación de cuentas</td>
       <td align="left">Implementar el directorio de cuentas y el panel lateral de creación de cuentas para Safety Supervisors y Plant Managers.</td>
@@ -7610,12 +7650,28 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US12</td>
-      <td align="left">Assign user roles and permissions</td>
+      <td align="left">T27</td>
+      <td align="left">Validaciones del formulario de creación de cuentas</td>
+      <td align="left">Validar los campos obligatorios, el formato del correo y el rol seleccionado antes de crear la cuenta, y mostrar los mensajes de error en el panel lateral.</td>
+      <td align="left">2</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US12</td>
+      <td align="left" rowspan="2">Assign user roles and permissions</td>
       <td align="left">T10</td>
       <td align="left">Administración de roles</td>
       <td align="left">Implementar la asignación y modificación de roles desde el directorio de cuentas.</td>
       <td align="left">3</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T28</td>
+      <td align="left">Confirmación y restricción del cambio de rol</td>
+      <td align="left">Mostrar un diálogo de confirmación antes de modificar un rol y ocultar las acciones de administración a las cuentas que no tienen rol Plant Manager.</td>
+      <td align="left">2</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
@@ -7793,15 +7849,15 @@ Commits realizados sobre el repositorio del informe entre el 20 de septiembre y 
 
 | User Story | Tarea | Commits | Estado |
 | :--- | :--- | :--- | :---: |
-| US01 View SafePlant system information | T01 | `ccefe6d` | Done |
-| US02 View SafePlant benefits and advantages | T02 | `ccefe6d` | Done |
-| US05 View system technical architecture | T03 | `ccefe6d` | Done |
-| US06 Navigate to the operations mobile app | T21 | `ccefe6d` | To-Review |
+| US01 View SafePlant system information | T01, T22 | `ccefe6d` | Done |
+| US02 View SafePlant benefits and advantages | T02, T23 | `ccefe6d` | Done |
+| US05 View system technical architecture | T03, T24 | `ccefe6d` | Done |
+| US06 Navigate to the operations mobile app | T21, T25 | `ccefe6d` | To-Review |
 | US09 Navigate to the governance and metrics web application | T04, T05 | `ccefe6d` | To-Review |
 | US08 Plant Manager sign-in on the web application | T06, T07 | `695489b`, `eaec417`, `5e084de` | Done |
-| US23 Plant metrics dashboard and full history | T08 | `5e084de` | Done |
-| US11 Create user accounts as Plant Manager | T09 | `d1528d7` (vista web), `57c278c` (endpoints) | Done |
-| US12 Assign user roles and permissions | T10 | `d1528d7` (vista web), `57c278c` (endpoints) | Done |
+| US23 Plant metrics dashboard and full history | T08, T26 | `5e084de` | Done |
+| US11 Create user accounts as Plant Manager | T09, T27 | `d1528d7` (vista web), `57c278c` (endpoints) | Done |
+| US12 Assign user roles and permissions | T10, T28 | `d1528d7` (vista web), `57c278c` (endpoints) | Done |
 | TS21 User authentication API endpoint for mobile and web | T12 – T16 | `7d011b6`, `be399e5`, `b2d0c6a`, `69cd193`, `57c278c`, `36fa06f`, `5abf8c9`, `2c6d416`, `9b8aa1b`, `7d738d6` | Done |
 
 
@@ -8113,8 +8169,8 @@ Las user stories asignadas suman 63 story points:
   </thead>
   <tbody>
     <tr>
-      <td align="left">US20</td>
-      <td align="left">Register and manage industrial areas</td>
+      <td align="left" rowspan="2">US20</td>
+      <td align="left" rowspan="2">Register and manage industrial areas</td>
       <td align="left">T29</td>
       <td align="left">Registro y edición de áreas</td>
       <td align="left">Implementar <code>POST /api/v1/areas</code> y <code>PUT /api/v1/areas/{areaId}</code> con nombre y ubicación, y el rechazo de nombres duplicados.</td>
@@ -8123,12 +8179,28 @@ Las user stories asignadas suman 63 story points:
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US21</td>
-      <td align="left">Configure environmental thresholds by area</td>
+      <td align="left">T54</td>
+      <td align="left">Validación de datos del área</td>
+      <td align="left">Validar los campos obligatorios y la longitud del nombre y la ubicación del área, y devolver respuestas de error descriptivas cuando la solicitud es inválida.</td>
+      <td align="left">2</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US21</td>
+      <td align="left" rowspan="2">Configure environmental thresholds by area</td>
       <td align="left">T30</td>
       <td align="left">Umbrales por área</td>
       <td align="left">Implementar <code>PUT /api/v1/areas/{areaId}/thresholds</code> con el límite de CO₂ en ppm y el de ruido en dB.</td>
       <td align="left">4</td>
+      <td align="left">Iglesias Pérez, Sergio Sebastián</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T55</td>
+      <td align="left">Validación de rangos de umbrales</td>
+      <td align="left">Rechazar umbrales negativos o fuera de rango y exigir valores enteros para el límite de CO₂ (ppm) y de ruido (dB) antes de persistirlos.</td>
+      <td align="left">2</td>
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Done</td>
     </tr>
@@ -8275,8 +8347,8 @@ Las user stories asignadas suman 63 story points:
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">US32</td>
-      <td align="left">Remote manual actuator override in emergency</td>
+      <td align="left" rowspan="2">US32</td>
+      <td align="left" rowspan="2">Remote manual actuator override in emergency</td>
       <td align="left">T50</td>
       <td align="left">Override de actuadores (Flutter)</td>
       <td align="left">Implementar la pantalla de override manual de extractor, sirena y mamparas, que llama a <code>/api/v1/areas/{areaId}/actuators/override</code>.</td>
@@ -8285,12 +8357,28 @@ Las user stories asignadas suman 63 story points:
       <td align="left">To-Review</td>
     </tr>
     <tr>
-      <td align="left" rowspan="1">US20 / US21 / US22</td>
-      <td align="left">Manage areas, thresholds and devices from the mobile app</td>
+      <td align="left">T56</td>
+      <td align="left">Confirmación y resultado del override (Flutter)</td>
+      <td align="left">Mostrar un diálogo de confirmación antes de enviar la orden al actuador e informar al supervisor si la orden fue aceptada o si ocurrió un error.</td>
+      <td align="left">3</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">To-Review</td>
+    </tr>
+    <tr>
+      <td align="left" rowspan="2">US20 / US21 / US22</td>
+      <td align="left" rowspan="2">Manage areas, thresholds and devices from the mobile app</td>
       <td align="left">T51</td>
       <td align="left">Configuración de planta (Flutter)</td>
       <td align="left">Implementar el alta y la edición de áreas, la configuración de umbrales, el registro, el inventario y la revocación de dispositivos, y la vista de configuración del área.</td>
       <td align="left">12</td>
+      <td align="left">Solano Armas, Angelo Héctor</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">T57</td>
+      <td align="left">Validaciones de los formularios de configuración (Flutter)</td>
+      <td align="left">Validar los formularios de áreas, umbrales y dispositivos antes de enviarlos y mostrar en pantalla los errores devueltos por <code>Cloud.Api</code>.</td>
+      <td align="left">4</td>
       <td align="left">Solano Armas, Angelo Héctor</td>
       <td align="left">Done</td>
     </tr>
@@ -8396,8 +8484,8 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 
 | User Story | Tarea | Commits | Estado |
 | :--- | :--- | :--- | :---: |
-| US20 Register and manage industrial areas | T29 | `616b0e0` | Done |
-| US21 Configure environmental thresholds by area | T30 | `698f09a` | Done |
+| US20 Register and manage industrial areas | T29, T54 | `616b0e0` | Done |
+| US21 Configure environmental thresholds by area | T30, T55 | `698f09a` | Done |
 | US22 Register IoT devices by area | T31, T32 | `2d2b742` | Done |
 | TS01 / TS09 Telemetry ingestion and query by area | T33, T34, T35 | `2d2b742`, `b17cf98`, `12e9f14` | Done |
 | US14 Consolidated operational dashboard of plant areas | T36, T37 | `0250c31` (backend), `8ba1ba6`, `2b40542` (móvil) | Done |
@@ -8405,8 +8493,8 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 | US27 / US28 Detect CO₂ excess / Detect excessive noise | T40, T41, T42 | `e8ef621`, `b17cf98`, `58b3bf4` | Done |
 | US07 / US10 / US13 Sesión en la app móvil | T43, T47 | `8ba1ba6`, `2b40542` | Done |
 | US18 / US26 / US33 Alertas, exposiciones y acciones (móvil) | T48, T49 | `8ba1ba6`, `83a3b4b`, `2b40542` | Done |
-| US32 Remote manual actuator override (móvil) | T50 | `8ba1ba6`, `2b40542` | To-Review |
-| US20 / US21 / US22 Configuración de planta (móvil) | T51 | `8ba1ba6`, `8d352a2`, `845ebe0`, `351ecbc`, `aec1652`, `0204f31` | Done |
+| US32 Remote manual actuator override (móvil) | T50, T56 | `8ba1ba6`, `2b40542` | To-Review |
+| US20 / US21 / US22 Configuración de planta (móvil) | T51, T57 | `8ba1ba6`, `8d352a2`, `845ebe0`, `351ecbc`, `aec1652`, `0204f31` | Done |
 | — Diseño visual de la app móvil | T52 | `44f92e7` (rama `diseno/ui-movil`) | To-Review |
 | — Pruebas de la app móvil | T53 | `afd1f26`, `c81a22c` | Done |
 | — Integración de la aplicación web con la API | T44 | `668dacd` | Done |
