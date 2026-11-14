@@ -303,6 +303,7 @@ SafePlant
       <td align="left">Iglesias Pérez, Sergio Sebastián</td>
       <td align="left">Elaboración de Software Architecture Context Level Diagrams.</td>
     </tr>
+    </tr>
     <tr>
       <td align="left">2.1</td>
       <td align="left">2026-10-05</td>
@@ -529,7 +530,7 @@ SafePlant
       <td align="left">3.12</td>
       <td align="left">2026-11-12</td>
       <td align="left">Solano Armas, Angelo Héctor</td>
-      <td align="left">Suite de pruebas Flutter (296 casos) y evidencia de testing del Sprint 2.</td>
+      <td align="left">Suite de pruebas Flutter (296), backend (44) y frontend Angular (64) documentadas en 6.2.2.5.</td>
     </tr>
     <tr>
       <td align="left">3.13</td>
@@ -567,6 +568,18 @@ SafePlant
       <td align="left">Equipo Macallys</td>
       <td align="left">Registro y cierre de la entrega AV2.</td>
     </tr>
+    <tr>
+      <td align="left">3.19</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Documentación de Unit Tests de backend (44 casos) en 6.2.2.5 Testing Suite Evidence.</td>
+    </tr>
+    <tr>
+      <td align="left">3.20</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Documentación de pruebas frontend Angular (64 casos) en 6.2.2.5 Testing Suite Evidence.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -582,12 +595,6 @@ SafePlant
 ![Analíticos de colaboración — captura](../assets/00-front-matter/github-collaboration-insights-1.png)
 
 ![Commits / contribución — captura](../assets/00-front-matter/github-collaboration-insights-2.png)
-
-**Entrega:** TB1 (Trabajo Parcial)
-
-![Analíticos de colaboración — captura](../assets/00-front-matter/github-collaboration-insights-1-tb.png)
-
-![Commits / contribución — captura](../assets/00-front-matter/github-collaboration-insights-2-tb.png)
 
 **Entrega:** AV2
 
@@ -746,6 +753,9 @@ SafePlant
             - [6.2.2.3. Sprint Backlog 2](#s-6-2-2-3)
             - [6.2.2.4. Development Evidence for Sprint Review](#s-6-2-2-4)
             - [6.2.2.5. Testing Suite Evidence for Sprint Review](#s-6-2-2-5)
+            - [Pruebas de Backend realizadas](#s-pruebas-de-backend-realizadas)
+            - [Pruebas de Frontend realizadas](#s-pruebas-de-frontend-realizadas)
+            - [Pruebas de Mobile realizadas](#s-pruebas-de-mobile-realizadas)
             - [6.2.2.6. Execution Evidence for Sprint Review](#s-6-2-2-6)
             - [6.2.2.7. Services Documentation Evidence for Sprint Review](#s-6-2-2-7)
             - [6.2.2.8. Software Deployment Evidence for Sprint Review](#s-6-2-2-8)
@@ -802,6 +812,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     </tr>
   </tbody>
 </table>
+
 ---
 
 <a id="s-cap-i"></a>
@@ -7218,13 +7229,14 @@ Para el desarrollo colaborativo del ecosistema SafePlant, el equipo utiliza las 
 <a id="s-6-1-2"></a>
 ### 6.1.2. Source Code Management
 
-El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys` ([https://github.com/Macallys](https://github.com/Macallys)). Actualmente, la organización alberga los siguientes repositorios:
+El código fuente y la documentación del proyecto se gestionan centralizadamente utilizando **GitHub** bajo la organización `Macallys`. Actualmente, la organización alberga los siguientes repositorios principales:
 
-*   **`Report`:** Repositorio central que contiene la documentación y el informe del proyecto. [https://github.com/Macallys/Report](https://github.com/Macallys/Report)
-*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático. [https://github.com/Macallys/landing-page](https://github.com/Macallys/landing-page)
-*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular. [https://github.com/Macallys/safeplant-web-client](https://github.com/Macallys/safeplant-web-client)
-*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core. [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend)
-*   **`App-Movil`:** Contiene el código fuente de la aplicación móvil del Supervisor de Seguridad. [https://github.com/Macallys/App-Movil](https://github.com/Macallys/App-Movil)
+[https://github.com/Macallys/Report](https://github.com/Macallys/Report)
+
+*   **`Report`:** Repositorio central que contiene la documentación  y el informe del proyecto.
+*   **`safeplant-web-backend`:** Contiene el código fuente del Web Monolithic Backend y la Edge Application desarrollados en ASP.NET Core.
+*   **`safeplant-web-client`:** Contiene el código fuente de la aplicación web frontend en Angular.
+*   **`landing-page`:** Repositorio dedicado al sitio web informativo estático.
 
 **Estrategia de Ramas**
 El equipo ha adaptado su flujo de trabajo para agilizar la integración continua. Inicialmente, se implementó un enfoque basado en ramas de características específicas para segmentar el trabajo. Sin embargo, la estrategia actual se ha simplificado: los miembros del equipo ahora integran sus aportes y actualizaciones de forma directa en la rama `develop` para acelerar el ciclo de desarrollo y consolidación. 
@@ -7491,73 +7503,41 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
   </thead>
   <tbody>
     <tr>
-      <td align="left" rowspan="2">US01</td>
-      <td align="left" rowspan="2">View SafePlant system information</td>
+      <td align="left">US01</td>
+      <td align="left">View SafePlant system information</td>
       <td align="left">T01</td>
-      <td align="left">Estructura base, hero y propósito</td>
-      <td align="left">Maquetar la estructura base de la landing (navbar, hero) y la sección "Qué es SafePlant".</td>
+      <td align="left">Hero, propósito y flujo del sistema</td>
+      <td align="left">Maquetar la estructura base de la landing (navbar, hero) y las secciones "Qué es SafePlant", "Monitoreo en tiempo real", "Cómo responde el sistema" y "De la detección a la acción automática".</td>
+      <td align="left">5</td>
+      <td align="left">Sanchez Gonzales, Gabriel</td>
+      <td align="left">Done</td>
+    </tr>
+    <tr>
+      <td align="left">US02</td>
+      <td align="left">View SafePlant benefits and advantages</td>
+      <td align="left">T02</td>
+      <td align="left">Sección de beneficios</td>
+      <td align="left">Implementar la sección "El valor de SafePlant para tu planta" con las ventajas de la solución.</td>
       <td align="left">2</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">T22</td>
-      <td align="left">Secciones de monitoreo y flujo del sistema</td>
-      <td align="left">Implementar las secciones "Monitoreo en tiempo real", "Cómo responde el sistema" y "De la detección a la acción automática".</td>
-      <td align="left">3</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US02</td>
-      <td align="left" rowspan="2">View SafePlant benefits and advantages</td>
-      <td align="left">T02</td>
-      <td align="left">Sección de beneficios</td>
-      <td align="left">Maquetar la sección "El valor de SafePlant para tu planta" con las ventajas de la solución.</td>
-      <td align="left">1</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left">T23</td>
-      <td align="left">Diseño responsivo de la sección de beneficios</td>
-      <td align="left">Adaptar las tarjetas de beneficios a resoluciones de escritorio, tablet y móvil.</td>
-      <td align="left">1</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US05</td>
-      <td align="left" rowspan="2">View system technical architecture</td>
+      <td align="left">US05</td>
+      <td align="left">View system technical architecture</td>
       <td align="left">T03</td>
       <td align="left">Sección de arquitectura técnica</td>
-      <td align="left">Maquetar la sección que explica la relación entre dispositivos ESP32, IoT Gateway, nube, aplicación móvil y aplicación web.</td>
-      <td align="left">1</td>
+      <td align="left">Implementar la sección que explica la relación entre dispositivos ESP32, IoT Gateway, nube, aplicación móvil y aplicación web.</td>
+      <td align="left">2</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">T24</td>
-      <td align="left">Validación del contenido técnico</td>
-      <td align="left">Revisar que los textos de la sección de arquitectura sean coherentes con la arquitectura documentada en el informe y ajustar el diseño responsivo.</td>
-      <td align="left">1</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US06</td>
-      <td align="left" rowspan="2">Navigate to the operations mobile app</td>
+      <td align="left">US06</td>
+      <td align="left">Navigate to the operations mobile app</td>
       <td align="left">T21</td>
       <td align="left">Call-to-action hacia la aplicación móvil</td>
       <td align="left">Incluir en la landing un acceso identificable a la aplicación móvil del Supervisor de Seguridad, distinto del acceso web. El botón App móvil apunta a https://app.safeplant.io/mobile/login. Ese dominio aún no resuelve y la aplicación móvil no está publicada en este sprint.</td>
-      <td align="left">1</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">To-Review</td>
-    </tr>
-    <tr>
-      <td align="left">T25</td>
-      <td align="left">Verificación del enlace a la aplicación móvil</td>
-      <td align="left">Comprobar el comportamiento del botón App móvil en escritorio y móvil, y validar la redirección cuando la aplicación móvil esté publicada.</td>
       <td align="left">1</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">To-Review</td>
@@ -7599,56 +7579,32 @@ Las user stories asignadas suman 27 story points, dentro de la velocidad de 30: 
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left" rowspan="2">US23</td>
-      <td align="left" rowspan="2">Plant metrics dashboard and full history</td>
+      <td align="left">US23</td>
+      <td align="left">Plant metrics dashboard and full history</td>
       <td align="left">T08</td>
-      <td align="left">Dashboard de métricas por área</td>
-      <td align="left">Implementar el dashboard de métricas por área con datos de muestra.</td>
-      <td align="left">4</td>
+      <td align="left">Dashboard de métricas e historial</td>
+      <td align="left">Implementar el dashboard de métricas por área, el historial de alertas y el gráfico de telemetría, con datos de muestra.</td>
+      <td align="left">8</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">T26</td>
-      <td align="left">Historial de alertas y gráfico de telemetría</td>
-      <td align="left">Implementar el historial de alertas y el gráfico de telemetría, con datos de muestra.</td>
-      <td align="left">4</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US11</td>
-      <td align="left" rowspan="2">Create user accounts as Plant Manager</td>
+      <td align="left">US11</td>
+      <td align="left">Create user accounts as Plant Manager</td>
       <td align="left">T09</td>
-      <td align="left">Directorio de cuentas</td>
-      <td align="left">Implementar el directorio de cuentas de Safety Supervisors y Plant Managers.</td>
-      <td align="left">2</td>
+      <td align="left">Directorio y creación de cuentas</td>
+      <td align="left">Implementar el directorio de cuentas y el panel lateral de creación de cuentas para Safety Supervisors y Plant Managers.</td>
+      <td align="left">5</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
     <tr>
-      <td align="left">T27</td>
-      <td align="left">Panel de creación de cuentas</td>
-      <td align="left">Implementar el panel lateral de creación de cuentas con su formulario y validaciones.</td>
-      <td align="left">3</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left" rowspan="2">US12</td>
-      <td align="left" rowspan="2">Assign user roles and permissions</td>
+      <td align="left">US12</td>
+      <td align="left">Assign user roles and permissions</td>
       <td align="left">T10</td>
-      <td align="left">Asignación de roles</td>
-      <td align="left">Implementar la asignación de rol a las cuentas desde el directorio de cuentas.</td>
-      <td align="left">2</td>
-      <td align="left">Sanchez Gonzales, Gabriel</td>
-      <td align="left">Done</td>
-    </tr>
-    <tr>
-      <td align="left">T28</td>
-      <td align="left">Modificación de roles</td>
-      <td align="left">Implementar el cambio de rol de una cuenta existente desde el directorio de cuentas.</td>
-      <td align="left">1</td>
+      <td align="left">Administración de roles</td>
+      <td align="left">Implementar la asignación y modificación de roles desde el directorio de cuentas.</td>
+      <td align="left">3</td>
       <td align="left">Sanchez Gonzales, Gabriel</td>
       <td align="left">Done</td>
     </tr>
@@ -7939,7 +7895,7 @@ Los pasos realizados fueron los siguientes:
 <a id="s-6-2-1-9"></a>
 #### 6.2.1.9. Team Collaboration Insights during Sprint
 
-La colaboración del Sprint 1 se midió sobre los cuatro repositorios de la organización. Para el repositorio "Report" se consideran los commits del 20 de septiembre al 7 de octubre de 2026; para los repositorios de producto, su historial completo. Las cifras son reproducibles con `git shortlog -sn --all` y agrupan las distintas identidades de Git de un mismo integrante.
+La colaboración del Sprint 1 se midió sobre los cuatro repositorios de la organización. Para el repositorio `Report` se consideran los commits del 20 de septiembre al 7 de octubre de 2026; para los repositorios de producto, su historial completo. Las cifras son reproducibles con `git shortlog -sn --all` y agrupan las distintas identidades de Git de un mismo integrante.
 
 | Integrante | `Report` | `landing-page` | `safeplant-web-client` | `safeplant-web-backend` | Total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
@@ -7957,15 +7913,17 @@ La implementación de los productos se concentró en dos integrantes: Sanchez Go
 
 Para el Sprint 2 el equipo adopta los siguientes compromisos:
 
-- Cada User Story se desarrollará en su propia rama "feature/*", creada por el integrante responsable, e integrada a "develop" mediante Pull Request revisado por otro integrante.
+- Cada User Story se desarrollará en su propia rama `feature/*`, creada por el integrante responsable, e integrada a `develop` mediante Pull Request revisado por otro integrante.
 - Todos los integrantes tendrán commits propios en al menos un repositorio de producto.
-- El trabajo realizado en pareja se registrará con el trailer Co-authored-by para que el historial refleje a ambos participantes.
+- El trabajo realizado en pareja se registrará con el trailer `Co-authored-by` para que el historial refleje a ambos participantes.
 
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab.png)
 
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab1.png)
 
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab2.png)
+
+---
 
 <a id="s-6-2-2"></a>
 ### 6.2.2. Sprint 2
@@ -8447,6 +8405,115 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 
 <a id="s-6-2-2-5"></a>
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
+
+<a id="s-pruebas-de-backend-realizadas"></a>
+#### Pruebas de Backend realizadas
+
+**Repository:** https://github.com/Macallys/safeplant-web-backend.git
+
+Los Unit Tests del backend se implementaron en el proyecto `tests/SafePlant.UnitTests` con .NET, Visual Studio Test Explorer y FluentAssertions. Validan la lógica de Application (servicios de Identity & Access, Plant Monitoring y Safety & Actuation) y de Domain (políticas de actuadores, exposición, sesión y cuentas). Para no depender de Azure ni de TimescaleDB, los servicios de Application usan dobles de los repositorios e interfaces del dominio. La suite se ejecuta desde el Explorador de pruebas de Visual Studio o con:
+
+```bash
+dotnet test tests/SafePlant.UnitTests
+```
+
+Resultado de la corrida documentada: 44 pruebas superadas, 0 con error, 0 omitidas (290 ms).
+
+**Unit Tests — Application**
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `AreaServiceTests.cs` | Unit Test | US20 — Register and manage industrial areas | Valida el alta de áreas: rechaza nombre vacío o duplicado, deniega el canal web del Plant Manager y acepta la creación desde el Supervisor. | Passed (4) |
+| `ThresholdServiceTests.cs` | Unit Test | US21 — Configure environmental thresholds by area | Valida la configuración de umbrales de CO₂ y ruido por área en el servicio de aplicación. | Passed (4) |
+| `SignInServiceTests.cs` | Unit Test | TS21 / US07 / US08 — Autenticación móvil y web | Valida el inicio de sesión: rechaza contraseña incorrecta y cuenta deshabilitada; entrega token para Supervisor y para el canal autorizado. | Passed (4) |
+| `OverrideServiceTests.cs` | Unit Test | US32 / TS10 — Remote manual actuator override | Valida el override remoto: propaga indisponibilidad del edge, rechaza estados Failed y envía el comando cuando el actuador está operativo. | Passed (5) |
+
+![Testing Backend Application](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_application.png)
+
+**Unit Tests — Domain**
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `ActuatorPolicyTests.cs` | Unit Test | US27 / US28 / US33 — Detección de exceso y acciones automáticas | Valida la política de actuadores: despliegue o repliegue de mampara, encendido o apagado de extractor y sirena según CO₂, ruido y presencia. | Passed (13) |
+| `ExposurePolicyTests.cs` | Unit Test | US26 / US27 / US28 — Exposición de personal | Valida la severidad de exposición (None, Medium, High) al correlacionar lecturas ambientales con presencia. | Passed (8) |
+| `SessionTests.cs` | Unit Test | TS21 / US07 / US08 — Sesión autenticada | Valida el ciclo de vida de la sesión: cierre explícito y expiración. | Passed (3) |
+| `UserAccountTests.cs` | Unit Test | US11 / US12 — Cuentas y roles | Valida normalización de correo y restricción de canal por rol (Plant Manager solo Web; Supervisor solo Mobile). | Passed (3) |
+
+![Testing Backend Domain](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_domain.png)
+
+**Test Execution Evidence (Backend)**
+
+La corrida completa en Visual Studio reportó 44 pruebas superadas en Application (17) y Domain (27).
+
+![Testing Backend Execution](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_execution.png)
+
+| Capa | Archivos de prueba | Casos de prueba | Cobertura |
+| :--- | ---: | ---: | :--- |
+| Application | 4 | 17 | Áreas, umbrales, sign-in y override |
+| Domain | 4 | 27 | Políticas de actuadores y exposición, sesión y cuentas |
+| **Total** | **8** | **44** | |
+
+<a id="s-pruebas-de-frontend-realizadas"></a>
+#### Pruebas de Frontend realizadas
+
+**Repository:** https://github.com/Macallys/safeplant-web-client.git
+
+Los Unit Tests y Component Tests del frontend se implementaron con Angular (`ng test` / Vitest) sobre archivos `.spec.ts` en `src/app`. Cubren el núcleo de sesión y autenticación, el módulo de cuentas (Identity & Access en web) y el módulo de métricas (dashboard, historial y telemetría). Para no depender de Cloud.Api en Azure, las pruebas usan servicios mockeados (`accounts.mock.api` y dobles de la API de métricas). La suite se ejecuta con:
+
+```bash
+npx ng test --watch=false
+```
+
+Resultado de la corrida documentada: 64 pruebas superadas (2.58 s).
+
+**Unit Tests**
+
+Los Unit Tests validan utilidades, stores, guards, interceptores y clientes API de forma aislada.
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `session.spec.ts` | Unit Test | US08 / TS21 — Sesión del Encargado de Planta | Valida el ciclo de vida de la sesión en el cliente web. | Passed (6) |
+| `session.guard.spec.ts` | Unit Test | US08 — Acceso protegido a rutas web | Valida el guard de sesión antes de entrar al panel y al historial. | Passed (3) |
+| `auth.interceptor.spec.ts` | Unit Test | TS21 — JWT en peticiones a Cloud.Api | Valida que el interceptor adjunta el token y reacciona a respuestas no autorizadas. | Passed (6) |
+| `auth.store.spec.ts` | Unit Test | US08 — Sign-in web | Valida el estado de autenticación del store tras iniciar o cerrar sesión. | Passed (5) |
+| `auth.api.spec.ts` | Unit Test | US08 / TS21 — Cliente de autenticación | Valida el contrato del cliente HTTP de autenticación con respuestas mockeadas. | Passed |
+| `accounts.api.spec.ts` | Unit Test | US11 / US12 — Directorio de cuentas | Valida el cliente API de cuentas y roles con `accounts.mock.api`. | Passed (3) |
+| `metrics.api.spec.ts` | Unit Test | US14 / US23 — Plant metrics dashboard and full history | Valida el cliente API de métricas (dashboard e historial) con datos mockeados. | Passed (3) |
+| `safety-rules.spec.ts` | Unit Test | US14 / US18 — Reglas de estado operativo | Valida la evaluación de reglas de seguridad usadas en el panel web. | Passed |
+| `app.routes.spec.ts` | Unit Test | US08 / US11 / US14 — Enrutamiento web | Valida las rutas del Encargado de Planta (sign-in, dashboard, historial, cuentas). | Passed (3) |
+| `app.spec.ts` | Unit Test | — Arranque de la aplicación | Valida la creación del componente raíz. | Passed (2) |
+
+**Component / Integration Tests**
+
+Los Component Tests e Integration Tests frontend validan la interacción entre vistas del canal web y servicios mockeados. Simulan respuestas de autenticación, telemetría, historial y directorio de cuentas para comprobar que la interfaz reacciona correctamente.
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `sign-in.spec.ts` | Component Test | US08 — Plant Manager sign-in on the web application | Valida el formulario de inicio de sesión y el flujo hacia la sesión autenticada. | Passed (4) |
+| `dashboard.spec.ts` | Component Test / Integration Test | US14 — Consolidated operational dashboard of plant areas | Valida el panel de control con telemetría ambiental mockeada. | Passed (7) |
+| `history.spec.ts` | Component Test / Integration Test | US23 — Plant metrics dashboard and full history | Valida la carga del historial ambiental y el filtrado con datos mockeados. | Passed (8) |
+| `telemetry-chart.spec.ts` | Component Test | US23 — Plant metrics dashboard and full history | Valida el renderizado del gráfico de telemetría a partir de series mockeadas. | Passed (5) |
+| `accounts.spec.ts` | Component Test / Integration Test | US11 / US12 — Create user accounts / Assign roles | Valida el directorio de cuentas y la administración de roles con API mockeada. | Passed |
+
+![Testing Frontend Execution](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_execution.png)
+
+**Test Execution Evidence (Frontend)**
+
+La corrida completa con `npx ng test --watch=false` reportó 64 pruebas superadas en 2.58 s. Las capturas siguientes muestran la cola de archivos `.spec.ts` y el avance de la suite hasta el resumen final.
+
+![Testing Frontend Queue](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_queue.png)
+
+![Testing Frontend Running](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_running.png)
+
+| Módulo | Cobertura | Resultado |
+| :--- | :--- | :---: |
+| Core / Auth / App | Sesión, guard, interceptor, store, rutas y arranque | Passed |
+| Accounts | API de cuentas y directorio / roles | Passed |
+| Metrics | Dashboard, historial, gráfico de telemetría, API y reglas de seguridad | Passed |
+| **Total (corrida)** | Suite Angular `ng test --watch=false` | **64 Passed** |
+
+<a id="s-pruebas-de-mobile-realizadas"></a>
+#### Pruebas de Mobile realizadas
 
 **Mobile Testing Suite Evidence**
 

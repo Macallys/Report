@@ -534,7 +534,7 @@ SafePlant
       <td align="left">3.12</td>
       <td align="left">2026-11-12</td>
       <td align="left">Solano Armas, Angelo Héctor</td>
-      <td align="left">Suite de pruebas Flutter (296 casos) y evidencia de testing del Sprint 2.</td>
+      <td align="left">Suite de pruebas Flutter (296), backend (44) y frontend Angular (64) documentadas en 6.2.2.5.</td>
     </tr>
     <tr>
       <td align="left">3.13</td>
@@ -571,6 +571,18 @@ SafePlant
       <td align="left">2026-11-14</td>
       <td align="left">Equipo Macallys</td>
       <td align="left">Registro y cierre de la entrega AV2.</td>
+    </tr>
+    <tr>
+      <td align="left">3.19</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Documentación de Unit Tests de backend (44 casos) en 6.2.2.5 Testing Suite Evidence.</td>
+    </tr>
+    <tr>
+      <td align="left">3.20</td>
+      <td align="left">2026-11-14</td>
+      <td align="left">Equipo Macallys</td>
+      <td align="left">Documentación de pruebas frontend Angular (64 casos) en 6.2.2.5 Testing Suite Evidence.</td>
     </tr>
   </tbody>
 </table>
@@ -739,6 +751,23 @@ SafePlant
             - [6.2.1.7. Services Documentation Evidence for Sprint Review](informe.md#s-6-2-1-7)
             - [6.2.1.8. Software Deployment Evidence for Sprint Review](informe.md#s-6-2-1-8)
             - [6.2.1.9. Team Collaboration Insights during Sprint](informe.md#s-6-2-1-9)
+        - [6.2.2. Sprint 2](informe.md#s-6-2-2)
+            - [6.2.2.1. Sprint Planning 2](informe.md#s-6-2-2-1)
+            - [6.2.2.2. Aspect Leaders and Collaborators](informe.md#s-6-2-2-2)
+            - [6.2.2.3. Sprint Backlog 2](informe.md#s-6-2-2-3)
+            - [6.2.2.4. Development Evidence for Sprint Review](informe.md#s-6-2-2-4)
+            - [6.2.2.5. Testing Suite Evidence for Sprint Review](informe.md#s-6-2-2-5)
+            - [Pruebas de Backend realizadas](informe.md#s-pruebas-de-backend-realizadas)
+            - [Pruebas de Frontend realizadas](informe.md#s-pruebas-de-frontend-realizadas)
+            - [Pruebas de Mobile realizadas](informe.md#s-pruebas-de-mobile-realizadas)
+            - [6.2.2.6. Execution Evidence for Sprint Review](informe.md#s-6-2-2-6)
+            - [6.2.2.7. Services Documentation Evidence for Sprint Review](informe.md#s-6-2-2-7)
+            - [6.2.2.8. Software Deployment Evidence for Sprint Review](informe.md#s-6-2-2-8)
+            - [6.2.2.9. Team Collaboration Insights during Sprint](informe.md#s-6-2-2-9)
+    - [6.3. Validation Interviews](informe.md#s-6-3)
+        - [6.3.1. Diseño de Entrevistas](informe.md#s-6-3-1)
+        - [6.3.2. Registro de Entrevistas](informe.md#s-6-3-2)
+        - [6.3.3. Evaluaciones según heurísticas](informe.md#s-6-3-3)
 - [Conclusiones](informe.md#s-conclusiones)
         - [Conclusiones](informe.md#s-conclusiones-conclusiones)
         - [Recomendaciones](informe.md#s-recomendaciones)

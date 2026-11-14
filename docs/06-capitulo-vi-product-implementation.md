@@ -595,6 +595,115 @@ Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Pl
 <a id="s-6-2-2-5"></a>
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
+<a id="s-pruebas-de-backend-realizadas"></a>
+#### Pruebas de Backend realizadas
+
+**Repository:** https://github.com/Macallys/safeplant-web-backend.git
+
+Los Unit Tests del backend se implementaron en el proyecto `tests/SafePlant.UnitTests` con .NET, Visual Studio Test Explorer y FluentAssertions. Validan la lógica de Application (servicios de Identity & Access, Plant Monitoring y Safety & Actuation) y de Domain (políticas de actuadores, exposición, sesión y cuentas). Para no depender de Azure ni de TimescaleDB, los servicios de Application usan dobles de los repositorios e interfaces del dominio. La suite se ejecuta desde el Explorador de pruebas de Visual Studio o con:
+
+```bash
+dotnet test tests/SafePlant.UnitTests
+```
+
+Resultado de la corrida documentada: 44 pruebas superadas, 0 con error, 0 omitidas (290 ms).
+
+**Unit Tests — Application**
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `AreaServiceTests.cs` | Unit Test | US20 — Register and manage industrial areas | Valida el alta de áreas: rechaza nombre vacío o duplicado, deniega el canal web del Plant Manager y acepta la creación desde el Supervisor. | Passed (4) |
+| `ThresholdServiceTests.cs` | Unit Test | US21 — Configure environmental thresholds by area | Valida la configuración de umbrales de CO₂ y ruido por área en el servicio de aplicación. | Passed (4) |
+| `SignInServiceTests.cs` | Unit Test | TS21 / US07 / US08 — Autenticación móvil y web | Valida el inicio de sesión: rechaza contraseña incorrecta y cuenta deshabilitada; entrega token para Supervisor y para el canal autorizado. | Passed (4) |
+| `OverrideServiceTests.cs` | Unit Test | US32 / TS10 — Remote manual actuator override | Valida el override remoto: propaga indisponibilidad del edge, rechaza estados Failed y envía el comando cuando el actuador está operativo. | Passed (5) |
+
+![Testing Backend Application](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_application.png)
+
+**Unit Tests — Domain**
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `ActuatorPolicyTests.cs` | Unit Test | US27 / US28 / US33 — Detección de exceso y acciones automáticas | Valida la política de actuadores: despliegue o repliegue de mampara, encendido o apagado de extractor y sirena según CO₂, ruido y presencia. | Passed (13) |
+| `ExposurePolicyTests.cs` | Unit Test | US26 / US27 / US28 — Exposición de personal | Valida la severidad de exposición (None, Medium, High) al correlacionar lecturas ambientales con presencia. | Passed (8) |
+| `SessionTests.cs` | Unit Test | TS21 / US07 / US08 — Sesión autenticada | Valida el ciclo de vida de la sesión: cierre explícito y expiración. | Passed (3) |
+| `UserAccountTests.cs` | Unit Test | US11 / US12 — Cuentas y roles | Valida normalización de correo y restricción de canal por rol (Plant Manager solo Web; Supervisor solo Mobile). | Passed (3) |
+
+![Testing Backend Domain](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_domain.png)
+
+**Test Execution Evidence (Backend)**
+
+La corrida completa en Visual Studio reportó 44 pruebas superadas en Application (17) y Domain (27).
+
+![Testing Backend Execution](../assets/06-capitulo-vi/sprints/testing_sprint2_backend_execution.png)
+
+| Capa | Archivos de prueba | Casos de prueba | Cobertura |
+| :--- | ---: | ---: | :--- |
+| Application | 4 | 17 | Áreas, umbrales, sign-in y override |
+| Domain | 4 | 27 | Políticas de actuadores y exposición, sesión y cuentas |
+| **Total** | **8** | **44** | |
+
+<a id="s-pruebas-de-frontend-realizadas"></a>
+#### Pruebas de Frontend realizadas
+
+**Repository:** https://github.com/Macallys/safeplant-web-client.git
+
+Los Unit Tests y Component Tests del frontend se implementaron con Angular (`ng test` / Vitest) sobre archivos `.spec.ts` en `src/app`. Cubren el núcleo de sesión y autenticación, el módulo de cuentas (Identity & Access en web) y el módulo de métricas (dashboard, historial y telemetría). Para no depender de Cloud.Api en Azure, las pruebas usan servicios mockeados (`accounts.mock.api` y dobles de la API de métricas). La suite se ejecuta con:
+
+```bash
+npx ng test --watch=false
+```
+
+Resultado de la corrida documentada: 64 pruebas superadas (2.58 s).
+
+**Unit Tests**
+
+Los Unit Tests validan utilidades, stores, guards, interceptores y clientes API de forma aislada.
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `session.spec.ts` | Unit Test | US08 / TS21 — Sesión del Encargado de Planta | Valida el ciclo de vida de la sesión en el cliente web. | Passed (6) |
+| `session.guard.spec.ts` | Unit Test | US08 — Acceso protegido a rutas web | Valida el guard de sesión antes de entrar al panel y al historial. | Passed (3) |
+| `auth.interceptor.spec.ts` | Unit Test | TS21 — JWT en peticiones a Cloud.Api | Valida que el interceptor adjunta el token y reacciona a respuestas no autorizadas. | Passed (6) |
+| `auth.store.spec.ts` | Unit Test | US08 — Sign-in web | Valida el estado de autenticación del store tras iniciar o cerrar sesión. | Passed (5) |
+| `auth.api.spec.ts` | Unit Test | US08 / TS21 — Cliente de autenticación | Valida el contrato del cliente HTTP de autenticación con respuestas mockeadas. | Passed |
+| `accounts.api.spec.ts` | Unit Test | US11 / US12 — Directorio de cuentas | Valida el cliente API de cuentas y roles con `accounts.mock.api`. | Passed (3) |
+| `metrics.api.spec.ts` | Unit Test | US14 / US23 — Plant metrics dashboard and full history | Valida el cliente API de métricas (dashboard e historial) con datos mockeados. | Passed (3) |
+| `safety-rules.spec.ts` | Unit Test | US14 / US18 — Reglas de estado operativo | Valida la evaluación de reglas de seguridad usadas en el panel web. | Passed |
+| `app.routes.spec.ts` | Unit Test | US08 / US11 / US14 — Enrutamiento web | Valida las rutas del Encargado de Planta (sign-in, dashboard, historial, cuentas). | Passed (3) |
+| `app.spec.ts` | Unit Test | — Arranque de la aplicación | Valida la creación del componente raíz. | Passed (2) |
+
+**Component / Integration Tests**
+
+Los Component Tests e Integration Tests frontend validan la interacción entre vistas del canal web y servicios mockeados. Simulan respuestas de autenticación, telemetría, historial y directorio de cuentas para comprobar que la interfaz reacciona correctamente.
+
+| Test File | Test Type | Related User Story | Description | Result |
+| :--- | :--- | :--- | :--- | :---: |
+| `sign-in.spec.ts` | Component Test | US08 — Plant Manager sign-in on the web application | Valida el formulario de inicio de sesión y el flujo hacia la sesión autenticada. | Passed (4) |
+| `dashboard.spec.ts` | Component Test / Integration Test | US14 — Consolidated operational dashboard of plant areas | Valida el panel de control con telemetría ambiental mockeada. | Passed (7) |
+| `history.spec.ts` | Component Test / Integration Test | US23 — Plant metrics dashboard and full history | Valida la carga del historial ambiental y el filtrado con datos mockeados. | Passed (8) |
+| `telemetry-chart.spec.ts` | Component Test | US23 — Plant metrics dashboard and full history | Valida el renderizado del gráfico de telemetría a partir de series mockeadas. | Passed (5) |
+| `accounts.spec.ts` | Component Test / Integration Test | US11 / US12 — Create user accounts / Assign roles | Valida el directorio de cuentas y la administración de roles con API mockeada. | Passed |
+
+![Testing Frontend Execution](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_execution.png)
+
+**Test Execution Evidence (Frontend)**
+
+La corrida completa con `npx ng test --watch=false` reportó 64 pruebas superadas en 2.58 s. Las capturas siguientes muestran la cola de archivos `.spec.ts` y el avance de la suite hasta el resumen final.
+
+![Testing Frontend Queue](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_queue.png)
+
+![Testing Frontend Running](../assets/06-capitulo-vi/sprints/testing_sprint2_frontend_running.png)
+
+| Módulo | Cobertura | Resultado |
+| :--- | :--- | :---: |
+| Core / Auth / App | Sesión, guard, interceptor, store, rutas y arranque | Passed |
+| Accounts | API de cuentas y directorio / roles | Passed |
+| Metrics | Dashboard, historial, gráfico de telemetría, API y reglas de seguridad | Passed |
+| **Total (corrida)** | Suite Angular `ng test --watch=false` | **64 Passed** |
+
+<a id="s-pruebas-de-mobile-realizadas"></a>
+#### Pruebas de Mobile realizadas
+
 **Mobile Testing Suite Evidence**
 
 Para la aplicación móvil se implementó una suite de pruebas automatizadas que valida las funcionalidades de sesión, seguridad y configuración de planta incluidas en el Sprint Backlog 2. Las pruebas están en la carpeta test/ del repositorio App-Movil, en la rama `main`, y se ejecutan con el comando:
