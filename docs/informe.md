@@ -7826,7 +7826,7 @@ Los pasos realizados fueron los siguientes:
 <a id="s-6-2-1-9"></a>
 #### 6.2.1.9. Team Collaboration Insights during Sprint
 
-La colaboración del Sprint 1 se midió sobre los cuatro repositorios de la organización. Para el repositorio `Report` se consideran los commits del 20 de septiembre al 7 de octubre de 2026; para los repositorios de producto, su historial completo. Las cifras son reproducibles con `git shortlog -sn --all` y agrupan las distintas identidades de Git de un mismo integrante.
+La colaboración del Sprint 1 se midió sobre los cuatro repositorios de la organización. Para el repositorio "Report" se consideran los commits del 20 de septiembre al 7 de octubre de 2026; para los repositorios de producto, su historial completo. Las cifras son reproducibles con `git shortlog -sn --all` y agrupan las distintas identidades de Git de un mismo integrante.
 
 | Integrante | `Report` | `landing-page` | `safeplant-web-client` | `safeplant-web-backend` | Total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
@@ -7844,9 +7844,9 @@ La implementación de los productos se concentró en dos integrantes: Sanchez Go
 
 Para el Sprint 2 el equipo adopta los siguientes compromisos:
 
-- Cada User Story se desarrollará en su propia rama `feature/*`, creada por el integrante responsable, e integrada a `develop` mediante Pull Request revisado por otro integrante.
+- Cada User Story se desarrollará en su propia rama "feature/*", creada por el integrante responsable, e integrada a "develop" mediante Pull Request revisado por otro integrante.
 - Todos los integrantes tendrán commits propios en al menos un repositorio de producto.
-- El trabajo realizado en pareja se registrará con el trailer `Co-authored-by` para que el historial refleje a ambos participantes.
+- El trabajo realizado en pareja se registrará con el trailer Co-authored-by para que el historial refleje a ambos participantes.
 
 ![Team Collaboration Insights](../assets/06-capitulo-vi/sprints/teamcollab.png)
 
@@ -8268,18 +8268,75 @@ Las user stories asignadas suman 63 story points:
 <a id="s-6-2-2-4"></a>
 #### 6.2.2.4. Development Evidence for Sprint Review
 
+Durante el Sprint 2 se implementaron en "safeplant-web-backend" los contextos Plant Monitoring, Safety & Actuation y Device & Edge Management, con el host de planta además de la API en la nube, se integró "safeplant-web-client" con la API y se construyó la aplicación móvil, con arquitectura por capas. En el backend, cada contexto se desarrolló en su rama "feature/*" y se integró en "develop".
+
+**Repositorios de producto** 
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Macallys/safeplant-web-backend | develop | [616b0e0](https://github.com/Macallys/safeplant-web-backend/commit/616b0e0f9f4b7cdfa1ea0065389e75388e0ed751) | feat: area functionality | - | 2026-10-23 |
+| Macallys/safeplant-web-backend | develop | [698f09a](https://github.com/Macallys/safeplant-web-backend/commit/698f09adb679f72b42570e7d76fc101d1eecf3f0) | feat: threshold definition | - | 2026-10-23 |
+| Macallys/safeplant-web-backend | develop | [12e9f14](https://github.com/Macallys/safeplant-web-backend/commit/12e9f144cd8e2cab1b83044b3ccc26a23f760562) | feat: plant monitoring - dashboard | - | 2026-11-11 |
+| Macallys/safeplant-web-backend | develop | [e8ef621](https://github.com/Macallys/safeplant-web-backend/commit/e8ef62198e4046b78a9513b02871f2a82996588d) | feat: safety infrastructure and domain | - | 2026-11-11 |
+| Macallys/safeplant-web-backend | develop | [0250c31](https://github.com/Macallys/safeplant-web-backend/commit/0250c3148cd9c17147fa3e1169db1a8645e433cb) | feat: operative status | - | 2026-11-11 |
+| Macallys/safeplant-web-backend | develop | [5856652](https://github.com/Macallys/safeplant-web-backend/commit/58566526893fc238c64c980d7f4ad74c9c89cd55) | feat: logs, alerts and override | - | 2026-11-11 |
+| Macallys/safeplant-web-backend | develop | [2d2b742](https://github.com/Macallys/safeplant-web-backend/commit/2d2b7425259edc7638ce70673acc36e013aabeba) | feat: device and edge contxt | - | 2026-11-11 |
+| Macallys/safeplant-web-backend | develop | [574ea14](https://github.com/Macallys/safeplant-web-backend/commit/574ea14935f6d32ee0c00ecf2296090583ebdb4f) | chore: docker file for local testing | - | 2026-11-11 |
+| Macallys/safeplant-web-backend | develop | [b17cf98](https://github.com/Macallys/safeplant-web-backend/commit/b17cf98e1f51c0006092f2b47e907b438a0a1a04) | feat: local persistence on plant and mqtt implementation | - | 2026-11-12 |
+| Macallys/safeplant-web-backend | develop | [58b3bf4](https://github.com/Macallys/safeplant-web-backend/commit/58b3bf410b5f1240fee3a82b445614e74dbd26c1) | fix: actuators policy for presence | - | 2026-11-12 |
+| Macallys/safeplant-web-client | main | [668dacd](https://github.com/Macallys/safeplant-web-client/commit/668dacd) | chore: api integration | - | 2026-11-12 |
+| Macallys/App-Movil | main | [8ba1ba6](https://github.com/Macallys/App-Movil/commit/8ba1ba60deb4adaeaec1a0f6c112c391793d5039) | app safe primera version | - | 2026-10-29 |
+| Macallys/App-Movil | diseno/ui-movil | [44f92e7](https://github.com/Macallys/App-Movil/commit/44f92e7a8ab93aa97cb65949e92e4a4be96c0ba7) | Diseño visual de las pantallas existentes | - | 2026-11-05 |
+| Macallys/App-Movil | main | [8d352a2](https://github.com/Macallys/App-Movil/commit/8d352a223d89c6838f5dd72cda4c112ce651d3eb) | Align area setup with Cloud.Api GET /areas/{id}/setup | - | 2026-11-12 |
+| Macallys/App-Movil | main | [351ecbc](https://github.com/Macallys/App-Movil/commit/351ecbca42af9a1e0941033e4a0aa7a43187606d) | Show device secret once and keep lastSeenAt on inventory | - | 2026-11-12 |
+| Macallys/App-Movil | main | [845ebe0](https://github.com/Macallys/App-Movil/commit/845ebe077c714e92b64b6a96d3d474cddeed3d55) | Add PUT area edit flow from setup screen | - | 2026-11-12 |
+| Macallys/App-Movil | main | [aec1652](https://github.com/Macallys/App-Movil/commit/aec165230ac5177de730717158a275ab67d28d78) | Update plant setup UI for integer thresholds and device secret | - | 2026-11-12 |
+| Macallys/App-Movil | main | [0204f31](https://github.com/Macallys/App-Movil/commit/0204f31f06421693a08dba96d78cced071dec35d) | Update plant setup UI for integer thresholds and device secret | - | 2026-11-12 |
+| Macallys/App-Movil | main | [83a3b4b](https://github.com/Macallys/App-Movil/commit/83a3b4b12c5b1be3e811da1475c61c43a802dd13) | Align alerts exposures and actions with items envelope contract | - | 2026-11-12 |
+| Macallys/App-Movil | main | [afd1f26](https://github.com/Macallys/App-Movil/commit/afd1f264869fbb5f8d2776d0953d0d798b859098) | Update plant setup tests for signed Cloud.Api contract | - | 2026-11-12 |
+| Macallys/App-Movil | main | [c81a22c](https://github.com/Macallys/App-Movil/commit/c81a22c4d44835929abe3b2b3fe5729078b99aa6) | Update safety tests for telemetry alerts and override contract | - | 2026-11-12 |
+| Macallys/App-Movil | main | [2b40542](https://github.com/Macallys/App-Movil/commit/2b405424a6f337d978beb27fad4c364268fefde5) | feature: Union con el backend version 1 | - | 2026-11-12 |
+
+**Repositorio del informe (Reporte)**
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Macallys/Report | develop | [65f4dfe](https://github.com/Macallys/Report/commit/65f4dfe) | docs: add sprint 2 skeleton | - | 2026-10-23 |
+
+**Trazabilidad por User Story**
+
+| User Story | Tarea | Commits | Estado |
+| :--- | :--- | :--- | :---: |
+| US20 Register and manage industrial areas | T29 | `616b0e0` | Done |
+| US21 Configure environmental thresholds by area | T30 | `698f09a` | Done |
+| US22 Register IoT devices by area | T31, T32 | `2d2b742` | Done |
+| TS01 / TS09 Telemetry ingestion and query by area | T33, T34, T35 | `2d2b742`, `b17cf98`, `12e9f14` | Done |
+| US14 Consolidated operational dashboard of plant areas | T36, T37 | `0250c31` (backend), `8ba1ba6`, `2b40542` (móvil) | Done |
+| US18 / TS10 View active alerts / Remote actuator override | T38, T39 | `5856652` | Done / To-Review |
+| US27 / US28 Detect CO₂ excess / Detect excessive noise | T40, T41, T42 | `e8ef621`, `b17cf98`, `58b3bf4` | Backend Done; nodo [PENDIENTE] |
+| US07 / US10 / US13 Sesión en la app móvil | T43, T47 | `8ba1ba6`, `2b40542` | Done |
+| US18 / US26 / US33 Alertas, exposiciones y acciones (móvil) | T48, T49 | `8ba1ba6`, `83a3b4b`, `2b40542` | Done |
+| US32 Remote manual actuator override (móvil) | T50 | `8ba1ba6`, `2b40542` | To-Review |
+| US20 / US21 / US22 Configuración de planta (móvil) | T51 | `8ba1ba6`, `8d352a2`, `845ebe0`, `351ecbc`, `aec1652`, `0204f31` | Done |
+| — Diseño visual de la app móvil | T52 | `44f92e7` (rama `diseno/ui-movil`) | To-Review |
+| — Pruebas de la app móvil | T53 | `afd1f26`, `c81a22c` | Done |
+| — Integración de la aplicación web con la API | T44 | `668dacd` | Done |
+| — Entorno local de pruebas | T45 | `574ea14` | Done |
+
+![Development Evidence](../assets/06-capitulo-vi/sprints/development_sprint2.png)
+
 <a id="s-6-2-2-5"></a>
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
 En el Sprint 1 se asumió el compromiso de incorporar pruebas automatizadas.
 
-**Aplicación móvil** : El repositorio incluye 66 archivos de prueba con 296 casos de prueba de Flutter (`flutter_test`), organizados por feature: sesión, seguridad y configuración de planta. Cubren los casos de uso, los DTO y los mappers, los controladores y las páginas con pruebas de widget, y la ruta y el shell de la aplicación.  
+**Aplicación móvil** : El repositorio incluye 66 archivos de prueba con 296 casos de prueba de Flutter, organizados por feature: sesión, seguridad y configuración de planta. Cubren los casos de uso, los DTO y los mappers, los controladores y las páginas con pruebas de widget, y la ruta y el shell de la aplicación.  
 
-**Backend** : Para probar el flujo completo en local, el repositorio incluye `compose.yaml` con TimescaleDB, Eclipse Mosquitto, `Cloud.Api` y `Plant.Host`.
+**Backend** : Para probar el flujo completo en local, el repositorio incluye compose.yaml con TimescaleDB, Eclipse Mosquitto, Cloud.Api y Plant.Host.
 
 | Tipo de prueba | Alcance | Herramienta | Resultado |
 | :--- | :--- | :--- | :--- |
-| Unit y widget tests | App móvil: sesión, seguridad y configuración de planta | `flutter_test` | 296 casos declarados en 66 archivos |
+| Unit y widget tests | App móvil: sesión, seguridad y configuración de planta | flutter_test | 296 casos declarados en 66 archivos |
 | Unit, integration y acceptance | Backend | — | Pendiente para el Sprint 3 |
 
 ![Testing Suite Evidence](../assets/06-capitulo-vi/sprints/testing_sprint2.png)
@@ -8287,19 +8344,74 @@ En el Sprint 1 se asumió el compromiso de incorporar pruebas automatizadas.
 <a id="s-6-2-2-6"></a>
 #### 6.2.2.6. Execution Evidence for Sprint Review
 
-Al cierre del Sprint 2 la aplicación móvil se compila y ejecuta, y el flujo completo del backend se ejecuta en local con Docker Compose, que levanta TimescaleDB, el broker Eclipse Mosquitto, `Cloud.Api` y `Plant.Host`. Una lectura publicada en el tópico MQTT del dispositivo llega al host de la planta, se guarda en la base local y se envía a la nube, donde la consultan el dashboard y el historial de la aplicación web integrada con la API.
+Al cierre del Sprint 2 la aplicación móvil se compila y ejecuta, y el flujo completo del backend se ejecuta en local con Docker Compose, que levanta TimescaleDB, el broker Eclipse Mosquitto, Cloud.Api y Plant.Host. Una lectura publicada en el tópico MQTT del dispositivo llega al host de la planta, se guarda en la base local y se envía a la nube, donde la consultan el dashboard y el historial de la aplicación web integrada con la API.
 
 **URL de la aplicación web:** [https://safeplant-web-client.vercel.app/signIn](https://safeplant-web-client.vercel.app/signIn)
 
 **Proyecto Wokwi del nodo:** [Wokwi — nodo SafePlant](https://wokwi.com/projects/477285427305212929)
 
-Las capturas siguientes recorren el flujo en este orden: `docker compose up` con los cuatro servicios, el dashboard de la aplicación web con la lectura, y la app móvil con inicio de sesión, panel de seguridad, alertas activas y configuración de áreas.
+Las capturas siguientes recorren el flujo en este orden: docker compose up con los cuatro servicios, el dashboard de la aplicación web con la lectura, y la app móvil con inicio de sesión, panel de seguridad, alertas activas y configuración de áreas.
 
 ![Execution Evidence](../assets/06-capitulo-vi/sprints/execution_sprint2_flow.png)
 
-
 <a id="s-6-2-2-7"></a>
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
+
+En este sprint se documentaron con OpenAPI los endpoints de los nuevos bounded contexts, implementados en safeplant-web-backend. Los endpoints /api/v1 requieren un token de acceso válido; los /internal/v1 son de comunicación entre la planta y la nube y se protegen con la clave de la planta. Los errores usan el formato uniforme del Sprint 1.
+
+Roles: S = Supervisor desde el canal móvil; M = Plant Manager desde el canal web.
+
+| Endpoint | Verbo HTTP | Sintaxis de llamada | Parámetros | Response | Commit |
+| :--- | :---: | :--- | :--- | :--- | :---: |
+| Create area (S) | POST | `/api/v1/areas` | Header `Authorization`; Body JSON: `name`, `location` | `201 Created` con `id`, `name`, `location`. `422` `invalid_area`; `409` `area_name_duplicate`. | `616b0e0` |
+| Update area (S) | PUT | `/api/v1/areas/{areaId}` | Header `Authorization`; path `areaId`; Body JSON: `name`, `location` | `200 OK` con `id`, `name`, `location`. `404` `area_not_found`; `422` `invalid_area`; `409` `area_name_duplicate`. | `616b0e0` |
+| Set thresholds (S, M) | PUT | `/api/v1/areas/{areaId}/thresholds` | Header `Authorization`; path `areaId`; Body JSON: `co2LimitPpm` (entero, 1 a 50 000), `noiseLimitDb` (entero, 1 a 140) | `200 OK` con `areaId`, `co2LimitPpm`, `noiseLimitDb`. `404` `area_not_found`; `422` `co2_limit_out_of_range` o `noise_limit_out_of_range`. | `698f09a` |
+| Associate device to area (S) | POST | `/api/v1/areas/{areaId}/devices` | Header `Authorization`; path `areaId`; Body JSON: `deviceId`, `kind` | `201 Created` con `id`, `areaId`, `deviceId`, `kind`. `404` `area_not_found`; `422` `invalid_device`. | `2d2b742` |
+| Area setup | GET | `/api/v1/areas/{areaId}/setup` | Header `Authorization`; path `areaId` | `200 OK` con `id`, `name`, `location`, `co2LimitPpm`, `noiseLimitDb` y `devices`. `404` `area_not_found`. | `2d2b742` |
+| Latest telemetry by area (S) | GET | `/api/v1/areas/{areaId}/telemetry/latest` | Header `Authorization`; path `areaId` | `200 OK` con `areaId` y las últimas lecturas `carbonDioxide`, `noise` y `presence`. `404` `area_not_found`. | `12e9f14` |
+| Metrics dashboard (M) | GET | `/api/v1/metrics/dashboard` | Header `Authorization` | `200 OK` con `items`: por área, `areaId`, `name`, `co2Ppm`, `noiseDb`, `presenceState`, `severity`, `alertActive`, `highlighted`, `co2LimitPpm`, `noiseLimitDb`. | `12e9f14` |
+| Area history (M) | GET | `/api/v1/areas/{areaId}/history` | Header `Authorization`; path `areaId`; query `from`, `to` (fechas ISO 8601) | `200 OK` con `carbonDioxideReadings`, `noiseReadings`, `presenceChanges`, `alerts` y `actions`. `422` `invalid_period` si `from` no es anterior a `to` o el rango supera 31 días; `404` `area_not_found`. | `12e9f14` |
+| Operational status (S, M) | GET | `/api/v1/areas/operational-status` | Header `Authorization` | `200 OK` con `items`: `areaId`, `name`, `co2Ppm`, `noiseDb`, `presenceState`, `severity`, `alertActive`, `highlighted` y `actuators`. | `0250c31` |
+| Operational status by area (S, M) | GET | `/api/v1/areas/{areaId}/operational-status` | Header `Authorization`; path `areaId` | `200 OK` con el estado del área. `404` `area_not_found`. | `0250c31` |
+| Active alerts (S, M) | GET | `/api/v1/alerts/active` | Header `Authorization` | `200 OK` con `items`: `id`, `areaId`, `raisedAt`, `withdrawnAt`. | `5856652` |
+| Area exposures (S, M) | GET | `/api/v1/areas/{areaId}/exposures` | Header `Authorization`; path `areaId` | `200 OK` con `items` de alerta. `404` `area_not_found`. | `5856652` |
+| Actuator actions (S, M) | GET | `/api/v1/areas/{areaId}/actuator-actions` | Header `Authorization`; path `areaId` | `200 OK` con `items`: `id`, `areaId`, `type`, `succeeded`, `recordedAt`. `404` `area_not_found`. | `5856652` |
+| Actuator override (S) | POST | `/api/v1/areas/{areaId}/actuators/override` | Header `Authorization`; path `areaId`; Body JSON: `actuatorType` y `runState` (`Extractor` o `Siren` con `On` u `Off`; `Barrier` con `Deployed` o `Retracted`) | `400` `invalid_action`; `404` `area_not_found`; `503` `edge_unreachable` si la planta no acepta la orden. Defecto: el endpoint devuelve `503` también cuando la planta responde `204`. | `5856652`, `b17cf98` |
+| Issue device credential (S) | POST | `/api/v1/devices` | Header `Authorization`; Body JSON: `deviceId`, `areaId`, `kind` | `201 Created` con `deviceId`, `issuedAt`, `expiresAt`, `secret` (se entrega una sola vez). `409` `device_already_exists`; `422` `invalid_device`. | `2d2b742` |
+| List devices (S) | GET | `/api/v1/devices` | Header `Authorization` | `200 OK` con `items`: `deviceId`, `areaId`, `kind`, `issuedAt`, `expiresAt`, `revokedAt`, `lastSeenAt`. | `2d2b742` |
+| Revoke device (S) | POST | `/api/v1/devices/{deviceId}/revoke` | Header `Authorization`; path `deviceId` | `200 OK` con `deviceId` y `revokedAt`. `404` `device_not_found`. | `2d2b742` |
+| Ingest telemetry (interno) | POST | `/internal/v1/telemetry` | Header `X-Plant-Key`; Body JSON: `deviceId`, `secret`, `measure` (`carbonDioxide`, `noise` o `presence`), `ppm`, `db`, `state`, `recordedAt` | `204 No Content`. `422` `invalid_reading`; `403` `credential_revoked` o `credential_expired`. | `2d2b742`, `b17cf98` |
+| Plant sheet (interno) | GET | `/internal/v1/plant-sheet` | Header `X-Plant-Key` | `200 OK` con áreas, umbrales, dispositivos y credenciales que la planta replica. | `2d2b742` |
+| Safety sync (interno) | PUT | `/internal/v1/safety` | Header `X-Plant-Key` | `204 No Content` cuando la planta sincroniza sus registros de seguridad. `422` `invalid_safety`. | `e8ef621`, `b17cf98` |
+| Plant override (interno, `Plant.Host`) | POST | `/internal/v1/overrides` | Header `X-Plant-Key`; Body JSON: `areaId`, `actuatorType`, `runState` | `204 No Content` cuando la planta acepta la orden. | `b17cf98` |
+
+Además de HTTP, la planta recibe la telemetría de los nodos por MQTT: el nodo publica en `safeplant/v1/{deviceId}/telemetry` (QoS configurado en el broker Mosquitto) y `Plant.Host` publica las órdenes a los actuadores en `safeplant/v1/actuators/{type}` con QoS 1 y el cuerpo `areaId`, `runState` y `mode` (`Auto` u `Overridden`).
+
+**Ejemplo de interacción (Ingest telemetry, lectura de CO₂):**
+
+```http
+POST /internal/v1/telemetry
+X-Plant-Key: <clave-de-la-planta>
+Content-Type: application/json
+
+{
+  "deviceId": "co2-sensor-01",
+  "secret": "********",
+  "measure": "carbonDioxide",
+  "ppm": 1200,
+  "recordedAt": "2026-11-12T15:30:00Z"
+}
+```
+
+```http
+HTTP/1.1 204 No Content
+```
+
+
+**Repositorio de Web Services:** [https://github.com/Macallys/safeplant-web-backend](https://github.com/Macallys/safeplant-web-backend)
+
+![Documentación OpenAPI (Swagger) de Cloud.Api — nuevos contextos](../assets/06-capitulo-vi/sprints/sprint-2-services-docs.png)
+
 
 <a id="s-6-2-2-8"></a>
 #### 6.2.2.8. Software Deployment Evidence for Sprint Review
