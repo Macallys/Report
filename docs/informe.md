@@ -8576,27 +8576,47 @@ Web: Control de Usuarios
 
 ![Web: Control de Usuarios — Gobernanza de Cuentas](../assets/06-capitulo-vi/sprints/execution_sprint2_web_users.png)
 
-**Mobile: aplicación del Supervisor de Seguridad**
+Mobile: aplicación del Supervisor de Seguridad
 
 La aplicación móvil arranca en una pantalla de inicio que restaura la sesión guardada. Desde el inicio de sesión el supervisor accede a dos módulos: Seguridad, con el panel de áreas, y Configuración de planta.
 
+Mobile: inicio de sesión
+
 ![Mobile: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_signin.jpeg)
+
+Mobile: recuperación y restablecimiento de credenciales
 
 ![Mobile: recuperación y restablecimiento de credenciales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_recovery.jpeg)
 
+Mobile: panel de seguridad con el estado operativo de las áreas
+
 ![Mobile: panel de seguridad con el estado operativo de las áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_home.jpeg)
+
+Mobile: detalle del área con su última telemetría
 
 ![Mobile: detalle del área con su última telemetría](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_area_detail.jpeg)
 
+Mobile: alertas activas
+
 ![Mobile: alertas activas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_alerts.jpeg)
+
+Mobile: historial corto de exposiciones
 
 ![Mobile: historial corto de exposiciones](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_exposures.jpeg)
 
+Mobile: override manual de actuadores
+
 ![Mobile: override manual de actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_override.jpeg)
+
+Mobile: configuración de planta y alta de áreas
 
 ![Mobile: configuración de planta y alta de áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_setup.jpeg)
 
+Mobile: configuración de umbrales
+
 ![Mobile: configuración de umbrales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_thresholds.jpeg)
+
+Mobile: registro e inventario de dispositivos
 
 ![Mobile: registro e inventario de dispositivos](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_devices.jpeg)
 
