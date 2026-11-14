@@ -8513,27 +8513,27 @@ Web: Control de Usuarios
 
 La aplicación móvil arranca en una pantalla de inicio que restaura la sesión guardada. Desde el inicio de sesión el supervisor accede a dos módulos: Seguridad, con el panel de áreas, y Configuración de planta.
 
-![Mobile: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_signin.png)
+![Mobile: inicio de sesión](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_signin.jpeg)
 
-![Mobile: recuperación y restablecimiento de credenciales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_recovery.png)
+![Mobile: recuperación y restablecimiento de credenciales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_recovery.jpeg)
 
-![Mobile: panel de seguridad con el estado operativo de las áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_home.png)
+![Mobile: panel de seguridad con el estado operativo de las áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_home.jpeg)
 
-![Mobile: detalle del área con su última telemetría](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_area_detail.png)
+![Mobile: detalle del área con su última telemetría](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_area_detail.jpeg)
 
-![Mobile: alertas activas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_alerts.png)
+![Mobile: alertas activas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_alerts.jpeg)
 
-![Mobile: historial corto de exposiciones](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_exposures.png)
+![Mobile: historial corto de exposiciones](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_exposures.jpeg)
 
-![Mobile: acciones ejecutadas por los actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_actions.png)
+![Mobile: acciones ejecutadas por los actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_actions.jpeg)
 
-![Mobile: override manual de actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_override.png)
+![Mobile: override manual de actuadores](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_override.jpeg)
 
-![Mobile: configuración de planta y alta de áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_setup.png)
+![Mobile: configuración de planta y alta de áreas](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_setup.jpeg)
 
-![Mobile: configuración de umbrales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_thresholds.png)
+![Mobile: configuración de umbrales](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_thresholds.jpeg)
 
-![Mobile: registro e inventario de dispositivos](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_devices.png)
+![Mobile: registro e inventario de dispositivos](../assets/06-capitulo-vi/sprints/execution_sprint2_mobile_devices.jpeg)
 
 
 <a id="s-6-2-2-7"></a>
