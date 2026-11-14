@@ -8002,7 +8002,7 @@ Los aspectos del Sprint 2 son los productos trabajados en la iteración: el back
 
 El objetivo del Sprint 2 fue completar la ruta del dato en el backend y conectar con ella las aplicaciones. El tablero se gestionó en Trello con los estados To-do, In-Process, To-Review y Done.
 
-**Tablero del Sprint 2:** [PENDIENTE: enlace de Trello]
+**Tablero del Sprint 2:** https://trello.com/invite/b/6af8014efa2b04f1705811d9/ATTI36694e92f42020e7d35239dbb6bbed77E5BFE9A3/sprint-backlog-2
 
 ![Tablero del Sprint 2 en Trello: To-do, In-Process, To-Review y Done](../assets/06-capitulo-vi/sprints/sprint-2-trello.png)
 
